@@ -1,0 +1,41 @@
+/* 공통 css */
+.ec-base-tooltip { display:none; z-index:2; position:absolute; top:24px; padding:15px; border:1px solid #565960; background:#fff;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+}
+.ec-base-tooltip h3 { margin:0 0 8px; padding:0 10px; font-size:12px; border-bottom:0; background:url("//img.echosting.cafe24.com/skin/base/common/ico_layer_title.gif") no-repeat 0 50%; }
+.ec-base-tooltip h3 + p { margin:0 5px 10px; }
+.ec-base-tooltip h4 { margin:15px 10px 8px 5px; font-size:12px; }
+.ec-base-tooltip h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+.ec-base-tooltip .btnClose { position:absolute; right:14px; top:14px; }
+.ec-base-tooltip .edge { z-index:20; position:absolute; left:50%; top:-6px; display:block; margin:0 0 0 -5px; width:10px; height:6px; }
+.ec-base-tooltip .edge:before,
+.ec-base-tooltip .edge:after { display:inline-block; content:""; position:absolute; top:0; width:0; height:0; border:solid transparent; }
+.ec-base-tooltip .edge:before { margin:1px 0 0; border-bottom-color:#565960; border-width:0 5px 5px 5px; }
+.ec-base-tooltip .edge:after { left:1px; margin:2px 0 0; border-bottom-color:#fff; border-width:0 4px 4px 4px; }
+.ec-base-tooltip table th,
+.ec-base-tooltip table td { padding:8px 10px 7px 10px; border:1px solid #e8e8e8; line-height:1.5em; }
+.ec-base-tooltip table th { padding-right:0; background:#fbf9fa; }
+.ec-base-tooltip table thead th { text-align:center; }
+.ec-base-tooltip table tbody th { text-align:left; }
+.ec-base-tooltip table .left { text-align:left; }
+.ec-base-tooltip table .center { text-align:center; }
+.ec-base-tooltip table .right { text-align:right; }
+.ec-base-tooltip table .info { padding:0; color:#757575; }
+.ec-base-tooltip table p.info:before,
+.ec-base-tooltip table ul.info li:before { display:inline-block; content:""; margin:0 3px 0 0; width:4px; height:1px; background:#757575; vertical-align:middle; }
+.ec-base-tooltip .info { padding:10px 10px 0; margin:5px 0 0; }
+.ec-base-tooltip p.bullet,
+.ec-base-tooltip ul.bullet { margin:8px 10px; }
+.ec-base-tooltip p.bullet:before,
+.ec-base-tooltip ul.bullet li:before { display:inline-block; content:""; margin:-3px 3px 0 0; width:0; height:0; border:solid transparent; border-left-color:#333; border-width:2px 0 2px 2px; vertical-align:middle; }
+.ec-base-tooltip ul.bullet li { line-height:1.5em; }
+.ec-base-tooltip .txtEm { color:#008bcc; }
+.ec-base-tooltip .txtWarn { color:#f65b54; }
+
+/* typeUpper */
+.ec-base-tooltip.typeUpper { top:auto; bottom:34px; }
+.ec-base-tooltip.typeUpper .edge { top:auto; bottom:-6px; }
+.ec-base-tooltip.typeUpper .edge:before { margin:0 0 -5px; border-top-color:#565960; border-width:5px 5px 0 5px; }
+.ec-base-tooltip.typeUpper .edge:after { left:1px; margin:0 0 -4px; border-top-color:#fff; border-width:4px 4px 0 4px; }

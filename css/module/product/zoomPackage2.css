@@ -1,0 +1,19 @@
+.popup { min-width:550px; height:723px; }
+
+ .xans-product-zoom .imgArea { width:346px; margin:0 auto; }
+ .xans-product-zoom .imgArea .keyImg { position:relative; width:346px; min-height:43px; cursor:pointer; }
+ .xans-product-zoom .imgArea .keyImg img { border:1px solid #ececec; vertical-align:middle; }
+ .xans-product-zoom .imgArea .keyImg > .prev { position:absolute; left:0; top:50%; margin:-22px 0 0; }
+ .xans-product-zoom .imgArea .keyImg > .next { position:absolute; right:0; top:50%; margin:-22px 0 0; }
+ .xans-product-zoom .imgArea .keyImg .prdImg { display:inline-block; position:relative; max-width:100%; }
+ .xans-product-zoom .imgArea .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; }
+
+ .xans-product-zoom .imgArea .topLogo { overflow:hidden; padding:0 0 15px; *zoom:1; }
+
+ .xans-product-zoom .imgArea .listImg { width:346px; margin:10px 0 0; font-size:0; overflow:hidden; padding:0 0 1px; }
+ .xans-product-zoom .imgArea .listImg ul { overflow:hidden; height:77px; margin:0 0 0 2px; font-size:0; line-height:0; }
+ .xans-product-zoom .imgArea .listImg li { display:inline-block; margin:0 1px; line-height:14px; *display:inline; *zoom:1; }
+ .xans-product-zoom .imgArea .listImg li img { width:65px; height:75px; border:1px solid #ececec; cursor:pointer; }
+ .xans-product-zoom .imgArea .listImg button { position:absolute; top:0; width:21px; height:77px; font-size:0; line-height:0; color:transparent; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_product_detail_ctrl.png") no-repeat; }
+ .xans-product-zoom .imgArea .listImg .prev { left:0; background-position:0 0; }
+ .xans-product-zoom .imgArea .listImg .next { right:0; background-position:-31px 0; }

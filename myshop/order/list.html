@@ -1,0 +1,181 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>주문조회</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>주문조회</h2>
+</div>
+
+
+<div module="Myshop_OrderHistoryTab" class="tabTheme">
+    <ul class="menu">
+        <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+        <li class="{$tab_class_cs}"><a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a></li>
+        <li class="{$tab_class_old} {$old_list_display|display}"><a href="/myshop/order/list_old.html{$param_old}">이전 주문내역 ({$total_orders_old})</a></li>
+    </ul>
+</div>
+
+
+<div module="Myshop_OrderHistoryHead">
+    <!--@css(/css/module/myshop/orderHistoryHead.css)-->
+	<fieldset>
+		<legend>검색기간설정</legend>
+		<div class="stateSelect {$status_bar_display|display}">
+			{$form.order_status}
+		</div>
+		<span>
+			<a href="#none" class="btnNormal" days="00"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1.gif" offimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1.gif" onimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date1_on.gif" alt="오늘" /></a>
+			<a href="#none" class="btnNormal" days="07"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2.gif" offimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2.gif" onimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date2_on.gif" alt="1주일" /></a>
+			<a href="#none" class="btnNormal" days="30"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3.gif" offimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3.gif" onimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date3_on.gif" alt="1개월" /></a>
+			<a href="#none" class="btnNormal" days="90"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4.gif" offimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4.gif" onimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date4_on.gif" alt="3개월" /></a>
+			<a href="#none" class="btnNormal" days="180"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date5.gif" offimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date5.gif" onimage="http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/btn_date5_on.gif" alt="6개월" /></a>
+		</span>
+		{$form.start_date} ~ {$form.end_date}
+		{$form.submit_date}
+	</fieldset>
+    <ul>
+        <li>- 기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 지난 주문내역을 조회하실 수 있습니다.</li>
+        <li>- 주문번호를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.</li>
+    </ul>
+</div>
+
+
+<div module="Myshop_OrderHistoryListitem" class="tableTheme">
+    <!--@css(/css/module/myshop/orderHistoryListItem.css)-->
+    <!--
+        $login_url = /member/login.html
+    -->
+    <div class="title">
+        <h3 class="txtTitle12B">{$list_title}</h3>
+    </div>
+    <table border="1" summary="">
+        <caption>{$list_title}</caption>
+        <colgroup>
+            <col style="width:135px;" />
+            <col style="width:92px;" />
+            <col style="width:auto;" />
+            <col style="width:60px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">주문일자<br />[주문번호]</th>
+                <th scope="col">이미지</th>
+                <th scope="col">상품정보</th>
+                <th scope="col">수량</th>
+                <th scope="col">상품구매금액</th>
+                <th scope="col">주문처리상태</th>
+                <th scope="col">취소/교환/반품</th>
+            </tr>
+        </thead>
+        <tbody class="center middle {$list_display|display}">
+            <tr>
+                <td class="{$display_column|display}">
+                    {$order_date}
+                    <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                    <span class="gSingle">
+                        <button type="button" class="btnNormal {$direct_cancel_display|display}" onclick="{$action_direct_cancel}">주문취소</button>
+                        <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display} button btnNormal">취소신청</a>
+                        <a href="exchange.html{$param_apply}" class="{$apply_exchange_display|display} button btnNormal">교환신청</a>
+                        <a href="return.html{$param_apply}" class="{$apply_return_display|display} button btnNormal">반품신청</a>
+                   </span>
+                </td>
+                <td><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" style="width:80px;" /></a></td>
+                <td class="left">
+                    <div class="product">
+                        <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul class="option" module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <span class="gSingle {$card_installment_display|display}">무이자할부 상품</span>
+                    </div>
+                </td>
+                <td>{$quantity}</td>
+                <td><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div></td>
+                <td>
+                    {$status}
+                    <span class="gSingle {$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></span>
+                    <span class="gSingle {$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></span>
+                    <span class="gSingle">
+                        <a href="/board/product/write.html{$param_postscript}" class="btnSubmit {$postscript_display|display}">구매후기</a>
+                        <button type="button" class="btnNormal {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</button>
+                        <button type="button" class="btnNormal {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</button>
+                        <button type="button" class="btnNormal {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</button>
+                   </span>
+                </td>
+                <td>
+                    <span class="{$detail_info_display|display}"><a href="#none" class="line" onclick="{$detail_info}">[상세정보]</a></span>
+                    <span class="{$hyphen_display|display}">-</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="{$display_column|display}">
+                    {$order_date}
+                    <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                    <span class="gSingle">
+                        <button type="button" class="btnNormal {$direct_cancel_display|display}" onclick="{$action_direct_cancel}">주문취소</button>
+                        <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display} button btnNormal">취소신청</a>
+                        <a href="exchange.html{$param_apply}" class="{$apply_exchange_display|display} button btnNormal">교환신청</a>
+                        <a href="return.html{$param_apply}" class="{$apply_return_display|display} button btnNormal">반품신청</a>
+                   </span>
+                </td>
+                <td><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" style="width:80px;" /></a></td>
+                <td class="left">
+                    <div class="product">
+                        <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul class="option" module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <span class="gSingle {$card_installment_display|display}">무이자할부 상품</span>
+                    </div>
+                </td>
+                <td>{$quantity}</td>
+                <td><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div></td>
+                <td>
+                    {$status}
+                    <span class="gSingle {$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></span>
+                    <span class="gSingle {$invoice_no_display|display}"><a href="#none" class="line" onclick="{$shipping_trace_popup}">[{$invoice_no}]</a></span>
+                    <span class="gSingle">
+                        <a href="/board/product/write.html{$param_postscript}" class="btnSubmit {$postscript_display|display}">구매후기</a>
+                        <button type="button" class="btnNormal {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</button>
+                        <button type="button" class="btnNormal {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</button>
+                        <button type="button" class="btnNormal {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</button>
+                   </span>
+                </td>
+                <td>
+                    <span class="{$detail_info_display|display}"><a href="#none" class="line" onclick="{$detail_info}">[상세정보]</a></span>
+                    <span class="{$hyphen_display|display}">-</span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="{$empty_display|display}">
+            <tr>
+                <td colspan="7"><p class="empty">주문 내역이 없습니다.</p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div module="Myshop_OrderHistoryPaging" class="paginate">
+    <p class="first"><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+    <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+    <p class="last"><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+</div>

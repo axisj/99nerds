@@ -1,0 +1,151 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>상품검색</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">상품검색</h2>
+</div>
+
+
+<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+<div module="search_form" class="mid-0">
+    <!--@css(/css/module/product/search_form.css)-->
+    <div class="searchbox">
+        <fieldset>
+            <legend>상품 검색</legend>
+            <dl class="desc">
+                <dt><strong>상품분류</strong></dt>
+                <dd>{$form.category_no}</dd>
+                <dt><strong>검색조건</strong></dt>
+                <dd>{$form.search_type} {$form.keyword}
+                    <div class="gDouble popular" id="{$except_keyword_wrap_id}" style="display:none">
+                        <p class="txtSub11"><strong>제외검색어</strong></p>
+                        {$form.exceptkeyword}
+                    </div>
+                    <div class="gDouble popular" module="search_hotkeyword">
+                        <p class="txtSub11"><strong>인기검색어</strong></p>
+                        <p class="txtSub11">
+                            <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                            <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                        </p>
+                    </div>
+                </dd>
+                <dt><strong>판매가격대</strong></dt>
+                <dd>{$form.product_price1} ~ {$form.product_price2}</dd>
+                <dt><strong>검색정렬기준</strong></dt>
+                <dd>{$form.order_by}</dd>
+            </dl>
+        </fieldset>
+        <p class="buttonArea">
+            <span class="gLeft"><button type="submit" class="btnSubmitM">검색하기</button></span>
+        </p>
+    </div>
+
+    <div class="searchResult">
+        <p class="record">총 <strong class="txtStrong12B">{$total_count}</strong> 개 의 상품이 검색되었습니다.</p>
+        <ul class="listType" module="search_Orderby">
+            <li class="btn_order" rel="{$rel}" style="{$style}">{$sort_name}</li>
+            <li class="btn_order" rel="{$rel}" style="{$style}">{$sort_name}</li>
+        </ul>
+    </div>
+
+    <div class="empty {$search_fail_display|display}">
+        <strong class="txtStrong12B">검색결과가 없습니다.</strong>
+        <strong class="txtTitle12B gTriple">정확한 검색어 인지 확인하시고 다시 검색해 주세요.</strong>
+        <ul class="gTriple">
+            <li class="txtSub11">검색어/제외검색어의 입력이 정확한지 확인해 보세요.</li>
+            <li class="txtSub11">두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+            <li class="txtSub11">검색 옵션을 다시 확인해 보세요.</li>
+        </ul>
+    </div>
+</div><!-- //참고 -->
+
+
+
+<div module="Search_Result" class="mid-0">
+    <!--@css(/css/module/product/search_result.css)-->
+    <!--
+        $count = 8
+    -->
+    <ul class="prdList column4 wyImgSizeFlex">
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="{$link_product_detail}">
+                        <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                    </a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}</div>
+                    <div class="button">
+                        <div class="likeButton {$disp_likeprd_class}">
+                            <button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button>
+                        </div>
+                        <div class="option">{$option_preview_icon}</div>
+                        {$basket_icon} {$zoom_icon}
+                    </div>
+                </div>
+                <p class="name">
+                    <strong><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="search_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+        <li class="item" id="anchorBoxId_{$product_no}">
+            <div class="box">
+                <p class="prdImg">
+                    <a href="{$link_product_detail}">
+                        <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb" /><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                    </a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <div class="status">
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}</div>
+                    <div class="button">
+                        <div class="likeButton {$disp_likeprd_class}">
+                            <button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button>
+                        </div>
+                        <div class="option">{$option_preview_icon}</div>
+                        {$basket_icon} {$zoom_icon}
+                    </div>
+                </div>
+                <p class="name">
+                    <strong><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                </p>
+                <ul module="search_ListItem">
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<div module="search_paging" class="paginate mid-0">
+    <p class="first"><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+    <p><a href="{$param_before}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+    <p class="last"><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+</div>

@@ -1,0 +1,116 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>긴급문의</strong></li>
+    </ol>
+</div>
+
+<div module="Mall_Urgencycall" class="tableTheme mid-0">
+    <!--@css(/css/module/board/urgencycall.css)-->
+    <!--
+    $login_page = /member/login.html
+    -->
+    <div class="titleArea">
+        <h2 class="txtTitle16B">{$ucc_title}</h2>
+    </div>
+    <p class="gIndent txtSub11">{$ucc_info}</p>
+    <table border="1" summary="">
+        <caption>긴급문의</caption>
+        <colgroup>
+            <col style="width:130px" />
+            <col style="width:auto" />
+        </colgroup>
+        <tbody class="middle">
+            <tr>
+                <th scope="row">질문유형</th>
+                <td>{$form.question}</td>
+            </tr>
+            <tr>
+                <th scope="row">문의제목</th>
+                <td>{$form.title}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$sPrdOrdText}</th>
+                <td>{$form.prd_ord}
+                     <a href="#none" class="btnEm" id="opensearch" name="opensearch" onclick="{$Open_SearchLayer}">검색</a>
+                     {$form.hiddenPrdOrd}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">답변수신방식</th>
+                <td>{$form.chk_reply_type}</td>
+            </tr>
+            <tr>
+                <th scope="row">이메일</th>
+                <td>
+                    {$form.email}
+                    <span class="gSingle">예) master@domain.com</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">휴대폰</th>
+                <td>
+                    {$form.mobile}
+                    <span class="gSingle">예) 000-0000-0000</span>
+                </td>
+            </tr>
+            <tr class="{$info_change_display|display}">
+                <th scope="row">정보수정동의</th>
+                <td>{$form.chk_info_change}</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자<img alt="필수" src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif"></th>
+                <td>{$form.writer}</td>
+            </tr>
+            <tr>
+                <th scope="row">내용<img alt="필수" src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif"></th>
+                <td>{$form.content}</td>
+            </tr>
+        </tbody>
+        <tbody class="{$file_attatch_display|display}">
+            <tr>
+                <th scope="row">첨부파일1</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일2</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일3</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일4</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일5</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+        </tbody>
+        <tbody class="captcha {$config.use_captcha_write|display}">
+        <tr>
+            <th scope="row">자동등록방지<br />보안문자</th>
+            <td>
+                {$captcha_image} {$captcha_refresh}
+                <p class="gSingle">{$form.captcha} <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+            </td>
+        </tr>
+        </tbody>
+        <tbody class="{$privacy_agreement_display|display}">
+            <tr>
+                <th scope="row">개인정보 수집 및 <br />이용 동의</th>
+                <td>
+                    {$form.privacy_agreement}
+                    <span class="gSingle">{$form.privacy_agreement_radio}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="buttonArea">
+        <button type="button" class="btnSubmitB" onclick="{$action_send}">등록</button>
+    </div>
+</div>

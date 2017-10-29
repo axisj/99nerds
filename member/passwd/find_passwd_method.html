@@ -1,0 +1,33 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">비밀번호 찾기</h2>
+</div>
+
+
+<div module="member_findpasswdmethod" class="mid-0">
+    <!--@css(/css/module/member/find_passwd_method.css)-->
+    <!--
+        $nextURL = /member/passwd/find_passwd_result.html
+    -->
+    <h3 class="txtTitle20B">임시 비밀번호 전송</h3>
+    <fieldset class="memberArea">
+        <legend>임시 비밀번호 전송</legend>
+        <ul>
+            <li><strong class="term"><span class="icoDot"></span> 임시 비밀번호</strong><span class="desc">{$form.passwd_method_type}</span></li>
+            <li id="{$passwd_method_email_info}"><strong class="term"><span class="icoDot"></span> 이메일</strong><span class="desc"><strong class="txtStrong12B">{$passwd_method_email}</strong></span></li>
+            <li id="{$passwd_method_mobile_info}"><strong class="term"><span class="icoDot"></span> 휴대폰 번호</strong><span class="desc"><strong class="txtStrong12B number">{$passwd_method_mobile}</strong></span></li>
+        </ul>
+    </fieldset>
+    <p class="buttonArea">
+        <a href="#none" class="btnSubmitM" onclick="{$action_func_find_passwd_send}">임시 비밀번호 전송</a>
+        <a href="#none" class="btnEmM" onclick="{$action_func_find_passwd_cancel}">취소</a>
+    </p>
+</div>

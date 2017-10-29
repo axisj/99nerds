@@ -1,0 +1,40 @@
+.popup { min-width:500px; }
+
+.xans-product-restocksms .product { overflow:hidden; position:relative; padding:15px 15px 15px 116px; }
+.xans-product-restocksms .product .prdImg { float:left; width:90px; margin:0 0 0 -105px; text-align:center; }
+
+.xans-product-restocksms .smsArea { margin:17px 0 0; }
+.xans-product-restocksms .smsArea .contact { padding:17px 10px; border-radius:5px; background:#f1f1f1; }
+.xans-product-restocksms .smsArea #hp2,
+.xans-product-restocksms .smsArea #hp3 { width:60px; }
+
+.xans-product-restocksms .product .info .optionWrap { margin:20px 0 0; }
+.xans-product-restocksms .product .info .optionWrap ul li { overflow:hidden; padding:3px 0; }
+.xans-product-restocksms .product .info .optionWrap ul li:after { content:""; display:block; clear:both; }
+.xans-product-restocksms .product .info .optionWrap ul li .name { float:left; width:50px; margin:0 10px 0 0; }
+.xans-product-restocksms .product .info .optionWrap ul li .option { float:left; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .value { color:#767479; word-break:break-all; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .value .ec-product-value { color:#363437; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button li { position:relative; overflow:hidden; display:inline-block; margin:0 5px 3px 0; box-sizing:border-box; vertical-align:top; border:1px solid #d7d7d7; background:#fff; *display:inline; *zoom:1; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button li:last-child { margin-right:0; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button li a { display:block; min-width:28px; text-align:center; text-decoration:none; word-break:break-all; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button li a span { display:inline-block; padding:6px 5px; box-sizing:border-box; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview li { padding:3px; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview li a { min-width:22px; width:22px; height:22px; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview li a img { max-width:100%; max-height:100%; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview li a span { overflow:hidden; line-height:0; font-size:0; padding:0; text-indent:120%; white-space:nowrap; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview .ec-product-soldout span,
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview .ec-product-disabled span { position:absolute; left:0; top:0; z-index:1; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button.ec-product-preview .ec-product-soldout span { background:url("http://img.echosting.cafe24.com/skin/base/product/soldout_bg.png") repeat; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-soldout { border-style:dashed; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-soldout a span { display:inline-block; width:100%; height:100%; cursor:not-allowed; color:#d7d7d7; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-soldout.ec-product-selected { border-style:dashed; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-disabled a { cursor:default; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-disabled a span { display:inline-block; width:100%; height:100%; color:#000; background:#555; filter:alpha(opacity=30); opacity:0.3; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-selected { border:2px solid #495164; }
+.xans-product-restocksms .product .info .optionWrap ul li .option .ec-product-button .ec-product-selected a { margin:-1px; }
+
+.xans-product-restocksms .product .info .optionWrap .optionBox { margin:12px 0 5px; padding:3px 7px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; line-height:18px; }
+.xans-product-restocksms .product .info .optionWrap .optionBox ul li { border-top:1px solid #ebebeb; }
+.xans-product-restocksms .product .info .optionWrap .optionBox ul li:first-child { border-top:0; }
+.xans-product-restocksms .product .info .optionWrap .optionBox ul li img { vertical-align:-1px; }

@@ -1,0 +1,32 @@
+/* 빨간느낌표 */
+span.ec-base-help,
+p.ec-base-help,
+ul.ec-base-help li { margin:2px 9px; padding:1px 0 1px 20px; line-height:1.4; background:url('//img.echosting.cafe24.com/skin/base/common/ico_info.gif') no-repeat 0 2px; }
+
+/* 블록 공통 */
+div.ec-base-help { margin:20px 0; border:1px solid #d6d4d4; line-height:18px; }
+div.ec-base-help > h2,
+div.ec-base-help > h3 { padding:9px 0 6px 10px; border-bottom:1px solid #e8e7e7; color:#101010; font-size:12px; background:#fbfbfb; }
+div.ec-base-help .inner { padding:0 9px 12px; }
+div.ec-base-help h4 { margin:22px 0 -4px; color:#404040; font-size:12px; font-weight:normal; }
+div.ec-base-help h4:first-child { margin-top:13px; }
+div.ec-base-help p { margin:15px 0 0 10px; color:#707070; }
+div.ec-base-help ul,
+div.ec-base-help ol { margin:15px 0 0 11px; }
+div.ec-base-help li { color:#707070; }
+
+/* 숫자형 */
+div.ec-base-help ol li { padding:0 0 0 25px; background:url('//img.echosting.cafe24.com/skin/base/common/ico_number.png') no-repeat; }
+div.ec-base-help ol .item1 { background-position:-484px 0; }
+div.ec-base-help ol .item2 { background-position:-434px -100px; }
+div.ec-base-help ol .item3 { background-position:-384px -200px; }
+div.ec-base-help ol .item4 { background-position:-334px -300px; }
+div.ec-base-help ol .item5 { background-position:-284px -400px; }
+div.ec-base-help ol .item6 { background-position:-234px -500px; }
+div.ec-base-help ol .item7 { background-position:-184px -600px; }
+div.ec-base-help ol .item8 { background-position:-134px -700px; }
+div.ec-base-help ol .item9 { background-position:-84px -800px; }
+div.ec-base-help ol .item10 { background-position:-34px -900px; }
+
+/* 대쉬형 */
+div.ec-base-help ul li { padding:0 0 0 11px; background:url('//img.echosting.cafe24.com/skin/base/common/ico_dash.gif') no-repeat 0 7px; }

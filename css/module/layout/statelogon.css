@@ -1,0 +1,14 @@
+.xans-layout-statelogon { float:right; position:relative;}
+.xans-layout-statelogon > a { display:inline-block; color:#ccc; height:38px; line-height:38px; width:auto; font-size:11px; font-weight:bold; letter-spacing:0.15em; padding:0px 5px;}
+.xans-layout-statelogon > ul {display:none;}
+.xans-layout-statelogon > a:hover {color:#fff;}
+.xans-layout-statelogon > a .count,
+.xans-layout-statelogon > a .count span { position:relative; }
+.xans-layout-statelogon > a .count { left:-5px; top:-1px; margin:0 -5px 0 3px; padding:0 0 0 7px; vertical-align:middle; background-position:0 0; }
+.xans-layout-statelogon > a .count span { height:14px; padding:1px 7px 1px 0; line-height:14px; vertical-align:top; background-position:right -26px; }
+span.EC-Layout-Basket-count {margin-left:3px; display:inline-block;padding:0 4px 0 6px; height:16px; text-align:center; line-height:16px; border-radius:8px; background:#555; font-size:9px;}
+
+.xans-layout-shoppinginfo { background:#333; position:absolute; z-index:100; left:-13px;  border-radius:0 0 4px 4px; margin-top:0px;}
+.xans-layout-shoppinginfo li {text-align:center;width:auto; margin:13px 10px; font-size:11px; color:#ccc;}
+.xans-layout-shoppinginfo li a{font-size:11px; color:#bbb;}
+.xans-layout-shoppinginfo li a:hover{color:#ddd;}

@@ -1,0 +1,24 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>개인정보처리방침</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">개인정보처리방침</h2>
+</div>
+
+
+<div module="mall_privacy" class="mid-0">
+    <!--@css(/css/module/mall/privacy.css)-->
+    <div class="boxTheme">
+        <strong class="date {$displayEnforce | display}">{$enforce_date}</strong>
+        <div class="agree">{$privacy_agreement}</div>
+    </div>
+    <div class="buttonArea {$displayBeforeEnforce | display}">
+        <a href="{$before_enforce_link}" class="btnPrev" target="_blank">{$before_enforce_date}</a>
+    </div>
+</div>

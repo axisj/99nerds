@@ -1,0 +1,231 @@
+<div id="{$join_confirm_layer_id}" class="joinConfirm ec-base-layer">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/member/join_confirm.css)-->
+    <div class="header">
+        <h3>가입 정보 확인</h3>
+    </div>
+    <div class="content">
+        <p>아직 회원가입이 완료되지 않았으니, 작성하신 내용을 확인하신 후에 가입을 완료해 주세요.</p>
+        <div class="ec-base-table">
+            <table border="1" summary="">
+                <caption>가입 정보 확인</caption>
+                <colgroup>
+                    <col style="width:130px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">아이디</th>
+                        <td><span id="{$join_confirm_field_member_id}"></span></td>
+                    </tr>
+                    <tr class="{$display_hint_answer|display}">
+                        <th scope="row">비밀번호 확인 질문</th>
+                        <td><span id="{$join_confirm_field_hint}"></span></td>
+                    </tr>
+                    <tr class="{$display_hint_answer|display}">
+                        <th scope="row">비밀번호 확인 답변</th>
+                        <td><span id="{$join_confirm_field_hint_answer}"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="{$join_confirm_name_title}">이름</th>
+                        <td id="{$join_confirm_name_contents}"></td>
+                    </tr>
+                    <!-- 외국인 회원 정보 -->
+                    <tr>
+                        <th scope="row" id="{$join_confirm_ssn_title}"></th>
+                        <td id="{$join_confirm_ssn_contents}"></td>
+                    </tr><!-- //외국인 회원 정보 -->
+                    <tr id="{$join_confirm_company_name_id}">
+                        <th scope="row">상호명</th>
+                        <td></td>
+                    </tr>
+                    <tr id="{$join_confirm_company_ssn_id}">
+                        <th scope="row">사업자번호</th>
+                        <td></td>
+                    </tr>
+                    <tr class="{$display_eng_name|display}">
+                        <th scope="row">이름(영문)</th>
+                        <td><span id="{$join_confirm_field_name_en}"></span></td>
+                    </tr>
+                    <tr id="{$join_confirm_nation_id}">
+                        <th>국적</th>
+                        <td><span id="{$join_confirm_field_citizenship}"></span></td>
+                    </tr>
+                    <tr class="{$display_addr|display}">
+                        <th scope="row">주소</th>
+                        <td>
+                            <span id="{$join_confirm_field_postcode1}"></span><br>
+                            <span id="{$join_confirm_field_addr1}"></span>
+                            <span id="{$join_confirm_field_addr2}"></span>
+                        </td>
+                    </tr>
+                    <tr  class="{$display_phone|display}">
+                        <th scope="row">일반전화</th>
+                        <td><span id="{$join_confirm_field_phone}"></span></td>
+                    </tr>
+                    <tr class="{$display_mobile|display}">
+                        <th scope="row">휴대전화</th>
+                        <td><span id="{$join_confirm_field_mobile}"></span></td>
+                    </tr>
+                    <tr class="{$display_is_sms|display}">
+                        <th scope="row">SMS 수신여부</th>
+                        <td><span id="{$join_confirm_field_is_sms}"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이메일</th>
+                        <td><span id="{$join_confirm_field_email1}"></span>@<span id="{$join_confirm_field_email2}"></span></td>
+                    </tr>
+                    <tr class="{$display_is_news_mail|display}">
+                        <th scope="row">이메일 수신여부</th>
+                        <td><span id="{$join_confirm_field_is_news_mail}"></span></td>
+                    </tr>
+                    <tr class="{$display_is_lifetime|display}">
+                        <th scope="row">평생회원</th>
+                        <td><span id="{$join_confirm_field_is_lifetime}"></span></td>
+                    </tr>
+                    <tr class="{$display_nick|display}">
+                        <th scope="row">별명</th>
+                        <td><span id="{$join_confirm_field_nick_name}"></span></td>
+                    </tr>
+                    <tr class="{$display_is_sex|display}">
+                        <th scope="row">성별</th>
+                        <td><span id="{$join_confirm_field_is_sex}"></span></td>
+                    </tr>
+                    <tr class="{$display_birthday|display}">
+                        <th scope="row">생년월일</th>
+                        <td><span id="{$join_confirm_field_birth_year}"></span><span>/</span><span id="{$join_confirm_field_birth_month}"></span><span>/</span><span id="{$join_confirm_field_birth_day}"></span> <span class="{$display_calendar_type|display}">(<span id="{$join_confirm_field_is_solar_calendar}"></span>)</span></td>
+                    </tr>
+                    <tr class="{$display_marry|display}">
+                        <th scope="row">결혼기념일</th>
+                        <td><span id="{$join_confirm_field_marry_year}"></span><span>/</span><span id="{$join_confirm_field_marry_month}"></span><span>/</span><span id="{$join_confirm_field_marry_day}"></span></td>
+                    </tr>
+                    <tr class="{$display_partner|display}">
+                        <th scope="row">배우자생일</th>
+                        <td><span id="{$join_confirm_field_partner_year}"></span><span>/</span><span id="{$join_confirm_field_partner_month}"></span><span>/</span><span id="{$join_confirm_field_partner_day}"></span></td>
+                    </tr>
+                    <tr class="{$display_child|display}">
+                        <th scope="row">자녀</th>
+                        <td><span id="{$join_confirm_field_child}"></span></td>
+                    </tr>
+                    <tr class="{$display_school|display}">
+                        <th scope="row">최종학력</th>
+                        <td><span id="{$join_confirm_field_school}"></span></td>
+                    </tr>
+                    <tr class="{$display_job_class|display}">
+                        <th scope="row">직종</th>
+                        <td><span id="{$join_confirm_field_job_class}"></span></td>
+                    </tr>
+                    <tr class="{$display_job|display}">
+                        <th scope="row">직업</th>
+                        <td><span id="{$join_confirm_field_job}"></span></td>
+                    </tr>
+                    <tr class="{$display_earning|display}">
+                        <th scope="row">연소득</th>
+                        <td><span id="{$join_confirm_field_earning}"></span></td>
+                    </tr>
+                    <tr class="{$display_car|display}">
+                        <th scope="row">자동차</th>
+                        <td><span id="{$join_confirm_field_car}"></span></td>
+                    </tr>
+                    <tr class="{$display_region|display}">
+                        <th scope="row">지역</th>
+                        <td><span id="{$join_confirm_field_region}"></span></td>
+                    </tr>
+                    <tr class="{$display_internet|display}">
+                        <th scope="row">인터넷 이용장소</th>
+                        <td><span id="{$join_confirm_field_internet}"></span></td>
+                    </tr>
+                    <tr class="{$display_inter|display}">
+                        <th scope="row">관심분야</th>
+                        <td><span id="{$join_confirm_field_inter_check}"></span></td>
+                    </tr>
+                    <tr class="{$display_add1|display}">
+                        <th scope="row">{$title_add1}</th>
+                        <td><span id="{$join_confirm_field_add1}"></span></td>
+                    </tr>
+                    <tr class="{$display_add2|display}">
+                        <th scope="row">{$title_add2}</th>
+                        <td><span id="{$join_confirm_field_add2}"></span></td>
+                    </tr>
+                    <tr class="{$display_add3|display}">
+                        <th scope="row">{$title_add3}</th>
+                        <td><span id="{$join_confirm_field_add3}"></span></td>
+                    </tr>
+                    <tr class="{$display_add4|display}">
+                        <th scope="row">{$title_add4}</th>
+                        <td><span id="{$join_confirm_field_add4}"></span></td>
+                    </tr>
+                    <tr class="{$display_add5|display}">
+                        <th scope="row">{$title_add5}</th>
+                        <td><span id="{$join_confirm_field_add5}"></span></td>
+                    </tr>
+                    <tr class="{$display_add6|display}">
+                        <th scope="row">{$title_add6}</th>
+                        <td><span id="{$join_confirm_field_add6}"></span></td>
+                    </tr>
+                    <tr class="{$display_add7|display}">
+                        <th scope="row">{$title_add7}</th>
+                        <td><span id="{$join_confirm_field_add7}"></span></td>
+                    </tr>
+                    <tr class="{$display_add8|display}">
+                        <th scope="row">{$title_add8}</th>
+                        <td><span id="{$join_confirm_field_add8}"></span></td>
+                    </tr>
+                    <tr class="{$display_add9|display}">
+                        <th scope="row">{$title_add9}</th>
+                        <td><span id="{$join_confirm_field_add9}"></span></td>
+                    </tr>
+                    <tr class="{$display_add10|display}">
+                        <th scope="row">{$title_add10}</th>
+                        <td><span id="{$join_confirm_field_add10}"></span></td>
+                    </tr>
+                    <tr class="{$display_add11|display}">
+                        <th scope="row">{$title_add11}</th>
+                        <td><span id="{$join_confirm_field_add11}"></span></td>
+                    </tr>
+                    <tr class="{$display_add12|display}">
+                        <th scope="row">{$title_add12}</th>
+                        <td><span id="{$join_confirm_field_add12}"></span></td>
+                    </tr>
+                    <tr class="{$display_add13|display}">
+                        <th scope="row">{$title_add13}</th>
+                        <td><span id="{$join_confirm_field_add13}"></span></td>
+                    </tr>
+                    <tr class="{$display_add14|display}">
+                        <th scope="row">{$title_add14}</th>
+                        <td><span id="{$join_confirm_field_add14}"></span></td>
+                    </tr>
+                    <tr class="{$display_add15|display}">
+                        <th scope="row">{$title_add15}</th>
+                        <td><span id="{$join_confirm_field_add15}"></span></td>
+                    </tr>
+                    <tr class="{$display_reco_id|display}">
+                        <th scope="row">추천인 아이디</th>
+                        <td><span id="{$join_confirm_field_reco_id}"></span></td>
+                    </tr>
+                    <tr class="{$display_bank|display}">
+                        <th scope="row">환불계좌 정보</th>
+                        <td>
+                            <ul class="account">
+                                <li>
+                                    예금주 : <span id="{$join_confirm_field_bank_account_owner}"></span>
+                                </li>
+                                <li>
+                                    은행명 : <span id="{$join_confirm_field_refund_bank_code}"></span>
+                                </li>
+                                <li>
+                                    계좌번호 : <span id="{$join_confirm_field_bank_account_no}"></span>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_member_join2.gif" alt="회원가입" id="{$btn_layer_join_id}" /></a>
+        <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/common/btn_layer_close.gif" alt="닫기" onclick="{$join_confirm_layer_off}" /></a>
+    </div>
+    <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" onclick="{$join_confirm_layer_off}" /></a>
+</div>

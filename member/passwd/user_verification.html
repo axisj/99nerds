@@ -1,0 +1,38 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">비밀번호 찾기</h2>
+</div>
+
+
+<div module="member_passwordverification" class="mid-0">
+    <!--@css(/css/module/member/user_verification.css)-->
+    <h3 class="txtTitle20B">본인확인 인증</h3>
+    <div class="memberArea">
+        <ul>
+            <li><strong class="term"><span class="icoDot"></span> 본인확인 인증</strong><span class="desc">{$form.user_verification_method_type}</span></li>
+            <li id="{$user_verification_email_info}"><strong class="term"><span class="icoDot"></span> 이메일</strong><span class="desc"><strong class="txtStrong12B">{$user_verification_email}</strong> <a href="#none" class="btnNormal" onclick="{$action_func_user_verification}">인증번호 받기</a></span></li>
+            <li id="{$user_verification_mobile_info}"><strong class="term"><span class="icoDot"></span> 휴대폰 번호</strong><span class="desc"><strong class="txtStrong12B number">{$user_verification_mobile}</strong> <a href="#none" class="btnNormal" onclick="{$action_func_user_verification}">인증번호 받기</a></span></li>
+            <li>
+                <strong class="term"><span class="icoDot"></span> 인증번호</strong>
+                <div class="desc">{$form.verification_code}
+                    <div class="txtSub11 gSingle">
+                        <p id="{$user_verification_email_desc}" class="{$display_user_verification_email_desc|display}">1회 발송된 인증번호의 유효 시간은 60분이며,<br /> 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+                        <p id="{$user_verification_mobile_desc}" class="{$display_user_verification_mobile_desc|display}">1회 발송된 인증번호의 유효 시간은 3분이며,<br /> 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p class="buttonArea">
+        <a href="#none" class="btnSubmitM" onclick="{$action_func_user_verification_submit}">확인</a>
+        <a href="#none" class="btnEmM" onclick="{$action_func_user_verification_cancel}">취소</a>
+    </p>
+</div>

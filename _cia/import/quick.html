@@ -1,0 +1,15 @@
+<div id="quick">
+	<div module="Layout_productRecent">
+		<!--@css(/css/module/layout/productRecent.css)-->
+		<h2><a href="/product/recent_view_product.html">최근 본 상품</a></h2>
+		<ul>
+			<li class="{$disp_recent|display}">
+				<a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><span>{$name}</span></a>
+			</li>
+			<li class="{$disp_recent|display}">
+				<a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><span>{$name}</span></a>
+			</li>
+		</ul>
+		<p class="player"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_recent_prev.gif" alt="이전 제품" class="prev" /><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_recent_next.gif" alt="다음 제품" class="next" /></p>
+	</div>
+</div><!-- e. quick -->

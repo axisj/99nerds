@@ -1,0 +1,91 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>게시물 관리</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>게시물 관리</h2>
+</div>
+
+
+<div module="myshop_BoardPackage" class="tableTheme">
+    <!--@css(/css/module/myshop/boardPackage.css)-->
+    <div module="myshop_boardListHead">
+        <p>분류 선택 {$board_sort}</p>
+    </div>
+
+    <div module="myshop_boardList">
+        <!--
+            $count = 10
+            $relation_post = yes
+        -->
+        <table border="1" summary="">
+            <caption>게시물 관리 목록</caption>
+            <colgroup module="board_listheader_1002">
+                <col style="width:70px;" />
+                <col style="width:135px;" />
+                <col style="width:auto;" />
+                <col style="width:84px;" />
+                <col style="width:100px;" />
+                <col style="width:55px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">분류</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                    <th scope="col">조회</th>
+                </tr>
+            </thead>
+            <tbody class="{$nodata_display|display}">
+                <tr>
+                    <td colspan="6"><p class="empty">게시물이 없습니다.</p></td>
+                </tr>
+            </tbody>
+            <tbody class="{$list_display|display} center middle">
+                <tr>
+                    <td>{$no}</td>
+                    <td><a href="{$board_list_url}">{$board_category}</a></td>
+                    <td class="left">{$icon_re} {$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new} {$icon_file} {$comment_count}</td>
+                    <td>{$writer}</td>
+                    <td>{$write_date}</td>
+                    <td>{$hit_count}</td>
+                </tr>
+                <tr>
+                    <td>{$no}</td>
+                    <td><a href="{$board_list_url}">{$board_category}</a></td>
+                    <td class="left">{$icon_re} {$icon_lock} <a href="{$board_read_url}">{$subject}</a> {$icon_new} {$icon_file} {$comment_count}</td>
+                    <td>{$writer}</td>
+                    <td>{$write_date}</td>
+                    <td>{$hit_count}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div module="myshop_boardlistPaging" class="paginate mid-0">
+    <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+</div>
+
+
+<div module="myshop_boardlistSearch" class="mid-0">
+    <!--@css(/css/module/myshop/boardlistSearch.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <p>{$form.search_key} {$form.search} <button type="button" class="btnEm" onclick="{$action_search}">찾기</button></p>
+    </fieldset>
+</div>

@@ -1,0 +1,34 @@
+<!--@layout(/layout/basic/intro.html)-->
+
+<div module="Member_AdultHead" class="intro mid-0">
+    <!--@css(/css/module/intro/intro.css)-->
+    <h1>로그인</h1>
+    <div class="alert">
+        <div class="inner">
+            <h2>19세 미만의 미성년자 출입을 금합니다.</h2>
+            <p class="info">이 정보내용은 청소년 유해매체물로서 정보통신망 이용촉진법<br /> 및 정보보호 등에 관한 법률 및 청소년 보호법의 규정에 의하여<br /> 19세 미만의 청소년은 사용할 수 없습니다.</p>
+            <p class="info">미성년자 차단을 위하여 <span class="txtEm">로그인 또는 본인인증 절차</span>를 거치셔야 합니다.</p>
+            <a href="{$outlink}" class="button"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/intro/btn_minor_out.gif" alt="19세 미만 나가기" /></a>
+        </div>
+    </div>
+    <div class="member">
+        <h2><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/intro/h2_noMember_certification.gif" alt="비회원 성인인증" /></h2>
+        {$radioAuthIpin} <label for="{$idAuthIpin}">아이핀(i-PIN) 인증</label> 
+        {$radioAuthMobile} <label for="{$idAuthMobile}">휴대폰 인증</label>
+        <div class="ipin" id="ipin">
+            <a href="#none" onclick="{$ipinpopup}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_check6.gif" alt="아이핀 인증" /></a>
+            <p>
+                아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고,<br />
+                본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다.<br />
+                아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.
+            </p>
+        </div>
+        <div class="ipin" id="mobileauth">
+            <a href="#none" onclick="{$mobileauthpopup}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_check5.gif" alt="휴대폰 인증" /></a>
+            <p>
+                본인 명의의 휴대폰으로 본인인증을 진행합니다.<br />
+                휴대폰 명의자의 나이 정보로 14세 미만 여부를 확인합니다.
+            </p>
+        </div>
+    </div>
+</div>

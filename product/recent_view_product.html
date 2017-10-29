@@ -1,0 +1,128 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>최근 본 상품</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">최근 본 상품</h2>
+</div>
+
+
+<div module="product_recentlist" class="tableTheme mid-0">
+    <!--@css(/css/module/product/recentlist.css)-->
+    <!--
+        $count = 10
+    -->
+    <table border="1" summary="" class="{$list_display|display}">
+        <caption>최근 본 상품 목록</caption>
+        <colgroup>
+            <col style="width:100px;" />
+            <col style="width:auto;" />
+            <col style="width:280px;" />
+            <col style="width:120px;" />
+            <col style="width:120px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">이미지</th>
+                <th scope="col">상품명</th>
+                <th scope="col">옵션정보</th>
+                <th scope="col">판매가</th>
+                <th scope="col">주문</th>
+            </tr>
+        </thead>
+        <tbody module="product_listitem" class="center">
+            <tr>
+                <td><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" style="width:75px" /></a></td>
+                <td class="left">
+                    {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}
+                    <span class="gSingle"><a href="{$link_product_detail}">{$product_name}</a> {$zoom_icon}</span>
+                    <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                    <ul module="product_setproduct">
+                        <li>{$product_name}</li>
+                        <li>{$product_name}</li>
+                    </ul><!-- //참고 -->
+                </td>
+                <td class="left">
+                    <ul module="product_mainoption">
+                        <li>{$option_name}: {$form.option}</li>
+                        <li>{$option_name}: {$form.option}</li>
+                    </ul>
+                    <ul module="product_addoption">
+                        <li>{$add_option_name}: {$form.add_option}</li>
+                        <li>{$add_option_name}: {$form.add_option}</li>
+                    </ul>
+                </td>
+                <td class="right">
+                    <p class="{$strike_custom_price} {$custom_price_display|display}">{$product_custom}</p>
+                    <p class="{$discount}"><strong class="gSingle">{$price}</strong></p>
+                    <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+                    <p>{$product_tax_type_text}</p>
+                </td>
+                <td>
+                    <div class="button">
+                        <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">담기</button>
+                        <button type="button" class="btnNormal {$disp_order|display}" onclick="{$act_order}">주문</button>
+                        <a href="#none" class="btnNormal {$class_del}" rel="{$rel_del}">삭제</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" style="width:75px" /></a></td>
+                <td class="left">
+                   {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}
+                   <span class="gSingle"><a href="{$link_product_detail}">{$product_name}</a> {$zoom_icon}</span>
+                   <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                   <ul module="product_setproduct">
+                    <li>{$product_name}</li>
+                       <li>{$product_name}</li>
+                    </ul><!-- //참고 -->
+                </td>
+                <td class="left">
+                    <ul module="product_mainoption">
+                        <li>{$option_name}: {$form.option}</li>
+                        <li>{$option_name}: {$form.option}</li>
+                    </ul>
+                    <ul module="product_addoption">
+                        <li>{$add_option_name}: {$form.add_option}</li>
+                        <li>{$add_option_name}: {$form.add_option}</li>
+                    </ul>
+                </td>
+                <td class="right">
+                    <p class="{$strike_custom_price} {$custom_price_display|display}">{$product_custom}</p>
+                    <p class="{$discount}"><strong class="gSingle">{$price}</strong></p>
+                    <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+                    <p>{$product_tax_type_text}</p>
+                </td>
+                <td>
+                    <div class="button">
+                        <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">담기</button>
+                        <button type="button" class="btnNormal {$disp_order|display}" onclick="{$act_order}">주문</button>
+                        <a href="#none" class="btnNormal {$class_del}" rel="{$rel_del}">삭제</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="empty {$empty_display|display}">최근본 상품 내역이 없습니다.</p>
+</div>
+
+
+
+<div module="product_recentlistpaging" class="paginate mid-0">
+    <p class="first"><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+    <p><a href="{$param_before}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+    <p class="last"><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+</div>

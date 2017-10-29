@@ -1,0 +1,8 @@
+.mid-0.xans-member-certification.layerTheme { position:fixed; top:50%; left:50%; width:450px; margin:-183px 0 0 -225px; }
+.mid-0.xans-member-certification .content { height:325px; background:#5070c3 url("http://img.echosting.cafe24.com/skin/base_ko_KR/member/bg_certification_layer.jpg") no-repeat 0 0 !important; }
+.mid-0.xans-member-certification .content > h4 { padding:15px 0 25px 20px; }
+.mid-0.xans-member-certification .content > p { padding:0 0 10px 20px; font-size:14px; color:#fbfafa; font-family:Gulim; line-height:1.4; }
+.mid-0.xans-member-certification .content > p strong { color:#ffe746; }
+.mid-0.xans-member-certification .content .buttonCertification { display:inline-block; margin:30px 0 0 12px; }
+.mid-0.xans-member-certification .buttonArea { overflow:hidden; padding:6px 20px 6px 0; background:#fbfafa; }
+.mid-0.xans-member-certification .buttonArea label { float:left; margin:0 0 0 20px; font-size:12px; letter-spacing:0; line-height:30px; }

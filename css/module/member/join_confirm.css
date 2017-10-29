@@ -1,0 +1,6 @@
+.xans-member-join .joinConfirm { display:none; position:fixed; top:50%; left:50%; z-index:1000; width:620px; margin:-400px 0 0 -310px; }
+.xans-member-join .joinConfirm h3 { padding:0; color:#fff; }
+.xans-member-join .joinConfirm .content { overflow-y:auto; max-height:600px; }
+.xans-member-join .joinConfirm .content p { color:#353535; }
+.xans-member-join .joinConfirm .content p strong { color:#008bcc; }
+.xans-member-join .joinConfirm .ec-base-table { margin:10px 0 20px; }

@@ -1,0 +1,22 @@
+.displaynone {
+    display: none !important;
+}
+
+.xans-bannermanage2-mobile {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+}
+
+.xans-bannermanage2-mobile li {
+    display: inline;
+    vertical-align: top;
+}
+
+.xans-bannermanage2-mobile li img {
+    display: inline;
+    width: 48%;
+    border: 1px solid #ddd;
+}

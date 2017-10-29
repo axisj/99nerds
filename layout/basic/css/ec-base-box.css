@@ -1,0 +1,27 @@
+/* base */
+.ec-base-box { padding:20px; margin-left:auto; margin-right:auto; border:5px solid #e8e8e8; color:#404040; }
+.ec-base-box.gHalf { position:relative; padding:20px 0; }
+.ec-base-box.gHalf:before { position:absolute; top:0; left:50%; display:block; content:""; width:1px; height:100%; background-color:#e6e6e6; }
+.ec-base-box.typeBg { background-color:#fbfafa; }
+.ec-base-box.typeThin { border-width:1px; border-color:#d7d5d5; }
+.ec-base-box.typeThinBg { border-width:1px; border-color:#d7d5d5; background-color:#fbfafa; }
+    /* 약관 */
+    .ec-base-box.typeThinBg > .agree { padding:20px; border:1px solid #e6e6e6; background:#fff; }
+    .ec-base-box.typeThinBg > .agree p { padding:0 0 17px; }
+
+/* typeMember */
+.ec-base-box.typeMember { padding:0; }
+.ec-base-box.typeMember .information { display:table; table-layout:fixed; padding:10px 0; width:100%; box-sizing:border-box; }
+.ec-base-box.typeMember .information > .title, .ec-base-box.typeMember .information > .thumbnail { display:table-cell; padding:0 15px; width:70px; text-align:center; vertical-align:middle; }
+.ec-base-box.typeMember .information > .title { vertical-align:middle; }
+.ec-base-box.typeMember .information > .thumbnail img { max-width:70px; }
+.ec-base-box.typeMember .information .description { display:table-cell; padding:0 10px; width:auto; line-height:1.5em; border-left:1px solid #e8e8e8; vertical-align:middle; }
+    .ec-base-box.typeMember.gMessage { border-width:1px; border-color:#d7d5d5; }
+.ec-base-box .message { display:block; padding:10px 0 10px 35px; border-bottom:1px solid #e8e7e7; background:#fbfbfb url("//img.echosting.cafe24.com/skin/base/common/ico_info.gif") no-repeat 10px center; }
+
+/* typeProduct */
+.ec-base-box.typeProduct { display:table; table-layout:fixed; padding:15px 0; width:100%; box-sizing:border-box; }
+.ec-base-box.typeProduct .thumbnail, .ec-base-box.typeProduct .information { display:table-cell; padding:0 20px; vertical-align:middle; }
+.ec-base-box.typeProduct .thumbnail { width:100px; }
+.ec-base-box.typeProduct .thumbnail img { max-width:90px; border:1px solid #d7d5d5; }
+.ec-base-box.typeProduct .information { padding-left:0; }

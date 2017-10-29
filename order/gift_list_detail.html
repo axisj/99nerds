@@ -1,0 +1,39 @@
+
+<!-- 사은품 제공 상품 레이어 -->
+<div module="Gift_layerOfferGift" id="{$GiftlayerId}" class="">
+    <!--@css(/css/module/order/gift_list.css)-->
+    <h1>사은품 제공 상품</h1>
+    <div class="content">
+        <div class="list">
+            <table summary="" module="Gift_Listdetail">
+                <caption></caption>
+                <colgroup>
+                    <col style="width:auto;" /><col style="width:150px;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">상품명</th>
+                        <th scope="col">판매가</th>
+                    </tr>
+                </thead>
+                <tbody module="Gift_detail">
+                    <tr>
+                        <td>
+                            <div class="product">
+                                <span class="img"><img src="{$gift_image}" alt="" /></span>
+                                <span class="name">{$product_name}</span>
+                                <span class="icon">
+                                {$soldout_icon}
+                                {$recommend_icon}
+                                {$new_icon}
+                                </span>
+                            </div>
+                        </td>
+                        <td class="right price">{$price_unit_head}{$product_price}{$price_unit_tail}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="close"><a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png" alt="닫기"></a></div>
+</div>

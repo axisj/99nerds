@@ -1,0 +1,6 @@
+.xans-layout-myshop { margin:0; padding:0 0 10px; }
+.xans-layout-myshop ul { padding:0 0 0 4px; }
+.xans-layout-myshop li { display:inline-block; padding:0 9px 0 5px; line-height:22px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_myshop.gif") no-repeat 100% 4px; *display:inline; *zoom:1; }
+.xans-layout-myshop li.mileage { background:none; }
+.xans-layout-myshop li.member { background:none; }
+.xans-layout-myshop li.wish { background:none; }

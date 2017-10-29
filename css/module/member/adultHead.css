@@ -1,0 +1,41 @@
+.mid-0.xans-member-adulthead { width:754px; margin:30px auto; font:0.75em Verdana,Dotum,AppleGothic,sans-serif; color:#353535; }
+.mid-0.xans-member-adulthead h1 { height:23px; margin:30px 0; border-bottom:1px solid #dedcdc; }
+.mid-0.xans-member-adulthead h1 span { float:left; height:23px; padding:0 23px 0 0; border-bottom:1px solid #272823; font-size:18px; color:#272823; }
+.mid-0.xans-member-adulthead .under19 { margin:0 0 20px; border:1px solid #d2d2cf; background:#f5f5f5; }
+.mid-0.xans-member-adulthead .under19 .msg { width:363px; margin:0 auto; padding:70px 0 70px 117px; font-size:11px; line-height:18px; color:#8f8f91; }
+.mid-0.xans-member-adulthead .under19 .msg h2 { height:80px; margin:0 0 0 -117px; padding:20px 0 0 117px; background:url("http://img.echosting.cafe24.com/design/skin/default/intro/bg_under19ipin.gif") 0 0 no-repeat; color:#333; font-size:22px; line-height:1.3em; }
+.mid-0.xans-member-adulthead .under19 .msg h2 strong { font-size:12px; color:#e1566e; }
+.mid-0.xans-member-adulthead .under19 .msg .info { padding:0 0 42px; }
+.mid-0.xans-member-adulthead .under19 .msg .info span { display:block; padding:24px 0 0; }
+.mid-0.xans-member-adulthead .under19 .msg .info span em { color:#34a7b3; font-style:normal; }
+
+.mid-0.xans-member-adulthead .under19Recommend { min-height:224px; padding:59px 0 0 355px; background:#fff url("http://img.echosting.cafe24.com/design/skin/default/intro/bg_under19_recommend.gif") 77px 17px no-repeat; }
+.mid-0.xans-member-adulthead .under19Recommend p { margin:0 0 19px; }
+.mid-0.xans-member-adulthead .under19Recommend .msg { margin:0 0 20px; }
+.mid-0.xans-member-adulthead .under19Recommend .msg h2 strong { display:inline-block; margin:10px 0 0; font-size:12px; color:#e1566e; }
+.mid-0.xans-member-adulthead .under19Recommend .msg .info { padding:20px 0 0; font-weight:bold; line-height:20px; }
+
+.mid-0.xans-member-adulthead .member { overflow:hidden; zoom:1; margin:-1px 0 0; padding:40px 38px; border:1px solid #d2d2cf; background:#f5f5f5; }
+.mid-0.xans-member-adulthead .member h2 { float:left; width:260px; }
+.mid-0.xans-member-adulthead .member label { padding:0 11px 0 0; }
+.mid-0.xans-member-adulthead .member .inner { float:left; width:390px; }
+
+.mid-0.xans-member-adulthead .member .login { overflow:hidden; }
+.mid-0.xans-member-adulthead .member .login .inputType { float:left; width:195px; }
+.mid-0.xans-member-adulthead .member .login .inputType span { overflow:hidden; display:block; padding:0 0 3px; }
+.mid-0.xans-member-adulthead .member .login .inputType span strong { float:left; width:60px; padding:3px 0 0 0; }
+.mid-0.xans-member-adulthead .member .login .inputType span  input { width:120px; padding:3px; }
+.mid-0.xans-member-adulthead .member .login .button { float:left; }
+.mid-0.xans-member-adulthead .member .security { padding:5px 0 0 60px; color:#8f8f91; font-size:11px; }
+
+.mid-0.xans-member-adulthead .member .join { padding:7px 0 0 60px; }
+.mid-0.xans-member-adulthead .member .join a,
+.mid-0.xans-member-adulthead .member .join a:hover { padding:0 0 0 7px; font-size:11px; color:#8f8f91; background:url("http://img.echosting.cafe24.com/design/skin/default/intro/ico_joinus.gif") 0 50% no-repeat; }
+
+.mid-0.xans-member-adulthead .member .ipin { padding:10px 0 0; font-size:11px; line-height:16px; color:#8f8f91; }
+.mid-0.xans-member-adulthead .member .ipin span { display:block; padding:0 0 5px; }
+
+.mid-0.xans-member-adulthead .member .snsArea { overflow:hidden; text-align:left; *zoom:1; }
+.mid-0.xans-member-adulthead .member .snsArea li { float:left; width:176px; margin:7px 0 0 4px; }
+.mid-0.xans-member-adulthead .member .snsArea a,
+.mid-0.xans-member-adulthead .member .snsArea a:hover { padding:0; background:none; }

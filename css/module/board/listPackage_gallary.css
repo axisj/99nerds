@@ -1,0 +1,43 @@
+/* 게시판 전체 공통 */
+.mid-0 .xans-board-title p.imgArea { margin:0 0 20px; }
+.mid-0 .xans-board-listpackage .boardSort { float:left; margin:0 0 10px; }
+
+/* 갤러리형 탭메뉴 */
+.mid-0 ul.xans-board-listheader { text-align:right; margin:0 0 10px; }
+.mid-0 ul.xans-board-listheader li { display:inline; }
+
+/* 공지글, 고정글 */
+.mid-0.xans-board-listpackage-8 .notice { border:1px solid #d7d5d5; border-bottom:0; }
+.mid-0.xans-board-listpackage-8 .notice li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; *zoom:1; }
+.mid-0.xans-board-listpackage-8 .notice li:after { content:""; display:block; clear:both; }
+.mid-0.xans-board-listpackage-8 .notice li .imgLink { float:left; }
+.mid-0.xans-board-listpackage-8 .notice li .description { padding:15px 0 0 205px; line-height:18px; }
+.mid-0.xans-board-listpackage-8 .notice li .description .subject { padding:0 0 10px; border-bottom:1px solid #d7d5d5; }
+.mid-0.xans-board-listpackage-8 .notice li .description .subject img { vertical-align:middle; }
+
+/* 일반글 */
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 { clear:both; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList { display:table; width:100%; margin:0; font-size:0; line-height:0; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item { display:inline-block; margin:20px 0; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box { margin:0 auto; line-height:1.5; text-align:left; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box .thumb { display:block; height:200%; max-width:100%; border:1px solid #ececec; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box .boardChk { display:block; margin:10px auto; }
+
+/* 일반글 진열방식 */
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column2 li.item { width:50%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column3 li.item { width:33.33%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column4 li.item { width:25%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column5 li.item { width:20%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column6 li.item { width:16.66%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column7 li.item { width:14.28%; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box { margin:0 7px; }
+
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column2.wyImgSizeFixed li.item .box { min-width:354px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column3.wyImgSizeFixed li.item .box { min-width:232px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column4.wyImgSizeFixed li.item .box { min-width:170px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column5.wyImgSizeFixed li.item .box { min-width:134px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column6.wyImgSizeFixed li.item .box { min-width:108px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.column7.wyImgSizeFixed li.item .box { min-width:92px; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.wyImgSizeFixed li.item .thumb { width:240px; height:240px; }
+
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList.wyImgSizeFlex li.item .thumb { width:100%; }

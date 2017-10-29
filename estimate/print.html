@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>견적서 정보</title>
+</head>
+<body>
+
+<div class="estimateArea">
+    <!--@css(/css/module/estimate/estimateInfo.css)-->
+    
+    <div module="Estimate_Print" class="mid-0">
+        <strong>도움말</strong>
+        <ul>
+            <li>익스플로러 상단메뉴[도구] => [인터넷옵션] => [고급] => [인쇄] 항목의 <br />[배경색 및 이미지인쇄] 에 체크를 하셔야 직인 인쇄가 가능합니다.</li>
+            <li class="{$display_email|display}">이메일을 클릭하시면 입력한 이메일 주소로 견적서가 전송됩니다.</li>
+        </ul>
+        <p>
+            <a href="#none" onclick="{$action_print}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_estimate_print.gif" alt="인쇄하기" /></a>
+            <a href="#none" onclick="{$action_email}" class="{$display_email|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_estimate_email.gif" alt="이메일전송" /></a>
+            <a href="{$download_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_file_download.gif" alt="파일다운로드" /></a>
+        </p>
+    </div>
+
+    
+    <div module="Estimate_EstimateInfo" class="mid-0">
+        <h1>{$logo_image} 견적서 (見積書) {$seal_image}</h1>
+
+        <!-- 견적받는자 정보 -->
+        <table border="1" summary="">
+            <caption>견적받는자 정보</caption>
+            <colgroup>
+                <col width="30%" />
+                <col width="auto" />
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th scope="row">담당자</th>
+                    <td>{$user_name} 님 귀하 </td>
+                </tr>
+                <tr>
+                    <th scope="row">견적일</th>
+                    <td>{$estimate_date}</td>
+                </tr>
+                <tr>
+                    <th scope="row">결제방법</th>
+                    <td>{$paymethod}</td>
+                </tr>
+                <tr>
+                    <th scope="row">견적금액</th>
+                    <td>{$total_price}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 공급자 사업자정보 -->
+        <table border="1" summary="">
+            <caption>공급자 사업자정보</caption>
+            <colgroup>
+                <col width="10%" />
+                <col width="20%" />
+                <col width="25%" />
+                <col width="20%" />
+                <col width="25%" />
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th rowspan="5" scope="row">공급자</th>
+                    <th scope="row">상호</th>
+                    <td colspan="3">{$mall_company_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">대표자</th>
+                    <td colspan="3">{$mall_president_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">주소</th>
+                    <td colspan="3">{$mall_addr}</td>
+                </tr>
+                <tr>
+                    <th scope="row">업태</th>
+                    <td>{$mall_company_condition}</td>
+                    <th scope="row">종목</th>
+                    <td>{$mall_company_line}</td>
+                </tr>
+                <tr>
+                    <th scope="row">전화</th>
+                    <td>{$mall_phone}</td>
+                    <th scope="row">팩스</th>
+                    <td>{$mall_fax}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>아래와 같이 견적합니다.</p>
+        <!-- 구매상품목록 -->
+        <div module="Estimate_PurchaseList">
+            <table border="1" summary="">
+                <caption>구매상품목록</caption>
+                <colgroup>
+                    <col width="10%" />
+                    <col width="20%" />
+                    <col width="25%" />
+                    <col width="10%" />
+                    <col width="10%" />
+                    <col width="auto" />
+                    <col width="auto" />
+                    <col width="auto" />
+                    <col class="{$show_discount_amount_display|display}" width="auto">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">상품코드</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">{$title_manu_name}</th>
+                        <th scope="col">{$title_made_in}</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">상품구매금액</th>
+                        <th scope="col" class="{$show_discount_amount_display|display}">할인가</th>
+                    </tr>
+                </thead>
+
+                <tbody module="Estimate_list">
+                    <tr>
+                        <td class="number">{$num}</td>
+                        <td class="prdCode">{$product_no}</td>
+                        <td class="prdName">{$img}{$product_name}</td>
+                        <td class="maker">{$maker}</td>
+                        <td class="resource">{$product_resource}</td>
+                        <td class="unitPrice">{$unit_price}</td>
+                        <td class="quantity">{$quantity}</td>
+                        <td class="totalPrice">{$total_price}</td>
+                        <td class="totalSalePrice {$show_discount_amount_display|display}">{$total_unit_add_sale}</td>
+                    </tr>
+                    <tr>
+                        <td class="number">{$num}</td>
+                        <td class="prdCode">{$product_no}</td>
+                        <td class="prdName">{$img}{$product_name}</td>
+                        <td class="maker">{$maker}</td>
+                        <td class="resource">{$product_resource}</td>
+                        <td class="unitPrice">{$unit_price}</td>
+                        <td class="quantity">{$quantity}</td>
+                        <td class="totalPrice">{$total_price}</td>
+                        <td class="totalSalePrice {$show_discount_amount_display|display}">{$total_unit_add_sale}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 하단 합계정보 -->
+        <div module="Estimate_TotalSummary">
+            <p>상기 가격은 VAT포함 가격임.</p>
+            <table border="1" summary="">
+                <caption>하단 합계정보</caption>
+                <colgroup>
+                    <col width="30%" />
+                    <col width="auto" />
+                </colgroup>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">총 상품구매금액</th>
+                        <td>{$purchase_price}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">총 배송비</th>
+                        <td>{$delv_price}</td>
+                    </tr>
+                    <tr>
+                    </tr><tr class="{$show_discount_amount_display|display}">
+                        <th scope="row">총 할인금액</th>
+                        <td>{$total_sale_price}
+                        <ul class="sale {$show_discount_amount_detail_display|display}">
+                            <li class="{$total_periodsale_price_display|display}"><span class="title">- 기간할인</span>{$total_periodsale_price}</li>
+                             <li class="{$total_membersale_price_display|display}"><span class="title">- 회원할인</span>{$total_membersale_price}</li>
+                             <li class="{$total_rebuysale_price_display|display}"><span class="title">- 재구매할인</span>{$total_rebuysale_price}</li>
+                             <li class="{$total_bulksale_price_display|display}"><span class="title">- 대량구매할인</span>{$total_bulksale_price}</li>
+                             <li class="{$total_newproductsale_price_display|display}"><span class="title">- 신규상품할인</span>{$total_newproductsale_price}</li>
+                             <li class="{$total_membergroupsale_price_display|display}"><span class="title">- 그룹할인</span>{$total_membergroupsale_price}</li>
+                        </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">총 주문금액</th>
+                        <td>{$total_price}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 견적서 안내문구 -->
+            <p>{$comment}</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

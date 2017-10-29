@@ -1,0 +1,31 @@
+<script src="/assets/js/front-plugins.min.js"></script>
+<script>
+  window.jQuery3_2_1 = jQuery.noConflict(true);
+</script>​
+<script src="/assets/plugins/materialize_edited/dist/materialize.min.js"></script>
+<script>
+  var fcObj = {};
+  (function ($, fcObj) {
+    fcObj.pageStart = function () {
+      /*
+      $('[data-activates="slide-out"]').sideNav();
+      */
+
+      $(".dropdown-button").dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: true, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: true, // Displays dropdown below the button
+        alignment: 'left', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: true // Stops event propagation
+      });
+
+    };
+
+    $(document).ready(function () {
+      fcObj.pageStart();
+    });
+  })(jQuery3_2_1, fcObj);
+</script>

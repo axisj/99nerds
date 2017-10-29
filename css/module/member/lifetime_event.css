@@ -1,0 +1,9 @@
+.xans-member-lifetimeevent { position:fixed; top:50%; left:50%; z-index:1000; width:353px; margin:-240px 0 0 -177px; }
+.xans-member-lifetimeevent .content { padding:0 0 0 20px; height:369px; background:#3dbcd7 url("//img.echosting.cafe24.com/skin/base_ko_KR/member/bg_lifetime_event_layer.jpg") no-repeat 0 0; }
+.xans-member-lifetimeevent .content > h2 { margin:0; padding:47px 0 20px; }
+.xans-member-lifetimeevent .content > p { margin:0; font-size:12px; color:#fff; font-family:Gulim; line-height:1.4; word-spacing:-1px; }
+.xans-member-lifetimeevent .content .grade { color:#fff25c; }
+.xans-member-lifetimeevent .content .btnModify { display:inline-block; margin:56px 0 0; }
+.xans-member-lifetimeevent .ec-base-button { overflow:hidden; padding:9px 20px; text-align:left; font-size:14px; line-height:30px; color:#525252; }
+.xans-member-lifetimeevent .ec-base-button input[type="checkbox"] { margin:-2px 5px 0 0; vertical-align:middle; }
+.xans-member-lifetimeevent .ec-base-button .btnClose { float:right; }

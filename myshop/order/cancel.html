@@ -1,0 +1,162 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>취소신청</strong></li>
+    </ol>
+</div>
+<div class="titleArea">
+    <h2 class="txtTitle16B">취소신청</h2>
+</div>
+
+<div module="Myshop_OrderHistoryApplyCancel" class="tableTheme mid-0">
+    <!--@css(/css/module/myshop/orderHistoryApplyCancel.css)-->
+    <div class="title">
+        <h3 class="txtTitle12B">상품정보</h3>
+    </div>
+
+    <table border="1" summary="">
+        <caption>상품정보</caption>
+        <colgroup>
+            <col style="width:150px;" />
+            <col style="width:27px;" />
+            <col style="width:auto;" />
+            <col style="width:80px;" />
+            <col style="width:80px;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">주문일자<br />[주문번호]</th>
+            <th scope="col" colspan="2">상품정보</th>
+            <th scope="col">수량</th>
+            <th scope="col">신청수량</th>
+            <th scope="col">상품구매금액</th>
+            <th scope="col">주문처리상태</th>
+        </tr>
+        </thead>
+        <tbody module="Myshop_products" class="center middle">
+        <tr>
+            <td class="{$display_column|display}">
+                {$order_date_ymd}
+                <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+            </td>
+            <td>{$form.checkbox}</td>
+            <td class="product left top">
+                <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                <div class="option {$option_display|display}">{$option_str}</div>
+                <ul class="option" module="Myshop_optionSet">
+                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                </ul>
+                <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+            </td>
+            <td>{$quantity}</td>
+            <td>
+                    <span class="quantity">
+                      {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가" src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" /></a><a href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소" src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" /></a>
+                    </span>
+                <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
+            </td>
+            <td>
+                <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
+                <p class="{$item_price_ref_display|display}">{$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</p>
+            </td>
+            <td class="txtStrong12B">{$cur_state}</td>
+        </tr>
+        <tr>
+            <td class="{$display_column|display}">
+                {$order_date_ymd}
+                <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+            </td>
+            <td>{$form.checkbox}</td>
+            <td class="product left top">
+                <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                <div class="option {$option_display|display}">{$option_str}</div>
+                <ul class="option" module="Myshop_optionSet">
+                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                </ul>
+                <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+            </td>
+            <td>{$quantity}</td>
+            <td>
+                    <span class="quantity">
+                      {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가" src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" /></a><a href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소" src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" /></a>
+                    </span>
+                <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
+            </td>
+            <td>
+                <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
+                <p class="{$item_price_ref_display|display}">{$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</p>
+            </td>
+            <td class="txtStrong12B">{$cur_state}</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="title">
+        <h3 class="txtTitle12B">취소사유</h3>
+    </div>
+    <table border="1" summary="">
+        <caption>취소사유</caption>
+        <colgroup>
+            <col style="width:139px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody class="middle">
+        <tr>
+            <th scope="row">사유선택</th>
+            <td>{$form.reason_select}</td>
+        </tr>
+        <tr>
+            <th scope="row">상세사유</th>
+            <td>{$form.reason_detail}</td>
+        </tr>
+        </tbody>
+    </table>
+    {$form.is_new_cs_form}
+    <div class="{$refund_info_display|display}">
+        <div class="title">
+            <h3 class="txtTitle12B">환불 정보</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>환불 계좌 정보</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody class="middle {$refund_notice_display|display}">
+            <tr>
+                <th scope="row">환불예정금액</th>
+                <td>환불예정금액은 판매자가 접수처리 완료 후 '주문상세조회'에서 확인할 수 있습니다.</td>
+            </tr>
+            <tr>
+                <th scope="row">배송비 안내</th>
+                <td>
+                    {$cs_info_desc}
+                </td>
+            </tr>
+            </tbody>
+            <tbody class="middle {$refund_account_display|display}">
+            <tr>
+                <th scope="row">환불계좌</th>
+                <td>
+                    <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display}">{$acc_full_str}</span>
+                    <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"><a href="#none" onclick="OrderApply.popupAccount('./account.html');" class="btnNormal">환불계좌등록</a></span>
+                    <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"><a href="#none" onclick="OrderApply.popupAccount('./account.html');" class="btnNormal">환불계좌변경</a></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="infoWarn txtWarn">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p>
+    </div>
+    <div class="buttonArea gCenter">
+        <a href="#none" onclick="OrderApply.apply(); return false;" class="btnSubmitM">취소신청</a>
+        <a href="/myshop/order/list.html" class="btnNormalM">이전페이지</a>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.popup { min-width:520px; height:360px; }
+
+.mid-0.xans-member-checkunderfourteen .info { padding:0 0 0 17px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_warning.gif") no-repeat 0 2px; }
+
+.mid-0.xans-member-checkunderfourteen .check { margin:20px 0 0; padding:10px; border-top:1px solid #dddcdd; border-bottom:1px solid #dddcdd; }
+.mid-0.xans-member-checkunderfourteen .check p { overflow:hidden; padding:5px 0; }
+.mid-0.xans-member-checkunderfourteen .check strong { float:left; width:84px; padding:2px 0 0; }
+.mid-0.xans-member-checkunderfourteen .check span { float:left; width:300px; }
+.mid-0.xans-member-checkunderfourteen .check input { padding:2px 2px 2px 4px; border:1px solid #d9d9d9; }
+.mid-0.xans-member-checkunderfourteen .check input.btn { padding:0; border:0; }
+.mid-0.xans-member-checkunderfourteen #name { width:120px; }
+.mid-0.xans-member-checkunderfourteen #ssn1 { width:80px; margin:0 4px 0 0; }
+.mid-0.xans-member-checkunderfourteen #ssn2 { width:80px; margin:0 0 0 4px; }
+
+.mid-0.xans-member-checkunderfourteen .agreement { margin:20px 0 0; }
+.mid-0.xans-member-checkunderfourteen .agreement p { padding:5px 0 0; }

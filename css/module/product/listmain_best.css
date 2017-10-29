@@ -1,0 +1,12 @@
+/* °øÅë */
+.xans-product-listmain.best .prdImg {border:1px solid #ddd; position:relative;  }
+.xans-product-listmain.best .prdImg .tt {position:absolute; width:calc(100% - 50px); margin:15px; bottom:0; background:rgba(255,255,255,.8); padding:10px; cursor:pointer; transition:all 0.3s;}
+.xans-product-listmain.best .prdImg .tt p.name {padding:0;}
+.xans-product-listmain.best ul.prdList li.item ul.xans-product-listitem {margin:3px 0 0;}
+.xans-product-listmain.best ul.prdList li.item ul.xans-product-listitem li:first-child {text-overflow: ellipsis; overflow: hidden;  white-space: nowrap; width: 160px; height: 20px;}
+.xans-product-listmain.best ul.prdList li.item ul.xans-product-listitem li:last-child {right:10px; top:10px; margin:0; position:absolute;}
+
+
+.xans-product-listmain.best .prdImg:hover .tt {background:rgba(0,0,0,.8);}
+.xans-product-listmain.best .prdImg:hover .tt p.name a span {color:#fff !important;}
+.xans-product-listmain.best .prdImg:hover .tt ul.xans-product-listitem li:last-child span {color:#ccc !important;}

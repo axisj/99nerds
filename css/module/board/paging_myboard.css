@@ -1,0 +1,10 @@
+.mid-0.xans-myshop-boardlistPaging { padding:30px 0 0; text-align:center; }
+.mid-0.xans-myshop-boardlistPaging p { display:inline-block; vertical-align:top; *display:inline; *zoom:1; }
+.mid-0.xans-myshop-boardlistPaging ol { display:inline-block; margin:0 -4px; font-size:0; line-height:0; vertical-align:top; *display:inline; *zoom:1; *margin:0; }
+.mid-0.xans-myshop-boardlistPaging li { display:inline-block; margin:0 0 0 -1px; border:1px solid #d7d5d5; vertical-align:top; *display:inline; *zoom:1; }
+.mid-0.xans-myshop-boardlistPaging li:first-child { margin-left:0; }
+.mid-0.xans-myshop-boardlistPaging img { vertical-align:top; }
+.mid-0.xans-myshop-boardlistPaging li a { display:block; width:33px; padding:9px 0; line-height:14px; background:#fff; }
+.mid-0.xans-myshop-boardlistPaging li a:hover { text-decoration:none; background:#f0f2f2; }
+.mid-0.xans-myshop-boardlistPaging li a.this { padding-bottom:6px; border-bottom:3px solid #008bcc; }
+.mid-0.xans-myshop-boardlistPaging a.nolink { cursor:default; }

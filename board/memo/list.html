@@ -1,0 +1,202 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div module="board_MemoPackage_1001" class="mid-0">
+    <!--@css(/css/module/board/memoPackage_1001.css)-->
+    <div module="board_title_1001">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2 class="txtTitle16B">{$board_title} {$board_adult_icon}</h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+    <div module="board_memowrite_1001" class="commentArea">
+        <fieldset>
+            <legend>메모 입력</legend>
+            <span class="{$config.is_login|display}">이름 :{$form.writer}</span>
+            <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 :{$form.secure_password}</span>
+            <span class="{$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+            <div class="gDouble text">
+                {$form.content}
+                <button type="button" class="submit btnEmC" onclick="{$action_memo_insert}">등록</button>
+            </div>
+            <p class="captcha {$config.use_captcha_write|display}">
+                {$captcha_image}{$captcha_refresh}
+                {$form.captcha}
+                <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
+            </p>
+        </fieldset>
+    </div>
+
+    <div class="memoList gTriple">
+        <!-- 메모 반복 -->
+        <div module="board_memolist_1001">
+            <div class="writer">
+                {$member_icon} <strong>{$writer}</strong>
+                <span class="{$display_ip|display}">({$client_ip})</span>
+                <span class="gIndent {$display_use_date|display}">{$write_date}</span>
+            </div>
+            <div class="comment">{$icon_lock} {$content|nl2br} {$icon_new}</div>
+            <p class="button">
+                <button type="button" class="btnNormal {$display_use_comment|display}" onclick="{$action_comment_write}">댓글</button>
+                {$comment_count}
+                <span class="right {$display_mod_button|display}">
+                    <button type="button" class="btnNormal" onclick="{$action_memo_modify}">수정</button>
+                    <button type="button" class="btnNormal" onclick="{$action_memo_delete}">삭제</button>
+                </span>
+            </p>
+
+            {$view_form_div}<!-- 메모의 수정/삭제 영역이 호출되는 변수입니다 -->
+
+            <div id="{$comment_form_id}" class="replyWrap" style="display:none;">
+                <!-- 댓글 -->
+                <div module="board_memocmt_1001">
+                    <div class="reply">
+                        <div class="writer">
+                            {$comment_member_icon} {$comment_name}
+                            <span class="{$display_ip|display}">({$comment_client_ip})</span>
+                            <span class="gIndent {$display_use_date|display}">{$comment_date}</span>
+                        </div>
+                        <span class="right {$comment_display_button|display}">
+                            <button type="button" class="btnNormal" onclick="{$action_comment_modify}">수정</button>
+                            <button type="button" class="btnNormal" onclick="{$action_comment_delete}">삭제</button>
+                        </span>
+                        <div class="comment">{$comment_icon_lock} {$comment_content}</div>
+                    </div>
+                    {$view_form_div}<!-- 메모의 댓글 수정/삭제 영역이 호출되는 변수입니다 -->
+                </div>
+            </div>
+        </div>
+        <!-- //메모 반복 -->
+    </div>
+
+    <!-- 비밀 코멘트 확인 -->
+    <div class="commentView" module="board_memoformcmtsecret_1001">
+        <p>비밀번호 : {$form.comment_password}
+            <a href="#none" onclick="{$action_secret_submit}">확인</a>
+            <a href="#none" onclick="{$action_secret_cancel}">취소</a>
+        </p>
+    </div>
+
+    <!-- 비밀글 확인 -->
+    <div class="commentView" module="board_memoformsecret_1001">
+        <p>비밀번호 : {$form.secure_password}
+            <button type="button" class="btnNormal" onclick="{$action_secret_submit}">확인</button>
+            <button type="button" class="btnNormal" onclick="{$action_secret_cancel}">취소</button>
+        </p>
+    </div>
+
+    <!-- 수정 -->
+    <div module="board_memoformmodify_1001" class="commentArea">
+        <fieldset>
+            <legend>메모 수정</legend>
+            <p>
+                <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.writer} </span>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password} </span>
+                <span class="{$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+            </p>
+            <div class="gDouble text">
+                {$form.content}
+                <span class="submit">
+                    <a href="#none" class="btnEmC firstBtn" onclick="{$action_modify_submit}">수정</a>
+                    <a href="#none" class="btnNormalC" onclick="{$action_modify_cancel}">취소</a>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- 삭제 -->
+    <div module="board_memoformdelete_1001" class="commentArea">
+        <fieldset>
+            <legend>메모 삭제</legend>
+            <p>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.secure_password} </span>
+            </p>
+            <div class="gDouble text">
+                {$form.content}
+                <span class="submit">
+                    <a href="#none" class="btnEmC" onclick="{$action_delete_submit}">삭제</a>
+                    <a href="#none" class="btnNormalC" onclick="{$action_delete_cancel}">취소</a>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- 댓글 쓰기 -->
+    <div module="board_memoformcmtwrite_1001" class="commentArea">
+        <fieldset>
+            <legend>댓글 쓰기</legend>
+            <p>
+                <span class="{$config.is_login|display}">이름 : {$form.comment_name} </span>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
+                <span class="{$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+            </p>
+            <div class="gDouble text">
+                {$form.comment}
+                <span class="submit">
+                    <a href="#none" class="btnEmC" onclick="{$action_comment_submit}">등록</a>
+                    <a href="#none" class="btnNormalC" onclick="{$action_comment_cancel}">취소</a>
+                </span>
+            </div>
+            <p class="captcha {$config.use_captcha_comment|display}">
+                {$captcha_image}{$captcha_refresh}
+                {$form.captcha}
+                <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
+            </p>
+        </fieldset>
+    </div>
+
+    <!-- 댓글 수정 -->
+    <div module="board_memoformcmtmodify_1001" class="commentArea">
+        <fieldset>
+            <legend>댓글 수정</legend>
+            <p>
+                <span id="{$memo_name_id}" class="{$config.is_login|display}">이름 : {$form.comment_name} </span>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
+                <span class="{$config.use_secret|display}"><label>{$form.secure} 비밀글</label></span>
+            </p>
+            <div class="gDouble text">
+                {$form.comment_modify}
+                <span class="submit">
+                    <a href="#none" class="btnEmC" onclick="{$action_comment_update}">수정</a>
+                    <a href="#none" class="btnNormalC" onclick="{$action_comment_cancel}">취소</a>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- 댓글 삭제 -->
+    <div module="board_memoformcmtdelete_1001" class="commentArea">
+        <fieldset>
+            <legend>댓글 삭제</legend>
+            <p>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 : {$form.comment_password} </span>
+            </p>
+            <div class="gDouble text">
+                {$form.comment_modify}
+                <span class="submit">
+                    <a href="#none" class="btnEmC firstBtn" onclick="{$action_comment_delete}">삭제</a>
+                    <a href="#none" class="btnNormalC" onclick="{$action_comment_cancel}">취소</a>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+<div module="board_paging_1001" class="paginate mid-0">
+    <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+</div>

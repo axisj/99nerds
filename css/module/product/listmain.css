@@ -1,0 +1,10 @@
+/* °øÅë */
+.xans-product-listmain { margin:120px auto 0; width:1180px;}
+.xans-product-listmain img { vertical-align:middle; }
+.xans-product-listmain ul.prdList { display:table; width:100%; margin:-20px 0 0; font-size:0; line-height:0; }
+.xans-product-listmain ul.prdList li.item { display:inline-block; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-listmain ul.prdList li .color { overflow:hidden; display:inline-block; margin:3px 0 0 0; }
+.xans-product-listmain ul.prdList li .chips { float:left; width:10px; height:10px; margin:0 2px 2px 0; border:1px solid #e3e3e3; font-size:0; line-height:0; }
+.xans-product-listmain ul.prdList li.item ul.xans-product-listitem {display:block;}
+.xans-product-listmain ul.prdList li.item ul.xans-product-listitem li {display:block; min-height: 20px; line-height:1.2em;}
+.xans-product-listmain ul.prdList li.item ul.xans-product-listitem li:last-child {margin:25px 0 0;}

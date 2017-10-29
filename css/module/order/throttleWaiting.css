@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.xans-order-throttlewaiting { padding:95px 0 0; }
+.xans-order-throttlewaiting .visual { text-align:center; }
+.xans-order-throttlewaiting h2 { margin:25px 0 0; text-align:center; }
+.xans-order-throttlewaiting .detail { position:relative; width:660px; margin:50px auto 0; padding:33px 70px 27px 109px; box-sizing:border-box; border:1px solid #eaeaea; }
+.xans-order-throttlewaiting .detail:before { content:""; position:absolute; top:33px; left:69px; display:inline-block; width:24px; height:24px; border-radius:50%; background:#9da6b4 url("//img.echosting.cafe24.com/skin/base_ko_KR/order/ico_traffic_warning.png") no-repeat center; }
+.xans-order-throttlewaiting .detail ul li { margin:0 0 4px; font-size:12px; line-height:18px; letter-spacing:-0.025em; }
+.xans-order-throttlewaiting .detail .txtEm { color:#1b87d4; }

@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "sqlgate-pms",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "babel assets/js -d lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "",
+    "fs": "0.0.1-security",
+    "fs-finder": "^1.8.1",
+    "gulp": "*",
+    "gulp-babel": ">=6.1.2",
+    "gulp-changed": "*",
+    "gulp-clean": ">=0.3.2",
+    "gulp-concat": "*",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-replace": "",
+    "gulp-sass": ">=2.1.1",
+    "gulp-shell": ">=0.6.3",
+    "gulp-sourcemaps": "",
+    "gulp-uglify": ">=1.5.1",
+    "gulp-util": "*",
+    "markdown-it": ">=8.1.0",
+    "node-sass": "*",
+    "strip-indent": ">=2.0.0"
+  }
+}

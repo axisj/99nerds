@@ -1,0 +1,57 @@
+.mid-0.xans-member-edit .interest { line-height:25px; }
+.mid-0.xans-member-edit .typeCertificate ul li:before { content:"- "; }
+
+/* INPUT SIZE */
+.mid-0.xans-member-edit #hint_answer { width:500px; }
+.mid-0.xans-member-edit #postcode1,
+.mid-0.xans-member-edit #postcode2 { width:40px; text-align:center; }
+.mid-0.xans-member-edit #addr1,
+.mid-0.xans-member-edit #addr2 { width:280px; }
+.mid-0.xans-member-edit #phone1,
+.mid-0.xans-member-edit #mobile1 { width:60px; }
+.mid-0.xans-member-edit #phone2,
+.mid-0.xans-member-edit #phone3,
+.mid-0.xans-member-edit #mobile2,
+.mid-0.xans-member-edit #mobile3 { width:50px; }
+.mid-0.xans-member-edit #email2 { margin:0 4px; }
+.mid-0.xans-member-edit #birth_year,
+.mid-0.xans-member-edit #marry_year,
+.mid-0.xans-member-edit #partner_year { width:60px; }
+.mid-0.xans-member-edit #birth_month,
+.mid-0.xans-member-edit #marry_month,
+.mid-0.xans-member-edit #partner_month,
+.mid-0.xans-member-edit #birth_day,
+.mid-0.xans-member-edit #marry_day,
+.mid-0.xans-member-edit #partner_day { width:30px; }
+.mid-0.xans-member-edit #bank_code { width:240px; }
+.mid-0.xans-member-edit #c_bank_account_no { width:230px; }
+
+.mid-0.xans-member-edit #job,
+.mid-0.xans-member-edit #job_class,
+.mid-0.xans-member-edit #school,
+.mid-0.xans-member-edit #region,
+.mid-0.xans-member-edit #internet,
+.mid-0.xans-member-edit #child,
+.mid-0.xans-member-edit #car,
+.mid-0.xans-member-edit #earning { width:200px; }
+
+.mid-0.xans-member-edit #add1,
+.mid-0.xans-member-edit #add2,
+.mid-0.xans-member-edit #add3,
+.mid-0.xans-member-edit #add4,
+.mid-0.xans-member-edit #add5,
+.mid-0.xans-member-edit #add6,
+.mid-0.xans-member-edit #add7,
+.mid-0.xans-member-edit #add8,
+.mid-0.xans-member-edit #add9 { width:500px; }
+
+/* 탈퇴사유관리 */
+.mid-0.xans-member-edit .layerLeave.layerTheme { position:fixed; top:50%; left:50%; width:600px; margin:-205px 0 0 -300px; display:none; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward { margin:0 0 20px; border-bottom:1px solid #e8e8e8; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info { border:5px solid #e8e8e8; padding:10px; *zoom:1; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info:after { content:""; display:block; clear:both; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info h4 { float:left; padding:28px 7px 28px 0; width:93px; border-right:1px solid #e8e8e8; text-align:center; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info ul { float:right; width:415px; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info ul li { padding:9px 0 12px; border-top:1px solid #e8e8e8; }
+.mid-0.xans-member-edit .layerLeave.layerTheme .reward .info ul li:first-child { border-top:0; }
+.mid-0.xans-member-edit #leave_reason { width:396px; }

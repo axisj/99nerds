@@ -1,0 +1,26 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>회사소개</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">회사소개</h2>
+</div>
+
+
+<div module="mall_company" class="mid-0">
+    <!--@css(/css/module/mall/company.css)-->
+    <div>{$info}</div>
+
+    <div class="{$map_display|display}">
+        <div class="title">
+            <h3 class="txtTitle12B">위치</h3>
+        </div>
+        <p>{$map_image}</p>
+    </div>
+</div>
+

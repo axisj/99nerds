@@ -1,0 +1,723 @@
+<div id="{$order_confirm_layer_id}" class="orderConfirmLayer">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/order/confirm_layer.css)-->
+    <div class="dimmed"></div>
+    <div class="orderConfirmLayer ec-base-layer">
+        <div class="header">
+            <h3>주문 정보 확인</h3>
+        </div>
+        <div class="content">
+            <p class="desc">아직 주문이 완료되지 않았으니, 작성하신 내용을 확인하신 후에 주문 완료해 주세요.</p>
+            <div class="confirm">
+                <!-- 주문 상품 정보 -->
+                <div class="title">
+                    <h4>주문 상품 정보</h4>
+                </div>
+                <!-- 국내배송상품 주문내역 -->
+                <div class="orderListArea ec-base-table typeList gBorder {$default_display|display}">
+                    <!-- 기본배송 -->
+                    <table border="1" summary="" class="{$normal_display|display}" nspace="normal">
+                        <caption>기본배송</caption>
+                        <colgroup>
+                            <col style="width:92px" />
+                            <col style="width:auto" />
+                            <col style="width:98px" />
+                            <col style="width:60px" />
+                            <col style="width:98px" />
+                            <col style="width:98px" />
+                            <col style="width:80px" />
+                            <col style="width:98px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이미지</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">{$mileage_name}</th>
+                                <th scope="col">배송구분</th>
+                                <th scope="col">배송비</th>
+                                <th scope="col">합계</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="right">
+                            <tr>
+                               <td colspan="8"><span class="gLeft">[기본배송]</span> 상품구매금액 <strong>{$normal_total_product_price}<span class="{$normal_total_option_price_display|display}"> ({$normal_total_option_price})</span></strong> + 배송비 <span id="{$confirm_domestic_ship_fee}">{$normal_total_delv_price}</span> <span class="{$normal_total_benefit_price_display|display}"> - 상품할인금액 {$normal_total_benefit_price} </span> = 합계 : <strong class="txtEm gIndent10">{$price_unit_head}<span id="{$confirm_domestic_ship_fee_sum}" class="txt18">{$normal_total_price}</span>{$price_unit_tail}</strong> <span class="{$normal_total_ref_display|display}">{$normal_total_ref}</span></td>
+                            </tr>
+                        </tfoot>
+                        <tbody module="Order_normallist" class="center">
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">기본배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">기본배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 업체기본배송 -->
+                    <table border="1" summary="" class="{$supplier_display|display}" nspace="supplier">
+                        <caption>업체기본배송</caption>
+                        <colgroup>
+                            <col style="width:92px" />
+                            <col style="width:auto" />
+                            <col style="width:98px" />
+                            <col style="width:60px" />
+                            <col style="width:98px" />
+                            <col style="width:98px" />
+                            <col style="width:80px" />
+                            <col style="width:98px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이미지</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">{$mileage_name}</th>
+                                <th scope="col">배송구분</th>
+                                <th scope="col">배송비</th>
+                                <th scope="col">합계</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="right">
+                            <tr>
+                                <td colspan="8"><span class="gLeft">[업체기본배송]</span> 상품구매금액 <strong>{$supplier_total_product_price}<span class="{$supplier_total_option_price_display|display}"> ({$supplier_total_option_price})</span></strong> + 배송비 {$supplier_total_delv_price} <span class="{$supplier_total_benefit_price_display|display}"> - 상품할인금액 {$supplier_total_benefit_price} </span> = 합계 : <strong class="txtEm gIndent10">{$supplier_total_price_front_head}<span class="txt23">{$supplier_total_price_front}</span>{$supplier_total_price_front_tail}</strong> <span class="{$supplier_total_ref_display|display}">{$supplier_total_price_back_head}{$supplier_total_price_back}{$supplier_total_price_back_tail}</span></td>
+                            </tr>
+                        </tfoot>
+                        <tbody module="Order_supplierlist" class="center">
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">업체기본배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">업체기본배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 개별배송 -->
+                    <table border="1" summary="" class="{$individual_display|display}" nspace="individual">
+                        <caption>개별배송</caption>
+                        <colgroup>
+                            <col style="width:92px" />
+                            <col style="width:auto" />
+                            <col style="width:98px" />
+                            <col style="width:60px" />
+                            <col style="width:98px" />
+                            <col style="width:98px" />
+                            <col style="width:80px" />
+                            <col style="width:98px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이미지</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">{$mileage_name}</th>
+                                <th scope="col">배송구분</th>
+                                <th scope="col">배송비</th>
+                                <th scope="col">합계</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="right">
+                            <tr>
+                                <td colspan="8"><span class="gLeft">[개별배송]</span> 상품구매금액 <strong>{$individual_total_product_price}<span class="{$individual_total_option_price_display|display}"> ({$individual_total_option_price})</span></strong> + 배송비 {$individual_total_delv_price} <span class="{$individual_total_benefit_price_display|display}"> - 상품할인금액 {$individual_total_benefit_price} </span> = 합계 : <strong class="txtEm gIndent10">{$individual_total_price_front_head}<span class="txt23">{$individual_total_price_front}</span>{$individual_total_price_front_tail}</strong> <span class="{$individual_total_ref_display|display}">{$individual_total_price_back_head}{$individual_total_price_back}{$individual_total_price_back_tail}</span></td>
+                            </tr>
+                        </tfoot>
+                        <tbody module="Order_individuallist" class="center">
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">개별배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><div class="txtInfo">개별배송<div class="{$oversea_able_display|display}">(해외배송가능)</div></div></td>
+                                <td rowspan="{$delv_cnt}" class="{$delv_cnt_display|display}">{$product_ship_fee}</td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 해외배송상품 주문내역 -->
+                <div class="orderListArea ec-base-table typeList gBorder {$oversea_display|display}">
+                    <!-- 기본배송 -->
+                    <table border="1" summary="" nspace="oversea">
+                        <caption>해외배송</caption>
+                        <colgroup>
+                            <col style="width:92px" />
+                            <col style="width:auto" />
+                            <col style="width:98px" />
+                            <col style="width:60px" />
+                            <col style="width:98px" />
+                            <col style="width:98px" />
+                            <col style="width:98px" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">이미지</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">판매가</th>
+                                <th scope="col">수량</th>
+                                <th scope="col">{$mileage_name}</th>
+                                <th scope="col">배송구분</th>
+                                <th scope="col">합계</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="right">
+                            <tr>
+                                <td colspan="7"><span class="gLeft">[해외배송]</span> 상품구매금액 <strong>{$oversea_total_product_price}<span class="{$oversea_total_option_price_display|display}"> ({$oversea_total_option_price})</span></strong> + 배송비 {$price_unit_head}<span id="{$confirm_f_list_total_delv_price_id}">{$oversea_total_delv_price}</span>{$price_unit_tail}<span class="{$oversea_total_benefit_price_display|display}"> - 상품할인금액 {$oversea_total_benefit_price} </span> = 합계 : <strong class="txtEm gIndent10">{$oversea_total_price_front_head}<span id="{$confirm_f_list_total_price_id}" class="txt23">{$oversea_total_price_front}</span>{$oversea_total_price_front_tail}</strong> <span id="{$confirm_f_list_total_price_ref_id_new}" class="{$oversea_total_price_ref_display|display}">{$oversea_total_price_back_head}{$oversea_total_price_back}{$oversea_total_price_back_tail}</span></td>
+                            </tr>
+                        </tfoot>
+                        <tbody module="Order_oversealist" class="center">
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><span class="txtInfo">해외배송</span></td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                            <tr>
+                                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                                <td class="left gClearLine">
+                                    <strong class="name">{$product_name_link}</strong>
+                                    <div class="option {$option_display|display}">{$option_str}</div>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                        <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                                    </ul>
+                                    <p class="txtInfo {$allotment_display|display}">무이자할부 상품</p>
+                                    <p class="txtInfo {$expiration_date_display|display}">유효기간 : {$expiration_date}</p>
+                                </td>
+                                <td class="right">
+                                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                                </td>
+                                <td>{$product_quantity_text}</td>
+                                <td><span class="txtInfo">{$product_mileage}</span></td>
+                                <td><span class="txtInfo">해외배송</span></td>
+                                <td class="right"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 주문 정보 -->
+                <div class="orderArea {$use_order_form_display|display}">
+                    <div class="title">
+                        <h4>주문 정보</h4>
+                    </div>
+                    <div class="ec-base-table">
+                        <table border="1" summary="">
+                            <caption>주문 정보</caption>
+                            <colgroup>
+                                <col style="width:139px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <!-- 국내 쇼핑몰 -->
+                            <tbody class="{$address_form} {$address_korean_display|display}">
+                                <tr>
+                                    <th scope="row">주문하시는 분</th>
+                                    <td><span class="{$confirm_oname_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_address_display|display}">
+                                    <th scope="row">주소</th>
+                                    <td><span class="{$confirm_oaddr1_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_tel_display|display}">
+                                    <th scope="row">일반전화</th>
+                                    <td><span class="{$confirm_ophone_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_cell_display|display}">
+                                    <th scope="row">휴대전화</th>
+                                    <td><span class="{$confirm_ocell_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일</th>
+                                    <td><span class="{$confirm_oemail_css}"></span></td>
+                                </tr>
+                            </tbody>
+                            <!-- 해외 쇼핑몰-->
+                            <tbody class="{$address_form} {$address_oversea_display|display}">
+                                <tr>
+                                    <th scope="row">Name</th>
+                                    <td><span class="{$confirm_oname_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">English Name</th>
+                                    <td><span class="{$confirm_oname_english_css}"></span></td>
+                                </tr>
+                                <tr class="{$pron_name_display|display}">
+                                    <th scope="row">Phonetics</th>
+                                    <td><span class="{$confirm_opron_name_css}"></span></td>
+                                </tr>
+                                <tr id="{$confirm_ozip_area}">
+                                    <th scope="row">Zip/ Postal code</th>
+                                    <td><span class="{$confirm_ozip_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_address_display|display}">
+                                    <th scope="row">Address Line 1</th>
+                                    <td><span class="{$confirm_oaddr1_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_address_display|display}">
+                                    <th scope="row">Address Line 2</th>
+                                    <td><span class="{$confirm_oaddr2_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">City</th>
+                                    <td><span class="{$confirm_ocity_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">State/Province</th>
+                                    <td><span class="{$confirm_ostate_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_tel_display|display}">
+                                    <th scope="row">Telephone</th>
+                                    <td><span class="{$confirm_ophone_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_order_cell_display|display}">
+                                    <th scope="row">Mobile Phone</th>
+                                    <td><span class="{$confirm_ocell_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">E-mail</th>
+                                    <td><span class="{$confirm_oemail_css}"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 배송 정보 -->
+                <div class="orderArea">
+                    <div class="title">
+                        <h4>배송 정보</h4>
+                    </div>
+                    <div class="ec-base-table">
+                        <table border="1" summary="">
+                            <caption>배송 정보</caption>
+                            <colgroup>
+                                <col style="width:139px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <!-- 국내 배송 정보 -->
+                            <tbody class="{$r_info_display|display}">
+                                <tr>
+                                    <th scope="row">받으시는 분</th>
+                                    <td><span class="{$confirm_rname_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소</th>
+                                    <td><span class="{$confirm_raddr1_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_tel_display|display}">
+                                    <th scope="row">일반전화</th>
+                                    <td><span class="{$confirm_rphone_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_cell_display|display}">
+                                    <th scope="row">휴대전화</th>
+                                    <td><span class="{$confirm_rcell_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_form_display|display}">
+                                    <th scope="row">이메일</th>
+                                    <td><span class="{$confirm_oemail_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_message_display|display}">
+                                    <th scope="row">배송메시지</th>
+                                    <td><span class="{$confirm_delivery_msg_css}"></span></td>
+                                </tr>
+                                <tr class="{$hope_shipping_display|display}">
+                                    <th scope="row">희망배송일</th>
+                                    <td><span class="{$confirm_hope_date_css}"></span></td>
+                                </tr>
+                                <tr class="{$hope_shipping_time_display|display}">
+                                    <th scope="row">희망배송시간</th>
+                                    <td><span class="{$confirm_hope_time_css}"></span></td>
+                                </tr>
+                                <tr class="{$shipcompany_display|display} {$confirm_shipcompany_area}">
+                                    <th scope="row">배송업체(방식) 선택</th>
+                                    <td><span class="{$confirm_shipcompany_css}"></span></td>
+                                </tr>
+                            </tbody>
+                            <!-- 해외 배송 정보 -->
+                            <tbody class="{$f_r_info_display|display}">
+                                <tr>
+                                    <th scope="row">받으시는 분</th>
+                                    <td><span class="{$confirm_rname_css}"></span></td>
+                                </tr>
+                                <tr class="{$english_name_display|display}">
+                                    <th scope="row">영문이름</th>
+                                    <td><span class="{$confirm_rname_english_css}"></span></td>
+                                </tr>
+                                <tr class="{$pron_name_display|display}">
+                                    <th scope="row">이름(발음기호)</th>
+                                    <td><span class="{$confirm_rpron_name_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">국가</th>
+                                    <td><span class="{$confirm_rcountry_css}"></span></td>
+                                </tr>
+                                <tr id="{$confirm_rzip_area}">
+                                    <th scope="row">우편번호</th>
+                                    <td><span class="{$confirm_rzip_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소1</th>
+                                    <td><span class="{$confirm_raddr1_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소2</th>
+                                    <td><span class="{$confirm_raddr2_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">도시</th>
+                                    <td><span class="{$confirm_rcity_css}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주/지방</th>
+                                    <td><span class="{$confirm_rstate_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_tel_display|display}">
+                                   <th scope="row">일반전화</th>
+                                   <td><span class="{$confirm_rphone_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_cell_display|display}">
+                                    <th scope="row">휴대전화</th>
+                                    <td><span class="{$confirm_rcell_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_form_display|display}">
+                                    <th scope="row">이메일</th>
+                                    <td><span class="{$confirm_oemail_css}"></span></td>
+                                </tr>
+                                <tr class="{$use_delivery_message_display|display}">
+                                    <th scope="row">배송메시지</th>
+                                    <td><span class="{$confirm_delivery_msg_css}"></span></td>
+                                </tr>
+                                <tr class="{$hope_shipping_display|display}">
+                                    <th scope="row">희망배송일</th>
+                                    <td><span class="{$confirm_hope_date_css}"></span></td>
+                                </tr>
+                                <tr class="{$hope_shipping_time_display|display}">
+                                    <th scope="row">희망배송시간</th>
+                                    <td><span class="{$confirm_hope_time_css}"></span></td>
+                                </tr>
+                                <tr class="{$international_shipping_display|display}">
+                                    <th scope="row">배송비</th>
+                                    <td>
+                                      <div class="{$shipping_additional_fee_show} {$shipping_additional_fee_show_display|display}">
+                                          <strong>{$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</strong> = 해외배송비 {$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail} + 보험료 {$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail} <span class="{$shipping_additional_fee_name_show}"> + <span id="{$f_addr_shipping_additional_fee_name_id}">{$shipping_additional_fee_name}</span> {$price_unit_head}<span id="{$f_addr_shipping_additional_fee_id}">{$form.f_shipping_additional_fee}</span>{$price_unit_tail}</span>
+                                          <p class="gBlank5">보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여<br />규정에 따라 배상해 드리는 서비스입니다.</p>
+                                      </div>
+                                      <div class="{$shipping_additional_fee_hide} {$shipping_additional_fee_hide_display|display}">
+                                          <strong>{$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</strong> = 해외배송비 {$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail} + 보험료 {$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail}
+                                          <p class="gBlank5">배송비에는 관세 및 세금 등의 각종 비용은 포함되어 있지 않습니다.<br />상품수령 시 고객님이 추가로 지불하셔야 합니다.<br />보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여<br />규정에 따라 배상해 드리는 서비스입니다.</p>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr class="{$shipcompany_display|display} {$confirm_shipcompany_area}">
+                                    <th scope="row">배송업체(방식) 선택</th>
+                                    <td><span class="{$confirm_shipcompany_css}"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 추가 정보 -->
+                <div class="orderArea {$ordadd.display|display}">
+                    <div class="title">
+                        <h4>추가 정보</h4>
+                    </div>
+                    <div class="ec-base-table">
+                        <table border="1" summary="">
+                            <caption>추가 정보</caption>
+                            <colgroup>
+                                <col style="width:139px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <tbody id="{$confirm_ord_add_id}"></tbody>
+                         </table>
+                    </div>
+                </div>
+                <!-- 기타 문의사항 -->
+                <div id="{$confirm_question_area}" class="orderArea">
+                    <div class="title">
+                        <h4>기타 문의사항</h4>
+                    </div>
+                    <div class="ec-base-table">
+                        <table border="1" summary="">
+                            <caption>기타 문의사항</caption>
+                            <colgroup>
+                                <col style="width:139px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">기타 문의사항</th>
+                                    <td id="{$confirm_question_id}"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- 결제금액 -->
+                <div class="totalArea">
+                    <div class="title">
+                        <h4>결제 / 할인/ 부가결제 / 적립 예정 금액</h4>
+                    </div>
+                    <div class="ec-base-table typeList total">
+                        <table border="1" summary="">
+                            <caption>결제 예정 금액</caption>
+                            <colgroup>
+                                <col style="width:33.33%" />
+                                <col style="width:33.33%" class="{$total_sale_display|display}" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span>총 주문 금액</span><a href="#none" onclick="{$total_order_layer_on}" class="more"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/order/btn_list.gif" alt="내역보기" /></a></th>
+                                    <th scope="col" id="{$confirm_total_sale_area1}" class="{$total_sale_display|display}"><span>총 </span><span id="{$total_addsale_text_id}" class="{$total_addsale_text_display|display}">할인</span><span id="{$total_sale_plus_mark}" class="{$plus_mark_display|display}"> + </span><span id="{$total_addpay_text_id}" class="{$total_addpay_text_display|display}">부가결제</span><span> 금액</span></th>
+                                    <th scope="col">총 결제예정 금액</th>
+                                </tr>
+                            </thead>
+                            <tbody class="center">
+                                <tr>
+                                    <td class="{$total_sale_css}">
+                                        <div class="box txt16"><strong>{$total_product_ship_price_front_head}<strong id="{$confirm_total_price_id}" class="txt23"></strong>{$total_product_ship_price_front_tail}</strong> <span class="{$total_product_ship_price_ref_display|display}">{$total_product_ship_price_back_head}<span id="{$confirm_total_price_ref_id}"></span>{$total_product_ship_price_back_tail}</span></div>
+                                    </td>
+                                    <td class="option {$total_sale_display|display}" id="{$confirm_total_sale_area2}">
+                                        <div class="box txt16"><strong>- {$total_sale_price_front_head}<strong id="{$confirm_total_sale_price_id}" class="txt23 txtDel"></strong>{$total_sale_price_front_tail}</strong> <span class="txtDel {$total_sale_ref_display|display}">{$total_sale_price_back_head}<span id="{$confirm_total_sale_price_ref_id}"></span>{$total_sale_price_back_tail}</span></div>
+                                    </td>
+                                    <td>
+                                        <div class="box txtEm txt16"><strong>= {$total_order_price_front_head}<strong id="{$confirm_total_order_price_id}" class="txt23"></strong>{$total_order_price_front_tail}</strong> <span class="{$total_order_price_ref_display|display}">{$total_order_price_back_head}<span id="{$confirm_total_order_price_ref_id}"></span>{$total_order_price_back_tail}</span></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="detail">
+                         <div class="ec-base-table gMerge" id="{$confirm_addsale_summary_area}">
+                            <table border="1" summary="">
+                                <caption>할인 내역</caption>
+                                <colgroup>
+                                    <col style="width:139px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr class="sum txt14">
+                                        <th scope="row">총 할인금액</th>
+                                        <td>{$price_unit_head}<strong id="{$confirm_total_addsale_price_id}"></strong>{$price_unit_tail}</td>
+                                    </tr>
+                                    <tr id="{$confirm_total_coupon_price_area}">
+                                        <th scope="row">쿠폰할인</th>
+                                        <td><span class="grid" id="{$confirm_total_coupon_price_id}"></span></td>
+                                    </tr>
+                                    <tr id="{$confirm_total_benefit_price_area}">
+                                        <th scope="row">추가할인금액</th>
+                                        <td>
+                                            <span class="gSpace20">{$price_unit_head}<span id="{$confirm_total_benefit_price_id}"></span>{$price_unit_tail}</span><a href="#none" onclick="{$total_benefit_layer_on}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/order/btn_list.gif" alt="내역보기" /></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ec-base-table gMerge" id="{$confirm_total_addpay_summary_area}">
+                            <table border="1" summary="">
+                                <caption>부가결제 내역</caption>
+                                <colgroup>
+                                    <col style="width:139px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr class="sum txt14">
+                                        <th scope="row">총 부가결제금액</th>
+                                        <td>{$price_unit_head}<strong id="{$confirm_used_total_addpay_id}"></strong>{$price_unit_tail}</td>
+                                    </tr>
+                                    <tr id="{$confirm_used_mileage_area}">
+                                        <th scope="row">{$mileage_name}</th>
+                                        <td id="{$confirm_used_mileage_id}"></td>
+                                    </tr>
+                                    <tr id="{$confirm_used_deposit_area}">
+                                        <th scope="row">{$deposit_name}</th>
+                                        <td id="{$confirm_used_deposit_id}"></td>
+                                    </tr>
+                                    <tr id="{$confirm_used_either_mile_area}">
+                                        <th scope="row">네이버 마일리지 / 캐쉬</th>
+                                        <td id="{$confirm_used_either_mile}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ec-base-table gMerge" id="{$confirm_sum_mileage_area}">
+                            <table border="1" summary="">
+                                <caption>적립예정 내역</caption>
+                                <colgroup>
+                                    <col style="width:139px;" />
+                                    <col style="width:auto;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr class="sum txt14">
+                                        <th scope="row">총 적립예정금액</th>
+                                        <td><strong id="{$confirm_sum_mileage_id}"></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">상품별 {$mileage_name}</th>
+                                        <td><span class="grid" id="{$confirm_product_mileage_id}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">회원 {$mileage_name}</th>
+                                        <td><span class="grid" id="{$confirm_member_mileage_id}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">쿠폰 {$mileage_name}</th>
+                                        <td><span class="grid" id="{$confirm_coupon_mileage_id}"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 결제수단 -->
+                <div class="title">
+                    <h4>결제수단</h4>
+                </div>
+                <div class="ec-base-table">
+                    <table border="1" summary="">
+                        <caption>결제수단</caption>
+                        <colgroup>
+                            <col style="width:139px;" />
+                            <col style="width:auto;" />
+                        </colgroup>
+                        <tbody id="{$confirm_paymethod_id}"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/common/btn_popup_payment.gif" alt="결제하기" id="{$btn_layer_payment_id}" /></a>
+            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/common/btn_popup_close.gif" alt="닫기" onclick="{$order_confirm_layer_off}" /></a>
+        </div>
+        <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" onclick="{$order_confirm_layer_off}" /></a>
+    </div>
+</div>

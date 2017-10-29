@@ -1,0 +1,6 @@
+.xans-layout-multishopshipping { display:none; }
+.xans-layout-multishopshipping .worldshipLayer { top:303px; left:50%; width:448px; margin:0 0 0 -225px; }
+.xans-layout-multishopshipping .worldshipLayer .content { padding:153px 20px 30px;  line-height:1.8; background:url("//img.echosting.cafe24.com/skin/base/link/bg_worldship.gif") center 21px no-repeat; }
+.xans-layout-multishopshipping .worldshipLayer .content .desc { display:block; margin:4px 0 14px; }
+.xans-layout-multishopshipping .worldshipLayer .select { margin:10px 0 0; }
+.xans-layout-multishopshipping .worldshipLayer .select select { width:100%; }

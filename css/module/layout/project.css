@@ -1,0 +1,20 @@
+.xans-layout-project { margin:0; padding:0 0 10px; }
+.xans-layout-project li { overflow:hidden; text-align:center; }
+
+.xans-layout-project .control { margin:10px 0 0; text-align:right; }
+.xans-layout-project .control button { overflow:hidden; display:inline-block; width:24px; height:24px; margin:0 0 0 1px; vertical-align:middle; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_project.gif") no-repeat; }
+.xans-layout-project .control button span { visibility:hidden; font-size:0; line-height:0; }
+.xans-layout-project .control .prev { background-position:0 0; }
+.xans-layout-project .control .prev:hover { background-position:0 -34px; }
+.xans-layout-project .control .next { background-position:-87px 0; }
+.xans-layout-project .control .next:hover { background-position:-87px -34px; }
+.xans-layout-project .control .stop { background-position:-29px 0; }
+.xans-layout-project .control .stop:hover { background-position:-29px -34px; }
+.xans-layout-project .control .play { background-position:-58px 0; }
+.xans-layout-project .control .play:hover { background-position:-58px -34px; }
+
+/* 레이아웃 중앙형 */
+body.center .xans-layout-project { float:left; display:inline-block; width:180px; margin:0 15px 20px 0; border-bottom:0; }
+body.center .xans-layout-project ul { margin:10px 0 0 0; }
+body.center .xans-layout-project li { height:56px; border:1px solid #ccc; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+body.center .xans-layout-project li img { margin:-20px 0 0 -1px; }

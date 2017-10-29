@@ -1,0 +1,50 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="Product_RestockSms" class="mid-0">
+    <!--@css(/css/module/product/restockSms.css)-->
+    <div class="header">
+        <h1>재입고 알림 SMS</h1>
+    </div>
+
+    <div class="content">
+        <div class="boxTheme product">
+            <p class="prdImg"><img src="{$product_image}" alt="" style="max-width:88px;" /></p>
+            <div class="info">
+                <h2>{$product_name}</h2>
+                <p>{$simple_desc}</p>
+                <p>{$opt_str}</p>
+                <p>{$option_add}</p>
+                <!-- 품목별 재입고 SMS발송 품목선택 -->
+                <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                <div class="optionWrap">
+                    <ul module="Product_optionstock">
+                        <li>
+                            <span class="name">{$option_name}</span>
+                            <div class="option">{$form.option}<p class="value">{$option_desc}</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                <!-- //품목별 재입고 SMS발송 품목선택 -->
+            </div>
+        </div>
+
+        <div class="smsArea">
+            <p><strong class="txtStrong12B">품절된 상품의 재입고시 문자메세지로 알려드립니다.</strong></p>
+            <div class="gDouble contact">
+                <p><strong>{$member_name}</strong>님의 휴대폰번호</p>
+                <p class="gDouble">{$form.hp1} - {$form.hp2} - {$form.hp3} {$form.member_update}</p>
+            </div>
+            <p class="gDouble">
+                SMS 요청이 완료된 상품은 관심상품 목록으로 저장됩니다.<br />
+                SMS요청상품의 가격, 옵션 구성 등의상품정보가 변동될 수 있으므로,<br />
+                재입고시 상품정보 확인 후 구매하시기 바랍니다.<br />
+                재입고 SMS알림은 요청일로부터 <strong class="txtStrong12B">{$restock_month}개월</strong>간 유효합니다.
+            </p>
+        </div>
+    </div>
+    <div class="buttonArea">
+        <button type="button" class="btnSubmitB" onclick="{$action_write}">확인하기</button>
+        <a href="#none" class="btnNormalB" onclick="window.close();">취소하기</a>
+    </div>
+</div>

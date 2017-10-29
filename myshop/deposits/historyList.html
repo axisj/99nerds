@@ -1,0 +1,115 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path" module="Myshop_DepositHead">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이 쇼핑</a></li>
+        <li title="현재 위치"><strong>{$deposit_name}</strong></li>
+    </ol>
+</div>
+
+
+<div module="Myshop_depositHistoryPackage" class="tableTheme mid-0">
+    <!--@css(/css/module/myshop/depositHistoryPackage.css)-->
+    <div class="titleArea" module="Myshop_DepositHead">
+        <h2>{$deposit_name}</h2>
+        <p>고객님의 사용가능 {$deposit_name} 금액 입니다.</p>
+    </div>
+
+    <div module="Myshop_DepositSummary" class="boxTheme">
+        <dl class="desc">
+            <dt><span class="icoDot"></span> 누적 {$deposit_name}</dt>
+            <dd>{$all_deposit}</dd>
+            <dt><span class="icoDot"></span> 사용된 {$deposit_name}</dt>
+            <dd>{$used_deposit}</dd>
+            <dt><span class="icoDot"></span> 사용가능 {$deposit_name}</dt>
+            <dd>{$total_deposit}</dd>
+            <dt><span class="icoDot"></span> 현금환불요청 {$deposit_name}</dt>
+            <dd>{$deposit_refund_wait}</dd>
+        </dl>
+    </div>
+
+    <div module="Myshop_DepositHistoryList">
+        <!--
+            $count = 10
+            $only_html = no
+            $login_page = /member/login.html
+        -->
+        <div class="buttonArea {$display_deposit|display}">
+            <span class="gRight">
+                <a href="#none" class="btnNormal"><span id="{$btn_deposit_refund_id}">현금 환불요청</span></a>
+            </span>
+        </div>
+
+        <table border="1" summary="" class="mt10">
+            <caption>{$deposit_name} 내역</caption>
+            <colgroup>
+                <col style="width:20%;" />
+                <col style="width:15%;" />
+                <col style="width:20%;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">주문날짜</th>
+                    <th scope="col">{$deposit_name}</th>
+                    <th scope="col">관련 주문</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody class="{$display_history|display} center">
+                <tr>
+                    <td>{$deposit_date}</td>
+                    <td class="right">{$deposit_money}</td>
+                    <td>{$deposit_order_id}</td>
+                    <td class="left">{$deposit_detail}</td>
+                </tr>
+                <tr>
+                    <td>{$deposit_date}</td>
+                    <td class="right">{$deposit_money}</td>
+                    <td>{$deposit_order_id}</td>
+                    <td class="left">{$deposit_detail}</td>
+                </tr>
+                <tr>
+                    <td>{$deposit_date}</td>
+                    <td class="right">{$deposit_money}</td>
+                    <td>{$deposit_order_id}</td>
+                    <td class="left">{$deposit_detail}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="empty {$display_history_none|display}">{$deposit_name} 내역이 없습니다.</p>
+    </div>
+
+    <div module="myshop_DepositHistoryPaging" class="paginate">
+        <p class="first"><a href="{$first_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+        <p><a href="{$prev_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+        <ol>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        </ol>
+        <p><a href="{$next_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+        <p class="last"><a href="{$last_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+    </div>
+</div>
+
+
+<div module="Myshop_DepositHead" class="helpTheme mid-0">
+    <h3>{$deposit_name} 안내</h3>
+    <div class="content">
+        <ul>
+            <li class="item1">{$deposit_name}은 주문취소 등의 결제대금 환불, 초과 입금차액 환불 등으로 발생한 금액입니다.</li>
+            <li class="item2">사용가능 {$deposit_name}(누적 {$deposit_name}-사용된 {$deposit_name}-현금환불요청 {$deposit_name})은 상품 구매 시 현금과 동일하게 언제든지 사용 가능합니다.</li>
+            <li class="item3">현금으로 환불을 원하실 경우, 본인 명의의 은행 계좌로 환불 신청을 할 수 있습니다.</li>
+        </ul>
+    </div>
+</div>
+

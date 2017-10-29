@@ -1,0 +1,38 @@
+i {
+    &.sc-12x {
+        font-size: 1.2em;
+    }
+    &.sc-15x {
+        font-size: 1.5em;
+    }
+    &.sc-18x {
+        font-size: 1.8em;
+    }
+    &.sc-20x {
+        font-size: 2em;
+    }
+    &.sc-30x {
+        font-size: 3em;
+    }
+    &.sc-40x {
+        font-size: 4em;
+    }
+    &.sc-50x {
+        font-size: 5em;
+    }
+
+    &.sc-squre {
+
+    }
+    &.sc-spin {
+        display: block;
+        //@include animation(SPIN 1s ease-in-out infinite alternate-reverse);
+    }
+    &.sc-brinking {
+        //@include animation(BLINKING 1s ease-in-out infinite alternate-reverse);
+    }
+    &.sc-zoom-in-out {
+        display: block;
+        //@include animation(ZOOM-IN-OUT 1s ease-in-out infinite alternate-reverse);
+    }
+}

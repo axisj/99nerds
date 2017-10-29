@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="member_checkunderfourteen">
+    <!--@css(/css/module/member/checkunderfourteen.css)-->
+    <div class="header">
+        <h1>14세미만 구매 제한 확인 절차</h1>
+    </div>
+
+    <div class="content">
+        <p class="info">14세 미만 사용자는 <span class="txtStrong12">구매가 제한되어, 확인이 필요</span>합니다. <br />주민등록번호는 14세미만 여부 확인을 위한 용도로만 사용되고, 별도로 수집되지 않습니다.</p>
+
+        <p class="gTriple" id="auth_type_layer">
+            {$radioAuthIpin} <label for="{$idAuthIpin}">아이핀(i-Pin) 인증</label>
+            {$radioAuthMobile} <label for="{$idAuthMobile}">휴대폰인증</label>
+        </p>
+
+        <div class="gDouble" id="ipin">
+            <a href="#none" class="btnNormal" onclick="{$ipinpopup}">아이핀인증</a>
+            <p class="gSingle">아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 <br />본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다. <br />아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.</p>
+        </div>
+
+        <div class="gDouble" id="mobileauth">
+            <a href="#none" class="btnNormal" onclick="{$mobileauthpopup}">휴대폰인증</a>
+            <p class="gSingle">본인 명의의 휴대폰으로 본인인증을 진행합니다. <br />휴대폰 명의자의 나이 정보로 14세 미만 여부를 확인합니다.</p>
+        </div>
+
+        <div class="buttonArea">
+            <button type="button" class="btnNormal" onclick="self.close();">취소하기</button>
+        </div>
+    </div>
+</div>

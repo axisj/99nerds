@@ -1,0 +1,7 @@
+.popup { min-width:0; max-width:600px; height:230px; }
+.xans-myshop-orderissuecash table #regno { width:120px; }
+.xans-myshop-orderissuecash table #ssn1 { width:90px; margin:0 4px 0 0; }
+.xans-myshop-orderissuecash table #ssn2 { width:90px; margin:0 4px; }
+.xans-myshop-orderissuecash table #mobile1 { margin:0 4px 0 0; }
+.xans-myshop-orderissuecash table #mobile2,
+.xans-myshop-orderissuecash table #mobile3 { width:60px; margin:0 4px; }

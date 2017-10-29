@@ -1,0 +1,44 @@
+.xans-product-menupackage .titleArea .likeButton button { margin:0 0 0 10px; padding:0 0 0 20px; height:16px; font-family:verdana; color:#9a9a9a; letter-spacing:-1px; background:none; }
+.xans-product-menupackage .titleArea .likeButton.selected button { color:#353535; }
+
+.xans-product-menupackage.menu { margin:0 0 27px; }
+.xans-product-menupackage.menu .menuCategory { border:1px solid #d7d5d5; font-size:0; line-height:0; }
+.xans-product-menupackage.menu .menuCategory > li { display:inline-block; width:20%; margin:15px 0 15px 20px; padding:0 5px 0 0; line-height:1.2em; vertical-align:top; *display:inline; *zoom:1; }
+/* 중분류 */
+.xans-product-menupackage.menu .menuCategory > li > a {
+    padding:0 13px 0 0; 
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+    text-decoration:none;
+}
+.xans-product-menupackage.menu .menuCategory > li > a:hover,
+.xans-product-menupackage.menu .menuCategory > li.selected > a {
+    text-decoration:none;
+    background-position:100% -95px;
+}
+.xans-product-menupackage.menu .menuCategory > li .count { font-weight:normal; }
+ /* 소분류 */
+.xans-product-menupackage.menu .menuCategory > li > ul { padding:6px 0 0 0; }
+.xans-product-menupackage.menu .menuCategory > li > ul > li { margin:8px 0 0 0; line-height:1.2em; }
+.xans-product-menupackage.menu .menuCategory > li > ul > li > a {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}
+.xans-product-menupackage.menu .menuCategory > li > ul > li > .button { display:inline-block; position:relative; width:9px; height:14px; margin:1px 0 0 3px; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-menupackage.menu .menuCategory .button.selected { z-index:10; }
+.xans-product-menupackage.menu .menuCategory .button.selected .subCategory { display:block; }
+/* 상세분류 */
+.xans-product-menupackage.menu .subCategory { display:none; position:absolute; left:50%; top:13px; z-index:10; width:300px; margin:0 0 0 -151px; padding:6px 0; border:1px solid #565960; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/product/bg_sub_category_line.gif") repeat-y 150px 0; background-color:#fff; }
+.xans-product-menupackage.menu .subCategory li { display:inline-block; width:130px; margin:8px 0 8px 18px; line-height:1.2em; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-menupackage.menu .subCategory li a {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:none;
+}

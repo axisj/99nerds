@@ -1,0 +1,24 @@
+.xans-layout-multishoplist.list { float:right; position:relative; z-index:10; margin:0 0 0 6px; padding:14px 0 0 0; }
+.xans-layout-multishoplist.list .toggle { display:block; padding:0 0 0 10px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_util1.gif") no-repeat 0 50%; }
+.xans-layout-multishoplist.list .toggle span { padding:0 25px 0 0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_multishop1.png") no-repeat 100% 50%; }
+.xans-layout-multishoplist.list .toggle span > img { vertical-align:middle }
+
+.xans-layout-multishoplist.list > ul { display:none; position:absolute; right:0; margin:15px 0 0 0; overflow:auto; width:248px; height:155px; border:1px solid #d5d5d5; background:#fff; }
+.xans-layout-multishoplist.list > ul li { position:relative; height:39px; margin:-1px 0 0; border-top:1px solid #d5d5d5; line-height:39px; }
+.xans-layout-multishoplist.list > ul li a { display:block; overflow:hidden; padding:0 62px 0 48px; white-space:nowrap; text-overflow:ellipsis; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_multishop2.png") no-repeat 100% -24px; }
+.xans-layout-multishoplist.list > ul li.selected a { background:#f3f3f3 url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_multishop2.png") no-repeat 100% 16px; }
+.xans-layout-multishoplist.list > ul li a img { position:absolute; left:10px; top:9px; }
+.xans-layout-multishoplist.list > ul li a .unit { position:absolute; right:38px; top:0; }
+.xans-layout-multishoplist.list.show > ul { display:block; }
+
+.xans-layout-multishoplist.thumb { position:absolute; left:0; top:5px; margin:0; }
+[class*="divider"] + .inner .xans-layout-multishoplist.thumb { margin-top:-40px; }
+.xans-layout-multishoplist.thumb > ul { overflow:hidden; }
+.xans-layout-multishoplist.thumb > ul li { float:left; width:32px; margin:0 4px 0 0; text-decoration:none; }
+.xans-layout-multishoplist.thumb > ul li a { display:block; text-decoration:none; }
+
+/* 레이아웃 중앙형 */
+body.center .xans-layout-multishoplist.list { float:right; position:relative; z-index:10; margin:0 0 0 6px; padding:14px 0 0 0; }
+body.center .xans-layout-multishoplist.list button { display:block; padding:0 0 0 10px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_util1.gif") no-repeat 0 50%; }
+body.center .xans-layout-multishoplist.list button span { padding:0 25px 0 0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_multishop1.png") no-repeat 100% 50%; }
+body.center .xans-layout-multishoplist.list > ul { margin:10px 0 0 0; }

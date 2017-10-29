@@ -1,0 +1,85 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>캘린더 게시판</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">캘린더 게시판</h2>
+</div>
+
+
+<div module="Calendar_Fieldpackage" class="mid-0">
+    <!--@css(/css/module/calendar/fieldpackage.css)-->
+    <div class="tabTheme">
+        <ul class="menu">
+            <li><a href="/calendar/calendar_day.html">일간</a></li>
+            <li><a href="/calendar/calendar_week.html">주간</a></li>
+            <li><a href="/calendar/calendar_month.html">월간</a></li>
+        </ul>
+        <span class="right"><a href="/calendar/calendar_field.html" class="btnNormal">추가정보</a></span>
+    </div>
+
+    <div module="Calendar_HeadField">
+        <!--
+            $calendar_write_url = calendar_write.html
+         -->
+        <p class="date">
+            <a href="#none" onclick="{$action_prev_day}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_prev.gif" alt="이전날" /></a>
+            {$current_year}-{$current_month}-{$current_day}
+            <a href="#none" onclick="{$action_next_day}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_next.gif" alt="다음날" /></a>
+            <button type="button" class="btnNormal" onclick="{$action_today}">오늘</button>
+        </p>
+        <span class="right"><button type="button" onclick="{$action_write}" class="btnSubmitB {$write_display|display}">글쓰기</button></span>
+    </div>
+
+    <div module="Calendar_Category">{$form.category_no}</div>
+
+    <div class="gTriple">
+        <table border="1" summary="" module="Calendar_ListField">
+            <!--
+                $login_page_url = /member/login.html
+            -->
+            <caption>캘린더 추가정보</caption>
+            <colgroup>
+                <col style="width:200px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <thead>
+                <tr module="Calendar_FieldHead">
+                    <th scope="col" class="time"><span>{$calendar_time}</span></th>
+                    <th scope="col"><span>{$calendar_time}</span></th>
+                    <th scope="col"><span>{$calendar_time}</span></th>
+                </tr>
+            </thead>
+            <tbody module="Calendar_ListRow">
+                <tr module="Calendar_ListCol">
+                    <td><p class="inner">{$calendar_field}{$calendar_count}</p></td>
+                    <td>
+                        <div class="inner">
+                            <a href="#none" onclick="{$action_list_view}">{$calendar_count}</a>
+                            <div class="viewContentLayer" style="display:none;">
+                                <a href="#none" onclick="{$action_close_view}" class="close">X</a>
+                                <p class="date">{$calendar_year}년 {$calendar_month}월 {$calendar_day}일 {$calendar_time}시 등록현황입니다.</p>
+                                <p class="cont">{$calendar_contents}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="inner">
+                            <a href="#none" onclick="{$action_list_view}">{$calendar_count}</a>
+                            <div class="viewContentLayer" style="display:none;">
+                                <a href="#none" onclick="{$action_close_view}" class="close">X</a>
+                                <p class="date">{$calendar_year}년 {$calendar_month}월 {$calendar_day}일 {$calendar_time}시 등록현황입니다.</p>
+                                <p class="cont">{$calendar_contents}</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치">좋아요</li>
+    </ol>
+</div>
+<div class="titleArea">
+    <h2 class="txtTitle16B">좋아요</h2>
+</div>
+  
+
+<div module="myshop_likeitPrdPackage">
+    <!--@css(/css/module/myshop/likeitPrdPackage.css)-->
+    <div module="myshop_LikeTab" class="tabTheme mid-0">
+        <ul class="menu">
+            <li class="{$mylikeprd_tab_class}"><a href="/myshop/likeit/product.html">My 상품 ({$mylikeprd_total_cnt})</a></li>
+            <li class="{$mylikecate_tab_class}"><a href="/myshop/likeit/category.html">My 상품분류 ({$mylikecate_total_cnt})</a></li>
+        </ul>
+    </div>
+    <div module="myshop_LikeProductList" class="tableTheme mid-0">
+    <!--
+        $count = 10
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+        <table border="1" summary="">
+            <caption>My 상품 목록</caption>
+            <colgroup>
+                <col style="width:5%" />
+                <col style="width:15%" />
+                <col style="width:auto" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" onclick="{$check_mylikeprd}" /></th>
+                    <th scope="col">이미지</th>
+                    <th scope="col">상품명</th>
+                </tr>
+            </thead>
+            <tbody class="center middle {$list_display|display}">
+                <tr>
+                    <td>{$checkbox}</td>
+                    <td class="thumb">
+                        <a href="/product/detail.html{$param}"><img src="{$image_medium}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$disp_product_name}" style="width:75px;"></a>
+                    </td>
+                    <td class="left info">
+                        <strong><a href="/product/detail.html{$param}">{$disp_product_name}</a></strong>
+                        <span class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</span>
+                        <span class="button">{$zoom_icon}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>{$checkbox}</td>
+                    <td class="thumb">
+                        <a href="/product/detail.html{$param}"><img src="{$image_medium}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$disp_product_name}"></a>
+                    </td>
+                    <td class="left info">
+                        <strong><a href="/product/detail.html{$param}">{$disp_product_name}</a></strong>
+                        <span class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</span>
+                        <span class="button">{$zoom_icon}</span>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="{$empty_display|display}">
+                <tr>
+                    <td colspan="3" class="empty">좋아요 상품 내역이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div module="myshop_LikeProductControl" class="buttonArea">
+        <span class="gLeft">
+            <span class="txtBase"><strong>선택상품을</strong></span>
+            <button type="button" class="btnEm" onclick="{$delete_mylikeprd}">삭제하기</button>
+        </span>
+    </div>
+    <div module="myshop_LikeProductPaging" class="paginate mid-0">
+        <p class="first"><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+        <p><a href="{$param_before}"><img src="http://img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+        <ol>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        </ol>
+        <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+        <p class="last"><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+.xans-myshop-orderhistorylistitem table td .line { text-decoration:underline; letter-spacing:-1px; }
+.xans-myshop-orderhistorylistitem table td .product div.option,
+.xans-myshop-orderhistorylistitem table td .product ul.option > li { margin:9px 0 0; line-height:16px; }
+.xans-myshop-orderhistorylistitem table td .product ul.option > li > strong { display:block; }
+.xans-myshop-orderhistorylistitem table td .product div.option span.file a,
+.xans-myshop-orderhistorylistitem table td .product ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; text-decoration:underline; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_attach.gif") no-repeat 0 2px; }

@@ -1,0 +1,177 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+
+    <div module="Board_ListPackage_8" class="mid-0">
+        <!--@css(/css/module/board/listPackage_gallary.css)-->
+        <div module="board_title_8">
+            <div class="path">
+                <span>현재 위치</span>
+                <ol>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/board/index.html">게시판</a></li>
+                    <li title="현재 위치"><strong>{$board_name}</strong></li>
+                </ol>
+            </div>
+
+            <div class="titleArea">
+                <h2 class="txtTitle16B">{$board_title} {$board_adult_icon}</h2>
+                <p>{$board_info}</p>
+            </div>
+            <p class="imgArea">{$board_top_image}</p>
+        </div>
+
+        <div class="boardSort">
+            <span module="board_category_8">{$form.board_category}</span>
+        </div>
+
+        <ul module="board_listheader_8">
+            <li><a class="btnNormal {$list_type_display|display}" href="/board/gallery/list.html{$param_list}">이미지형</a></li>
+            <li><a class="btnNormal {$list_type_display|display}" href="/board/gallery/list2.html{$param_list}">리스트형</a></li>
+        </ul>
+
+        <div class="notice">
+            <div module="board_notice_8">
+                <!--
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <ul>
+                    <li>
+                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" style="width:187px;" /></a>
+                        <div class="description">
+                            <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                            <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br />
+                                작성일 : {$write_date}
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" style="width:187px;" /></a>
+                        <div class="description">
+                            <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                            <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br />
+                                작성일 : {$write_date}
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div module="board_fixed_8">
+                <!--
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <ul>
+                    <li>
+                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" style="width:187px;" /></a>
+                        <div class="description">
+                            <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a href="{$link_board_detail}"> <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                            <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br />
+                                작성일 : {$write_date}
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" style="width:187px;" /></a>
+                        <div class="description">
+                            <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a href="{$link_board_detail}"> <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                            <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br />
+                                작성일 : {$write_date}
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div module="board_list_8" class="gTriple">
+            <!--
+                $count = 12
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+           -->
+            <ul class="prdList column5 wyImgSizeFlex">
+                <li class="item">
+                    <div class="box">
+                        <a href="{$link_board_detail}"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" class="thumb" /></a>
+                        {$checkbox}
+                        <a href="{$link_board_detail}">[{$no}] {$subject} {$comment_count}</a>
+                        <span class="txtSub11 gTriple">
+                            작성자 : {$member_icon}{$writer}<br />
+                            작성일 : {$write_date}
+                        </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <a href="{$link_board_detail}"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" class="thumb" /></a>
+                        {$checkbox}
+                        <a href="{$link_board_detail}">[{$no}] {$subject} {$comment_count}</a>
+                        <span class="txtSub11 gTriple">
+                            작성자 : {$member_icon}{$writer}<br />
+                            작성일 : {$write_date}
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="{$empty_display|display}" module="board_empty_8">
+            <p class="empty">
+                {$empty_message}
+            </p>
+        </div>
+
+        <div module="board_ButtonList_8" class="buttonArea {$write_display|display}">
+            <span class="gRight">
+                <a href="/board/gallery/write.html{$param_write}" class="btnSubmitB {$write_display|display}">글쓰기</a>
+            </span>
+        </div>
+    </div>
+
+
+
+<div module="board_paging_8" class="paginate mid-0">
+    <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+</div>
+
+
+<div module="board_search_8" class="mid-0">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset>
+        <legend>게시물 검색</legend>
+        <p>검색어 {$form.search_date} {$form.search_key} {$form.search} <button type="button" class="btnEm" onclick="{$action_search}">찾기</button></p>
+    </fieldset>
+</div>
+
+
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_8" class="mid-0">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+        해당 글을 {$form.board_category_move} 카테고리로
+        <button type="button" class="btnNormal" onclick="{$action_category_move}">글 이동</button>
+    </p>
+</div>
+
+
+
+<div module="board_function_8" class="mid-0">
+    <!--@css(/css/module/board/function.css)-->
+    <p>
+        해당 글 이동 {$form.boardGroup} 으로
+        <button type="button" class="btnNormal" onclick="{$action_article_move}">글 이동</button>
+        <button type="button" class="btnNormal" onclick="{$action_article_copy}">글 복사</button>
+        * 댓글포함, 답변 불포함
+    </p>
+</div>
+<!-- //관리자 전용 메뉴 -->

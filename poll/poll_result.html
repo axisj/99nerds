@@ -1,0 +1,34 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="poll_result" class="mid-0">
+    <!--@css(/css/module/poll/result.css)-->
+    <div class="header">
+        <h1>설문조사 결과</h1>
+    </div>
+
+    <div class="content">
+        <div class="boxTheme">
+            <strong>{$title}</strong>
+            <ul>
+                <li>- 총 투표수: {$total_count}</li>
+            </ul>
+        </div>
+
+        <ol class="gTriple result">
+            <li>
+                <p><strong title="항목">{$comment_title}</strong> <span title="투표수">({$comment_count}표)</span></p>
+                <p class="graph">
+                    <em title="투표율">{$comment_percentage}%</em>
+                    <span class="box"><span style="width:{$comment_percentage}%;"> </span></span>
+                </p>
+            </li>
+            <li>
+                <p><strong title="항목">{$comment_title}</strong> <span title="투표수">({$comment_count}표)</span></p>
+                <p class="graph">
+                    <em title="투표율">{$comment_percentage}%</em>
+                    <span class="box"><span style="width:{$comment_percentage}%;"> </span></span>
+                </p>
+            </li>
+        </ol>
+    </div>
+</div>

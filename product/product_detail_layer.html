@@ -1,0 +1,31 @@
+<div  module="product_detail" class="ec-base-tooltip">
+    <h3>상품 추가정보</h3>
+    <div module="product_detaildesign" class="content">
+        <!--
+            출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
+            count = 10
+        -->
+        <table border="1" summary="">
+            <caption>{$name} 기본 정보</caption>
+            <tbody>
+                <tr class="{$item_display|display}">
+                    <th scope="row">{$item_title}</th>
+                    <td>{$item_content}</td>
+                </tr>
+                <tr class="{$item_display|display}">
+                    <th scope="row">{$item_title}</th>
+                    <td>{$item_content}</td>
+                </tr>
+                <tr class="{$colorchip_display|display} color">
+                    <th scope="row">상품색상</th>
+                    <td module="product_Colorchip">
+                        <span class="chips" style="background-color:{$color}"></span>
+                        <span class="chips" style="background-color:{$color}"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button type="button" class="btnClose eLayerCloseButton" id="CloseButton_{$product_no}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_option_close.gif" alt="닫기" /></button>
+    <span class="edge"></span>
+</div>

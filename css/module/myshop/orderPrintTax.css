@@ -1,0 +1,32 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {margin:0; padding:0; }
+body { padding:40px 20px;font:0.75em "돋움", Dotum, AppleGothic, sans-serif; color:#333; background:#fff; color:#666; overflow:auto; }
+table { width:100%; border-spacing:0; border-collapse:collapse; border:0; }
+th, td { padding:4px 2px; border:1px solid #999; }
+caption { visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; display:none; }
+
+.fl { float:left; }
+.fr { float:right; }
+.clear { clear:both; }
+.tr { text-align:right; }
+.tl { text-align:left; }
+.displaynone { display:none; }
+.mid-0.xans-myshop-orderprinttax { margin:0 auto; width:700px; }
+.mid-0.xans-myshop-orderprinttax .box { border:1px solid green; padding:10px; margin:10px 0; }
+.mid-0.xans-myshop-orderprinttax p,
+.mid-0.xans-myshop-orderprinttax table { color:navy; line-height:150%; margin:0 0 -1px; }
+.mid-0.xans-myshop-orderprinttax table th,
+.mid-0.xans-myshop-orderprinttax table td { border:1px solid navy; padding:5px; text-align:center; }
+.mid-0.xans-myshop-orderprinttax .provider { width:339px; float:left; *zoom:1; }
+.mid-0.xans-myshop-orderprinttax .provider:after { content:' '; clear:both; display:block; }
+.mid-0.xans-myshop-orderprinttax .provider .name { width:15px; }
+
+.mid-0.xans-myshop-orderprinttax .xans-myshop-buyer { margin-left:-1px; width:340px; }
+.mid-0.xans-myshop-orderprinttax .info { padding:10px; }
+
+.mid-0 .xans-myshop-orderprinttaxamount td,
+.mid-0 .xans-myshop-orderprinttaxproduct td,
+.mid-0.xans-myshop-orderprinttax .summary td { color:black; }
+
+.mid-0.xans-myshop-orderprinttax .provider p, .provider table { color:red; }
+.mid-0.xans-myshop-orderprinttax .provider table th,
+.mid-0.xans-myshop-orderprinttax .provider table td { border-color:red; }

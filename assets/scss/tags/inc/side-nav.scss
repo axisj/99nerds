@@ -1,0 +1,24 @@
+.side-nav {
+  width: 250px;
+
+  .userView {
+    line-height: 1.5;
+    a {
+
+    }
+  }
+
+  .sc {
+
+  }
+
+  li.menu-level-1 {
+    > a {
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      padding-left: 40px;
+    }
+  }
+}
+

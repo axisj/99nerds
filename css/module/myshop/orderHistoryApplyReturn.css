@@ -1,0 +1,30 @@
+/* Title */
+.xans-myshop-orderhistoryapplyreturn > .title:first-child h3 { padding-top:0; }
+/* list */
+.xans-myshop-orderhistoryapplyreturn table .chk { width:30px; }
+.xans-myshop-orderhistoryapplyreturn table td .line { text-decoration:underline; }
+.xans-myshop-orderhistoryapplyreturn table td.product { text-align:left; vertical-align:top; }
+.xans-myshop-orderhistoryapplyreturn table td.product p { padding:0 0 0 90px; }
+.xans-myshop-orderhistoryapplyreturn table td.product .thumbnail { float:left; }
+.xans-myshop-orderhistoryapplyreturn table td.product .thumbnail img { width:80px; }
+.xans-myshop-orderhistoryapplyreturn table td.product div.option,
+.xans-myshop-orderhistoryapplyreturn table td.product ul.option > li { margin:9px 0 0 90px; color:#707070; line-height:16px; }
+.xans-myshop-orderhistoryapplyreturn table td.product ul.option > li > strong { display:block; color:#505050; }
+.xans-myshop-orderhistoryapplyreturn table td.product .free { margin:5px 0 0; }
+.xans-myshop-orderhistoryapplyreturn .infoWarn { margin:10px 0 0; padding:0 0 0 23px; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/order/ico_info.gif") no-repeat 0 1px; }
+
+.xans-myshop-orderhistoryapplyreturn .productList { padding:0; }
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li { display:table; table-layout:fixed; width:100%; border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li:first-child { border-top:0; }
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li p,
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li ul { display:table-cell; }
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li .product { padding:9px 0 8px 10px; width:auto;}
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li .quantity { padding:9px 0 8px 0; width:79px  !important; text-align:center; border:solid #e9e9e9; border-width:0 1px 0 1px;}
+.xans-myshop-orderhistoryapplyreturn .productList > ul > li .price { padding:9px 0 8px 0; width:149px; text-align:center;}
+/* INPUT */
+#pickup_phone1_1, #pickup_phone2_1 { margin:0 5px 0 0; width:60px; }
+#pickup_phone1_2, #pickup_phone1_3,
+#pickup_phone2_2, #pickup_phone2_3 { margin:0 0 0 5px; padding:2px 4px; width:60px; }
+#pickup_addr1, #pickup_addr2 { margin:0 5px 0 0; width:450px; }
+#delivery_info_offer_content { width:95%; }
+#reason_detail { width:540px; }

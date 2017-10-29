@@ -1,0 +1,16 @@
+.mid-0 .xans-calendar-headweek { position:relative; margin:30px 0 32px; text-align:center; }
+.mid-0 .xans-calendar-headweek .date { color:#d9bca0; font-size:30px; letter-spacing:-1px; font-family:Lucida Sans, sans-serif; }
+.mid-0 .xans-calendar-headweek .date img { vertical-align:middle; }
+.mid-0 .xans-calendar-headweek .right { position:absolute; right:0; top:0px; }
+
+.mid-0 .xans-calendar-listweekhead th { border-top:1px solid #d9bca0; font-size:11px; color:#d9bca0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") right 0 no-repeat; }
+.mid-0 .xans-calendar-listweekhead th span { display:block; padding:8px 0; }
+.mid-0 .xans-calendar-listweekhead th.time span { background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") 0 0 no-repeat; }
+.mid-0 .xans-calendar-listweekhead th.sun span { color:#e5541e; }
+.mid-0 .xans-calendar-listweekhead th.sat span { color:#7cbed7; }
+.mid-0 .xans-calendar-listweek th { padding:8px 3px; font-size:11px; text-align:center; color:#8f8f8f; font-weight:normal; border:1px solid #fff; background:#f1f4e6; }
+.mid-0 .xans-calendar-listweek td { padding:8px 3px; border:1px solid #fff; font-size:11px; background:#f1f4e6; }
+.mid-0 .xans-calendar-listweek .week_today { background:#d1e7b9; }
+.mid-0 .xans-calendar-listweek td li a,
+.mid-0 .xans-calendar-listweek td li a:hover { font-size:11px; line-height:18px; color:#96aa4b; }
+.mid-0 .xans-calendar-listweek td li span { display:block; }

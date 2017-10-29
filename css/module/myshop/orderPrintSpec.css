@@ -1,0 +1,29 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {margin:0; padding:0; }
+body { padding:40px 20px;font:0.75em "돋움", Dotum, AppleGothic, sans-serif; color:#333; background:#fff; color:#666; }
+table { width:100%; border-spacing:0; border-collapse:collapse; border:0; }
+th, td { padding:4px 2px; border:1px solid #000; height:20px; }
+caption { visibility:hidden; position:absolute; left:-1000px; top:-1000px; height:0; width:0; display:none; }
+p { clear:both; }
+p.title {position:relative; top:-20px; height:20px; margin:0 0 -20px; }
+p.info { padding:10px; width:590px; margin:0 auto; }
+.mid-0.xans-myshop-orderprintspec { padding:10px; width:650px; margin:0 auto; border:1px solid green; }
+.mid-0.xans-myshop-orderprintspec .grid { margin:0 auto; width:590px; border:2px solid #000; }
+.mid-0.xans-myshop-orderprintspec h1 { padding:15px 0 30px; text-align:center; letter-spacing:2em; }
+
+thead th,
+tfoot th,
+tfoot td { border-top:2px solid #000; }
+.first th,
+.first td { border-top:2px solid #000; }
+.first th.outer { border-left:2px solid #000; }
+table.issue { float:left; width:200px; }
+table.issue th,
+table.issue td { border:0; text-align:left; }
+table.provider { float:right; width:380px; }
+table.provider td { text-align:center; }
+table.content { margin:-1px 0 0; }
+table.content td { text-align:center; }
+table.content td.product { padding:4px; text-align:left; }
+table.content td.price { text-align:right; }
+table.content tfoot th { border-right:0; }
+table.content tfoot td { padding:0 10px 0 0; border-left:0; text-align:right; }

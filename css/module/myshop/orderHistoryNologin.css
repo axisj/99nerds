@@ -1,0 +1,17 @@
+.xans-myshop-orderhistorynologin { position:relative; width:500px; margin:20px auto 0;border:1px solid #d7d5d5; padding:30px 0; text-align:center; }
+.xans-myshop-orderhistorynologin .memberArea { width:355px; margin:30px auto; text-align:left; }
+.xans-myshop-orderhistorynologin dl.desc { overflow:hidden; width:100%; }
+.xans-myshop-orderhistorynologin dl.desc dt,
+.xans-myshop-orderhistorynologin dl.desc dd { float:left;  height:30px;}
+.xans-myshop-orderhistorynologin dl.desc dt { width:36%; line-height:22px; }
+.xans-myshop-orderhistorynologin dl.desc dd { width:62%; }
+.xans-myshop-orderhistorynologin dl.desc dt .icoDot { display:inline-block; width:5px; height:11px; background:url('http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_tip_title.gif') no-repeat 0 center; }
+.xans-myshop-orderhistorynologin #order_name,
+.xans-myshop-orderhistorynologin #order_password { width:208px; padding:3px;}
+.xans-myshop-orderhistorynologin #order_id1,
+.xans-myshop-orderhistorynologin #order_id2 { width:95px; padding:3px; }
+.xans-myshop-orderhistorynologin #order_id1 {margin-right:2px;}
+.xans-myshop-orderhistorynologin #order_id2 {margin-left:2px;}
+
+.xans-myshop-orderhistorynologin input[type=text],
+.xans-myshop-orderhistorynologin input[type=password] {border:1px solid #ddd;}

@@ -1,0 +1,125 @@
+
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path" module="myshop_head">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이 쇼핑</a></li>
+        <li title="현재 위치"><strong>{$mileage_name}</strong></li>
+    </ol>
+</div>
+
+<div module="Myshop_mileageUnavailPackage" class="tableTheme mid-0">
+    <!--@css(/css/module/myshop/mileageUnavailPackage.css)-->
+    <div class="titleArea" module="myshop_head">
+        <h2>{$mileage_name}</h2>
+        <p>고객님의 사용가능 {$mileage_name} 금액 입니다.</p>
+    </div>
+
+    <div module="myshop_summary" class="boxTheme">
+        <dl class="desc">
+            <dt><span class="icoDot"></span> 총 {$mileage_name}</dt>
+            <dd>{$total_mileage}</dd>
+            <dt><span class="icoDot"></span> 사용가능 {$mileage_name}</dt>
+            <dd>{$avail_mileage}</dd>
+            <dt><span class="icoDot"></span> 사용된 {$mileage_name}</dt>
+            <dd>{$used_mileage}</dd>
+            <dt><span class="icoDot"></span> 미가용 {$mileage_name}</dt>
+            <dd>{$unavail_mileage}</dd>
+            <dt><span class="icoDot"></span> 환불예정 {$mileage_name}</dt>
+            <dd>{$refunded_mileage}</dd>
+        </dl>
+    </div>
+
+    <div class="tabTheme">
+        <ul class="menu">
+            <li><a href="/myshop/mileage/historyList.html">적립내역보기</a></li>
+            <li class="selected"><a href="/myshop/mileage/unavailList.html">미가용적립내역보기</a></li>
+            <li><a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급적립내역</a></li>
+        </ul>
+    </div>
+
+    <div module="myshop_unavailList">
+        <!--
+            $only_html = no
+            $count = 10
+            $login_page = /member/login.html
+        -->
+        <table border="1" summary="">
+            <caption>{$mileage_name} 내역</caption>
+            <colgroup>
+                <col style="width:15%;" />
+                <col style="width:15%;" />
+                <col style="width:20%;" />
+                <col style="width:20%;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">주문날짜</th>
+                    <th scope="col">{$mileage_name}</th>
+                    <th scope="col">관련 주문</th>
+                    <th scope="col">사용가능 예정일</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody class="{$display_unavail|display} center">
+                <tr>
+                    <td>{$order_date|date:Y-m-d}</td>
+                    <td class="right">{$product_mileage}</td>
+                    <td><a href="/myshop/order/detail.html?order_id={$order_id}">{$order_id}</a></td>
+                    <td>{$can_use_date}</td>
+                    <td>{$mileage_type}</td>
+                </tr>
+                <tr>
+                    <td>{$order_date|date:Y-m-d}</td>
+                    <td class="right">{$product_mileage}</td>
+                    <td><a href="/myshop/order/detail.html?order_id={$order_id}">{$order_id}</a></td>
+                    <td>{$can_use_date}</td>
+                    <td>{$mileage_type}</td>
+                </tr>
+                <tr>
+                    <td>{$order_date|date:Y-m-d}</td>
+                    <td class="right">{$product_mileage}</td>
+                    <td><a href="/myshop/order/detail.html?order_id={$order_id}">{$order_id}</a></td>
+                    <td>{$can_use_date}</td>
+                    <td>{$mileage_type}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="empty {$display_unavail_none|display}">{$mileage_name} 내역이 없습니다.</p>
+    </div>
+</div>
+
+
+<div module="myshop_unavailPaging" class="paginate mid-0">
+    <p class="first"><a href="{$first_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+    <p><a href="{$prev_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+    </ol>
+    <p><a href="{$next_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+    <p class="last"><a href="{$last_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+</div>
+
+
+<div module="myshop_head" class="helpTheme mid-0">
+    <h3>{$mileage_name} 안내</h3>
+    <div class="content">
+        <ul module="myshop_historyInfo">
+            <li class="item1">주문으로 발생한 {$mileage_name}은 배송완료 후 {$mileage_period} 부터 실제 사용 가능한 {$mileage_name}으로 전환됩니다. 배송완료 시점으로부터 {$mileage_period} 동안은 미가용 {$mileage_name}으로 분류됩니다. </li>
+            <li class="item2">미가용 {$mileage_name}은 반품, 구매취소 등을 대비한 임시 {$mileage_name}으로 사용가능 {$mileage_name}으로 전환되기까지 상품구매에 사용하실 수 없습니다.</li>
+            <li class="item3">사용가능 {$mileage_name}(총{$mileage_name} - 사용된{$mileage_name} - 미가용{$mileage_name})은 상품구매 시 바로 사용가능합니다.</li>
+        </ul>
+    </div>
+</div>
+

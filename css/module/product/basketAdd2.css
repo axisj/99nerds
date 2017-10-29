@@ -1,0 +1,10 @@
+.xans-order-layerbasketpackage.layerTheme { position:fixed; top:50%; left:50%; width:670px; margin:-175px 0 0 -334px; }
+
+/* 장바구니 담긴 상품 구매 */
+ .xans-order-layerbasket .content .totalCount { padding:0 0 10px; margin:0 0 15px; border-bottom:1px solid #ececec; }
+ .xans-order-layerbasket .content ul.prdList { margin:0 0 20px; overflow:hidden; }
+ .xans-order-layerbasket .content ul.prdList li.item { float:left; width:157px; }
+ .xans-order-layerbasket .content ul.prdList li.item .box { margin:0 3px 0 2px; text-align:center; line-height:1.6em; }
+ .xans-order-layerbasket .content ul.prdList li.item .box p { word-break:break-all; }
+ .xans-order-layerbasket .content ul.prdList li.item .box li.strike { text-decoration:line-through; }
+ .xans-order-layerbasket .content ul.prdList .thumb { margin:0 0 10px; border:1px solid #ececec; max-width:150px; max-height:150px; }

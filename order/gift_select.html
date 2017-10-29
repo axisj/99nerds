@@ -1,0 +1,138 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="gift_select" class="tableTheme ">
+    <!--@css(/css/module/order/gift_select.css)-->
+    <div class="header">
+        <h1>사은품 선택</h1>
+    </div>
+    <div class="content">
+        <p class="info">하단의 사은품은 현재 구매하신 금액 내에서 자유롭게 선택하실 수 있습니다.<br />단, 현재 금액 초과되는 사은품은 선택되지 않습니다.</p>
+        <div module="gift_point">
+            <table summary="">
+                <caption>사은품 점수</caption>
+                <colgroup>
+                    <col style="width:145px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">총 합계 사은품 점수</th>
+                        <td><strong>{$total_point} 점</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용 점수</th>
+                        <td>
+                            <strong>{$use_point} 점</strong>
+                            <span class="{$display_selected_count|display}">(선택된 사은품 : <span id="{$selected_count_id}">0</span>개)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">남은 점수</th>
+                        <td><strong>{$able_point} 점</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table summary="" class="gSingle">
+            <caption>사은품 목록</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:90px;" class="{$display_point|display}" />
+                <col style="width:80px;" class="{$display_choice_multi_btn|display}" />
+                <col style="width:80px;" class="{$display_single_title|display}" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">사은품</th>
+                    <th scope="col" class="{$display_point|display}">점수</th>
+                    <th scope="col" class="{$display_choice_multi_btn|display}">수량</th>
+                    <th scope="col" class="{$display_single_title|display}">선택</th>
+                </tr>
+            </thead>
+            <tbody class="center">
+                <tr>
+                    <td class="left top">
+                        <div class="product middle">
+                            <span>{$product_choice}</span>
+                            <span><img src="{$gift_image}" alt="" style="width:72px;" /></span>
+                            <div class="prdInfo">
+                                <p>{$product_name} {$soldout_icon}</p>
+                                <span class="gSingle">{$option1}</span>
+                                <span class="gSingle">{$option2}</span>
+                                <span class="gSingle">{$option3}</span>
+                                <span class="gSingle">{$option4}</span>
+                                <span class="gSingle">{$option5}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right {$display_td_point|display}">{$gift_price} 점</td>
+                    <td class="{$display_amount|display}">
+                        <span class="quantity">{$product_amount}<a href="#none" onclick="{$action_change_amount_up}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="증가" class="up" /></a><a href="#none" onclick="{$action_change_amount_down}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="감소" class="down" /></a></span>
+                    </td>
+                    <td class="{$display_choice_single_btn|display}">
+                        <a href="#none" onclick="{$action_choice_single}" class="btnNormal {$display_choice_btn|display}">선택</a>
+                        <span class="{$display_soldout_msg|display}">품절</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left top">
+                        <div class="product middle">
+                            <span>{$product_choice}</span>
+                            <span><img src="{$gift_image}" alt="" style="width:72px;" /></span>
+                            <div class="prdInfo">
+                                <p>{$product_name} {$soldout_icon}</p>
+                                <span class="gSingle">{$option1}</span>
+                                <span class="gSingle">{$option2}</span>
+                                <span class="gSingle">{$option3}</span>
+                                <span class="gSingle">{$option4}</span>
+                                <span class="gSingle">{$option5}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right {$display_td_point|display}">{$gift_price} 점</td>
+                    <td class="{$display_amount|display}">
+                        <span class="quantity">{$product_amount}<a href="#none" onclick="{$action_change_amount_up}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="증가" class="up" /></a><a href="#none" onclick="{$action_change_amount_down}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="감소" class="down" /></a></span>
+                    </td>
+                    <td class="{$display_choice_single_btn|display}">
+                        <a href="#none" onclick="{$action_choice_single}" class="btnNormal {$display_choice_btn|display}">선택</a>
+                        <span class="{$display_soldout_msg|display}">품절</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left top">
+                        <div class="product middle">
+                            <span>{$product_choice}</span>
+                            <span><img src="{$gift_image}" alt="" style="width:72px;" /></span>
+                            <div class="prdInfo">
+                                <p>{$product_name} {$soldout_icon}</p>
+                                <span class="gSingle">{$option1}</span>
+                                <span class="gSingle">{$option2}</span>
+                                <span class="gSingle">{$option3}</span>
+                                <span class="gSingle">{$option4}</span>
+                                <span class="gSingle">{$option5}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right {$display_td_point|display}">{$gift_price} 점</td>
+                    <td class="{$display_amount|display}">
+                        <span class="quantity">{$product_amount}<a href="#none" onclick="{$action_change_amount_up}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="증가" class="up" /></a><a href="#none" onclick="{$action_change_amount_down}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="감소" class="down" /></a></span>
+                    </td>
+                    <td class="{$display_choice_single_btn|display}">
+                        <a href="#none" onclick="{$action_choice_single}" class="btnNormal {$display_choice_btn|display}">선택</a>
+                        <span class="{$display_soldout_msg|display}">품절</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 참고 : 주문상세내역 노출 설정 안 할 경우 -->
+        <p class="info gDouble {$display_order_result_only|display}">사은품은 현 단계에서만 선택할 수 있습니다. <br />이후에는 선택이 불가하오니 반드시 사은품을 선택해주세요.</p><!-- //참고 -->
+        <!-- 참고 : 주문상세내역 노출 설정 할 경우 -->
+        <p class="info gDouble {$display_order_detail|display}">사은품 선택은 주문상세내역에서  배송시작전까지 설정할 수 있습니다. <br />단, 배송이후부터는 선택이 불가하오니 가능한 현 단계에서 선택해주시기 바랍니다.</p><!-- //참고 -->
+    </div>
+    <div class="buttonArea">
+        <button type="button" class="btnSubmitB {$display_choice_multi_btn|display}" onclick="{$action_gift_select}">선택</button>
+        <button type="button" class="btnNormalB" onclick="{$action_gift_cancel}">취소</button>
+    </div>
+    <div class="close"><a href="#none" onclick="{$action_gift_close}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png" alt="닫기" /></a></div>
+</div>

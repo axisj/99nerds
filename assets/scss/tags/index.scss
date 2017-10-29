@@ -1,0 +1,33 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  body {
+    height: 100%;
+    overflow-y: scroll;
+
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+@include keyframes(fontfix) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include W();
+@include H();
+
+@import "inc/header";
+@import "inc/main";
+@import "inc/footer";
+@import "inc/side-nav";
+

@@ -1,0 +1,145 @@
+<!--@import(/apps/instagramwidget/skin1/skin1.html)-->
+<!--@css(/_inno/css/footer.css)-->
+
+<div id="footer">		
+	<div class="promotionArea">
+		<div class="promotion">
+			<div id="banners">
+				<!--@js(/layout/basic/js/rolling.js)-->
+				<p class="banner">                    
+					<span module="Layout_giftBanner"><a href="/order/gift_list.html"><span>고객사은품안내</span></a></span>
+					<span module="Layout_opdiaryBanner"><a href="/board/opdiary/list.html"><span>운영일지</span></a></span>
+					<span module="Layout_sosBanner"><a href="/board/urgency/urgency.html"><span>긴급문의</span></a></span>
+					<span module="Layout_attendBanner">
+						<!--
+							$stamp_type_url = /attend/stamp.html
+							$comment_type_url = /attend/comment.html
+						-->
+						<a href="{$attend_url}"><span>출석체크</span></a></span>
+					<span module="Layout_couponzoneBanner"><a href="/coupon/coupon_zone.html"><span>알뜰살뜰 쿠폰존</span></a></span>
+					<span module="Layout_calendarBanner"><a href="{$calendar_view_page}"><span>캘린더 게시판</span></a></span>
+				</p><!-- e. banner -->
+			</div><!-- e. banners -->
+		</div><!-- e. promotion -->
+	</div><!-- e. promotionArea -->
+
+	<div class="noticeArea">
+		<div module="board_listpackage_1">
+			<h3 module="board_title_1"><i class="xi-folder-check-o"></i> {$home_title}</h3>
+			<ul module="board_list_1" class="newsticker">
+				<!--
+					$count = 5
+					$main_list = yes
+					$subject_cut = 40
+					$main_list_reply_view = no
+				 -->
+				<li>
+					<a href="{$link_board_detail}">{$subject}</a> 
+					<span class="{$date_display|display}">{$write_date|date:Y-m-d}</span>
+				</li>
+				<li>
+					<a href="{$link_board_detail}">{$subject}</a>
+					<span class="{$date_display|display}">{$write_date|date:Y-m-d}</span>
+				</li>
+			</ul>
+		</div>
+		<script src="/_inno/js/jquery.newsTicker.min.js"></script>
+	</div>
+
+	<div class="utilArea">
+		<div class="inner">
+			<div class="about">
+				<h3>About Company</h3>
+				<ul>
+					<li><a href="/shopinfo/company.html">ABOUT US</a></li>
+					<li><a href="#">STORES</a></li>
+					<li><a href="/member/join.html">JOIN US</a></li>
+					<li><a href="#">RECRUIT</a></li>
+				</ul>
+			</div>
+			<div class="help">
+				<h3>Help Center</h3>
+				<ul>
+					<li><a href="/board/product/list.html?board_no=6">1:1 Q&A</a></li>
+					<li><a href="/board/free/list.html?board_no=1">Notice</a></li>
+					<li><a href="/board/free/list.html?board_no=3">FAQ</a></li>
+				</ul>
+			</div>
+			<div class="contact">
+				<h3>Contact</h3>
+				<ul>
+					<li>AM 10:00~PM 06:00 (LUNCH 12:30~13:30)<br />토/일 및 공휴일 휴무</li>
+					<li>TEL : 0000-0000</li>
+					<li>FAX : 02-123-4567</li>
+				</ul>
+			</div>
+			<div class="bank">
+				<h3>Bank Info</h3>				
+				<ul>
+					<li>국민은행 12345-569-7854-548 <br />예금주 박 O O</li>
+				</ul>
+			</div>
+			<div class="sns">
+				<ul>
+					<li><a href="#"><i class="xi-facebook"></i></a></li>
+					<li><a href="#"><i class="xi-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="infoArea">
+		<div class="inner">
+			<div class="nav">
+				<span module="Layout_LogoBottom">
+					<!--@css(/css/module/layout/logobottom.css)-->
+					<a href="/index.html"><img src="{$logo}" alt="{$mall_name}" /></a>
+				</span>
+				<ul>			
+					<li class=" home "><a href="/index.html">홈</a></li>
+					<li><a href="/shopinfo/company.html">회사소개</a></li>
+					<li><a href="/member/agreement.html">이용약관</a></li>
+					<li><a href="/member/privacy.html"><em>개인정보처리방침</em></a></li>
+					<li><a href="/shopinfo/guide.html">이용안내</a></li>
+				</ul>
+			</div>
+			<div module="Layout_footer" class="company">
+				<ul>
+					<li>{$company_name}</li>
+					<li>대표자 {$president_name}</li>
+					<li>TEL : {$phone}</li>
+					<li>FAX : {$fax}</li>
+					<li>주소 : <!-- {$mall_zipcode} --> {$mall_addr1} {$mall_addr2}</li>
+					<li>사업자번호 {$company_regno}</li>
+					<li>통신판매업 {$network_regno}</li>
+					<li>개인정보보호책임자 <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</li>
+				</ul>
+				<p class="copyright">Copyright © 2017 <strong>{$mall_name}</strong>. All rights reserved.</p>
+			</div>
+		</div>
+	</div><!-- e. infoArea -->
+</div><!-- e. footer -->
+
+<a href="#header" class="btnTop" title="화면 최상단으로 이동하기">맨위로</a>
+
+
+<!-- 참고: 결제를 위한 필수 영역 -->
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+                <span><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/img_loading.gif" alt="" /></span>
+            </p>
+            <p class="txt">본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br /> 주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.</p>
+        </div>
+    </div>
+</div>
+<div module="Layout_conversionPc" class="">
+    <!--@css(/css/module/layout/conversionpc.css)-->
+    <a href="{$mobile_url}"><span>모바일 화면보기</span></a>
+</div>
+
+</body>
+</html>

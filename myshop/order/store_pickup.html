@@ -1,0 +1,132 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderHistoryStorepickup" class="ec-base-layer">
+    <!--@css(/css/module/myshop/orderStorePickup.css)-->
+    <div class="header">
+        <h1>스토어픽업 수령지 정보</h1>
+    </div>
+    <div class="content">
+        <p class="ec-base-box">
+            <strong>{$delivery.mall_name}({$delivery.mall_domain}) 에서 스토어픽업을 선택해 주문하신 내역입니다.</strong><br />하단의 수령 정보를 참고하셔서 수령지에 방문해주세요.
+        </p>
+
+        <h3>주문 정보</h3>
+        <div class="ec-base-table">
+            <table border="1" summary="">
+                <caption>주문 정보</caption>
+                <colgroup>
+                    <col style="width:140px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">주문번호</th>
+                        <td>{$order.order_id}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">주문일자</th>
+                        <td>{$order.date}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">주문자</th>
+                        <td>{$order.name}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>상품 정보</h3>
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>상품 정보</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:10%;" />
+                    <col style="width:10%;" />
+                    <col style="width:20%;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="row">상품명</th>
+                        <th scope="row">옵션</th>
+                        <th scope="row">수량</th>
+                        <th scope="row">상품구매금액</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr>
+                        <td class="left"><strong>{$product_title.product_name}</strong></td>
+                        <td>{$product_title.option_str}</td>
+                        <td>{$product_title.quantity}</td>
+                        <td><strong class="txtEm">{$product_title.total_product_price}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>수령자 정보</h3>
+        <div class="ec-base-table">
+            <table border="1" summary="">
+                <caption>수령자 정보</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:252px;" />
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">받으시는 분</th>
+                        <td colspan="3">{$delivery.name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">일반전화</th>
+                        <td>{$delivery.rphone_1}</td>
+                        <th scope="row">휴대전화</th>
+                        <td>{$delivery.rphone_2}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">배송메시지</th>
+                        <td colspan="3">{$delivery.message}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>수령지 정보</h3>
+        <div class="ec-base-table">
+            <table border="1" summary="">
+                <caption>수령지 정보</caption>
+                <colgroup>
+                    <col style="width:120px;" />
+                    <col style="width:252px;" />
+                    <col style="width:120px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">수령지</th>
+                        <td colspan="3">{$delivery.store_name} : {$delivery.store_receive_addr}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">전화번호</th>
+                        <td>{$delivery.store_main_phone}</td>
+                        <th scope="row">영업시간</th>
+                        <td>{$delivery.store_office_hour}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수령 가능일</th>
+                        <td colspan="3">{$delivery.store_receive_period}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">수령지 안내</th>
+                        <td colspan="3">{$delivery.store_receive_info}</td>
+                    </tr>
+                    <tr class="{delivery.store_receive_map_display|display}">
+                        <th scope="row">약도</th>
+                        <td colspan="3">{$delivery.store_receive_map}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

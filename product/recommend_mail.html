@@ -1,0 +1,59 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="Product_RecommMail" class="tableTheme mid-0">
+    <!--@css(/css/module/product/recommend_mail.css)-->
+    <div class="header">
+        <h1>추천메일 보내기</h1>
+    </div>
+
+    <div class="content">
+        <div class="boxTheme">
+            <div class="division">
+                <div class="heading"><img src="{$product_image}" alt="" style="max-width:88px;" /></div>
+                <div class="info">
+                    {$img_soldout} {$img_recomm} {$img_new} {$img_user}
+                    <strong class="gSingle">{$product_name}</strong>
+                    <strong>{$product_price}</strong> {$product_tax_type_text}
+                </div>
+            </div>
+        </div>
+
+        <table border="1" summary="">
+            <caption>메일 보내기 폼</caption>
+            <colgroup>
+                <col style="width:20%;" />
+                <col style="width:30%;" />
+                <col style="width:20%;" />
+                <col style="width:30%;" />
+            </colgroup>
+            <tbody class="middle">
+                <tr>
+                    <th scope="row">보내는사람</th>
+                    <td>{$form.from_name}</td>
+                    <th scope="row">이메일</th>
+                    <td>{$form.from_email}</td>
+                </tr>
+                <tr>
+                    <th scope="row">받는사람</th>
+                    <td>{$form.to_name}</td>
+                    <th scope="row">이메일</th>
+                    <td>{$form.to_email}</td>
+                </tr>
+                <tr>
+                    <th scope="row">내용</th>
+                    <td colspan="3"> {$form.content} <span class="gSingle">{$form.is_html}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">자동발송금지<br />보안문자</th>
+                    <td colspan="3">
+                        {$captcha_image}
+                        <span class="gSingle">{$form.tmp_image_name_str} -영문, 숫자 조합을 입력하세요(대소문자구분)</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="buttonArea">
+        <button type="button" class="btnSubmitB" onclick="{$action_check}">보내기</button>
+    </div>
+</div>

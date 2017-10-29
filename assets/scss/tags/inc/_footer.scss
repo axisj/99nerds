@@ -1,0 +1,36 @@
+footer {
+  background: #EAEAEC;
+
+  .container {
+    padding: 20px 0;
+    font-size: 1.1em;
+    color: #666;
+    p {
+      margin: 5px 0;
+      line-height: 1.8em;
+    }
+    .label{
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #2D2D2D;
+    }
+    .value{
+
+    }
+    .link{
+      padding: 5px 0;
+      display: inline-block;
+      text-decoration: underline;
+      color: #2D2D2D;
+    }
+  }
+
+  .footer-copyright {
+    background: #2D2D2D;
+    .container {
+      color: #9B9B9B;
+
+      font-size: 1.1em;
+    }
+  }
+}

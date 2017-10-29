@@ -1,0 +1,15 @@
+/* 공통 */
+.subPrdList { margin:17px auto 0; width:1180px;}
+.subPrdList img { vertical-align:middle; }
+.subPrdList ul.prdList { display:table; width:100%; margin:-20px 0 0; font-size:0; line-height:0; }
+.subPrdList ul.prdList li.item { display:inline-block; margin:20px 0; vertical-align:top; *display:inline; *zoom:1; }
+.subPrdList ul.prdList li.item ul li {height: auto; line-height:1.2;min-height:26px;display:block; }
+.subPrdList ul.prdList li .color { overflow:hidden; display:inline-block; margin:3px 0 0 0; }
+.subPrdList ul.prdList li .chips { float:left; width:10px; height:10px; margin:0 2px 2px 0; border:1px solid #e3e3e3; font-size:0; line-height:0; }
+
+.function {width:450px; margin:0 auto;}
+.function p.prdCount {display:none;}
+.function ul#type { text-align:center;}
+.function ul#type li {display:inline-block; height:35px; line-height:35px; padding:0px 5px;}
+.function ul#type li a {color:#666;}
+.function ul#type li a:hover {color:#333; border-bottom:1px dashed #222;}
