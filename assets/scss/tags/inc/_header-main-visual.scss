@@ -1,0 +1,146 @@
+
+.header-main-visual {
+  color: #fafafa;
+  background-color: #1E1E1E;
+  //background-color: #1E1E1E;
+  background-image: url("/assets/images/landing_page/main_visual/main-bg.png");
+  background-size: 960px;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .main-image-wrap {
+    img {
+      width:280px;
+      float: right;
+      position: relative;
+      top: 88px;
+      right: 100px;
+      z-index: 1;
+    }
+  }
+
+  .main-title-text {
+    padding: 1px 0;
+    p {
+      line-height: 61px;
+      margin: 75px 0 0 15px;
+      padding: 0;
+      font-size: 24px;
+      font-family: 'Overpass Mono', monospace;
+      font-weight: 600;
+      color: #fafafa;
+    }
+  }
+
+  .keyword-links-wrap {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    padding-right: 50px;
+
+    .keyword-card {
+      font-family: 'Overpass Mono', monospace;
+      font-weight: lighter;
+      @mixin keyword-card-box($color1, $color2){
+        .keyword-card-title {
+          color: $color1;
+        }
+        .keyword-card-content {
+          a {
+            color: $color2;
+          }
+        }
+      }
+
+      .keyword-card-title {
+        font-size: 14px;
+      }
+      .keyword-card-content {
+        font-size: 11px;
+        a {
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+
+      &.type-0 {
+        @include keyword-card-box(#B8E986, #B8E986);
+      }
+      &.type-1 {
+        @include keyword-card-box(#7ED321, #7ED321);
+      }
+      &.type-2 {
+        @include keyword-card-box(#B4FF00, #B4FF00);
+      }
+      &.type-3 {
+         @include keyword-card-box(#E0F81C, #E0F81C);
+       }
+      &.type-4 {
+        @include keyword-card-box(#B4FF00, #B4FF00);
+      }
+
+    }
+
+  }
+
+  /*
+    ul {
+      width: auto;
+      height: auto;
+      margin: 15px 10px 20px 10px;
+      float: left;
+      li {
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 100;
+        font-family: 'Overpass Mono', monospace;
+        color: #7ED321;
+        a {
+          font-size: 11px;
+          color: #7ED321;
+        }
+        &:nth-child(even) {
+          float: left;
+        }
+      }
+    }
+    */
+
+  .ctn-button {
+    margin-top: 50px;
+    padding-bottom: 70px;
+    a {
+      display: block;
+      width: 160px;
+      border: 1px solid #F8E71C;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: 'Overpass Mono', monospace;
+      font-weight: 700;
+      padding: 7px;
+      text-align: center;
+      color: #fafafa;
+    }
+  }
+
+
+  @media #{$medium-and-up} { // 992
+    .main-title-text {
+      p {
+        font-size: 48px;
+      }
+    }
+  }
+
+  @media #{$large-and-up} { // 1200
+
+  }
+
+}

@@ -1,0 +1,79 @@
+.header-gnb {
+  position: relative;
+  background-color: #1E1E1E;
+  z-index: 100;
+  height: 50px;
+  display: none;
+
+  ul.top-nav {
+    padding: 0;
+    margin: auto 0;
+    list-style: none;
+    line-height: 1;
+    float: left;
+
+    li {
+      a {
+        display: block;
+        color: #fff;
+        line-height: 35px;
+        font-family: 'Overpass Mono', monospace;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 0 10px;
+      }
+      a.main-logo {
+        position: relative;
+        display: block;
+        margin-top: 17.5px;
+        padding-left: 0;
+        height: 30px;
+        line-height: 30px;
+
+        img {
+
+          display: block;
+          float: left;
+          height: 30px;
+
+        }
+        span {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 800;
+        }
+      }
+    }
+
+    &.float-left {
+      li.top-left-nav {
+        float: left;
+        margin: 0;
+        height: 29px;
+      }
+    }
+
+    &.float-right {
+      float: right;
+      li.top-right-nav {
+        float: left;
+        padding: 0;
+        margin-top: 15px;
+        span.ci {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  // table
+  @media #{$medium-and-up} { // 992
+    display: block;
+  }
+
+  // desktop
+  @media #{$large-and-up} { // 1200
+
+  }
+
+}
