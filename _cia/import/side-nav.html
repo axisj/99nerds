@@ -1,0 +1,65 @@
+<ul id="slide-out" class="side-nav">
+    <li>
+        <div class="userView" style="height: 150px;padding: 0;">
+            <div class="background">
+                <img src="/assets/images/visual/visual-side-nav.jpg" width="100%" />
+            </div>
+        </div>
+    </li>
+
+    <li><a href="/whatsNew" class="waves-light"><span class="sc sc-event_available"></span> <s:message code="nav.whatsNew" /></a></li>
+    <li><a href="/product" class=""><span class="sc sc-sqlgate"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span> <s:message code="nav.features" /></a></li>
+    <li><a href="/download"><span class="sc sc-commit"></span> <s:message code="nav.download" /></a></li>
+    <li>
+        <a href="/store"><span class="sc sc-payment"></span> <s:message code="nav.store" /></a>
+        <ul class="side-nav-submenu">
+            <li><a href="/store/newLicense"><s:message code="store.newLicense" /></a></li>
+            <li><a href="/store/maintenanceLicense"><s:message code="store.maintenance" /></a></li>
+            <ax:locale value="ko" expr="eq">
+                <li><a href="/store/discontinuedEvent"><s:message code="store.discontinuedEvent" /></a></li>
+            </ax:locale>
+        </ul>
+    </li>
+    <li>
+        <ul class="side-nav-account">
+            <li>
+                <ax:session presented="true">
+                    <a class="subheader font-gothic"><span class="sc sc-person"></span> ${sessionUser.userName}</a>
+                    <ul class="side-nav-submenu">
+                        <li><a class="" href="/account/licenses"><s:message code="account.myLicenses" /></a></li>
+                        <li><a class="" href="/account/order-history"><s:message code="account.myOrders" /></a></li>
+                        <li><a href="/account/profile"><s:message code="account.profileUpdate" /></a></li>
+                        <li><a href="/account/password"><s:message code="account.changePassword" /></a></li>
+                        <li><a href="/api/v1/logout"><span class="sc sc-exit"></span> <s:message code="account.logout" /></a></li>
+                    </ul>
+                </ax:session>
+                <ax:session presented="false">
+                    <a class="subheader font-gothic"><s:message code="nav.account" /></a>
+                    <ul class="side-nav-submenu">
+                        <li><a href="/account/login"><span class="sc sc-enter"></span> <s:message code="account.login" /></a></li>
+                        <li><a href="/account/find"><s:message code="account.findPassword" /></a></li>
+                    </ul>
+                </ax:session>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="" href="#!">
+            <span class="sc sc-public"></span>
+            Languange
+        </a>
+        <ul class="side-nav-submenu" style="padding-left: 40px;">
+            <li style="float:left;"><a href="?language=en" style="padding: 0 10px;">English</a></li>
+            <li style="float:left;"><a href="?language=ja" style="padding: 0 10px;">日本語</a></li>
+            <li style="float:left;"><a href="?language=ko" style="padding: 0 10px;">한국어</a></li>
+            <div style="clear: both;"></div>
+        </ul>
+    </li>
+    <li>
+        <a class="" href="/zendesk?url=https://sqlgate.zendesk.com/hc/ko"><span class="sc sc-account_circle"></span> <s:message code="global.top.cs" /></a>
+        <ul class="side-nav-submenu">
+            <li><a href="/zendesk?url=https://sqlgate.zendesk.com/hc/ko" target="_blank"><s:message code="global.top.cs.technicalSupport" /></a></li>
+            <li><a href="/zendesk?url=https://sqlgate.zendesk.com/hc/ko/requests/new" target="_blank"><s:message code="global.top.cs.question" /></a></li>
+        </ul>
+    </li>
+</ul>
