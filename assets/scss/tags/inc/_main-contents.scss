@@ -1,18 +1,33 @@
-.main-contents {
 
-  @import "_main-product-ad";
 
-  @import "_main-product-best";
 
-  @import "_main-introduce";
+//mobile
+@media #{$medium-and-up} { // 640
 
-  @import "_main-report";
 
-  @media #{$medium-and-up} { // 992
 
-  }
+}
 
-  @media #{$large-and-up} { // 1200
+// table
+@media #{$large-and-up} { // 993
+
+
+
+}
+
+// desktop
+@media #{$extra-large-and-up} { // 1200
+
+  .main-contents {
+
+    @import "main-product-ad";
+
+    @import "main-product-best";
+
+    @import "_main-introduce";
+
+    @import "_main-report";
+
 
     .main-product-ad {
       background-color: #fafafa;

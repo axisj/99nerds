@@ -1,18 +1,33 @@
 header {
-  position: relative;
+   position: relative;
+   background-color: #1E1E1E;
 
-  @import "_header-gnb";
+   @import "_header-gnb";
 
-  @import "_header-nav";
+   @import "_header-nav";
 
-  @import "_header-main-visual";
+   @import "_header-main-visual";
+
+   //mobile
+   @media #{$medium-and-up} { // 640
 
 
-  @media #{$medium-and-up} { // 992
+   }
 
-  }
+   // table
+   @media #{$large-and-up} { // 993
 
-  @media #{$large-and-up} { // 1200
 
-  }
-}
+
+   }
+
+   // desktop
+   @media #{$extra-large-and-up} { // 1200
+
+
+
+   }
+
+
+
+ }
