@@ -8,13 +8,14 @@
   background-position: center center;
   background-repeat: no-repeat;
 
+  /*
   .main-image-wrap {
     img {
       width:280px;
       float: right;
       position: relative;
-      top: 88px;
-      right: 100px;
+      top: 120px;
+      right: 85px;
       z-index: 1;
     }
   }
@@ -23,12 +24,20 @@
     padding: 1px 0;
     p {
       line-height: 61px;
-      margin: 75px 0 0 15px;
+      margin-top: 75px;
       padding: 0;
-      font-size: 24px;
+      font-size: 48px;
       font-family: 'Overpass Mono', monospace;
       font-weight: 600;
       color: #fafafa;
+
+      img {
+        display: inline-block;
+        width: 70px;
+        position: relative;
+        bottom: 10px;
+        left: 20px;
+      }
     }
   }
 
@@ -89,29 +98,6 @@
 
   }
 
-  /*
-    ul {
-      width: auto;
-      height: auto;
-      margin: 15px 10px 20px 10px;
-      float: left;
-      li {
-        margin-right: 10px;
-        font-size: 14px;
-        font-weight: 100;
-        font-family: 'Overpass Mono', monospace;
-        color: #7ED321;
-        a {
-          font-size: 11px;
-          color: #7ED321;
-        }
-        &:nth-child(even) {
-          float: left;
-        }
-      }
-    }
-    */
-
   .ctn-button {
     margin-top: 50px;
     padding-bottom: 70px;
@@ -129,17 +115,209 @@
       color: #fafafa;
     }
   }
+*/
 
 
   @media #{$medium-and-up} { // 992
-    .main-title-text {
-      p {
-        font-size: 48px;
+
+
+      .main-image-wrap {
+        img {
+          width:30%;
+          float: right;
+          padding-top: 40px;
+          margin-left: 10px;
+          z-index: 1;
+        }
       }
+
+      .main-title-text {
+        p {
+          font-size: 40px;
+          -webkit-margin-after: 10px;
+        }
+      }
+
+      .keyword-links-wrap {
+        width: 70%;
+        padding-right: 30px;
+
+        .keyword-card {
+          font-family: 'Overpass Mono', monospace;
+          font-weight: lighter;
+
+          @mixin keyword-card-box($color1, $color2){
+            .keyword-card-title {
+              color: $color1;
+            }
+            .keyword-card-content {
+              a {
+                color: $color2;
+              }
+            }
+          }
+
+          .keyword-card-title {
+            font-size: 14px;
+          }
+          .keyword-card-content {
+            font-size: 11px;
+            a {
+              float: left;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+            &:after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+          }
+
+          &.type-0 {
+            @include keyword-card-box(#B8E986, #B8E986);
+          }
+          &.type-1 {
+            @include keyword-card-box(#7ED321, #7ED321);
+          }
+          &.type-2 {
+            @include keyword-card-box(#B4FF00, #B4FF00);
+          }
+          &.type-3 {
+            @include keyword-card-box(#E0F81C, #E0F81C);
+          }
+          &.type-4 {
+            @include keyword-card-box(#B4FF00, #B4FF00);
+          }
+
+        }
+
+      }
+
+      .ctn-button {
+        margin-top: 50px;
+        padding-bottom: 70px;
+        a {
+          display: block;
+          width: 160px;
+          border: 1px solid #F8E71C;
+          border-radius: 5px;
+          box-sizing: border-box;
+          font-size: 16px;
+          font-family: 'Overpass Mono', monospace;
+          font-weight: 700;
+          padding: 7px;
+          text-align: center;
+          color: #fafafa;
+        }
+      }
+
     }
-  }
 
   @media #{$large-and-up} { // 1200
+    .main-image-wrap {
+      width:280px;
+      float: right;
+      padding-top: 10px;
+      margin-right: 10px;
+      z-index: 1;
+
+    }
+
+    .main-title-text {
+      padding: 1px 0;
+      p {
+        line-height: 61px;
+        margin-top: 75px;
+        padding: 0;
+        font-size: 48px;
+        //font-family: 'Overpass Mono', monospace;
+        font-weight: 600;
+        color: #fafafa;
+
+        img {
+          display: inline-block;
+          width: 70px;
+          position: absolute;
+          bottom: 10px;
+          left: 20px;
+        }
+      }
+    }
+
+    .keyword-links-wrap {
+      width: 75%;
+      padding-right: 40px;
+
+      .keyword-card {
+        font-family: 'Overpass Mono', monospace;
+        font-weight: lighter;
+
+        @mixin keyword-card-box($color1, $color2){
+          .keyword-card-title {
+            color: $color1;
+          }
+          .keyword-card-content {
+            a {
+              color: $color2;
+            }
+          }
+        }
+
+        .keyword-card-title {
+          font-size: 14px;
+        }
+        .keyword-card-content {
+          font-size: 11px;
+          a {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+
+        &.type-0 {
+          @include keyword-card-box(#B8E986, #B8E986);
+        }
+        &.type-1 {
+          @include keyword-card-box(#7ED321, #7ED321);
+        }
+        &.type-2 {
+          @include keyword-card-box(#B4FF00, #B4FF00);
+        }
+        &.type-3 {
+          @include keyword-card-box(#E0F81C, #E0F81C);
+        }
+        &.type-4 {
+          @include keyword-card-box(#B4FF00, #B4FF00);
+        }
+
+      }
+
+    }
+
+    .ctn-button {
+      margin-top: 50px;
+      padding-bottom: 70px;
+      a {
+        display: block;
+        width: 160px;
+        border: 1px solid #F8E71C;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: 'Overpass Mono', monospace;
+        font-weight: 700;
+        padding: 7px;
+        text-align: center;
+        color: #fafafa;
+      }
+    }
 
   }
 

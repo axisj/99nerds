@@ -1,4 +1,15 @@
 main {
   min-height: 100px;
   overflow-x: hidden;
+
+  @import "_main-contents";
+
+  @media #{$medium-and-up} { // 992
+
+  }
+
+  @media #{$large-and-up} { // 1200
+
+  }
+
 }
