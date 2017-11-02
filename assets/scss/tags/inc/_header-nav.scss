@@ -33,21 +33,20 @@
       line-height: 50px;
       font-size: 1.2em;
     }
-    .search-box{
+    .search-box {
       position: relative;
       form {
         margin: 0;
         padding: 0;
         height: 35px;
-        input{
+        input {
           display: none;
         }
-        .search-icon{
+        .search-icon {
 
         }
       }
     }
-
 
     .dropdown-content {
       background: rgba(0, 0, 0, 0.8);
@@ -123,7 +122,7 @@
           float: left;
         }
       }
-      .search-box{
+      .search-box {
         position: relative;
         height: 35px;
         width: 180px;
@@ -131,7 +130,7 @@
           margin: 0;
           padding: 0;
           height: 35px;
-          input{
+          input {
             position: absolute;
             display: block;
             left: 0;
@@ -146,13 +145,13 @@
             font-weight: 300;
 
           }
-          .search-icon{
+          .search-icon {
             position: absolute;
             height: 35px;
             line-height: 35px;
             left: 0;
             top: 1px;
-            span.ci{
+            span.ci {
               font-size: 15px;
               line-height: 35px;
               color: #7ED321;
