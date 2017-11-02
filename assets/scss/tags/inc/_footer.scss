@@ -4,21 +4,20 @@
 
   .container {
     padding: 20px 0;
-    font-size: 1.1em;
     color: #666;
 
-    .col {
+    .footer-logo-wrap {
+      margin-top: 0.82rem;
 
-      border: 1px solid #1E1E1E;
-
-      .footer-logo-wrap {
-        margin-top: 0.82rem;
-
-        img {
-          width: 80%;
-          margin: 0 auto;
-        }
+      img {
+        width: 15%;
+        display: block;
+        margin: 0 auto;
       }
+    }
+
+    .company-info-wrap {
+      text-align: center;
 
       h5.company-info-title {
         color: #ffffff;
@@ -27,13 +26,6 @@
         font-weight: 100;
         line-height: 16px;
 
-      }
-
-      .footer-vertical-line {
-        width: 1px;
-        height: 325px;
-        margin: 0 auto;
-        background-color: #417505;
       }
 
       p.company-info-contents {
@@ -46,32 +38,45 @@
         line-height: 20px;
       }
 
-      h5.footer-nav-title {
-        font-family: 'Overpass Mono', monospace, sans-serif;
-        font-size: 13px;
-        color: #F8E71C;
-      }
+    }
 
-      ul.footer-nav-list {
-        -webkit-margin-before: 20px;
-        -webkit-margin-after: 20px;
-        line-height: 28px;
-        font-size: 13px;
+    .footer-vertical-line {
+      width: 1px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: #417505;
 
-        a {
-          color: #fafafa;
-          font-family: NanumSquareOTF;
-          font-weight: 100;
-        }
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+      transform: rotate(90deg);
+    }
 
+    h5.footer-nav-title {
+      font-family: 'Overpass Mono', monospace, sans-serif;
+      font-size: 13px;
+      color: #F8E71C;
+    }
+
+    ul.footer-nav-list {
+      -webkit-margin-before: 20px;
+      -webkit-margin-after: 20px;
+      line-height: 28px;
+      font-size: 13px;
+
+      a {
+        color: #fafafa;
+        font-family: NanumSquareOTF;
+        font-weight: 100;
       }
 
     }
+
   }
 
   .footer-copyright {
     background: #000000;
     padding: 0;
+
     .container {
       text-align: center;
       a {
@@ -82,5 +87,282 @@
       }
 
     }
+
+    .tablet-br {
+      display: block;
+    }
   }
+
+  //mobile
+  @media #{$medium-and-up} { // 640
+
+    .container {
+      padding: 20px 0;
+      color: #666;
+
+      .col {
+
+        border: 1px solid #1E1E1E;
+
+        .footer-logo-wrap {
+          margin-top: 0.82rem;
+
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+
+        h5.company-info-title {
+          color: #ffffff;
+          font-size: 14px;
+          font-family: "BM DoHyeon OTF", sans-serif;
+          font-weight: 100;
+          line-height: 16px;
+
+        }
+
+        .footer-vertical-line {
+          width: 1px;
+          height: 325px;
+          margin: 0 auto;
+          background-color: #417505;
+        }
+
+        p.company-info-contents {
+          color: #fafafa;
+          opacity: 50%;
+          font-size: 11px;
+          font-family: nanum NanumSquareOTF sans-serif;
+          font-weight: 100;
+          margin: 15px 0;
+          line-height: 20px;
+        }
+
+        h5.footer-nav-title {
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-size: 13px;
+          color: #F8E71C;
+        }
+
+        ul.footer-nav-list {
+          -webkit-margin-before: 20px;
+          -webkit-margin-after: 20px;
+          line-height: 28px;
+          font-size: 13px;
+
+          a {
+            color: #fafafa;
+            font-family: NanumSquareOTF;
+            font-weight: 100;
+          }
+
+        }
+
+      }
+    }
+
+    .footer-copyright {
+      background: #000000;
+      padding: 0;
+
+      .container {
+        text-align: center;
+        a {
+          color: #9B9B9B;
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-weight: 100;
+          font-size: 10px;
+        }
+
+      }
+
+      .tablet-br {
+        display: block;
+      }
+    }
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+    .container {
+      color: #666;
+
+      .col {
+
+        border: 1px solid #1E1E1E;
+
+        .footer-logo-wrap {
+          margin-top: 0.82rem;
+
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+
+        h5.company-info-title {
+          color: #ffffff;
+          font-size: 14px;
+          font-family: "BM DoHyeon OTF", sans-serif;
+          font-weight: 100;
+          line-height: 16px;
+
+        }
+
+        .footer-vertical-line {
+          width: 1px;
+          height: 325px;
+          margin: 0 auto;
+          background-color: #417505;
+        }
+
+        p.company-info-contents {
+          color: #fafafa;
+          opacity: 50%;
+          font-size: 11px;
+          font-family: nanum NanumSquareOTF sans-serif;
+          font-weight: 100;
+          margin: 15px 0;
+          line-height: 20px;
+        }
+
+        h5.footer-nav-title {
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-size: 13px;
+          color: #F8E71C;
+        }
+
+        ul.footer-nav-list {
+          -webkit-margin-before: 20px;
+          -webkit-margin-after: 20px;
+          line-height: 28px;
+          font-size: 13px;
+
+          a {
+            color: #fafafa;
+            font-family: NanumSquareOTF;
+            font-weight: 100;
+          }
+
+        }
+
+      }
+    }
+
+    .footer-copyright {
+      background: #000000;
+      padding: 0;
+
+      .container {
+        text-align: center;
+        a {
+          color: #9B9B9B;
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-weight: 100;
+          font-size: 10px;
+        }
+
+      }
+
+      .tablet-br {
+        display: block;
+      }
+    }
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+    .container {
+      padding: 20px 0;
+      color: #666;
+
+      .col {
+
+        border: 1px solid #1E1E1E;
+
+        .footer-logo-wrap {
+          margin-top: 0.82rem;
+
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+
+        h5.company-info-title {
+          color: #ffffff;
+          font-size: 14px;
+          font-family: "BM DoHyeon OTF", sans-serif;
+          font-weight: 100;
+          line-height: 16px;
+
+        }
+
+        .footer-vertical-line {
+          width: 1px;
+          height: 325px;
+          margin: 0 auto;
+          background-color: #417505;
+        }
+
+        p.company-info-contents {
+          color: #fafafa;
+          opacity: 50%;
+          font-size: 11px;
+          font-family: nanum NanumSquareOTF sans-serif;
+          font-weight: 100;
+          margin: 15px 0;
+          line-height: 20px;
+        }
+
+        h5.footer-nav-title {
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-size: 13px;
+          color: #F8E71C;
+        }
+
+        ul.footer-nav-list {
+          -webkit-margin-before: 20px;
+          -webkit-margin-after: 20px;
+          line-height: 28px;
+          font-size: 13px;
+
+          a {
+            color: #fafafa;
+            font-family: NanumSquareOTF;
+            font-weight: 100;
+          }
+
+        }
+
+      }
+    }
+
+    .footer-copyright {
+      background: #000000;
+      padding: 0;
+
+      .container {
+        text-align: center;
+        a {
+          color: #9B9B9B;
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-weight: 100;
+          font-size: 10px;
+        }
+
+      }
+
+      .tablet-br {
+        display: inline;
+      }
+    }
+
+  }
+
 }

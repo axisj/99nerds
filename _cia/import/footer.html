@@ -1,145 +1,148 @@
-<!--@import(/apps/instagramwidget/skin1/skin1.html)-->
-<!--@css(/_inno/css/footer.css)-->
+<!DOCTYPE HTML>
 
-<div id="footer">		
-	<div class="promotionArea">
-		<div class="promotion">
-			<div id="banners">
-				<!--@js(/layout/basic/js/rolling.js)-->
-				<p class="banner">                    
-					<span module="Layout_giftBanner"><a href="/order/gift_list.html"><span>고객사은품안내</span></a></span>
-					<span module="Layout_opdiaryBanner"><a href="/board/opdiary/list.html"><span>운영일지</span></a></span>
-					<span module="Layout_sosBanner"><a href="/board/urgency/urgency.html"><span>긴급문의</span></a></span>
-					<span module="Layout_attendBanner">
-						<!--
-							$stamp_type_url = /attend/stamp.html
-							$comment_type_url = /attend/comment.html
-						-->
-						<a href="{$attend_url}"><span>출석체크</span></a></span>
-					<span module="Layout_couponzoneBanner"><a href="/coupon/coupon_zone.html"><span>알뜰살뜰 쿠폰존</span></a></span>
-					<span module="Layout_calendarBanner"><a href="{$calendar_view_page}"><span>캘린더 게시판</span></a></span>
-				</p><!-- e. banner -->
-			</div><!-- e. banners -->
-		</div><!-- e. promotion -->
-	</div><!-- e. promotionArea -->
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<div class="noticeArea">
-		<div module="board_listpackage_1">
-			<h3 module="board_title_1"><i class="xi-folder-check-o"></i> {$home_title}</h3>
-			<ul module="board_list_1" class="newsticker">
-				<!--
-					$count = 5
-					$main_list = yes
-					$subject_cut = 40
-					$main_list_reply_view = no
-				 -->
-				<li>
-					<a href="{$link_board_detail}">{$subject}</a> 
-					<span class="{$date_display|display}">{$write_date|date:Y-m-d}</span>
-				</li>
-				<li>
-					<a href="{$link_board_detail}">{$subject}</a>
-					<span class="{$date_display|display}">{$write_date|date:Y-m-d}</span>
-				</li>
-			</ul>
-		</div>
-		<script src="/_inno/js/jquery.newsTicker.min.js"></script>
-	</div>
-
-	<div class="utilArea">
-		<div class="inner">
-			<div class="about">
-				<h3>About Company</h3>
-				<ul>
-					<li><a href="/shopinfo/company.html">ABOUT US</a></li>
-					<li><a href="#">STORES</a></li>
-					<li><a href="/member/join.html">JOIN US</a></li>
-					<li><a href="#">RECRUIT</a></li>
-				</ul>
-			</div>
-			<div class="help">
-				<h3>Help Center</h3>
-				<ul>
-					<li><a href="/board/product/list.html?board_no=6">1:1 Q&A</a></li>
-					<li><a href="/board/free/list.html?board_no=1">Notice</a></li>
-					<li><a href="/board/free/list.html?board_no=3">FAQ</a></li>
-				</ul>
-			</div>
-			<div class="contact">
-				<h3>Contact</h3>
-				<ul>
-					<li>AM 10:00~PM 06:00 (LUNCH 12:30~13:30)<br />토/일 및 공휴일 휴무</li>
-					<li>TEL : 0000-0000</li>
-					<li>FAX : 02-123-4567</li>
-				</ul>
-			</div>
-			<div class="bank">
-				<h3>Bank Info</h3>				
-				<ul>
-					<li>국민은행 12345-569-7854-548 <br />예금주 박 O O</li>
-				</ul>
-			</div>
-			<div class="sns">
-				<ul>
-					<li><a href="#"><i class="xi-facebook"></i></a></li>
-					<li><a href="#"><i class="xi-instagram"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="infoArea">
-		<div class="inner">
-			<div class="nav">
-				<span module="Layout_LogoBottom">
-					<!--@css(/css/module/layout/logobottom.css)-->
-					<a href="/index.html"><img src="{$logo}" alt="{$mall_name}" /></a>
-				</span>
-				<ul>			
-					<li class=" home "><a href="/index.html">홈</a></li>
-					<li><a href="/shopinfo/company.html">회사소개</a></li>
-					<li><a href="/member/agreement.html">이용약관</a></li>
-					<li><a href="/member/privacy.html"><em>개인정보처리방침</em></a></li>
-					<li><a href="/shopinfo/guide.html">이용안내</a></li>
-				</ul>
-			</div>
-			<div module="Layout_footer" class="company">
-				<ul>
-					<li>{$company_name}</li>
-					<li>대표자 {$president_name}</li>
-					<li>TEL : {$phone}</li>
-					<li>FAX : {$fax}</li>
-					<li>주소 : <!-- {$mall_zipcode} --> {$mall_addr1} {$mall_addr2}</li>
-					<li>사업자번호 {$company_regno}</li>
-					<li>통신판매업 {$network_regno}</li>
-					<li>개인정보보호책임자 <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</li>
-				</ul>
-				<p class="copyright">Copyright © 2017 <strong>{$mall_name}</strong>. All rights reserved.</p>
-			</div>
-		</div>
-	</div><!-- e. infoArea -->
-</div><!-- e. footer -->
-
-<a href="#header" class="btnTop" title="화면 최상단으로 이동하기">맨위로</a>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 
-<!-- 참고: 결제를 위한 필수 영역 -->
-<div id="progressPaybar" style="display:none;">
-    <div id="progressPaybarBackground" class="layerProgress"></div>
-    <div id="progressPaybarView">
-        <div class="box">
-            <p class="graph">
-                <span><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
-                <span><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/img_loading.gif" alt="" /></span>
-            </p>
-            <p class="txt">본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br /> 주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.</p>
+    <link rel="stylesheet" href="/assets/css/front.css"/>
+
+    <link rel="stylesheet" href="https://i.icomoon.io/public/0c81d4d882/99Nerds/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif|Ubuntu:500" rel="stylesheet">
+
+
+    <title>99NERDS</title>
+
+</head>
+
+
+<body>
+
+<footer class="page-footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s12 m12 l1 xl1">
+                <div class="footer-logo-wrap">
+                    <img src="/assets/images/landing_page/footer/99nerds-logo-footer.png" alt="99nerds-logo-footer"/>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l3 xl3">
+                <div class="company-info-wrap">
+                    <h5 class="company-info-title">99NERDS</h5>
+                    <p class="company-info-contents">Bank account.</br>
+                        우리은행 1005-803-266498</br>
+                        예금주: 주식회사 체커</br></br>
+                        상호(법인명)</br>
+                        주식회사 체커 대표 황인서</br>
+                        [사업자등록번호] 331-86-00494</br>
+                        [통신판매업신고] 2017-서울강서-0165</br>
+                        [사업자정보확인]</br>
+                        사업장주소 : 07532 서울특별시 강서구
+                        가양동 449-21 한화비즈메트로2차 1401호</br></br>
+                        개인정보관리책임자</br>
+                        이하종(bill@chequer.io)
+                    </p>
+                </div>
+            </div>
+
+
+            <!--footer vertical line-->
+            <div class="col s12 m12 l1 xl1">
+                <div class="footer-vertical-line">
+                </div>
+            </div>
+
+
+            <div class="col offset-s1 s3 offset-m1 m3 offset-l1 l2 offset-xl1 xl2">
+
+                <div class="footer-nav-1">
+                    <h5 class="footer-nav-title">Shopping guide</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="#!">이용안내</a></li>
+                        <li><a href="#!">공지사항</a></li>
+                        <li><a href="#!">배송조회</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col offset-s1 s3 offset-m1 m3 l2 xl2">
+
+                <div class="footer-nav-2">
+                    <h5 class="footer-nav-title" style="color: #B4FF00;">Company</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="#!">회사 소개</a></li>
+                        <li><a href="#!">이용 약관</a></li>
+                        <li><a href="#!">개인정보 보호 방침</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col offset-s1 s3 offset-m1 m3 l2 xl2">
+
+                <div class="footer-nav-3">
+                    <h5 class="footer-nav-title" style="color: #7ED321;">Contact</h5>
+                    <ul class="footer-nav-list">
+                        <li style="font-size: 25px">
+                            <a href="#!" style="margin-right: 2px;"><span class="ci ci-kakaotalk-logo"><span
+                                    class="path1"></span><span class="path2"></span><span class="path3"></span><span
+                                    class="path4"></span><span class="path5"></span><span
+                                    class="path6"></span></span></a>
+                            <a href="#!"><span class="ci ci-facebook2"></span></a>
+                        </li>
+                        <li><a>Tel. 02-2663-3039</a></li>
+                        <li><a>평일 10:00 - 18:00</a></li>
+                        <li><a>(토/일/공휴일 휴무)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <a href="#!">Copyright 99NERDS. All rights reserved. / hosting by cafe24 심플렉스인터넷(주)/ <span
+                    class="tablet-br">icons made by Smashicons from www.flaticon.com is licensed by CC 3.0 BY</span></a>
         </div>
     </div>
-</div>
-<div module="Layout_conversionPc" class="">
-    <!--@css(/css/module/layout/conversionpc.css)-->
-    <a href="{$mobile_url}"><span>모바일 화면보기</span></a>
-</div>
+
+</footer>
 
 </body>
+
+
 </html>
