@@ -8,8 +8,6 @@
   (function ($, fcObj) {
     fcObj.pageStart = function () {
 
-      $('[data-activates="slide-out"]').sideNav();
-
       $(".dropdown-button").dropdown({
         inDuration: 300,
         outDuration: 225,
@@ -20,6 +18,7 @@
         alignment: 'left', // Displays dropdown with edge aligned to the left of button
         stopPropagation: true // Stops event propagation
       });
+
 
     };
 
