@@ -30,7 +30,8 @@ function errorAlert(error) {
  */
 gulp.task('plugin-js-front', function () {
   var jss = [
-    ASSETS_FRONT + '/plugins/jquery/dist/jquery.js'
+    ASSETS_FRONT + '/plugins/jquery/dist/jquery.js',
+    ASSETS_FRONT + '/plugins/materialize_edited/adeptor.js'
   ];
 
   for (var k in AX5UI_PLUGINS_FRONT) {
