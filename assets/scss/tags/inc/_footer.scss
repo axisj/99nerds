@@ -1,9 +1,9 @@
 
 .page-footer {
   background: #1E1E1E;
-  padding-top: 50px;
-  padding-bottom: 80px;
+  padding-top: 0;
   .container {
+    padding: 50px 0;
     margin: 0 auto;
     color: #666;
 
@@ -169,6 +169,7 @@
   @media #{$large-and-up} { // 993
 
     .container {
+      padding: 50px 0 0;
 
       .footer-logo-wrap {
 
@@ -208,7 +209,6 @@
         }
 
       }
-
 
       h5.footer-nav-title {
         font-family: 'Overpass Mono', monospace, sans-serif;
@@ -257,8 +257,10 @@
   // desktop
   @media #{$extra-large-and-up} { // 1200
 
-    .container {
 
+
+      .container {
+        padding: 50px 0 0;
 
         .footer-logo-wrap {
           margin-top: 0.82rem;
@@ -278,14 +280,14 @@
 
         }
 
-      .footer-vertical-line-wrap {
+        .footer-vertical-line-wrap {
 
 
-        .footer-vertical-line {
-          height: 80%;
+          .footer-vertical-line {
+            height: 80%;
+          }
+
         }
-
-      }
 
 
         p.company-info-contents {
@@ -319,27 +321,34 @@
         }
 
 
-    }
+      }
 
-    .footer-copyright {
-      background: #000000;
-      padding: 0;
+      .footer-copyright {
+        background: #000000;
+        padding: 0;
 
-      .container {
-        text-align: center;
-        a {
-          color: #9B9B9B;
-          font-family: 'Overpass Mono', monospace, sans-serif;
-          font-weight: 100;
-          font-size: 10px;
+        .container {
+          text-align: center;
+          a {
+            color: #9B9B9B;
+            font-family: 'Overpass Mono', monospace, sans-serif;
+            font-weight: 100;
+            font-size: 10px;
+          }
+
         }
 
+        .tablet-br {
+          display: inline;
+        }
       }
 
-      .tablet-br {
-        display: inline;
-      }
-    }
+
+
+
+
+
+
 
   }
 
