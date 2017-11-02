@@ -171,36 +171,6 @@ html {
 //@import "../../plugins/materialize/sass/components/modal";
 //@import "../../plugins/materialize/sass/components/collapsible";
 
-.side-nav {
-  ul.side-nav-submenu {
-    background: #f3f3f3;
-    > li {
-      line-height: 40px;
-      a {
-        line-height: 40px;
-        height: 40px;
-        padding-left: 50px;
-        font-size: 12px;
-      }
-    }
-  }
-  ul.side-nav-account {
-    // margin-top: 50px;
-
-    > li {
-      a {
-        background: #585858;
-        color: #fff;
-        &.subheader {
-          background: #fff;
-          color: #888;
-        }
-      }
-    }
-  }
-
-}
-
 //@import "../../plugins/materialize/sass/components/chips";
 //@import "../../plugins/materialize/sass/components/materialbox";
 @import "../../plugins/materialize/sass/components/forms/forms";
@@ -230,7 +200,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 @import "../../plugins/materialize/sass/components/table_of_contents";
-@import "../../plugins/materialize/sass/components/sideNav";
+// @import "../../plugins/materialize/sass/components/sideNav";
 @import "../../plugins/materialize/sass/components/preloader";
 .circle-clipper .circle {
   border-width: 7px;

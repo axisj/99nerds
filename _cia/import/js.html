@@ -1,14 +1,20 @@
-<script src="/assets/js/front-plugins.min.js"></script>
-<script>
+<script src="/assets/js/front-plugins.min.js"></script><script>
   window.jQuery3_2_1 = jQuery.noConflict(true);
-</script>​
-<script src="/assets/plugins/materialize_edited/dist/materialize.min.js"></script>
-<script>
+</script>​<script src="/assets/plugins/materialize_edited/dist/materialize.min.js"></script><script>
   var fcObj = {};
   (function ($, fcObj) {
     fcObj.pageStart = function () {
 
-      $('[data-activates="slide-out"]').sideNav();
+      var $slideOut = $('#slide-out');
+      var $slideOutMask = $('#slide-out-mask');
+      $('[data-activates="slide-out"]').on('click', function () {
+        $slideOut.addClass("fixed");
+        $slideOutMask.addClass("fixed");
+      });
+      $slideOutMask.on('click', function () {
+        $slideOut.removeClass("fixed");
+        $slideOutMask.removeClass("fixed");
+      });
 
       $(".dropdown-button").dropdown({
         inDuration: 300,
@@ -20,7 +26,6 @@
         alignment: 'left', // Displays dropdown with edge aligned to the left of button
         stopPropagation: true // Stops event propagation
       });
-
     };
 
     $(document).ready(function () {
