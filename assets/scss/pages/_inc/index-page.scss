@@ -165,7 +165,7 @@
 
   .nerds-info {
     overflow-x: hidden;
-    margin: 50px auto;
+    margin: 50px auto 0;
 
     .row {
       margin-bottom: 0;
@@ -223,8 +223,10 @@
       img {
         width: 100%;
         padding-top: 20px;
-        line-height: 0;
-        font-size: 0;
+        //line-height: 0;
+        //font-size: 0;
+        position: relative;
+        bottom: -36px;
       }
 
     }
