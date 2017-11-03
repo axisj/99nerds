@@ -1,8 +1,5 @@
-main {
+[data-page] {
   min-height: 100px;
-  overflow-x: hidden;
-
-  @import "_main-contents";
 
   @media #{$medium-and-up} { // 992
 

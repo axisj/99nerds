@@ -1,0 +1,415 @@
+[data-page="index-page"] {
+
+  .main-product-ad {
+    margin: 0 auto;
+
+    .slider-wrap {
+
+      width: 100%;
+      height: 150px;
+      padding: 20px 30px;
+
+      .col:first-child {
+        display: none;
+      }
+      .col:nth-last-child(2) {
+        display: none;
+      }
+
+      .product-wrap {
+        background-color: #EEEEEE;
+        border-radius: 10px;
+
+        a.product {
+          line-height: 0;
+          margin: 0 auto;
+          display: block;
+          vertical-align: middle;
+          text-align: center;
+          img {
+            max-width: 120px;
+            width: 100%;
+            margin: 0 auto;
+          }
+
+        }
+
+      }
+
+      .slider-button {
+        //height: 20px;
+        margin: 20px auto;
+        list-style-type: none;
+        display: table;
+
+        li {
+          position: relative;
+          float: left;
+          padding: 0 5px;
+
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            background-color: #EEEEEE;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .best-product {
+    margin: 0 auto;
+
+    .best-product-list-wrap {
+      background-color: #eeeeee;
+      border-radius: 10px;
+      margin: 0 30px;
+      padding: 10px 10px;
+      display: table;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+      }
+
+      .block-line {
+        width: 20px;
+        height: 3px;
+        background-color: #7ED321;
+        margin: 20px auto 50px;
+      }
+
+      .best-product-wrap {
+        background-color: #fafafa;
+        border-radius: 8px;
+        margin: 10px 0;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 15px 0;
+
+        .product-image-wrap {
+          width: 80%;
+          margin: 0 auto;
+
+          a.heart {
+            float: right;
+            color: #999999;
+          }
+
+          img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+
+        .product-info-wrap {
+          width: 80%;
+          margin: 0 auto;
+
+          img {
+            float: left;
+            padding-right: 5px;
+            height: 12px;
+          }
+          h5 {
+            font-size: 1.2rem;
+            margin: 0;
+          }
+
+          p {
+            margin: 0;
+
+            &#product-price {
+              font-weight: 600;
+              font-size: 1.2rem;
+            }
+
+            &#product-size {
+              font-size: 11px;
+              font-weight: 100;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .info-section {
+    padding: 100px 30px;
+    padding-bottom: 0;
+    background-color: #1E1E1E;
+    overflow-x: hidden;
+
+    .info-wrapper {
+      position: relative;
+      color: #EEEEEE;
+      font-family: NanumSquareOTF, sans-serif;
+      text-align: center;
+      line-height: 2rem;
+      font-size: 12px;
+      font-weight: 300;
+
+      .info-title {
+        color: #7ED321;
+        font-family: 'Overpass Mono', monospace;
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        line-height: 61px;
+      }
+
+      .info-block-line {
+        width: 40px;
+        height: 4px;
+        background-color: #7ED321;
+        margin: 20px auto 50px;
+      }
+
+      .info-sub-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #fafafa;
+        padding: 20px 0;
+
+      }
+
+      //&nbsp 해결안됨
+      img {
+        width: 100%;
+        padding-top: 20px;
+        line-height: 0;
+        font-size: 0;
+      }
+
+    }
+  }
+  .sub-info-section {
+    padding: 100px 30px;
+    position: relative;
+
+    .info-wrapper {
+      color: #333333;
+
+      h2.info-title {
+        color: #333333;
+      }
+      h3.info-sub-title {
+        color: #333333;
+        font-weight: 600;
+      }
+
+      //how it works - section
+
+      a.how-ctn-button {
+        color: #fafafa;
+        font-size: 20px;
+        font-family: 'Overpass Mono', monospace;
+        font-weight: 700;
+        vertical-align: middle;
+        text-align: center;
+
+        display: block;
+        width: 60%;
+        background-color: #1E1E1E;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 30px auto;
+
+      }
+
+      //The best quality - section
+
+      img#thomas {
+        position: absolute;
+        right: -21%;
+        width: 45%;
+      }
+
+      img#bill {
+        position: absolute;
+        bottom: 100px;
+        left: -5%;
+        width: 15%;
+      }
+
+      ul.info-quality {
+        //margin: 0 auto;
+        display: table;
+        margin: 0 auto;
+
+        li {
+          margin: 15px auto;
+          width: 60%;
+          text-align: center;
+          vertical-align: middle;
+
+          img {
+            width: 20%;
+          }
+          h4 {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+
+      }
+
+      //Support report
+
+      .report-section {
+        color: #fafafa;
+        .info-title {
+          color: #F8E71C;
+        }
+        .info-block-line {
+          background-color: #F8E71C;
+        }
+        .info-sub-title {
+          color: #fafafa;
+          padding-bottom: 50px;
+        }
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 20px;
+          font-family: 'Overpass Mono', monospace;
+          color: #9B9B9B;
+          background-color: #2A2A2A;
+          border: 1px solid #414141;
+          border-radius: 10px;
+          width: 80%;
+          padding: 10px 5px;
+          margin: 15px auto 50px;
+        }
+
+        a.report-ctn-button {
+          color: #fafafa;
+          font-size: 20px;
+          font-family: 'Overpass Mono', monospace;
+          font-weight: 700;
+          vertical-align: middle;
+          text-align: center;
+
+          display: block;
+          width: 60%;
+          background-color: #1E1E1E;
+          padding: 10px 20px;
+          border-radius: 50px;
+          margin: 30px auto;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+  .nerds-info {
+    overflow-x: hidden;
+    margin: 50px auto;
+
+    .row {
+      margin-bottom: 0;
+
+      .col {
+        padding: 0;
+
+
+
+
+
+      }
+
+    }
+
+  }
+
+  //mobile
+  @media #{$medium-and-up} { // 640
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+    /*
+    .main-contents {
+
+      @import "main-product-ad";
+
+      @import "main-product-best";
+
+      @import "_main-infoduce";
+
+      @import "_main-report";
+
+
+      .main-product-ad {
+        background-color: #fafafa;
+        height: 170px;
+        .row {
+          margin-bottom: 0;
+
+          .slider-wrap {
+            max-width: 960px;
+            height: 170px;
+            margin: auto;
+            padding: 15px 0;
+
+
+            .product-wrap {
+              background-color: #EEEEEE;
+              height: 140px;
+              margin: 0 auto;
+              border-radius: 15px;
+
+              .product {
+                img {
+                  display: block;
+                  max-width: 80px;
+                  margin: auto;
+                }
+                span.ci {
+                  font-size: 48px;
+                  display: block;
+                  margin: 0 auto;
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+    */
+
+  }
+}
