@@ -7,72 +7,79 @@
   .main-product-ad {
     margin: 0 auto;
 
-    .slider-wrap {
-
-      width: 100%;
-      padding: 20px 30px;
-      margin: auto;
+    .row {
+      margin-bottom: 0;
       display: table;
 
-      .col:first-child {
-        display: none;
-      }
-      .col:nth-last-child(2) {
-        display: none;
-      }
+      .slider-wrap {
 
-      .product-wrap {
-        background-color: #EEEEEE;
-        border-radius: 10px;
+        width: 100%;
+        padding: 20px 30px;
+        margin: auto;
+        display: table;
 
-        a.product {
-          line-height: 0;
-          margin: 0 auto;
-          display: block;
-          vertical-align: middle;
-          text-align: center;
-          img {
-            max-width: 120px;
-            width: 100%;
+        .col:first-child {
+          display: none;
+        }
+        .col:nth-last-child(2) {
+          display: none;
+        }
+
+        .product-wrap {
+          background-color: #EEEEEE;
+          border-radius: 10px;
+
+          a.product {
+            line-height: 0;
             margin: 0 auto;
+            display: block;
+            vertical-align: middle;
+            text-align: center;
+            img {
+              max-width: 120px;
+              width: 100%;
+              margin: 0 auto;
+            }
+
+          }
+
+        }
+
+        .slider-icon-wrap {
+          display: none;
+
+        }
+
+      }
+
+      .slider-button {
+        //height: 20px;
+        margin: 0 auto 50px;
+        list-style-type: none;
+        display: table;
+
+        li {
+          position: relative;
+          float: left;
+          padding: 0 5px;
+
+          a {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #EEEEEE;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+
           }
 
         }
 
       }
 
-      .slider-icon-wrap {
-        display: none;
-
-      }
-
     }
 
-    .slider-button {
-      //height: 20px;
-      margin: 20px auto;
-      list-style-type: none;
-      display: table;
-
-      li {
-        position: relative;
-        float: left;
-        padding: 0 5px;
-
-        a {
-          display: block;
-          width: 10px;
-          height: 10px;
-          background-color: #EEEEEE;
-          -moz-border-radius: 50px;
-          -webkit-border-radius: 50px;
-          border-radius: 50px;
-
-        }
-
-      }
-
-    }
 
 
 
