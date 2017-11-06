@@ -1,8 +1,9 @@
+.font-special{
 
-.main-contents {
+}
 
+[data-page="index"] {
   margin: 0 auto;
-
 
   .main-product-ad {
     margin: 0 auto;
@@ -80,10 +81,19 @@
 
     }
 
+  }
 
-
-
-
+  .section-white {
+    background: #fff;
+  }
+  .section-bg-black {
+    background: #1E1E1E;
+  }
+  .section-gray {
+    background: #fafafa;
+  }
+  .section-color2 {
+    background: #363636;
   }
 
   .best-product {
@@ -92,14 +102,14 @@
     .best-product-list-wrap {
       background-color: #eeeeee;
       border-radius: 10px;
-      margin: 0 30px;
+      //margin: 0 30px;
       padding: 10px 10px;
       display: table;
 
       h2 {
         font-size: 2rem;
         font-weight: 600;
-        font-family: 'Ubuntu', sans-serif;
+        @extend .font-ubuntu;
         text-align: center;
       }
 
@@ -114,7 +124,7 @@
         background-color: #fafafa;
         border-radius: 8px;
         margin: 10px 0;
-        font-family: 'Ubuntu', sans-serif;
+        @extend .font-ubuntu;
         padding: 15px 0;
 
         .product-image-wrap {
@@ -166,9 +176,61 @@
       }
 
     }
-
   }
 
+  .section-info {
+    overflow-x: hidden;
+    text-align: center;
+    color: #717171;
+
+    .info-title {
+      color: #7ED321;
+      font-size: 3em;
+      font-weight: 600;
+      //letter-spacing: -1.5px;
+      line-height: 1.5em;
+    }
+
+    .info-block-line {
+      width: 40px;
+      height: 4px;
+      background-color: #7ED321;
+      margin: 20px auto 30px;
+    }
+
+    .info-sub-title {
+      font-size: 2em;
+      font-weight: 500;
+      line-height: 30px;
+      color: #fafafa;
+      padding: 20px 0;
+    }
+
+    &.section-01 {
+      padding: 50px 10px 0 10px;
+      .info-title {
+        .ci{
+          font-size: 2em;
+        }
+        font-size: 3.5em;
+        font-weight: 900;
+      }
+      p {
+        font-size: 1.5em;
+      }
+
+      .first-info-image {
+        width: 100%;
+        display: block;
+      }
+    }
+    &.section-02 {
+
+    }
+    &.section-03 {
+
+    }
+  }
 
   .nerds-info {
     overflow-x: hidden;
@@ -176,66 +238,56 @@
 
     .row {
       margin-bottom: 0;
-
       .col {
         padding: 0;
-
       }
-
     }
-
   }
 
   .info-section {
-     padding: 100px 30px;
-     padding-bottom: 0;
-     background-color: #1E1E1E;
-     overflow-x: hidden;
+    overflow-x: hidden;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 12px;
+    font-weight: 300;
+    color: #717171;
 
-     .info-wrapper {
-       position: relative;
-       color: #717171;
-       font-family: NanumSquareOTF, sans-serif;
-       text-align: center;
-       line-height: 2rem;
-       font-size: 12px;
-       font-weight: 300;
+    .info-title {
+      color: #7ED321;
+      font-size: 35px;
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      line-height: 61px;
+    }
 
-       .info-title {
-         color: #7ED321;
-         font-family: 'Overpass Mono', monospace;
-         font-size: 35px;
-         font-weight: 600;
-         letter-spacing: -1.5px;
-         line-height: 61px;
-       }
+    .info-block-line {
+      width: 40px;
+      height: 4px;
+      background-color: #7ED321;
+      margin: 20px auto 50px;
+    }
 
-       .info-block-line {
-         width: 40px;
-         height: 4px;
-         background-color: #7ED321;
-         margin: 20px auto 50px;
-       }
+    .info-sub-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #fafafa;
+      padding: 20px 0;
+    }
 
-       .info-sub-title {
-         font-size: 18px;
-         font-weight: 500;
-         line-height: 30px;
-         color: #fafafa;
-         padding: 20px 0;
+    .info-wrapper {
+      position: relative;
 
-       }
+      //&nbsp 해결안됨
+      img {
+        width: 100%;
+        padding-top: 20px;
+        line-height: 0;
+        font-size: 0;
+      }
 
-       //&nbsp 해결안됨
-       img {
-         width: 100%;
-         padding-top: 20px;
-         line-height: 0;
-         font-size: 0;
-       }
-
-     }
-   }
+    }
+  }
 
   .sub-info-section {
     padding: 100px 30px;
@@ -361,7 +413,6 @@
 
   }
 
-
   //mobile
   @media #{$medium-and-up} { // 640
 
@@ -398,7 +449,6 @@
     }
 
     .info-section {
-
 
       .info-wrapper {
         font-size: 20px;
@@ -464,14 +514,11 @@
             margin: 30px auto 85px;
           }
 
-
         }
 
       }
 
     }
-
-
 
   }
 
@@ -520,18 +567,11 @@
             margin: 30px auto 85px;
           }
 
-
         }
 
       }
 
     }
-
-
-
-    }
-
-
 
   }
 
@@ -540,11 +580,8 @@
 
   }
 
-  /*
-  [data-page="index-page"] {
+}
 
-  }
-  */
 
 
 

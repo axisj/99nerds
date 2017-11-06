@@ -73,18 +73,18 @@ table {
 .container {
   margin: 0 auto;
   max-width: 960px;
-  width: 95%;
+  width: 100%;
 }
 
 @media #{$medium-and-up} {
   .container {
-    width: 90%;
+    width: 95%;
   }
 }
 
 @media #{$large-and-up} {
   .container {
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -109,8 +109,6 @@ html {
 
   //font-family: 'Iropke Batang', sans-serif;
   font-family: "Roboto", meiryo, 'Noto Sans Korean', sans-serif;
-
-
 
   //font-weight: 800;
   color: $off-black;
