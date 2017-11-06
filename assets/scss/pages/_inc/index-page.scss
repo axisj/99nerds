@@ -1,4 +1,4 @@
-.font-special{
+.font-special {
 
 }
 
@@ -97,13 +97,12 @@
   }
 
   .best-product {
-    margin: 0 auto;
+    margin: 0 30px;
 
     .best-product-list-wrap {
       background-color: #eeeeee;
       border-radius: 10px;
-      //margin: 0 30px;
-      padding: 10px 10px;
+      padding: 10px 20px;
       display: table;
 
       h2 {
@@ -121,26 +120,54 @@
       }
 
       .best-product-wrap {
-        background-color: #fafafa;
-        border-radius: 8px;
+        background-color: #fff;
+        border-radius: 10px;
         margin: 10px 0;
+        padding: 10px 10px;
+        display: table;
+        min-height: 230px;
+
         @extend .font-ubuntu;
-        padding: 15px 0;
 
         .product-image-wrap {
           width: 80%;
-          margin: 0 auto;
+          margin: 10px auto;
 
-          a.heart {
-            float: right;
-            color: #999999;
-          }
 
-          img {
-            width: 80%;
+          .magnify {
             display: block;
-            margin: 0 auto;
+            float: left;
+            img {
+              display: block;
+              width: 15px;
+              height: auto;
+            }
           }
+
+          .heart {
+            display: block;
+            float: right;
+            img {
+              display: block;
+              width: 15px;
+              height: auto;
+
+            }
+          }
+
+          .product-image-link {
+            display: block;
+            a {
+              display: table;
+              img {
+                display: block;
+                width: 100%;
+                min-height: 20px;
+                margin: 0 auto;
+              }
+            }
+          }
+
         }
 
         .product-info-wrap {
@@ -154,20 +181,24 @@
           }
           h5 {
             font-size: 1.2rem;
-            margin: 0;
-          }
+            clear: both;
+            word-wrap: break-word;
 
-          p {
-            margin: 0;
-
-            &#product-price {
-              font-weight: 600;
-              font-size: 1.2rem;
+            a {
+              display: block;
+              padding: 10px 0;
             }
 
-            &#product-size {
-              font-size: 11px;
-              font-weight: 100;
+          }
+
+          ul {
+
+            li#product-price {
+              font-weight: 600;
+            }
+
+            li#product-size {
+              font-weight: 200;
             }
           }
 
@@ -209,7 +240,7 @@
     &.section-01 {
       padding: 50px 10px 0 10px;
       .info-title {
-        .ci{
+        .ci {
           font-size: 2em;
         }
         font-size: 3.5em;
@@ -234,7 +265,7 @@
 
   .nerds-info {
     overflow-x: hidden;
-    margin: 50px auto 0;
+    margin: 0 auto;
 
     .row {
       margin-bottom: 0;
@@ -524,6 +555,38 @@
 
   // table
   @media #{$large-and-up} { // 993
+
+    .best-product {
+
+      .best-product-list-wrap {
+
+        .best-product-wrap {
+
+          .product-info-wrap {
+
+            a {
+              font-size: 2rem;
+            }
+
+            p {
+
+              &#product-price {
+                font-size: 1.5rem;
+              }
+
+              &#product-size {
+                font-size: 1rem;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
 
     .sub-info-section {
 
