@@ -17,14 +17,18 @@
     vertical-align: middle;
 
     .brand-logo {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       img {
         width: 100%;
       }
       span {
         display: none;
-        font-size: 1em;
+        @extend .font-BM-DOHYUN;
+        font-size: 1.2em;
+        vertical-align: middle;
+        line-height: 30px;
+
       }
     }
 
@@ -112,7 +116,7 @@
     .nav-wrapper {
       .brand-logo {
         position: absolute;
-        height: 40px;
+        height: 30px;
         bottom: 70px;
         left: 10px;
         width: auto;
@@ -120,14 +124,13 @@
         img {
           display: block;
           width: auto;
-          height: 40px;
+          height: 30px;
           float: left;
         }
         span {
           margin-left: 10px;
-          font-size: 14px;
           display: block;
-          line-height: 40px;
+          line-height: 30px;
           float: left;
         }
       }

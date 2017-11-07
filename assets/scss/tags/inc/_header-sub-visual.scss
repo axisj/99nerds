@@ -1,6 +1,7 @@
 .sub-about {
 
-  .section-charcoal {
+  .section-about-header {
+    background-color: #1E1E1E;
     position: relative;
     overflow: hidden;
 
@@ -41,7 +42,7 @@
 
   }
 
-  .section-black {
+  .section-founders {
     display: table;
     background-color: #000000;
     width: 100%;
@@ -117,9 +118,19 @@
     }
   }
 
+  .section-history {
+    background-color: #1E1E1E;
+    .container {
+
+    }
+
+
+  }
+
+
   @media #{$medium-and-up} { // 640
 
-    .section-charcoal {
+    .section-about-header {
 
       .sub-header-wrap {
 
@@ -142,7 +153,7 @@
 
     }
 
-    .section-black {
+    .section-founders {
 
       .container {
 
@@ -173,10 +184,11 @@
 
   }
 
+
   // table
   @media #{$large-and-up} { // 993
 
-    .section-charcoal {
+    .section-about-header {
       height: 300px;
 
       .sub-header-wrap {
@@ -203,10 +215,12 @@
 
   }
 
+
   // desktop
   @media #{$extra-large-and-up} { // 1200
 
   }
+
 
 }
 
