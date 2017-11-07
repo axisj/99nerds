@@ -1,4 +1,5 @@
 .header-gnb {
+  @extend .font-mono;
   position: relative;
   background-color: #1E1E1E;
   z-index: 1;

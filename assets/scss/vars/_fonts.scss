@@ -95,8 +95,11 @@
 }
 
 .font-mono {
-    font-family: 'Overpass Mono', monospace;
+    font-family: 'Overpass Mono', monospace, 'sans-serif';
 }
 .font-ubuntu {
-    font-family: 'Ubuntu', monospace;
+    font-family: 'Ubuntu', monospace, 'sans-serif';
+}
+.font-nanum-square {
+    font-family: NanumSquareOTF, 'sans-serif';
 }
