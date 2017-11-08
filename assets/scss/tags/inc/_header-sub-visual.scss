@@ -1,4 +1,5 @@
 .sub-about {
+  @extend .font-nanum-square;
 
   .section-about-header {
     background-color: #1E1E1E;
@@ -42,6 +43,39 @@
 
   }
 
+  //about-page-titles 공통 style
+  .about-title-wrap {
+    text-align: center;
+
+    h2.about-title {
+      @extend .font-mono;
+      color: #7ED321;
+      font-size: 35px;
+      font-weight: 600;
+      letter-spacing: -1.5px;
+      line-height: 61px;
+
+    }
+
+    .about-block-line {
+      width: 40px;
+      height: 4px;
+      background-color: #7ED321;
+      margin: 20px auto 50px;
+
+    }
+
+    h3.about-sub-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      color: #fafafa;
+      padding: 20px 0;
+
+    }
+
+  }
+
   .section-founders {
     display: table;
     background-color: #000000;
@@ -50,42 +84,9 @@
     color: #fafafa;
     font-weight: 100;
     font-size: 16px;
-    @extend .font-nanum-square;
 
     .container {
       padding: 100px 30px;
-
-      .about-title-wrap {
-        text-align: center;
-
-        h2.about-title {
-          @extend .font-mono;
-          color: #7ED321;
-          font-size: 35px;
-          font-weight: 600;
-          letter-spacing: -1.5px;
-          line-height: 61px;
-
-        }
-
-        .about-block-line {
-          width: 40px;
-          height: 4px;
-          background-color: #7ED321;
-          margin: 20px auto 50px;
-
-        }
-
-        h3.about-sub-title {
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 30px;
-          color: #fafafa;
-          padding: 20px 0;
-
-        }
-
-      }
 
       .profile-wrap {
         text-align: center;
@@ -99,6 +100,8 @@
             display: block;
             margin: 0 auto;
             width: 100%;
+            max-width: 90px;
+            min-width: 40px;
           }
         }
 
@@ -121,12 +124,164 @@
   .section-history {
     background-color: #1E1E1E;
     .container {
+      padding: 100px 30px;
+
+      .about-title-wrap {
+        .history-spaceship {
+          display: block;
+          margin: 0 auto;
+          width: 80px;
+          padding: 100px 0 50px;
+        }
+
+      }
+
+      .history-contents-wrap {
+        width: 100%;
+        height: 2772px;
+        margin-top: 30px;
+        background-image: url("/assets/images/sub-about/history-space-bg.png");
+        background-size: 100%;
+        background-position: top center;
+
+        #nerds-timeline-wrap {
+          $timeline-gap-width: 30px;
+          $timeline-gap-height: 100px;
+          $timeline-mx-margin: 20px;
+
+          $timeline-stroke-color: #F39835;
+
+          $timeline-stroke-layer: -1;
+          $timeline-contents-layer: 2;
+
+          .start-circle {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border: 5px solid $timeline-stroke-color;
+            border-radius: 50%;
+            text-align: center;
+            display: table;
+
+            span {
+              display: table-cell;
+              color: #F8E71C;
+              vertical-align: middle;
+              @extend .font-mono;
+              font-size: 1.5em;
+
+            }
+
+          }
+
+          .center-stroke {
+            width: 1px;
+            height: 2740px;
+            background-color: $timeline-stroke-color;
+            margin: 0 auto;
+            z-index: $timeline-stroke-layer;
+
+          }
+
+          img.history-earth-image {
+            height: 30px;
+            display: block;
+            margin: 0 auto;
+            z-index: $timeline-contents-layer;
+            position: relative;
+            bottom: 2700px;
+
+          }
+
+          .timeline-contents-wrap {
+            position: relative;
+            bottom: 2700px;
+            z-index: $timeline-contents-layer;
+
+            .col {
+              padding: 0;
+
+              .timeline-body-wrap {
+                display: table;
+
+                .logo-circle {
+
+                  margin: $timeline-gap-height 0;
+                  border: 1px solid $timeline-stroke-color;
+                  border-radius: 50%;
+                  text-align: center;
+                  vertical-align: middle;
+
+                  span.history-logo-image {
+                    display: table-cell;
+                    width: 100px;
+                    height: 100px;
+                    vertical-align: middle;
+
+                    img {
+                      margin: auto;
+                      width: 35px;
+
+                    }
+
+                  }
+
+                }
+
+
+              }
+
+
+              .timeline-circle-stroke {
+                position: relative;
+                bottom: 150px;
+                left: 50px;
+                width: 343px;
+                height: 1px;
+                margin: auto;
+                background-color: $timeline-stroke-color;
+
+                .timeline-stroke-point {
+                  width: 12px;
+                  height: 12px;
+                  margin: auto;
+                  background-color: $timeline-stroke-color;
+                  float: left;
+                  position: relative;
+                  bottom: 6px;
+                  left: 3px;
+                  transform: rotate(45deg);
+
+                }
+              }
+
+              .right-stroke {
+                float: left;
+                left: 0;
+                .timeline-stroke-point {
+                  width: 12px;
+                  height: 12px;
+                  margin: auto;
+                  background-color: $timeline-stroke-color;
+                  float: right;
+                  position: relative;
+                  bottom: 6px;
+                  left: -2px;
+                  transform: rotate(45deg);
+
+                }
+              }
+            }
+
+          }
+
+        }
+
+      }
 
     }
 
-
   }
-
 
   @media #{$medium-and-up} { // 640
 
@@ -181,9 +336,7 @@
       }
     }
 
-
   }
-
 
   // table
   @media #{$large-and-up} { // 993
@@ -215,12 +368,10 @@
 
   }
 
-
   // desktop
   @media #{$extra-large-and-up} { // 1200
 
   }
-
 
 }
 
