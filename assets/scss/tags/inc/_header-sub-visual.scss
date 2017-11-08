@@ -138,11 +138,12 @@
 
       .history-contents-wrap {
         width: 100%;
-        height: 2772px;
+        height: 4700px;
         margin-top: 30px;
         background-image: url("/assets/images/sub-about/history-space-bg.png");
         background-size: 100%;
         background-position: top center;
+        background-repeat: repeat-y;
 
         #nerds-timeline-wrap {
           $timeline-gap-width: 30px;
@@ -150,11 +151,19 @@
           $timeline-mx-margin: 20px;
 
           $timeline-stroke-color: #F39835;
+          $timeline-block-color: #1E1E1E;
+          $timeline-title-color: #fafafa;
+          $timeline-text-color: #9B9B9B;
+          $timeline-background-color: #1e1e1e;
+
+          $timeline-date-size: 1.2em;
+          $timeline-title-size: 0.5em;
+          $timeline-text-size: 1em;
 
           $timeline-stroke-layer: -1;
           $timeline-contents-layer: 2;
 
-          .start-circle {
+          .start-end-circle {
             width: 100px;
             height: 100px;
             margin: 0 auto;
@@ -162,6 +171,7 @@
             border-radius: 50%;
             text-align: center;
             display: table;
+            background-color: $timeline-block-color;
 
             span {
               display: table-cell;
@@ -176,7 +186,7 @@
 
           .center-stroke {
             width: 1px;
-            height: 2740px;
+            height: 4500px;
             background-color: $timeline-stroke-color;
             margin: 0 auto;
             z-index: $timeline-stroke-layer;
@@ -189,88 +199,141 @@
             margin: 0 auto;
             z-index: $timeline-contents-layer;
             position: relative;
-            bottom: 2700px;
+            bottom: 4450px;
 
           }
 
           .timeline-contents-wrap {
             position: relative;
-            bottom: 2700px;
+            bottom: 4450px;
             z-index: $timeline-contents-layer;
 
             .col {
               padding: 0;
 
               .timeline-body-wrap {
-                display: table;
+                width: 100%;
+                padding: 25px 0;
+                text-align: center;
+
+                .timeline-date {
+                  content: "15 Aug 2013";
+                  color: $timeline-stroke-color;
+                  background-color: $timeline-block-color;
+                  font-size: $timeline-date-size;
+                  padding: 4px 0;
+
+                }
 
                 .logo-circle {
-
-                  margin: $timeline-gap-height 0;
+                  width: 100px;
+                  height: 100px;
+                  background-color: $timeline-block-color;
                   border: 1px solid $timeline-stroke-color;
                   border-radius: 50%;
-                  text-align: center;
-                  vertical-align: middle;
+                  display: table;
+                  margin: 0 auto;
 
-                  span.history-logo-image {
+                  span.history-logo-wrap {
                     display: table-cell;
-                    width: 100px;
-                    height: 100px;
                     vertical-align: middle;
 
-                    img {
-                      margin: auto;
-                      width: 35px;
-
+                    img.history-logo-image {
+                      display: block;
+                      margin: 0 auto;
+                      max-width: 50px;
+                      min-width: 40px;
                     }
 
                   }
 
                 }
 
-
-              }
-
-
-              .timeline-circle-stroke {
-                position: relative;
-                bottom: 150px;
-                left: 50px;
-                width: 343px;
-                height: 1px;
-                margin: auto;
-                background-color: $timeline-stroke-color;
-
-                .timeline-stroke-point {
-                  width: 12px;
-                  height: 12px;
-                  margin: auto;
-                  background-color: $timeline-stroke-color;
+                .timeline-circle-stroke-wrap {
+                  width: 100%;
+                  height: 10px;
                   float: left;
-                  position: relative;
-                  bottom: 6px;
-                  left: 3px;
-                  transform: rotate(45deg);
+
+                  /*
+                  .timeline-circle-stroke {
+                    width: 90%;
+                    height: 1px;
+                    margin: auto;
+                    background-color: $timeline-stroke-color;
+
+                  }
+
+                  .timeline-stroke-point {
+                    width: 10%;
+                    height: auto;
+                    margin: auto;
+                    background-color: $timeline-stroke-color;
+                    float: right;
+                    position: relative;
+                    bottom: 6px;
+                    left: -2px;
+                    transform: rotate(45deg);
+
+                  }
+                  */
+                }
+
+                .timeline-text-wrap {
+                  text-align: center;
+                  margin: 10px auto;
+
+                  h4 {
+                    line-height: 0.6em;
+                    .timeline-title {
+                      background-color: $timeline-background-color;
+                      color: $timeline-title-color;
+                      font-size: $timeline-title-size;
+                      padding: 4px 0;
+
+                    }
+                  }
+
+                  p {
+                    line-height: 1.6em;
+
+                    .timeline-text {
+                      background-color: $timeline-background-color;
+                      color: $timeline-text-color;
+                      font-size: $timeline-text-size;
+                      padding: 4px 0;
+
+                    }
+                  }
+
 
                 }
-              }
 
-              .right-stroke {
-                float: left;
-                left: 0;
-                .timeline-stroke-point {
-                  width: 12px;
-                  height: 12px;
-                  margin: auto;
-                  background-color: $timeline-stroke-color;
-                  float: right;
-                  position: relative;
-                  bottom: 6px;
-                  left: -2px;
-                  transform: rotate(45deg);
+                .photo-square {
+                  width: 170px;
+                  height: auto;
+                  background-color: $timeline-block-color;
+                  border: 1px solid $timeline-stroke-color;
+                  border-radius: 8px;
+                  display: table;
+                  margin: 0 auto;
+                  overflow: hidden;
+
+                  span.history-photo-wrap {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    img.history-photo-image {
+                      display: block;
+                      margin: 0 auto;
+                      width: 100%;
+                    }
+
+                  }
 
                 }
+
               }
+
             }
 
           }
