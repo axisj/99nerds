@@ -8,20 +8,30 @@
     overflow: hidden;
 
     .sub-header-wrap {
-      width: 100%;
+      max-width: 960px;
+      height: 300px;
       padding: 40px 0;
       margin: 0 auto;
+      position: relative;
+
 
       .container {
-        padding: 0 30px;
+        max-width: 960px;
+        padding: 0;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        margin-top: -54px;
+
 
         h1.sub-about-title {
           color: #fafafa;
           font-size: 3em;
-          margin: auto;
-          line-height: 1.3em;
+          line-height: 1.5em;
           display: table;
+          margin: 0 auto;
           @extend .font-mono;
+          text-align: center;
 
           span {
             color: #F8E71C;
@@ -30,13 +40,10 @@
         }
 
         img.sub_about_image {
-          display: block;
-          width: 45%;
-          margin: auto;
-          position: absolute;
-          bottom: -30px;
-          right: 15px;
-
+          //display: block;
+          display: none;
+          width: 400px;
+          float: right;
         }
 
       }
@@ -45,6 +52,7 @@
   }
 
   //about-page-titles 공통 style
+
   .about-title-wrap {
     text-align: center;
 
@@ -438,6 +446,8 @@
 
   }
 
+
+
   @media #{$medium-and-up} { // 640
 
     .section-about-header {
@@ -447,16 +457,11 @@
         .container {
 
           h1.sub-about-title {
-            font-size: 3em;
-            margin: 0;
+            font-size: 3.5em;
             line-height: 1.3em;
 
           }
 
-          img.sub_about_image {
-            width: 90%;
-            position: static;
-          }
 
         }
       }
@@ -725,17 +730,21 @@
         padding: 50px 0;
 
         .container {
+          top: 40%;
+          padding: 0 35px;
 
           h1.sub-about-title {
-            font-size: 3em;
+            text-align: left;
             margin: 0;
-            line-height: 1.3em;
+            display: inline-block;
 
           }
 
           img.sub_about_image {
-            width: 90%;
-            position: static;
+            display: inline-block;
+            position: relative;
+            left: 90px;
+
           }
 
         }

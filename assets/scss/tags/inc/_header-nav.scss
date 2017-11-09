@@ -45,6 +45,8 @@
       height: 45px;
       line-height: 45px;
       font-size: 1.2em;
+      padding: 0 40px 0 0;
+
     }
     .search-box {
       position: relative;
@@ -56,6 +58,7 @@
           display: none;
         }
         .search-icon {
+
 
         }
       }
@@ -118,7 +121,7 @@
         position: absolute;
         height: 30px;
         bottom: 70px;
-        left: 10px;
+        left: 0;
         width: auto;
 
         img {
@@ -163,6 +166,7 @@
             line-height: 35px;
             left: 0;
             top: 1px;
+            padding-left: 15px;
             span.ci {
               font-size: 15px;
               line-height: 35px;
