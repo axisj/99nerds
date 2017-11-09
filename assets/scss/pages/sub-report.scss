@@ -1,8 +1,8 @@
-.sub-customer {
+.sub-report {
   @extend .font-nanum-square;
   color: #333333;
 
-  .section-customer-header {
+  .section-report-header {
     background-color: #1E1E1E;
     position: relative;
     overflow: hidden;
@@ -24,7 +24,7 @@
         margin-top: -54px;
 
 
-        h1.sub-customer-title {
+        h1.sub-report-title {
           color: #fafafa;
           font-size: 3em;
           line-height: 1.5em;
@@ -39,10 +39,10 @@
 
         }
 
-        img.sub_customer_image {
+        img.sub_report_image {
           //display: block;
           display: none;
-          width: 180px;
+          width: 240px;
           float: right;
         }
 
@@ -54,13 +54,13 @@
 
 
   @media #{$medium-and-up} { // 640
-    .section-customer-header {
+    .section-report-header {
 
       .sub-header-wrap {
 
         .container {
 
-          h1.sub-customer-title {
+          h1.sub-report-title {
             font-size: 3.5em;
             line-height: 1.3em;
 
@@ -77,7 +77,7 @@
   // table
   @media #{$large-and-up} { // 993
 
-    .section-customer-header {
+    .section-report-header {
       height: 300px;
 
       .sub-header-wrap {
@@ -85,17 +85,17 @@
 
         .container {
           top: 40%;
-          padding: 0 100px;
+          padding: 0 45px;
 
 
-          h1.sub-customer-title {
+          h1.sub-report-title {
             text-align: left;
             margin: 0;
             display: inline-block;
 
           }
 
-          img.sub_customer_image {
+          img.sub_report_image {
             display: inline-block;
             position: relative;
             left: 80px;
@@ -118,4 +118,3 @@
 
 
 }
-
