@@ -1,1 +1,252 @@
 
+.customer-main {
+  @extend .font-ubuntu;
+  @extend .font-nanum-square;
+  font-weight: 500;
+  line-height: 2em;
+  word-wrap: break-word;
+
+  .divider-stroke {
+    width: 1px;
+    height: 100px;
+    background-color: #7ED321;
+    margin: 0 auto;
+    margin-top: 170px;
+    display: none;
+
+  }
+
+  .section-company-info {
+    background-color: #fafafa;
+    width: 100%;
+    height: auto;
+    color: #333333;
+    font-weight: 600;
+
+    .container {
+      padding: 100px 30px;
+
+      .company-info-wrap {
+        text-align: center;
+        padding: 50px 0;
+
+        .icon-wrap {
+          width: 40px;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        h2 {
+          font-size: 1.8em;
+          padding: 15px 0;
+          font-weight: 800;
+
+        }
+
+        p {
+          font-size: 1.2em;
+
+          .sns-link {
+            font-size: 2em;
+
+          }
+
+        }
+      }
+
+    }
+
+
+
+  }
+
+  .section-consult {
+    background-color: #333333;
+    width: 100%;
+    height: auto;
+    color: #fafafa;
+    font-weight: 300;
+
+    .container {
+      padding: 100px 30px;
+
+      .consult-wrap {
+        text-align: center;
+        padding: 50px 0;
+
+        .icon-wrap {
+          width: auto;
+          height: 70px;
+
+          img {
+            height: 70px;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+
+        a {
+          display: block;
+          color: #fafafa;
+          font-size: 1.8em;
+          font-weight: 400;
+          margin: 1.78rem 0 1.424rem 0;
+          padding: 15px 0;
+
+          span.ci {
+            color: #7ED321;
+          }
+
+        }
+
+        p {
+          font-size: 1.2em;
+          padding: 0 15px;
+
+        }
+      }
+
+
+
+    }
+
+
+
+  }
+
+
+  @media #{$medium-and-up} { // 640
+
+
+    .divider-stroke {
+      width: 1px;
+      height: 100px;
+      background-color: #7ED321;
+      display: block;
+
+    }
+
+    .section-company-info {
+      background-color: #fafafa;
+      width: 100%;
+      height: auto;
+      color: #333333;
+      font-weight: 600;
+      font-size: 0.9em;
+
+      .container {
+        padding: 100px 30px;
+
+        .company-info-wrap {
+          text-align: center;
+          padding: 50px 0;
+
+          .icon-wrap {
+            width: 40px;
+            margin: 0 auto;
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+
+          h2 {
+            font-size: 1.8em;
+            padding: 15px 0;
+            font-weight: 800;
+
+          }
+
+          p {
+            font-size: 1.2em;
+
+            .sns-link {
+              font-size: 2em;
+
+            }
+
+          }
+        }
+
+
+
+      }
+
+
+
+    }
+
+    .section-consult {
+      background-color: #333333;
+      width: 100%;
+      height: auto;
+      color: #fafafa;
+      font-weight: 300;
+
+      .container {
+        padding: 100px 30px;
+
+        .consult-wrap {
+          text-align: center;
+          padding: 50px 0;
+
+          .icon-wrap {
+            width: auto;
+            height: 70px;
+
+            img {
+              height: 70px;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+
+          a {
+            display: block;
+            color: #fafafa;
+            font-size: 1.8em;
+            font-weight: 400;
+            margin: 1.78rem 0 1.424rem 0;
+            padding: 15px 0;
+
+            span.ci {
+              color: #7ED321;
+            }
+
+          }
+
+          p {
+            font-size: 1.2em;
+
+          }
+        }
+
+      }
+
+
+
+    }
+
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+  }
+
+
+
+
+}
