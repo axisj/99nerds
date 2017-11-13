@@ -80,15 +80,15 @@
             <span class="gLeft">
                 <a href="{$link_board_list}" class="btnNormalB">list</a>
                 <span class="{$config.is_admin|display}">
-                    <button type="button" class="admin btnNormalB {$config.is_post|display}" onclick="{$action_post}">관리자게시</button>
-                    <button type="button" class="admin btnNormalB {$config.not_post|display}" onclick="{$action_post}">게시안함</button>
-                    <button type="button" class="btnNormalB" onclick="{$action_spam}">스팸신고</button>
-                    <button type="button" class="btnNormalB" onclick="{$action_spam_cancle}">스팸해제</button>
+                    <a href="#" class="admin btnNormalB {$config.is_post|display}" onclick="{$action_post}">관리자게시</a>
+                    <a href="#" class="admin btnNormalB {$config.not_post|display}" onclick="{$action_post}">게시안함</a>
+                    <a href="#" class="btnNormalB" onclick="{$action_spam}">스팸신고</a>
+                    <a href="#" class="btnNormalB" onclick="{$action_spam_cancle}">스팸해제</a>
                 </span>
             </span>
                     <span class="gRight">
-                <button type="button" class="btnNormalB {$delete_button_auth|display}"
-                        onclick="{$action_delete}">삭제</button>
+                <a href="#" class="btnNormalB {$delete_button_auth|display}"
+                        onclick="{$action_delete}">삭제</a>
                 <a href="/board/free/modify.html{$param_modify}" class="btnEmB {$modify_button_auth|display}">수정</a>
                 <a href="/board/free/reply.html{$param_reply}" class="btnEmB {$reply_button_auth|display}">답변</a>
             </span>

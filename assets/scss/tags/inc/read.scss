@@ -78,6 +78,17 @@
       }
 
       .btnNormalB {
+         background-color: $list-button-color;
+         @extend .font-ubuntu;
+         padding: 10px;
+         border-radius: 5px;
+         color: $list-white-font-color;
+         margin: 30px 0;
+         display: inline-block;
+
+       }
+
+      .btnEmB {
         background-color: $list-button-color;
         @extend .font-ubuntu;
         padding: 10px;
