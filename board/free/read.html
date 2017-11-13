@@ -55,7 +55,7 @@
                     </tr>
                     <tr class="{$config.is_use_recom|display}">
                         <th scope="row">추천</th>
-                        <td><span class="gMin60">{$vote_count}</span><a href="#none" onclick="{$action_vote}"
+                        <td><span class="gMin60">{$vote_count}</span><a href="{$action_vote}"
                                                                         class="btnNormal">추천하기</a></td>
                     </tr>
                     <tr class="gMerge">
@@ -80,15 +80,14 @@
             <span class="gLeft">
                 <a href="http://skin-skin13.nerds.cafe24.com/layout/99nerds/sub-notice.html?board_no=1" class="btnNormalB">list</a>
                 <span class="{$config.is_admin|display}">
-                    <a href="#" class="admin btnNormalB {$config.is_post|display}" onclick="{$action_post}">관리자게시</a>
-                    <a href="#" class="admin btnNormalB {$config.not_post|display}" onclick="{$action_post}">게시안함</a>
-                    <a href="#" class="btnNormalB" onclick="{$action_spam}">스팸신고</a>
-                    <a href="#" class="btnNormalB" onclick="{$action_spam_cancle}">스팸해제</a>
+                    <a href="{$action_post}" class="admin btnNormalB {$config.is_post|display}">관리자게시</a>
+                    <a href="{$action_post}" class="admin btnNormalB {$config.not_post|display}">게시안함</a>
+                    <a href="{$action_spam}" class="btnNormalB">스팸신고</a>
+                    <a href={$action_spam_cancle} class="btnNormalB">스팸해제</a>
                 </span>
             </span>
                     <span class="gRight">
-                <a href="#" class="btnNormalB {$delete_button_auth|display}"
-                        onclick="{$action_delete}">삭제</a>
+                <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">삭제</a>
                 <a href="/board/free/modify.html{$param_modify}" class="btnEmB {$modify_button_auth|display}">수정</a>
                 <a href="/board/free/reply.html{$param_reply}" class="btnEmB {$reply_button_auth|display}">답변</a>
             </span>

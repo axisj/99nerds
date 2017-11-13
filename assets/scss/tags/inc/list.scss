@@ -43,20 +43,21 @@
             border-radius: 0;
             text-align: center;
             color: $list-header-font-color;
-            width: 5%;
+            width: 10%;
 
           }
+
 
           .list-header-no {
 
           }
 
           .list-header-title {
-            width: 60%;
+            width: 50%;
           }
 
           .list-header-name {
-            width: 10%;
+            width: 20%;
           }
 
           .list-header-date {
@@ -72,6 +73,13 @@
 
       tbody.list-body {
         background-color: $list-body-background;
+
+        tr {
+          td {
+            text-align: center;
+          }
+
+        }
 
         .list-important-body {
 

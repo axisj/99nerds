@@ -1,0 +1,129 @@
+.section-notice-write {
+  @extend .font-nanum-square;
+  font-size: 1.1em;
+
+  $list-header-background: #eeeeee;
+  $list-body-background: #fafafa;
+  $list-important-background: rgba(238, 238, 238, 0.7);
+
+  $list-header-font-color: #717171;
+  $list-body-font-color: #9B9B9B;
+  $list-button-color: #333333;
+  $list-white-font-color: #fafafa;
+
+  .container {
+    padding: 100px 30px;
+
+    .titleArea {
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        @extend .font-ubuntu;
+      }
+      .block-line {
+        width: 30px;
+        height: 4px;
+        background-color: #7ED321;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+    }
+
+    .board-write-wrap {
+      table {
+
+        caption {
+          margin-bottom: 30px;
+          @extend .font-ubuntu;
+          font-weight: 600;
+          text-align: left;
+          font-size: 1.2em;
+        }
+
+        input {
+          border-bottom: 0;
+          width: 90%;
+
+        }
+
+        .middle {
+
+          tr.write-table-head {
+            background-color: $list-header-background;
+
+            th {
+              @extend .font-ubuntu;
+              font-weight: 600;
+              padding-left: 20px;
+              border-radius: 0;
+              border-radius: 5px 0 0 5px;
+
+            }
+            td {
+              padding-left: 20px;
+              border-radius: 0 5px 5px 0;
+
+              input {
+
+              }
+
+              label {
+                padding-right: 15px;
+
+                &:before {
+                  font-size: 0.5em;
+                }
+              }
+            }
+          }
+
+          tr.gMerge {
+            td {
+              #content_CONTAINER {
+                table.seLayout {
+                  border-style: none solid;
+                  border: 1px solid #CCC;
+
+                  button {
+                    border-bottom: 0;
+                  }
+                }
+
+              }
+
+            }
+
+          }
+
+          tr {
+            th.attachment {
+              @extend .font-ubuntu;
+              font-weight: 600;
+
+            }
+
+          }
+
+        }
+      }
+
+      .buttonArea {
+
+          a {
+            background-color: $list-button-color;
+            @extend .font-ubuntu;
+            padding: 10px;
+            border-radius: 5px;
+            color: $list-white-font-color;
+            margin: 30px 10px 30px 0;
+
+            display: inline-block;
+          }
+
+      }
+
+    }
+  }
+}
