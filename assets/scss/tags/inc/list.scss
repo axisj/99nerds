@@ -64,7 +64,6 @@
 
         .list-important-body {
 
-
           tr.list-important {
             background-color: $list-important-background;
 
@@ -95,8 +94,8 @@
     }
 
     .buttonArea {
-      margin: 30px 0;
-      display: inline-block;
+      margin: 30px 0 20px;
+
 
       span.gRight {
         background-color: $list-button-color;
@@ -110,15 +109,18 @@
         }
       }
     }
+
     #boardSearchForm {
-      display: inline-block;
-      float: right;
+      display: block;
 
       .mid-0 {
 
         fieldset.list-search {
           border: none;
+          margin: 0;
+          padding: 0;
           p {
+            text-align: center;
             select {
               width: auto;
               height: 30px;
@@ -160,25 +162,73 @@
     margin: 0 auto;
     display: table;
 
-  p {
-    display: table;
-    float: left;
+    p {
+      display: table;
+      float: left;
 
-    img {
-      width: 25px;
+      img {
+        width: 25px;
+
+      }
+    }
+
+    ol {
+      display: table;
+      -webkit-padding-start: 0;
+      float: left;
+      padding: 0 30px;
+      height: 25px;
+      line-height: 25px;
+    }
+
+  }
+
+  //mobile
+  @media #{$medium-and-up} { // 640
+
+
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+    .list-wrap {
+
+      .buttonArea {
+        display: inline-block;
+        margin: 30px 0;
+
+      }
+
+      #boardSearchForm {
+        float: right;
+        margin: 0;
+
+        .mid-0 {
+
+          fieldset.list-search {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+
+
+          }
+
+        }
+
+      }
+
 
     }
+
+
   }
 
-  ol {
-    display: table;
-    -webkit-padding-start: 0;
-    float: left;
-    padding: 0 30px;
-    height: 25px;
-    line-height: 25px;
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
   }
 
 }
 
-}
+
