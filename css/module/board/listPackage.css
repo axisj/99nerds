@@ -10,12 +10,12 @@
 .xans-board td a {font-size:13px;}
 
 /* thead */
-.xans-board-listheader {border-top:1px solid #777; border-bottom:1px solid #777;}
-.xans-board-listheader th {border:0;}
+.xans-board-listheader {}
+.xans-board-listheader th {}
 
 /* tbody */
 .xans-board-notice td, 
-.xans-board-list td {text-align:center; border:0; border-bottom:1px solid #ddd;}
+.xans-board-list td {text-align:center; border:0;}
 td.left {text-align:left;}
 
 .xans-board-notice td:first-child,
@@ -27,15 +27,14 @@ ul.xans-board-listheader li { display:inline; }
 
 /* 목록 */
 .xans-board-listpackage table { clear:both; border-left:0px; border-right:0px;}
-.xans-board-listpackage table tr:nth-child(2n) td {background:#f9f9f9;}
 
 /* 상품게시판 - 상품정보 */
 .xans-board-listpackage table td .thumb img { display:inline-block; width:46px; }
 .xans-board-listpackage table td .thumb span { display:inline-block; width:65px; padding:0 0 0 8px; }
 
 /* 상품후기 아코디언형 */
-.xans-board-notice #content_view td { padding:9px 10px 20px; text-align:left; background:#f6f7f9; }
-.xans-board-list #content_view td { padding:9px 10px 20px; text-align:left; white-space:pre-wrap; background:#f6f7f9; }
+.xans-board-notice #content_view td { padding:9px 10px 20px; text-align:left; }
+.xans-board-list #content_view td { padding:9px 10px 20px; text-align:left; white-space:pre-wrap; }
 
 
 

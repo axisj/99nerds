@@ -1,0 +1,184 @@
+.notice-board {
+  padding: 100px 0;
+  font-size: 1em;
+
+  $list-header-background: #eeeeee;
+  $list-body-background: #fafafa;
+  $list-important-background: rgba(238, 238, 238, 0.7);
+
+  $list-header-font-color: #717171;
+  $list-body-font-color: #9B9B9B;
+  $list-button-color: #333333;
+  $list-white-font-color: #fafafa;
+
+  .list-wrap {
+    table {
+
+      thead.list-header {
+
+        @extend .font-ubuntu;
+        border-bottom: 0;
+
+        .xans-board-listheader {
+          border-top: 0;
+          border-bottom: 0;
+          border-radius: 10px 10px 0 0;
+        }
+        tr {
+
+          background-color: $list-header-background;
+
+          th {
+            border-radius: 0;
+            text-align: center;
+            color: $list-header-font-color;
+            width: 5%;
+
+          }
+
+          .list-header-no {
+
+          }
+
+          .list-header-title {
+            width: 60%;
+          }
+
+          .list-header-name {
+            width: 10%;
+          }
+
+          .list-header-date {
+            width: 20%;
+          }
+
+          .list-header-hit {
+
+          }
+
+        }
+      }
+
+      tbody.list-body {
+        background-color: $list-body-background;
+
+        .list-important-body {
+
+
+          tr.list-important {
+            background-color: $list-important-background;
+
+            td {
+              border-radius: 0;
+              text-align: center;
+            }
+
+          }
+
+        }
+
+        .list-body {
+          background-color: $list-body-background;
+
+          tr {
+            td {
+              border-top-right-radius: 0;
+              border-top-left-radius: 0;
+              text-align: center;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    .buttonArea {
+      margin: 30px 0;
+      display: inline-block;
+
+      span.gRight {
+        background-color: $list-button-color;
+        @extend .font-ubuntu;
+        padding: 10px;
+        border-radius: 5px;
+
+        a.btnSubmitB {
+          color: $list-white-font-color;
+
+        }
+      }
+    }
+    #boardSearchForm {
+      display: inline-block;
+      float: right;
+
+      .mid-0 {
+
+        fieldset.list-search {
+          border: none;
+          p {
+            select {
+              width: auto;
+              height: 30px;
+              margin-right: 10px;
+              background-color: $list-body-background;
+            }
+
+            a.btnEm {
+              @extend .font-ubuntu;
+              height: 30px;
+              padding: 10px;
+              background-color: $list-button-color;
+              color: $list-white-font-color;
+              border-radius: 5px;
+              margin-right: 10px;
+            }
+
+            input {
+              width: 150px;
+              height: 30px;
+              box-shadow: none;
+              border: 1px solid #eeeeee;
+              border-radius: 5px;
+              margin-right: 10px;
+              background-color: $list-body-background;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .paginate {
+    margin: 0 auto;
+    display: table;
+
+  p {
+    display: table;
+    float: left;
+
+    img {
+      width: 25px;
+
+    }
+  }
+
+  ol {
+    display: table;
+    -webkit-padding-start: 0;
+    float: left;
+    padding: 0 30px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+}
+
+}

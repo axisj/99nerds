@@ -1,6 +1,7 @@
 .sub-notice {
   @extend .font-nanum-square;
   color: #333333;
+  @import "tags/inc/list";
 
   .section-notice-header {
     background-color: #1E1E1E;
@@ -50,6 +51,32 @@
     }
 
   }
+
+  .section-notice-board {
+
+    .container {
+      padding: 100px 30px;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        @extend .font-ubuntu;
+      }
+      .block-line {
+        width: 30px;
+        height: 4px;
+        background-color: #7ED321;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+
+
+    }
+
+
+  }
+
+
 
 
 
