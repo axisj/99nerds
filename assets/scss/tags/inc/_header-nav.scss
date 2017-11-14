@@ -65,13 +65,18 @@
 
     .search-box {
       position: relative;
+      @extend .font-nanum-square;
+
       form {
         margin: 0;
         padding: 0;
         height: 35px;
+
         input {
+          font-size: 12px;
           display: none;
         }
+
         .search-icon {
           span.ci-search2 {
             font-size: 26px;

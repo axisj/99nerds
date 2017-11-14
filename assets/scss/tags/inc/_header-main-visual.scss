@@ -64,6 +64,8 @@
       width: 120%;
       padding-right: 0;
       margin-bottom: 0;
+      position: relative;
+      left: -9.75px;
 
       .keyword-card {
         @extend .font-mono;
@@ -185,7 +187,7 @@
 
         p {
           line-height: 55px;
-          font-size: 3.5em;
+          font-size: 3.2em;
           text-align: left;
 
           img {
@@ -206,8 +208,8 @@
       .main-image-wrap {
         float: right;
         position: relative;
-        width: 220px;
-        bottom: 120px;
+        width: 210px;
+        bottom: 110px;
         margin-right: 80px;
 
         img {
@@ -230,6 +232,7 @@
           .keyword-card-title {
             font-size: 13px;
           }
+
           .keyword-card-content {
             line-height: 11px;
             font-size: 11px;
@@ -245,7 +248,6 @@
             }
           }
 
-
         }
 
       }
@@ -259,7 +261,14 @@
 
   @media #{$extra-large-and-up} { // 1200
 
+    .row {
 
+      .main-image-wrap {
+        width: 230px;
+        margin-right: 70px;
+
+      }
+    }
 
   }
 
