@@ -39,7 +39,7 @@
     ul.main-nav {
       display: none;
       li {
-        padding: 0 10px;
+        padding: 0 25px;
         a {
           font-weight: 100;
           padding: 0;
@@ -57,11 +57,11 @@
     }
 
     a {
-       height: 45px;
-       line-height: 45px;
-       font-size: 1.2em;
+      height: 45px;
+      line-height: 45px;
+      font-size: 1.2em;
 
-     }
+    }
 
     .search-box {
       position: relative;
@@ -76,6 +76,8 @@
           span.ci-search2 {
             font-size: 26px;
             padding-right: 15px;
+            position: relative;
+            top: 5px;
 
           }
 
@@ -131,12 +133,45 @@
   //mobile
   @media #{$medium-and-up} { // 640
 
+    .nav-wrapper {
+
+      .search-box {
+        position: relative;
+        form {
+          margin: 0;
+          padding: 0;
+          height: 0;
+          input {
+            display: none;
+          }
+          .search-icon {
+            position: relative;
+            bottom: 10px;
+
+            span.ci-search2 {
+              font-size: 26px;
+              padding-right: 15px;
+              position: relative;
+              top: 0;
+
+            }
+
+          }
+        }
+      }
+
+    }
+
   }
 
   // table
   @media #{$large-and-up} { // 993
 
     .nav-wrapper {
+
+      .tablet-brand-logo {
+        display: none;
+      }
 
       ul.main-nav {
         display: block;
@@ -174,27 +209,6 @@
         }
       }
 
-      .brand-logo {
-        position: absolute;
-        height: 30px;
-        bottom: 70px;
-        left: 0;
-        width: auto;
-
-        img {
-          display: block;
-          width: auto;
-          height: 30px;
-          float: left;
-        }
-        span {
-          margin-left: 10px;
-          display: block;
-          line-height: 30px;
-          float: left;
-        }
-      }
-
       .search-box {
         position: relative;
         height: 35px;
@@ -220,12 +234,14 @@
           }
           .search-icon {
             position: absolute;
-            height: 35px;
             line-height: 35px;
             left: 0;
             top: 1px;
             padding-left: 15px;
             span.ci {
+              display: block;
+              top: 0;
+              bottom: 10px;
               font-size: 15px;
               line-height: 35px;
               color: #7ED321;
@@ -236,12 +252,11 @@
 
     }
 
-
-
   }
 
   // desktop
   @media #{$extra-large-and-up} { // 1200
+
 
 
   }

@@ -6,6 +6,7 @@
   height: 70px;
   display: none;
   padding-top: 10px;
+
   ul {
     padding: 0;
     margin: 0;
@@ -27,13 +28,49 @@
     }
   }
 
+  ul.left {
+    a.brand-logo {
+      display: none;
+      margin-top: 5px;
+      height: 30px;
+      width: auto;
+      padding: 0;
+
+      img {
+        display: block;
+        width: auto;
+        height: 30px;
+        float: left;
+      }
+      span {
+        margin-left: 10px;
+        display: block;
+        line-height: 30px;
+        float: left;
+        @extend .font-BM-DOHYUN;
+        font-size: 1.3em;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
   //mobile
   @media #{$medium-and-up} { // 640
-    display: block;
+
   }
 
   // table
   @media #{$large-and-up} { // 993
+    display: block;
+
+    ul.left {
+      a.brand-logo {
+        display: block;
+
+      }
+
+    }
 
   }
 
