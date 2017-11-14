@@ -1,5 +1,12 @@
 <div module="Board_ListPackage_1002" class="notice-board">
 
+    <div module="board_title_1002">
+        <div class="titleArea">
+            <h2>{$board_title}</h2>
+            <div class="block-line"></div>
+        </div>
+    </div>
+
     <div class="list-wrap" module="board_title_1002">
 
         <div class="boardSort">
@@ -19,7 +26,7 @@
             </colgroup>
 
             <thead module="board_listheader_1002" class="list-header">
-                <tr>
+            <tr>
                 <th scope="col" class="list-header-no">{$checkbox}no</th>
                 <th scope="col" class="list-header-title">title</th>
                 <th scope="col">name</th>
@@ -30,7 +37,7 @@
 
             <tbody class="list-body">
 
-                <div module="board_notice_1002" class="list-important-body">
+            <div module="board_notice_1002" class="list-important-body">
 
                 <!--
                     $count = 2
@@ -40,7 +47,8 @@
                 <tr class="list-important">
                     <td>{$checkbox} {$notice_icon}</td>
                     <td class="{$category_display|display}">{$category_name}</td>
-                    <td class="left-align">{$icon_re} <a href="{$link_board_detail}">{$subject}</a> {$icon_lock}
+                    <td class="left-align">{$icon_re} <a href="read.html{$param_read}">{$subject}</a>
+                        {$icon_lock}
                         {$icon_new}
                         {$icon_hit} {$icon_file} {$comment_count}
                     </td>
@@ -55,7 +63,7 @@
                 <tr class="list-important">
                     <td>{$checkbox} {$notice_icon}</td>
                     <td class="{$category_display|display}">{$category_name}</td>
-                    <td>{$icon_re} <a href="{$link_board_detail}"><strong>{$subject}</strong></a>
+                    <td>{$icon_re} <a href="read.html{$param_read}"><strong>{$subject}</strong></a>
                         {$icon_lock}
                         {$icon_new} {$icon_hit} {$icon_file} {$comment_count}
                     </td>
@@ -70,7 +78,7 @@
 
             </div>
 
-                <div module="board_list_1002" class="list-body">
+            <div module="board_list_1002" class="list-body">
                 <!--
                     $login_page_url = /member/login.html
                     $deny_access_url = /index.html
@@ -78,7 +86,7 @@
                 <tr>
                     <td>{$checkbox} {$no}</td>
                     <td class="{$category_display|display}">{$category_name}</td>
-                    <td>{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+                    <td>{$icon_re} <a href="read.html{$param_read}" style="{$link_color}">{$subject}</a>
                         {$icon_lock} {$icon_new} {$icon_hit} {$icon_file} {$comment_count}
                     </td>
                     <td>{$member_icon} {$writer}</td>
@@ -92,7 +100,7 @@
                 <tr>
                     <td>{$checkbox} {$no}</td>
                     <td class="{$category_display|display}">{$category_name}</td>
-                    <td class="left">{$icon_re} <a href="{$link_board_detail}" style="{$link_color}">{$subject}</a>
+                    <td class="left">{$icon_re} <a href="read.html{$param_read}" style="{$link_color}">{$subject}</a>
                         {$icon_lock} {$icon_new} {$icon_hit} {$icon_file} {$comment_count}
                     </td>
                     <td>{$member_icon} {$writer}</td>
@@ -117,9 +125,9 @@
         </div>
 
         <div module="board_ButtonList_1002" class="buttonArea">
-            <span class="gRight">
-                <a href="/board/free/write.html{$param_write}" class="btnSubmitB">Write</a>
-            </span>
+                        <span class="gRight">
+                            <a href="write.html{$param_write}" class="btnSubmitB">Write</a>
+                        </span>
         </div>
 
         <div module="board_search_1002" class="mid-0">
@@ -145,3 +153,4 @@
     </div>
 
 
+</div>

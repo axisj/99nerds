@@ -4,7 +4,6 @@
   @extend .font-nanum-square;
   font-weight: 500;
   line-height: 2em;
-  word-wrap: break-word;
 
   .divider-stroke {
     width: 1px;
@@ -16,15 +15,17 @@
 
   }
 
+  .contents-wrap {
+    max-width: 960px;
+    padding: 100px 0;
+    margin: 0 auto;
+  }
+
   .section-company-info {
     background-color: #fafafa;
-    width: 100%;
     height: auto;
     color: #333333;
     font-weight: 600;
-
-    .container {
-      padding: 100px 30px;
 
       .company-info-wrap {
         text-align: center;
@@ -53,6 +54,17 @@
           .sns-link {
             font-size: 2em;
 
+            &:hover {
+              color: #4A90E2;
+            }
+
+          }
+          .mail_link {
+            font-size: 0.9em;
+
+            &:hover {
+              color: #4A90E2;
+            }
           }
 
         }
@@ -62,17 +74,12 @@
 
 
 
-  }
-
   .section-consult {
     background-color: #333333;
     width: 100%;
     height: auto;
     color: #fafafa;
     font-weight: 300;
-
-    .container {
-      padding: 100px 30px;
 
       .consult-wrap {
         text-align: center;
@@ -111,16 +118,9 @@
       }
 
 
-
-    }
-
-
-
   }
 
-
   @media #{$medium-and-up} { // 640
-
 
     .divider-stroke {
       width: 1px;
@@ -130,6 +130,7 @@
 
     }
 
+
     .section-company-info {
       background-color: #fafafa;
       width: 100%;
@@ -137,9 +138,9 @@
       color: #333333;
       font-weight: 600;
       font-size: 0.9em;
+      padding: 100px 30px;
 
-      .container {
-        padding: 100px 30px;
+      .contents-wrap {
 
         .company-info-wrap {
           text-align: center;
@@ -172,12 +173,7 @@
 
           }
         }
-
-
-
       }
-
-
 
     }
 
@@ -188,8 +184,8 @@
       color: #fafafa;
       font-weight: 300;
 
-      .container {
-        padding: 100px 30px;
+      .contents-wrap {
+
 
         .consult-wrap {
           text-align: center;
@@ -225,28 +221,21 @@
 
           }
         }
-
       }
-
-
 
     }
 
-
   }
-
-  // table
-  @media #{$large-and-up} { // 993
-
-
-  }
-
-  // desktop
-  @media #{$extra-large-and-up} { // 1200
-
-  }
-
-
-
 
 }
+
+// table
+@media #{$large-and-up} { // 993
+
+}
+
+// desktop
+@media #{$extra-large-and-up} { // 1200
+
+}
+

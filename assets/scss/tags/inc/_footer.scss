@@ -175,7 +175,7 @@
   @media #{$large-and-up} { // 993
 
     .container {
-      padding: 50px 0 0;
+      padding: 50px 0;
       margin: 0 auto;
 
       .row {
@@ -216,29 +216,27 @@
 
         }
 
-        .footer-nav {
+        h5.footer-nav-title {
+          font-family: 'Overpass Mono', monospace, sans-serif;
+          font-size: 1em;
+          color: #F8E71C;
+        }
 
-          h5.footer-nav-title {
-            font-family: 'Overpass Mono', monospace, sans-serif;
-            font-size: 1em;
-            color: #F8E71C;
-          }
+        ul.footer-nav-list {
+          -webkit-margin-before: 20px;
+          -webkit-margin-after: 20px;
+          line-height: 28px;
+          font-size: 1em;
 
-          ul.footer-nav-list {
-            -webkit-margin-before: 20px;
-            -webkit-margin-after: 20px;
-            line-height: 28px;
-            font-size: 1em;
 
-            a {
-              color: #fafafa;
-              font-family: NanumSquareOTF;
-              font-weight: 100;
-            }
-
+          a {
+            color: #fafafa;
+            font-family: NanumSquareOTF;
+            font-weight: 100;
           }
 
         }
+
       }
 
     }
@@ -256,7 +254,6 @@
   @media #{$extra-large-and-up} { // 1200
 
     .container {
-      padding: 50px 0 0;
 
       .footer-logo-wrap {
         margin-top: 0.82rem;

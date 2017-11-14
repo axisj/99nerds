@@ -1,8 +1,7 @@
-.sub-report {
-  @extend .font-nanum-square;
-  color: #333333;
 
   .section-report-header {
+    @extend .font-nanum-square;
+    color: #333333;
     background-color: #1E1E1E;
     position: relative;
     overflow: hidden;
@@ -113,8 +112,3 @@
   @media #{$extra-large-and-up} { // 1200
 
   }
-
-
-
-
-}

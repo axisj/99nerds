@@ -1,0 +1,113 @@
+<div module="board_writePackage_1002">
+
+    <div module="board_title_1002">
+        <div class="titleArea">
+            <h2>{$board_title}</h2>
+            <div class="block-line"></div>
+        </div>
+    </div>
+
+    <div class="board-write-wrap" module="board_write_1002">
+        <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <table border="1" summary="">
+            <caption>Write&nbsp;&nbsp;&nbsp;></caption>
+            <colgroup>
+                <col style="width:130px;"/>
+                <col style="width:auto;"/>
+            </colgroup>
+            <tbody class="middle">
+            <tr class="write-table-head">
+                <th scope="row">title</th>
+                <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+            </tr>
+            <tr class="{$config.is_login|display}">
+                <th scope="row">name</th>
+                <td>{$form.writer}</td>
+            </tr>
+            <tr class="{$config.use_write_email|display}">
+                <th scope="row">e-mail</th>
+                <td>{$form.email}</td>
+            </tr>
+            <tr class="{$config.is_use_point|display}">
+                <th scope="row">평점</th>
+                <td>{$form.point}</td>
+            </tr>
+            <tr class="gMerge">
+                <td colspan="2">
+                    {$form.content}
+                </td>
+            </tr>
+            <tr>
+                <th class="attachment" scope="row">UCC URL</th>
+                <td>{$form.ucc}</td>
+            </tr>
+
+            </tbody>
+
+
+            <tbody class="middle {$config.use_attach|display}">
+            <tr>
+                <th scope="row">첨부파일1</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일2</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일3</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일4</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일5</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            </tbody>
+
+            <tbody class="middle">
+            <tr class="{$config.use_password|display}">
+                <th class="attachment" scope="row">Password</th>
+                <td>{$form.password}</td>
+            </tr>
+            <tr class="{$config.use_secret|display}">
+                <th scope="row">비밀글설정</th>
+                <td>{$form.secure}</td>
+            </tr>
+            <tr class="{$config.use_captcha_write|display}">
+                <th scope="row">자동발송금지<br/>보안문자</th>
+                <td>
+                    {$captcha_image}{$captcha_refresh}
+                    <span class="gSingle">{$form.captcha} <img
+                            src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif"
+                            alt=""/><span
+                            class="txtSub11"> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></span>
+                </td>
+            </tr>
+            <tr class="top {$config.is_login|display}">
+                <th scope="row">개인정보 수집 및 <br/>이용 동의</th>
+                <td>
+                    {$form.privacy_agreement}
+                    <span class="gSingle">개인정보 수집 및 이용에 동의하십니까?<span class="gIndent">{$form.privacy_agreement_radio}</span></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonArea">
+                    <span class="gLeft">
+                        <a href="list.html{$param_list}" class="btnNormalB">list</a>
+                        <a href="list.html{$param_read}" class="btnNormalB {$config.is_admin|display}">관리자답변보기</a>
+                    </span>
+            <span class="gRight">
+                        <a href="{$action_write}" class="btnSubmitB">done</a>
+                    </span>
+        </div>
+    </div>
+</div>
