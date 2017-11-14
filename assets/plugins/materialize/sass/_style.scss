@@ -171,6 +171,8 @@ a.button-collapse.top-nav {
   a.button-collapse.top-nav {
     left: 5%;
   }
+
+
 }
 
 @media #{$medium-and-down} {
@@ -180,6 +182,10 @@ a.button-collapse.top-nav {
     a.page-title {
       font-size: 36px;
     }
+  }
+
+  .container {
+    width: 95%;
   }
 }
 
