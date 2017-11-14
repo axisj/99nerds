@@ -1,178 +1,72 @@
 .header-main-visual {
-
   color: #fafafa;
   //background-color: #1E1E1E;
-  background-image: url("/assets/images/landing_page/main_visual/main-bg.png");
+  background-image: url("/assets/images/landing_page/main_visual/main-bg-mobile.png");
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   height: 550px;
 
-  .main-title-text {
-    padding: 1px 0;
-    z-index: 2;
-    vertical-align: middle;
-    p {
-      display: inline-block;
-      -webkit-margin-before: 30px;
-      -webkit-margin-after: 0;
-      line-height: 55px;
-      font-size: 40px;
-      font-family: 'Overpass Mono', monospace;
-      font-weight: 600;
-      color: #fafafa;
-
-      img {
-        display: inline-block;
-        width: px;
-        position: relative;
-        bottom: 10px;
-        left: 20px;
-      }
-    }
-  }
-
-  .main-image-wrap {
-    position: relative;
-    bottom: 90px;
-    img {
-      width: 85%;
-      vertical-align: middle;
-      z-index: 1;
-    }
-  }
-
-  .keyword-links-wrap {
-    display: none;
-    z-index: 2;
-    width: 120%;
-    padding-right: 0;
-    margin-bottom: 0;
-    .keyword-card {
-      font-family: 'Overpass Mono', monospace;
-      font-weight: lighter;
-
-      @mixin keyword-card-box($color1, $color2) {
-        .keyword-card-title {
-          color: $color1;
-        }
-        .keyword-card-content {
-          a {
-            color: $color2;
-          }
-        }
-      }
-
-      .keyword-card-title {
-        font-size: 13px;
-      }
-      .keyword-card-content {
-        line-height: 11px;
-        font-size: 11px;
-        a {
-          float: left;
-          margin-right: 10px;
-          margin-bottom: 10px;
-        }
-        &:after {
-          content: '';
-          display: block;
-          clear: both;
-        }
-      }
-
-      &.type-0 {
-        @include keyword-card-box(#B8E986, #B8E986);
-      }
-      &.type-1 {
-        @include keyword-card-box(#7ED321, #7ED321);
-      }
-      &.type-2 {
-        @include keyword-card-box(#B4FF00, #B4FF00);
-      }
-      &.type-3 {
-        @include keyword-card-box(#E0F81C, #E0F81C);
-      }
-      &.type-4 {
-        @include keyword-card-box(#B4FF00, #B4FF00);
-      }
-
-    }
-
-  }
-
-  .ctn-button {
-    float: left;
-    border: 1px solid #F8E71C;
-    border-radius: 40px;
-    box-sizing: border-box;
-    position: relative;
-    bottom: 200px;
-    vertical-align: middle;
-    text-align: center;
-    width: 160px;
-    height: 40px;
-    margin-top: 90px;
-
-    a {
-      line-height: 40px;
-      font-size: 16px;
-      font-family: 'Overpass Mono', monospace;
-      font-weight: 700;
-      color: #fafafa;
-    }
-  }
-
-
-  @media #{$medium-and-up} { // 640
-
-  }
-
-
-  @media #{$large-and-up} { // 993
+  .row {
+    margin-left: 0;
+    margin-right: 0;
 
     .main-title-text {
-      padding: 1px 0;
+      padding: 30px 0;
       z-index: 2;
       vertical-align: middle;
+      text-align: center;
+
       p {
         display: inline-block;
         -webkit-margin-before: 30px;
         -webkit-margin-after: 0;
-        line-height: 55px;
-        font-size: 40px;
-        font-family: 'Overpass Mono', monospace;
+        text-align: center;
+        font-size: 2em;
+        line-height: 1.7em;
+        @extend .font-mono;
         font-weight: 600;
         color: #fafafa;
+        margin: 0 auto;
 
         img {
           display: inline-block;
-          width: 70px;
+          width: 30px;
           position: relative;
           bottom: 10px;
-          left: 20px;
+          left: 10px;
+        }
+
+        span {
+          border-radius: 40px;
+          background-color: rgba(250, 250, 250, 0.1);
+          padding: 3px 15px;
         }
       }
     }
 
     .main-image-wrap {
-      position: relative;
-      bottom: 90px;
+      width: 200px;
+      margin: 40px auto 50px;
+
       img {
-        width: 85%;
+        width: 75%;
+        display: block;
+        margin: 0 auto;
         vertical-align: middle;
         z-index: 1;
       }
     }
 
     .keyword-links-wrap {
-
+      display: none;
       z-index: 2;
       width: 120%;
       padding-right: 0;
       margin-bottom: 0;
+
       .keyword-card {
-        font-family: 'Overpass Mono', monospace;
+        @extend .font-mono;
         font-weight: lighter;
 
         @mixin keyword-card-box($color1, $color2) {
@@ -225,17 +119,14 @@
     }
 
     .ctn-button {
-      float: left;
       border: 1px solid #F8E71C;
-      border-radius: 5px;
+      border-radius: 40px;
       box-sizing: border-box;
-      position: relative;
-      bottom: 200px;
       vertical-align: middle;
       text-align: center;
       width: 160px;
       height: 40px;
-      margin-top: 90px;
+      margin: 0 auto;
 
       a {
         line-height: 40px;
@@ -248,118 +139,128 @@
 
   }
 
+  @media #{$medium-and-up} { // 600
+
+    .row {
+      .main-title-text {
+
+        p {
+          font-size: 2.5em;
+
+          img {
+            display: inline-block;
+            width: 50px;
+            position: relative;
+            bottom: 10px;
+            left: 20px;
+          }
+        }
+      }
+
+      .main-image-wrap {
+        margin: 20px auto 40px;
+
+        img {
+          width: 85%;
+        }
+      }
+    }
+
+  }
+
+  @media #{$large-and-up} { // 993
+    color: #fafafa;
+    //background-color: #1E1E1E;
+    background-image: url("/assets/images/landing_page/main_visual/main-bg.png");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 550px;
+
+    .row {
+
+      .main-title-text {
+        padding: 50px 0 10px;
+        text-align: left;
+
+        p {
+          line-height: 55px;
+          font-size: 3.5em;
+          text-align: left;
+
+          img {
+            display: inline-block;
+            width: 70px;
+            position: relative;
+            bottom: 10px;
+            left: 20px;
+          }
+
+          span {
+            background-color: transparent;
+            padding: 0;
+          }
+        }
+      }
+
+      .main-image-wrap {
+        float: right;
+        position: relative;
+        width: 220px;
+        bottom: 120px;
+        margin-right: 80px;
+
+        img {
+          width: 100%;
+          vertical-align: middle;
+          z-index: 1;
+        }
+
+      }
+
+      .keyword-links-wrap {
+        display: table;
+        z-index: 2;
+        width: 120%;
+        padding-right: 0;
+        margin-bottom: 40px;
+
+        .keyword-card {
+
+          .keyword-card-title {
+            font-size: 13px;
+          }
+          .keyword-card-content {
+            line-height: 11px;
+            font-size: 11px;
+            a {
+              float: left;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+            &:after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+          }
+
+
+        }
+
+      }
+
+      .ctn-button {
+        float: left;
+      }
+
+    }
+  }
 
   @media #{$extra-large-and-up} { // 1200
 
-    .main-title-text {
-      padding: 1px 0;
-      p {
-        -webkit-margin-before: 30px;
-        -webkit-margin-after: 15px;
-        line-height: 61px;
-        font-size: 48px;
-        font-family: 'Overpass Mono', monospace;
-        font-weight: 600;
-        color: #fafafa;
 
-        img {
-          display: inline-block;
-          width: 70px;
-          position: relative;
-          bottom: 10px;
-          left: 20px;
-        }
-      }
-    }
-
-    .main-image-wrap {
-      position: relative;
-      bottom: 120px;
-      img {
-        vertical-align: middle;
-        z-index: 1;
-      }
-    }
-
-    .keyword-links-wrap {
-
-      z-index: 2;
-      width: 120%;
-      padding-right: 0;
-
-      .keyword-card {
-        font-family: 'Overpass Mono', monospace;
-        font-weight: lighter;
-        @mixin keyword-card-box($color1, $color2) {
-          .keyword-card-title {
-            color: $color1;
-          }
-          .keyword-card-content {
-            a {
-              color: $color2;
-            }
-          }
-        }
-
-        .keyword-card-title {
-          font-size: 14px;
-        }
-        .keyword-card-content {
-          font-size: 11px;
-          a {
-            float: left;
-            margin-right: 10px;
-            margin-bottom: 10px;
-          }
-          &:after {
-            content: '';
-            display: block;
-            clear: both;
-          }
-        }
-
-        &.type-0 {
-          @include keyword-card-box(#B8E986, #B8E986);
-        }
-        &.type-1 {
-          @include keyword-card-box(#7ED321, #7ED321);
-        }
-        &.type-2 {
-          @include keyword-card-box(#B4FF00, #B4FF00);
-        }
-        &.type-3 {
-          @include keyword-card-box(#E0F81C, #E0F81C);
-        }
-        &.type-4 {
-          @include keyword-card-box(#B4FF00, #B4FF00);
-        }
-
-      }
-
-    }
-
-    .ctn-button {
-      float: left;
-      border: 1px solid #F8E71C;
-      border-radius: 5px;
-      box-sizing: border-box;
-      position: relative;
-      bottom: 200px;
-      vertical-align: middle;
-      text-align: center;
-      width: 160px;
-      height: 40px;
-
-      a {
-        line-height: 40px;
-        font-size: 16px;
-        font-family: 'Overpass Mono', monospace;
-        font-weight: 700;
-        color: #fafafa;
-      }
-    }
 
   }
-
 
 }
