@@ -410,6 +410,7 @@
         color: #fafafa;
         .info-title {
           color: #F8E71C;
+          @extend .font-mono;
         }
         .info-block-line {
           background-color: #F8E71C;
@@ -539,7 +540,7 @@
     .section-info {
 
       h2.info-title {
-        font-size: 3em;
+        font-size: 3.4em;
 
         .ci {
           font-size: 1.2em;
@@ -717,6 +718,8 @@
     .best-product {
 
       .best-product-list-wrap {
+        background-color: transparent;
+        padding: 10px 0;
 
         .best-product-list {
 
@@ -755,6 +758,7 @@
       .info-wrapper {
 
         h2.info-title {
+          padding: 20px 0;
 
         }
 
@@ -763,11 +767,12 @@
         }
 
         h3.info-sub-title {
+          padding: 30px 0;
 
         }
 
         p {
-          margin: 0 0 20px;
+          margin: 10px 0 50px;
           display: inline-block;
           width: 500px;
         }
@@ -833,7 +838,7 @@
         .best-quality-image {
           display: block;
           float: right;
-          margin-top: 40px;
+          margin-top: 60px;
         }
 
         //Support report
