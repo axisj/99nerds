@@ -122,10 +122,10 @@
 
 
       span.gRight {
-        background-color: $list-button-color;
+        //background-color: $list-button-color;
         @extend .font-ubuntu;
         padding: 10px;
-        border-radius: 5px;
+       //border-radius: 5px;
 
         a.btnSubmitB {
           color: $list-white-font-color;
