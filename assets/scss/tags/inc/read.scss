@@ -104,6 +104,50 @@
 
     }
 
+    .comment-list-wrap {
+      .xans-board-commentlist {
+        border:0;
+
+        ul.boardComment {
+        border: 0;
+        border-radius: 5px;
+          background-color: $list-body-background;
+
+        li {
+          border-top: 0;
+
+          .writer {
+            background-color: $list-header-background;
+            border-bottom: 0;
+            border-radius: 5px 5px 0 0;
+
+            strong {
+              font-weight: 600;
+            }
+
+          }
+
+          .button {
+            line-height: 38px;
+            top: 0;
+
+            a {
+              border-radius: 5px;
+              background-color: $list-button-color;
+              color: $list-white-font-color;
+              padding: 5px;
+              margin-left: 5px;
+
+            }
+          }
+        }
+
+      }
+      }
+
+
+    }
+
     .list-movement {
       ul {
 

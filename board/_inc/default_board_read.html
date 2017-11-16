@@ -80,9 +80,9 @@
                     </span>
             <span class="gRight">
                         <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">삭제</a>
-                        <a href="/board/default/modify.html{$param_modify}"
+                        <a href="/board/sub-notice_default/modify.html{$param_modify}"
                            class="btnEmB {$modify_button_auth|display}">수정</a>
-                        <a href="/board/default/reply.html{$param_reply}"
+                        <a href="/board/sub-notice_default/reply.html{$param_reply}"
                            class="btnEmB {$reply_button_auth|display}">답변</a>
                     </span>
         </div>
@@ -90,7 +90,7 @@
 </div>
 
 
-<div module="board_CommentPackage_1002" class="mid-0">
+<div module="board_CommentPackage_1002" class="mid-0 comment-list-wrap">
     <!--@css(/css/module/board/commentPackage.css)-->
     <!-- 코멘트 리스트 -->
     <div module="board_commentlist_1002">
@@ -154,7 +154,7 @@
                 src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_page_prev.gif" alt="이전 페이지"/></a>
         </p>
         <ol>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>ㅋ
             <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
         </ol>
         <p><a href="{$param_next}"><img

@@ -10,26 +10,31 @@
 
 @import "addon/ax5ui";
 
+
 // pages
+
 @import "pages/index";
-
-@import "tags/index";
-
-
-
 @import "pages/sub-about";
 @import "pages/sub-notice";
 @import "pages/sub-report";
 
-@import "pages/layout-customer";
+@import "pages/_inc/notice-visual";
+@import "pages/_inc/customer-visual";
+
+
+@import "pages/_inc/customer-visual";
 @import "pages/layout-product";
 
-@import "pages/cutomer-main";
-
+@import "pages/sub-cutomer-main";
 @import "pages/product-main";
+
+
+//tags
+
+@import "tags/index";
 
 @import "tags/inc/read";
 @import "tags/inc/list";
+@import "tags/inc/gallary-list";
 @import "tags/inc/write";
 
-@import "pages/_inc/notice-visual";

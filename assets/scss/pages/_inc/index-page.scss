@@ -318,9 +318,8 @@
     .info-wrapper {
       position: relative;
 
-      //&nbsp 해결안됨
       img {
-        width: 350px;
+        width: 100%;
         padding: 20px 0 40px;
         line-height: 0;
         font-size: 0;
@@ -563,6 +562,14 @@
     .sub-info-section {
 
       .info-wrapper {
+
+
+        img {
+          width: 80%;
+          padding: 20px 0 40px;
+          line-height: 0;
+          font-size: 0;
+        }
 
         //The best quality - section
 

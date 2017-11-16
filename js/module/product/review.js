@@ -99,7 +99,7 @@ var REVIEW = {
                     aHtml.push('<p>'+sImg+'</p>');
                     aHtml.push('<p class="buttonArea"><span class="gRight">');
                     if (data.write_auth == true) {
-                        aHtml.push('<a href="/board/product/modify.html?board_act=edit&no='+data.no+'&board_no=4&link_product_no='+iProductNo+'" class="btnNormal">게시글 수정하기</a>');
+                        aHtml.push(''+data.no+'<a href="/board/old-product/modify.html?board_act=edit&no=&board_no=4&link_product_no=" class="btnNormal">게시글 수정하기</a>'+iProductNo+'');
                     }
                     aHtml.push('</span></p>');
                     aHtml.push('</div>');

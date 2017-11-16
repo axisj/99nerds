@@ -9,8 +9,7 @@
     width: 1px;
     height: 100px;
     background-color: #7ED321;
-    margin: 0 auto;
-    margin-top: 170px;
+    margin: 170px auto 0;
     display: none;
 
   }
@@ -79,7 +78,7 @@
     width: 100%;
     height: auto;
     color: #fafafa;
-    font-weight: 300;
+    font-weight: 400;
 
       .consult-wrap {
         text-align: center;
@@ -97,10 +96,11 @@
         }
 
         a {
+          @extend .font-ubuntu;
           display: block;
           color: #fafafa;
-          font-size: 1.8em;
-          font-weight: 400;
+          font-size: 1.5em;
+          font-weight: 300;
           margin: 1.78rem 0 1.424rem 0;
           padding: 15px 0;
 
@@ -111,9 +111,11 @@
         }
 
         p {
+          width: 90%;
+          margin: 0 auto;
           font-size: 1.2em;
           padding: 0 15px;
-
+          font-weight: 300;
         }
       }
 
@@ -138,7 +140,7 @@
       color: #333333;
       font-weight: 600;
       font-size: 0.9em;
-      padding: 100px 30px;
+
 
       .contents-wrap {
 
@@ -205,7 +207,6 @@
           a {
             display: block;
             color: #fafafa;
-            font-size: 1.8em;
             font-weight: 400;
             margin: 1.78rem 0 1.424rem 0;
             padding: 15px 0;

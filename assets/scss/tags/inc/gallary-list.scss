@@ -1,0 +1,170 @@
+$list-header-background: #eeeeee;
+$list-body-background: #fafafa;
+$list-important-background: rgba(238, 238, 238, 0.7);
+
+$list-header-font-color: #717171;
+$list-body-font-color: #9B9B9B;
+$list-button-color: #333333;
+$list-white-font-color: #fafafa;
+
+.mid-0 {
+
+  .notice {
+    border: 0;
+  }
+
+  .buttonArea {
+    margin: 30px 0 20px;
+
+    span.gRight {
+      background-color: $list-button-color;
+      @extend .font-ubuntu;
+      padding: 10px;
+      border-radius: 5px;
+
+      a.btnSubmitB {
+        color: $list-white-font-color;
+
+      }
+    }
+  }
+
+
+  #boardSearchForm {
+    display: block;
+
+    .mid-0 {
+
+      fieldset.list-search {
+        border: none;
+        margin: 0;
+        padding: 0;
+        p {
+          text-align: center;
+          select {
+            width: auto;
+            height: 30px;
+            margin-right: 10px;
+            background-color: $list-body-background;
+          }
+
+          a.btnEm {
+            @extend .font-ubuntu;
+            height: 30px;
+            padding: 10px;
+            background-color: $list-button-color;
+            color: $list-white-font-color;
+            border-radius: 5px;
+            margin-right: 10px;
+          }
+
+          input {
+            width: 150px;
+            height: 30px;
+            box-shadow: none;
+            border: 1px solid #eeeeee;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: $list-body-background;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  ul.prdList {
+    li {
+      height: 150px;
+      width: 20%;
+      height: 150px;
+      padding: 20px;
+      vertical-align: middle;
+      line-height: 150px;
+
+        a {
+          img {
+            border: 0;
+          }
+        }
+
+
+    }
+  }
+
+}
+
+
+
+.paginate {
+  margin: 0 auto;
+  display: table;
+
+  p {
+    display: table;
+    float: left;
+
+    img {
+      width: 25px;
+
+    }
+  }
+
+  ol {
+    display: table;
+    -webkit-padding-start: 0;
+    float: left;
+    padding: 0 30px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+}
+
+
+
+//mobile
+@media #{$medium-and-up} { // 640
+
+}
+
+// table
+@media #{$large-and-up} { // 993
+
+  .mid-0 {
+
+    .buttonArea {
+      display: inline-block;
+      margin: 30px 0;
+
+    }
+
+    #boardSearchForm {
+      float: right;
+      margin: 0;
+
+      .mid-0 {
+
+        fieldset.list-search {
+          margin: 0 2px;
+          padding: 0.35em 0.625em 0.75em;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
+// desktop
+@media #{$extra-large-and-up} { // 1200
+
+}

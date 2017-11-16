@@ -1,5 +1,5 @@
 /*
- * Á¦ÀÛ : http://designblack.com
+ * ï¿½ï¿½ï¿½ï¿½ : http://designblack.com
  */
 
 $(document).ready(function(){
@@ -152,7 +152,7 @@ function setCategory(){
 	})();
     
     
-    //ÁßºÐ·ù Ä«Å×°í¸®
+    //ï¿½ßºÐ·ï¿½ Ä«ï¿½×°ï¿½
     (function(){
         var $this=$('.menuCategory');
         if($this.length>0){

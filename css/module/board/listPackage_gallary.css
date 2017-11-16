@@ -7,7 +7,7 @@
 .mid-0 ul.xans-board-listheader li { display:inline; }
 
 /* 공지글, 고정글 */
-.mid-0.xans-board-listpackage-8 .notice { border:1px solid #d7d5d5; border-bottom:0; }
+.mid-0.xans-board-listpackage-8 .notice { border-bottom:0; }
 .mid-0.xans-board-listpackage-8 .notice li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; *zoom:1; }
 .mid-0.xans-board-listpackage-8 .notice li:after { content:""; display:block; clear:both; }
 .mid-0.xans-board-listpackage-8 .notice li .imgLink { float:left; }
@@ -20,7 +20,7 @@
 .mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList { display:table; width:100%; margin:0; font-size:0; line-height:0; }
 .mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item { display:inline-block; margin:20px 0; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
 .mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box { margin:0 auto; line-height:1.5; text-align:left; }
-.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box .thumb { display:block; height:200%; max-width:100%; border:1px solid #ececec; }
+.mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box .thumb { display:block; height:200%; max-width:100%;}
 .mid-0.xans-board-listpackage-8 .xans-board-list-8 ul.prdList li.item .box .boardChk { display:block; margin:10px auto; }
 
 /* 일반글 진열방식 */

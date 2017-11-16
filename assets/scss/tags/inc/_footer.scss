@@ -1,4 +1,3 @@
-
 [data-page="footer"] {
   background: #1E1E1E;
   padding-top: 0;
@@ -12,7 +11,7 @@
       margin-bottom: 0;
 
       .footer-logo-wrap {
-        margin-top: 0.82rem;
+        margin-top: 50px;
 
         img {
           width: 50px;
@@ -39,7 +38,7 @@
         p.company-info-contents {
           color: #fafafa;
           font-size: 1.1em;
-          font-family: nanum NanumSquareOTF sans-serif;
+          @extend .font-nanum-square;
           font-weight: 100;
           padding: 15px 0;
           margin: 0;
@@ -61,8 +60,8 @@
         margin: 0 auto;
 
         h5.footer-nav-title {
-          font-family: 'Overpass Mono', monospace, sans-serif;
-          font-size: 1.1em;
+         @extend .font-mono;
+          font-size: 1em;
           color: #F8E71C;
           text-align: center;
           line-height: 1.5em;
@@ -72,7 +71,7 @@
           -webkit-margin-before: 20px;
           -webkit-margin-after: 20px;
           line-height: 28px;
-          font-size: 1.1em;
+          font-size: 1em;
           text-align: center;
 
           li.contact-link {
@@ -83,7 +82,7 @@
 
           a {
             color: #fafafa;
-            font-family: NanumSquareOTF;
+            @extend .font-nanum-square;
             font-weight: 100;
           }
 
@@ -92,7 +91,6 @@
       }
 
     }
-
 
   }
 
@@ -104,7 +102,7 @@
 
     a {
       color: #9B9B9B;
-      font-family: 'Overpass Mono', monospace, sans-serif;
+      @extend .font-mono;
       font-weight: 100;
       font-size: 8px;
     }
@@ -128,7 +126,6 @@
         h5.company-info-title {
           padding: 10px 0;
           font-size: 18px;
-          font-family: "BM DoHyeon OTF", sans-serif;
           font-weight: 100;
           line-height: 16px;
 
@@ -155,18 +152,8 @@
 
         ul.footer-nav-list {
 
-
-
         }
       }
-    }
-
-    .footer-copyright {
-
-      a {
-
-      }
-
     }
 
   }
@@ -179,6 +166,11 @@
       margin: 0 auto;
 
       .row {
+
+        .footer-logo-wrap {
+          margin-top: 15px;
+
+        }
 
         .company-info-wrap {
           margin-left: 15px;
@@ -211,8 +203,7 @@
         }
 
         h5.footer-nav-title {
-          font-family: 'Overpass Mono', monospace, sans-serif;
-          font-size: 1em;
+          font-size: 1.1em;
           color: #F8E71C;
         }
 
@@ -220,12 +211,10 @@
           -webkit-margin-before: 20px;
           -webkit-margin-after: 20px;
           line-height: 28px;
-          font-size: 1em;
-
+          font-size: 1.1em;
 
           a {
             color: #fafafa;
-            font-family: NanumSquareOTF;
             font-weight: 100;
           }
 
@@ -249,55 +238,52 @@
 
     .container {
 
-      .footer-logo-wrap {
-        margin-top: 0.82rem;
+      .row {
 
-        img {
-          width: 80%;
-          margin: 0 auto;
+        .footer-logo-wrap {
+
+          img {
+            width: 80%;
+            margin: 0 auto;
+          }
         }
-      }
 
-      h5.company-info-title {
-        color: #ffffff;
+        h5.company-info-title {
+          color: #ffffff;
 
-        font-family: "BM DoHyeon OTF", sans-serif;
-        font-weight: 100;
-        line-height: 16px;
-
-      }
-
-
-      p.company-info-contents {
-        color: #fafafa;
-        opacity: 50%;
-
-        font-family: nanum NanumSquareOTF sans-serif;
-        font-weight: 100;
-        margin: 15px 0;
-        line-height: 20px;
-      }
-
-      h5.footer-nav-title {
-        font-family: 'Overpass Mono', monospace, sans-serif;
-
-        color: #F8E71C;
-      }
-
-      ul.footer-nav-list {
-        -webkit-margin-before: 20px;
-        -webkit-margin-after: 20px;
-        line-height: 28px;
-
-
-        a {
-          color: #fafafa;
-          font-family: NanumSquareOTF;
+          font-family: "BM DoHyeon OTF", sans-serif;
           font-weight: 100;
+          line-height: 16px;
+
+        }
+
+        p.company-info-contents {
+          color: #fafafa;
+          opacity: 50%;
+
+          font-family: nanum NanumSquareOTF sans-serif;
+          font-weight: 100;
+          margin: 15px 0;
+          line-height: 20px;
+        }
+
+        h5.footer-nav-title {
+          font-size: 1em;
+        }
+
+        ul.footer-nav-list {
+          font-size: 1em;
+          -webkit-margin-before: 20px;
+          -webkit-margin-after: 20px;
+          line-height: 28px;
+
+          a {
+            font-weight: 100;
+          }
+
         }
 
       }
-
     }
 
     .footer-copyright {

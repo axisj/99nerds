@@ -1,5 +1,5 @@
 .notice-board {
-  padding: 100px 0;
+  padding: 50px 0;
   font-size: 1em;
 
   $list-header-background: #eeeeee;
@@ -12,6 +12,11 @@
   $list-white-font-color: #fafafa;
 
   .list-wrap {
+    .boardSort {
+      padding-bottom: 30px;
+      width: 130px;
+    }
+
     table {
 
       thead.list-header {
@@ -24,8 +29,8 @@
           border-bottom: 0;
           border-radius: 10px 10px 0 0;
         }
-        tr {
 
+        tr {
           background-color: $list-header-background;
 
           .list-header-no {
