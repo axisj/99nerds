@@ -127,7 +127,7 @@
         @extend .font-ubuntu;
 
         .product-image-wrap {
-          width: 80%;
+          width: 100%;
           height: 120px;
           margin: 10px auto;
 
@@ -329,7 +329,7 @@
   }
 
   .sub-info-section {
-    padding: 100px 30px;
+    padding: 50px 0;
     position: relative;
 
     .info-wrapper {
@@ -764,19 +764,14 @@
       .info-wrapper {
 
         h2.info-title {
-          padding: 20px 0;
 
         }
-
         .info-block-line {
           margin: 0;
         }
-
         h3.info-sub-title {
-          padding: 30px 0;
 
         }
-
         p {
           margin: 10px 0 50px;
           display: inline-block;
