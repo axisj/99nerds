@@ -132,6 +132,42 @@
       }
 
     }
+
+
+  }
+
+  //exchange
+  .helpTheme {
+    padding: 100px 0;
+
+    .content {
+      padding: 20px;
+      background-color: #EEEEEE;
+      border-radius: 10px;
+
+      h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      h4 {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+      ul {
+        margin-bottom: 50px;
+        line-height: 1.7em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        li {
+          color: #757575;
+          font-weight: 300;
+        }
+      }
+    }
   }
 
   .xans-myshop-orderhistorypaging {
