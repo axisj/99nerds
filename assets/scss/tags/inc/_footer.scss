@@ -60,11 +60,13 @@
         margin: 0 auto;
 
         h5.footer-nav-title {
-         @extend .font-mono;
+          @extend .font-mono;
           font-size: 1em;
           color: #F8E71C;
           text-align: center;
           line-height: 1.5em;
+          letter-spacing: 0.08em;
+
         }
 
         ul.footer-nav-list {
@@ -82,8 +84,9 @@
 
           a {
             color: #fafafa;
-            @extend .font-nanum-square;
+            @extend .font-ubuntu;
             font-weight: 100;
+            letter-spacing: 0.08em;
           }
 
         }
@@ -182,7 +185,7 @@
           }
 
           p.company-info-contents {
-            font-size: 1em;
+            font-size: 0.95em;
             font-weight: 100;
             line-height: 20px;
           }
@@ -216,6 +219,7 @@
           a {
             color: #fafafa;
             font-weight: 100;
+
           }
 
         }

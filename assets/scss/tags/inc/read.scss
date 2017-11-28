@@ -1,5 +1,7 @@
-.section-notice-read {
+.section-contents-wrap {
+
   @extend .font-nanum-square;
+
   $list-header-background: #eeeeee;
   $list-body-background: #fafafa;
   $list-important-background: rgba(238, 238, 238, 0.7);
@@ -80,25 +82,30 @@
         }
       }
 
-      .btnNormalB {
-         background-color: $list-button-color;
-         @extend .font-ubuntu;
-         padding: 10px;
-         border-radius: 5px;
-         color: $list-white-font-color;
-         margin: 30px 0;
-         display: inline-block;
+      .buttonArea {
+        font-weight: 100;
 
-       }
+        .btnNormalB {
+          background-color: $list-button-color;
+          @extend .font-ubuntu;
+          border-radius: 5px;
+          color: $list-white-font-color;
+          margin: 30px 5px 30px 0;
+          padding: 8px;
+          display: inline-block;
 
-      .btnEmB {
-        background-color: $list-button-color;
-        @extend .font-ubuntu;
-        padding: 10px;
-        border-radius: 5px;
-        color: $list-white-font-color;
-        margin: 30px 0;
-        display: inline-block;
+        }
+
+        .btnEmB {
+          background-color: $list-button-color;
+          @extend .font-ubuntu;
+          border-radius: 5px;
+          color: $list-white-font-color;
+          margin: 30px 5px 30px 0;
+          padding: 8px;
+          display: inline-block;
+
+        }
 
       }
 
@@ -106,46 +113,50 @@
 
     .comment-list-wrap {
       .xans-board-commentlist {
-        border:0;
+        border: 0;
 
         ul.boardComment {
-        border: 0;
-        border-radius: 5px;
+          border: 0;
+          border-radius: 5px;
           background-color: $list-body-background;
 
-        li {
-          border-top: 0;
+          li {
+            border-top: 0;
 
-          .writer {
-            background-color: $list-header-background;
-            border-bottom: 0;
-            border-radius: 5px 5px 0 0;
+            .writer {
+              background-color: $list-header-background;
+              border-bottom: 0;
+              border-radius: 5px 5px 0 0;
 
-            strong {
-              font-weight: 600;
-            }
-
-          }
-
-          .button {
-            line-height: 38px;
-            top: 0;
-
-            a {
-              border-radius: 5px;
-              background-color: $list-button-color;
-              color: $list-white-font-color;
-              padding: 5px;
-              margin-left: 5px;
+              strong {
+                font-weight: 600;
+              }
 
             }
+
+            .button {
+              font-weight: 100;
+              line-height: 38px;
+              top: 0;
+
+              a {
+                border-radius: 5px;
+                background-color: $list-button-color;
+                color: $list-white-font-color;
+                padding: 5px;
+                margin-left: 5px;
+
+              }
+            }
           }
+
         }
-
-      }
       }
 
-
+      .commentArea {
+        border: 0;
+        border-radius: 5px;
+      }
     }
 
     .list-movement {

@@ -100,7 +100,7 @@ var QNA = {
                     aHtml.push('<p>'+sImg+'</p>');
                     aHtml.push('<p class="btnArea">');
                     if (data.write_auth == true) {
-                        aHtml.push(''+data.no+'<a href="/board/old-product/modify.html?board_act=edit&no=&board_no=6&link_product_no="><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_board_modify.gif" alt="게시글 수정하기" /></a>'+iProductNo+'');
+                        aHtml.push(''+data.no+'<a href="/board/sub-product-review/modify.html?board_act=edit&no=&board_no=6&link_product_no="><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_board_modify.gif" alt="게시글 수정하기" /></a>'+iProductNo+'');
                     }
                     aHtml.push('</p>');
                     aHtml.push('</div>');

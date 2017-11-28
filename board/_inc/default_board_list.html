@@ -142,14 +142,18 @@
 
 
     <div module="board_paging_1002" class="paginate mid-0">
-        <p>
-            <a href="{$param_prev}"><img src="/assets/images/sub-notice/prev.png" alt="이전 페이지"/></a>
+
+        <p><a href="{$param_prev}"><img src="/assets/images/sub-notice/prev.png"
+                                        alt="이전 페이지"/></a>
         </p>
         <ol>
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
             <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
         </ol>
         <p><a href="{$param_next}"><img src="/assets/images/sub-notice/next.png"
                                         alt="다음 페이지"/></a></p>
+
+
     </div>
 
 

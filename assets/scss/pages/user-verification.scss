@@ -1,0 +1,143 @@
+.section-log-in {
+
+  .xans-member-passwordverification {
+    border-radius: 10px;
+    width: 70%;
+    height: 410px;
+    background: #fafafa;
+    padding: 30px;
+    margin: 100px auto;
+
+    .memberArea {
+      border: none;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      legend {
+        padding: 20px;
+        @extend .font-ubuntu;
+        font-size: 2em;
+        font-weight: 600;
+      }
+
+      ul {
+        padding: 0 0 30px;
+
+        li {
+
+          .term {
+            text-align: left;
+          }
+
+            span.desc {
+              .btnNormal {
+                color: #fafafa;
+                background: #54acd2;
+                padding: 10px;
+                margin-left: 5px;
+                border-radius: 5px;
+                font-weight: 100;
+              }
+
+              label {
+                margin-right: 10px;
+              }
+
+            }
+
+          }
+        }
+
+        .desc {
+          overflow: auto;
+          text-align: left;
+          dt {
+
+          }
+          dd {
+            #searchType {
+              width: 100%;
+            }
+            .gSingle {
+              label {
+                margin-top: 10px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+
+        .gTriple {
+          #member_id {
+            width: 100%;
+          }
+
+          #name_view {
+            dd {
+              input {
+                width: 100%;
+              }
+
+            }
+          }
+
+          #email_view {
+            dd {
+              input {
+                width: 100%;
+              }
+
+            }
+          }
+        }
+
+      }
+
+      .buttonArea {
+        a {
+          @extend .font-nanum-square;
+          background: #333;
+          border-radius: 5px;
+          color: #fafafa;
+          padding: 10px;
+          display: block;
+          width: 100%;
+          font-weight: 400;
+          font-size: 1.1em;
+          text-align: center;
+
+        }
+      }
+
+    }
+
+  }
+
+  @media #{$medium-and-up} { // 640
+
+    .find-id-wrap {
+      width: 60%;
+
+    }
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+    .find-id-wrap {
+      width: 650px;
+
+    }
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+  }
+
+
+
+

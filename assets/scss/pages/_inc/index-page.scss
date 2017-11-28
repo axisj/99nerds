@@ -173,7 +173,7 @@
           margin: 10px auto;
 
           .icon {
-            img {
+            .icon_img {
               float: left;
               padding-right: 5px;
               height: 15px;
@@ -496,7 +496,7 @@
             margin: 10px auto;
 
             .icon {
-              img {
+              .icon_img {
                 float: left;
                 padding-right: 5px;
                 height: 15px;
@@ -562,7 +562,6 @@
     .sub-info-section {
 
       .info-wrapper {
-
 
         img {
           width: 80%;
@@ -846,6 +845,7 @@
           display: block;
           float: right;
           margin-top: 60px;
+          width: 440px;
         }
 
         //Support report

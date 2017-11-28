@@ -5,7 +5,7 @@
   z-index: 1;
   height: 70px;
   display: none;
-  padding-top: 10px;
+  padding-top: 15px;
 
   ul {
     padding: 0;
@@ -55,6 +55,27 @@
 
   }
 
+  ul.right {
+    //display: none;
+    li {
+      a.quick-account {
+
+      }
+
+      .log-in {
+        &:hover {
+          color: #FDDE00;
+        }
+      }
+      .sign-up {
+        &:hover {
+          color: #7ED321;
+        }
+      }
+
+    }
+
+  }
   //mobile
   @media #{$medium-and-up} { // 640
 

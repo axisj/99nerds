@@ -101,11 +101,11 @@
             <ul class="prdList column5 wyImgSizeFlex">
                 <li class="item">
 
-                    <a href="{$link_board_detail}"><div class="request-image-wrap"><img src="{$img_src}"
+                    <a href="read.html{$param_read}"><div class="request-image-wrap"><img src="{$img_src}"
                                                         onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
                                                         alt="" class="thumb"/></div></a>
                     {$checkbox}
-                    <a href="{$link_board_detail}">[{$no}] {$subject} {$comment_count}</a>
+                    <a href="read.html{$param_read}">[{$no}] {$subject} {$comment_count}</a>
                     <span class="txtSub11 gTriple">
                             작성자 : {$member_icon}{$writer}<br/>
                             작성일 : {$write_date}
@@ -114,11 +114,11 @@
                 </li>
                 <li class="item">
 
-                    <a href="{$link_board_detail}"><div class="request-image-wrap"><img src="{$img_src}"
+                    <a href="read.html{$param_read}"><div class="request-image-wrap"><img src="{$img_src}"
                                                         onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
                                                                                         alt="" class="thumb"/></div></a>
                     {$checkbox}
-                    <a href="{$link_board_detail}">[{$no}] {$subject} {$comment_count}</a>
+                    <a href="read.html{$param_read}">[{$no}] {$subject} {$comment_count}</a>
                     <span class="txtSub11 gTriple">
                             작성자 : {$member_icon}{$writer}<br/>
                             작성일 : {$write_date}
@@ -164,6 +164,8 @@
         </ol>
         <p><a href="{$param_next}"><img src="/assets/images/sub-notice/next.png"
                                         alt="다음 페이지"/></a></p>
+
+
     </div>
 
 

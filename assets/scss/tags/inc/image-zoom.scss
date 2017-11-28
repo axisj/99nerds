@@ -1,0 +1,171 @@
+
+  .popup {
+    .xans-product-zoompackage {
+
+      .content {
+
+        .xans-product-zoom {
+
+          .imgArea {
+            .keyImg {
+
+              .prdImg {
+                img {
+                  border: none;
+                }
+
+              }
+
+              span {
+                a {
+                  img {
+                    border: none;
+                  }
+                }
+
+              }
+            }
+          }
+
+          .infoArea {
+
+            #totalProducts {
+              margin: 50px 0 0;
+              border-collapse: collapse;
+              border-spacing: 0;
+              border-color: transparent;
+
+              table {
+
+                thead {
+                  border-bottom: none;
+                }
+
+                tbody {
+
+                  tr {
+                    td {
+                      border-top: none;
+                      line-height: 40px;
+
+                      a {
+                        display: block;
+                        float: left;
+                        img {
+                          height: 40px;
+                        }
+                      }
+
+                      span.quantity {
+                        height: 40px;
+                        display: block;
+                        float: left;
+                        text-align: center;
+                        background-color: #EEEEEE;
+
+                        input#quantity {
+                          border: none;
+                          box-shadow: none;
+                          height: 40px;
+                          text-align: center;
+                          margin: 0 auto;
+                          font-weight: 600;
+                        }
+                      }
+                    }
+
+                    td.txtStrong12B {
+                      @extend .font-ubuntu;
+                      font-weight: 600;
+                      font-size: 1em;
+                      line-height: 40px;
+                      padding: 0 20px;
+                      margin: 9px 0 9px 15px;
+                      background-color: #EEEEEE;
+                      border-radius: 50px;
+                      height: 40px;
+                      width: 190px;
+                      text-align: center;
+
+                      span {
+                        font-weight: 600;
+                      }
+
+                    }
+                  }
+
+                  tr.quantity-title {
+                    @extend .font-ubuntu;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    letter-spacing: 0.05em;
+
+                    td:first-child {
+                      width: 40%;
+                    }
+
+                    td:last-child {
+                      width: 60%;
+                    }
+
+                  }
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+
+        .buttonArea {
+          @extend .font-ubuntu;
+          font-size: 1.2em;
+          font-weight: 100;
+          color: #fafafa;
+          float: right;
+          width: 400px;
+          margin: 20px 0;
+          padding: 10px 0;
+
+          button {
+            background-color: #333333;
+            padding: 10px 45px;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            margin-bottom: 10px;
+
+          }
+          a {
+            display: block;
+            text-align: center;
+            width: 100%;
+            background-color: #5DA608;
+            padding: 10px 0;
+            margin: 10px 0 0;
+            border-radius: 50px;
+            color: #fafafa;
+            letter-spacing: 0.1em;
+
+          }
+
+          .btnNormalL {
+            margin-left: 10px;
+          }
+
+          .btnEmL {
+
+
+          }
+
+        }
+
+
+      }
+
+
+    }
+
+  }

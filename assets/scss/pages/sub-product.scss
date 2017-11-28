@@ -1,0 +1,431 @@
+/*
+.product-main {
+  width: 100%;
+
+  .product-tap-menu {
+    width: 100%;
+    @extend .font-ubuntu;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    ul {
+      width: 100%;
+      border-bottom: 1px solid #417505;
+      display: table;
+
+      li.tap {
+        list-style-type: none;
+        float: left;
+        padding-right: 15px;
+
+        a {
+          display: block;
+          width: 100%;
+          padding: 5px 10px;
+          border-radius: 5px 5px 0 0;
+
+          &:hover {
+            background-color: #417505;
+            color: #fafafa;
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
+*/
+
+.section-contents-wrap {
+  background: #fafafa;
+
+  .product-wrap {
+    display: table;
+
+    aside.side-product-nav-wrap {
+      display: none;
+      width: 20%;
+      float: left;
+      h1 {
+        @extend .font-ubuntu;
+        font-size: 2em;
+        font-weight: 600;
+        padding: 20px 0;
+      }
+
+      .side-product-nav-container {
+
+        ul {
+          list-style-type: none;
+
+          li {
+            padding-left: 15px;
+            padding-bottom: 10px;
+
+            a {
+              color: #9B9B9B;
+              @extend .font-ubuntu;
+              font-size: 1.3em;
+
+            }
+
+            &:first-child {
+              padding-left: 0;
+
+              a {
+                color: #333333;
+                font-weight: 600;
+
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+    .divider-stroke {
+      display: none;
+      background: #7ED321;
+      width: 1px;
+      height: 1850px;
+      float: left;
+    }
+
+    .product-body {
+
+      .menu {
+
+        .titleArea {
+          h2 {
+            padding: 20px 0;
+            font-size: 2rem;
+            font-weight: 600;
+            @extend .font-ubuntu;
+            text-align: center;
+          }
+
+          .block-line {
+            width: 30px;
+            height: 4px;
+            background-color: #7ED321;
+            margin: 20px auto 50px;
+          }
+        }
+
+        ol {
+          list-style-type: none;
+          -webkit-padding-start: 0;
+          padding: 0 20px;
+
+          li {
+            @extend .font-ubuntu;
+
+            a {
+              color: #9B9B9B;
+            }
+          }
+        }
+
+      }
+
+      .product-list-wrap {
+        padding: 10px 20px;
+
+        .subPrdList {
+          width: 100%;
+
+          ul.prdList {
+
+            li.item {
+              width: 100%;
+              padding: 5px;
+              margin: 0;
+
+              .product-list {
+                width: 100%;
+                background-color: #fff;
+                border-radius: 10px;
+                margin: 10px 0;
+                padding: 10px 10px;
+                display: table;
+                min-height: 350px;
+                @extend .font-ubuntu;
+
+                .product-image-wrap {
+                  width: 80%;
+                  height: 120px;
+                  margin: 10px auto;
+
+                  .magnify {
+                    display: block;
+                    float: left;
+                    img {
+                      display: block;
+                      width: 15px;
+                      height: auto;
+                    }
+                  }
+
+                  .heart {
+                    display: block;
+                    float: right;
+                    img {
+                      display: block;
+                      width: 15px;
+                      height: auto;
+
+                    }
+                  }
+
+                  .product-image-link {
+                    display: block;
+                    a {
+                      display: table;
+                      margin: 0 auto;
+                      padding: 5px;
+                      img {
+                        display: block;
+                        max-height: 100px;
+
+                      }
+                    }
+                  }
+
+                }
+
+                .product-info-wrap {
+                  width: 80%;
+                  height: 130px;
+                  margin: 10px auto;
+
+                  .icon {
+                    .icon_img {
+                      float: left;
+                      padding-right: 5px;
+                      height: 15px;
+
+                    }
+                  }
+
+                  h5 {
+                    clear: both;
+                    padding: 10px 0;
+                    margin: 0;
+
+                    a {
+                      display: block;
+                      padding: 10px 0;
+
+                      span {
+                        font-size: 1.3em;
+
+                      }
+                    }
+                  }
+
+                }
+
+                ul {
+                  li {
+                    span#span_mileage_text {
+                      display: none;
+                    }
+                  }
+
+                  li#product-price {
+                    font-weight: 600;
+                    font-size: 1.4em;
+                    color: #333;
+                    @extend .font-ubuntu;
+                  }
+
+                  li#product-size {
+                    font-weight: 200;
+                  }
+                }
+
+              }
+
+            }
+          }
+
+          .function {
+            @extend .font-ubuntu;
+            width: 100%;
+
+            p.prdCount {
+              display: none;
+            }
+
+            ul#type {
+              li {
+                margin: 0 auto;
+
+              }
+            }
+          }
+
+        }
+
+        .paginate {
+          margin: 0 auto;
+          display: table;
+          padding: 30px;
+
+          p {
+            display: table;
+            float: left;
+            margin: 0;
+
+            img {
+              width: 25px;
+
+            }
+          }
+
+          ol {
+            display: table;
+            float: left;
+            -webkit-margin-after: 0;
+            -webkit-margin-before: 0;
+            padding: 0;
+            height: 25px;
+            line-height: 25px;
+
+            li {
+              float: left;
+              list-style-type: none;
+              padding: 0 10px;
+              background: #fff;
+
+              a {
+                @extend .font-ubuntu;
+                color: #717171;
+                font-size: 0.8em;
+              }
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+    //mobile
+    @media #{$medium-and-up} { // 640
+
+      .product-body {
+        .product-list-wrap {
+
+          h2 {
+
+          }
+
+          .block-line {
+
+          }
+
+          .subPrdList {
+            margin: 0 auto;
+
+            ul.prdList {
+              li.item {
+                width: 33.3%;
+                padding: 5px;
+              }
+            }
+
+            .function {
+              width: 100%;
+
+              p.prdCount {
+                display: inline-block;
+              }
+
+              ul#type {
+                display: inline-block;
+                float: right;
+                position: relative;
+                bottom: 10px;
+                li {
+                  float: right;
+
+                }
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+
+    // table
+    @media #{$large-and-up} { // 993
+
+      aside.side-product-nav-wrap {
+        display: block;
+        width: 20%;
+        float: left;
+
+      }
+
+      .divider-stroke {
+        display: block;
+      }
+
+      .product-body {
+        width: 75%;
+        float: right;
+
+        .menu {
+
+          .titleArea {
+            padding: 0 20px;
+
+            h2 {
+              text-align: left;
+            }
+
+            .block-line {
+              margin: 20px 0 50px;
+            }
+          }
+        }
+
+        .product-list-wrap {
+
+          .subPrdList {
+
+            ul.prdList {
+              li.item {
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    // desktop
+    @media #{$extra-large-and-up} { // 1200
+
+    }
+
+  }
+}
+
+
+
+
+
+
+

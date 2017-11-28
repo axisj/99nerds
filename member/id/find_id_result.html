@@ -1,45 +1,53 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>아이디 찾기</strong></li>
-    </ol>
-</div>
+<!--@layout(/layout/99nerds/layout-default.html)-->
 
-<div class="titleArea">
-    <h2 class="txtTitle16B">아이디 찾기</h2>
-</div>
+<!--@import(/layout/99nerds/inc/join-visual.html)-->
 
+<section class="section-contents-wrap">
+    <div class="container">
 
-<div module="member_findidresult" class="mid-0">
-    <!--@css(/css/module/member/find_id_result.css)-->
-    <h3 class="txtTitle20B">아이디 찾기</h3>
-    <p class="message gTriple">고객님 아이디 찾기가 완료 되었습니다.</p>
-    <div class="memberArea">
-        <p class="info">저희 쇼핑몰를 이용해주셔서 감사합니다.<br />다음정보로 가입된 아이디가 총 <span>{$idCnt}</span>개 있습니다.</p>
-        <div class="memberInfo">
-            <p class="thumb"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/img_member_default.gif" alt="" style="max-width:70px;" /></p>
-            <div class="description">
-                <dl class="desc">
-                    <dt>이름 : </dt>
-                    <dd><strong>{$name}</strong></dd>
-                    <dt>{$searchType} : </dt>
-                    <dd>{$searchInfo}</dd>
-                </dl>
-                <ul class="gDouble">
-                    <li>{$searchIds}</li>
-                    <li><span class="gDouble">고객님 즐거운 쇼핑 하세요!</span></li>
-                </ul>
+        <div class="sign-up-result">
+            <div class="titleArea">
+                <h2 class="txtTitle16B">Result</h2>
             </div>
+
+
+            <div module="member_findidresult" class="xans-member-joincomplete mid-0" style="border: 1px solid #d7d5d5;">
+                <!--@css(/css/module/member/find_id_result.css)-->
+                <p class="message gTriple">고객님 아이디 찾기가 완료 되었습니다.</p>
+                <div class="memberArea" style="border: none">
+                    <p class="info"
+                       style="padding:0;
+                       text-align: center;
+                       border-bottom: none;
+                       background: #eeeeee;
+                       font-weight: 600;">
+                        저희 쇼핑몰를 이용해주셔서 감사합니다.<br/>다음정보로 가입된 아이디가 총 <span>{$idCnt}</span>개 있습니다.</p>
+                    <div style="border: 1px solid #ddd;" class="memberInfo">
+                        <p class="thumb"><img
+                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/img_member_default.gif"
+                                alt=""
+                                style="max-width:70px;"/></p>
+                        <div class="description">
+                            <dl class="desc">
+                                <dt>Name :</dt>
+                                <dd><strong>{$name}</strong></dd>
+                                <dt>{$searchType} :</dt>
+                                <dd>{$searchInfo}</dd>
+                            </dl>
+                            <ul class="gDouble">
+                                <li style="font-weight: 400">{$searchIds}</li>
+                                <li><span class="gDouble">고객님 즐거운 쇼핑 하세요!</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="buttonArea">
+                    <a href="javascript:go_findlogin('{$id}');" class="btnSubmitM">Log in</a>
+                    <a href="javascript:go_findpwd('{$id}','{$mtype}');" class="btnEmM">비밀번호 찾기</a>
+                </p>
+            </div>
+
         </div>
     </div>
-    <p class="copy">
-        고객님의 아이디 찾기가 성공적으로 이루어졌습니다. 항상 고객님의 <br />
-        즐겁고 편리한 쇼핑을 위해 최선의 노력을 다하는 쇼핑몰이 되도록 하겠습니다.
-    </p>
-    <p class="buttonArea">
-        <a href="javascript:go_findlogin('{$id}');" class="btnSubmitM">로그인</a>
-        <a href="javascript:go_findpwd('{$id}','{$mtype}');" class="btnEmM">비밀번호 찾기</a>
-    </p>
-</div>
+</section>

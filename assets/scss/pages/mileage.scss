@@ -1,0 +1,173 @@
+.mileage-wrap {
+  .xans-myshop-mileagehistorypackage {
+    margin-top: 100px;
+
+    .summary-wrap {
+      background-color: #EEEEEE;
+      border-radius: 5px;
+      padding: 10px;
+
+      .xans-myshop-summary {
+        display: table;
+        .desc {
+          width: 50%;
+          float: left;
+          dt {
+            width: 55%;
+            padding-left: 10px;
+          }
+          dd {
+            width: 45%;
+            margin: 0 0 10px;
+          }
+
+        }
+
+      }
+    }
+
+    .tabTheme {
+      padding: 20px;
+
+      .menu {
+        .selected {
+          font-weight: 600;
+        }
+
+        li {
+          float: left;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .xans-myshop-historylist {
+      margin-top: 50px;
+
+      table {
+
+        caption {
+          width: 100%;
+          padding: 20px 0;
+          font-weight: 600;
+
+        }
+
+        thead {
+          border-bottom: 0;
+          background: #eee;
+
+          tr {
+
+            td, th {
+              text-align: center;
+            }
+
+            th.list-title {
+              @extend .font-ubuntu;
+              font-weight: 600;
+
+              &:first-child {
+                border-radius: 5px 0 0 5px;
+              }
+
+              &:last-child {
+                border-radius: 0 5px 5px 0;
+              }
+
+            }
+          }
+        }
+
+        tbody {
+
+          tr {
+
+            td {
+              text-align: center;
+
+              a {
+                img {
+                  border: 1px solid #d0d0d0;
+                  border-radius: 10px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .paginate {
+    margin: 0 auto;
+    display: table;
+    padding: 30px;
+
+    p {
+      display: table;
+      float: left;
+      margin: 0;
+
+      img {
+        width: 25px;
+
+      }
+    }
+
+    ol {
+      display: table;
+      float: left;
+      -webkit-margin-after: 0;
+      -webkit-margin-before: 0;
+      padding: 0;
+      height: 25px;
+      line-height: 25px;
+
+      li {
+        float: left;
+        list-style-type: none;
+        padding: 0 10px;
+        background: #fff;
+
+        a {
+          @extend .font-ubuntu;
+          color: #717171;
+          font-size: 0.8em;
+        }
+      }
+
+    }
+  }
+
+  .helpTheme {
+    padding: 100px 0;
+
+    .content {
+      padding: 20px;
+      background-color: #EEEEEE;
+      border-radius: 10px;
+
+      h4 {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+      ul {
+        margin-bottom: 50px;
+        line-height: 1.7em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        li {
+          color: #757575;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

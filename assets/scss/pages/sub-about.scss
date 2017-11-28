@@ -14,7 +14,6 @@
       margin: 0 auto;
       position: relative;
 
-
       .container {
         max-width: 960px;
         padding: 0;
@@ -22,7 +21,6 @@
         position: absolute;
         top: 50%;
         margin-top: -54px;
-
 
         h1.sub-about-title {
           color: #fafafa;
@@ -201,7 +199,7 @@
 
           .end-circle {
             position: relative;
-            bottom: 50px;
+            top: 100px;
           }
 
           .center-stroke {
@@ -209,7 +207,9 @@
             height: 4500px;
             background-color: $timeline-stroke-color;
             margin: 0 auto;
-            z-index: $timeline-stroke-layer;
+            position: absolute;
+            left: 50%;
+            z-index: 0;
 
           }
 
@@ -219,12 +219,13 @@
             margin: 0 auto;
             z-index: $timeline-contents-layer;
             position: relative;
-            bottom: 4450px;
+            top: 50px;
 
           }
 
           .timeline-contents-wrap {
             position: relative;
+            top: 50px;
             z-index: $timeline-contents-layer;
 
             .col {
@@ -300,24 +301,64 @@
 
                 }
 
-                .photo-square {
-                  width: 170px;
-                  height: auto;
-                  background-color: $timeline-block-color;
-                  border: 1px solid $timeline-stroke-color;
-                  border-radius: 8px;
-                  display: table;
-                  margin: 0 auto;
-                  overflow: hidden;
+                .timeline-text-wrap-right {
+                  clear: both;
+                  padding: 10px 5px;
+                }
 
-                  span.history-photo-wrap {
-                    display: table-cell;
-                    vertical-align: middle;
+                .photo-square-wrap {
 
-                    img.history-photo-image {
-                      display: block;
-                      margin: 0 auto;
-                      width: 100%;
+                  .photo-square {
+                    width: 170px;
+                    height: auto;
+                    background-color: $timeline-block-color;
+                    border: 1px solid $timeline-stroke-color;
+                    border-radius: 8px;
+                    display: table;
+                    margin: 0 auto;
+                    overflow: hidden;
+
+                    span.history-photo-wrap {
+                      display: table-cell;
+                      vertical-align: middle;
+
+                      img.history-photo-image {
+                        display: block;
+                        margin: 0 auto;
+                        width: 100%;
+                      }
+
+                    }
+
+                  }
+
+                  .timeline-text-wrap-right {
+                    text-align: center;
+                    padding: 10px auto;
+
+                    h4 {
+                      line-height: 0.6em;
+                      .timeline-title {
+                        background-color: $timeline-background-color;
+                        color: $timeline-title-color;
+                        font-size: $timeline-title-size;
+                        padding: 4px 0;
+                        text-align: right;
+
+                      }
+                    }
+
+                    p {
+                      line-height: 1.7em;
+
+                      .timeline-text {
+                        background-color: $timeline-background-color;
+                        color: $timeline-text-color;
+                        font-size: $timeline-text-size;
+                        padding: 2px 0;
+                        text-align: right;
+
+                      }
                     }
 
                   }
@@ -405,6 +446,7 @@
 
           h4.service-link-title {
             font-size: 1em;
+            font-weight: 600;
 
           }
 
@@ -427,7 +469,7 @@
           line-height: 40px;
 
           span {
-            color: #9B9B9B;
+            color: #333333;
             font-size: 0.9em;
             font-weight: 600;
 
@@ -445,8 +487,6 @@
 
   }
 
-
-
   @media #{$medium-and-up} { // 640
 
     .section-about-header {
@@ -460,7 +500,6 @@
             line-height: 1.3em;
 
           }
-
 
         }
       }
@@ -493,228 +532,6 @@
         }
 
       }
-    }
-
-    .section-history {
-
-      .container {
-
-        .history-contents-wrap {
-          height: 5000px;
-
-          #nerds-timeline-wrap {
-            $timeline-gap-width: 30px;
-            $timeline-gap-height: 150px;
-            $timeline-mx-margin: 20px;
-
-            $timeline-stroke-color: #F39835;
-            $timeline-block-color: #1E1E1E;
-            $timeline-title-color: #fafafa;
-            $timeline-text-color: #9B9B9B;
-            $timeline-background-color: #1e1e1e;
-
-            $timeline-date-size: 1.2em;
-            $timeline-title-size: 0.5em;
-            $timeline-text-size: 1em;
-
-            $timeline-stroke-layer: -1;
-            $timeline-contents-layer: 2;
-
-            .start-end-circle {
-              width: 100px;
-              height: 100px;
-              margin: 0 auto;
-
-            }
-
-            .center-stroke {
-              height: 4800px;
-
-            }
-
-            img.history-earth-image {
-              bottom: 4750px;
-
-            }
-
-            .timeline-contents-wrap {
-              bottom: 4770px;
-
-              .row {
-                margin-bottom: $timeline-gap-height;
-                .col {
-
-                  .timeline-body-wrap {
-                    text-align: start;
-                    height: 100%;
-
-                    .timeline-date {
-                      margin: 10px 5px;
-                    }
-
-                    .timeline-circle-wrap {
-                      position: relative;
-                      height: 100%;
-
-                      .timeline-circle-stroke-wrap {
-                        width: 300px;
-                        height: 100px;
-                        float: right;
-                        position: relative;
-                        overflow: hidden;
-
-                        .timeline-stroke-point {
-                          width: 10px;
-                          height: 10px;
-                          background-color: $timeline-stroke-color;
-                          transform: rotate(45deg);
-                          position: absolute;
-                          top: 50%;
-                          right: 100%;
-                          margin-top: -5px;
-                          margin-right: -11px;
-
-                        }
-
-                        .timeline-circle-stroke {
-                          width: 300px;
-                          height: 1px;
-                          background-color: $timeline-stroke-color;
-                          position: absolute;
-                          top: 100%;
-                          left: 100%;
-                          margin-top: -50px;
-                          margin-left: -300px;
-
-                        }
-
-                      }
-
-                      .circle-contents {
-                        width: 100%;
-                        float: left;
-                        position: absolute;
-                        top: 50%;
-
-                        .logo-circle {
-                          width: 100px;
-                          height: 100px;
-                          background-color: $timeline-block-color;
-                          border: 1px solid $timeline-stroke-color;
-                          border-radius: 50%;
-                          display: table;
-                          margin: 0;
-
-                          span.history-logo-wrap {
-                            display: table-cell;
-                            vertical-align: middle;
-
-                            img.history-logo-image {
-                              display: block;
-                              margin: 0 auto;
-                              max-width: 50px;
-                              min-width: 40px;
-                            }
-
-                          }
-
-                        }
-
-                        .timeline-text-wrap {
-                          text-align: start;
-                          padding: 10px 5px;
-
-                          h4 {
-
-                            .timeline-title {
-
-                            }
-                          }
-
-                          p {
-
-                            .timeline-text {
-
-                            }
-                          }
-
-                        }
-
-                      }
-
-                    }
-
-                    .photo-square {
-                      margin: 0;
-
-                      span.history-photo-wrap {
-
-                        img.history-photo-image {
-
-                        }
-
-                      }
-
-                    }
-
-                  }
-
-                  .right-timeline-body-wrap {
-                    float: right;
-                    text-align: right;
-                    height: 100%;
-
-                    .photo-square {
-                      float: right;
-                      right: 0;
-
-                    }
-
-                    .timeline-circle-wrap {
-
-                      .timeline-circle-stroke-wrap {
-                        float: left;
-
-                        .timeline-stroke-point {
-                          right: 0;
-                          margin-right: 1px;
-
-                        }
-
-                      }
-
-                      .circle-contents {
-                        float: right;
-
-                        .logo-circle {
-                          float: right;
-                          right: 0;
-
-                        }
-
-                        .timeline-text-wrap {
-                          text-align: right;
-                          clear: both;
-
-                        }
-
-                      }
-
-                    }
-
-                  }
-
-                }
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
     }
 
   }
@@ -767,12 +584,253 @@
       }
     }
 
+    .section-history {
+
+      .container {
+
+        .history-contents-wrap {
+          height: 4200px;
+
+          #nerds-timeline-wrap {
+            $timeline-gap-width: 30px;
+            $timeline-gap-height: 150px;
+            $timeline-mx-margin: 20px;
+
+            $timeline-stroke-color: #F39835;
+            $timeline-block-color: #1E1E1E;
+            $timeline-title-color: #fafafa;
+            $timeline-text-color: #9B9B9B;
+            $timeline-background-color: #1e1e1e;
+
+            $timeline-date-size: 1.2em;
+            $timeline-title-size: 0.5em;
+            $timeline-text-size: 1em;
+
+            $timeline-stroke-layer: -1;
+            $timeline-contents-layer: 2;
+
+            .start-end-circle {
+              width: 100px;
+              height: 100px;
+              margin: 0 auto;
+
+            }
+
+            .center-stroke {
+              height: 3900px;
+
+            }
+
+
+            .timeline-contents-wrap {
+
+              .row {
+                margin-bottom: $timeline-gap-height;
+
+                .timeline-body-wrap {
+                  text-align: left;
+                  height: 100%;
+
+                  .timeline-text-wrap {
+                    text-align: left;
+                  }
+
+                  .timeline-date {
+                    margin: 10px 5px;
+                  }
+
+                  .timeline-circle-wrap {
+                    position: relative;
+                    height: 100%;
+
+                    .timeline-circle-stroke-wrap {
+                      width: 300px;
+                      height: 100px;
+                      float: right;
+                      position: relative;
+                      overflow: hidden;
+
+                      .timeline-stroke-point {
+                        width: 10px;
+                        height: 10px;
+                        background-color: $timeline-stroke-color;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 50%;
+                        right: 100%;
+                        margin-top: -5px;
+                        margin-right: -11px;
+
+                      }
+
+                      .timeline-circle-stroke {
+                        width: 300px;
+                        height: 1px;
+                        background-color: $timeline-stroke-color;
+                        position: absolute;
+                        top: 100%;
+                        left: 100%;
+                        margin-top: -50px;
+                        margin-left: -300px;
+
+                      }
+
+                    }
+
+                    .circle-contents {
+                      width: 100%;
+                      float: left;
+                      position: absolute;
+                      top: 50%;
+
+                      .logo-circle {
+                        width: 100px;
+                        height: 100px;
+                        background-color: $timeline-block-color;
+                        border: 1px solid $timeline-stroke-color;
+                        border-radius: 50%;
+                        display: table;
+                        margin: 0;
+
+                        span.history-logo-wrap {
+                          display: table-cell;
+                          vertical-align: middle;
+
+                          img.history-logo-image {
+                            display: block;
+                            margin: 0 auto;
+                            max-width: 50px;
+                            min-width: 40px;
+                          }
+
+                        }
+
+                      }
+
+                      .timeline-text-wrap {
+                        text-align: left;
+                        padding: 10px 5px;
+
+                        h4 {
+
+                          .timeline-title {
+
+                          }
+                        }
+
+                        p {
+
+                          .timeline-text {
+
+                          }
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  .photo-square-wrap {
+                    width: 100%;
+                    position: absolute;
+                    .photo-square {
+                      margin: 0;
+
+                      span.history-photo-wrap {
+
+                        img.history-photo-image {
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  .left-photo-square-wrap {
+                    position: static;
+
+                  }
+
+                }
+
+                .right-timeline-body-wrap {
+                  float: right;
+                  text-align: right;
+                  height: 100%;
+                  position: relative;
+
+
+                  .photo-square-wrap {
+
+                    .photo-square {
+                      float: right;
+                      right: 0;
+
+                    }
+
+                    .timeline-text-wrap-right {
+                      text-align: right;
+                      padding: 10px auto;
+
+                    }
+
+                  }
+
+                  .timeline-circle-wrap {
+
+                    .timeline-circle-stroke-wrap {
+                      float: left;
+
+                      .timeline-stroke-point {
+                        right: 0;
+                        margin-right: 1px;
+
+                      }
+
+                    }
+
+                    .circle-contents {
+                      float: right;
+
+                      .logo-circle {
+                        float: right;
+                        right: 0;
+
+                      }
+
+                      .timeline-text-wrap {
+                        text-align: right;
+                        clear: both;
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
   }
 
   // desktop
   @media #{$extra-large-and-up} { // 1200
 
-  }
+
+    }
 
 }
 

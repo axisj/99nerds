@@ -1,10 +1,12 @@
 <div module="board_ReadPackage_1002" class="tableTheme mid-0">
 
     <div module="board_title_1002">
+
         <div class="titleArea">
             <h2>{$board_title}</h2>
             <div class="block-line"></div>
         </div>
+
     </div>
 
     <!-- 글 내용-->
@@ -19,6 +21,7 @@
                 <col style="width:130px;"/>
                 <col style="width:auto;"/>
             </colgroup>
+
             <tbody class="middle">
             <tr class="list-read-header first-header">
                 <th scope="row">title</th>
@@ -79,10 +82,10 @@
                         </span>
                     </span>
             <span class="gRight">
-                        <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">삭제</a>
+                        <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">delete</a>
                         <a href="/board/sub-notice_default/modify.html{$param_modify}"
-                           class="btnEmB {$modify_button_auth|display}">수정</a>
-                        <a href="/board/sub-notice_default/reply.html{$param_reply}"
+                           class="btnEmB {$modify_button_auth|display}">modify</a>
+                        <a href="/board/gallary/reply.html{$param_reply}"
                            class="btnEmB {$reply_button_auth|display}">답변</a>
                     </span>
         </div>

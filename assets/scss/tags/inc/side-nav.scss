@@ -17,6 +17,7 @@
   backface-visibility: hidden;
   transform: translateX(-105%);
   @extend .z-depth-1;
+  @extend .font-mono;
 
   // Right Align
   &.right-aligned {
@@ -34,122 +35,183 @@
     float: none;
     line-height: $sidenav-line-height;
 
-    &.active { background-color: rgba(0,0,0,.05); }
+    &.active {
+      background-color: rgba(0, 0, 0, .05);
+    }
+
+    .userView {
+      .background {
+        span {
+          color: $sidenav-font-color;
+          display: block;
+          font-size: 2.9em;
+          padding: $sidenav-padding;
+
+        }
+      }
+    }
+
+    ul.side-nav-dropdown {
+      color: #9B9B9B;
+      font-size: 1em;
+
+      li.side-nav-dropdown-content {
+        padding: 0 32px;
+        background-color: #000000;
+
+        a {
+          border-bottom: none;
+          padding: 0;
+          color: #9B9B9B;
+        font-size: $sidenav-font-size;
+        }
+
+        ul {
+          li {
+            padding-left: 2 * $sidenav-padding;
+
+          }
+
+        }
+      }
+    }
   }
 
-  li > a {
-    color: $sidenav-font-color;
-    display: block;
-    font-size: $sidenav-font-size;
-    font-weight: 500;
+
+li > a {
+  color: $sidenav-font-color;
+  display: block;
+  font-size: $sidenav-font-size;
+  font-weight: 200;
+  height: $sidenav-item-height;
+  line-height: $sidenav-line-height;
+  padding: 0 ($sidenav-padding * 2);
+  border-bottom: 1px solid #2e2e2e;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .05);
+  }
+
+  &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+    margin: 10px 15px;
+  }
+
+  &.btn,
+  &.btn-large,
+  &.btn-floating {
+    color: $button-raised-color;
+  }
+  &.btn-flat {
+    color: $button-flat-color;
+  }
+
+  &.btn:hover,
+  &.btn-large:hover {
+    background-color: lighten($button-raised-background, 5%);
+  }
+  &.btn-floating:hover {
+    background-color: $button-raised-background;
+  }
+
+  & > i,
+  & > [class^="mdi-"], li > a > [class*="mdi-"],
+  & > i.material-icons {
+    float: left;
     height: $sidenav-item-height;
     line-height: $sidenav-line-height;
-    padding: 0 ($sidenav-padding * 2);
-
-    &:hover { background-color: rgba(0,0,0,.05);}
-
-    &.btn, &.btn-large, &.btn-flat, &.btn-floating {
-      margin: 10px 15px;
-    }
-
-    &.btn,
-    &.btn-large,
-    &.btn-floating { color: $button-raised-color; }
-    &.btn-flat { color: $button-flat-color; }
-
-    &.btn:hover,
-    &.btn-large:hover { background-color: lighten($button-raised-background, 5%); }
-    &.btn-floating:hover { background-color: $button-raised-background; }
-
-    & > i,
-    & > [class^="mdi-"], li > a > [class*="mdi-"],
-    & > i.material-icons {
-      float: left;
-      height: $sidenav-item-height;
-      line-height: $sidenav-line-height;
-      margin: 0 ($sidenav-padding * 2) 0 0;
-      width: $sidenav-item-height / 2;
-      color: rgba(0,0,0,.54);
-    }
+    margin: 0 ($sidenav-padding * 2) 0 0;
+    width: $sidenav-item-height / 2;
+    color: rgba(0, 0, 0, .54);
   }
 
-  .divider {
-    margin: ($sidenav-padding / 2) 0 0 0;
+  img.nav-light {
+    float: right;
+    position: relative;
+    top: 18px;
   }
 
-  .subheader {
+}
+
+.divider {
+  margin: ($sidenav-padding / 2) 0 0 0;
+}
+
+.subheader {
+  &:hover {
+    background-color: transparent;
+  }
+
+  cursor: initial;
+  pointer-events: none;
+  color: rgba(0, 0, 0, .54);
+  font-size: $sidenav-font-size;
+  font-weight: 500;
+  line-height: $sidenav-line-height;
+}
+
+.userView {
+  position: relative;
+  padding: ($sidenav-padding * 2) ($sidenav-padding * 2) 0;
+  margin-bottom: $sidenav-padding / 2;
+
+  & > a {
     &:hover {
       background-color: transparent;
     }
-
-    cursor: initial;
-    pointer-events: none;
-    color: rgba(0,0,0,.54);
-    font-size: $sidenav-font-size;
-    font-weight: 500;
-    line-height: $sidenav-line-height;
+    height: auto;
+    padding: 0;
   }
 
-  .userView {
-    position: relative;
-    padding: ($sidenav-padding * 2) ($sidenav-padding * 2) 0;
-    margin-bottom: $sidenav-padding / 2;
-
-    & > a {
-      &:hover { background-color: transparent; }
-      height: auto;
-      padding: 0;
-    }
-
-    .background {
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-    }
-
-    .circle, .name, .email {
-      display: block;
-    }
-
-    .circle {
-      height: 64px;
-      width: 64px;
-    }
-
-    .name,
-    .email {
-      font-size: $sidenav-font-size;
-      line-height: $sidenav-line-height / 2;
-    }
-
-    .name {
-      margin-top: 16px;
-      font-weight: 500;
-    }
-
-    .email {
-      padding-bottom: 16px;
-      font-weight: 400;
-    }
-  }
-
-  &.fixed {
+  .background {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    transform: translateX(0);
-    position: fixed;
+    z-index: -1;
+  }
 
-    // Right Align
-    &.right-aligned {
-      right: 0;
-      left: auto;
-    }
+  .circle, .name, .email {
+    display: block;
+  }
+
+  .circle {
+    height: 64px;
+    width: 64px;
+  }
+
+  .name,
+  .email {
+    font-size: $sidenav-font-size;
+    line-height: $sidenav-line-height / 2;
+  }
+
+  .name {
+    margin-top: 16px;
+    font-weight: 500;
+  }
+
+  .email {
+    padding-bottom: 16px;
+    font-weight: 400;
   }
 }
-.side-nav-mask{
+
+&.fixed {
+  left: 0;
+  transform: translateX(0);
+  position: fixed;
+
+  // Right Align
+  &.right-aligned {
+    right: 0;
+    left: auto;
+  }
+}
+
+}
+.side-nav-mask {
   @include transition(all 0.3s ease-in-out);
   position: fixed;
   width: 100%;
@@ -161,7 +223,7 @@
   opacity: 0.3;
   display: none;
   z-index: 998;
-  &.fixed{
+  &.fixed {
     display: block;
   }
 }

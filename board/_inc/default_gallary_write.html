@@ -9,28 +9,31 @@
 
     </div>
 
-    <div module="board_write_8">
+    <div class="board-write-wrap" module="board_write_8">
         <!--
             $login_page_url = /member/login.html
             $deny_access_url = /index.html
         -->
         <table border="1" summary="">
 
+            <caption>Write&nbsp;&nbsp;&nbsp;></caption>
+
             <colgroup>
                 <col style="width:130px;" />
                 <col style="width:auto;" />
             </colgroup>
+
             <tbody class="middle">
-            <tr>
-                <th scope="row">제목</th>
+            <tr class="list-read-header first-header">
+                <th scope="row">title</th>
                 <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
             </tr>
-            <tr class="{$config.is_login|display}">
-                <th scope="row">작성자</th>
+            <tr class="list-read-header last-header {$config.is_login|display}">
+                <th scope="row">name</th>
                 <td>{$form.writer}</td>
             </tr>
             <tr class="{$config.use_write_email|display}">
-                <th scope="row">이메일</th>
+                <th scope="row">e-mail</th>
                 <td>{$form.email}</td>
             </tr>
             <tr class="{$config.is_use_point|display}">
@@ -84,7 +87,8 @@
                 <th scope="row">자동발송금지<br />보안문자</th>
                 <td>
                     {$captcha_image}{$captcha_refresh}
-                    <span class="gSingle">{$form.captcha} <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /><span class="txtSub11"> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></span>
+                    <span class="gSingle">{$form.captcha} <br/><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif"
+                                                                    alt="" /><span class="txtSub11"> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></span>
                 </td>
             </tr>
             <tr class="top {$config.is_login|display}">
@@ -99,13 +103,16 @@
 
         <div class="buttonArea">
             <span class="gLeft">
-                <a href="{$link_board_list}" class="btnNormalB">목록</a>
-                <a href="#none" class="btnNormalB {$config.is_admin|display}" onclick="{$action_comment_admin}">관리자답변보기</a>
+                <a href="list.html{$param_list}" class="btnNormalB">list</a>
+                <a href="{$action_comment_admin}" class="btnNormalB {$config.is_admin|display}">관리자 답변 보기</a>
             </span>
             <span class="gRight">
-                <button type="button" class="btnSubmitB" onclick="{$action_write}">등록</button>
-                <a href="{$link_board_list}" class="btnStrongB">취소</a>
+                <a href="{$action_write}" type="button" class="btnSubmitB">done</a>
             </span>
         </div>
     </div>
+
 </div>
+
+
+

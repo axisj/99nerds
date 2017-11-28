@@ -1,68 +1,85 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="titleArea">
-    <h2>로그인</h2>
-</div>
+<!--@layout(/layout/99nerds/layout-default.html)-->
+<!--@import(/layout/99nerds/inc/head.html)-->
+<!--@import(/layout/99nerds/inc/login-visual.html)-->
 
-<div module="member_login">
-    <!--@css(/css/module/member/login.css)-->
-    <!--
-        $defaultReturnUrl = /index.html
-        $forbidIpUrl = member/adminFail.html
-    -->
-    <fieldset class="memberArea">
-        <legend>회원로그인</legend>
-        <label><span class="txtBase">아이디</span>{$form.member_id}</label>
-        <label><span class="txtBase">비밀번호</span>{$form.member_passwd}</label>
-        <p class="security txtBase">
-            {$form.member_check_save_id}
-            {$form.member_check_secret_connect}
-        </p>
-        <button type="button" onclick="{$action_func_login}" class="btnLogin">로그인</button>
-        <ul>
-            <li><a href="/member/id/find_id.html">아이디찾기</a></li>
-            <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
-        </ul>
-        <ul class="snsArea">
-            <li class="{$display_naver|display}">
-                <a href="#none" onclick="{$naver_func_login}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인" /></a>
-            </li>
-            <li class="{$display_facebook|display}">
-                <a href="#none" onclick="{$facebook_func_login}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif" alt="페이스북 로그인" /></a>
-            </li>
-            <li class="{$display_google|display}">
-                <a href="#none" onclick="{$google_func_login}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif" alt="구글 로그인" /></a>
-            </li>
-        </ul>
-        <div class="link txtBase">
-            회원가입을 하시면 다양하고 특별한<br />혜택이 준비되어 있습니다.
-            <a href="/member/join.html" class="btnEm">회원가입</a>
+<section class="section-log-in">
+    <div class="container log-in-wrap">
+
+        <div module="member_login" class="xans-member-findid">
+            <!--@css(/css/module/member/login.css)-->
+            <!--
+                $defaultReturnUrl = /index.html
+                $forbidIpUrl = member/adminFail.html
+            -->
+            <fieldset class="memberArea">
+                <legend>Log in</legend>
+                <label class="input-area"><span class="txtBase">ID</span>{$form.member_id}</label>
+                <label class="input-area"><span class="txtBase">Password</span>{$form.member_passwd}</label>
+                <p class="security txtBase">
+                    {$form.member_check_save_id}
+                    {$form.member_check_secret_connect}
+                </p>
+                <button type="button" onclick="{$action_func_login}" class="btnLogin">Log in</button>
+                <ul class="find-account">
+                    <li><a href="/member/id/find_id.html">아이디찾기</a></li>
+                    <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
+                </ul>
+                <ul class="snsArea">
+                    <li class="{$display_naver|display}">
+                        <a href="#none" onclick="{$naver_func_login}"><img
+                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif"
+                                alt="네이버 로그인"/></a>
+                    </li>
+                    <li class="{$display_facebook|display}">
+                        <a href="#none" onclick="{$facebook_func_login}"><img
+                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif"
+                                alt="페이스북 로그인"/></a>
+                    </li>
+                    <li class="{$display_google|display}">
+                        <a href="#none" onclick="{$google_func_login}"><img
+                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif"
+                                alt="구글 로그인"/></a>
+                    </li>
+                    <li class="{$display_kakao|display}">
+                        <a href="#none" onclick="{$kakao_func_login}"><img
+                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif"
+                                alt="카카오 로그인"/></a>
+                    </li>
+                </ul>
+                <div class="link txtBase">
+                    회원가입을 하시면 다양하고 특별한<br/>혜택이 준비되어 있습니다.
+                </div>
+                <a href="/member/join.html" class="btnEm">Sign up</a>
+                <div class="link txtBase {$display_nomember|display}" id="noMemberWrap">
+                    비회원님도 상품구매가 가능하나 다양한<br/>회원혜택에서 제외됩니다.
+                    <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnEm">비회원구매</a>
+                </div>
+            </fieldset>
         </div>
-        <div class="link txtBase {$display_nomember|display}" id="noMemberWrap">
-            비회원님도 상품구매가 가능하나 다양한<br />회원혜택에서 제외됩니다.
-            <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnEm">비회원구매</a>
+
+        <div module="MyShop_OrderHistoryNologin">
+            <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+            <!--
+                $orderDetailUrl = /myshop/order/detail.html
+            -->
+            <h3>비회원 로그인</h3>
+            <fieldset class="memberArea">
+                <legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
+                <dl class="desc">
+                    <dt>{$form_label.order_name}</dt>
+                    <dd>{$form.order_name}</dd>
+                    <dt>{$form_label.order_id}</dt>
+                    <dd>{$form.order_id}</dd>
+                    <dt>{$form_label.order_password}</dt>
+                    <dd>{$form.order_password}</dd>
+                </dl>
+                <p class="buttonArea tac mt15">
+                    <button type="submit" class="btnSubmitM">조회</button>
+                </p>
+            </fieldset>
         </div>
-    </fieldset>
-</div>
+
+    </div>
+</section>
 
 
-<div module="MyShop_OrderHistoryNologin">
-    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
-    <!--
-        $orderDetailUrl = /myshop/order/detail.html
-    -->
-    <h3>비회원 로그인</h3>
-    <fieldset class="memberArea">
-        <legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
-        <dl class="desc">
-            <dt>{$form_label.order_name}</dt>
-            <dd>{$form.order_name}</dd>
-            <dt>{$form_label.order_id}</dt>
-            <dd>{$form.order_id}</dd>
-            <dt>{$form_label.order_password}</dt>
-            <dd>{$form.order_password}</dd>
-        </dl>
-        <p class="buttonArea tac mt15">
-			<button type="submit" class="btnSubmitM">조회</button>
-        </p> 
-    </fieldset>
-</div>
