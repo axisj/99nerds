@@ -6,7 +6,6 @@
     <div class="container">
         <div class="order-list-wrap">
 
-
             <div class="titleArea">
                 <h2 class="txtTitle16B">취소신청</h2>
                 <div class="block-line"></div>
@@ -37,7 +36,6 @@
                         <th class="list-title" scope="col">선택</th>
                         <th class="list-title" scope="col">name</th>
                         <th class="list-title" scope="col">quantity</th>
-                        <th class="list-title" scope="col">신청수량</th>
                         <th class="list-title" scope="col">price</th>
                         <th class="list-title" scope="col">주문처리상태</th>
                     </tr>
@@ -49,13 +47,13 @@
                             {$order_date_ymd}
                             <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
                         </td>
-                        <td>{$form.checkbox}</td>
+                        <td class="{$display_column|display}">{$form.checkbox}</td>
                         <td class="product top">
                             <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img
                                     src="{$product_image}"
                                     onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                     alt=""/></a></span>
-                            <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                            <a class="prd-name" href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a>
                             <div class="option {$option_display|display}">{$option_str}</div>
                             <ul class="option" module="Myshop_optionSet">
                                 <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
@@ -64,15 +62,6 @@
                             <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                         </td>
                         <td>{$quantity}</td>
-                        <td>
-                    <span class="quantity">
-                      {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가"
-                                                                                            src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif"/></a><a
-                            href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소"
-                                                                               src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"/></a>
-                    </span>
-                            <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
-                        </td>
                         <td>
                             <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
                             <p class="{$item_price_ref_display|display}">
@@ -85,13 +74,13 @@
                             {$order_date_ymd}
                             <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
                         </td>
-                        <td>{$form.checkbox}</td>
+                        <td class="{$display_column|display}">{$form.checkbox}</td>
                         <td class="product  top">
                             <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img
                                     src="{$product_image}"
                                     onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                     alt=""/></a></span>
-                            <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                            <a class="prd-name" href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a>
                             <div class="option {$option_display|display}">{$option_str}</div>
                             <ul class="option" module="Myshop_optionSet">
                                 <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
@@ -100,15 +89,7 @@
                             <p class="free {$card_installment_display|display}">무이자할부 상품</p>
                         </td>
                         <td>{$quantity}</td>
-                        <td>
-                    <span class="quantity">
-                      {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가"
-                                                                                            src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif"/></a><a
-                            href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소"
-                                                                               src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"/></a>
-                    </span>
-                            <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
-                        </td>
+
                         <td>
                             <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
                             <p class="{$item_price_ref_display|display}">
@@ -120,7 +101,7 @@
                 </table>
 
                 <table border="1" summary="">
-                    <caption>취소사유</caption>
+                    <caption style="border-bottom-style: solid; border-bottom-width: 1px; border-color: #555;">취소사유</caption>
                     <colgroup>
                         <col style="width:139px;"/>
                         <col style="width:auto;"/>
@@ -140,7 +121,7 @@
                 <div class="{$refund_info_display|display}">
 
                     <table border="1" summary="">
-                        <caption>환불 계좌 정보</caption>
+                        <caption style="border-bottom-style: solid; border-bottom-width: 1px; border-color: #555;">환불 계좌 정보</caption>
                         <colgroup>
                             <col style="width:150px;"/>
                             <col style="width:auto;"/>

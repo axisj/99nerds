@@ -23,7 +23,6 @@
                         <col style="width:auto;">
                         <col style="width:10%;">
                         <col style="width:15%;">
-                        <col style="width:15%;">
                         <col style="width:10%;">
 
                     </colgroup>
@@ -33,11 +32,11 @@
                         <th class="list-title" scope="col">선택</th>
                         <th class="list-title" scope="col">name</th>
                         <th class="list-title" scope="col">quantity</th>
-                        <th class="list-title" scope="col">신청수량</th>
                         <th class="list-title" scope="col">price</th>
                         <th class="list-title" scope="col">주문처리상태</th>
                     </tr>
                     </thead>
+
                     <tbody module="Myshop_products" class="center middle">
                     <tr>
                         <td class="{$display_column|display}">
@@ -50,7 +49,7 @@
                                     src="{$product_image}"
                                     onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                     alt=""/></a></span>
-                            <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                            <a class="prd-name" href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a>
                             <div class="option {$option_display|display}">{$option_str}</div>
                             <ul class="option" module="Myshop_optionSet">
                                 <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
@@ -58,15 +57,6 @@
                             </ul>
                         </td>
                         <td>{$quantity}</td>
-                        <td>
-                    <span class="quantity">
-                        {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가"
-                                                                                              src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif"/></a><a
-                            href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소"
-                                                                               src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"/></a>
-                    </span>
-                            <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
-                        </td>
                         <td>
                             <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
                             <p class="{$item_price_ref_display|display}">
@@ -85,7 +75,7 @@
                                     src="{$product_image}"
                                     onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';"
                                     alt=""/></a></span>
-                            <p><a href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a></p>
+                            <a class="prd-name" href="/product/detail.html{$param_product}"><strong>{$product_name}</strong></a>
                             <div class="option {$option_display|display}">{$option_str}</div>
                             <ul class="option" module="Myshop_optionSet">
                                 <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
@@ -94,15 +84,6 @@
                         </td>
                         <td>{$quantity}</td>
                         <td>
-                    <span class="quantity">
-                       {$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img class="up" alt="증가"
-                                                                                             src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif"/></a><a
-                            href="javascript:;" onclick="{$out_shortcut}"><img class="down" alt="감소"
-                                                                               src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"/></a>
-                    </span>
-                            <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
-                        </td>
-                        <td>
                             <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
                             <p class="{$item_price_ref_display|display}">
                                 {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</p>
@@ -110,6 +91,7 @@
                         <td><span class="txtStrong12B">{$cur_state}</span></td>
                     </tr>
                     </tbody>
+
                 </table>
                 <div class="buttonArea selectCtrl {$select_button_display|display}">
         <span class="gLeft">
@@ -150,7 +132,7 @@
                 </div>
 
                 <table border="1" summary="">
-                    <caption>교환사유</caption>
+                    <caption style="border-bottom-style: solid; border-bottom-width: 1px; border-color: #555;">교환사유</caption>
                     <colgroup>
                         <col style="width:150px;"/>
                         <col style="width:auto;"/>
@@ -263,7 +245,7 @@
                 <div class="refundAccount {$refund_info_display|display}">
 
                     <table border="1" summary="">
-                        <caption>환불 계좌 정보</caption>
+                        <caption style="border-bottom-style: solid; border-bottom-width: 1px; border-color: #555;">환불 계좌 정보</caption>
                         <colgroup>
                             <col style="width:150px;"/>
                             <col style="width:auto;"/>
@@ -297,7 +279,7 @@
                     <p class="infoWarn txtWarn">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p>
                 </div>
                 <div class="buttonArea gCenter">
-                    <button type="button" class="btnSubmitM" onclick="OrderApply.apply(); return false;">교환신청</button>
+                    <a href="#none" class="btnSubmitM" onclick="OrderApply.apply(); return false;">교환신청</a>
                     <a class="btnNormalM" href="/myshop/order/list.html">이전페이지</a>
                 </div>
             </div>
