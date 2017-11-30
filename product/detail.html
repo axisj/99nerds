@@ -75,7 +75,7 @@
                     <!-- 상세정보 내역 -->
                     <div class="infoArea">
                         <span class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$benefit_icons}</span>
-                        <div module="product_image"><h2>{$name}</h2></div>
+                        <div module="product_image"><h1>{$name}</h1></div>
                         <div module="product_detaildesign" class="tableTheme">
                             <!--
                                 출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
@@ -84,14 +84,18 @@
                             <table summary="table" class="basicTable1">
 
                                 <colgroup>
-                                    <col style="width:125px;"/>
-                                    <col style="width:auto;"/>
+                                    <col style="width:80px;"/>
+                                    <col/>
                                 </colgroup>
 
                                 <tbody>
                                 <tr class="{$item_display|display}">
                                     <th scope="row">{$item_title}</th>
-                                    <td>{$item_content}</td>
+                                    <td class="product-price">{$item_content}</td>
+                                </tr>
+                                <tr class="{$item_display|display}">
+                                    <th scope="row">{$item_title}</th>
+                                    <td class="product-price">{$item_content}</td>
                                 </tr>
                                 <tr class="{$item_display|display}">
                                     <th scope="row">{$item_title}</th>
@@ -529,7 +533,7 @@
 
 
                         <!-- 네이버 체크아웃 구매 버튼 -->
-                        <div id="NaverChk_Button"></div><!-- //네이버 체크아웃 구매 버튼 -->
+                        <div id="NaverChk_Button" style="padding: 20px;"></div><!-- //네이버 체크아웃 구매 버튼 -->
 
                         {$common_event_b}
                     </div><!-- //참고 -->

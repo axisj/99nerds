@@ -51,8 +51,7 @@
         width: 80%;
         height: 1px;
         margin: 100px auto;
-        background: rgba(248, 231, 28, 0.30);
-
+        background: #000;
       }
 
       .footer-nav {
@@ -61,24 +60,24 @@
 
         h5.footer-nav-title {
           @extend .font-mono;
-          font-size: 1em;
+          font-size: 1.3em;
           color: #F8E71C;
           text-align: center;
           line-height: 1.5em;
           letter-spacing: 0.08em;
-
         }
 
         ul.footer-nav-list {
           -webkit-margin-before: 20px;
           -webkit-margin-after: 20px;
-          line-height: 28px;
+
+          line-height: 1.8em;
           font-size: 1em;
           text-align: center;
 
           li.contact-link {
-
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 2.4em;
 
           }
 

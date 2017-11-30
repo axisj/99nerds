@@ -284,18 +284,19 @@
     }
 
     .path-wrap {
-       margin-bottom: 0;
-       .breadcrumb {
-         color: #417505;
-         font-size: 13px;
-         line-height: 20px;
-         &:before {
-           color: #417505;
-           font-size: 13px;
-           line-height: 20px;
-         }
-       }
-     }
+      margin-bottom: 0;
+      padding: 0 30px;
+      .breadcrumb {
+        color: #417505;
+        font-size: 13px;
+        line-height: 20px;
+        &:before {
+          color: #417505;
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
 
     //mobile
     @media #{$medium-and-up} { // 600
@@ -325,6 +326,10 @@
             }
           }
         }
+      }
+      .path-wrap {
+        margin-bottom: 0;
+        padding: 0 10px;
       }
     }
 
