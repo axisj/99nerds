@@ -11,12 +11,12 @@
       margin-bottom: 0;
 
       .footer-logo-wrap {
-        margin-top: 50px;
+        margin: 15px 0;
 
         img {
-          width: 50px;
-          display: block;
+          width: 40px;
           margin: 0 auto;
+
         }
       }
 
@@ -25,7 +25,7 @@
         text-align: center;
 
         h5.company-info-title {
-          color: #ffffff;
+          color: #fafafa;
           font-size: 1.5em;
           font-family: "BM DoHyeon OTF", sans-serif;
           font-weight: 100;
@@ -51,7 +51,7 @@
         width: 80%;
         height: 1px;
         margin: 100px auto;
-        background-color: #417505;
+        background: rgba(248, 231, 28, 0.30);
 
       }
 
@@ -86,9 +86,17 @@
             color: #fafafa;
             @extend .font-ubuntu;
             font-weight: 100;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
           }
 
+          .sns-contact-icon {
+            letter-spacing: 0;
+          }
+
+        }
+
+        p {
+          text-align: right;
         }
 
       }
@@ -171,12 +179,14 @@
       .row {
 
         .footer-logo-wrap {
-          margin-top: 15px;
+          margin: 5px 0;
+          text-align: left;
 
         }
 
         .company-info-wrap {
           margin-left: 15px;
+          margin-top: 15px;
           text-align: left;
 
           h5.company-info-title {
@@ -185,9 +195,9 @@
           }
 
           p.company-info-contents {
-            font-size: 0.95em;
+            font-size: 0.9em;
             font-weight: 100;
-            line-height: 20px;
+            line-height: 1.9em;
           }
 
         }
@@ -198,7 +208,7 @@
           .footer-vertical-line {
             margin-top: 10px;
             margin-bottom: 0;
-            float: right;
+            float: left;
             width: 1px;
             height: 420px;
           }
@@ -247,8 +257,7 @@
         .footer-logo-wrap {
 
           img {
-            width: 80%;
-            margin: 0 auto;
+
           }
         }
 

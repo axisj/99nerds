@@ -2,11 +2,11 @@
 
 
     .log-in-wrap {
-      width: 100%;
+      width: 90%;
 
       .xans-member-login {
         border-radius: 10px;
-        width: 70%;
+        width: 100%;
         background: #fafafa;
         padding: 30px 15px;
         margin: 100px auto;
@@ -25,13 +25,18 @@
 
           label.input-area {
             margin: 0 auto 10px;
+            padding: 0 10px;
             width: 100%;
             background: #fff;
             border-radius: 5px;
             line-height: 54px;
 
             span {
+              font-size: 1.1em;
+              font-weight: 600;
+              color: #757575;
               padding-top: 15px;
+              margin-left: 10px;
             }
 
             #member_id {
@@ -94,11 +99,19 @@
             li {
               width: 100%;
               margin: 0 auto;
+              a {
+                img {
+                  border-radius: 5px;
+                  width: 100%;
+                  max-width: 343px;
+                }
+              }
             }
           }
 
           .link {
             padding: 25px 10px 0;
+            background: none;
           }
 
           a.btnEm {
@@ -120,6 +133,59 @@
 
       }
 
+      .xans-myshop-orderhistorynologin {
+
+        dl {
+          margin: 0 auto 10px;
+          background: #fff;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          height: 95px;
+          line-height: 54px;
+
+          &.order-no {
+            height: 150px;
+          }
+
+
+          dt {
+            width: 100%;
+            font-weight: 600;
+            color: #757575;
+            padding-top: 18px;
+            text-align: left;
+            margin-left: 30px;
+
+          }
+          dd {
+            width: 100%;
+            margin-left: 0;
+
+            input {
+              border: none;
+              padding: 0;
+              height: 1rem;
+            }
+
+            #order_name {
+              width: 100%;
+            }
+
+            #order_password {
+              width: 100%;
+            }
+
+            #order_id1 {
+              width: 50%;
+            }
+
+            #order_id2 {
+              width: 40%;
+            }
+
+          }
+        }
+      }
 
   }
 
@@ -128,7 +194,25 @@
   @media #{$medium-and-up} { // 640
 
       .log-in-wrap {
-        width: 60%;
+
+        .xans-member-login {
+          border-radius: 10px;
+          width: 343px;
+        }
+
+        .xans-myshop-orderhistorynologin {
+
+          dl {
+
+            dt {
+              width: 45%;
+            }
+            dd {
+              padding: 0 20px;
+
+            }
+          }
+        }
 
       }
 
@@ -140,7 +224,44 @@
   @media #{$large-and-up} { // 993
 
     .log-in-wrap {
-      width: 650px;
+
+      .xans-myshop-orderhistorynologin {
+
+        dl {
+          height: 62px;
+
+          dt {
+            width: 30%;
+            margin-left: 15px;
+          }
+          dd {
+            width: 60%;
+            margin-left: 15px;
+
+            input {
+
+            }
+
+            #order_name {
+              width: 100%;
+            }
+
+            #order_password {
+              width: 100%;
+            }
+
+            #order_id1 {
+              width: 50%;
+            }
+
+            #order_id2 {
+              width: 40%;
+            }
+
+
+          }
+        }
+      }
 
     }
 

@@ -9,45 +9,5 @@
 @import "vars/mixin";
 
 @import "addon/ax5ui";
-
-
-// pages
-
 @import "pages/index";
-@import "pages/sub-about";
-@import "pages/sub-notice";
-@import "pages/sub-report";
-@import "pages/sub-cutomer-main";
-@import "pages/sub-product";
-
-@import "pages/agreement";
-@import "pages/detail";
-@import "pages/account";
-@import "pages/account-modify";
-@import "pages/order";
-@import "pages/order-form";
-@import "pages/order-result";
-@import "pages/order-detail";
-
-@import "pages/my-post";
-@import "pages/my-addr";
-@import "pages/my-addr-pop-up";
-@import "pages/my-addr-register";
-@import "pages/mileage";
-@import "pages/coupon";
-@import "pages/refund-pop-up";
-
-@import "pages/login";
-@import "pages/join";
-@import "pages/find-id";
-@import "pages/find-pw";
-@import "pages/pw-reset";
-@import "pages/user-verification";
-@import "pages/_inc/basket";
-
-
-
-//tags
-
-@import "tags/index";
 

@@ -9,6 +9,7 @@
   $list-button-color: #333333;
   $list-white-font-color: #fafafa;
 
+
   .container {
 
     // write
@@ -30,6 +31,7 @@
     }
 
     .board-write-wrap {
+
 
       table {
 
@@ -78,7 +80,7 @@
           td {
             #content_CONTAINER {
               table.seLayout {
-                border-style: none solid;
+                border-style: none;
                 border: 1px solid #CCC;
 
                 button {
@@ -106,6 +108,7 @@
 
     .buttonArea {
       font-weight: 100;
+      padding: 50px 0;
 
       a {
         background-color: $list-button-color;

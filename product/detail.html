@@ -668,18 +668,17 @@
                                     </colgroup>
                                     <thead>
                                     <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col">작성자</th>
-                                        <th scope="col">작성일</th>
-                                        <th scope="col">조회</th>
-                                        <th scope="col" class="{$use_point_display|display}">평점</th>
+                                        <th scope="col">no</th>
+                                        <th scope="col">title</th>
+                                        <th scope="col">name</th>
+                                        <th scope="col">date</th>
+                                        <th scope="col">hit</th>
                                     </tr>
                                     </thead>
                                     <tbody class="center">
                                     <tr>
                                         <td>{$no}</td>
-                                        <td class="left">
+                                        <td>
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
@@ -694,7 +693,7 @@
                                     </tr>
                                     <tr>
                                         <td>{$no}</td>
-                                        <td class="left">
+                                        <td>
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
@@ -719,10 +718,10 @@
                         </p>
                         <div module="product_reviewpaging" class="paginate">
                             <p class="first"><a href="{$param_first}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_first.gif"
+                                    src="/assets/images/sub-product/prev-firstpng.png"
                                     alt="첫 페이지"/></a></p>
                             <p><a href="{$param_before}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_prev.gif"
+                                    src="/assets/images/sub-product/prev.png"
                                     alt="이전 페이지"/></a></p>
                             <ol>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -732,11 +731,12 @@
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                             </ol>
                             <p><a href="{$param_next}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_next.gif"
+                                    src="/assets/images/sub-product/next.png"
                                     alt="다음 페이지"/></a></p>
                             <p class="last"><a href="{$param_last}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_last.gif"
-                                    alt="마지막 페이지"/></a></p>
+                                    src="/assets/images/sub-product/next-last.png"
+                                    alt="마지막 페이지"/></a>
+                            </p>
                         </div>
                     </div>
                 </div><!-- //상품사용후기 -->
@@ -774,12 +774,12 @@
                                     </colgroup>
                                     <thead>
                                     <tr>
-                                        <th scope="col">번호</th>
-                                        <th scope="col">카테고리</th>
-                                        <th scope="col">제목</th>
-                                        <th scope="col">작성자</th>
-                                        <th scope="col">작성일</th>
-                                        <th scope="col">조회</th>
+                                        <th scope="col">no</th>
+                                        <th scope="col">category</th>
+                                        <th scope="col">title</th>
+                                        <th scope="col">name</th>
+                                        <th scope="col">date</th>
+                                        <th scope="col">hit</th>
                                     </tr>
                                     </thead>
                                     <tbody class="center">
@@ -823,10 +823,10 @@
 
                         <div module="product_qnapaging" class="paginate">
                             <p class="first"><a href="{$param_first}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_first.gif"
+                                    src="/assets/images/sub-product/prev-firstpng.png"
                                     alt="첫 페이지"/></a></p>
                             <p><a href="{$param_before}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_prev.gif"
+                                    src="/assets/images/sub-product/prev.png"
                                     alt="이전 페이지"/></a></p>
                             <ol>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -836,11 +836,12 @@
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                             </ol>
                             <p><a href="{$param_next}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_next.gif"
+                                    src="/assets/images/sub-product/next.png"
                                     alt="다음 페이지"/></a></p>
                             <p class="last"><a href="{$param_last}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_comment_last.gif"
-                                    alt="마지막 페이지"/></a></p>
+                                    src="/assets/images/sub-product/next-last.png"
+                                    alt="마지막 페이지"/></a>
+                            </p>
                         </div>
                     </div>
                 </div><!-- //상품Q&A -->

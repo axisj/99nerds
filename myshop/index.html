@@ -5,156 +5,213 @@
 <section class="section-contents-wrap">
     <div class="container">
 
-        <div module="layout_logincheck">
-            <!--
-                $url = /member/login.html
-            -->
-        </div>
+        <div class="order-list-wrap">
+
+            <div module="layout_logincheck">
+                <!--
+                    $url = /member/login.html
+                -->
+            </div>
 
 
-        <div module="myshop_asyncbenefit" >
-            <!--@css(/css/module/myshop/benefit.css)-->
-            <div class="{$display_benefit|display}">
-                <div class="division">
-                    <div class="heading"><img src="{$group_image}" alt="" id="{$group_image_tag_id}" onerror="this.src='/assets/images/account/account-image.png';" style="max-width:70px;" /></div>
-                    <div class="info">
-                        <p>99NERDS를 이용해 주셔서 감사합니다. <strong>{$member_name}</strong> 님은 <span class="{$displayGroupIcon|display}"><img src="{$group_icon}" alt="" class="{$group_icon_tag_class}" /></span><strong>[{$group_name}]</strong> 회원이십니다.</p>
-                        <p class="{$display_no_benefit|display} {$display_no_benefit_class}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
-                        <p class="{$display_with_all|display} {$display_with_all_class}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
-                        <div class="{$bGradeAutoDisplay|display} gBlank5" id="{$sGradeAutoDisplayId}">
-                            <p class="{$bChangeTypePrice|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
-                            <p class="{$bChangeTypeCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="{$bChangeTypePriceAndCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="{$bChangeTypePriceOrCount|display} {$sAutoGradeDisplay}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="{$bChangeMaxTypePrice|display}" id="{$sChangeMaxTypePriceId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
-                            <p class="{$bChangeMaxTypeCount|display}" id="{$sChangeMaxTypeCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="{$bChangeMaxTypePriceAndCount|display}" id="{$sChangeMaxTypePriceAndCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="{$bChangeMaxTypePriceOrCount|display}" id="{$sChangeMaxTypePriceOrCountId}"><strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}" /></span>{$sNextGrade}]</strong> 등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 : {$sPeriodOrderCount})</p>
-                            <p class="txtInfo txt11">승급 기준에 따른 예상 금액이므로 총주문 금액과 다를 수 있습니다.</p>
+            <div module="myshop_asyncbenefit">
+                <!--@css(/css/module/myshop/benefit.css)-->
+                <div class="{$display_benefit|display}">
+                    <div class="division">
+                        <div class="heading"><img src="{$group_image}" alt="" id="{$group_image_tag_id}"
+                                                  onerror="this.src='/assets/images/account/account-image.png';"
+                                                  style="max-width:70px;"/></div>
+                        <div class="info">
+                            <p>99NERDS를 이용해 주셔서 감사합니다. <strong>{$member_name}</strong> 님은 <span
+                                    class="{$displayGroupIcon|display}"><img src="{$group_icon}" alt=""
+                                                                             class="{$group_icon_tag_class}"/></span><strong>[{$group_name}]</strong>
+                                회원이십니다.</p>
+                            <p class="{$display_no_benefit|display} {$display_no_benefit_class}"><strong>{$dc_pay}
+                                {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수
+                                있습니다. {$dc_max_percent}</p>
+                            <p class="{$display_with_all|display} {$display_with_all_class}"><strong>{$dc_pay}
+                                {$dc_min_price_mileage}</strong> 구매시
+                                <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다.
+                                {$dc_max_mileage_percent}</p>
+                            <div class="{$bGradeAutoDisplay|display} gBlank5" id="{$sGradeAutoDisplayId}">
+                                <p class="{$bChangeTypePrice|display} {$sAutoGradeDisplay}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod}
+                                    {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
+                                <p class="{$bChangeTypeCount|display} {$sAutoGradeDisplay}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    까지 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod}
+                                    {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
+                                <p class="{$bChangeTypePriceAndCount|display} {$sAutoGradeDisplay}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong>
+                                    입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 :
+                                    {$sPeriodOrderCount})</p>
+                                <p class="{$bChangeTypePriceOrCount|display} {$sAutoGradeDisplay}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    까지 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong>
+                                    입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 :
+                                    {$sPeriodOrderCount})</p>
+                                <p class="{$bChangeMaxTypePrice|display}" id="{$sChangeMaxTypePriceId}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong> 입니다. ({$sApplyPeriod}
+                                    {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice})</p>
+                                <p class="{$bChangeMaxTypeCount|display}" id="{$sChangeMaxTypeCountId}"><strong>[<span
+                                        class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                        src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    등급을 유지하기 위해 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong> 입니다. ({$sApplyPeriod}
+                                    {$sGradePeriod} 구매건수 : {$sPeriodOrderCount})</p>
+                                <p class="{$bChangeMaxTypePriceAndCount|display}" id="{$sChangeMaxTypePriceAndCountId}">
+                                    <strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                            src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 남은 구매건수는 <strong>{$sGradeIncreaseCount}</strong>
+                                    입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 :
+                                    {$sPeriodOrderCount})</p>
+                                <p class="{$bChangeMaxTypePriceOrCount|display}" id="{$sChangeMaxTypePriceOrCountId}">
+                                    <strong>[<span class="{$bDisplayNextGroupIcon|display} {$sNextGroupIconClass}"><img
+                                            src="{$group_icon}" alt="" class="{$next_group_icon_tag_class}"/></span>{$sNextGrade}]</strong>
+                                    등급을 유지하기 위해 남은 구매금액은 <strong>{$sGradeIncreasePrice}</strong>, 또는 남은 구매건수 <strong>{$sGradeIncreaseCount}</strong>
+                                    입니다. ({$sApplyPeriod} {$sGradePeriod} 구매금액 : {$sPeriodOrderPrice}｜구매건수 :
+                                    {$sPeriodOrderCount})</p>
+                                <p class="txtInfo txt11">승급 기준에 따른 예상 금액이므로 총주문 금액과 다를 수 있습니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="boxTheme {$display_reco|display}">
-                <strong>주소를 복사하여 친구를 쇼핑몰에 초대해보세요.</strong>
-                <span class="gDouble">
-            <input type="text" id="{$reco_url}" value="http://{$shop_domain}/?reco_id={$member_id}" readonly />
+                <div class="boxTheme {$display_reco|display}">
+                    <strong>주소를 복사하여 친구를 쇼핑몰에 초대해보세요.</strong>
+                    <span class="gDouble">
+            <input type="text" id="{$reco_url}" value="http://{$shop_domain}/?reco_id={$member_id}" readonly/>
             <button type="button" class="btnSubmit" onclick="{$copy_func}">주소복사</button>
         </span>
-                <ul class="gSingle">
-                    <li>- 친구에게는 가입즉시 {$reco_mileage2}의 적립금이 지급됩니다.</li>
-                    <li>- {$reco_mileage}</li>
-                </ul>
+                    <ul class="gSingle">
+                        <li>- 친구에게는 가입즉시 {$reco_mileage2}의 적립금이 지급됩니다.</li>
+                        <li>- {$reco_mileage}</li>
+                    </ul>
+                </div>
             </div>
+
+
+            <div module="myshop_asyncbankbook" class="gTriple ">
+                <!--@css(/css/module/myshop/bankbook.css)-->
+                <div class="boxTheme">
+                    <dl class="desc {$display_mileage|display}">
+                        <dt><span class="icoDot"></span> 가용{$mileage_name}</dt>
+                        <dd>{$avail_mileage}
+                            <a href="/myshop/mileage/historyList.html">조회</dd>
+                    </dl>
+
+                    <dl class="desc {$display_deposit|display}">
+                        <dt><span class="icoDot"></span> {$deposit_name}</dt>
+                        <dd>{$total_deposit}
+                            <a href="/myshop/deposits/historyList.html">조회</dd>
+                    </dl>
+                    <dl class="desc">
+                        <dt class="order-total"><span class="icoDot"></span> Order</dt>
+                        <dd class="order-total">{$total_order_price}({$total_order_count}회)</dd>
+                    </dl>
+                    <dl class="desc {$display_coupon|display}">
+                        <dt class="coupon"><span class="icoDot"></span> Coupon</dt>
+                        <dd class="coupon">{$coupon_cnt}개
+                            <a href="/myshop/coupon/coupon.html">조회</a></dd>
+                    </dl>
+                </div>
+            </div>
+
+
+            <div module="myshop_orderstate">
+                <!--@css(/css/module/myshop/main.css)-->
+                <div class="gStrong">
+                    <table border="1" summary="나의 주문처리 현황">
+                        <caption>나의 주문처리 현황</caption>
+
+                        <tbody class="center">
+                        <tr>
+                            <td class="order-state-count">입금전<a href="{$shppiedBeforeUrl}">{$shppiedBeforeCount}</a>
+                            </td>
+                            <td class="order-state-count">배송준비중<a href="{$shppiedStandbyUrl}">{$shppiedStandbyCount}</a>
+                            </td>
+                            <td class="order-state-count">배송중<a href="{$shppiedBeginUrl}">{$shppiedBeginCount}</a></td>
+                            <td class="order-state-count">배송완료<a
+                                    href="{$shppiedComplateUrl}">{$shppiedComplateCount}</a></td>
+                            <td class="">
+                                <ul class="gIndent">
+                                    <li>
+                                        <strong>취소 : </strong>
+                                        <a href="{$orderCancelUrl}">{$orderCancelCount}</a>
+                                    </li>
+                                    <li>
+                                        <strong>교환 : </strong>
+                                        <a href="{$orderExchangeUrl}">{$orderExchangeCount}</a>
+                                    </li>
+                                    <li>
+                                        <strong>반품 : </strong>
+                                        <a href="{$orderReturnUrl}">{$orderReturnCount}</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div module="myshop_main" id="myshopMain" class="xans-myshop-main">
+                <div class="shopMain order" onclick="location.href='/myshop/order/list.html';">
+                    <h3>주문내역 조회</h3>
+                    <p>상품의 주문내역을 확인하실 수 있습니다.<br/>비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.</p>
+                </div>
+                <div class="shopMain profile" onclick="location.href='/member/modify.html';">
+                    <h3>회원 정보</h3>
+                    <p><a href="/member/modify.html">고객님의 개인정보를 관리하는 공간입니다.<br/>개인정보를 최신 정보로 유지하시면 보다 간편히 쇼핑을 즐기실 수
+                        있습니다.</p>
+                </div>
+                <div class="shopMain wishlist" onclick="location.href='/myshop/wish_list.html';">
+                    <h3>관심 상품</h3>
+                    <p>관심상품으로 등록하신 상품의 목록입니다.</p>
+                </div>
+                <div class="shopMain likeIt {$myLike_display|display}" onclick="{$myLike_href};">
+                    <h3><strong>Like it</strong>좋아요</h3>
+                    <p>'좋아요'를 선택한 상품과 상품분류 목록을 보여드립니다.</p>
+                </div>
+                <div class="shopMain mileage" onclick="location.href='/myshop/mileage/historyList.html';">
+                    <h3>{$mileage_name}</h3>
+                    <p>{$mileage_name}은 상품 구매 시 사용하실 수 있습니다. 적립된 금액은 현금으로 환불되지 않습니다.</p>
+                </div>
+                <div class="shopMain deposits {$deposit_display|display}"
+                     onclick="location.href='/myshop/deposits/historyList.html';">
+                    <h3>{$deposit_name}</h3>
+                    <p>{$deposit_name}은 현금과 동일하게 상품 구매시 사용하실 수 있습니다.<br/>예치된 금액은 현금으로 환불이 가능합니다. ({$deposit_name} 적립:
+                        주문취소 등의 환불금액 발생 시 {$deposit_name}으로 적립이 가능합니다.)</p>
+                </div>
+                <div class="shopMain consult {$consult_display|display}"
+                     onclick="location.href='/board/consult/list.html';">
+                    <h3>1:1 맞춤상담</h3>
+                    <p>고객님의 궁금하신 문의사항에 대하여 1:1맞춤상담 내용을 확인하실 수 있습니다.</p>
+                </div>
+                <div class="shopMain board" onclick="location.href='/myshop/board_list.html';">
+                    <h3>게시물 관리</h3>
+                    <p>작성하신 게시물을 관리하는 공간입니다.<br/>작성하신 글을 한눈에 보실 수 있습니다.</p>
+                </div>
+                <div class="shopMain address" onclick="location.href='/myshop/addr/list.html';">
+                    <h3>배송 주소록 관리</h3>
+                    <p>자주 사용하는 배송지를 등록하고 관리하실 수 있습니다.</p>
+                </div>
+                <div module="Myshop_InquiryDash" class="shopMain inquiry"
+                     onclick="location.href='/board/inquiry/list.html';">
+                    <h3>대량구매 문의 관리</h3>
+                    <p>요청한 대량구매문의 내역을 확인하고 관리하실 수 있습니다.</p>
+                </div>
+            </div>
+
         </div>
-
-
-        <div module="myshop_asyncbankbook" class="gTriple ">
-            <!--@css(/css/module/myshop/bankbook.css)-->
-            <div class="boxTheme">
-                <dl class="desc {$display_mileage|display}">
-                    <dt><span class="icoDot"></span> 가용{$mileage_name}</dt>
-                    <dd>{$avail_mileage}
-                        <a href="/myshop/mileage/historyList.html">조회</dd>
-                </dl>
-
-                <dl class="desc {$display_deposit|display}">
-                    <dt><span class="icoDot"></span> {$deposit_name}</dt>
-                    <dd>{$total_deposit}
-                        <a href="/myshop/deposits/historyList.html">조회</dd>
-                </dl>
-                <dl class="desc">
-                    <dt class="order-total"><span class="icoDot"></span> Order</dt>
-                    <dd class="order-total">{$total_order_price}({$total_order_count}회)</dd>
-                </dl>
-                <dl class="desc {$display_coupon|display}">
-                    <dt class="coupon"><span class="icoDot"></span> Coupon</dt>
-                    <dd class="coupon">{$coupon_cnt}개
-                        <a href="/myshop/coupon/coupon.html">조회</a></dd>
-                </dl>
-            </div>
-        </div>
-
-
-        <div module="myshop_orderstate">
-            <!--@css(/css/module/myshop/main.css)-->
-            <div class="gStrong">
-                <table border="1" summary="나의 주문처리 현황">
-                    <caption>나의 주문처리 현황</caption>
-
-                    <tbody class="center">
-                    <tr>
-                        <td class="order-state-count">입금전<a href="{$shppiedBeforeUrl}">{$shppiedBeforeCount}</a></td>
-                        <td class="order-state-count">배송준비중<a href="{$shppiedStandbyUrl}">{$shppiedStandbyCount}</a></td>
-                        <td class="order-state-count">배송중<a href="{$shppiedBeginUrl}">{$shppiedBeginCount}</a></td>
-                        <td class="order-state-count">배송완료<a href="{$shppiedComplateUrl}">{$shppiedComplateCount}</a></td>
-                        <td class="">
-                            <ul class="gIndent">
-                                <li>
-                                    <strong>취소 : </strong>
-                                    <a href="{$orderCancelUrl}">{$orderCancelCount}</a>
-                                </li>
-                                <li>
-                                    <strong>교환 : </strong>
-                                    <a href="{$orderExchangeUrl}">{$orderExchangeCount}</a>
-                                </li>
-                                <li>
-                                    <strong>반품 : </strong>
-                                    <a href="{$orderReturnUrl}">{$orderReturnCount}</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <div module="myshop_main" id="myshopMain" class="xans-myshop-main">
-            <div class="shopMain order" onclick="location.href='/myshop/order/list.html';">
-                <h3>주문내역 조회</h3>
-                <p>상품의 주문내역을 확인하실 수 있습니다.<br />비회원의 경우, 주문서의 주문번호와 비밀번호로 주문조회가 가능합니다.</p>
-            </div>
-            <div class="shopMain profile" onclick="location.href='/member/modify.html';">
-                <h3>회원 정보</h3>
-                <p><a href="/member/modify.html">고객님의 개인정보를 관리하는 공간입니다.<br />개인정보를 최신 정보로 유지하시면 보다 간편히 쇼핑을 즐기실 수 있습니다.</p>
-            </div>
-            <div class="shopMain wishlist" onclick="location.href='/myshop/wish_list.html';">
-                <h3>관심 상품</h3>
-                <p>관심상품으로 등록하신 상품의 목록입니다.</p>
-            </div>
-            <div class="shopMain likeIt {$myLike_display|display}" onclick="{$myLike_href};">
-                <h3><strong>Like it</strong>좋아요</h3>
-                <p>'좋아요'를 선택한 상품과 상품분류 목록을 보여드립니다.</p>
-            </div>
-            <div class="shopMain mileage" onclick="location.href='/myshop/mileage/historyList.html';">
-                <h3>{$mileage_name}</h3>
-                <p>{$mileage_name}은 상품 구매 시 사용하실 수 있습니다. 적립된 금액은 현금으로 환불되지 않습니다.</p>
-            </div>
-            <div class="shopMain deposits {$deposit_display|display}" onclick="location.href='/myshop/deposits/historyList.html';">
-                <h3>{$deposit_name}</h3>
-                <p>{$deposit_name}은 현금과 동일하게 상품 구매시 사용하실 수 있습니다.<br />예치된 금액은 현금으로 환불이 가능합니다. ({$deposit_name} 적립: 주문취소 등의 환불금액 발생 시 {$deposit_name}으로 적립이 가능합니다.)</p>
-            </div>
-            <div class="shopMain consult {$consult_display|display}" onclick="location.href='/board/consult/list.html';">
-                <h3>1:1 맞춤상담</h3>
-                <p>고객님의 궁금하신 문의사항에 대하여 1:1맞춤상담 내용을 확인하실 수 있습니다.</p>
-            </div>
-            <div class="shopMain board" onclick="location.href='/myshop/board_list.html';">
-                <h3>게시물 관리</h3>
-                <p>작성하신 게시물을 관리하는 공간입니다.<br />작성하신 글을 한눈에 보실 수 있습니다.</p>
-            </div>
-            <div class="shopMain address" onclick="location.href='/myshop/addr/list.html';">
-                <h3>배송 주소록 관리</h3>
-                <p>자주 사용하는 배송지를 등록하고 관리하실 수 있습니다.</p>
-            </div>
-            <div module="Myshop_InquiryDash" class="shopMain inquiry" onclick="location.href='/board/inquiry/list.html';">
-                <h3>대량구매 문의 관리</h3>
-                <p>요청한 대량구매문의 내역을 확인하고 관리하실 수 있습니다.</p>
-            </div>
-        </div>
-
 
     </div>
 </section>

@@ -1,0 +1,122 @@
+#searchForm {
+  padding: 50px 0;
+
+  .xans-search-form {
+    width: 90%;
+    margin: 0 auto;
+
+    .searchbox {
+      background: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 20px 25px;
+      background: #eee;
+      border: none;
+
+      fieldset {
+        padding: 10px 25px;
+        border-radius: 10px;
+        border: none;
+        background: #fff;
+
+        legend {
+          text-align: center;
+          width: auto;
+          font-size: 1.1em;
+          font-weight: 600;
+        }
+
+        .desc {
+          width: 100%;
+
+          dt, dd {
+            padding: 10px 0;
+          }
+
+          dt {
+            width: 40%;
+          }
+          dd {
+            width: 60%;
+          }
+        }
+
+      }
+
+    }
+
+    .buttonArea {
+      padding: 0 0 50px 0;
+      text-align: center;
+
+      button {
+        width: auto;
+        height: auto;
+        background: #333333;
+        color: #fafafa;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: none;
+      }
+    }
+
+    .searchResult {
+      border-radius: 5px;
+      padding: 0 0 0 10px;
+
+      ul {
+        li {
+          line-height: 63px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.xans-search-result {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.paginate {
+  margin: 0 auto;
+  display: table;
+  padding: 30px;
+
+  p {
+    display: table;
+    float: left;
+    margin: 0;
+
+    img {
+      width: 25px;
+
+    }
+  }
+
+  ol {
+    display: table;
+    float: left;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    padding: 0;
+    height: 25px;
+    line-height: 25px;
+
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 0 10px;
+      background: #fff;
+
+      a {
+        @extend .font-ubuntu;
+        color: #717171;
+        font-size: 0.8em;
+      }
+    }
+
+  }
+}

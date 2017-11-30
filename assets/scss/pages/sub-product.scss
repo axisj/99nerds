@@ -43,6 +43,7 @@
 
   .product-wrap {
     display: table;
+    padding: 50px 0;
 
     aside.side-product-nav-wrap {
       display: none;
@@ -63,6 +64,8 @@
           li {
             padding-left: 15px;
             padding-bottom: 10px;
+            font-size: 1em;
+            font-weight: 200;
 
             a {
               color: #9B9B9B;
@@ -126,6 +129,8 @@
 
             a {
               color: #9B9B9B;
+              font-size: 1.1em;
+              font-weight: 200;
             }
           }
         }
@@ -156,6 +161,7 @@
                 @extend .font-ubuntu;
 
                 .product-image-wrap {
+                  display: table;
                   width: 80%;
                   height: 120px;
                   margin: 10px auto;
@@ -189,7 +195,9 @@
                       padding: 5px;
                       img {
                         display: block;
-                        max-height: 100px;
+                        margin: 0 auto;
+                        width: 90%;
+                        padding: 10px;
 
                       }
                     }
@@ -199,7 +207,6 @@
 
                 .product-info-wrap {
                   width: 80%;
-                  height: 130px;
                   margin: 10px auto;
 
                   .icon {
@@ -265,6 +272,11 @@
               li {
                 margin: 0 auto;
 
+                a {
+                  @extend .font-nanum-square;
+                  font-weight: 200;
+                }
+
               }
             }
           }
@@ -317,7 +329,7 @@
     }
 
     //mobile
-    @media #{$medium-and-up} { // 640
+    @media #{$medium-and-up} { // 600
 
       .product-body {
         .product-list-wrap {
@@ -335,8 +347,24 @@
 
             ul.prdList {
               li.item {
-                width: 33.3%;
-                padding: 5px;
+                width: 50%;
+
+                .product-list {
+
+                  .product-image-wrap {
+
+                    .product-image-link {
+
+                      a {
+                        img {
+
+                        }
+                      }
+                    }
+
+                  }
+
+                }
               }
             }
 
@@ -404,6 +432,7 @@
 
             ul.prdList {
               li.item {
+                width: 33.3%;
               }
             }
 
@@ -417,6 +446,40 @@
 
     // desktop
     @media #{$extra-large-and-up} { // 1200
+
+      .product-body {
+        .product-list-wrap {
+
+
+          .subPrdList {
+
+            ul.prdList {
+              li.item {
+
+                .product-list {
+
+                  .product-image-wrap {
+
+                    .product-image-link {
+
+                      a {
+                        img {
+                          padding: 0;
+                        }
+                      }
+                    }
+
+                  }
+
+                }
+              }
+            }
+
+
+          }
+
+        }
+      }
 
     }
 

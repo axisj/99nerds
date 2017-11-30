@@ -173,13 +173,6 @@
   }
 
   @media #{$large-and-up} { // 993
-    color: #fafafa;
-    //background-color: #1E1E1E;
-    background-image: url("/assets/images/landing_page/main_visual/main-bg.png");
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 550px;
 
     .row {
 
@@ -210,7 +203,7 @@
       .main-image-wrap {
         float: right;
         position: relative;
-        width: 210px;
+        width: 215px;
         bottom: 110px;
         margin-right: 80px;
 
@@ -232,12 +225,12 @@
         .keyword-card {
 
           .keyword-card-title {
-            font-size: 13px;
+            font-size: 12px;
           }
 
           .keyword-card-content {
             line-height: 11px;
-            font-size: 11px;
+            font-size: 10px;
             a {
               float: left;
               margin-right: 10px;
@@ -256,6 +249,17 @@
 
       .ctn-button {
         float: left;
+        vertical-align: middle;
+        text-align: center;
+        width: auto;
+        margin: 0 auto;
+        padding: 10px 0;
+        display: table;
+
+        a {
+          font-size: 1.3rem;
+          padding: 10px 20px;
+        }
       }
 
     }

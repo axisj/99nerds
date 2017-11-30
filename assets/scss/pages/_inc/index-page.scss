@@ -121,7 +121,7 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 10px 0;
-        padding: 10px 10px;
+        padding: 10px 20px;
         display: table;
         min-height: 230px;
         @extend .font-ubuntu;
@@ -243,7 +243,7 @@
       font-weight: 500;
       line-height: 30px;
       color: #fafafa;
-      padding: 20px 0;
+
     }
 
     p {
@@ -312,7 +312,7 @@
       font-weight: 500;
       line-height: 30px;
       color: #fafafa;
-      padding: 20px 0;
+
     }
 
     .info-wrapper {
@@ -350,7 +350,7 @@
         color: #fafafa;
         font-size: 1.5rem;
         font-family: 'Overpass Mono', monospace;
-        font-weight: 700;
+
         vertical-align: middle;
         text-align: center;
 
@@ -437,7 +437,7 @@
           color: #fafafa;
           font-size: 1.5rem;
           font-family: 'Overpass Mono', monospace;
-          font-weight: 700;
+
           vertical-align: middle;
           text-align: center;
 
@@ -642,7 +642,7 @@
             color: #fafafa;
             font-size: 1.5rem;
             font-family: 'Overpass Mono', monospace;
-            font-weight: 700;
+
             vertical-align: middle;
             text-align: center;
 
@@ -773,7 +773,7 @@
 
         }
         p {
-          margin: 10px 0 50px;
+
           display: inline-block;
           width: 500px;
         }
@@ -808,6 +808,7 @@
         ul.info-quality {
           margin: 40px 0;
           display: inline-block;
+          float: right;
 
           li {
             padding-bottom: 20px;
@@ -838,9 +839,8 @@
 
         .best-quality-image {
           display: block;
-          float: right;
-          margin-top: 60px;
-          width: 440px;
+          width: 400px;
+          float: left;
         }
 
         //Support report
@@ -848,18 +848,25 @@
         .report-section {
           text-align: center;
 
-          h4 {
-            font-size: 1.5rem;
-          }
-          p {
-            width: 80%;
-            padding: 5px 5px;
-            margin: 30px auto 85px;
-          }
-
           .info-block-line {
             margin: 0 auto;
           }
+
+          .report-section-contents {
+            padding: 20px 0;
+
+            h4 {
+              font-size: 1.5rem;
+            }
+            p {
+              width: 60%;
+              padding: 5px 5px;
+
+            }
+
+          }
+
+
 
         }
 

@@ -1,9 +1,9 @@
 <!--@layout(/layout/99nerds/layout-default.html)-->
-        <!--@import(/layout/99nerds/inc/head.html)-->
-        <!--@import(/layout/99nerds/inc/login-visual.html)-->
+<!--@import(/layout/99nerds/inc/head.html)-->
+<!--@import(/layout/99nerds/inc/login-visual.html)-->
 
-        <section class="section-log-in">
-            <div class="container log-in-wrap">
+<section class="section-log-in">
+    <div class="container log-in-wrap">
 
         <div module="member_login" class="xans-member-findid">
             <!--@css(/css/module/member/login.css)-->
@@ -27,49 +27,52 @@
                 <ul class="snsArea">
                     <li class="{$display_naver|display}">
                         <a href="#none" onclick="{$naver_func_login}"><img
-                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif"
-                                alt="네이버 로그인"/></a>
-                    </li>
+                                src="/assets/images/login/btn_naver_login.gif"
+                                alt="네이버 로그인"/></a></li>
                     <li class="{$display_facebook|display}">
                         <a href="#none" onclick="{$facebook_func_login}"><img
-                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif"
+                                src="/assets/images/login/btn_facebook_login.gif"
                                 alt="페이스북 로그인"/></a>
                     </li>
                     <li class="{$display_google|display}">
                         <a href="#none" onclick="{$google_func_login}"><img
-                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif"
+                                src="/assets/images/login/btn_google_login.gif"
                                 alt="구글 로그인"/></a>
                     </li>
                     <li class="{$display_kakao|display}">
                         <a href="#none" onclick="{$kakao_func_login}"><img
-                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif"
+                                src="/assets/images/login/btn_kakao_login.gif"
                                 alt="카카오 로그인"/></a>
                     </li>
                 </ul>
                 <div class="link txtBase">
-                    회원가입을 하시면 다양하고 특별한<br/>혜택이 준비되어 있습니다.
+                    * 회원가입을 하시면 다양하고 특별한<br/>혜택이 준비되어 있습니다.
                 </div>
                 <a href="/member/join.html" class="btnEm">Sign up</a>
                 <div class="link txtBase {$display_nomember|display}" id="noMemberWrap">
-                    비회원님도 상품구매가 가능하나 다양한<br/>회원혜택에서 제외됩니다.
-                    <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnEm">비회원구매</a>
+                    * 비회원님도 상품구매가 가능하나 다양한<br/>회원혜택에서 제외됩니다.
                 </div>
+                <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnEm">비회원구매</a>
             </fieldset>
         </div>
 
-        <div module="MyShop_OrderHistoryNologin">
+        <div module="MyShop_OrderHistoryNologin" class="xans-member-login">
             <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
             <!--
                 $orderDetailUrl = /myshop/order/detail.html
             -->
-            <h3>비회원 로그인</h3>
+
             <fieldset class="memberArea">
-                <legend>비밀번호 찾기 2단계 힌트답변 입력</legend>
+                <legend>비회원 Log in</legend>
                 <dl class="desc">
                     <dt>{$form_label.order_name}</dt>
                     <dd>{$form.order_name}</dd>
+                </dl>
+                <dl class="desc order-no">
                     <dt>{$form_label.order_id}</dt>
                     <dd>{$form.order_id}</dd>
+                </dl>
+                <dl class="desc">
                     <dt>{$form_label.order_password}</dt>
                     <dd>{$form.order_password}</dd>
                 </dl>
