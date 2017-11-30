@@ -1,45 +1,47 @@
 <div id="slide-out-mask" class="side-nav-mask"></div>
 <ul id="slide-out" class="side-nav">
     <li>
-        <div class="userView" style="height: 100px;padding: 0;">
-            <div class="background">
-                <span class="ci ci-stack"></span>
-            </div>
-        </div>
+        <a href="#!" id="slide-in-handle" style="font-size: 2em;text-align: right;">
+        <span class="ci ci-rewind"></span></a>
     </li>
-    <li><a href="/product/list.html?cate_no=24" class="waves-light side-nav-dropbtn"><span class="sc sc-event_available"></span>Product<img class="nav-light"
-                                                                                                       src="/assets/images/side-nav/yellow.png"/></a>
+    <li><a href="/product/list.html?cate_no=68" class="waves-light side-nav-dropbtn">
+        <span class="sc sc-event_available"></span>Product<img class="nav-light" src="/assets/images/side-nav/yellow.png"/></a>
         <ul class="side-nav-dropdown">
-            <li class="side-nav-dropdown-content">
-                Stickers
-                <ul class="stickers">
-                    <li>Linux</li>
-                    <li>Program</li>
-                    <li>Software</li>
-                    <li>Framework</li>
-                    <li>Tool</li>
-                </ul>
-            </li>
-            <li class="side-nav-dropdown-content">
-                Others
-                <ul class="others">
-                    <li>Others</li>
+            <li module="product_displaycategory" style="display:{$display};" class="side-nav-dropdown-content {$selected}">
+                <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+                <ul module="product_children" class="stickers">
+                    <li class="{$selected}">
+                        <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="{$selected}">
+                        <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </li>
         </ul>
-
     </li>
-
-
-    <li><a href="/sub-about.html" class="waves-light"><span class="sc sc-event_available"></span>About<img class="nav-light"
-                                                                                                     src="/assets/images/side-nav/orange.png"/></a>
+    <li>
+        <a href="/sub-about.html" class="waves-light"><span class="sc sc-event_available"></span>About<img class="nav-light" src="/assets/images/side-nav/orange.png"/></a>
     </li>
-    <li><a href="/board/sub-notice_default/list.html?board_no=1" class="waves-light"><span class="sc sc-event_available"></span>Notice<img class="nav-light"
-                                                                                                      src="/assets/images/side-nav/light-yellowgreen.png"/></a>
+    <li>
+        <a href="/board/sub-notice_default/list.html?board_no=1" class="waves-light"><span class="sc sc-event_available"></span>Notice<img class="nav-light" src="/assets/images/side-nav/light-yellowgreen.png"/></a>
     </li>
-
-
-    <li><a href="/board/sub-customer/sub-customer-main.html" class="waves-light"><span class="sc sc-event_available"></span>Customer<img
+    <li>
+        <a href="/board/sub-customer/sub-customer-main.html" class="waves-light"><span class="sc sc-event_available"></span>Customer<img
             class="nav-light" src="/assets/images/side-nav/green.png"/></a>
 
         <ul class="side-nav-dropdown">
@@ -48,21 +50,17 @@
             <li class="side-nav-dropdown-content"><a href="/board/gallary/list.html?board_no=8">Request</a>
             </li>
         </ul>
-
     </li>
-
-
-    <li><a href="/board/sub-report/list.html?board_no=7" class="waves-light"><span class="sc sc-event_available"></span>Report<img class="nav-light"
-                                                                                                      src="/assets/images/side-nav/yellowgreen.png"/></a>
+    <li>
+        <a href="/board/sub-report/list.html?board_no=7" class="waves-light"><span class="sc sc-event_available"></span>Report<img class="nav-light" src="/assets/images/side-nav/yellowgreen.png"/></a>
     </li>
-
-    <li><a href="/order/basket.html" class="waves-light"><span class="sc sc-event_available"></span>Shopping bag<img
-            class="nav-light" src="/assets/images/side-nav/shopping-bag.png"/></a></li>
-    <li><a href="/myshop/order/list.html" class="waves-light"><span class="sc sc-event_available"></span>Order<img class="nav-light"
-                                                                                                     src="/assets/images/side-nav/order.png"/></a>
-    </li>
-    <li><a href="/myshop/index.html" class="waves-light" style="border-bottom: none"><span class="sc sc-event_available"></span>Account<img class="nav-light"
-                                                                                                       src="/assets/images/side-nav/account.png"/></a>
-    </li>
-
+    <li><a href="/order/basket.html" class="waves-light">
+        <span class="sc sc-event_available"></span>Shopping bag
+        <img class="nav-light" src="/assets/images/side-nav/shopping-bag.png"/></a></li>
+    <li><a href="/myshop/order/list.html" class="waves-light">
+        <span class="sc sc-event_available"></span>Order
+        <img class="nav-light" src="/assets/images/side-nav/order.png"/></a></li>
+    <li><a href="/myshop/index.html" class="waves-light" style="border-bottom: none">
+        <span class="sc sc-event_available"></span>Account
+        <img class="nav-light" src="/assets/images/side-nav/account.png"/></a></li>
 </ul>

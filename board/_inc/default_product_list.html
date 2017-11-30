@@ -2,47 +2,57 @@
 
     <aside class="side-product-nav-wrap">
         <h1>Product</h1>
-        <div class="side-product-nav-container">
-            <ul>
-                <li><a href="#">Stickers</a></li>
-                <li><a href="#">Linux</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Software</a></li>
-                <li><a href="#">Framework</a></li>
-                <li><a href="#">Tool</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">Others</a></li>
-                <li><a href="#">Others</a></li>
-            </ul>
-        </div>
+
+        <ul class="side-product-nav-container">
+            <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+            <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+                <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+                <ul module="product_children">
+                    <li class="{$selected}">
+                        <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="{$selected}">
+                        <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                        <div class="button">
+                            {$children_icon}
+                            <ul module="product_children" class="subCategory">
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li><!-- //참고 -->
+        </ul>
+
     </aside>
 
-    <div class="divider-stroke"></div>
-
     <div class="product-body">
+
         <div module="Product_menupackage" class="menu">
-
-
+            <div class="path" module="product_headcategory">
+                <div class="path-wrap">
+                    <a href="/" class="breadcrumb">홈</a>
+                    <a class="{$disp_cate_1|display} breadcrumb" href="/product/list.html{$param_1}">{$name_1}</a>
+                    <a class="{$disp_cate_2|display} breadcrumb" href="/product/list.html{$param_2}">{$name_2}</a>
+                    <a class="{$disp_cate_3|display} breadcrumb" href="/product/list.html{$param_3}">{$name_3}</a>
+                    <a class="{$disp_cate_4|display} breadcrumb" href="/product/list.html{$param_4}">{$name_4}</a>
+                </div>
+            </div>
             <div class="titleArea" module="product_headcategory">
                 <h2>{$title_text_or_image}</h2>
                 <div class="block-line"></div>
             </div>
-
-            <div module="product_headcategory">
-                <ol>
-                    <li class="{$disp_cate_1|display}"><a href="{$link_product_list_1}">{$name_1}</a></li>
-                    <li class="{$disp_cate_2|display}"><a href="{$link_product_list_2}">{$name_2}</a></li>
-                    <li class="{$disp_cate_3|display}"><a href="{$link_product_list_3}">{$name_3}</a></li>
-                    <li class="{$disp_cate_4|display}"><strong><a href="{$link_product_list_4}">{$name_4}</a></strong>
-                    </li>
-                </ol>
-            </div>
-
         </div>
 
         <div class="product-list-wrap">
-
 
             <!-- 추천상품 -->
             <div module="product_listrecommend" class="subPrdList">
@@ -60,7 +70,6 @@
                 </ul>
             </div><!-- //추천상품 -->
 
-
             <!-- 신상품 -->
             <div module="product_listnew" class="subPrdList">
                 <!--@css(/css/module/product/listsub.css)-->
@@ -77,7 +86,6 @@
                 </ul>
             </div><!-- //신상품 -->
 
-
             <!-- 일반상품 -->
             <div module="product_normalpackage" class="subPrdList">
 
@@ -87,13 +95,13 @@
                     -->
                     <div class="function">
                         <p class="prdCount">total : <strong class="txtStrong12B">{$total_count}</strong> items</p>
+
                         <ul id="type" module="product_Orderby">
-                            <li><a href="{$param}">{$sort_name}</a></li>
-                            <li><a>|</a></li>
-                            <li><a href="{$param}">{$sort_name}</a></li>
+                            <li><a href="{$param}" {$style}>{$sort_name}</a></li>
+                            <li><a href="{$param}" {$style}>{$sort_name}</a></li>
                         </ul>
-                        <span class="compare {$product_compare_display|display}"><a href="#none"
-                                                                                    onclick="{$product_compare_action}">상품비교</a></span>
+
+                        <span class="compare {$product_compare_display|display}"><a href="#none" onclick="{$product_compare_action}">상품비교</a></span>
                     </div>
 
                     <fieldset class="condition {$select_search_display|display}">
@@ -118,7 +126,7 @@
                 <div module="product_listnormal" class="subPrdList">
 
                     <!--
-                        $count = 12
+                        $count = 21
                         $basket_result = /product/add_basket.html
                         $basket_option = /product/basket_option.html
                     -->
@@ -132,10 +140,10 @@
 
                 <p class="first"><a href="{$param_first}"><img
                         src="/assets/images/sub-product/prev-firstpng.png"
-                        alt="첫 페이지"/></a></p>
+                        alt="첫 페이지" /></a></p>
                 <p><a href="{$param_before}"><img
                         src="/assets/images/sub-product/prev.png"
-                        alt="이전 페이지"/></a></p>
+                        alt="이전 페이지" /></a></p>
                 <ol>
                     <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                     <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -145,10 +153,10 @@
                 </ol>
                 <p><a href="{$param_next}"><img
                         src="/assets/images/sub-product/next.png"
-                        alt="다음 페이지"/></a></p>
+                        alt="다음 페이지" /></a></p>
                 <p class="last"><a href="{$param_last}"><img
                         src="/assets/images/sub-product/next-last.png"
-                        alt="마지막 페이지"/></a>
+                        alt="마지막 페이지" /></a>
                 </p>
 
             </div>

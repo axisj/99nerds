@@ -17,6 +17,17 @@
             <!-- 상단 제품 정보  -->
             <div module="product_detail">
                 <!--@css(/css/module/product/detail.css)-->
+
+                <div class="path" module="product_headcategory">
+                    <div class="path-wrap">
+                        <a href="/" class="breadcrumb">홈</a>
+                        <a class="{$disp_cate_1|display} breadcrumb" href="/product/list.html{$param_1}">{$name_1}</a>
+                        <a class="{$disp_cate_2|display} breadcrumb" href="/product/list.html{$param_2}">{$name_2}</a>
+                        <a class="{$disp_cate_3|display} breadcrumb" href="/product/list.html{$param_3}">{$name_3}</a>
+                        <a class="{$disp_cate_4|display} breadcrumb" href="/product/list.html{$param_4}">{$name_4}</a>
+                    </div>
+                </div>
+
                 <div class="headingArea">
                     <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
                     <div class="supply txtBase {$supply_link_display|display}">

@@ -423,6 +423,17 @@
       }
     }
 
+    .quantity{
+      input{
+        width: 50px;
+        text-align: center;
+      }
+      a{
+
+      }
+    }
+
+
     //mobile
     @media #{$medium-and-up} { // 640
 

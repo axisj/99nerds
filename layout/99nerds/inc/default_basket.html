@@ -222,8 +222,9 @@
                     </td>
                     <td width="150px">
                         <span class="{$nplusevent_hide_display|display}">
-                            <span class="quantity"><a href="javascript:;" onclick="{$out_shortcut}">-</a>{$form.quantity}<a
-                                    href="javascript:;" onclick="{$add_shortcut}">+</a></span>
+                            <span class="quantity">
+                                {$form.quantity}
+                            </span>
                             <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
                         </span>
                         <span class="{$nplusevent_show_display|display}">{$quantity}</span>

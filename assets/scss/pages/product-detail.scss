@@ -4,6 +4,21 @@
 
     .content {
 
+      .path-wrap {
+        margin-bottom: 0;
+        .breadcrumb {
+          color: #417505;
+          font-size: 13px;
+          line-height: 20px;
+          &:before {
+            color: #417505;
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+      }
+
+
       .xans-product-detail {
         padding: 0;
 

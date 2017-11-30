@@ -7,11 +7,18 @@
 
       var $slideOut = $('#slide-out');
       var $slideOutMask = $('#slide-out-mask');
+      var $slideInHandle = $('#slide-in-handle');
+
       $('[data-activates="slide-out"]').on('click', function () {
         $slideOut.addClass("fixed");
         $slideOutMask.addClass("fixed");
       });
       $slideOutMask.on('click', function () {
+        $slideOut.removeClass("fixed");
+        $slideOutMask.removeClass("fixed");
+      });
+      $slideInHandle.on('click', function () {
+        console.log('click');
         $slideOut.removeClass("fixed");
         $slideOutMask.removeClass("fixed");
       });

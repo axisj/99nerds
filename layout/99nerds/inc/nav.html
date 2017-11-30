@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../../../Downloads/CreativeLinkEffects/css/component.css">
+
 <div class="header-gnb">
     <div class="container">
 
@@ -11,36 +11,59 @@
             </li>
         </ul>
 
-        <ul class="right">
-            <li>
-                <a href="/order/basket.html" class="clickdown-button">
-                    <span class="ci ci-keep"></span>
-                    Shopping bag
-                </a>
-            </li>
-            <li>
-                <a href="/myshop/order/list.html" class="clickdown-button">
-                    <span class="ci ci-pay"></span>
-                    Order
-                </a>
-            </li>
-            <li>
-                <a href="/myshop/index.html" class="clickdown-button">
-                    <span class="ci ci-use"></span>
-                    Account
-                </a>
-            </li>
-            <li>
-                <a href="/member/login.html" class="clickdown-button quick-account log-in">
-                    <img src="/assets/images/side-nav/yellow.png" alt="oval"/> Log in
-                </a>
-            </li>
-            <li>
-                <a href="/member/join.html" class="clickdown-button quick-account sign-up">
-                    <img src="/assets/images/side-nav/yellowgreen.png" alt="oval"/> Sign up
-                </a>
-            </li>
-        </ul>
+
+        <div module="Layout_stateLogon">
+            <ul class="right">
+                <li>
+                    <a href="/order/basket.html" class="clickdown-button">
+                        <span class="ci ci-keep"></span>
+                        Shopping bag <span class="count {$basket_count_display|display}">(<span>{$basket_count}</span>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshop/order/list.html" class="clickdown-button">
+                        <span class="ci ci-pay"></span>
+                        Order
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshop/index.html" class="clickdown-button quick-account log-in">
+                        <img src="/assets/images/side-nav/yellow.png" alt="oval"/>
+                        <span class="myinfo"><strong>{$name}</strong>님 환영합니다. </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$action_logout}" class="clickdown-button">
+                        <img src="/assets/images/side-nav/yellow.png" alt="oval"/>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div module="Layout_statelogoff">
+            <ul class="right">
+                <li>
+                    <a href="/order/basket.html" class="clickdown-button">
+                        <span class="ci ci-keep"></span>
+                        Shopping bag <span class="count {$basket_count_display|display}"><span>{$basket_count}</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/member/login.html" class="clickdown-button quick-account log-in">
+                        <img src="/assets/images/side-nav/yellow.png" alt="oval"/> Log in
+                    </a>
+                </li>
+                <li>
+                    <a href="/member/join.html" class="clickdown-button quick-account sign-up">
+                        <img src="/assets/images/side-nav/yellowgreen.png" alt="oval"/> Sign up
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
     </div>
 </div>
 
@@ -54,7 +77,7 @@
         </ul>
 
         <ul class="main-nav left">
-            <li><a href="/product/list.html?cate_no=24">Product</a></li>
+            <li><a href="/product/list.html?cate_no=68">Product</a></li>
             <li><a href="/sub-about.html">About</a></li>
             <li><a href="/board/sub-notice_default/list.html?board_no=1">Notice</a></li>
             <li><a href="/board/sub-customer/sub-customer-main.html">Customer</a></li>
