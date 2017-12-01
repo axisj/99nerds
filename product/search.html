@@ -23,11 +23,12 @@
                         <dd>{$form.order_by}</dd>
                     </dl>
                 </fieldset>
-
             </div>
 
             <p class="buttonArea">
-                <span class="gLeft"><button type="submit" class="btnSubmitM">검색하기</button></span>
+                <span class="gLeft">
+                    <button type="submit" class="btnSubmitM">검색하기</button>
+                </span>
             </p>
 
             <div class="searchResult">
@@ -51,99 +52,26 @@
         </div><!-- //참고 -->
 
 
-        <div module="Search_Result" class="mid-0">
+        <div module="Search_Result" class="mid-0 product-list-wrap">
             <!--@css(/css/module/product/search_result.css)-->
             <!--
                 $count = 8
             -->
-            <ul class="prdList column4 wyImgSizeFlex">
-                <li class="item" id="anchorBoxId_{$product_no}">
-                    <div class="box">
-                        <p class="prdImg">
-                            <a href="{$link_product_detail}">
-                                <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb"/><span
-                                    module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}"
-                                                                     style="background-image:url('{$icon_url}');"></span></span>
-                            </a>
-                            <span class="wishIcon">{$list_wish_icon}</span>
-                        </p>
-                        <div class="status">
-                            <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon}
-                                {$product_icons}
-                            </div>
-                            <div class="button">
-                                <div class="likeButton {$disp_likeprd_class}">
-                                    <button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong>
-                                    </button>
-                                </div>
-                                <div class="option">{$option_preview_icon}</div>
-                                {$basket_icon} {$zoom_icon}
-                            </div>
-                        </div>
-                        <p class="name">
-                            <strong><a href="{$link_product_detail}" class="{$product_name_display|display}"><span
-                                    class="title {$product_name_title_display|display}">{$product_name_title} :</span>
-                                {$product_name}</a></strong>
-                        </p>
-                        <ul module="search_ListItem">
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}
-                                :</strong> {$item_content}
-                            </li>
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}
-                                :</strong> {$item_content}
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="item" id="anchorBoxId_{$product_no}">
-                    <div class="box">
-                        <p class="prdImg">
-                            <a href="{$link_product_detail}">
-                                <img src="{$image_medium}" id="{$image_medium_id}" alt="" class="thumb"/><span
-                                    module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}"
-                                                                     style="background-image:url('{$icon_url}');"></span></span>
-                            </a>
-                            <span class="wishIcon">{$list_wish_icon}</span>
-                        </p>
-                        <div class="status">
-                            <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon}
-                                {$product_icons}
-                            </div>
-                            <div class="button">
-                                <div class="likeButton {$disp_likeprd_class}">
-                                    <button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong>
-                                    </button>
-                                </div>
-                                <div class="option">{$option_preview_icon}</div>
-                                {$basket_icon} {$zoom_icon}
-                            </div>
-                        </div>
-                        <p class="name">
-                            <strong><a href="{$link_product_detail}" class="{$product_name_display|display}"><span
-                                    class="title {$product_name_title_display|display}">{$product_name_title} :</span>
-                                {$product_name}</a></strong>
-                        </p>
-                        <ul module="search_ListItem">
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}
-                                :</strong> {$item_content}
-                            </li>
-                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title}
-                                :</strong> {$item_content}
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <div class="subPrdList">
+                <ul class="prdList column4">
+                    <!--@import(/_cia/import/list_1.html)-->
+                </ul>
+            </div>
         </div>
 
 
         <div module="search_paging" class="paginate mid-0">
             <p class="first"><a href="{$param_first}"><img
                     src="/assets/images/sub-product/prev-firstpng.png"
-                    alt="첫 페이지"/></a></p>
+                    alt="첫 페이지" /></a></p>
             <p><a href="{$param_before}"><img
                     src="/assets/images/sub-product/prev.png"
-                    alt="이전 페이지"/></a></p>
+                    alt="이전 페이지" /></a></p>
             <ol>
                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -158,10 +86,10 @@
             </ol>
             <p><a href="{$param_next}"><img
                     src="/assets/images/sub-product/next.png"
-                    alt="다음 페이지"/></a></p>
+                    alt="다음 페이지" /></a></p>
             <p class="last"><a href="{$param_last}"><img
                     src="/assets/images/sub-product/next-last.png"
-                    alt="마지막 페이지"/></a>
+                    alt="마지막 페이지" /></a>
             </p>
         </div>
 
