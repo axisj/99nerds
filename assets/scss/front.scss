@@ -14,3 +14,15 @@
 label {
   color: #888;
 }
+
+
+#ax-base-root{
+  .container{
+
+    @media #{$medium-and-down} {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  }
+}
