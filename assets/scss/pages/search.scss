@@ -170,5 +170,100 @@
     }
   }
 
+
+  //mobile
+  @media #{$medium-and-up} { // 640
+
+    #searchForm {
+
+
+      .xans-search-form {
+        .searchbox {
+
+          fieldset {
+
+            .desc {
+
+
+              dd {
+
+                input {
+                  width: 100px;
+
+                }
+
+
+                #keyword {
+                  width: 150px;
+                  margin: 5px 3px;
+                }
+              }
+            }
+
+          }
+
+        }
+
+        .buttonArea {
+          padding: 0 0 50px 0;
+          text-align: center;
+
+          button {
+            width: auto;
+            height: auto;
+            background: #333333;
+            color: #fafafa;
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: none;
+          }
+        }
+
+        .searchResult {
+          border: none;
+          border-radius: 5px;
+          padding: 0 0 0 10px;
+
+          .record {
+            float: none;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+          }
+
+
+          ul {
+            text-align: center;
+            display: block;
+            li {
+              line-height: 63px;
+            }
+          }
+
+
+        }
+
+        .empty {
+          text-align: center;
+        }
+
+      }
+
+    }
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+  }
+
+
 }
 
