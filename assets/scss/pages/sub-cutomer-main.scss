@@ -84,7 +84,7 @@
 
       .icon-wrap {
         width: auto;
-        height: 70px;
+        height: 65px;
 
         img {
           height: 65px;
@@ -115,7 +115,6 @@
         font-weight: 300;
       }
     }
-
   }
 
   @media #{$medium-and-up} { // 640
@@ -177,10 +176,10 @@
 
           .icon-wrap {
             width: auto;
-            height: 70px;
+            height: 65px;
 
             img {
-              height: 70px;
+              height: 65px;
               display: block;
               margin: 0 auto;
             }
