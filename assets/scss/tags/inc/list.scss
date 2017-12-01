@@ -1,15 +1,19 @@
-.notice-board {
+.container-board{
   padding: 50px 0;
+}
+
+.notice-board {
   font-size: 1em;
 
   $list-header-background: #eeeeee;
-  $list-body-background: #fafafa;
+  $list-body-background: #fff;
   $list-important-background: rgba(238, 238, 238, 0.7);
 
   $list-header-font-color: #717171;
   $list-body-font-color: #9B9B9B;
   $list-button-color: #333333;
   $list-white-font-color: #fafafa;
+
 
   .list-wrap {
     .boardSort {
@@ -118,8 +122,7 @@
     }
 
     .buttonArea {
-      margin: 30px 0 20px;
-
+      margin: 0 20px;
 
       span.gRight {
         //background-color: $list-button-color;
@@ -236,10 +239,8 @@
     .list-wrap {
 
       .buttonArea {
-        font-weight: 100;
         display: inline-block;
-        margin: 30px 0;
-
+        margin: 0 20px;
       }
 
       #boardSearchForm {

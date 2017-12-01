@@ -18,8 +18,8 @@
         <table border="1" summary="">
 
             <colgroup>
-                <col style="width:130px;"/>
-                <col style="width:auto;"/>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
             </colgroup>
 
             <tbody class="middle">
@@ -46,7 +46,7 @@
                 <th scope="row">평점</th>
                 <td><img
                         src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif"
-                        alt="{$point_count}점"/></td>
+                        alt="{$point_count}점" /></td>
             </tr>
             <tr class="{$config.is_use_recom|display}">
                 <th scope="row">추천</th>
@@ -65,29 +65,29 @@
             <tr class="{$delete_button_auth|display} {$config.use_password|display}">
                 <th scope="row">비밀번호</th>
                 <td>{$form.password}<span class="gIndent"><img
-                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt=""/> 수정 및 삭제하려면 비밀번호를 입력하세요.</span>
+                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 수정 및 삭제하려면 비밀번호를 입력하세요.</span>
                 </td>
             </tr>
             </tbody>
         </table>
 
         <div class="buttonArea">
-                    <span class="gLeft">
-                        <a href="list.html{$param_list}" class="btnNormalB">list</a>
-                        <span class="{$config.is_admin|display}">
-                            <a href="{$action_post}" class="admin btnNormalB {$config.is_post|display}">관리자게시</a>
-                            <a href="{$action_post}" class="admin btnNormalB {$config.not_post|display}">게시안함</a>
-                            <a href="{$action_spam}" class="btnNormalB">스팸신고</a>
-                            <a href={$action_spam_cancle} class="btnNormalB">스팸해제</a>
-                        </span>
-                    </span>
+            <span class="gLeft">
+                <a href="list.html{$param_list}" class="btnNormalB">목록으로</a>
+                <span class="{$config.is_admin|display}">
+                    <a href="{$action_post}" class="admin btnNormalB {$config.is_post|display}">관리자게시</a>
+                    <a href="{$action_post}" class="admin btnNormalB {$config.not_post|display}">게시안함</a>
+                    <a href="{$action_spam}" class="btnNormalB">스팸신고</a>
+                    <a href={$action_spam_cancle} class="btnNormalB">스팸해제</a>
+                </span>
+            </span>
             <span class="gRight">
-                        <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">delete</a>
-                        <a href="/board/sub-notice_default/modify.html{$param_modify}"
-                           class="btnEmB {$modify_button_auth|display}">modify</a>
-                        <a href="/board/gallary/reply.html{$param_reply}"
-                           class="btnEmB {$reply_button_auth|display}">답변</a>
-                    </span>
+                <a href="{$action_delete}" class="btnNormalB {$delete_button_auth|display}">delete</a>
+                <a href="/board/sub-notice_default/modify.html{$param_modify}"
+                   class="btnEmB {$modify_button_auth|display}">modify</a>
+                <a href="/board/gallary/reply.html{$param_reply}"
+                   class="btnEmB {$reply_button_auth|display}">답변</a>
+            </span>
         </div>
     </div>
 </div>
@@ -108,7 +108,7 @@
                     <span>{$comment_write_date}</span>
                     <span class="{$config.is_use_point|display}"><img
                             src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
-                            alt="{$comment_point_count}점"/></span>
+                            alt="{$comment_point_count}점" /></span>
                 </div>
                 <span class="button">
                     <a href="javascript:;" class="btnNormal" onclick="{$action_comment_update}">수정</a>
@@ -117,8 +117,8 @@
                        onclick="{$action_comment_reply}">댓글</a>
                 </span>
                 <div class="comment">
-                            <span class="{$is_spam_display|display}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_spam.gif" alt="스팸글"/></span>
+                    <span class="{$is_spam_display|display}"><img
+                            src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_spam.gif" alt="스팸글" /></span>
                     {$comment_icon_lock} {$comment_content}
                 </div>
             </li>
@@ -128,7 +128,7 @@
                     <span>{$comment_write_date}</span>
                     <span class="{$config.is_use_point|display}"><img
                             src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$comment_point_count}.gif"
-                            alt="{$comment_point_count}점"/></span>
+                            alt="{$comment_point_count}점" /></span>
                 </div>
                 <span class="button">
                     <a href="javascript:;" class="btnNormal" onclick="{$action_comment_update}">수정</a>
@@ -137,8 +137,8 @@
                        onclick="{$action_comment_reply}">댓글</a>
                 </span>
                 <div class="comment">
-                            <span class="{$is_spam_display|display}"><img
-                                    src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_spam.gif" alt="스팸글"/></span>
+                    <span class="{$is_spam_display|display}"><img
+                            src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_spam.gif" alt="스팸글" /></span>
                     {$comment_icon_lock} {$comment_content}
                 </div>
             </li>
@@ -154,14 +154,15 @@
     <!-- 코멘트 페이징 -->
     <div module="board_commentpaging_1002">
         <p><a href="{$param_prev}"><img
-                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_page_prev.gif" alt="이전 페이지"/></a>
+                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_page_prev.gif" alt="이전 페이지" /></a>
         </p>
         <ol>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>ㅋ
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            ㅋ
             <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
         </ol>
         <p><a href="{$param_next}"><img
-                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_page_next.gif" alt="다음 페이지"/></a>
+                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_page_next.gif" alt="다음 페이지" /></a>
         </p>
     </div>
 
@@ -203,7 +204,8 @@
                     <span class="gSpace {$config.is_use_point|display}">/</span>
                     <span class="gSpace {$config.is_use_point|display}">평점 {$form.comment_point}</span>
                     <button type="button" class="btnNormal {$config.is_admin|display}"
-                            onclick="{$action_comment_admin}">관리자답변보기</button>
+                            onclick="{$action_comment_admin}">관리자답변보기
+                    </button>
                 </span>
                 <div class="gDouble text">
                     {$form.comment}
@@ -215,7 +217,7 @@
                 <span class="gDouble captcha {$config.use_captcha_comment|display}">
                     {$captcha_image}{$captcha_refresh}
                     {$form.captcha}
-                    <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt=""/> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
+                    <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
                 </span>
             </fieldset>
         </div>
@@ -246,7 +248,7 @@
                 <span class="gDouble captcha {$config.use_captcha_comment|display}">
                     {$captcha_image}{$captcha_refresh}
                     {$form.captcha}
-                    <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt=""/> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
+                    <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /> 왼쪽의 문자를 공백없이 입력하세요.(대소문자구분)
                 </span>
             </fieldset>
         </div>
@@ -255,16 +257,6 @@
             <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
         </div>
     </div>
-</div>
-
-
-<div module="board_movement_1002" class="mid-0 list-movement">
-    <ul>
-        <li class="prev {$prev_display|display}"><span>prev</span><a href="{$link_board_detail_prev}">{$prev_subject}</a>
-        </li>
-        <li class="next {$next_display|display}"><span>next</span><a href="{$link_board_detail_next}">{$next_subject}</a>
-        </li>
-    </ul>
 </div>
 
 

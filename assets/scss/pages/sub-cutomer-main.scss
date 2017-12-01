@@ -16,9 +16,10 @@
 
   .contents-wrap {
     max-width: 960px;
-    padding: 100px 0;
+    padding: 10px 0;
     margin: 0 auto;
   }
+
 
   .section-company-info {
     background-color: #fafafa;
@@ -26,99 +27,95 @@
     color: #333333;
     font-weight: 600;
 
-      .company-info-wrap {
-        text-align: center;
-        padding: 50px 0;
+    .company-info-wrap {
+      text-align: center;
+      padding: 50px 0;
 
-        .icon-wrap {
-          width: 30px;
-          margin: 0 auto;
+      .icon-wrap {
+        width: 30px;
+        margin: 0 auto;
 
-          img {
-            width: 100%;
-            display: block;
-          }
-        }
-
-        h2 {
-          font-size: 1.8em;
-          padding: 15px 0;
-          font-weight: 800;
-
-        }
-
-        p {
-          font-size: 1.2em;
-
-          .sns-link {
-            font-size: 2em;
-
-            &:hover {
-              color: #4A90E2;
-            }
-
-          }
-          .mail_link {
-            font-size: 0.9em;
-
-            &:hover {
-              color: #4A90E2;
-            }
-          }
-
+        img {
+          width: 100%;
+          display: block;
         }
       }
 
+      h2 {
+        font-size: 1.8em;
+        padding: 15px 0;
+        font-weight: 800;
+
+      }
+
+      p {
+        font-size: 1.2em;
+
+        .sns-link {
+          font-size: 2em;
+
+          &:hover {
+            color: #4A90E2;
+          }
+
+        }
+        .mail_link {
+          font-size: 0.9em;
+
+          &:hover {
+            color: #4A90E2;
+          }
+        }
+
+      }
     }
 
-
+  }
 
   .section-consult {
-    background-color: #333333;
+    background-color: #4cb2e4;
     width: 100%;
     height: auto;
     color: #fafafa;
     font-weight: 400;
 
-      .consult-wrap {
-        text-align: center;
-        padding: 50px 0;
+    .consult-wrap {
+      text-align: center;
+      padding: 50px 0;
 
-        .icon-wrap {
-          width: auto;
-          height: 70px;
+      .icon-wrap {
+        width: auto;
+        height: 70px;
 
-          img {
-            height: 70px;
-            display: block;
-            margin: 0 auto;
-          }
-        }
-
-        a {
-          @extend .font-ubuntu;
+        img {
+          height: 150px;
           display: block;
-          color: #fafafa;
-          font-size: 1.5em;
-          font-weight: 300;
-          margin: 1.78rem 0 1.424rem 0;
-          padding: 15px 0;
-
-          span.ci {
-            color: #7ED321;
-          }
-
-        }
-
-        p {
-          width: 90%;
           margin: 0 auto;
-          font-size: 1.2em;
-          padding: 0 15px;
-          font-weight: 300;
         }
       }
 
+      a {
+        @extend .font-ubuntu;
+        display: block;
+        color: #fafafa;
+        font-size: 1.5em;
+        font-weight: 300;
+        padding: 15px 0;
+
+        span.ci {
+          color: #7ED321;
+        }
+
+      }
+
+      p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.2em;
+        padding: 0 15px;
+        font-weight: 300;
+      }
+    }
 
   }
 
@@ -129,18 +126,14 @@
       height: 100px;
       background-color: #7ED321;
       display: block;
-
     }
 
-
     .section-company-info {
-      background-color: #fafafa;
       width: 100%;
       height: auto;
       color: #333333;
       font-weight: 600;
       font-size: 0.9em;
-
 
       .contents-wrap {
 
@@ -169,18 +162,15 @@
           }
         }
       }
-
     }
 
     .section-consult {
-      background-color: #333333;
       width: 100%;
       height: auto;
       color: #fafafa;
       font-weight: 300;
 
       .contents-wrap {
-
 
         .consult-wrap {
           text-align: center;
@@ -201,7 +191,6 @@
             display: block;
             color: #fafafa;
             font-weight: 400;
-            margin: 1.78rem 0 1.424rem 0;
             padding: 15px 0;
 
             span.ci {
