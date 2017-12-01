@@ -3,7 +3,8 @@
   position: relative;
   width: 100%;
   z-index: 2;
-  height: 65px;
+  height: 55px;
+  padding-top: 10px;
   background-color: #1E1E1E;
   box-shadow: none;
   @extend .font-mono;
@@ -14,10 +15,11 @@
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
+    width: 95%;
 
     .brand-logo {
-      width: 37px;
-      height: 37px;
+      width: 45px;
+      height: 45px;
       padding-top: 8px;
 
       img {
@@ -52,7 +54,6 @@
         font-size: 35px;
         line-height: 50px;
       }
-
     }
 
     a {
@@ -77,14 +78,12 @@
         }
 
         .search-icon {
+          padding: 0 10px;
           span.ci-search2 {
             font-size: 26px;
-            padding-right: 15px;
             position: relative;
-            top: 5px;
-
+            top: 10px;
           }
-
         }
       }
     }
