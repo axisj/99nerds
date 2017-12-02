@@ -1,0 +1,137 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div module="board_ModifyPackage_4" class="tableTheme mid-0">
+    <!--@css(/css/module/board/modifyPackage.css)-->
+    <div module="board_title_4">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2 class="txtTitle16B">{$board_title}</h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+    <div module="board_modify_4">
+        <!--
+            $write_success_url = /board/product/list.html
+            $product_select_url = /product/search_board_list.html
+            $order_select_url = /order/search_board_list.html
+        -->
+        <!-- 상품정보선택 -->
+        <div class="boxTheme {$display_product|display}">
+            <div class="division">
+                <div class="heading"><a href="/product/detail.html{$param_product}"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/img_no.gif'" alt="" style="max-width:90px; max-height:130px;" /></a></div>
+                <div class="info">
+                    {$product_icon}
+                    <strong class="gSingle"><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></strong>
+                    <strong class="gSingle">{$product_price}{$product_tax_type_text}</strong>
+                    <p class="line gDouble">
+                        <span id="{$product_view_id}" class="{$display_product_info|display}"><a href="/product/detail.html{$param_product}" id="{$product_link_id}" class="btnEm" target="_blank">상품상세보기</a></span>
+                        <span class="{$display_product_select|display}"><button type="button" class="btnNormal" onclick="{$action_product_select}">상품정보선택</button></span>
+                        <span class="{$display_order_select|display}"><button type="button" class="btnNormal" onclick="{$action_order_select}">주문상품선택</button></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <table border="1" summary="">
+            <caption>글 수정 폼</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody class="middle">
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+                </tr>
+                <tr class="{$config.is_login|display}">
+                    <th scope="row">작성자</th>
+                    <td>{$form.writer}</td>
+                </tr>
+                <tr class="{$config.use_write_email|display}">
+                    <th scope="row">이메일</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr class="{$config.is_use_point|display}">
+                    <th scope="row">평점</th>
+                    <td>{$form.point}</td>
+                </tr>
+                <tr class="gMerge">
+                    <td colspan="2">
+                        {$form.content}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">UCC URL</th>
+                    <td>{$form.ucc}</td>
+                </tr>
+            </tbody>
+
+            <tbody class="middle {$config.use_attach|display}">
+                <tr>
+                    <th scope="row">첨부파일1</th>
+                    <td>{$form.attach_file} {$attached_file1}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일2</th>
+                    <td>{$form.attach_file} {$attached_file2}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일3</th>
+                    <td>{$form.attach_file} {$attached_file3}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일4</th>
+                    <td>{$form.attach_file} {$attached_file4}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일5</th>
+                    <td>{$form.attach_file} {$attached_file5}</td>
+                </tr>
+            </tbody>
+
+            <tbody class="middle">
+                <tr class="{$config.use_password|display}">
+                    <th scope="row">비밀번호</th>
+                    <td>{$form.password}</td>
+                </tr>
+                <tr class="{$config.use_secret|display}">
+                    <th scope="row">비밀글설정</th>
+                    <td>{$form.secure}</td>
+                </tr>
+                <tr class="{$config.use_captcha_write|display}">
+                    <th scope="row">자동발송금지<br />보안문자</th>
+                    <td>
+                        {$captcha_image}{$captcha_refresh}
+                        <span class="gSingle">{$form.captcha} <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_warning.gif" alt="" /><span class="txtSub11"> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></span>
+                    </td>
+                </tr>
+                <tr class="top {$config.is_login|display}">
+                    <th scope="row">개인정보 수집 및 <br />이용 동의</th>
+                    <td>
+                        {$form.privacy_agreement}
+                        <span class="gSingle">개인정보 수집 및 이용에 동의하십니까?<span class="gIndent">{$form.privacy_agreement_radio}</span></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonArea">
+            <span class="gLeft">
+                <a href="{$link_board_list}" class="btnNormalB">목록</a>
+            </span>
+            <span class="gRight">
+                <button type="button" class="btnEmB" onclick="{$action_modify}">수정</button>
+                <a href="{$link_board_list}" class="btnStrongB">취소</a>
+            </span>
+        </div>
+    </div>
+</div>
