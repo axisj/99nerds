@@ -11,8 +11,12 @@
 @import "addon/ax5ui";
 @import "pages/index";
 
+[type="radio"]:not(:checked)+label, [type="radio"]:checked+label{
+  padding-left: 25px;
+}
 label {
-  color: #888;
+  color: #666;
+  font-weight: normal;
 }
 
 

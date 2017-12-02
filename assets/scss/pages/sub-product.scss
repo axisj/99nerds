@@ -77,8 +77,8 @@
                 }
               }
               .product-dsp-item {
-                text-align: right;
-                padding: 3px 6px;
+                padding: 3px 0;
+
                 span {
                   line-height: 1em;
                   margin: 5px 0;
@@ -91,7 +91,7 @@
                 }
                 &.product-point {
                   span {
-
+                    color: #9B9B9B !important;
                   }
                 }
                 &.product-size {
@@ -304,6 +304,7 @@
 
   //mobile
   @media #{$medium-and-up} { // 600
+
     .product-list-wrap {
       .subPrdList {
         margin: 0 auto;

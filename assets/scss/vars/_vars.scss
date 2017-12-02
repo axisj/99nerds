@@ -40,12 +40,10 @@ $primary-color: #61BD6D;
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
 
-$secondary-color: #54ACD2; //color("teal", "lighten-1");
+$secondary-color: #d2343c; //color("teal", "lighten-1");
 $success-color: color("green", "base");
 $error-color: color("red", "base");
 $link-color: #2D2D2D;
-
-
 
 
 // 2. Badges

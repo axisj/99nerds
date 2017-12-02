@@ -176,8 +176,8 @@
 
     #searchForm {
 
-
       .xans-search-form {
+
         .searchbox {
 
           fieldset {
@@ -208,7 +208,9 @@
           padding: 0 0 50px 0;
           text-align: center;
 
-          button {
+          .btnSubmitM {
+            font-size: 12px;
+            font-weight: 100;
             width: auto;
             height: auto;
             background: #333333;
@@ -251,6 +253,7 @@
     }
 
   }
+
 
   // table
   @media #{$large-and-up} { // 993
