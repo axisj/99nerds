@@ -335,9 +335,6 @@
       }
     }
 
-    .product-body {
-
-    }
     .path-wrap {
       margin-bottom: 0;
       padding: 0 10px;
@@ -360,6 +357,20 @@
         ul.prdList {
           li.item {
             width: 33.3334%;
+
+            .product-list {
+              .product-info-wrap {
+
+                .product-name {
+
+                  span {
+                    font-size: 22px !important;
+                  }
+                }
+              }
+            }
+
+
           }
         }
       }
