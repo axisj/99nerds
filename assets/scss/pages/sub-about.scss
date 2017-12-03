@@ -146,7 +146,7 @@
 
       .history-contents-wrap {
         width: 100%;
-
+        height: 4700px;
         margin-top: 30px;
         background-image: url("/assets/images/sub-about/history-space-bg.png");
         background-size: 100%;
@@ -189,7 +189,6 @@
               font-size: 1.5em;
 
             }
-
           }
 
           .end-circle {
@@ -390,7 +389,7 @@
       }
 
       .about-block-line {
-        color: #f8e71c;
+        background-color: #f8e71c;
       }
 
       h3.about-sub-title {
@@ -467,7 +466,6 @@
           }
 
           span.ci {
-            color: #F39835;
 
           }
         }
