@@ -185,36 +185,35 @@
             <!-- 총 할인금액 내역보기 레이어 -->
             <div id="{$total_benefit_layer}" class="totalDetail layerTheme">
                 <h3>총 할인금액 상세내역</h3>
-                <div class="content form-wrap">
-                    <p id="{$total_benefit_price_layer_id}" class="txtStrong17B">
-                        {$price_unit_head}{$total_benefit_price}{$price_unit_tail}</p>
+                <div class="content form-wrap" style="text-align: center;">
+                    <p id="{$total_benefit_price_layer_id}" class="txtStrong17B" style="font-size: 20px;">총 할인액 : {$price_unit_head}{$total_benefit_price}{$price_unit_tail}</p>
                     <ul>
-                        <li class="{$total_periodsale_price_display|display}">기간할인<span
+                        <li class="{$total_periodsale_price_display|display}">기간할인 : <span
                                 id="{$total_periodsale_price_id}">{$price_unit_head}{$total_periodsale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_membersale_price_display|display}">회원할인<span
+                        <li class="{$total_membersale_price_display|display}">회원할인 : <span
                                 id="{$total_membersale_price_id}">{$price_unit_head}{$total_membersale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_rebuysale_price_display|display}">{$rebuysale_head}재구매할인<span
+                        <li class="{$total_rebuysale_price_display|display}">{$rebuysale_head}재구매할인 : <span
                                 id="{$total_rebuysale_price_id}">{$price_unit_head}{$total_rebuysale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_bulksale_price_display|display}">대량구매할인<span id="{$total_bulksale_price_id}">{$price_unit_head}{$total_bulksale_price}{$price_unit_tail}</span>
+                        <li class="{$total_bulksale_price_display|display}">대량구매할인 : <span id="{$total_bulksale_price_id}">{$price_unit_head}{$total_bulksale_price}{$price_unit_tail}</span>
                         </li>
                         <li class="{$total_livelinkonsale_price_display|display}">바로가기(링콘)할인<span
                                 id="{$total_livelinkonsale_price_id}">{$price_unit_head}{$total_livelinkonsale_price}{$price_unit_tail}</span>
                         </li>
                         <li class="{$total_pbpsale_price_display|display}">어바웃pbp할인<span id="{$total_pbpsale_price_id}">{$price_unit_head}{$total_pbpsale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_newproductsale_price_display|display}">신규상품할인<span
+                        <li class="{$total_newproductsale_price_display|display}">신규상품할인 : <span
                                 id="{$total_newproductsale_price_id}">{$price_unit_head}{$total_newproductsale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_paymethodsale_price_display|display}">결제수단할인<span
+                        <li class="{$total_paymethodsale_price_display|display}">결제수단할인 : <span
                                 id="{$total_paymethodsale_price_id}">{$price_unit_head}{$total_paymethodsale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_membergroupsale_price_display|display}">회원등급할인<span
+                        <li class="{$total_membergroupsale_price_display|display}">회원등급할인 : <span
                                 id="{$total_membergroupsale_price_id}">{$price_unit_head}{$total_membergroupsale_price}{$price_unit_tail}</span>
                         </li>
-                        <li class="{$total_shipfeesale_price_display|display}">배송비할인<span
+                        <li class="{$total_shipfeesale_price_display|display}">배송비할인 : <span
                                 id="{$total_shipfeesale_price_id}">{$price_unit_head}{$total_shipfeesale_price}{$price_unit_tail}</span>
                         </li>
                     </ul>

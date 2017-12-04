@@ -899,11 +899,9 @@
                                                 </td>
                                             </tr><!-- //참고 -->
                                             <tr class="{$total_benefit_display|display}">
-                                                <th scope="row">추가할인금액</th>
+                                                <th scope="row">이벤트 할인</th>
                                                 <td>
                                                     <span class="gSpace">{$price_unit_head}<span id="{$total_benefit_price_id}">{$total_benefit_price}</span>{$price_unit_tail}</span>
-                                                    <a href="#none" class="btnNormal more"
-                                                       onclick="{$total_benefit_layer_on}">내역보기</a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -1003,12 +1001,6 @@
                         <div class="row">
                             <div class="col s12 m6">
                                 <h3>결제 방법 선택</h3>
-                            </div>
-                            <div class="col s12 m6">
-                                <h3 class="{$payment_save_paymethod_display|display}">
-                                    {$payment_save_paymethod_checkbox}
-                                    <label for="{$payment_save_paymethod_id}" class="{$payment_save_paymethod_id}"> {$payment_save_paymethod_text}</label>
-                                </h3>
                             </div>
                         </div>
                     </div>
@@ -1306,7 +1298,7 @@
                                 </div>
                                 <div class="mileage {$total_save_mileage_display|display}">
                                     <b>오픈소스 프로젝트 후원금액</b>
-                                    <span id="{$total_mileage_price_id}">{$price_unit_head}{$total_mileage_price}{$price_unit_tail}</span>
+                                    <span>{$price_unit_head}{$total_mileage_price}{$price_unit_tail}</span>
                                 </div>
                             </div>
                         </div>
