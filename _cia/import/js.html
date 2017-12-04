@@ -40,3 +40,29 @@
     });
   })(jQuery3_2_1, fcObj);
 </script>
+<!-- Channel Plugin Scripts -->
+<script>
+  window.channelPluginSettings = {
+    "plugin_id": "d19d6946-cd5e-4658-b3d3-48c1fe98a34e"
+  };
+  (function() {
+    var node = document.createElement('div');
+    node.id = 'ch-plugin';
+    document.body.appendChild(node);
+    var async_load = function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    };
+    if (window.attachEvent) {
+      window.attachEvent('onload', async_load);
+    } else {
+      window.addEventListener('load', async_load, false);
+    }
+  })();
+</script>
+<!-- End Channel Plugin -->
