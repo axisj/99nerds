@@ -2,6 +2,11 @@
   .basket-wrap {
     padding: 20px 0;
 
+    .buttonArea {
+      padding: 10px 0;
+
+    }
+
     .btnNormal, .btnSubmit {
       display: inline-block;
       color: #fafafa;
@@ -437,7 +442,7 @@
     }
 
     .helpTheme {
-      padding: 40px 0;
+      padding: 50px 0;
 
       .content {
         padding: 20px;

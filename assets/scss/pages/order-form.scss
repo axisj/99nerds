@@ -27,6 +27,8 @@
     }
 
     .orderArea {
+      padding-top: 100px;
+
       table.form-table {
         table-layout: fixed;
         border: 0 none !important;
@@ -53,7 +55,6 @@
             width: 100%;
             border: 1px solid #e8e8e8;
             margin: 0.3em 0;
-
           }
         }
       }
