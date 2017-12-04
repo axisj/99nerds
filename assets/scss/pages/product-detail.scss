@@ -365,8 +365,24 @@
              .prdList {
                color: #333;
 
-               li {
-                 height: 200px;
+               li.item {
+
+                 a {
+                   display: block;
+                   border: 1px solid #ececec;
+                   border-radius: 10px;
+
+                   .thumb {
+                     border: none;
+                     max-height: 202px;
+                   }
+                 }
+
+                 p {
+                   display: none;
+                 }
+
+
                }
 
              }

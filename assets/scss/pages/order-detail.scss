@@ -2,8 +2,15 @@
   table {
     border: 0;
 
-    caption {
+    tfoot {
+      tr {
+        td {
+          span {
+            float: none;
+          }
 
+        }
+      }
     }
   }
 }
