@@ -1,168 +1,233 @@
 .section-contents-wrap {
   .basket-wrap {
-    padding: 50px 0;
 
-    #frm_order_act {
-      .tableTheme_order {
-        .orderListArea {
-          .xans-order-normnormal {
-            tfoot {
-              tr {
-                td {
-                  span {
-                    float: none;
-                    margin: 0;
-                  }
-                }
-              }
-            }
-          }
-        }
+    .title {
+      padding: 0 0 10px 0;
+      h3 {
+        padding: 0 15px;
+        font-weight: 600;
+        font-size: 2em;
+        border: none;
+      }
 
-        caption {
-          padding: 20px;
-          font-weight: 600;
-        }
+      .row {
+        margin: 0;
+      }
+    }
 
-        .orderArea {
-          table {
+    .form-wrap {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: 10px;
 
-            tbody {
-              margin-top: 10px;
-              tr {
+      @media #{$large-and-up} { // 993
+        padding: 15px;
+      }
+    }
 
-                th, td {
-                  .gSpace {
-                    label {
-                      margin-right: 10px;
-                    }
-                  }
+    .orderArea {
+      table.form-table {
+        table-layout: fixed;
+        border: 0 none !important;
+        background: #fff;
 
-                  .btnNormal {
-                    color: #fafafa;
-                    background-color: #333333;
-                    padding: 5px 10px;
-                    font-weight: 100;
-                    border-radius: 5px;
-                  }
+        th, td {
+          display: block;
+          width: 100%;
+          padding: 5px 0;
 
-                  #omessage {
-                    border-radius: 5px;
-                    border-color: #bdbdbd;
-                  }
-                }
-
-              }
-            }
-          }
-        }
-
-        .totalArea {
-          margin-top: 50px;
-          .gStrong {
-            table {
-
-              thead {
-
-                tr {
-                  td, th {
-                    text-align: center;
-                  }
-                }
-              }
-            }
-
-          }
-
-          .detail {
-            width: 330px;
-            padding: 10px 30px;
-            margin: 50px 0;
-            float: right;
-            border: none;
+          input, textarea {
+            box-shadow: none;
+            border: 1px solid #e8e8e8 !important;
             border-radius: 5px;
-            background: #eee;
-
-            caption {
-              font-size: 1.2em;
-              text-align: left;
-              padding: 20px 5px;
-
-              span {
-                color: #f39835;
-                font-weight: 600;
-              }
-            }
+            padding: 0 5px;
+            height: 2.5rem;
+            box-sizing: border-box;
+            margin: 0.3em 0;
+            // width: 100% !important;
+            max-width: 100%;
           }
-
-        }
-
-        .payArea {
-
-          .gStrong {
-            .gIndent {
-              padding: 30px 0;
-            }
-          }
-
-          .payment {
+          select {
+            height: 2.5rem;
             width: 100%;
-
-            .tableClear {
-              border-radius: 5px;
-
-              .payHelp {
-                margin: 0 auto;
-              }
-            }
-
-            .agree {
-              table {
-
-              }
-            }
+            border: 1px solid #e8e8e8;
+            margin: 0.3em 0;
 
           }
+        }
+      }
 
-          .total {
-            border-top: none;
-            border-radius: 5px;
-            padding: 20px;
-            background-color: #eeeeee;
+      // table
+      @media #{$large-and-up} { // 993
 
-            h4 {
-              text-align: left;
+        table.form-table {
+          th {
+            width: 100px;
+          }
+
+          th, td {
+            display: table-cell;
+            padding: 5px 10px;
+
+            input, textarea {
+              box-shadow: none;
+              border-radius: 5px;
+              padding: 0 5px;
+              height: 2.5rem;
+              box-sizing: border-box;
+              margin: 0 0.3em;
+              // width: auto !important;
             }
-
-            p {
-              text-align: right;
-              input {
-                background: none;
-                margin-right: 10px;
-                padding: 5px;
-                box-shadow: none;
-                letter-spacing: 0;
-                font-size: 1.2em;
-
-              }
+            select {
+              height: 2.5rem;
+              width: auto;
+              margin: 0 0.3em;
             }
+          }
+        }
+      }
 
-            .button {
-              #btn_payment {
-                background-color: #333333;
-                color: #fafafa;
-                padding: 10px;
-                width: 100%;
-                border-radius: 5px;
-                border: none;
-                font-weight: 400;
-                font-size: 1.2em;
-              }
+    }
+
+    .totalArea {
+      margin-top: 50px;
+
+      .row-summary {
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+
+        h5 {
+          text-align: center;
+          font-size: 1.2em;
+          background: #444;
+          padding: 7px;
+          color: #fff;
+          border-radius: 6px;
+          display: inline-block;
+          margin: 10px;
+        }
+        p {
+          text-align: center;
+          font-size: 1.5em;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+
+      .detail {
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        background: #fafafa;
+        td, th{
+          padding: 5px;
+        }
+        caption {
+          font-size: 1.2em;
+          text-align: left;
+          padding: 5px 5px;
+
+          span {
+            color: #f39835;
+            font-weight: 600;
+          }
+        }
+      }
+
+    }
+
+    .payArea {
+      margin-top: 50px;
+
+      .payment {
+        width: 100%;
+        float: none;
+
+        .info {
+          margin: 10px 0;
+          background: #fff;
+
+          table{
+            input, textarea {
+              box-shadow: none;
+              border: 1px solid #d6d6d6 !important;
+              border-radius: 5px;
+              padding: 0 5px;
+              height: 2.5rem;
+              box-sizing: border-box;
+              margin: 0 0.3em;
+              width: auto;
             }
+            select {
+              height: 2.5rem;
+              width: auto;
+              border: 1px solid #d6d6d6;
+              margin: 0 0.3em;
+            }
+          }
+
+        }
+        .tableClear {
+          border-radius: 5px;
+
+          .payHelp {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .total {
+        border-top: none;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #f8e71c;
+        width: 100%;
+        float: none;
+        h4 {
+          text-align: left;
+        }
+
+        p {
+          text-align: right;
+          input {
+            background: none;
+            margin-right: 10px;
+            padding: 5px;
+            box-shadow: none;
+            letter-spacing: 0;
+            font-size: 1.2em;
 
           }
         }
 
+        .mileage {
+          border: 0 none;
+        }
+
+        .button {
+          #btn_payment {
+            background-color: #333333;
+            color: #fafafa;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            font-weight: 400;
+            font-size: 1.2em;
+          }
+        }
+
+      }
+    }
+
+    .buttonArea {
+      padding: 10px;
+      margin: 0;
+      a {
+        margin: 0;
       }
     }
 

@@ -32,7 +32,7 @@
                     <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
                     <div class="supply txtBase {$supply_link_display|display}">
                         <span class="txtBase">{$supply_top_logo}</span>
-                        <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기"/></a>
+                        <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기" /></a>
                     </div><!-- //공급사 바로가기버튼 영역 -->
                 </div>
 
@@ -42,24 +42,12 @@
                         <!--@js(/js/module/product/product_image.js)-->
                         <div class="keyImg">
                             <div class="thumbnail">
-                                <a href="/product/image_zoom2.html{$zoom_param}"
-                                   alt="{$product_code}"
-                                   onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=450,height=693,left=0,top=0', this);return false;">
-                                    <img src="{$big_img}"
-                                         alt="{$seo_alt_tag}"
-                                         class="{$big_img_class} {$img_display|display}"/><span
-                                        module="product_Imagestyle"><span class="prdIcon {$icon_class_name}"
-                                                                          style="background-image:url('{$icon_url}');"></span></span>
-                                </a>
+                                <img src="{$big_img}"
+                                     alt="{$seo_alt_tag}"
+                                     style="border: 0 none;cursor: default"
+                                     class="{$img_display|display}" />
                             </div>
                         </div>
-                        <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
-                        <div class="listImg" module="product_addimage">
-                            <ul>
-                                <li>{$add_img}</li>
-                                <li>{$add_img}</li>
-                            </ul>
-                        </div><!-- //참고 -->
 
                         <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
                         <div class="{$colorchip_display|display}">
@@ -84,8 +72,8 @@
                             <table summary="table" class="basicTable1">
 
                                 <colgroup>
-                                    <col style="width:80px;"/>
-                                    <col/>
+                                    <col style="width:80px;" />
+                                    <col />
                                 </colgroup>
 
                                 <tbody>
@@ -109,14 +97,14 @@
 
                         <div id="zoom_wrap"></div>
                         <p class="{$naver_mileage_exception_display|display}">개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이
-                            가능합니다.</p>
+                                                                              가능합니다.</p>
                         <!-- //상세정보 내역 -->
 
 
                         <table summary="">
                             <colgroup>
-                                <col style="width:125px;"/>
-                                <col style="width:auto;"/>
+                                <col style="width:125px;" />
+                                <col style="width:auto;" />
                             </colgroup>
                             <tbody module="product_option">
                             <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
@@ -156,8 +144,8 @@
                                     <table summary="">
                                         <caption>기본 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr>
@@ -185,8 +173,8 @@
                                     <table summary="">
                                         <caption>옵션 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr module="product_addoption">
@@ -228,8 +216,8 @@
                                     <table summary="">
                                         <caption>기본 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr>
@@ -257,8 +245,8 @@
                                     <table summary="">
                                         <caption>옵션 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr module="product_addoption">
@@ -303,21 +291,21 @@
                                 <strong>추가구성상품</strong> <span class="txtSub11">추가로 구매를 원하시면 선택하세요.</span>
                                 <a href="#self" class="toggle"><img
                                         src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_recommend_close.gif"
-                                        alt="추가구성상품 닫기"/></a>
+                                        alt="추가구성상품 닫기" /></a>
                             </div>
                             <div class="product">
                                 <div class="seperate">
                                     <table summary="">
                                         <caption>기본 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr>
                                             <th scope="row">이미지</th>
                                             <td class="thumbnail"><a href="{$link_product_detail}"><img
-                                                    src="{$product_image}" alt=""/></a></td>
+                                                    src="{$product_image}" alt="" /></a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">상품명</th>
@@ -340,8 +328,8 @@
                                     <table summary="">
                                         <caption>옵션 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr module="product_addoption">
@@ -379,14 +367,14 @@
                                     <table summary="">
                                         <caption>기본 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr>
                                             <th scope="row">이미지</th>
                                             <td class="thumbnail"><a href="{$link_product_detail}"><img
-                                                    src="{$product_image}" alt=""/></a></td>
+                                                    src="{$product_image}" alt="" /></a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">상품명</th>
@@ -409,8 +397,8 @@
                                     <table summary="">
                                         <caption>옵션 정보</caption>
                                         <colgroup>
-                                            <col style="width:115px;"/>
-                                            <col style="width:auto;"/>
+                                            <col style="width:115px;" />
+                                            <col style="width:auto;" />
                                         </colgroup>
                                         <tbody>
                                         <tr module="product_addoption">
@@ -450,9 +438,9 @@
                             <table summary="">
 
                                 <colgroup>
-                                    <col style="width:284px;"/>
-                                    <col style="width:80px;"/>
-                                    <col style="width:auto;"/>
+                                    <col style="width:284px;" />
+                                    <col style="width:80px;" />
+                                    <col style="width:auto;" />
                                 </colgroup>
 
                                 <thead>
@@ -474,11 +462,11 @@
                                     <td style="display: table;">
                                         <a href="#none"><img src="/assets/images/sub-product/minus.png"
                                                              alt="수량감소"
-                                                             class="{$quantity_down_class} down"/></a>
+                                                             class="{$quantity_down_class} down" /></a>
                                         <span class="quantity">{$quantity}</span>
                                         <a href="#none"><img src="/assets/images/sub-product/plus.png"
                                                              alt="수량증가"
-                                                             class="{$quantity_up_class} up"/></a>
+                                                             class="{$quantity_up_class} up" /></a>
                                     </td>
 
                                     <td class="txtStrong12B">
@@ -517,7 +505,6 @@
                         </div><!-- //참고 -->
 
                     </div>
-
 
 
                     <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
@@ -584,7 +571,7 @@
                                     <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
                                 </div>
                                 <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}"
-                                                                                       alt="다운받기"/></a></div>
+                                                                                       alt="다운받기" /></a></div>
                             </div>
                         </li>
                         <li>
@@ -597,7 +584,7 @@
                                     <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
                                 </div>
                                 <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}"
-                                                                                       alt="다운받기"/></a></div>
+                                                                                       alt="다운받기" /></a></div>
                             </div>
                         </li>
                     </ul>
@@ -666,20 +653,20 @@
                             <p class="noAccess empty {$deny_display|display}">글읽기 권한이 없습니다.</p>
                             <div class="minor {$adult_display|display}">
                                 <p><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif"
-                                        alt=""/><strong class="txtStrong12B">"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
+                                        alt="" /><strong class="txtStrong12B">"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
                                 <p class="buttonArea"><a href="/intro/board.html{$returnParam}" class="btnEmB">성인인증
-                                    하기</a></p>
+                                                                                                               하기</a></p>
                             </div>
                             <div class="tableTheme">
                                 <table summary="" class="{$list_display|display}">
                                     <caption>상품사용후기</caption>
                                     <colgroup>
-                                        <col style="width:70px;"/>
-                                        <col style="width:auto"/>
-                                        <col style="width:100px;"/>
-                                        <col style="width:80px;"/>
-                                        <col style="width:80px;"/>
-                                        <col style="width:80px;" class="{$use_point_display|display}"/>
+                                        <col style="width:70px;" />
+                                        <col style="width:auto" />
+                                        <col style="width:100px;" />
+                                        <col style="width:80px;" />
+                                        <col style="width:80px;" />
+                                        <col style="width:80px;" class="{$use_point_display|display}" />
                                     </colgroup>
                                     <thead>
                                     <tr>
@@ -696,7 +683,7 @@
                                         <td>
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
+                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
                                             </div>
                                         </td>
                                         <td>{$member_icon} {$writer}</td>
@@ -711,7 +698,7 @@
                                         <td>
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
+                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
                                             </div>
                                         </td>
                                         <td>{$member_icon} {$writer}</td>
@@ -726,18 +713,18 @@
                             </div>
                         </div>
                         <p class="buttonArea">
-                <span class="gRight">
-                    <a href="{$review_write}" class="btnNormal">상품후기쓰기</a>
-                    <a href="{$review_list}" class="btnNormal">모두보기</a>
-                </span>
+                            <span class="gRight">
+                                <a href="{$review_write}" class="btnNormal">상품후기쓰기</a>
+                                <a href="{$review_list}" class="btnNormal">모두보기</a>
+                            </span>
                         </p>
                         <div module="product_reviewpaging" class="paginate">
                             <p class="first"><a href="{$param_first}"><img
                                     src="/assets/images/sub-product/prev-firstpng.png"
-                                    alt="첫 페이지"/></a></p>
+                                    alt="첫 페이지" /></a></p>
                             <p><a href="{$param_before}"><img
                                     src="/assets/images/sub-product/prev.png"
-                                    alt="이전 페이지"/></a></p>
+                                    alt="이전 페이지" /></a></p>
                             <ol>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -747,10 +734,10 @@
                             </ol>
                             <p><a href="{$param_next}"><img
                                     src="/assets/images/sub-product/next.png"
-                                    alt="다음 페이지"/></a></p>
+                                    alt="다음 페이지" /></a></p>
                             <p class="last"><a href="{$param_last}"><img
                                     src="/assets/images/sub-product/next-last.png"
-                                    alt="마지막 페이지"/></a>
+                                    alt="마지막 페이지" /></a>
                             </p>
                         </div>
                     </div>
@@ -772,20 +759,20 @@
                             <p class="noAccess empty {$deny_display|display}">글읽기 권한이 없습니다.</p>
                             <div class="minor {$adult_display|display}">
                                 <p><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif"
-                                        alt=""/><strong class="txtStrong12B">"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
+                                        alt="" /><strong class="txtStrong12B">"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
                                 <p class="buttonArea"><a href="/intro/board.html{$returnParam}" class="btnEmB">성인인증
-                                    하기</a></p>
+                                                                                                               하기</a></p>
                             </div>
                             <div class="tableTheme">
                                 <table summary="" class="{$list_display|display}">
                                     <caption>상품 Q&A</caption>
                                     <colgroup>
-                                        <col style="width:70px;"/>
-                                        <col style="width:134px;"/>
-                                        <col style="width:auto"/>
-                                        <col style="width:80px;"/>
-                                        <col style="width:80px;"/>
-                                        <col style="width:55px;"/>
+                                        <col style="width:70px;" />
+                                        <col style="width:134px;" />
+                                        <col style="width:auto" />
+                                        <col style="width:80px;" />
+                                        <col style="width:80px;" />
+                                        <col style="width:55px;" />
                                     </colgroup>
                                     <thead>
                                     <tr>
@@ -804,7 +791,7 @@
                                         <td class="left">
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
+                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
                                             </div>
                                         </td>
                                         <td>{$member_icon} {$writer}</td>
@@ -817,7 +804,7 @@
                                         <td class="left">
                                             <div class="subject">{$icon_re}{$icon_lock} <a
                                                     href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
+                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
                                             </div>
                                         </td>
                                         <td>{$member_icon} {$writer}</td>
@@ -830,19 +817,19 @@
                         </div>
 
                         <p class="buttonArea">
-                <span class="gRight">
-                    <a href="{$qna_write}" class="btnNormal">상품문의하기</a>
-                    <a href="{$qna_list}" class="btnNormal">모두보기</a>
-                </span>
+                            <span class="gRight">
+                                <a href="{$qna_write}" class="btnNormal">상품문의하기</a>
+                                <a href="{$qna_list}" class="btnNormal">모두보기</a>
+                            </span>
                         </p>
 
                         <div module="product_qnapaging" class="paginate">
                             <p class="first"><a href="{$param_first}"><img
                                     src="/assets/images/sub-product/prev-firstpng.png"
-                                    alt="첫 페이지"/></a></p>
+                                    alt="첫 페이지" /></a></p>
                             <p><a href="{$param_before}"><img
                                     src="/assets/images/sub-product/prev.png"
-                                    alt="이전 페이지"/></a></p>
+                                    alt="이전 페이지" /></a></p>
                             <ol>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
                                 <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
@@ -852,10 +839,10 @@
                             </ol>
                             <p><a href="{$param_next}"><img
                                     src="/assets/images/sub-product/next.png"
-                                    alt="다음 페이지"/></a></p>
+                                    alt="다음 페이지" /></a></p>
                             <p class="last"><a href="{$param_last}"><img
                                     src="/assets/images/sub-product/next-last.png"
-                                    alt="마지막 페이지"/></a>
+                                    alt="마지막 페이지" /></a>
                             </p>
                         </div>
                     </div>
@@ -877,7 +864,7 @@
                                 <li class="item">
                                     <div class="box">
                                         <a href="{$link_product_detail}"><img src="{$img_small}" alt="{$seo_alt_tag}"
-                                                                              class="thumb"/></a>
+                                                                              class="thumb" /></a>
                                         <p><a href="{$link_product_detail}">{$name}</a></p>
                                         <ul>
                                             <li><strong class="{$product_sale_strike}">{$disp_product_price}</strong></li>
@@ -889,7 +876,7 @@
                                 <li class="item">
                                     <div class="box">
                                         <a href="{$link_product_detail}"><img src="{$img_small}" alt="{$seo_alt_tag}"
-                                                                              class="thumb"/></a>
+                                                                              class="thumb" /></a>
                                         <p><a href="{$link_product_detail}">{$name}</a></p>
                                         <ul>
                                             <li><strong class="{$product_sale_strike}">{$disp_product_price}</strong></li>
@@ -904,7 +891,6 @@
                 </div>
 
             </div>
-
 
 
         </div>
