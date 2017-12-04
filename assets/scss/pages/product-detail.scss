@@ -7,10 +7,12 @@
       .path-wrap {
         padding: 0 10px;
         margin-bottom: 0;
+
         .breadcrumb {
           color: #417505;
           font-size: 13px;
           line-height: 20px;
+
           &:before {
             color: #417505;
             font-size: 13px;
@@ -81,17 +83,15 @@
 
                       padding: 0;
                       line-height: 40px;
-                      /* 이상 삭제 */
 
                       border-top: none;
-                      //600and up - line-height: 40px;
+
 
                       a {
                         display: block;
                         float: left;
                         img {
                           height: 40px;
-                          //height: 40px;
                           display: block;
                         }
                       }
@@ -100,12 +100,6 @@
                         height: 40px;
                         width: 30px;
                         display: table;
-                        /* 이상 삭제
-                        height: 40px;
-                        width: 50px;
-                        display: block;
-                        */
-
                         float: left;
                         text-align: center;
                         background-color: #EEEEEE;
@@ -114,11 +108,8 @@
                           height: 40px;
                           width: 30px;
                           display: table;
-                          /* 이상 삭제 */
-
                           border: none;
                           box-shadow: none;
-                          //height: 40px;
                           text-align: center;
                           margin: 0 auto;
                           font-weight: 600;
@@ -130,14 +121,10 @@
                       @extend .font-ubuntu;
                       font-weight: 600;
                       line-height: 40px;
-                      //margin: 9px 0 9px 15px;
                       background-color: #EEEEEE;
                       border-radius: 50px;
                       height: 40px;
                       padding: 0;
-                      //height: 40px;
-                      //line-height: 40px;
-                      //padding: 0 20px;
                       width: 190px;
                       text-align: center;
 
@@ -195,14 +182,11 @@
             font-size: 1.2em;
             font-weight: 100;
             color: #fafafa;
-            //width: 400px;
             margin: 20px auto;
             padding: 10px 0;
 
             button {
               width: 100%;
-              /* 이상 삭제 */
-
               background-color: #333333;
               padding: 10px 45px;
               letter-spacing: 0.1em;
@@ -225,17 +209,8 @@
 
             }
 
-            .btnNormalL {
-              //width: 40%;
-              //margin-left: 10px;
-            }
 
-            .btnEmL {
-              //width: 56%;
-
-            }
-
-          }
+         }
 
         }
 
@@ -378,6 +353,25 @@
 
             }
           }
+
+        }
+
+        .additional-content {
+
+         .relation {
+
+           .xans-product-relationlist {
+
+             .prdList {
+               color: #333;
+
+               li {
+                 height: 200px;
+               }
+
+             }
+           }
+         }
 
         }
 
