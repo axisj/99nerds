@@ -112,11 +112,12 @@
                             {$product_price_front_head}{$product_price_front}{$product_price_front_tail} * {$quantity} = {$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}
                         </div>
                     </td>
-                    <td>
-                        <div class="product-quantity {$nplusevent_hide_display|display}">
+                    <td style="text-align: center;">
+                        <span class="product-quantity {$nplusevent_hide_display|display}">
                             <span class="quantity">{$form.quantity}</span>
                             <a href="javascript:;" class="btnNormal" onclick="{$action_modify}">변경</a>
-                        </div>
+                        </span>
+                        <span class="{$nplusevent_show_display|display}">{$quantity}</span>
                     </td>
                     <td>
                         <div class="button">

@@ -599,7 +599,6 @@
                     <ul class="menu">
                         <li class="selected"><a href="#prdDetail">상품상세정보</a></li>
                         <li><a href="#prdInfo">상품구매안내</a></li>
-                        <li><a href="#prdReview">상품사용후기</a></li>
                         <li><a href="#prdQnA">상품Q&A</a></li>
                         <li><a href="#prdRelated">관련상품</a></li>
                     </ul>
@@ -613,7 +612,6 @@
                     <ul class="menu">
                         <li><a href="#prdDetail">상품상세정보</a></li>
                         <li class="selected"><a href="#prdInfo">상품구매안내</a></li>
-                        <li><a href="#prdReview">상품사용후기</a></li>
                         <li><a href="#prdQnA">상품Q&A</a></li>
                         <li><a href="#prdRelated">관련상품</a></li>
                     </ul>
@@ -637,118 +635,11 @@
                     </div>
                 </div><!-- //상품구매안내 -->
 
-                <!-- 상품사용후기 -->
-                <div class="additional-content" id="prdReview">
-                    <ul class="menu">
-                        <li><a href="#prdDetail">상품상세정보</a></li>
-                        <li><a href="#prdInfo">상품구매안내</a></li>
-                        <li class="selected"><a href="#prdReview">상품사용후기</a></li>
-                        <li><a href="#prdQnA">상품Q&A</a></li>
-                        <li><a href="#prdRelated">관련상품</a></li>
-                    </ul>
-                    <div class="board">
-                        <div module="product_review">
-                            <!--@js(/js/module/product/review.js)-->
-                            <a name="use_review"></a>
-                            <p class="noAccess empty {$deny_display|display}">글읽기 권한이 없습니다.</p>
-                            <div class="minor {$adult_display|display}">
-                                <p><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif"
-                                        alt="" /><strong class="txtStrong12B">"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
-                                <p class="buttonArea"><a href="/intro/board.html{$returnParam}" class="btnEmB">성인인증
-                                                                                                               하기</a></p>
-                            </div>
-                            <div class="tableTheme">
-                                <table summary="" class="{$list_display|display}">
-                                    <caption>상품사용후기</caption>
-                                    <colgroup>
-                                        <col style="width:70px;" />
-                                        <col style="width:auto" />
-                                        <col style="width:100px;" />
-                                        <col style="width:80px;" />
-                                        <col style="width:80px;" />
-                                        <col style="width:80px;" class="{$use_point_display|display}" />
-                                    </colgroup>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">no</th>
-                                        <th scope="col">title</th>
-                                        <th scope="col">name</th>
-                                        <th scope="col">date</th>
-                                        <th scope="col">hit</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="center">
-                                    <tr>
-                                        <td>{$no}</td>
-                                        <td>
-                                            <div class="subject">{$icon_re}{$icon_lock} <a
-                                                    href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
-                                            </div>
-                                        </td>
-                                        <td>{$member_icon} {$writer}</td>
-                                        <td>{$write_date|date:Y-m-d}</td>
-                                        <td>{$hit_count}</td>
-                                        <td class="{$use_point_display|display}"><img
-                                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif"
-                                                alt="{$point_count}점"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>{$no}</td>
-                                        <td>
-                                            <div class="subject">{$icon_re}{$icon_lock} <a
-                                                    href="{$link_board_detail}{$param_read}">{$subject}</a>
-                                                                 {$icon_new}{$icon_hit}{$icon_file}{$comment_count}
-                                            </div>
-                                        </td>
-                                        <td>{$member_icon} {$writer}</td>
-                                        <td>{$write_date|date:Y-m-d}</td>
-                                        <td>{$hit_count}</td>
-                                        <td class="{$use_point_display|display}"><img
-                                                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif"
-                                                alt="{$point_count}점"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <p class="buttonArea">
-                            <span class="gRight">
-                                <a href="{$review_write}" class="btnNormal">상품후기쓰기</a>
-                                <a href="{$review_list}" class="btnNormal">모두보기</a>
-                            </span>
-                        </p>
-                        <div module="product_reviewpaging" class="paginate">
-                            <p class="first"><a href="{$param_first}"><img
-                                    src="/assets/images/sub-product/prev-firstpng.png"
-                                    alt="첫 페이지" /></a></p>
-                            <p><a href="{$param_before}"><img
-                                    src="/assets/images/sub-product/prev.png"
-                                    alt="이전 페이지" /></a></p>
-                            <ol>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-                            </ol>
-                            <p><a href="{$param_next}"><img
-                                    src="/assets/images/sub-product/next.png"
-                                    alt="다음 페이지" /></a></p>
-                            <p class="last"><a href="{$param_last}"><img
-                                    src="/assets/images/sub-product/next-last.png"
-                                    alt="마지막 페이지" /></a>
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- //상품사용후기 -->
-
                 <!-- 상품 Q&A -->
                 <div class="additional-content" id="prdQnA">
                     <ul class="menu">
                         <li><a href="#prdDetail">상품상세정보</a></li>
                         <li><a href="#prdInfo">상품구매안내</a></li>
-                        <li><a href="#prdReview">상품사용후기</a></li>
                         <li class="selected"><a href="#prdQnA">상품Q&A</a></li>
                         <li><a href="#prdRelated">관련상품</a></li>
                     </ul>
@@ -854,7 +745,6 @@
                     <ul class="menu">
                         <li><a href="#prdDetail">상품상세정보</a></li>
                         <li><a href="#prdInfo">상품구매안내</a></li>
-                        <li><a href="#prdReview">상품사용후기</a></li>
                         <li><a href="#prdQnA">상품Q&A</a></li>
                         <li class="selected"><a href="#prdRelated">관련상품</a></li>
                     </ul>
