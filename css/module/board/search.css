@@ -1,9 +1,0 @@
-.mid-0.xans-board-search { padding:20px 0 20px 10px; }
-.mid-0.xans-board-search p { margin:0 0 10px; padding:0 0 0 7px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_function.gif") no-repeat 0 45%; }
-.mid-0.xans-board-search select { margin:0 2px 0 0; width:72px; }
-.mid-0.xans-board-search select#search_date { margin-left:22px; }
-.mid-0.xans-board-search #search { width:162px; }
-
-/* 상품분류 */
-.mid-0.xans-board-search .category select { margin:0 4px 0 0; width:150px; }
-.mid-0.xans-board-search .category select#product_category_depth1 { margin:0 5px 0 10px; }

@@ -1,8 +1,0 @@
-.mid-0.xans-board-movement { border:1px solid #d7d5d5; margin:20px 0; }
-.mid-0.xans-board-movement li { overflow:hidden; padding:0 20px; border-bottom:1px solid #e9e9e9; line-height:140%; *zoom:1; }
-.mid-0.xans-board-movement li span,
-.mid-0.xans-board-movement li a { float:left; padding:10px; }
-.mid-0.xans-board-movement li span { width:60px; padding-left:15px; border-right:1px solid #e9e9e9; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_move_prev.gif") no-repeat 0 15px; }
-
-.mid-0.xans-board-movement li.next { border-bottom:0; }
-.mid-0.xans-board-movement li.next span { background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_move_next.gif") no-repeat 0 15px; }

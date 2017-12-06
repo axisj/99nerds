@@ -1,8 +1,0 @@
-/* 게시판 전체 공통 */
-.mid-0 .xans-board-title p.imgArea { margin:0 0 20px; }
-
-/* reply */
-.mid-0 .xans-board-reply table textarea#privacy_agreement { width:560px; height:140px; }
-.mid-0 .xans-board-reply table #subject { width:390px; }
-.mid-0 .xans-board-reply table #ucc_width { width:40px; }
-.mid-0 .xans-board-reply table #ucc_height { width:40px; }

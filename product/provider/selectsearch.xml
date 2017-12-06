@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<searchkeys module="product_selectsearch">
-    <searchkey>
-        <search_value>{$value}</search_value>
-    </searchkey>
-    <searchkey>
-        <search_value>{$value}</search_value>
-    </searchkey>
-</searchkeys>

@@ -1,3 +1,0 @@
-/* 상품상세 > 재고수량 레이어 */
-.xans-product-stocklayer .layerTheme { position:fixed; top:50%; left:50%; z-index:100; width:500px; margin:-175px 0 0 -250px; background-color:#fff; }
-.xans-product-stocklayer .content { overflow-y:auto; max-height:300px; }

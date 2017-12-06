@@ -1,6 +1,0 @@
-.popup { min-width:444px; height:440px; }
-.xans-poll-result .result li { padding:6px 3px; border-bottom:1px solid #bbb; }
-.xans-poll-result .result p { overflow:hidden; padding:3px 0; }
-.xans-poll-result .result p.graph em { float:left; width:40px; font-style:normal; }
-.xans-poll-result .result p.graph span.box { float:left; width:350px; padding:0 3px 0 0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/poll/bg_graph1.gif") 0 50% no-repeat; }
-.xans-poll-result .result p.graph span.box span { display:block; height:16px; margin:0 0 0 3px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/poll/bg_graph2.gif") right 50% no-repeat; }
