@@ -1,0 +1,8 @@
+/* 사은품 선택 레이어 팝업 */
+.popup { min-width:560px; }
+.xans-gift-select .content { overflow-y:auto; max-height:500px; height:500px; }
+.xans-gift-select .close { position:absolute; right:14px; top:12px; }
+.xans-gift-select .close img { cursor:pointer; }
+  
+.xans-gift-select .info { padding:0 0 0 6px; margin-bottom:10px; line-height:15px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_info3.gif") no-repeat 0 6px; }
+.xans-gift-select td .product .prdInfo { display:inline-block; width:220px; margin:0 0 0 10px; *display:inline; }

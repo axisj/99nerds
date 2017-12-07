@@ -1,0 +1,14 @@
+/* 테이블 */
+.xans-order-boardlistpackage { position:relative; margin:0 0 14px; background:#fff; }
+
+.xans-order-boardlistpackage .boardList { margin:10px 14px 0; background:#fff; }
+.xans-order-boardlistpackage .boardList > ul { border:1px solid #ccc; }
+.xans-order-boardlistpackage .boardList > ul > li { position:relative; padding:14px 14px 4px; border-bottom:1px solid #f1f1f1; }
+.xans-order-boardlistpackage .boardList > ul > li p { margin:0 0 14px; }
+.xans-order-boardlistpackage .boardList > ul > li .thumb { position:absolute; left:14px; top:14px; }
+.xans-order-boardlistpackage .boardList > ul > li .thumb img { width:73px; height:73px; border:1px solid #dedede; }
+.xans-order-boardlistpackage .boardList > ul > li .prdInfo { display:block; padding:0 0 0 87px; height:75px; }
+.xans-order-boardlistpackage .boardList > ul > li .prdInfo strong { display:block; margin:0 0 14px; }
+.xans-order-boardlistpackage .boardList > ul > li .prdInfo .name { font-size:13px; font-weight:normal; }
+.xans-order-boardlistpackage .boardList > ul > li .btnStrong { position:absolute; right:14px; bottom:14px; }
+.xans-order-boardlistpackage .boardList > ul > li li { margin:0 0 10px; padding:0 0 0 5px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_list.png") no-repeat 0 50%; background-size:2px 2px; }

@@ -1,0 +1,47 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Myshop_OrderHistoryAccount">
+    <!--@css(/css/module/myshop/orderHistoryAccount.css)-->
+    <div class="header">
+        <h2>환불계좌 <span class="{$acc_reg_display|display}">등록</span><span class="{$acc_mod_display|display}">변경</span></h2>
+    </div>
+
+    <div class="wrap">
+        <div id="accountTerms">
+            <table border="1" summary="">
+                <caption>환불계좌 <span class="{$acc_reg_display|display}">등록</span><span class="{$acc_mod_display|display}">변경</span></caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">예금주</th>
+                        <td>
+                            {$form.acc_depositor}
+                            <p class="grid">예금주명은 주문자명과 동일해야 합니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">은행선택</th>
+                        <td>{$form.acc_bank}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">계좌번호</th>
+                        <td>
+                            {$form.acc_no}
+                            <p class="grid">'-'없이 숫자만 입력해 주세요.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비밀번호 확인</th>
+                        <td>
+                            {$form.check_password}
+                            <p class="grid">등록된 비밀번호를 확인합니다.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btnArea type3">
+            <a href="#none" class="btnSubmit {$acc_reg_display|display}" onclick="RefundAccount.register(); return false;">등록</a>
+            <a href="#none" class="btnEm {$acc_mod_display|display}" onclick="RefundAccount.modify(); return false;">변경</a>
+            <a href="#none" class="btnEm" onclick="RefundAccount.cancel(); return false;">취소</a>
+        </div>
+    </div>
+</div>

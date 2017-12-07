@@ -1,0 +1,75 @@
+/* 리스트 */
+.xans-myshop-wishlist { margin:14px 7px 0; }
+.xans-myshop-wishlist .prdInfo { position:relative; margin:0 0 7px; padding:14px 14px 6px; border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-wishlist .prdInfo:last-child { margin:0; }
+.xans-myshop-wishlist .prdInfo > .btnArea.typeFull { margin:0 auto; padding:7px 0 0; }
+.xans-myshop-wishlist .description { position:relative; min-height:90px; padding:7px 0 0 90px; }
+.xans-myshop-wishlist .description .prdImg { position:absolute; left:0; top:7px; z-index:10; width:73px; border:1px solid #d5d5d5; }
+.xans-myshop-wishlist .description .prdImg img { width:100%; }
+.xans-myshop-wishlist .description .prdName { display:block; margin:0 0 14px; font-size:13px; }
+.xans-myshop-wishlist .description .info { margin:0 0 14px; }
+.xans-myshop-wishlist .description .info li { margin:0 0 7px; font-size:11px; color:#757575; }
+.xans-myshop-wishlist .description .info .price { color:#000; }
+.xans-myshop-wishlist .description .info .price .discount { display:block; font-weight:normal; text-decoration:line-through; }
+.xans-myshop-wishlist .description .info .price .strike { font-weight:normal; text-decoration:line-through; }
+.xans-myshop-wishlist .description .prdTotal { margin:14px 0; }
+.xans-myshop-wishlist .description input[type="number"] { max-width:51px; }
+.xans-myshop-wishlist .prdTotal { padding:14px 0 7px; border-top:1px solid #ececec; font-size:13px; text-align:right; }
+
+.xans-myshop-wishlist .xans-myshop-optionall { padding:0; color:#353535; }
+.xans-myshop-wishlist .xans-myshop-optionall > li { border-top:1px solid #ececec; }
+.xans-myshop-wishlist .xans-myshop-optionall > li .name { position:relative; min-height:15px; padding:14px 72px 14px 0; }
+.xans-myshop-wishlist .xans-myshop-optionall > li .change { position:absolute; top:7px; right:0; }
+
+.xans-myshop-wishlist .empty { padding:20px 0 30px; color:#212530; font-size:12px; text-align:center; }
+
+/* 옵션변경 레이어 */
+.xans-myshop-wishlist .layerOptionModify { display:none; width:auto; margin:7px 0 14px; padding:14px; border:1px solid #d5d5d5; background-color:#f1f1f1; }
+.xans-myshop-wishlist .layerOptionModify .titleArea { margin-top:3px; display:none; }
+.xans-myshop-wishlist .layerOptionModify .btnArea { margin:20px 0 0; }
+.xans-myshop-wishlist .layerOptionModify ul { padding:0; font-size:12px; }
+.xans-myshop-wishlist .layerOptionModify li { position:relative; margin:7px 0 0; padding:0 0 0 73px; }
+.xans-myshop-wishlist .layerOptionModify li:first-child { margin:0; }
+.xans-myshop-wishlist .layerOptionModify li span { display:block; position:absolute; top:0; left:0; width:73px; height:29px; font-size:13px; color:#757575; line-height:29px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.xans-myshop-wishlist .layerOptionModify select,
+.xans-myshop-wishlist .layerOptionModify input[type="text"] { width:100%; }
+
+.xans-myshop-wishlist .layerOptionModify .button { margin:7px 0 0; padding:0 0 0 73px; text-align:left; }
+.xans-myshop-wishlist .layerOptionModify .button .btnBasic1 { color:#fff; }
+
+.xans-myshop-wishlistpaging.paginate { background:#f1f1f1; border-bottom:1px solid #ccc; }
+
+/* 배송비 레이어 */
+.differentialShipping { display:inline-block; position:relative; z-index:10; width:13px; height:13px; vertical-align:middle; }
+.differentialShipping .btnHelp { display:inline-block; overflow:hidden; width:13px; height:13px; font-size:0; vertical-align:top; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_help2.png") no-repeat 50% 50%; background-size:13px 13px; }
+.differentialShipping .layerShipping { display:none; z-index:1000; position:fixed; left:7px; width:100%; top:100px; box-sizing:border-box; margin:0; padding:0 14px 0 0; }
+.differentialShipping .layerShipping p { padding:12px; color:#fff; background-color:#353535; border:1px solid #353535; border-bottom:0; border-radius:4px 4px 0 0; }
+.differentialShipping .layerShipping p strong { font-weight:normal; font-size:13px; }
+.differentialShipping .layerShipping ul { padding:14px 7px; border:1px solid #353535; border-top:0; border-radius:0 0 4px 4px; background-color:#f0f0f0; }
+.differentialShipping .layerShipping li { padding:12px; overflow:hidden; font-size:11px; background:#fff; border:1px solid #d5d5d5; border-top:0; }
+.differentialShipping .layerShipping li:first-child { border-top:1px solid #d5d5d5; ; }
+.differentialShipping .layerShipping li strong { float:left; font-weight:normal; color:#757575; }
+.differentialShipping .layerShipping li .price { float:right; font-weight:bold; font-family:Tahoma; color:#353535; }
+.differentialShipping .layerShipping .btnClose { position:absolute; right:24px; top:12px; overflow:hidden; width:18px; height:18px; font-size:0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") no-repeat 50% 50%; background-size:20px 20px; }
+
+.xans-myshop-wishlist .shippingFee { display:inline-block; position:static; font-size:12px; vertical-align:middle; }
+.xans-myshop-wishlist .shippingFee > a.btnNormal { height:26px; line-height:24px; font-size:11px; }
+.xans-myshop-wishlist .shippingFee .wrap { display:none; z-index:999; position:fixed; left:2%; width:96%; top:100px; margin:0; border:1px solid #d5d5d5; background:#fff; border-radius:5px; box-sizing:border-box;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+.xans-myshop-wishlist .shippingFee .wrap h3 { padding:0 14px; font-size:13px; line-height:36px; background-color:#f0f0f0; border-bottom:1px solid #d5d5d5; border-radius:5px 5px 0 0; }
+.xans-myshop-wishlist .shippingFee .wrap .content { padding:14px; }
+.xans-myshop-wishlist .shippingFee .wrap h4 { position:relative; margin:0 7px 7px; }
+.xans-myshop-wishlist .shippingFee .wrap h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+.xans-myshop-wishlist .shippingFee .wrap table + h4 { margin-top:14px; }
+.xans-myshop-wishlist .shippingFee .wrap p strong { font-weight:normal; font-size:13px; }
+.xans-myshop-wishlist .shippingFee .wrap table { background:#fff; }
+.xans-myshop-wishlist .shippingFee .wrap th,
+.xans-myshop-wishlist .shippingFee .wrap td { padding:7px; border:1px solid #d5d5d5; }
+.xans-myshop-wishlist .shippingFee .wrap th { width:80px; border-right-width:0; color:#353535; }
+.xans-myshop-wishlist .shippingFee .wrap td { border-left-width:0; }
+.xans-myshop-wishlist .shippingFee .wrap .txtEm { color:#008bcc; }
+.xans-myshop-wishlist .shippingFee .wrap .info { margin:0; color:#757575; font-size:11px; }
+.xans-myshop-wishlist .shippingFee .wrap .btnClose { overflow:hidden; position:absolute; right:0; top:0; width:36px; height:36px; font-size:0; border:none; background:transparent url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") center center no-repeat; background-size:14px 14px; }

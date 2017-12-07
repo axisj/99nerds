@@ -1,0 +1,25 @@
+.xans-product-menupackage { margin:0 0 27px; }
+.xans-product-menupackage .title { min-height:30px; margin:10px 0 20px; }
+.xans-product-menupackage .title .banner { margin:0 0 20px; }
+.xans-product-menupackage .title h2 { padding:0 0 0 12px; color:#4a5164; font-size:16px; *display:inline; *zoom:1; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_heading.gif") 0 2px no-repeat; }
+
+.xans-product-menupackage .menuCategory { border:1px solid #d7d5d5; font-size:0; line-height:0; }
+.xans-product-menupackage .menuCategory > li { display:inline-block; width:175px; margin:15px 0 15px 20px; padding:0 5px 0 0; font-size:12px; line-height:14px; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-menupackage .menuCategory > li > a { padding:0 13px 0 0; font-weight:bold; color:#2e2e2e; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/product/ico_menu_category.gif") no-repeat 100% 5px; }
+.xans-product-menupackage .menuCategory > li > a:hover { color:#008bcc; text-decoration:none; background-position:100% -95px }
+.xans-product-menupackage .menuCategory > li.selected > a { color:#008bcc; }
+.xans-product-menupackage .menuCategory > li .count { font-weight:normal; }
+.xans-product-menupackage .menuCategory > li > ul { padding:6px 0 0 0; }
+.xans-product-menupackage .menuCategory > li > ul > li { margin:8px 0 0 0; line-height:14px; }
+.xans-product-menupackage .menuCategory > li > ul > li > a { color:#575a63; }
+.xans-product-menupackage .menuCategory > li > ul > li > a:hover,
+.xans-product-menupackage .menuCategory > li > ul > li.selected > a { color:#008bcc; }
+.xans-product-menupackage .menuCategory > li > ul > li > .button { display:inline-block; position:relative; width:9px; height:14px; margin:1px 0 0 3px; vertical-align:top; *display:inline; *zoom:1; }
+
+.xans-product-menupackage .subCategory { display:none; position:absolute; left:50%; top:13px; z-index:10; width:300px; margin:0 0 0 -151px; padding:6px 0; border:1px solid #565960; font-size:0; line-height:0; background:#fff url("http://img.echosting.cafe24.com/skin/base_ko_KR/product/bg_sub_category_line.gif") repeat-y 150px 0; }
+.xans-product-menupackage .subCategory li { display:inline-block; width:130px; margin:8px 0 8px 18px; font-size:12px; line-height:14px; *display:inline; *zoom:1; vertical-align:top; }
+.xans-product-menupackage .subCategory li a { color:#575a63; }
+.xans-product-menupackage .subCategory li a:hover,
+.xans-product-menupackage .subCategory li.selected a { color:#008bcc; }
+.xans-product-menupackage .menuCategory .button.selected { z-index:10; }
+.xans-product-menupackage .menuCategory .button.selected .subCategory { display:block; }

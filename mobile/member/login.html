@@ -1,0 +1,110 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>로그인</h2>
+</div>
+<div module="member_login" id="{$member_login_module_id}">
+    <!--@css(/css/module/member/login.css)-->
+    <!--@js(/js/module/member/login.js)-->
+    <!--
+        $defaultReturnUrl = /index.html
+    -->
+    <!--주문조회-->
+    <div class="loginWrap">
+        <div class="tab eTab {$member_login_tab_display|display}">
+            <ul>
+                <li class="selected">
+                    <a href="#member">회원</a>
+                </li>
+                <li>
+                    <a href="#noMember">비회원</a>
+                </li>
+            </ul>
+        </div>
+        <div class="loginHeader">
+            <div class="keyboard">
+                <button type="button" class="btnKey korean" title="korean">한글자판</button>
+                <button type="button" class="btnKey special" title="special">특수문자</button>
+            </div>
+            <div class="view">
+                <div class="korean"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard.png" alt="" width="254"></div>
+                <div class="special"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard_special.png" alt="" width="254"></div>
+            </div>
+        </div>
+        <fieldset>
+            <div class="formBox">
+                <div class="form">
+                    {$form.member_id}
+                    {$form.member_passwd}
+                </div>
+                <div class="option">
+                    <span class="auto">{$form.use_login_keeping}</span>
+                    <span class="save">{$form.check_save_id}</span>
+                    <span class="ssl"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_ssl.png" alt="보안접속"><em>보안접속</em></span>
+                </div>
+                <div class="btnArea type1">
+                    <button type="button" class="btnSubmit" onclick="{$action_func_login}">로그인</button>
+                </div>
+                <div class="btnArea type1 {$display_nomember|display}">
+                    <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnEm">비회원 구매</a>
+                </div>
+                <div class="btnArea typeLogin">
+                    <a href="/member/id/find_id.html" class="btnLogin">아이디찾기</a>
+                    <a href="/member/passwd/find_passwd_info.html" class="btnLogin">비밀번호찾기</a>
+                    <a href="/member/agreement.html" class="btnLogin">회원가입</a>
+                </div>
+                <div class="btnArea type1">
+                    <a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}"><span>네이버 로그인</span></a>
+                    <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}"><span>Facebook 로그인</span></a>
+                    <a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}"><span>구글 로그인</span></a>
+                    <a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}"><span>카카오계정 로그인</span></a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+     <!--//주문조회-->
+</div>
+
+<div module="MyShop_OrderHistoryNologin" id="{$order_history_nologin_id}">
+    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+    <!--
+        $orderDetailUrl = /myshop/order/detail.html
+    -->
+    <div class="tab eTab">
+        <ul>
+            <li>
+                <a href="#member">회원</a>
+            </li>
+            <li class="selected">
+                <a href="#noMember">비회원</a>
+            </li>
+        </ul>
+    </div>
+    <div class="loginHeader">
+        <div class="keyboard">
+            <button type="button" class="btnKey korean" title="korean">한글자판</button>
+            <button type="button" class="btnKey special" title="special">특수문자</button>
+        </div>
+        <div class="view">
+            <div class="korean"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard.png" alt="" width="254"></div>
+            <div class="special"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard_special.png" alt="" width="254"></div>
+        </div>
+    </div>
+    <fieldset>
+        <div class="formBox">
+            <div class="form">
+                {$form.order_name}
+                {$form.order_id}
+                {$form.order_password}
+            </div>
+            <div class="btnArea type1">
+                <button type="button" class="btnSubmit" onclick="$('#historyNoLoginForm').submit();">조회</button>
+            </div>
+            <div class="btnJoin btnArea type1">
+                <a href="/member/agreement.html" class="btnEm">회원가입</a>
+            </div>
+            <div class="help">
+                <p>비회원인 경우 주문번호로 주문조회만 가능합니다.</p>
+            </div>
+        </div>
+    </fieldset>
+</div>

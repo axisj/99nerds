@@ -1,0 +1,73 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Myshop_OrderSearchproductForm">
+    <!--@css(/css/module/myshop/searchProduct.css)-->
+    <div class="header">
+        <h2>상품검색</h2>
+    </div>
+    <div class="wrap">
+        <div class="search">
+            <table border="1">
+                <caption>상품검색</caption>
+                <colgroup>
+                    <col style="width:102px;">
+                    <col style="width:auto;">
+                    <col style="width:70px;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">{$form.search_type}</th>
+                        <td>{$form.keyword}</td>
+                        <td class="btnSearch"><a href="#none" onClick="{$search_product}"><button type="image" class="btnStrong">검색</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="result {$ctrl_display|display}">
+            <p>총<strong> {$total_count} </strong>개 상품이 검색되었습니다.</p>
+            {$form.limit}
+        </div>
+
+        <div module="Myshop_OrderSearchproductList">
+            <div class="resultList {$search_display|display}">
+                <ul>
+                    <li>
+                        <div class="thumbnail"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                        <ul class="info">
+                            <li class="name">{$product_name}</li>
+                            <li class="code">{$product_price}</li>
+                            <li class="code">{$product_code}</li>
+                        </ul>
+                        <div class="btnArea">
+                            <a href="#none" class="btnStrong" onClick="{$selected_item_js}">선택</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></div>
+                        <ul class="info">
+                            <li class="name">{$product_name}</li>
+                            <li class="code">{$product_price}</li>
+                            <li class="code">{$product_code}</li>
+                        </ul>
+                        <div class="btnArea">
+                            <a href="#none" class="btnStrong" onClick="{$selected_item_js}">선택</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="empty {$search_fail_display|display}">검색 결과가 없습니다.</p>
+        </div>
+
+        <div module="Myshop_OrderSearchproductPaging" class="paginate typeList">
+            <p class="prev"><a href="{$param_before}">이전 페이지</a></p>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <p class="next"><a href="{$param_next}">다음 페이지</a></p>
+        </div>
+    </div>
+</div>

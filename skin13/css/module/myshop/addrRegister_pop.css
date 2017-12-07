@@ -1,0 +1,15 @@
+.popup { min-width:800px; height:500px; }
+.mid-0.xans-myshop-addrregister #ma_rcv_title,
+.mid-0.xans-myshop-addrregister #ma_rcv_name { width:180px; }
+.mid-0.xans-myshop-addrregister #address_zip1,
+.mid-0.xans-myshop-addrregister #address_zip2 { width:60px; text-align:center; }
+.mid-0.xans-myshop-addrregister #address_addr1,
+.mid-0.xans-myshop-addrregister #address_addr2 { width:450px; }
+.mid-0.xans-myshop-addrregister #ma_rcv_phone1,
+.mid-0.xans-myshop-addrregister #ma_rcv_mobile_no1 { width:60px; }
+.mid-0.xans-myshop-addrregister #ma_rcv_phone2,
+.mid-0.xans-myshop-addrregister #ma_rcv_phone3,
+.mid-0.xans-myshop-addrregister #ma_rcv_mobile_no2,
+.mid-0.xans-myshop-addrregister #ma_rcv_mobile_no3 { width:60px; }
+.mid-0.xans-myshop-addrregister .shipping { text-align:right; }
+.mid-0.xans-myshop-addrregister .shipping td { padding:8px 10px 7px 10px; }

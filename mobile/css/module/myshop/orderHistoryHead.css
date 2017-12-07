@@ -1,0 +1,25 @@
+/* 검색기간설정 폼 */
+.xans-myshop-orderhistoryhead fieldset { margin:14px 7px 0; padding:7px 8px; border:1px solid #d5d5d5; font-size:11px; background:#f1f1f1; }
+.xans-myshop-orderhistoryhead fieldset img { vertical-align:middle; }
+.xans-myshop-orderhistoryhead fieldset #dataSearch { padding:7px 0 0; display:none; }
+.xans-myshop-orderhistoryhead fieldset #dataSearch button { border:0; margin:0 0 0 4px; }
+.xans-myshop-orderhistoryhead fieldset .term { margin:0 10px 0 0; }
+.xans-myshop-orderhistoryhead fieldset .fText { width:78px; height:29px; padding:0 6px; border:1px solid #d5d5d5; line-height:29px; }
+.xans-myshop-orderhistoryhead fieldset #history_end_date { margin:0 0 0 5px; }
+.xans-myshop-orderhistoryhead fieldset input[type="image"] { width:43px; }
+.xans-myshop-orderhistoryhead fieldset button { margin:0 0 0 2px; }
+.xans-myshop-orderhistoryhead .btnNormal,
+.xans-myshop-orderhistoryhead .btnBasic { padding:0 9px; font-size:11px; letter-spacing:-1px; }
+.xans-myshop-orderhistoryhead a.btnBasic { color:#1b1b1b; font-size:11px; border:1px solid #bcbcbc; background:#fff; }
+.xans-myshop-orderhistoryhead .stateSelect { display:block; position:relative; margin:0 0 7px; padding:0 1px 0 34px; }
+.xans-myshop-orderhistoryhead .stateSelect .state { position:absolute; top:0; left:0; height:29px; line-height:29px; }
+.xans-myshop-orderhistoryhead .stateSelect select { width:100%; }
+
+/* 버튼클릭시 컬러 변경 */
+.xans-myshop-orderhistoryhead fieldset a.btnNormal:hover,
+.xans-myshop-orderhistoryhead fieldset a.btnNormal:active,
+.xans-myshop-orderhistoryhead fieldset a.btnNormal:focus { background-color:#4a5164; color:#fff; border:1px solid #4a5164; }
+.xans-myshop-orderhistoryhead fieldset a.btnBasic:hover,
+.xans-myshop-orderhistoryhead fieldset a.btnBasic:active,
+.xans-myshop-orderhistoryhead fieldset a.btnBasic:focus { background-color:#4a5164; color:#fff; border:1px solid #4a5164; }
+.xans-myshop-orderhistoryhead a.selected { background-color:#4a5164; color:#fff; border:1px solid #4a5164; }

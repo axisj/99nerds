@@ -1,0 +1,106 @@
+@charset "euc-kr";
+
+/* layout */
+#header .header { z-index:300; position:relative; text-align:center; vertical-align:top; }
+#header h1 { text-align:center; font-size:24px; }
+#header h1 img {
+    max-width:100%;
+    vertical-align:middle;
+    font-size:12px;
+    max-height: 40px;
+}
+
+#header .category { position:absolute; left:0; top: 0; width:47px; height:43px; vertical-align:middle; }
+#header .category a { display:inline-block; overflow:hidden; width:100%; height:100%; text-indent:100%; white-space:nowrap; background:url("/web/upload/nnn/mobile_btn_category.png") no-repeat 0 0; background-size:47px 43px; }
+
+#header .search { position:absolute; right:41px; top: 0; width:34px; height:43px; vertical-align:middle; }
+#header .search button { display:inline-block; overflow:hidden; width:100%; height:100%; padding: 10px 0 0 0; text-indent:100%; text-align:left; white-space:nowrap; cursor:pointer; border:0; background:url("/web/upload/nnn/mobile_btn_search.png") no-repeat 0 0; background-size:34px 43px; }
+
+#header .xans-layout-orderbasketcount { position:absolute; right:0; top:0; width:41px; height:43px; vertical-align:middle; }
+#header .xans-layout-orderbasketcount a.btnBasket { position:relative; top: 0; display:inline-block; overflow:hidden; width:100%; height:100%; padding:0; text-indent:100%; text-align:left; white-space:nowrap; cursor:pointer; border:0; background:url("/web/upload/nnn/mobile_btn_basket.png") no-repeat 0 0; background-size:48px 43px; }
+#header .xans-layout-orderbasketcount a.btnBasket .count { position:absolute; top:7px; right:10px; max-width:41px; border:1px solid #d01818; border-radius:7px; padding:0 1px; text-indent:0; line-height:1.2; color:#fff; font-weight:bold; font-size:10px; background-color:#e52728; }
+
+#main #header h1 { height:65px; line-height:65px; }
+#main #header h1 img { }
+
+#layout #header .header { text-align:left; background:#1E1E1E;}
+#layout #header h1 { height:30px; padding-left: 41px;}
+#layout #header h1 img { max-height:30px; vertical-align:middle; }
+#layout #topArea .searchWrap {
+    padding: 10px 82px 0 47px;
+
+}
+
+#contents { position:relative; background-color:#f1f1f1; }
+
+.btnTop { display:none; position:fixed; top:0; left:50%; z-index:100; margin:0 0 0 -36px; border:1px solid #d6d6d7; border-top:0; border-radius:0 0 3px 3px; opacity:0.9; background:#616161 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_btntop.png") no-repeat 90% 7px; background-size:12px 12px; }
+.btnTop a { display:inline-block; height:29px; padding:0 26px 0 10px; line-height:29px; color:#fff; }
+
+#mobileQuickLink { z-index:301 !important; }
+#mobileBtnQuickLink { z-index:100 !important; }
+
+.dimmed { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:150; background:rgba(0,0,0,0.7); }
+#dimmedSlider { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:500; background:rgba(0,0,0,0.7); }
+
+/* 메인 검색 */
+#main .searchWrap { position:relative; height:38px; padding:5px 41px 0 47px; background: #1e1e1e;}
+#main .searchWrap .searchForm { position:relative; padding:0 28px 0 33px; border:1px solid #ccc; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_search.png") no-repeat 5px 5px; background-size:20px 20px; background-color: #F5F5F5; border-radius: 5px;}
+#main .searchWrap .btnDelete { position:absolute; right:3px; top:5px; width:20px; height:20px; border:0; cursor:pointer; overflow:hidden; text-indent:100%; font-size:0; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_delete.png") no-repeat 0 0; background-size:20px 20px; }
+#main .searchWrap #keyword { width:100%; height:29px; padding:0; border:0; }
+
+/* 메인 카테고리*/
+#main #header #topArea .xans-layout-mobilemaincategory { position:relative; height:43px; border-bottom:1px solid #e3e3e3; background-color:#fff; }
+#main #header #topArea .xans-layout-mobilemaincategory ul { display:inline-block; width:100%; padding:0; text-align:left; font-size:0; line-height:0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+#main #header #topArea .xans-layout-mobilemaincategory ul li { display:inline-block; width:33.3%; font-size:13px; text-align:center; }
+
+/* 메인 스와이프 */
+#main #header #topArea .xans-layout-mobilemaincategory .afterNone { display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul { display:table; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li { width:100%; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul { padding:0 40px; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li { border-bottom:3px solid #fff; width:33%; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li.selected { border-bottom-color:#217bdb; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li a { display:inline-block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:22px 0 18px; font-weight:bold; color:#9a9a9a; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li.selected a { color:#217bdb; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li a img { max-height:40px; }
+#main #header #topArea .xans-layout-mobilemaincategory p { position:absolute; top:0; background-color:#fff; }
+#main #header #topArea .xans-layout-mobilemaincategory p.btnPrev { left:0; display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory p.btnNext { right:0; display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory p a { display:inline-block; padding:13px 14px; }
+
+/* 메인 배너 */
+#main .mainBanner { position:relative; }
+#main .mainBanner a img { max-height:290px; }
+#main .mainBanner .paginate { position:absolute; bottom:8px; z-index:10; width:100%; text-align:center; font-size:0; line-height:0; background-color:transparent; }
+#main .mainBanner .afterNone { display:none; }
+
+/* 메인 레이어 팝업 */
+.xans-popup-mobile .mainLayerArea { position:relative; z-index:120; height:0px; }
+.xans-popup-mobile .mMainLayer { position:absolute; left:7px; top:7px; right:7px; border:1px solid #9d9db0; }
+.xans-popup-mobile .mMainLayer .banner { position:relative; overflow:hidden; background-color:#fff; }
+.xans-popup-mobile .mMainLayer ul { position:relative; white-space:nowrap; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer ul img { width:100%; }
+.xans-popup-mobile .mMainLayer li { display:inline; }
+.xans-popup-mobile .mMainLayer .pagenate { position:absolute; left:0px; bottom:5px; width:100%; text-align:center; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer .pagenate button { overflow:hidden; width:9px; height:9px; margin:0 5px 0 0; border:0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_notice_paginate.png") no-repeat 0px 0px; background-size:8px 8px; }
+.xans-popup-mobile .mMainLayer .pagenate button.selected { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_notice_paginate_selected.png"); }
+.xans-popup-mobile .mMainLayer .pagenate button span { visibility:hidden; font-size:0; line-height:0; }
+.xans-popup-mobile .mMainLayer .option { padding:5px; color:#fff; background-color:#434447; text-align:right; }
+.xans-popup-mobile .mMainLayer .option label { font-size:12px; }
+.xans-popup-mobile .mMainLayer .option button { padding:0 12px 0 4px; color:#fff; border:0; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_close_notice.png") no-repeat right 2px; background-size:10px 9px; }
+
+/* 타이틀 */
+#titleArea { position:relative; border-bottom:1px solid #c2c2c2; background-color:#fff; }
+#titleArea h2 { padding:0 61px; line-height:43px; font-size:15px; color:#2e2e2e; text-align:center; }
+#titleArea span { position:absolute; top:6px; left:14px; }
+
+/* 도움말 */
+.help { margin:0; padding:0 0 0 22px; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_help.png") 0 2px no-repeat; background-size:14px; }
+.help p { margin:0 0 8px; }
+
+/* 마이쇼핑 메인 */
+.myshopMain { padding:14px 7px; font-size:13px; }
+
+/* 스와이프 페이지네이트 Prev, Next 숨김 */
+.paginate.typeSwipe .prev,
+.paginate.typeSwipe .next { display:none; }

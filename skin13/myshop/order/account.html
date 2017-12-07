@@ -1,0 +1,64 @@
+<!--@import(/layout/99nerds/inc/head.html)-->
+
+<section class="section-contents-wrap">
+    <div class="container">
+        <div class="order-list-wrap">
+
+            <div module="Myshop_OrderHistoryAccount" class="tableTheme mid-0">
+                <!--@css(/css/module/myshop/orderHistoryAccount.css)-->
+                <div class="header">
+                    <h1>환불계좌 <span class="{$acc_reg_display|display}">등록</span><span class="{$acc_mod_display|display}">변경</span>
+                    </h1>
+                </div>
+
+                <div class="content">
+                    <table border="1" summary="">
+                        <caption>환불계좌 <span class="{$acc_reg_display|display}">등록</span><span
+                                class="{$acc_mod_display|display}">변경</span></caption>
+                        <colgroup>
+                            <col style="width:140px;"/>
+                            <col style="width:auto;"/>
+                        </colgroup>
+                        <tbody class="middle">
+                        <tr>
+                            <th scope="row">예금주</th>
+                            <td>
+                                {$form.acc_depositor} 예금주명은 주문자명과 동일해야 합니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">은행선택</th>
+                            <td>{$form.acc_bank}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">계좌번호</th>
+                            <td>
+                                {$form.acc_no}
+                                <span class="gSingle">'-' 없이 숫자만 입력해 주세요.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">비밀번호 확인</th>
+                            <td>
+                                {$form.check_password}
+                                <span class="gSingle">등록된 비밀번호를 확인합니다.</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="buttonArea">
+                        <button type="button" class="btnSubmitB {$acc_reg_display|display}"
+                                onclick="RefundAccount.register(); return false;">등록
+                        </button>
+                        <button type="button" class="btnSubmitB {$acc_mod_display|display}"
+                                onclick="RefundAccount.modify(); return false;">변경
+                        </button>
+                        <button type="button" class="btnNormalB" onclick="RefundAccount.cancel(); return false;">취소
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

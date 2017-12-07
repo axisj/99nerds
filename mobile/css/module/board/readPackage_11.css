@@ -1,0 +1,36 @@
+.xans-board-readpackage { background:#fff; }
+.xans-board-read img { vertical-align:top; }
+
+.xans-board-read .label { font-weight:normal; }
+.xans-board-read .label.hide { display:none; }
+.xans-board-read .title { margin:14px 14px 0; }
+.xans-board-read .title h3 { font-size:15px; word-wrap:break-word; }
+
+.xans-board-read .info { overflow:hidden; padding:14px 14px; font-size:11px; border-bottom:1px solid #ececec; }
+.xans-board-read .info p { float:left; margin-right:5px; color:#757575; }
+.xans-board-read .info .writer a { color:#757575; }
+
+.xans-board-read .content { padding:14px 14px 29px; word-wrap:break-word; text-align:center; }
+.xans-board-read .content img { margin-bottom:10px; max-width:100%; }
+.xans-board-read .content p { text-align:left; }
+.xans-board-read .content ul li { list-style:disc; }
+
+/* 답변 */
+.xans-board-read .boardRead.typeReply { margin:10px 0 0; border-top:1px solid #000; }
+
+/* 대기 메세지 */
+.xans-board-read .waitMessage { margin:15px 10px 0; }
+
+/* 버튼 */
+.xans-board-read .btnStrong { margin:14px 0; }
+
+/* read - 상품 */
+.xans-board-product { overflow:hidden; margin:0 0 10px; padding:10px; border-bottom:1px solid #ececec; background:#f1f1f1; }
+.xans-board-product .prdThumb { float:left; width:73px; }
+.xans-board-product .prdThumb img { width:73px; border:1px solid #dedede; }
+.xans-board-product .prdInfo { padding:0 0 0 87px; }
+.xans-board-product .prdInfo h3 { font-size:13px; color:#1b1b1b; }
+.xans-board-product .prdInfo h3 img { vertical-align:middle; }
+.xans-board-product .prdInfo p { margin:14px 0 0; }
+.xans-board-product .prdInfo p.price { font-size:11px; color:#508bed; font-weight:bold; }
+.xans-board-product .prdInfo p.button a { margin-bottom:2px; }

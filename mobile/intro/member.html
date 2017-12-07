@@ -1,0 +1,55 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div id="titleArea">
+    <h2>로그인</h2>
+</div>
+
+<div module="Intro_memberPackage">
+    <!--@css(/css/module/intro/memberPackage.css)-->
+    <!--@js(/js/module/intro/login.js)-->
+    <div module="member_login">
+        <!--
+            $forbidIpUrl = member/adminFail.html
+            $defaultReturnUrl = /index.html
+        -->
+        <div class="loginHeader">
+            <h3><span class="txtEm">회원전용</span> 쇼핑몰</h3>
+            <div class="keyboard">
+                <button type="button" class="btnKey korean" title="korean">한글자판</button>
+                <button type="button" class="btnKey special" title="special">특수문자</button>
+            </div>
+            <div class="view">
+                <div class="korean"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard.png" alt="" width="254"></div>
+                <div class="special"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard_special.png" alt="" width="254"></div>
+            </div>
+        </div>
+        <fieldset>
+            <div class="formBox">
+                <div class="form">
+                    {$form.member_id}
+                    {$form.member_passwd}
+                </div>
+                <div class="option">
+                    <span class="auto">{$form.use_login_keeping}</span>
+                    <span class="save">{$form.check_save_id}</span>
+                    <span class="ssl"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_ssl.png" alt="보안접속"><em>보안접속</em></span>
+                </div>
+                <div class="btnArea type1">
+                    <button type="button" class="btnSubmit" onclick="{$action_func_login}">로그인</button>
+                </div>
+                <div class="btnArea typeLogin">
+                    <a href="/member/id/find_id.html" class="btnLogin">아이디찾기</a>
+                    <a href="/member/passwd/find_passwd_info.html" class="btnLogin">비밀번호찾기</a>
+                    <a href="/member/agreement.html" class="btnLogin">회원가입</a>
+                </div>
+                <div class="help">
+                    <p>회원전용 쇼핑몰은 로그인 후 상품 구매가 가능합니다. 회원가입 후 쇼핑몰을 사용해주세요.</p>
+                </div>
+                <div class="btnArea type1">
+                    <a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}"><span>네이버 로그인</span></a>
+                    <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}"><span>Facebook 로그인</span></a>
+                    <a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}"><span>구글 로그인</span></a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Search_FromPackage">
+    <!--@css(/css/module/search/fromPackage.css)-->
+    <h2>상품정보선택</h2>
+    <div class="wrap">
+        <div module="Search_BoardForm">
+            <fieldset>
+                <legend>상품검색</legend>
+                {$form.search_type}
+                {$form.keyword}
+                <button type="submit" class="btnStrong" value="">검색</button>
+            </fieldset>
+            <div class="resultArea">
+                <p>총 <strong>{$total_count}</strong>개 의 상품이 검색되었습니다.</p>
+                {$form.limit}
+            </div>
+        </div>
+        <div class="boardView">
+            <table border="1" summary="">
+                <caption>제품 검색결과입니다</caption>
+                <colgroup>
+                    <col style="width:100px;">
+                    <col style="width:auto;">
+                    <col style="width:60px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">상품 이미지</th>
+                        <th scope="col">상품 정보</th>
+                        <th scope="col">선택</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr module="Search_BoardList" unroll="1">
+                        <td><img src="{$image_tiny}" alt=""></td>
+                        <td class="product">
+                            {$product_name}
+                            <strong>{$price_unit_head}{$product_price}{$price_unit_tail}</strong>
+                        </td>
+                        <td class="button"><a href="#none" onclick="{$action_product_select}" class="btnStrong">선택</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div module="search_paging" class="paginate typeList">
+            <p class="prev"><a href="{$param_before}"><span>이전 페이지</span></a></p>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+        </div>
+    </div>
+</div>

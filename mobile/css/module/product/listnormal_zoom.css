@@ -1,0 +1,57 @@
+.xans-product-listnormal { background:#fff; }
+
+/* 타입 : 확대보기 */
+html.popupFullSize,
+html.popupFullSize body { width:100%; height:100%; overflow-y:hidden; }
+html.popupFullSize .loading { position:absolute; left:50%; top:50%; z-index:120; margin:-16px 0 0 -16px; }
+html.popupFullSize .dimmed { display:block; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:110; background:rgba(0,0,0,0.8); }
+
+.xans-product-listnormal.typeZoom { overflow:hidden; position:absolute; top:0; right:0; bottom:0; left:0; z-index:100; width:100%; height:100%; background-color:#fff; }
+.xans-product-listnormal.typeZoom h1 { position:absolute; left:0; top:0; z-index:101; width:100%; height:35px; border-bottom:1px solid rgba(206,206,206,0.8); color:#1b1b1b; font-size:15px; text-align:center; line-height:36px; background:rgba(227,227,227,0.8); }
+.xans-product-listnormal.typeZoom .btnClose { position:absolute; right:14px; top:11px; z-index:101; overflow:hidden; width:13px; height:13px; border:0; padding:0; text-indent:100%; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_black.png") no-repeat 0 0; background-size:13px 13px; }
+
+.xans-product-listnormal.typeZoom .zoomList { position:absolute; top:0; right:0; bottom:0; left:0; }
+.xans-product-listnormal.typeZoom .zoomList .inner { position:relative; height:100%; }
+.xans-product-listnormal.typeZoom .zoomList ul { position:relative; height:100%; }
+.xans-product-listnormal.typeZoom .zoomList ul:after { content:""; display:block; clear:both; }
+.xans-product-listnormal.typeZoom .zoomList li { position:relative; float:left; width:100%; height:100%; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail { display:table; width:100%; height:100%; table-layout:fixed; text-align:center; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail p { display:table-cell; vertical-align:middle; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail .thumb { position:relative; display:inline-block; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail img { max-width:100%; max-height:100%; width:auto; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size:30% auto; }
+.xans-product-listnormal.typeZoom .zoomList li .thumbnail .wish { position:absolute; right:7px; bottom:7px; z-index:100; }
+.xans-product-listnormal.typeZoom .zoomList .information {  position:absolute; left:0; bottom:0; padding:10px 14px; width:100%; border-top:1px solid rgba(206,206,206,0.8); font-size:15px; font-weight:bold; background:rgba(227,227,227,0.8); box-sizing:border-box; }
+.xans-product-listnormal.typeZoom .zoomList .information .name,
+.xans-product-listnormal.typeZoom .zoomList .information .price { margin:0 110px 3px 0; }
+.xans-product-listnormal.typeZoom .zoomList .information .name { overflow:hidden; height:20px; word-wrap:break-word; }
+.xans-product-listnormal.typeZoom .zoomList .information .name a { display:inline-block; width:100%; color:#1b1b1b; font-weight:normal; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.xans-product-listnormal.typeZoom .zoomList .information .price { word-wrap:break-word; }
+.xans-product-listnormal.typeZoom .zoomList .information .price a { color:#508bed; }
+.xans-product-listnormal.typeZoom .zoomList .information .price .strike { color:#000; font-weight:normal; text-decoration:line-through; }
+.xans-product-listnormal.typeZoom .zoomList .information .detail { position:absolute; right:14px; top:15px; }
+
+.xans-product-listnormal.typeZoom .btnStrong { height: 33px; line-height: 33px; }
+
+.xans-product-listnormal.typeZoom .pagenate { position:absolute; left:0; right:0; top:50%; z-index:101; margin:-17px 0 0; }
+.xans-product-listnormal.typeZoom .pagenate button { overflow:hidden; position:absolute; top:0; width:33px; height:34px; padding:0; border:0; text-indent:150%; white-space:nowrap; background-size:12px auto; background-position:50% 50%; background-repeat:no-repeat;
+background-color:rgba(255,255,255,0.6); box-shadow:0 0 5px rgba(150,150,150,0.8); }
+.xans-product-listnormal.typeZoom .pagenate .prev { left:0; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/btn_product_prev.png"); border-radius:0 2px 2px 0; }
+.xans-product-listnormal.typeZoom .pagenate .next { right:0; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/btn_product_next.png"); border-radius:2px 0 0 2px; }
+
+/* 썸네일 아이콘 위치 */
+.ec-product-bgLT { background-position:left top; }
+.ec-product-bgLC { background-position:left center; }
+.ec-product-bgLB { background-position:left bottom; }
+.ec-product-bgRT { background-position:right top; }
+.ec-product-bgRC { background-position:right center; }
+.ec-product-bgRB { background-position:right bottom; }
+.ec-product-bgCT { background-position:center top; }
+.ec-product-bgCC { background-position:center center; }
+.ec-product-bgCB { background-position:center bottom; }
+
+/* 좋아요버튼 */
+.xans-product-listnormal.typeZoom .likeButton { position:absolute; top:-33px; right:0; padding:5px 14px 7px 14px; background:rgba(255, 255, 255, 0.8); }
+.xans-product-listnormal.typeZoom .likeButton button { background:none; border:none; }
+.xans-product-listnormal.typeZoom .likeButton button strong { margin:0 0 0 3px; font-size:11px; line-height:20px; color:#757575; }
+.xans-product-listnormal.typeZoom .likeButton.selected button strong { color:#2e2e2e; }

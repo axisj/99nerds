@@ -1,0 +1,115 @@
+.xans-board-memopackage-1001 { padding:0 0 14px; background:#fff; }
+.xans-board-memopackage-1001 .btnArea { max-width:100%; letter-spacing:-1px; }
+.xans-board-memopackage-1001 .empty { padding:28px 0; text-align:center; border-bottom:1px solid #d5d5d5; }
+
+/* 메모 작성 */
+.xans-board-memowrite-1001 { margin:0 0 29px; padding:7px 0 0; border-bottom:1px solid #d8d8d8; }
+.xans-board-memowrite-1001 .info { margin:0 14px; }
+.xans-board-memowrite-1001 .info:after { content:""; display:block; clear:both; }
+.xans-board-memowrite-1001 .info .name { float:left; margin-right:3%; width:48.5%; }
+.xans-board-memowrite-1001 .info .password { float:right; width:48.5%; border-bottom:0; text-align:right; }
+.xans-board-memowrite-1001 .info .name #writer { width:60%; }
+.xans-board-memowrite-1001 .info .password #secure_password { width:60%; }
+.xans-board-memowrite-1001 .form { margin:14px 14px 7px; }
+.xans-board-memowrite-1001 .form textarea#content { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memowrite-1001 .btnArea { padding:0 14px; }
+.xans-board-memowrite-1001 .btnArea .gLeft.secret label { font-size:13px; }
+.xans-board-memowrite-1001 .captcha { overflow:hidden; position:relative; margin:7px 0; padding:0 14px 0 128px; }
+.xans-board-memowrite-1001 .captcha .img { position:absolute; left:14px; width:110px; }
+.xans-board-memowrite-1001 .captcha .form { margin:0; width:100%; }
+.xans-board-memowrite-1001 .captcha p { margin:14px 0 0 -114px; padding:0 0 0 20px; min-width:280px; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 50%; background-size:13px 13px; }
+.xans-board-memowrite-1001 #captcha  { margin:2px 0 0 0; width:100%; }
+
+/* 게시글 */
+.xans-board-memolist-1001 { position:relative; margin:-1px 0 0; padding:14px 0 0; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; }
+.xans-board-memolist-1001 .info { padding:0 14px 7px; font-size:11px; color:#757575; }
+.xans-board-memolist-1001 .info p { display:inline-block; padding:0 6px 0 4px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_divisionline.png") no-repeat 100% 50%; background-size:1px 11px; }
+.xans-board-memolist-1001 .info p:last-of-type { background:none; }
+.xans-board-memolist-1001 .memoContent { overflow:hidden; min-height:18px; height:18px; margin:7px 0 0 0; padding:0 14px; word-wrap:break-word; }
+.xans-board-memolist-1001 .memoContent.show { height:auto; }
+.xans-board-memolist-1001 .btnArea { overflow:hidden; padding:0 14px 0 14px; }
+.xans-board-memolist-1001 .btnArea span { margin:0 0 0 5px; color:#508bed; }
+.xans-board-memolist-1001 .btnArea .gLeft { width:126px; text-align:left; }
+.xans-board-memolist-1001 .btnArea .gRight { width:95px; }
+.xans-board-memolist-1001 .btnArea .reply { padding:0 9px 0 26px; background:#fff url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_comment.png") no-repeat 9px 50%; background-size:13px 13px; }
+
+/* 댓글 쓰기 */
+.xans-board-memoformcmtwrite-1001 { padding:14px 14px 0; background:#fff; border-top:1px solid #d5d5d5; }
+.xans-board-memoformcmtwrite-1001 .info { margin:0 0 7px; }
+.xans-board-memoformcmtwrite-1001 .info:after { content:""; display:block; clear:both; }
+.xans-board-memoformcmtwrite-1001 .info .name { float:left; margin-right:3%; width:48.5%; }
+.xans-board-memoformcmtwrite-1001 .info .password { float:right; width:48.5%; border-bottom:0; text-align:right; }
+.xans-board-memoformcmtwrite-1001 .info .name #comment_name { width:60%; }
+.xans-board-memoformcmtwrite-1001 .info .password #comment_password { width:60%; }
+.xans-board-memoformcmtwrite-1001 textarea { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memoformcmtwrite-1001 .btnArea { padding:0; font-size:13px; line-height:1.2em; }
+.xans-board-memoformcmtwrite-1001 .btnArea .gLeft { text-align:left; }
+.xans-board-memoformcmtwrite-1001 .btnArea .gRight { text-align:right; }
+.xans-board-memoformcmtwrite-1001 .captcha { overflow:hidden; position:relative; margin:7px 0; padding:0 0 0 114px; }
+.xans-board-memoformcmtwrite-1001 .captcha .img { position:absolute; left:0; width:110px; }
+.xans-board-memoformcmtwrite-1001 .captcha .form { width:100%; }
+.xans-board-memoformcmtwrite-1001 .captcha p { margin:14px 0 0 -114px; padding:0 0 0 20px; min-width:280px; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 50%; background-size:13px 13px; }
+.xans-board-memoformcmtwrite-1001 #captcha  { margin:2px 0 0 0; width:100%; }
+
+/* 댓글 수정 */
+#memoModifyForm { z-index:10; position:relative; margin:-50px 0 0; }
+.xans-board-memoformmodify-1001 { margin:5px 0 0; padding:14px 14px 0; background:#fff; }
+.xans-board-memoformmodify-1001 div.info { padding:0 0 7px; }
+.xans-board-memoformmodify-1001 .info:after { content:""; display:block; clear:both; }
+.xans-board-memoformmodify-1001 .info .name { float:left; margin-right:3%; width:48.5%; }
+.xans-board-memoformmodify-1001 .info .password { float:right; width:48.5%; border-bottom:0; text-align:right; }
+.xans-board-memoformmodify-1001 .info .name #writer { width:60%; }
+.xans-board-memoformmodify-1001 .info .password #secure_password { width:60%; }
+.xans-board-memoformmodify-1001 textarea { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memoformmodify-1001 .btnArea.type1 { padding:0; }
+.xans-board-memoformmodify-1001 .btnArea .gLeft { text-align:left; }
+.xans-board-memoformmodify-1001 .btnArea .gRight { text-align:right; }
+.xans-board-memoformmodify-1001 .btnArea .gLeft.secret label { font-size:13px; }
+
+/* 댓글 삭제 */
+.xans-board-memoformdelete-1001 { z-index:10; position:relative; margin:-45px 0 0; padding:14px 14px 0; background:#f1f1f1; border-top:1px solid #d5d5d5; }
+.xans-board-memoformdelete-1001 p { padding:0 0 14px; }
+.xans-board-memoformdelete-1001 input[type="text"],
+.xans-board-memoformdelete-1001 input#secure_password { width:100px; }
+.xans-board-memoformdelete-1001 textarea { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memoformdelete-1001 .gRight { text-align:right; }
+
+/* 비밀글 확인 */
+.xans-board-memoformsecret-1001 { margin:7px 0 0; padding:10px; background:#f1f1f1; }
+.xans-board-memoformsecret-1001 input[type="password"] { width:80px; }
+
+/* 댓글 > 댓글 리스트 */
+.xans-board-memocmt-1001 { overflow:hidden; margin:-1px 0 0; padding:14px 0 0; color:#757575; background:#f1f1f1; border-top:1px solid #d5d5d5; }
+.xans-board-memocmt-1001 .reply { padding:0 0 0 29px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_reply.png") no-repeat 14px 4px; background-size:7px 7px; }
+.xans-board-memocmt-1001 p.name,
+.xans-board-memocmt-1001 p.regdate { display:inline-block; padding:0 6px 0 4px; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_divisionline.png") no-repeat 100% 50%; background-size:1px 11px; }
+.xans-board-memocmt-1001 p.regdate { background:none; }
+.xans-board-memocmt-1001 p.memo { margin:14px 0; color:#1b1b1b; }
+.xans-board-memocmt-1001 p.button { margin:0 14px 7px 0; text-align:right; }
+
+/* 댓글 > 비밀 댓글 보기 */
+.xans-board-memoformcmtsecret-1001 { margin:7px 0 0; padding:10px; background:#f1f1f1; }
+.xans-board-memoformcmtsecret-1001 input[type="password"] { width:80px; }
+
+/* 댓글 > 댓글 삭제 */
+.xans-board-memoformcmtdelete-1001 { margin:7px 0 0; padding:14px 14px 7px; border-top:1px solid #d5d5d5; background:#f1f1f1; }
+.xans-board-memoformcmtdelete-1001 input[type="text"],
+.xans-board-memoformcmtdelete-1001 input[type="password"] { width:100px; }
+.xans-board-memoformcmtdelete-1001 textarea { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memoformcmtdelete-1001 .gRight { margin:14px 0 0 0; text-align:right; }
+
+/* 댓글 > 댓글 수정 */
+#memoModifyCmtForm { z-index:10; position:relative; margin:-45px 0 0; }
+.xans-board-memoformcmtmodify-1001 { margin:5px 0 0; padding:14px 14px 0; border-top:1px solid #d5d5d5; background:#fff; }
+.xans-board-memoformcmtmodify-1001 div.info { padding:0 0 7px; }
+.xans-board-memoformcmtmodify-1001 .info:after { content:""; display:block; clear:both; }
+.xans-board-memoformcmtmodify-1001 .info p.name { float:left; margin-right:3%; width:48.5%; }
+.xans-board-memoformcmtmodify-1001 .info p.password { float:right; width:48.5%; border-bottom:0; text-align:right; }
+.xans-board-memoformcmtmodify-1001 .info p.name #comment_name { width:60%; }
+.xans-board-memoformcmtmodify-1001 .info p.password #comment_password { width:60%; }
+.xans-board-memoformcmtmodify-1001 textarea { width:100%; height:80px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+.xans-board-memoformcmtmodify-1001 .btnArea { padding:0; font-size:11px; line-height:1.2em; }
+.xans-board-memoformcmtmodify-1001 .btnArea .gLeft { text-align:left; }
+.xans-board-memoformcmtmodify-1001 .btnArea .gRight { text-align:right; }
+
+.xans-board-paging-1001 { margin:0 0 22px; padding:0; }

@@ -1,0 +1,19 @@
+.popup { min-width:600px; height:745px; }
+.popup .xans-product-request .content { padding-bottom:20px; *zoom:1; }
+.popup .xans-product-request .content:after { content:""; display:block; clear:both; }
+
+.xans-product-request { padding:0 0 60px; }
+.xans-product-request .topImage { text-align:center; }
+.xans-product-request .help { padding:0 0 0 144px; line-height:18px; }
+.xans-product-request .help strong { float:left; margin:0 0 0 -124px; padding:0 0 0 5px; }
+
+/* Input Size */
+.xans-product-request #sender,
+.xans-product-request #recipient,
+.xans-product-request #subject { width:196px; }
+.xans-product-request #sender_phone1,
+.xans-product-request #recipient_phone1 { width:68px; }
+.xans-product-request #sender_phone2,
+.xans-product-request #sender_phone3,
+.xans-product-request #recipient_phone2,
+.xans-product-request #recipient_phone3 { width:57px; }

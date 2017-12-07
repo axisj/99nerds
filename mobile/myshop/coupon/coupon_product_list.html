@@ -1,0 +1,60 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Myshop_couponProductPackage">
+    <!--@css(/css/module/myshop/couponProductPackage.css)-->
+    <h2>쿠폰적용 가능상품</h2>
+    <div class="wrap">
+        <div module="myshop_CouponProductSearch">
+            <fieldset>
+                <legend>쿠폰선택 및 상품검색</legend>
+                <p>{$form.coupon_no} 의 적용가능 상품목록입니다.</p>
+                <p>{$form.search_key} {$form.search} <button type="button" onclick="{$action_form_submit}" class="btnStrong">검색</button></p>
+            </fieldset>
+        </div>
+
+       <div class="title">
+           <p class="result">총 <strong>{$totalPrd}</strong>개</p>
+           {$ec_list_size}
+       </div>
+
+        <div module="myshop_CouponProductList">
+            <div class="item {$display_product_list|display}">
+                <div class="prdInfo">
+                    <div class="description">
+                        <p class="prdImg"><img src="{$image_tiny}" onerror="" alt="" width="73" height="73"></p>
+                        <strong class="prdName" title="상품명"><a href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}" target="_blank">{$product_name}</a></strong>
+                        <ul class="info">
+                            <li class="manu"><span>제조사 : {$manu_name}</span></li>
+                            <li class="price" title="판매가"><strong>{$product_price|number_format}</strong></li>
+                            <li class="cart">{$category_add_basket}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="prdInfo">
+                    <div class="description">
+                        <p class="prdImg"><img src="{$image_tiny}" onerror="" alt="" width="73" height="73"></p>
+                        <strong class="prdName" title="상품명"><a href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}" target="_blank">{$product_name}</a></strong>
+                        <ul class="info">
+                            <li class="manu"><span>제조사 : {$manu_name}</span></li>
+                            <li class="price" title="판매가"><strong>{$product_price|number_format}</strong></li>
+                            <li class="cart">{$category_add_basket}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="empty {$display_no_product_list|display}">
+                검색된 쿠폰적용 가능상품이 없습니다.
+            </p>
+        </div>
+
+        <div module="myshop_CouponProductPaging" class="paginate typeList">
+            <p class="prev"><a href="{$prev_url}"><span>이전 페이지</span></a></p>
+            <ol>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            </ol>
+            <p class="next"><a href="{$next_url}"><span>다음 페이지</span></a> </p>
+        </div>
+    </div>
+</div>

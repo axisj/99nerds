@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+</head>
+<body>
+    <div module="MyShop_OrderHistoryDetail" unroll=1>
+        <!--@css(/css/module/myshop/orderHistoryDetail.css)-->
+        <div class="csTitle">
+            <h2>취소/교환/반품 상세정보</h2>
+        </div>
+        <!-- 취소신청 사유 -->
+        <div module="Myshop_ReasonCancel">
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>취소신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>취소신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>취소신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>취소신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 교환신청 사유 -->
+        <div module="Myshop_ReasonExchange">
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>교환신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>교환신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>교환신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>교환신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 반품신청 사유 -->
+        <div module="Myshop_ReasonReturn">
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>반품신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>반품신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>반품신청 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>반품신청 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">환불계좌</th>
+                            <td>{$refund_bank_info}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 처리불가 사유 -->
+        <div module="Myshop_ReasonReject">
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>처리불가 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>처리불가 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boardViewCS">
+                <div class="prdInfo {$prdInfo_display|display}">
+                    <strong>{$product_name}</strong>
+                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                    <ul class="option" module="Myshop_optionSet">
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                    </ul>
+                </div>
+                <div class="titleArea">
+                    <h3>처리불가 사유</h3>
+                </div>
+                <table border="1" summary="">
+                    <caption>처리불가 사유</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">사유</th>
+                            <td>{$reason}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">일자</th>
+                            <td>{$cs_date}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btnArea">
+            <button type="button" class="btnClose" onclick="javascrit:self.close();">닫기</button>
+        </div>
+    </div>
+</body>
+</html>

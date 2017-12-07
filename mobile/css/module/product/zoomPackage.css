@@ -1,0 +1,29 @@
+html, body, .xans-product-zoom, .xans-product-zoompackage { height:100%; }
+.xans-product-zoompackage { position:relative; }
+.xans-product-zoompackage ul { height:100%; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+.xans-product-zoompackage ul li { height:100%; }
+.xans-product-zoompackage ul li .thumbnail { display:inline-block; position:relative; width:100%; }
+.xans-product-zoompackage ul li .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size:25% auto; }
+
+.xans-product-zoompackage .header { position:fixed; top:0; width:100%; height:35px; border-bottom:1px solid #cecece; background:#e3e3e3; opacity:0.8; -moz-opacity:0.8; -webkit-opacity:0.8; z-index:10; }
+.xans-product-zoompackage .header h2 { padding:0 36px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; text-align:center; line-height:36px; }
+.xans-product-zoompackage .header .btnClose { position:absolute; top:0; right:0; display:block; width:13px; height:13px; margin:0; padding:18px; border:none; font-size:0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_black.png") center no-repeat; background-size:13px 13px; }
+
+.xans-product-zoompackage .paginate { position:fixed; bottom:0; width:100%; height:42px; border-top:1px solid #cecece; background:#e3e3e3; opacity:0.8; -moz-opacity:0.8; -webkit-opacity:0.8; text-align:center; font-size:0; line-height:42px; }
+.xans-product-zoompackage .paginate button { overflow:hidden; margin:0 4px; font-size:0; line-height:0; cursor:pointer; border:0; background:none; background-repeat:no-repeat; background-position:0px 0px; background-size:100% 100%; }
+.xans-product-zoompackage .paginate button.circle { margin:0 3px 0 4px; width:13px; height:13px; border:0; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_swipe.png") no-repeat 0 0; background-size:13px 13px; }
+.xans-product-zoompackage .paginate button.circle.selected { background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_swipe_on.png") no-repeat 0 0; background-size:13px 13px; }
+.xans-product-zoompackage .paginate span { color:#fff; font-size:0; line-height:0; }
+.xans-product-zoompackage .paginate button.prev,
+.xans-product-zoompackage .paginate button.next { display:none; width:20px; height:20px; }
+
+/* 썸네일 아이콘 위치 */
+.ec-product-bgLT { background-position:left top; }
+.ec-product-bgLC { background-position:left center; }
+.ec-product-bgLB { background-position:left bottom; }
+.ec-product-bgRT { background-position:right top; }
+.ec-product-bgRC { background-position:right center; }
+.ec-product-bgRB { background-position:right bottom; }
+.ec-product-bgCT { background-position:center top; }
+.ec-product-bgCC { background-position:center center; }
+.ec-product-bgCB { background-position:center bottom; }

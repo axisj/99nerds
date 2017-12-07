@@ -1,0 +1,42 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>회원가입 완료</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_joinComplete">
+    <!--@css(/css/module/member/joinComplete.css)-->
+    <div class="welcome">
+        <p class="complete"><span>회원가입이 완료되었습니다.</span></p>
+        <p><strong>{$member_name}</strong>님은 <strong>[{$group_name}]</strong> 회원이십니다.</p>
+        <div module="member_BenefitJoin" class="memberSpecial help">
+            <p class="{$display_no_benefit|display}">
+                <strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다.
+                {$dc_max_percent}<br>
+                <span class="{$display_mobile_use_dc|display}">({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})</span>
+            </p>
+            <p class="{$display_with_all|display}">
+                <strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다.
+                {$dc_max_mileage_percent}<br>
+                <span class="{$display_mobile_use_mileage|display}">({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})</span>
+            </p>
+        </div>
+    </div>
+    <ul>
+        <li><span>아이디</span> <strong>{$member_id}</strong></li>
+        <li><span>이 &nbsp; 름</span> <strong>{$member_name}</strong></li>
+        <li><span>이메일</span> <strong>{$member_email}</strong></li>
+    </ul>
+    <p class="{$under_fourteen_display|display}">
+        <strong>{$member_name}</strong>님은 14세 미만 회원이므로 관리자 인증 후 아이디 사용이 가능합니다.
+    </p>
+    <p class="memberEmail {$display_email_auth|display}">
+        이메일 주소로 발송된 인증 메일을 통해 인증하신 후에 로그인이 가능합니다.<br />인증 메일은 24시간 동안 유효하며, 유효 시간이 만료된 후에는 가입 정보로 로그인 하셔서 재발송 요청을 해주시기 바랍니다.
+    </p>
+    <div class="btnArea type2">
+        <a class="btnSubmit" href="/member/login.html" class="btnSubmit">로그인</a>
+        <a class="btnEm" href="/index.html" class="btnNormal">메인으로</a>
+    </div>
+</div>

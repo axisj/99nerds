@@ -1,0 +1,11 @@
+/* 게시판 전체 공통 */
+.mid-0 .xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* 상품정보선택 */
+.mid-0 .xans-board-modify .prdThumb { float:left; margin:0 15px 0 0; }
+
+/* modify */
+.mid-0 .xans-board-modify table textarea#privacy_agreement { width:560px; height:140px; margin:0 0 10px; }
+.mid-0 .xans-board-modify table #subject { width:390px; }
+.mid-0 .xans-board-modify table #ucc_width { width:40px; }
+.mid-0 .xans-board-modify table #ucc_height { width:40px; }

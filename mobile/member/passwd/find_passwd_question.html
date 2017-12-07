@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>비밀번호 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_findPasswdQuestion">
+    <!--@css(/css/module/member/findPasswdQuestion.css)-->
+    <!--
+        $nextURL = /member/passwd/find_passwd_method.html
+    -->
+    <div class="boardWrite">{$form.check_method}
+        <table border="1" summary="">
+            <caption>비밀번호 찾기 2단계 힌트답변 입력</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">질문</th>
+                    <td>{$passwd_question}</td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="passwd_answer">답변</label></th>
+                    <td>{$form.passwd_answer}</td>
+                </tr>
+                <tr>
+                   <td colspan="2">
+                        <div class="help">
+                            <p>회원가입시 입력한 '비밀번호 확인 질문'에 대한 답변을 입력해주세요.</p>
+                       </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type1">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_find_passwd}">확인</a>
+    </div>
+</div>

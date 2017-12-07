@@ -1,0 +1,96 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>최근본상품</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="product_recentlist">
+    <!--@css(/css/module/product/recentlist.css)-->
+    <!--
+        $count = 10
+    -->
+    <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+    <ul module="product_listitem">
+        <li>
+            <div class="description">
+                <p class="prdImg">
+                    <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="72" height="72" class="thumb"></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul module="product_setproduct" class="item">
+                    <li>{$product_name}</li>
+                    <li>{$product_name}</li>
+                </ul>
+                <p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+                <p class="price {$discount}"><strong>{$price}</strong></p>
+                <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+            </div>
+            <ul class="option" module="product_mainoption">
+                <li><span>{$option_name}</span> {$form.option}</li>
+                <li><span>{$option_name}</span> {$form.option}</li>
+            </ul>
+            <ul class="option" module="product_addoption">
+                <li><span>{$option_name}</span> {$form.add_option}</li>
+                <li><span>{$option_name}</span> {$form.add_option}</li>
+            </ul>
+            <div class="btnArea typeFull">
+                <span class="gLeft">
+                    <button type="button" class="btnNormal {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
+                    <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</button>
+                </span>
+                <span class="gRight">
+                    <button type="button" class="btnStrong {$disp_order|display}" onclick="{$act_order}">주문하기</button>
+                </span>
+            </div>
+        </li>
+        <li>
+            <div class="description">
+                <p class="prdImg">
+                    <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="72" height="72" class="thumb"></a>
+                    <span class="wishIcon">{$list_wish_icon}</span>
+                </p>
+                <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul module="product_setproduct" class="item">
+                    <li>{$product_name}</li>
+                    <li>{$product_name}</li>
+                </ul>
+                <p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+                <p class="price {$discount}"><strong>{$price}</strong></p>
+                <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+            </div>
+            <ul class="option" module="product_mainoption">
+                <li><span>{$option_name}</span> {$form.option}</li>
+                <li><span>{$option_name}</span> {$form.option}</li>
+            </ul>
+            <ul class="option" module="product_addoption">
+                <li><span>{$option_name}</span> {$form.add_option}</li>
+                <li><span>{$option_name}</span> {$form.add_option}</li>
+            </ul>
+            <div class="btnArea typeFull">
+                <span class="gLeft">
+                    <button type="button" class="btnNormal {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
+                    <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</button>
+                </span>
+                <span class="gRight">
+                    <button type="button" class="btnStrong {$disp_order|display}" onclick="{$act_order}">주문하기</button>
+                </span>
+            </div>
+        </li>
+    </ul>
+    <p class="empty {$empty_display|display}">최근본 상품 내역이 없습니다.</p>
+</div><!-- //참고 -->
+
+<div module="product_recentlistpaging" class="paginate typeList">
+    <p class="prev"><a href="{$param_before}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>

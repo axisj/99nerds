@@ -1,0 +1,37 @@
+/* 내용 */
+.xans-board-replypackage-9 { padding:0 0 29px; }
+.xans-board-read-9 { font-size:12px; line-height:1.5; background:#fff; }
+.xans-board-read-9 img { vertical-align:middle; }
+.xans-board-read-9 .label.hide { display:none; }
+.xans-board-read-9 .title { margin:14px 14px 0; }
+.xans-board-read-9 h3 { margin:7px 14px 0; font-size:15px; word-wrap:break-word; }
+
+.xans-board-read-9 .info { margin:0 0 0 14px; }
+.xans-board-read-9 .info p { position:relative; display:inline-block; padding:0 7px 0 8px; }
+.xans-board-read-9 .info p:first-child { padding-left:0; }
+.xans-board-read-9 .info p:before { display:block; content:""; position:absolute; top:2px; left:0; width:1px; height:11px; background:#d6d6d6; }
+.xans-board-read-9 .info p:first-child:before { display:none; }
+.xans-board-read-9 .info p.writer a { color:#757575; }
+
+.xans-board-read-9 .content { padding:14px 14px; border-bottom:1px solid #d8d8d8; word-wrap:break-word; text-align:center; }
+.xans-board-read-9 .content img { margin-bottom:10px; max-width:100%; }
+.xans-board-read-9 .content p,
+.xans-board-read-9 .content div{ text-align:left; }
+.xans-board-read-9 .content ul li { list-style:disc; }
+.xans-board-read-9 .comment strong { font-weight:normal; }
+.xans-board-read-9 .adminAnswer { margin:0 0 7px; }
+.xans-board-read-9 .btnArea { margin:10px 0 0; max-width:100%; height:28px; }
+.xans-board-read-9 .gRight { margin:0 14px; text-align:right; }
+.xans-board-read-9 .gRight a { margin:7px 0; }
+
+/* 답변 */
+.xans-board-reply-9 { margin:0 14px; }
+.xans-board-reply-9 .boardReply h3 { padding:14px 0 14px; background:#f1f1f1; }
+.xans-board-reply-9 .boardReply .info { padding:14px 0 0; border:0; }
+.xans-board-reply-9 .gRight { margin:0 14px; text-align:right; }
+.xans-board-reply-9 .gRight a { margin:7px 0; }
+.xans-board-reply-9 #content { width:100%; height:100px; }
+.xans-board-replypackage-9 .btnArea.type2 { margin:0 auto; padding:7px 14px; }
+
+/* 대기 메세지 */
+.xans-board-read-9 .waitMessage { padding:14px 14px; border-bottom:1px solid #d5d5d5; font-size:11px; background:#f1f1f1; }

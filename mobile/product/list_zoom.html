@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko" class="popupFullSize">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/button.css)-->
+    <!--@js(/layout/basic/js/common.js)-->
+</head>
+<body>
+<div class="typeZoom" module="product_listnormal">
+    <!--@css(/css/module/product/listnormal_zoom.css)-->
+    <!--
+        $count = 10
+            ※ 노출시킬 상품의 갯수를 숫자로 설정할 수 있습니다.
+            ※ 상품 노출갯수가 많으면 쇼핑몰에 부하가 발생할 수 있습니다.
+        $swipe = yes
+        $plugin = pictorial
+    -->
+    <h1>{$category_name}</h1>
+    <div class="zoomList">
+        <div class="inner">
+            <ul>
+                <li data-infomation="{$mobile_infomation}">
+                    <div class="thumbnail">
+                        <p>
+                            <strong class="thumb">
+                                <img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                                <span class="wish">{$list_wish_icon}</span>
+                            </strong>
+                        </p>
+                    </div>
+                </li>
+                <li data-infomation="{$mobile_infomation}">
+                    <div class="thumbnail">
+                        <p>
+                            <strong class="thumb">
+                                <img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                                <span class="wish">{$list_wish_icon}</span>
+                            </strong>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="information">
+                <p class="name"><a href="#none"><!-- 상품명 --></a></p>
+                <p class="{$class_price}"><a href="#none"><span class="{$class_price_value}"></span> <span class="{$class_price_ref}"></span></a></p>
+                <p class="{$class_sale_price} price"><a href="#none"><span class="{$class_sale_value}"></span></a></p>
+                <p class="detail"><a href="#none" class="btnStrong">상세보기</a></p>
+                <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="pagenate">
+        <button type="button" class="prev" id="{$pictorial_prev_id}">이전</button>
+        <button type="button" class="next" id="{$pictorial_next_id}">다음</button>
+    </div>
+    <button type="button" class="btnClose" onclick="{$pictorial_close_action}">닫기</button>
+</div>
+</body>
+</html>

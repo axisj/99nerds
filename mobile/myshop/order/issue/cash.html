@@ -1,0 +1,34 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderIssueCash">
+    <!--@css(/css/module/myshop/orderIssueCash.css)-->
+    <div class="header">
+        <h2>현금영수증 신청양식 작성</h2>
+    </div>
+    {$form.order_id}
+    <div class="wrap">
+        <table border="1" summary="">
+            <caption>현금영수증 신청양식</caption>
+            <tbody>
+                <tr class="first">
+                    <th scope="row">구분</th>
+                    <td>{$form.user_type}</td>
+                </tr>
+            </tbody>
+            <tbody id="{$personal_info_id}">
+                <tr>
+                    <th scope="row">{$form.mobile_identity} {$form_label.mobile}</th>
+                    <td>{$form.mobile}</td>
+                </tr>
+            </tbody>
+            <tbody id="{$company_info_id}" class="{$company_info_display|display}">
+                <tr>
+                    <th scope="row">{$form.regno_identity} {$form_label.regno}</th>
+                    <td>{$form.regno}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btnArea">
+            <button type="submit" class="btnNormal">현금영수증 신청</button>
+        </div>
+    </div>
+</div>

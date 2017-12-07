@@ -1,0 +1,30 @@
+.xans-product-listnormal { background:#fff; }
+
+/* 타입 : 갤러리 */
+.xans-product-listnormal.typeGallery { margin:0; }
+.xans-product-listnormal.typeGallery ul { display:table; table-layout:fixed; padding:0 14px 0 12px; font-size:0; line-height:0; }
+.xans-product-listnormal.typeGallery img { max-width:100%; }
+.xans-product-listnormal.typeGallery li { position:relative; display:inline-block; margin:0 0 2px; padding:0; vertical-align:top; overflow:hidden; font-size:13px; line-height:1.2em; }
+.xans-product-listnormal.typeGallery .thumbnail { margin:0; padding:0 2px; }
+.xans-product-listnormal.typeGallery .thumbnail img { width:100%; border:1px solid #ededed; }
+.xans-product-listnormal.typeGallery .information,
+.xans-product-listnormal.typeGallery .information a,
+.xans-product-listnormal.typeGallery .information:before { width:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
+.xans-product-listnormal.typeGallery .information { position:absolute; left:0; bottom:-40px; height:40px; padding:0 1px 0 3px; }
+.xans-product-listnormal.typeGallery .information:before { display:block; content:""; height:100%; background:#000; opacity:0.6; -moz-opacity:0.6; -webkit-opacity:0.6; }
+.xans-product-listnormal.typeGallery .information:after { display:block; content:""; position:absolute; top:0; right:12px; width:20px; height:100%;
+    background:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_white.png") 0 center no-repeat; background-size:20px 20px;
+    -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); transform: rotate(270deg); }
+.xans-product-listnormal.typeGallery .information a { display:block; position:absolute; top:0; height:100%; overflow:hidden; padding:5px 38px 5px 5px; color:#fff; }
+.xans-product-listnormal.typeGallery .information a p { height:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.xans-product-listnormal.typeGallery .information a .price { margin:4px 0 0; font-weight:bold; }
+.xans-product-listnormal.typeGallery .information a .price span { display:none; }
+
+.xans-product-listnormal.typeGallery .grid1 li { width:100%; }
+.xans-product-listnormal.typeGallery .grid1 li .name { font-size:15px; }
+.xans-product-listnormal.typeGallery .grid2 li { width:50%; }
+.xans-product-listnormal.typeGallery .grid2 li .name { font-size:13px; }
+.xans-product-listnormal.typeGallery .grid3 li { width:33.333%; }
+.xans-product-listnormal.typeGallery .grid3 li .name { font-size:11px; }
+.xans-product-listnormal.typeGallery .grid4 li { width:25%; }
+.xans-product-listnormal.typeGallery .grid4 li .name { font-size:11px; }

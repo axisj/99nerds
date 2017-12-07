@@ -1,0 +1,13 @@
+section.banner_main {width:1180px; margin: 50px auto;}
+section.banner_main:after {content:""; display:block; clear:both;}
+section.banner_main > div {float:left;}
+section.banner_main > div ul li {overflow:hidden; width:380px; height:250px; }
+section.banner_main > div:nth-child(2) ul li {width:380px; height:520px; }
+
+
+section.banner_main > div ul li a img {transition:all 0.3s;}
+section.banner_main > div ul li:hover a img {width:102%;height:102%;}
+section.banner_main > div:first-child {margin:0 20px 0 0;}
+section.banner_main > div:first-child li:first-child {margin:0 0 20px 0;}
+section.banner_main > div:nth-child(2) {margin:0 20px 0 0;}
+section.banner_main > div:last-child li:first-child {margin:0 0 20px 0;}

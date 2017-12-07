@@ -1,0 +1,49 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>적립내역</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="myshop_historyList">
+    <!--@css(/css/module/myshop/historyList.css)-->
+    <!--
+        $only_html = no
+        $count = 10
+        $login_page = /member/login.html
+    -->
+    <div class="{$display_history|display}">
+        <div class="item">
+            <h3>
+                <span class="date" title="주문날짜">{$issue_date|date:Y-m-d}</span>
+                <span class="number" title="관련주문번호"><a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a></span>
+            </h3>
+            <ul>
+                <li><span class="title">{$mileage_name}</span> {$mileage_money}</li>
+                <li><span class="title">내용</span> {$mileage_type}</li>
+            </ul>
+        </div>
+        <div class="item">
+            <h3>
+                <span class="date" title="주문날짜">{$issue_date|date:Y-m-d}</span>
+                <span class="number" title="관련주문번호"><a href="/myshop/order/detail.html?order_id={$order_id}">({$order_id})</a></span>
+            </h3>
+            <ul>
+                <li><span class="title">{$mileage_name}</span> {$mileage_money}</li>
+                <li><span class="title">내용</span> {$mileage_type}</li>
+            </ul>
+        </div>
+    </div>
+    <p class="empty {$display_history_none|display}">적립내역이 없습니다.</p>
+</div>
+
+<div class="paginate typeList" module="myshop_historyPaging">
+    <p class="prev"><a href="{$prev_url}"><span>이전 페이지</span></a></p>
+    <ol><li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+    </ol>
+    <p class="next"><a href="{$next_url}"><span>다음 페이지</span></a></p>
+</div>

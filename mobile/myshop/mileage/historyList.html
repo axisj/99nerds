@@ -1,0 +1,59 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea" module="Myshop_Head">
+    <h2>{$mileage_name}</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="myshop_mileagePackage">
+    <div module="myshop_summary">
+        <!--@css(/css/module/myshop/summary.css)-->
+        <div class="boardView">
+            <h3>{$mileage_name}</h3>
+            <table border="1" summary="">
+                <caption>{$mileage_name}</caption>
+                <colgroup>
+                    <col style="width:100px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr class="first">
+                        <th scope="row">총 {$mileage_name}</th>
+                        <td><strong class="txtEm">{$total_mileage}</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용가능 {$mileage_name}</th>
+                        <td><strong class="txtEm">{$avail_mileage}</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용된 {$mileage_name}</th>
+                        <td>{$used_mileage}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">미가용 {$mileage_name}</th>
+                        <td>{$unavail_mileage}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">환불예정 {$mileage_name}</th>
+                        <td>{$refunded_mileage}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div module="myshop_historyList">
+    <!--
+        $login_page = /member/login.html
+    -->
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <li><a href="/myshop/mileage/mileageList.html">적립내역</a></li>
+            <li><a href="/myshop/mileage/unavailList.html">미가용 적립내역</a></li>
+            <li><a href="/myshop/mileage/couponList.html">미가용쿠폰/회원등급 적립내역</a></li>
+        </ul>
+    </div>
+</div>

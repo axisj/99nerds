@@ -1,0 +1,5 @@
+.xans-order-form .wrap { padding:7px; margin:7px 7px 0; border:1px solid #ccc; }
+.xans-order-form .wrap h3 { margin:5px 10px; font-size:13px; }
+.xans-order-form .wrap > p,
+.xans-order-form .wrap > ul { margin:10px; line-height:18px; }
+.xans-order-form .wrap > ul > li { margin:3px 0 0; }

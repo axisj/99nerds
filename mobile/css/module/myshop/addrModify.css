@@ -1,0 +1,23 @@
+/* 타이틀 */
+.xans-myshop-addrmodify { margin:14px 7px 0; padding:0 0 19px; background:#f1f1f1; }
+.xans-myshop-addrmodify h3 { padding:0 14px; line-height:43px; font-size:13px; font-weight:bold; color:#fff; background:#737781; }
+
+/* 리스트 */
+.xans-myshop-addrmodify .boardWrite { border-left:1px solid #d7d5d5; border-right:1px solid #d7d5d5; }
+.xans-myshop-addrmodify .boardWrite table { font-size:13px; word-wrap:break-word; background-color:#fff; }
+.xans-myshop-addrmodify .boardWrite th,
+.xans-myshop-addrmodify .boardWrite td { border-bottom:1px solid #d5d5d5; font-size:13px; text-align:left; line-height:17px; }
+.xans-myshop-addrmodify .boardWrite th { width:86px; padding:7px 0 7px 14px; font-weight:normal; color:#757575; }
+.xans-myshop-addrmodify .boardWrite td { padding:7px 14px 7px 0; }
+.xans-myshop-addrmodify .boardWrite input { height:28px; border:1px solid #d5d5d5; text-align:left; vertical-align:top; }
+.xans-myshop-addrmodify .boardWrite select { margin:0 4px 0 0; }
+.xans-myshop-addrmodify .boardWrite .shipping td { padding:7px 15px 7px 0; text-align:right; }
+.xans-myshop-addrmodify .boardWrite .shipping td input { vertical-align:middle; }
+
+/* input 크기 조절 */
+.xans-myshop-addrmodify #ma_rcv_title, .xans-myshop-addrmodify #ma_rcv_name { width:100%; }
+.xans-myshop-addrmodify #address_zip1 { width:55px; padding:0; text-align:center; }
+.xans-myshop-addrmodify #address_addr1, .xans-myshop-addrmodify #address_addr2 { width:100%; margin:5px 0 0; }
+.xans-myshop-addrmodify #ma_rcv_phone1, .xans-myshop-addrmodify #ma_rcv_mobile_no1 { width:33%; }
+.xans-myshop-addrmodify #ma_rcv_phone2, .xans-myshop-addrmodify #ma_rcv_phone3,
+.xans-myshop-addrmodify #ma_rcv_mobile_no2, .xans-myshop-addrmodify #ma_rcv_mobile_no3 { width:25%; margin:0 3px; text-align:center; }

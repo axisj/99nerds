@@ -1,0 +1,7 @@
+.mid-0.xans-mall-urgencycall input#title,
+.mid-0.xans-mall-urgencycall input#prd_ord,
+.mid-0.xans-mall-urgencycall input#email,
+.mid-0.xans-mall-urgencycall input#mobile,
+.mid-0.xans-mall-urgencycall input#writer { width:500px; }
+.mid-0.xans-mall-urgencycall textarea#privacy_agreement,
+.mid-0.xans-mall-urgencycall textarea#content { width:500px; height:100px; }

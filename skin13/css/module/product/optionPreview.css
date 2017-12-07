@@ -1,0 +1,7 @@
+.xans-product-optionpreview { display:inline; }
+.xans-product-optionpreview .prdOption { position:absolute; left:0; top:26px; z-index:100; width:300px; margin:0 0 0 -141px; }
+.xans-product-optionpreview .prdOption .inner { padding:34px 24px 14px; border:1px solid #565960; background:#fff; }
+.xans-product-optionpreview .prdOption li { padding:6px 0 7px; border-top:1px solid #d6d4d4; text-align:left; line-height:16px; }
+.xans-product-optionpreview .prdOption li:first-child { border:0; }
+.xans-product-optionpreview .prdOption .close { position:absolute; right:14px; top:14px; }
+.xans-product-optionpreview .prdOption .ico { position:absolute; left:50%; top:-5px; width:9px; height:6px; margin:0 0 0 -5px; }

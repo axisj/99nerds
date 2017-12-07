@@ -1,0 +1,7 @@
+.xans-kakaolink-display { text-align:center; }
+
+.xans-kakaolink-display .kakaolink_button { display:inline-block; position:relative; width:73px; height:80px; vertical-align:top; }
+.xans-kakaolink-display .kakaolink_button a { display:block; position:absolute; left:0; bottom:0; width:65px; height:70px; background-image:url("http://img.echosting.cafe24.com/apps/kakao-link/skin1/sfix_btn.png"); background-repeat:no-repeat; font-size:0; line-height:0; }
+.xans-kakaolink-display .kakaolink_button a.talk { background-position:0 0; }
+.xans-kakaolink-display .kakaolink_button a.story { background-position:-75px 0; }
+.xans-kakaolink-display .kakaolink_button strong { position:absolute; right:0; top:0; min-width:16px; height:16px; padding:2px; background:#4c89df; box-shadow:0 1px 3px #000; border:2px solid #fff; border-radius:15px; font-size:12px; font-family:Verdana,'Iropke Batang',"맑은 고딕",Malgun Gothic,"돋움",Dotum; color:#fff; text-shadow:0 -1px 1px #333; line-height:16px; text-align:center; letter-spacing:-1px; }

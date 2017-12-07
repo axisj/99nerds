@@ -1,0 +1,22 @@
+body#popup { padding-bottom:7px; background:#fff; }
+.xans-search-frompackage .xans-search-boardform fieldset { position:relative; display:block; min-width:130px; padding:7px 60px 7px 107px; height:29px; border:1px solid #ececec; background:#f1f1f1; }
+.xans-search-frompackage .xans-search-boardform select#search_type { width:100px; position:absolute; left:7px; top:7px; }
+.xans-search-frompackage .xans-search-boardform .btnStrong { position:absolute; right:7px; top:7px; }
+.xans-search-frompackage .xans-search-boardform input#keyword { width:100%; margin:0 0 0 4px; }
+
+.xans-search-frompackage .resultArea { overflow:hidden; min-width:306px; margin:7px 0 14px 0; font-size:12px !important; }
+.xans-search-frompackage .resultArea p { padding:7px 0 0; float:left; }
+.xans-search-frompackage .resultArea strong { color:#508aee; }
+.xans-search-frompackage .resultArea #limit { float:right; }
+
+.xans-search-frompackage .boardView tbody { margin:0 0 29px; border:1px solid #cccccc; }
+.xans-search-frompackage .boardView table th { height:0; font-size:0; line-height:0; }
+.xans-search-frompackage .boardView tbody th,
+.xans-search-frompackage .boardView table tbody td { padding:8px 0 8px 8px; border-bottom:1px solid #f1f1f1; }
+.xans-search-frompackage .boardView tbody th { text-align:left; font-size:12px; word-wrap:break-word; }
+.xans-search-frompackage .boardView tbody td { text-align:center; font-size:12px; word-wrap:break-word; }
+.xans-search-frompackage .boardView tbody td img { width:73px; }
+.xans-search-frompackage .boardView tbody td.product { text-align:left; }
+.xans-search-frompackage .boardView tbody td.product strong { display:block; margin:14px 0 0; }
+.xans-search-frompackage .boardView tbody tr:last-child > td { border-bottom:0; }
+.xans-search-frompackage .boardView tbody td.button { text-align:right; padding:0 6px 0 0; }

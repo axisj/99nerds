@@ -1,0 +1,21 @@
+.xans-member-findid { margin:14px 7px 0; padding:0 0 29px; color:#1b1b1b; font-size:13px; }
+.xans-member-findid .boardWrite table { word-wrap:break-word; border:1px solid #d5d5d5; }
+.xans-member-findid .boardWrite table th { width:110px; line-height:43px; padding:0 0 0 10px; border-top:1px solid #ececec; color:#757575; text-align:left; font-weight:normal; vertical-align:middle; background:#fff; }
+.xans-member-findid .boardWrite table tr:first-child th { border-top:1px solid #d5d5d5; }
+.xans-member-findid .boardWrite table td { padding:7px 10px 7px 0; border-top:1px solid #ececec; vertical-align:middle; background:#fff; }
+.xans-member-findid .boardWrite table #mobile_auth_view img,
+.xans-member-findid .boardWrite table #ipin_view img { max-width:106px; }
+.xans-member-findid .boardWrite table tr:first-child td { border-top:1px solid #d5d5d5; }
+.xans-member-findid .boardWrite label { margin:0 14px 0 0; }
+.xans-member-findid .btnArea.type1 { margin:14px auto 0; }
+
+/* INPUT SIZE */
+.xans-member-findid #searchType,
+.xans-member-findid #name,
+.xans-member-findid #email { width:100%; }
+.xans-member-findid #searchType { padding-top:5px; }
+.xans-member-findid #mobile1 { max-width:35px; }
+.xans-member-findid #mobile2,
+.xans-member-findid #mobile3 { max-width:55px; }
+.xans-member-findid #ssn1,
+.xans-member-findid #ssn2 { width:40%; }

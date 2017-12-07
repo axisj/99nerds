@@ -1,0 +1,14 @@
+.xans-layout-productrecent {
+    text-align:center;
+    border:1px solid #d5d5d5;
+    background:#fff;
+}
+.xans-layout-productrecent h2 a { display:block; padding:7px 0; }
+.xans-layout-productrecent ul { margin:0 auto 10px; }
+.xans-layout-productrecent li img {
+    width:76px; height:auto;
+    border-width:0; border-style:solid; border-color:#fff;
+}
+.xans-layout-productrecent li span { display:block; padding:4px 0; }
+.xans-layout-productrecent .player { overflow:hidden; *zoom:1; }
+.xans-layout-productrecent .player img { float:left; }

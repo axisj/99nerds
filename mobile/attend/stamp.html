@@ -1,0 +1,93 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>출석체크</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+    </span>
+</div>
+
+<div module="Attend_calendarPackage">
+    <!--@css(/css/module/attend/calendarPackage.css)-->
+    <div module="attend_calendarhead">
+        <!--
+            $login_page = /member/login.html
+        -->
+        <p class="prev"><a href="{$prev_month}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/attend/btn_calendar_prev.png" alt="이전 달" /></a></p>
+        <p class="date">
+            <span>{$year}</span>
+            <span class="month">.{$month}</span>
+        </p>
+        <p class="next"><a href="{$next_month}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/attend/btn_calendar_next.png" alt="다음 달" /></a></p>
+    </div>
+
+    <div module="attend_calendar">
+        <table border="1" summary="">
+            <!--
+                $login_page = /member/login.html
+            -->
+            <caption>출석이벤트 달력</caption>
+            <colgroup>
+                <col style="width:13.5%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.5%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">일</th>
+                    <th scope="col">월</th>
+                    <th scope="col">화</th>
+                    <th scope="col">수</th>
+                    <th scope="col">목</th>
+                    <th scope="col">금</th>
+                    <th scope="col">토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sun"><div>{$sun}</div></td>
+                    <td><div>{$mon}</div></td>
+                    <td><div>{$the}</div></td>
+                    <td><div>{$wed}</div></td>
+                    <td><div>{$thu}</div></td>
+                    <td><div>{$fri}</div></td>
+                    <td class="sat"><div>{$sat}</div></td>
+                </tr>
+                <tr>
+                    <td class="sun"><div>{$sun}</div></td>
+                    <td><div>{$mon}</div></td>
+                    <td><div>{$the}</div></td>
+                    <td><div>{$wed}</div></td>
+                    <td><div>{$thu}</div></td>
+                    <td><div>{$fri}</div></td>
+                    <td class="sat"><div>{$sat}</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div module="attend_button">
+        <!--
+            $login_page = /member/login.html
+        -->
+        <p class="btnArea type1">
+            <a href="#none" onclick="{$action_attend}" class="btnSubmit">출석체크</a>
+        </p>
+
+        <div class="security {$attendSecurityLayer}">
+            <h2>스팸 출석체크 방지 문자 입력</h2>
+            <fieldset>
+                <legend>보안문자 입력</legend>
+                <div class="capcha {$secure_display|display}">
+                    <img src="{$secure_img}" alt="" /> {$form.secure_text}
+                    <a href="#none" class="btnStrong" onclick="{$action_capcha_do}">확인</a>
+                    <p>위 문자를 공백없이 입력하세요.(대소문자구분)</p>
+                </div>
+                <a href="#none" class="btnClose" onclick="$('.security').hide();">레이어 닫기</a>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.xans-board-write { padding:14px 0; }
+
+/* 테이블 */
+.xans-board-write .boardWrite { margin:-1px 14px 7px; border:1px solid #cccccc; background:#fff; }
+.xans-board-write .boardWrite a { color:#333; }
+.xans-board-write .boardWrite table th { color:#333; }
+.xans-board-write .boardWrite table thead th { padding:8px 0; text-align:center; border-bottom:1px solid #cacaca; border-left:1px solid #cacaca; }
+.xans-board-write .boardWrite table thead tr > th:first-child { border-left:0; }
+.xans-board-write .boardWrite table tbody th,
+.xans-board-write .boardWrite table tbody td { border-bottom:1px solid #f1f1f1; word-wrap:break-word; }
+.xans-board-write .boardWrite table tbody th { padding:14px 0 7px 14px; vertical-align:top; text-align:left; }
+.xans-board-write .boardWrite table tbody td { padding:7px 14px 7px 14px; }
+.xans-board-write .boardWrite table tbody td.write { padding:14px; }
+.xans-board-write .boardWrite table tbody tr > td:first-child { border-left:0; }
+.xans-board-write .boardWrite table #content { width:100%; height:100px; }
+.xans-board-write .boardWrite table #email1,
+.xans-board-write .boardWrite table #email2 { float:left; margin:0 1% 4px 0; width:45.5%; }
+.xans-board-write .boardWrite table #email2 { float:right; margin:0 0 4px 0; }
+.xans-board-write .boardWrite table #email3 { width:100%; }
+.xans-board-write .boardWrite table .uccUrlSize { line-height:0; font-size:0; }
+.xans-board-write .boardWrite table #ucc { margin:0 0 5px 0; width:100%; }
+.xans-board-write .boardWrite table #ucc_width { display:inline-block; width:48%; }
+.xans-board-write .boardWrite table #ucc_height { display:inline-block; margin:0 0 0 4%; width:48%; }
+.xans-board-write .boardWrite table .captcha { position:relative; }
+.xans-board-write .boardWrite table .captcha span { display:block; padding:0 0 0 94px; }
+.xans-board-write .boardWrite table .captcha img { position:absolute; left:14px; top:7px; }
+.xans-board-write .boardWrite table #captcha { width:100%; }
+.xans-board-write .boardWrite .grid { margin:3px 0 0; }
+.xans-board-write .boardWrite table #board_category { margin:0 0 7px; }
+.xans-board-write .boardWrite table select, .xans-board-write .boardWrite table input[type="text"], .xans-board-write .boardWrite table input[type="password"] { width:100%; }
+.xans-board-write .boardWrite .size { overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; }
+.xans-board-write .btnArea.type2 { padding:0 14px; }
+
+.xans-board-write .privacy { margin:0 14px 14px; padding:5px 15px; border:1px solid #ccc; font-size:13px; background:#fff; }
+.xans-board-write .privacy:after { content:""; display:block; clear:both; }
+.xans-board-write .privacy p { float:left; width:82%; }
+.xans-board-write .privacy p input { margin:0 5px 0 0; vertical-align:middle; }
+.xans-board-write .privacy span { float:right; width:18%; line-height:29px; font-size:11px; text-align:right; text-decoration:underline; }
+
+/* write - 상품 */
+.xans-board-write .prdSelect { overflow:hidden; padding:14px; margin:0 14px; background:#f1f1f1; border:1px solid #cccccc; border-bottom:0; }
+.xans-board-write .prdThumb { float:left; width:73px; }
+.xans-board-write .prdThumb img { width:73px; border:1px solid #dedede; }
+.xans-board-write .prdInfo { padding:0 0 0 87px; }
+.xans-board-write .prdInfo h3 { font-size:13px; color:#1b1b1b; }
+.xans-board-write .prdInfo h3 img { vertical-align:middle; }
+.xans-board-write .prdInfo p { margin:14px 0 0; }
+.xans-board-write .prdInfo p.price { font-size:11px; color:#508bed; font-weight:bold; }
+.xans-board-write .prdInfo p.btnArea { text-align:left; }
+.xans-board-write .prdInfo p.btnArea .btnNormal { margin:0 3px 0 0; font-size:12px; text-align:left; }
+.xans-board-write .prdInfo p.btnArea a { margin-bottom:2px; }

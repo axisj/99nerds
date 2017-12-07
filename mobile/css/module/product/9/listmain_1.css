@@ -1,0 +1,24 @@
+.xans-product-listmain-1 { padding:0; background-color:#fff; }
+.xans-product-listmain-1 h2 { max-height:43px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:15px; line-height:43px; padding:0 42px 0 14px; background:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_close.gif") no-repeat right 14px top 50%; background-size:13px 8px; cursor:pointer; }
+.xans-product-listmain-1 img { max-width:100%; }
+.xans-product-listmain-1 li { vertical-align:top; }
+.xans-product-listmain-1 > ul > li > ul { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:0 7px; font-size:0; line-height:0; }
+.xans-product-listmain-1 > ul > li > ul > li { position:relative; display:inline-block; margin:0 0 14px; vertical-align:top; font-size:12px; line-height:1.4; }
+    /* swipe 기능을 사용하지않는경우 */
+    .xans-product-listmain-1 > ul[class*="grid"] { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:0 7px; font-size:0; line-height:0; }
+    .xans-product-listmain-1 > ul[class*="grid"] > li { position:relative; display:inline-block; margin:0 0 14px; vertical-align:top; font-size:12px; line-height:1.4; }
+.xans-product-listmain-1 .thumbnail { padding:0 7px; margin:0 0 14px; }
+.xans-product-listmain-1 .thumbnail img { width:100%; border:1px solid #ededed; }
+.xans-product-listmain-1 .information { position:relative; min-height:10px; margin:0 7px; line-height:1em; }
+.xans-product-listmain-1 .name { line-height:1.2em; word-wrap:break-word; margin:0 0 6px; }
+.xans-product-listmain-1 .name a { font-size:13px; color:#1b1b1b; }
+.xans-product-listmain-1 .icon { margin:0 0 6px; }
+.xans-product-listmain-1 .price { font-size:12px; margin:0 0 6px; }
+.xans-product-listmain-1 .strike { text-decoration:line-through; }
+.xans-product-listmain-1 .color { overflow:hidden; margin:0; }
+.xans-product-listmain-1 .color .chips { float:left; width:12px; height:10px; margin:0 2px 2px 0; font-size:0; line-height:0; }
+
+.xans-product-listmain-1 .grid2 li { width:50%; }
+.xans-product-listmain-1 .grid3 li { width:33.333%; }
+.xans-product-listmain-1 .grid4 li { width:25%; }
+.xans-product-listmain-1 .grid5 li { width:20%; }

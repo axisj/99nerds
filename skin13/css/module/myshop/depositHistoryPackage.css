@@ -1,0 +1,5 @@
+ .xans-myshop-depositsummary dl.desc { overflow:hidden; line-height:1.6; }
+ .xans-myshop-depositsummary dl.desc dt, .xans-myshop-depositsummary dl.desc dd { float:left; margin:0 0 5px; }
+ .xans-myshop-depositsummary dl.desc dt { width:20%; }
+ .xans-myshop-depositsummary dl.desc dd { width:30%; }
+ .xans-myshop-depositsummary dl.desc dt span.icoDot { display:inline-block; margin-top:-2px; width:5px; height:12px; vertical-align:middle; background:url('http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_tip_title.gif') 0 50% no-repeat; }

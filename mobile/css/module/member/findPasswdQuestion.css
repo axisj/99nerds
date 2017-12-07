@@ -1,0 +1,9 @@
+.xans-member-findpasswdquestion { margin:14px 7px 0; padding:0 0 29px; }
+.xans-member-findpasswdquestion .boardWrite table { color:#1b1b1b; font-size:13px; word-wrap:break-word; background:#fff; }
+.xans-member-findpasswdquestion .boardWrite table th { width:80px; line-height:43px; padding:0 5px 0 10px; border:1px solid #c9c9c9; border-right:none; color:#757575; font-weight:normal; text-align:left; vertical-align:middle; }
+.xans-member-findpasswdquestion .boardWrite table td { padding:7px 14px 7px 10px; border:1px solid #c9c9c9; border-left:none; vertical-align:middle; }
+.xans-member-findpasswdquestion .boardWrite table tr:last-child td { border-left:1px solid #c9c9c9; }
+.xans-member-findpasswdquestion .btnArea.type1 { margin:14px auto 0; }
+
+/* INPUT SIZE */
+.xans-member-findpasswdquestion #passwd_answer { width:100%; }

@@ -1,0 +1,96 @@
+.xans-member-edit { margin:14px 7px 0; padding:0 0 29px; font-size:13px; color:#1b1b1b; }
+.xans-member-edit .titleArea { width:100%; margin:0; border:none; }
+.xans-member-edit .titleArea.accountArea { margin:-8px 0 0; }
+.xans-member-edit h3 { height:30px; padding:13px 0 0 14px; border:1px solid #d5d5d5; font-size:13px; font-weight:bold; color:#4a5164; font-family:Verdana,'Iropke Batang',"맑은 고딕",Malgun Gothic,"돋움",Dotum; background:#f1f1f1; }
+.xans-member-edit h3 { height:30px; padding:13px 0 0 14px; border:1px solid #d5d5d5; font-size:13px; font-weight:bold; color:#4a5164; font-family:Verdana,'Iropke Batang',"맑은 고딕",Malgun Gothic,"돋움",Dotum; background:#f1f1f1; }
+.xans-member-edit h3 span { float:right; padding:0 14px 0 0; color:#1b1b1b; font:11px normal; }
+.xans-member-edit h3 span img { margin:0 3px 0 0; padding:4px 0 0; vertical-align:top; }
+.xans-member-edit select { height:24px; margin:0 4px 0 0; }
+.xans-member-edit input,
+.xans-member-edit textarea { padding:4px; border:1px solid #d9d9d9; color:#000; font-size:12px; }
+.xans-member-edit input[type=radio],
+.xans-member-edit input[type=checkbox] { width:14px; height:14px; margin:0 3px 0 0; padding:0; border:0; }
+.xans-member-edit div.grid { margin:7px 0 0; }
+.xans-member-edit ul.grid li { margin:5px 0 0; }
+.xans-member-edit p.grid { margin:0 0 7px 0; }
+.xans-member-edit .info { margin:7px 0 0; color:#747474; font-size:11px; }
+
+.xans-member-edit .boardWrite { margin:0 0 7px 0; }
+.xans-member-edit .lastWrite { margin-bottom:0; }
+.xans-member-edit .boardWrite table { border:1px solid #ccc; border-top:none; }
+.xans-member-edit .boardWrite table tr:first-child th,
+.xans-member-edit .boardWrite table tr:first-child td { border-top:none; }
+.xans-member-edit .boardWrite th { width:90px; padding:7px 0 7px 10px; border-top:1px solid #ececec; color:#757575; font-size:13px; font-weight:normal; text-align:left; vertical-align:middle; background:#fff; }
+.xans-member-edit .boardWrite th img { vertical-align:top; }
+.xans-member-edit .boardWrite td { min-height:29px; padding:7px 10px; border-top:1px solid #ececec; vertical-align:middle; background:#fff; }
+.xans-member-edit .boardWrite table td.thead { border-left:1px solid #ccc; }
+.xans-member-edit .boardWrite table td.thead p { height:30px; padding:6px 0 0; color:#757575; font-size:13px; }
+.xans-member-edit .boardWrite img { vertical-align:middle; }
+.xans-member-edit .boardWrite a { text-decoration:none; }
+.xans-member-edit .boardWrite label { padding:0 14px 0 0; }
+.xans-member-edit .boardWrite.type th { padding:22px 0 18px 20px; }
+.xans-member-edit .boardWrite.type td { padding:18px 0 18px 20px; }
+.xans-member-edit .boardWrite .interest label { display:inline-block; min-width:90px; margin:0 7px 14px 0; padding:0; }
+.xans-member-edit .boardWrite .interest { font-size:11px; line-height:1.2em; }
+.xans-member-edit .boardWrite .interest input { margin:0 3px 0 0; }
+.xans-member-edit .boardWrite .interest span { display:inline-block; }
+/* 회원인증 */
+.xans-member-edit .boardWrite.typeCertificate strong.txtEm { color:#508bed; }
+.xans-member-edit .boardWrite.typeCertificate .certifInfo { color:#757575; font-size:11px; }
+.xans-member-edit .boardWrite.typeCertificate .certifForm { margin:9px 0px 7px; }
+
+.xans-member-edit .boardList { border-bottom:1px solid #c0c0c0; color:#747474; font-size:11px; }
+.xans-member-edit .boardList th { width:90px; padding:0px 0px 0px 10px; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; font-weight:normal; vertical-align:middle; background:#f6f6f6; }
+.xans-member-edit .boardList td { padding:20px 5px 20px; border-top:1px dotted #e3e3e3; line-height:1.5; vertical-align:middle; }
+.xans-member-edit .boardList .center { text-align:center; }
+
+.xans-member-edit .btnArea { overflow:hidden; position:relative; margin:14px auto 0px; text-align:center; }
+.xans-member-edit .btnArea span.left { float:left; }
+.xans-member-edit .btnArea span.right { float:right; }
+.xans-member-edit .btnArea.center { text-align:center; }
+.xans-member-edit .btnArea.center span.left { position:absolute; left:0; }
+.xans-member-edit .btnArea.center span.right { position:absolute; right:0; }
+
+/* INPUT SIZE */
+.xans-member-edit input[type=text],
+.xans-member-edit input[type=password],
+.xans-member-edit input[type=number],
+.xans-member-edit input[type=tel],
+.xans-member-edit select { width:100%; }
+.xans-member-edit #user_passwd_confirm,
+.xans-member-edit #hint,
+.xans-member-edit #hint_answer { margin-bottom:7px; }
+.xans-member-edit #member_id { width:113px; }
+.xans-member-edit #postcode1 { width:55px; text-align:center; }
+.xans-member-edit #addr1 { margin:5px 0 0; }
+.xans-member-edit #addr2 { margin:5px 0 7px; }
+.xans-member-edit #phone1,
+.xans-member-edit #mobile1 { width:33%; }
+.xans-member-edit #phone2,
+.xans-member-edit #phone3,
+.xans-member-edit #mobile2,
+.xans-member-edit #mobile3 { width:25%; margin:0 4px; }
+.xans-member-edit #bssn1,
+.xans-member-edit #bssn2 { width:70px; }
+.xans-member-edit #email1 { max-width:40%; margin:0 4px 7px 0; }
+.xans-member-edit #email2 { max-width:45%; margin:0 4px 7px 4px; }
+.xans-member-edit #email3 { height:29px; margin:0 0 7px; }
+
+.xans-member-edit #birth_year,
+.xans-member-edit #marry_year,
+.xans-member-edit #partner_year { width:45px; margin:0 5px 0 0; }
+.xans-member-edit #birth_month,
+.xans-member-edit #marry_month,
+.xans-member-edit #partner_month { width:30px; margin:0 5px; }
+.xans-member-edit #birth_day,
+.xans-member-edit #marry_day,
+.xans-member-edit #partner_day { width:30px; margin:0 5px; }
+
+/* 약관 */
+.xans-member-edit .agreeArea { margin:0 0 7px; border:1px solid #ccc; background:#fff; }
+.xans-member-edit .title { position:relative; line-height:36px; color:#333; border-bottom:1px solid #ccc; }
+.xans-member-edit .title h4 { padding:0 0 0 14px; font-size:13px; font-weight:normal; }
+.xans-member-edit .title h4 label { display:none; }
+.xans-member-edit .title h4 label.check { display:inline; }
+.xans-member-edit .title a.btnMore { position:absolute; top:0px; right:14px; font-size:11px; text-decoration:underline; }
+.xans-member-edit .contents { overflow:hidden; height:90px; margin:14px; color:#757575; font-size:11px; }

@@ -1,0 +1,16 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>개인정보처리방침</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="mall_privacy">
+    <!--@css(/css/module/mall/privacy.css)-->
+    <div class="agreeBox">
+        <p class="date {$displayEnforce|display}">{$enforce_date}</p>
+        <div class="agree">{$privacy_agreement}</div>
+    </div>
+    <a href="{$before_enforce_link}" class="btnPrev {$displayBeforeEnforce|display}" target="_blank">{$before_enforce_date}</a>
+</div>

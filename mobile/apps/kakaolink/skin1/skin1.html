@@ -1,0 +1,26 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div style='text-align:center;'>
+    <h4 style='margin:20px;'> 모바일 쇼핑몰 페이지에 적용시</h4>
+    <div module="kakaolink_mobile" style="float:none;">
+        <style type="text/css">
+            .xans-kakaolink-mobile { text-align: right; }
+            .xans-kakaolink-mobile .kakaolink_button:first-child { margin-right: -4px; }
+            .xans-kakaolink-mobile .kakaolink_button {
+                display: inline-block; position: relative; width: 22px; height: 22px; vertical-align: top; }
+            .xans-kakaolink-mobile .kakaolink_button a { display: block; position: absolute; left: 0; bottom: 0; width: 22px; height: 22px; background-image: url("//img.echosting.cafe24.com/apps/kakao-link/skin1/sfix_btn.png"); background-repeat: no-repeat; font-size: 0; line-height: 0; background-size: 44px 22px; }
+            .xans-kakaolink-mobile .kakaolink_button a.talk { background-position: 0 0; }
+            .xans-kakaolink-mobile .kakaolink_button a.story { background-position: -23px 0; }
+            .xans-kakaolink-mobile .kakaolink_button strong { position: absolute; right: 0; top: 0; min-width: 16px; height: 16px; padding: 2px; background: #4c89df; box-shadow: 0 1px 3px #000; border: 2px solid #fff; border-radius: 15px; font-size: 12px; font-family: Verdana, sans-serif; color: #fff; text-shadow: 0 -1px 1px #333; line-height: 16px; text-align: center; letter-spacing: -1px; }
+
+        </style>
+
+        {$kakao_link_button} {$kakao_story_button}
+    </div>
+
+    <h4 style='margin:20px;'> 쇼핑몰 페이지에 적용시</h4>
+    <div module="kakaolink_display">
+        <!--@css(./skin1.css)-->
+        {$kakao_link_button} {$kakao_story_button}
+    </div>
+</div>

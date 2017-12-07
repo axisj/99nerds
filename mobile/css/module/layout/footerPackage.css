@@ -1,0 +1,32 @@
+.xans-layout-footerpackage { font-size:11px; line-height:1.5em; color:#fff; border-top:1px solid #fff; }
+.xans-layout-footerpackage .footerMenu p { overflow:hidden; padding: 8px 14px; background-color:#1e1e1e; text-align:right; }
+.xans-layout-footerpackage .footerMenu p:first-child { background-color:#1e1e1e; }
+    .footerMenu p.xans-layout-info { margin:0; }
+.xans-layout-footerpackage .footerMenu .left { float:left; text-align:left; }
+.xans-layout-footerpackage .footerMenu .btnUtil {
+    display:inline-block; height:26px; line-height:24px; font-size:11px; margin:0; padding:0 10px;
+    cursor:pointer; vertical-align:middle; font-weight:400; border:0;
+    border-radius:5px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+    color:#fff; border:1px solid #bcbcbc; background:#1e1e1e;
+}
+
+.xans-layout-footerpackage .footerMenu .util {
+    border-bottom: 1px solid #353535;
+}
+.xans-layout-footerpackage .footerMenu .btnUtil.typeTel { padding-left:23px; background:#1e1e1e url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_tel.png") no-repeat 10px 7px; background-size:8px 13px; vertical-align:middle; }
+.xans-layout-footerpackage .footerMenu .btnUtil.typeTel strong { font-size:13px; vertical-align:top; }
+.xans-layout-footerpackage .footerMenu .btnUtil.typeTop { padding-right:23px; background:#1e1e1e url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_top.png") no-repeat 90% 7px; background-size:12px 12px; }
+.xans-layout-footerpackage .footerMenu .policy { border-bottom: 1px solid #353535; padding:7px 0; text-align: center; background-color:#1e1e1e; font-size:0; line-height:0; color:#fff; }
+.xans-layout-footerpackage .footerMenu .policy li { position:relative; display:inline-block; padding:0 6px 0 7px; line-height:13px; font-size:11px; }
+.xans-layout-footerpackage .footerMenu .policy li:before { display:block; content:""; position:absolute; top:2px; left:0; width:1px; height:11px; background:#1e1e1e; }
+.xans-layout-footerpackage .footerMenu .policy li:first-child:before { display:none; }
+.xans-layout-footerpackage .footerMenu .policy a{ color: #fff; font-weight: bold; }
+.xans-layout-footerpackage .footerMenu .policy li:first-child { background:none; }
+.xans-layout-footerpackage address { padding:14px; background-color:#1e1e1e; }
+.xans-layout-footerpackage address .footerInfo { display:table; width:100%; }
+.xans-layout-footerpackage address dl { display:table-row; }
+.xans-layout-footerpackage address dl dt { display:table-cell; width:110px; line-height:1.6; color:#fff; vertical-align:top; }
+.xans-layout-footerpackage address dl dd { display:table-cell; width:auto; padding:0 0 0 7px; line-height:1.6; word-break:break-all; }
+.xans-layout-footerpackage address a { color:#fff; }
+.xans-layout-footerpackage .copyright { text-align:center; line-height:28px; color:#fff; font-size:9px; background-color:#000; }

@@ -1,0 +1,17 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Order_StorePickupShop">
+    <!--@css(/css/module/order/storePickupShop.css)-->
+    <h2>수령지 안내</h2>
+    <div class="wrap">
+        <div class="shopInfo">
+            <strong>{$sc_name}</strong><br />{$receive_addr}
+        </div>
+        <ul>
+            <li><strong>전화번호</strong>{$main_phone} <a href="tel:{$main_phone}" class="btnTel">전화걸기</a></li>
+            <li><strong>영업시간</strong>{$office_hour}</li>
+            <li><strong>수령지안내</strong>{$receive_info}</li>
+            <li><strong>약도</strong></li>
+            <li class="map">{$receive_map}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+.xans-board-modify { padding:14px 0; }
+
+/* 테이블 */
+.xans-board-modify .boardModify { margin:-1px 14px 7px; padding:0 0 1px; border:1px solid #ccc; background:#fff; }
+.xans-board-modify .boardModify a { color:#333; }
+
+.xans-board-modify .boardModify table th { color:#757575; font-weight:normal; }
+.xans-board-modify .boardModify table thead th { padding:8px 0; text-align:center; border-bottom:1px solid #cacaca; border-left:1px solid #cacaca; }
+.xans-board-modify .boardModify table thead tr > th:first-child { border-left:0; }
+.xans-board-modify .boardModify table tbody th,
+.xans-board-modify .boardModify table tbody td { border-bottom:1px solid #f1f1f1; word-wrap:break-word; }
+.xans-board-modify .boardModify table tbody th { padding:14px 0 7px 14px; vertical-align:top; text-align:left; }
+.xans-board-modify .boardModify table tbody td { padding:7px 14px 7px 14px; }
+.xans-board-modify .boardModify table tbody td.write { padding:14px; }
+.xans-board-modify .boardModify table tbody tr > td:first-child { border-left:0; }
+
+.xans-board-modify .boardModify table .txtEm { color:#ff6600; }
+.xans-board-modify .boardModify p { margin:3px 0 0; }
+.xans-board-modify .boardModify table #content { width:100%; height:100px; }
+.xans-board-modify .boardModify table #email1,
+.xans-board-modify .boardModify table #email2 { float:left; margin:0 1% 4px 0; width:45.5%; }
+.xans-board-modify .boardModify table #email2 { float:right; margin:0 0 4px 0; }
+.xans-board-modify .boardModify table #email3 { width:100%; }
+.xans-board-modify .boardModify table .uccUrlSize { line-height:0; font-size:0; }
+.xans-board-modify .boardModify table #ucc { margin:0 0 5px 0; width:100%; }
+.xans-board-modify .boardModify table #ucc_width { display:inline-block; width:48%; }
+.xans-board-modify .boardModify table #ucc_height { display:inline-block; margin:0 0 0 4%; width:48%; }
+.xans-board-modify .boardModify table .captcha { position:relative; }
+.xans-board-modify .boardModify table .captcha span { display:block; padding:0 0 0 94px; }
+.xans-board-modify .boardModify table .captcha img { position:absolute; left:14px; top:14px; }
+.xans-board-modify .boardModify table #captcha { width:100%; }
+.xans-board-modify .boardModify .grid { margin:3px 0 0; }
+.xans-board-modify .boardModify table #board_category { margin:0 0 7px; }
+.xans-board-modify .boardModify table select, .xans-board-modify .boardModify table input[type="text"], .xans-board-modify .boardModify table input[type="password"] { width:100%; }
+.xans-board-modify .boardModify .size { overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; }
+.xans-board-modify .btnArea.type2 { padding:0 14px; }
+
+.xans-board-modify .privacy { margin:0 14px 14px; padding:5px 15px; border:1px solid #ccc; background:#fff; }
+.xans-board-modify .privacy:after { content:""; display:block; clear:both; }
+.xans-board-modify .privacy p { float:left; width:82%; }
+.xans-board-modify .privacy p input { margin:0 5px 0 0; vertical-align:middle; }
+.xans-board-modify .privacy span { float:right; width:18%; font-size:11px; text-align:right; text-decoration:underline; }
+
+/* modify - 상담 */
+.xans-board-modify .boardModify td ul li strong { padding:14px 0 8px 8px; }
+
+/* modify - 상품 */
+.xans-board-modify .prdSelect { overflow:hidden; padding:14px; margin:0 14px; background:#f1f1f1; border:1px solid #ccc; border-bottom:0; }
+.xans-board-modify .prdThumb { float:left; width:73px; }
+.xans-board-modify .prdThumb img { width:73px; border:1px solid #dedede; }
+.xans-board-modify .prdInfo { padding:0 0 0 87px; }
+.xans-board-modify .prdInfo h3 { font-size:13px; color:#1b1b1b; }
+.xans-board-modify .prdInfo h3 img { vertical-align:middle; }
+.xans-board-modify .prdInfo p { margin:14px 0 0; }
+.xans-board-modify .prdInfo p.price { font-size:11px; color:#508bed; font-weight:bold; }
+.xans-board-modify .prdInfo p.button a { margin-bottom:2px; }

@@ -1,0 +1,64 @@
+.xans-mall-urgencycallsearchoutline { position:absolute; top:0; left:0; bottom:0; min-width:320px; width:100%; box-sizing:border-box; font-size:12px; z-index:200; background:#f1f1f1; }
+.xans-mall-urgencycallsearchoutline h2 { height:36px; padding:0 38px 0 7px; font-size:15px; line-height:36px; color:#fff; background:#4a5164; }
+.xans-mall-urgencycallsearchoutline .close { position:absolute; right:0; top:0; z-index:110; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") center center no-repeat; background-size:14px 14px; }
+.xans-mall-urgencycallsearchoutline .wrap { padding:0; font-size:12px; background:#f1f1f1; }
+.xans-mall-urgencycallsearchoutline .wrap > .content { margin:0; padding:14px 7px 0; }
+.xans-mall-urgencycallsearchoutline .wrap > .btnArea { padding:10px 0; margin:0; background:#f1f1f1; }
+
+.xans-mall-urgencycallsearchoutline .paginate.typeList { background:#f1f1f1; }
+.xans-mall-urgencycallsearchoutline .paginate.typeList .prev,
+.xans-mall-urgencycallsearchoutline .paginate.typeList .next { font-size:0; }
+
+/* 탭 */
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex { margin:0 0 7px; font-size:13px; background:#fff; }
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex ul { height:36px; border-bottom:1px solid #4a5164; font-size:0; }
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex li { display:inline-block; width:49.999%; height:36px; border:1px solid #ececec; border-bottom:0; text-align:center; vertical-align:middle; background:#fff; box-sizing: border-box; }
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex li.selected { background:#4a5164; border:0; }
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex li a { display:inline-block; width:100%; color:#000; font-size:14px; line-height:35px; }
+.xans-mall-urgencycallsearchoutline .tab.typeStrong.gFlex li.selected a { color:#fff; font-weight:bold; }
+
+/* 주문번호 */
+.xans-mall-urgencycallsearchoutline .urgencyOrder .inputOrdNum { width:24%; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite { margin:0 0 7px; border:1px solid #ccc; color:#353535; background:#fff; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite th { padding:10px 0 11px 7px; vertical-align:top; text-align:left; border-bottom:1px solid #ececec; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite td { padding:5px 7px; border-bottom:1px solid #ececec; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite tr:last-of-type th,
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite tr:last-of-type td { border-bottom:0; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardWrite .txtInfo { margin:5px 0 2px; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList { margin:0; border:1px solid #ccc; background:#fff; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .ordPagenum { margin:0 0 7px; text-align:right; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder select#ordPagenum { width:auto; }
+
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList ul { padding:0; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li { position:relative; padding:12px 13px; border-top:1px solid #f1f1f1; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li:first-child { border-top:0; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li .thumb { display:inline-block; width:71px; margin:0 14px 14px 0; border:1px solid #d5d5d5; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li .thumb img { width:71px; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li .info { position:absolute; top:12px; padding:0 61px 0 86px; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li .info .name { font-size:13px; color:#4a5164; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li > p { font-size:11px; padding:0 0 0 6px; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_list.png") no-repeat 0 6px; background-size:2px 2px; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .boardList li .btnArea { position:absolute; bottom:13px; right:13px; margin:0; padding:0; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .empty { padding:14px 0; text-align:center; font-size:12px; }
+
+/* 상품 */
+.xans-mall-urgencycallsearchoutline .urgencyProduct { position:relative; margin:0 0 7px; padding:0; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch { border:1px solid #ccc; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch tbody th,
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch tbody td { margin:15px 0 7px; padding:7px; height:29px; background:#fff; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch tbody td input[type="text"] { width:100%; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch tbody th { padding:7px 0 7px 13px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch select { margin:0; width:100%; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .boardSearch .prdSearch { padding:7px 13px 7px 0; text-align:center; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .result { margin:7px 0; padding:7px 0; font-size:11px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .result strong { color:#508bed; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct #prdSearchResult { position:relative; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct #prdPagenum { position:absolute; top:0; right:0; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList ul { border:1px solid #ccc; background:#fff; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li { position:relative; padding:12px 13px; border-top:1px solid #f1f1f1; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li:first-child { border-top:0; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li .thumb { display:inline-block; width:71px; margin:0 14px 0 0; border:1px solid #d5d5d5; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li .thumb img { width:71px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li .info { position:absolute; top:12px; padding:0 61px 0 86px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li .info .name { margin:0 0 6px; font-size:13px; color:#4a5164; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .resultList li .btnArea { position:absolute; bottom:13px; right:13px; margin:0; padding:0; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .empty { padding:14px 0; text-align:center; font-size:12px; }

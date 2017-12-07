@@ -1,0 +1,124 @@
+.xans-board-commentpackage-11 .commentTitle { padding:16px 14px; background:#f1f1f1; border-top:1px solid #d5d5d5; border-bottom:1px solid #ededed; }
+.xans-board-commentpackage-11 .commentTitle h3 { display:inline-block; }
+
+.xans-board-commentpackage-11 .empty { padding:29px 0; text-align:center; border-bottom:1px solid #d5d5d5; }
+.xans-board-commentpackage-11 .empty p { margin:29px 0 0; }
+
+/* 댓글리스트 */
+.xans-board-commentlist-11 { background-color:#ffffff; }
+.xans-board-commentlist-11 .label { vertical-align:middle; letter-spacing:-1px; }
+.xans-board-commentlist-11 .label.hide { display:none; }
+.xans-board-commentlist-11 li { position:relative; padding:14px 0 0; border-bottom:1px solid #d5d5d5; }
+.xans-board-commentlist-11 li > div { padding:0 14px; }
+.xans-board-commentlist-11 li .info { overflow:hidden; margin:0 0 7px; font-size:11px; color:#757575; }
+.xans-board-commentlist-11 li .info .writer a { color:#757575; }
+
+.xans-board-commentlist-11 li .info p { position:relative; display:inline-block; padding:0 7px 0 8px; }
+.xans-board-commentlist-11 li .info p:first-child { padding-left:0; }
+.xans-board-commentlist-11 li .info p:before { display:block; content:""; position:absolute; top:2px; left:0; width:1px; height:11px; background:#d6d6d6; }
+.xans-board-commentlist-11 li .info p:first-child:before { display:none; }
+
+.xans-board-commentlist-11 li .info p.chk { width:100%; margin:0; }
+.xans-board-commentlist-11 li .info p.rating img { margin:-2px 0 0; width:auto; height:11px; }
+.xans-board-commentlist-11 li .content { margin:14px 0 0; word-wrap:break-word; }
+.xans-board-commentlist-11 li .content span img { width:13px; height:13px; }
+.xans-board-commentlist-11 .btnArea { overflow:hidden; margin:7px 0 0; padding:0; width:100%; max-width:100%; letter-spacing:-1px; }
+.xans-board-commentlist-11 .btnArea > div.gLeft { margin:0 0 7px; padding:0 0 0 14px; width:185px; height:28px; text-align:left; }
+.xans-board-commentlist-11 .btnArea > div.gRight { padding:0 14px 0 0; width:95px; text-align:right; }
+.xans-board-commentlist-11 .btnArea div button.replyList span { margin:0 0 0 5px; color:#508bed; }
+.xans-board-commentlist-11 .btnArea div button.reply { padding:0 9px 0 26px; background:#fff url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_comment.png") no-repeat 9px 50%; background-size:13px 13px; }
+    /* 댓글의 댓글 */
+    .xans-board-commentlist li.replyArea { background:#f1f1f1; }
+    .xans-board-commentlist li.replyArea > div { padding-left:29px; }
+    .xans-board-commentlist li.replyArea div.info { background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_reply.png") no-repeat 14px 2px; background-size:7px 7px; }
+    .xans-board-commentlist li.replyArea div.btnArea { overflow:hidden; padding:0; }
+    .xans-board-commentlist li.replyArea div.btnArea .boardCommentModify { margin:14px 0 0; padding:0; }
+    .xans-board-commentlist li.replyArea div.btnArea .xans-board-commentform { padding:0; }
+
+/* 댓글 수정 */
+.xans-board-commentform-11 { padding:0; background-color:#fff; }
+.xans-board-commentform-11 fieldset { padding:14px 14px 7px; }
+.xans-board-commentform-11 .boardCommentModify { padding:0; }
+.xans-board-commentform-11 .boardCommentModify .label { padding:0 7px 0 0; color:#757575; font-size:12px; line-height:1.2em; font-weight:normal; vertical-align:middle; letter-spacing:-1px; }
+.xans-board-commentform-11 .boardCommentModify .info { margin:0 0 5px; padding:0; }
+.xans-board-commentform-11 .boardCommentModify .info.infoModify { background:none; }
+.xans-board-commentform-11 .boardCommentModify .info:after { content:""; display:block; clear:both; }
+.xans-board-commentform-11 .boardCommentModify .info p,
+.xans-board-commentform-11 .boardCommentModify .info p:first-child { padding:0; background:none; }
+.xans-board-commentform-11 .boardCommentModify .info p.name { float:left; margin-right:3%; width:46%; text-align:left; }
+.xans-board-commentform-11 .boardCommentModify .info p.modifyPassword { float:right; width:51%; border-bottom:0; text-align:right; }
+.xans-board-commentform-11 .boardCommentModify .info p.modifyPassword:before { display:none; }
+.xans-board-commentform-11 .boardCommentModify .info p.name #comment_name { width:62%; }
+.xans-board-commentform-11 .boardCommentModify .info p.modifyPassword #comment_password { width:62%; }
+.xans-board-commentform-11 .boardCommentModify .info p.password .label { margin:0; }
+.xans-board-commentform-11 .btnArea.typeModify { margin:7px 0 0; }
+.xans-board-commentform-11 .btnArea.typeModify .gRight { padding:0; width:105px; text-align:right; }
+.xans-board-commentform-11 .modifyComment { margin:7px 0 0; word-wrap:break-word; }
+.xans-board-commentform-11 .modifyComment textarea#comment_modify { width:100%; height:50px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+
+/* 댓글 작성 */
+.xans-board-commentwrite-11 { padding:29px 0 0; }
+    /* 권한 있음 */
+    .xans-board-commentwrite-11 .boardCommentWrite fieldset { padding:7px 0 0; border-top:1px solid #d4d4d4; }
+    .xans-board-commentwrite-11 .boardCommentWrite .label {  padding:0 7px 0 0; color:#757575; font-weight:normal; vertical-align:middle; letter-spacing:-1px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .label.hide { display:none; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info { margin:0 0 7px; padding:0 14px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info:after { content:""; display:block; clear:both; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info p.name { float:left; margin-right:3%; width:46%; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info p.password { float:right; width:51%; border-bottom:0; text-align:right; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info p.name #comment_name { width:60%; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info p.password #comment_password { width:60%; }
+    .xans-board-commentwrite-11 .boardCommentWrite .info p.password .label { margin:0; }
+    .xans-board-commentwrite-11 .boardCommentWrite .admin { margin:7px 0 0; }
+    .xans-board-commentwrite-11 .boardCommentWrite .admin a { display:block; text-align:center; }
+    .xans-board-commentwrite-11 .boardCommentWrite .comment { margin:7px 14px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .comment textarea#comment { width:100%; height:50px; marign:0 0 7px 0; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+    .xans-board-commentwrite-11 .boardCommentWrite .byteRating { padding:0 14px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .byteRating:after { content:""; display:block; clear:both; }
+    .xans-board-commentwrite-11 .boardCommentWrite .byteRating .displaynone { display:none; }
+    .xans-board-commentwrite-11 .boardCommentWrite .rating { float:left; padding:0; width:75%; }
+    .xans-board-commentwrite-11 .boardCommentWrite .rating label { margin-right:5px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .rating input { margin-right:2px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .byte { float:right; margin:-4px 0 0; padding:0; width:25%; font-size:11px; text-align:right; }
+    .xans-board-commentwrite-11 .boardCommentWrite .captcha { overflow:hidden; position:relative; margin:7px 0; padding:0 14px 0 128px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .captcha .img { position:absolute; left:14px; width:110px; }
+    .xans-board-commentwrite-11 .boardCommentWrite .captcha .form { margin:0; width:100%; }
+    .xans-board-commentwrite-11 .boardCommentWrite .captcha p { margin:14px 0 0 -114px; padding:0 0 0 20px; min-width:280px; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 50%; background-size:13px 13px; }
+    .xans-board-commentwrite-11 .boardCommentWrite #captcha  { margin:2px 0 0 0; width:100%; }
+    .xans-board-commentwrite-11 .gRight { margin:0 14px; padding:0; text-align:right; }
+    /* 권한 없음 */
+    .xans-board-commentwrite-11 .boardCommentAuthority { margin:0 0 14px; padding:14px; font-size:11px; text-align:left; background:#f9f9f9; }
+
+/* 댓글의 댓글 작성 */
+.xans-board-commentreply-11 { background-color:#f1f1f1; }
+    /* 권한 있음 */
+    .xans-board-commentreply-11 .boardCommentWrite  fieldset { padding:7px 0 0; border-top:1px solid #d5d5d5; }
+    .xans-board-commentreply-11 .boardCommentWrite .label { padding:0 7px 0 0; color:#757575; font-weight:normal; vertical-align:middle; letter-spacing:-1px; }
+    .xans-board-commentreply-11 .boardCommentWrite .label.hide { display:none; }
+    .xans-board-commentreply-11 .boardCommentWrite .info { margin:0 0 5px; padding:0 14px; }
+    .xans-board-commentreply-11 .boardCommentWrite .info:after { content:""; display:block; clear:both; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p:before { background:none; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p,
+    .xans-board-commentreply-11 .boardCommentWrite .info p:first-child { padding:0; background:none; font-size:13px; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p.name { float:left; margin-right:3%; width:46%; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p.password { float:right; width:51%; border-bottom:0; text-align:right; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p.name #comment_name { width:60%; }
+    .xans-board-commentreply-11 .boardCommentWrite .info p.password #comment_password { width:60%; }
+    .xans-board-commentreply-11 .boardCommentWrite .admin { margin:7px 0 0; }
+    .xans-board-commentreply-11 .boardCommentWrite .admin a { display:block; text-align:center; }
+    .xans-board-commentreply-11 .boardCommentWrite .comment { margin:7px 14px; }
+    .xans-board-commentreply-11 .boardCommentWrite .comment textarea#comment { width:100%; height:50px; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+    .xans-board-commentreply-11 .boardCommentWrite .byteRating { padding:0 14px; }
+    .xans-board-commentreply-11 .boardCommentWrite .byteRating:after { content:""; display:block; clear:both; }
+    .xans-board-commentreply-11 .boardCommentWrite .rating { float:left; padding:0; width:75%; }
+    .xans-board-commentreply-11 .boardCommentWrite .rating label { margin-right:5px; }
+    .xans-board-commentreply-11 .boardCommentWrite .rating input { margin-right:2px; }
+    .xans-board-commentreply-11 .boardCommentWrite .byte { float:right; margin:-4px 0 7px; padding:0; width:25%; font-size:11px; text-align:right; }
+    .xans-board-commentreply-11 .boardCommentWrite .captcha { overflow:hidden; position:relative; margin:7px 0; padding:0 14px 0 128px; }
+    .xans-board-commentreply-11 .boardCommentWrite .captcha .img { position:absolute; left:14px; width:110px; }
+    .xans-board-commentreply-11 .boardCommentWrite .captcha .form { margin:0; width:100%; }
+    .xans-board-commentreply-11 .boardCommentWrite .captcha p { margin:14px 0 0 -114px; padding:0 0 0 20px; min-width:280px; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 50%; background-size:13px 13px; }
+    .xans-board-commentreply-11 .boardCommentWrite .gRight { margin:0 14px 7px; text-align:right; }
+    .xans-board-commentreply-11 .boardCommentWrite  #captcha  { margin:2px 0 0 0; width:100%; }
+    /* 권한 없음 */
+    .xans-board-commentreply-11 .boardCommentAuthority { padding-top:5px; font-size:11px; text-align:left; background:#f9f9f9; }

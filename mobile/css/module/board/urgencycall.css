@@ -1,0 +1,21 @@
+.xans-mall-urgencycall .required { margin:19px 14px 7px 7px; font-size:11px; text-align:right; }
+.xans-mall-urgencycall .required img { vertical-align:middle; }
+.xans-mall-urgencycall .boardWrite { margin:0 7px; }
+.xans-mall-urgencycall table { border:1px solid #cccccc; font-size:12px; background:#fff; }
+.xans-mall-urgencycall table tr.reply label { margin:0 8px 0 0; }
+.xans-mall-urgencycall table tr.info input[type="checkbox"] { position:absolute; }
+.xans-mall-urgencycall table tr.info label { text-indent:20px; line-height:1.5em; }
+.xans-mall-urgencycall table th { padding:7px 0 7px 10px;width:90px; color:#757575; text-align:left; border-bottom:1px solid #ececec; }
+.xans-mall-urgencycall table .searchTxt { letter-spacing:-1px; }
+.xans-mall-urgencycall table td { padding:7px 5px; text-align:left; border-bottom:1px solid #ececec; }
+.xans-mall-urgencycall table tr:last-of-type th,
+.xans-mall-urgencycall table tr:last-of-type td { border-bottom:0; }
+.xans-mall-urgencycall select { width:100%; }
+.xans-mall-urgencycall input[type="text"],
+.xans-mall-urgencycall textarea { width:100%;vertical-align:middle; }
+.xans-mall-urgencycall .captcha td span { display:block; margin:5px 0 0; }
+.xans-mall-urgencycall .prdOrder { position:relative; }
+.xans-mall-urgencycall .prdOrder span { display:block; margin:0 51px 0 0; }
+.xans-mall-urgencycall #opensearch { position:absolute; right:7px; top:7px; height:29px; border:0; border-bottom:1px solid #c5c5c5; vertical-align:middle; }
+.xans-mall-urgencycall .btnArea.type2 { padding:10px 3px 29px; margin:0 7px; max-width:100%; }
+.xans-mall-urgencycall .btnArea.type2 a { vertical-align:top; }

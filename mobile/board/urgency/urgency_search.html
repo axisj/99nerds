@@ -1,0 +1,48 @@
+<div module="Mall_UrgencycallSearchoutline">
+    <!--@css(/css/module/board/urgencycallSearchoutline.css)-->
+    <h2>{$sPrdOrdText}</h2>
+    <button type="button" class="close" onclick="{$closeSearchLayer}">닫기</button>
+
+    <div class="wrap">
+        <div class="content">
+            <div id="tablist" class="tab typeStrong gFlex {$tabDisplay|display}">
+                <ul>
+                    <li id="liOrdtab" class="selected" onClick="{$clickOrdTab}"><a href="#none" id="tabordno" name="tabordno">주문번호</a></li>
+                    <li id="liPrdtab" onClick="{$clickPrdTab}" ><a href="#none" id="tabprdno" name="tabprdno">상품</a></li>
+                </ul>
+            </div>
+            {$form.isLogin}
+
+            <!-- 주문번호 검색 -->
+            <div id="urgencyOrder" class="urgencyOrder {$ordDisplay|display}"></div>
+            <!-- //주문번호 검색 -->
+
+            <!-- 상품 검색 -->
+            <div id="urgencyProduct" class="urgencyProduct {$prdDisplay|display}">
+                <table border="1" summary="" class="boardSearch">
+                    <caption>상품검색</caption>
+                    <colgroup>
+                        <col style="width:102px;">
+                        <col style="width:auto;">
+                        <col style="width:61px;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                {$form.selPrdsearch}
+                            </th>
+                            <td>{$form.txtProductInfo}</td>
+                            <td class="prdSearch"><a href="#none" id="execSearch" name="execSearch" onClick="{$search_product}" class="btnStrong">검색</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="prdSearchResult"></div>
+            </div>
+            <!-- //상품 검색 -->
+        </div>
+
+        <div class="btnArea">
+            <button type="button" class="btnNormal close" onclick="{$closeSearchLayer}">닫기</button>
+        </div>
+    </div>
+</div>

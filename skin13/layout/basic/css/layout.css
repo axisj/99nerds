@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* Layout */
+#header { background:url("//img.echosting.cafe24.com/skin/base/layout/bg_body.gif") repeat-x 0 0; }
+#header .inner { position:relative; width:1218px; margin:0 auto; *zoom:1; }
+#header .inner:after { content:""; display:block; clear:both; }
+#header .topArea { height:112px; padding:83px 0 0; text-align:center; *zoom:1; }
+#header .topArea:after { content:""; display:block; clear:both; }
+#header .special { float:left; border-left:1px solid #d8d8d8; }
+#header .special li { float:left; }
+#header .special a { display:block; height:20px; padding:16px 15px 9px; border-right:1px solid #d8d8d8; color:#353535; text-decoration:none; }
+#header .special a:hover { color:#008bcc; padding-bottom:7px; border-bottom:2px solid #008bcc; }
+#header .link { position:absolute; left:0; top:0; height:35px; line-height:35px; }
+#header .link > a,
+#header .link > span { float:left; }
+#header .link > a { margin:0 9px 0 0; padding:0 10px 0 0; color:#666; text-decoration:none; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 100% 12px; }
+#header .link > span img { vertical-align:middle; }
+#header .link .xans-layout-bookmark span { padding-left:17px; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_bookmark.png") no-repeat 0 1px; }
+
+#wrap { position:relative; width:1460px; margin:27px auto 0; }
+#container { width:1218px; margin:0 auto; *zoom:1; }
+#container:after { content:""; display:block; clear:both; }
+#sidebar { float:left; width:180px; }
+#sidebar .banner { padding:0 0 20px; border-bottom:1px solid #e8e8e8; }
+#sidebar .banner p a { display:block; }
+#contents { float:right; width:1014px; }
+#contents .visual img { max-width:100%; }
+#banner { position:absolute; top:0; left:0; width:90px; }
+#quick { position:absolute; top:0; right:0; width:90px; }
+#quick .banner a { display:block; margin:15px 0 0; }
+
+#footer { background:url("//img.echosting.cafe24.com/skin/base/layout/bg_footer.gif") repeat-x 0 100%; }
+#footer .inner { overflow:hidden; position:relative; width:1218px; margin:40px auto 0; *zoom:1; }
+
+/* Main */
+#boardArea { overflow:hidden; margin:50px 0 0; border-top:1px solid #d8d8d8; }
+#bannerArea { margin:22px 0 0; }
+#bannerArea h2 { margin:0 0 16px; font-weight:normal; font-size:20px; color:#2e2e2e; text-align:center; }
+
+/* 탐색경로바 */
+.path { overflow:hidden; height:30px; line-height:30px; *zoom:1; }
+.path span { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:100%; }
+.path ol { float:right; }
+.path li { float:left; padding:0 0 0 12px; margin:0 0 0 8px; color:#757575; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_path.gif") no-repeat 0 10px; }
+.path li:first-child { background:none; }
+.path li a { color:#757575; }
+.path li strong,
+.path li strong a { color:#2e2e2e; }
+
+/* 타이틀 */
+.titleArea { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }
+.titleArea h2 { display:inline-block; padding:0 0 0 12px; color:#2e2e2e; font-size:16px; *display:inline; *zoom:1; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif") 0 50% no-repeat; }
+.titleArea p { display:inline-block; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_bar.gif") no-repeat 0 0; *display:inline; *zoom:1; }
+.titleArea ul { padding:5px 0; color:#939393; line-height:18px; }
+.titleArea ul li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_square2.gif") no-repeat 4px 7px; }
+
+/* 게시판 메인 */
+.boardMain { overflow:hidden; *zoom:1; }
+.boardMain td img { vertical-align:middle; margin:1px; }
+.boardMain .board { position:relative; margin:0 0 65px; }
+.boardMain .leftArea { float:left; width:50%; }
+.boardMain .leftArea .board { margin:0 23px 65px 0; }
+.boardMain .rightArea { float:right; width:50%; }
+.boardMain .rightArea .board { margin:0 0 65px 23px; }
+.boardMain .board h3 { margin:0 0 13px; height:28px; font-size:16px; color:#2e2e2e; border-bottom:2px solid #626672; }
+.boardMain .board .more { position:absolute; top:0; right:0; padding:2px; }
+.boardMain .board .ec-base-table.typeList td { color:#a4a4a4; }
+.boardMain .board .ec-base-table.typeList td.title a,
+.boardMain .board .ec-base-table.typeList td.title a:hover { color:#4f4f4f; }
+.boardMain .board .galleryList { overflow:hidden; }
+.boardMain .board .galleryList ul { overflow:hidden; margin:0 -10px; }
+.boardMain .board .galleryList li { float:left; position:relative; width:20%; padding:0 0 12px 0; word-break:break-all; }
+.boardMain .board .galleryList li span { display:block; margin:0 10px; font-size:11px; color:#a4a4a4; }
+.boardMain .board .galleryList li .imgLink,
+.boardMain .board .galleryList li .imgLink:hover { display:block; margin:0 10px 5px; font-size:12px; }
+.boardMain .board .galleryList li .imgLink img { width:100%; max-height:110px; border:1px solid #ededed; }
+
+/* 퀵뷰 모달 */
+#modalBackpanel { display:none; position:absolute; top:0; left:0; z-index:10000; width:100%; height:100%; background:#000; }
+#modalContainer { display:none; position:absolute; top:100px; left:100px; z-index:10001; width:975px; height:720px; border:1px solid #333; background:#fff; }
+#modalContainer #modalContent { width:100%; height:100%; }

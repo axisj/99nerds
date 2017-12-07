@@ -1,0 +1,420 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>회원 정보 수정</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_updateeventlogon" class="{$display_updateevent|display}">
+    <!--@css(/css/module/member/updateeventlogon.css)-->
+    <p class="title">회원정보 수정 이벤트를 진행중입니다.</p>
+    <ul>
+        <li>이벤트 기간 : {$update_event_period}</li>
+        <li>이벤트 조건을 충족한 경우 {$update_event_reward_type}이 지급됩니다.<br />(상세 조건은 PC버전에서 확인할 수 있습니다.)</li>
+    </ul>
+</div>
+
+<div module="member_edit">
+    <!--@css(/css/module/member/edit.css)-->
+    <!--
+        $login_page = /member/login.html
+     -->
+     <div class="{$display_certification_form|display}">
+        <h3>회원인증</h3>
+        <div class="boardWrite typeCertificate">
+            <table border="1" summary="">
+            <caption>회원인증</caption>
+            <tbody>
+                <tr class="{$display_member_type|display}">
+                    <th scope="row">회원구분</th>
+                    <td>{$member_type}</td>
+                </tr>
+                <tr>
+                    <th scope="row">인증여부</th>
+                    <td>
+                        <strong class="txtEm">미인증</strong>
+                    </td>
+                </tr>
+                <tr class="{$display_certification_method|display}">
+                    <th scope="row">회원인증</th>
+                    <td>
+                        {$form.personal_type}
+                        <div class="certifForm" id="ipinWrap">
+                            <a href="#none" onclick="{$action_ipin_open}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_Ipin.gif" width="106" alt="아이핀 인증"></a>
+                        </div>
+                        <div class="certifForm" id="mobileWrap">
+                            <a href="#none" onclick="{$action_mobile_open}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_mobile_check.gif" width="106" alt="휴대폰 인증"></a>
+                        </div>
+                        <div class="certifForm" id="emailWrap">
+                            <p class="certifInfo">기본정보 &gt; 이메일 항목에 입력하신 정보로 본인인증을 진행합니다. 정보수정 후에 입력하신 이메일 주소로 인증 메일이 발송되오니, 확인해 주시기 바랍니다.</p>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h3>기본정보 <span><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수">필수</span></h3>
+    <div class="boardWrite">
+        <table border="1" summary="">
+        <caption>회원 기본정보</caption>
+        <tbody>
+            <tr>
+                <th scope="row">아이디 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>
+                    {$form.member_id}
+                    {$form.user_id_dupl}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">{$display_passwd_title} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_is_none_certification|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.passwd} {$passwd_type_desc}</td>
+            </tr>
+            <tr class="{$display_is_none_certification|display}">
+                <th scope="row">비밀번호<br>확인 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}"></span></td>
+            </tr>
+            <tr class="{$display_is_certification|display}">
+                <th scope="row">새 비밀번호</th>
+                <td>{$form.new_passwd} {$passwd_type_desc}</td>
+            </tr>
+            <tr class="{$display_is_certification|display}">
+                <th scope="row">새 비밀번호 확인</th>
+                <td>{$form.new_passwd_confirm} <span id="{$newPwConfirmMsg_id}"></span></td>
+            </tr>
+            <tr class="{$display_hint|display}">
+                <th scope="row">비밀번호<br>확인질문 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.hint}</td>
+            </tr>
+            <tr class="{$display_hint_answer|display}">
+                <th scope="row">비밀번호<br>확인답변 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.hint_answer}</td>
+            </tr>
+            <tr style="display:{$display_name}">
+                <th scope="row" id="{$name_title}">이름 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.name}</td>
+            </tr>
+            <tr class="{$display_eng_name|display}">
+                <th scope="row">이름(영문) <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_name_en|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.name_en}</td>
+            </tr>
+            <tr class="{$display_foreigner_ssn|display}">
+                <th scope="row">{$foreigner_type}</th>
+                <td>{$foreigner_ssn}</td>
+            </tr>
+            <tr class="{$display_coroperate|display}">
+                <th scope="row">법인명</th>
+                <td>{$coroperate_name}</td>
+            </tr>
+            <tr class="{$display_coroperate|display}">
+                <th scope="row">법인번호</th>
+                <td>{$coroperate_ssn}</td>
+            </tr>
+            <tr class="{$display_company|display}">
+                <th scope="row">상호명</th>
+                <td>{$form.cname}</td>
+            </tr>
+            <tr class="{$display_company|display}">
+                <th scope="row">사업자번호</th>
+                <td>{$form.cssn}</td>
+            </tr>
+            <tr class="{$display_nation|display}">
+                <th scope="row">국적</th>
+                <td>{$form.citizenship}</td>
+            </tr>
+            <tr class="{$display_addr|display}">
+                <th scope="row">주소 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_address|display}" width="5" height="5" alt="필수"></th>
+                <td>
+                    {$form.postcode1}
+                    <button type="button" class="btnBasic" onclick="{$action_find_address}" id="{$btn_find_post}">우편번호</button><br>
+                    {$form.addr1}<br>
+                    {$form.addr2} {$address2_desc}
+                </td>
+            </tr>
+            <tr class="{$display_phone|display}">
+                <th scope="row">일반전화 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_phone|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.phone}</td>
+            </tr>
+            <tr class="{$display_mobile|display}">
+                <th scope="row">휴대전화 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_cell|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.mobile}</td>
+            </tr>
+            <tr class="{$display_is_sms|display}">
+                <th scope="row">SMS<br>수신여부 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.is_sms}</td>
+            </tr>
+            <tr>
+                <th scope="row">이메일 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>
+                    {$form.email} <button type="button" class="btnBasic" onclick="{$action_check_email}">중복확인</button> <p id="{$emailMsg_id}"></p>
+                    <p class="info {$display_is_email_auth_info|display}">이메일 주소 변경 시 로그아웃 후 재인증을 하셔야만 로그인이 가능합니다.</p>
+                </td>
+            </tr>
+            <tr class="{$display_is_news_mail|display}">
+                <th scope="row">이메일<br>수신여부 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.is_news_mail}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <h3 class="{$display_add_title|display}">추가정보</h3>
+    <div class="boardWrite {$display_add_title|display}">
+        <table border="1" summary="">
+        <caption>회원 추가정보</caption>
+        <tbody>
+            <tr class="{$display_nick|display}">
+                <th scope="row">별명 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_nick_name_flag|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.nick_name}</td>
+            </tr>
+            <tr class="{$display_is_sex|display}">
+                <th scope="row">성별 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_sex|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.is_sex}</td>
+            </tr>
+            <tr class="{$display_birthday|display}">
+                <th scope="row">생년월일 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_is_birthday|display}" width="5" height="5" alt="필수"></th>
+                <td><p class="grid {$display_calendar_type|display}">{$form.is_solar_calendar}</p>{$form.birth_year} 년 {$form.birth_month} 월 {$form.birth_day} 일</td>
+            </tr>
+            <tr class="{$display_marry|display}">
+                <th scope="row">결혼기념일 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_is_wedding_anniversary|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.marry_year} 년 {$form.marry_month} 월 {$form.marry_day} 일</td>
+            </tr>
+            <tr class="{$display_partner|display}">
+                <th scope="row">배우자생일 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_is_life_partner|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.partner_year} 년 {$form.partner_month} 월 {$form.partner_day} 일</td>
+            </tr>
+            <tr class="{$display_child|display}">
+                <th scope="row">자녀 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_child|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.child}</td>
+            </tr>
+            <tr class="{$display_school|display}">
+                <th scope="row">최종학력 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_school|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.school}</td>
+            </tr>
+            <tr class="{$display_job_class|display}">
+                <th scope="row">직종 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_job_class|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.job_class}</td>
+            </tr>
+            <tr class="{$display_job|display}">
+                <th scope="row">직업 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_job|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.job}</td>
+            </tr>
+            <tr class="{$display_earning|display}">
+                <th scope="row">연소득 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_earning|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.earning}</td>
+            </tr>
+            <tr class="{$display_car|display}">
+                <th scope="row">자동차 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_car|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.car}</td>
+            </tr>
+            <tr class="{$display_region|display}">
+                <th scope="row">지역 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_region|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.region}</td>
+            </tr>
+            <tr class="{$display_internet|display}">
+                <th scope="row">인터넷<br>이용장소 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_internet|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.internet}</td>
+            </tr>
+            <tr class="{$display_inter|display}">
+                <td class="thead" colspan="2"><p>관심분야 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_interest|display}" width="5" height="5" alt="필수"></p><div class="interest">{$form.inter_check}</div></td>
+            </tr>
+            <tr class="{$display_add1|display}">
+                <th scope="row">{$title_add1} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add1|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add1}</td>
+            </tr>
+            <tr class="{$display_add2|display}">
+                <th scope="row">{$title_add2} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add2|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add2}</td>
+            </tr>
+            <tr class="{$display_add3|display}">
+                <th scope="row">{$title_add3} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add3|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add3}</td>
+            </tr>
+            <tr class="{$display_add4|display}">
+                <th scope="row">{$title_add4} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add4|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add4}</td>
+            </tr>
+            <tr class="{$display_add5|display}">
+                <th scope="row">{$title_add5} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add5|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add5}</td>
+            </tr>
+            <tr class="{$display_add6|display}">
+                <th scope="row">{$title_add6} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add6|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add6}</td>
+            </tr>
+            <tr class="{$display_add7|display}">
+                <th scope="row">{$title_add7} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add7|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add7}</td>
+            </tr>
+            <tr class="{$display_add8|display}">
+                <th scope="row">{$title_add8} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add8|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add8}</td>
+            </tr>
+            <tr class="{$display_add9|display}">
+                <th scope="row">{$title_add9} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add9|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add9}</td>
+            </tr>
+            <tr class="{$display_add10|display}">
+                <th scope="row">{$title_add10} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add10|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add10}</td>
+            </tr>
+            <tr class="{$display_add11|display}">
+                <th scope="row">{$title_add11} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add11|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add11}</td>
+            </tr>
+            <tr class="{$display_add12|display}">
+                <th scope="row">{$title_add12} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add12|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add12}</td>
+            </tr>
+            <tr class="{$display_add13|display}">
+                <th scope="row">{$title_add13} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add13|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add13}</td>
+            </tr>
+            <tr class="{$display_add14|display}">
+                <th scope="row">{$title_add14} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add14|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add14}</td>
+            </tr>
+            <tr class="{$display_add15|display}">
+                <th scope="row">{$title_add15} <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_add15|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.add15}</td>
+            </tr>
+            <tr class="{$display_reco_id|display}">
+                <th scope="row">추천인아이디 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_reco_id|display}" width="5" height="5" alt="필수"></th>
+                <td>{$form.reco_id}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="titleArea accountArea {$display_bank_info|display}">
+        <h3>환불계좌</h3>
+    </div>
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>회원 추가정보</caption>
+            <tbody>
+                <tr class="{$display_bank_info|display}">
+                    <th scope="row">계좌정보 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" class="{$display_required_bank_account_no|display}" width="5" height="5" alt="필수"></th>
+                    <td class="account">
+                        <span id="{$id_bank_info}">{$bank_info}</span>
+                        <p><a href="#none" {$action_reg_bank} class="btnBasic" ><span id="id_has_bank_img" class="{$display_has_bank|display}" >환불계좌변경</span><span id="id_reg_bank_img" class="{$display_reg_bank|display}">환불계좌등록</span></a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div module="member_editInformation">
+        <h3>제3자 정보제공 동의현황</h3>
+        <div class="boardList">
+            <table border="1" summary="">
+                <caption>제3자 정보제공 동의현황</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:15%;">
+                    <col style="width:25%;">
+                    <col style="width:15%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">제공서비스</th>
+                        <th scope="col">제공받는 자</th>
+                        <th scope="col">개인정보 이용 목적</th>
+                        <th scope="col">제공하는<br>개인정보 항목</th>
+                        <th scope="col">보유기간</th>
+                        <th scope="col">동의여부</th>
+                        <th scope="col">동의/철회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$perinfo_offer}</td>
+                        <td>{$perinfo_purpose}</td>
+                        <td>{$perinfo_item}</td>
+                        <td class="center">{$perinfo_retain}</td>
+                        <td class="center">{$perinfo_status}</td>
+                        <td class="center">{$perinfo_button}</td>
+                    </tr>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$perinfo_offer}</td>
+                        <td>{$perinfo_purpose}</td>
+                        <td>{$perinfo_item}</td>
+                        <td class="center">{$perinfo_retain}</td>
+                        <td class="center">{$perinfo_status}</td>
+                        <td class="center">{$perinfo_button}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="info">- 정보제공에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
+    </div>
+    <div module="member_editConsignment">
+        <h3>처리위탁 동의현황</h3>
+        <div class="boardList">
+            <table border="1" summary="">
+                <caption>처리위탁 동의현황</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:20%;">
+                    <col style="width:30%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">제공서비스</th>
+                        <th scope="col">위탁받은 자</th>
+                        <th scope="col">위탁업무의 내용</th>
+                        <th scope="col">보유기간</th>
+                        <th scope="col">동의여부</th>
+                        <th scope="col">동의/철회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$trust_target}</td>
+                        <td>{$trust_work}</td>
+                        <td class="center">{$trust_retain}</td>
+                        <td class="center">{$trust_status}</td>
+                        <td class="center">{$trust_button}</td>
+                    </tr>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$trust_target}</td>
+                        <td>{$trust_work}</td>
+                        <td class="center">{$trust_retain}</td>
+                        <td class="center">{$trust_status}</td>
+                        <td class="center">{$trust_button}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="info">- 처리위탁에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
+    </div>
+
+    <div class="{$display_information|display} agreeArea">
+        <div class="title">
+            <h4>{$form.agree_information_check}<label for="agree_information_check0" class="check">개인정보 제3자 제공 동의(선택)</label></h4>
+            <a href="/member/agreement/agreement3.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$information_desc}</div>
+    </div>
+    <div class="{$display_consignment|display} agreeArea">
+        <div class="title">
+            <h4>{$form.agree_consignment_check}<label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의(선택)</label></h4>
+            <a href="/member/agreement/agreement4.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$consignment_desc}</div>
+    </div>
+
+    <div class="btnArea type2">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_join}">회원정보수정</a>
+        <a href="/index.html" class="btnEm">취소</a>
+    </div>
+</div>

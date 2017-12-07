@@ -1,0 +1,98 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>상품목록</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="Mall_SupplySearch">
+    <!--@css(/css/module/mall/supplySearch.css)-->
+    <!--@js(/js/module/mall/supplySearch.js)-->
+    <fieldset>
+        <legend>샵상품 검색</legend>
+        {$form.searchSupply}
+        <button type="button" onclick="{$action_search_submit}" class="btnStrong">검색</button></fieldset>
+</div>
+
+<div module="Mall_SupplyMainimage">
+    <!--@css(/css/module/mall/supplyMainimage.css)-->
+    {$supply_main_image}
+</div>
+
+<div class="ec-base-product typeThumb" module="product_listmain_1">
+    <!--@js(/js/module/product/listnormal.js)-->
+    <!--
+        $count = 9
+            ※ 노출시킬 상품의 갯수를 숫자로 설정할 수 있으며, 설정하지 않을경우, 최대 200개로 자동제한됩니다.
+            ※ 상품 노출갯수가 많으면 쇼핑몰에 부하가 발생할 수 있습니다.
+        $moreview = yes
+    -->
+    <ul class="prdList grid3">
+        <li>
+            <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a></div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons}</li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+                    <li class="price {$product_sale_display|display}">{$product_sale_price}</li>
+                    <li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};"></span>
+                            <span class="chips" style="background-color:{$color};"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a></div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons}</li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+                    <li class="price {$product_sale_display|display}">{$product_sale_price}</li>
+                    <li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};"></span>
+                            <span class="chips" style="background-color:{$color};"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div module="product_listmore_1" class="paginate typeMoreview">
+    <a href="#none" onclick="{$more_action}">
+        더보기(<span id="more_current_page_{$display_group}">{$current_page}</span>/<span id="more_total_page_{$display_group}">{$total_page}</span>)
+        <span class="icoMore"></span>
+    </a>
+</div>
+
+<div class="supplyArea">
+    <div module="Layout_CategorySupplyList">
+        <!--@css(/css/module/layout/categorySupplyList.css)-->
+        <!--@js(/js/module/layout/categorySupplyList.js)-->
+        <h3>상품 분류</h3>
+        <ul module="Layout_Second">
+            <li>
+                <strong id="{$category_id}"><a href='{$category_url}'>{$category_name}</a></strong>
+                <div module="Layout_Third">
+                    <ul class='subCategory active'>
+                        <li><a href='{$category_url}'>{$category_name}</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 공급사:판매사정보 -->
+    <div module="Mall_SupplyInfo" class="{$supply_info_display|display}">
+        <h3>판매자 정보</h3>
+        {$supply_info}
+    </div>
+    <!-- //공급사:판매사정보 -->
+</div>

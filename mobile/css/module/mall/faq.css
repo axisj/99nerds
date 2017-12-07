@@ -1,0 +1,6 @@
+.xans-mall-faq { margin:14px 7px 0; padding:0 0 29px; font-size:13px; }
+.xans-mall-faq dt { position:relative; margin-top:-1px; padding:0 0 0 14px; line-height:43px; font-size:12px; cursor:pointer; border:1px solid #d5d5d5; background-color:#fff; }
+.xans-mall-faq dt:after { content:""; position:absolute; right:10px; top:0; width:20px; height:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") no-repeat 0 center; background-size:20px 20px; }
+.xans-mall-faq dd { display:none; padding:10px 10px; font-size:12px; line-height:1.5; border:1px solid #d5d5d5; border-top:0; background-color:#f5f5f6; }
+.xans-mall-faq dd.selected { display:block; }
+.xans-mall-faq dt.selected:after { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform:rotate(180deg); background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }

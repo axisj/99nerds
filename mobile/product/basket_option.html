@@ -1,0 +1,176 @@
+<!--@layout(/layout/basic/popup.html)-->
+<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+<div module="Product_OptionSelectLayer">
+    <!--@css(/css/module/product/optionSelectLayer.css)-->
+    <h2>옵션 선택</h2>
+    <div class="content">
+        <div module="product_detail" class="inner">
+            <h3 class="name">{$name}</h3>
+            <div class="productNormal">
+                <table border="1" summary="">
+                    <caption>상품 옵션</caption>
+                    <colgroup>
+                        <col width="78px;">
+                        <col width="auto;">
+                    </colgroup>
+                    <tbody module="product_option">
+                        <tr module="product_addoption">
+                            <!-- 추가입력 옵션 -->
+                            <th scope="row">{$add_option_name}</th>
+                            <td>
+                                <span class="inputWrap">{$form.add_option}</span>
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                            </td>
+                        </tr>
+                        <tr module="product_option">
+                            <th scope="row">{$option_name}</th>
+                            <td>{$form.option}<p class="value">{$option_desc}</p></td>
+                        </tr>
+                        <tr module="product_fileoption">
+                            <th scope="row">{$file_option_name}</th>
+                            <td class="fileInfo">
+                                {$form.file_option}<ul class="infoDesc">
+                                    <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
+                                    <li>- 동일상품이 장바구니에 있을 경우 현재 업로드 되는 파일로 교체됩니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div module="product_setproduct" class="productSet normal">
+                <div class="product">
+                    <div class="seperate">
+                        <p><strong>{$product_name}</strong> ({$set_quantity}개씩 구매되는 상품)</p>
+                    </div>
+                    <div class="option">
+                        <table border="1" summary="">
+                            <caption>옵션 정보</caption>
+                            <colgroup>
+                                <col width="78px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr module="product_addoption">
+                                    <th>{$add_option_name}</th>
+                                    <td>
+                                        <span class="inputWrap">{$form.add_option}</span>
+                                        <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                                    </td>
+                                </tr>
+                                <tr module="product_option">
+                                    <th>{$option_name}</th>
+                                    <td>{$form.option}<p class="value">{$option_desc}</p></td>
+                                </tr>
+                                <tr module="product_noneoption">
+                                    <th>상품선택</th>
+                                    <td>{$form.noneoption}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="seperate">
+                        <p><strong>{$product_name}</strong> ({$set_quantity}개씩 구매되는 상품)</p>
+                    </div>
+                    <div class="option">
+                        <table border="1" summary="">
+                            <caption>옵션 정보</caption>
+                            <colgroup>
+                                <col width="78px;">
+                                <col width="auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr module="product_addoption">
+                                    <th>{$add_option_name}</th>
+                                    <td>
+                                        <span class="inputWrap">{$form.add_option}</span>
+                                        <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                                    </td>
+                                </tr>
+                                <tr module="product_option">
+                                    <th>{$option_name}</th>
+                                    <td>{$form.option}<p class="value">{$option_desc}</p></td>
+                                </tr>
+                                <tr module="product_noneoption">
+                                    <th>상품선택</th>
+                                    <td>{$form.noneoption}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!-- //참고 -->
+            <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+            <div id="{$total.total_id}" class="{$total.total_display|display}">
+                <p class="help">수량을 선택해주세요.</p>
+                <p class="help">위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
+                <table border="1" summary="">
+                    <caption>상품 목록</caption>
+                    <colgroup>
+                        <col style="width:auto;">
+                        <col style="width:90px;">
+                        <col style="width:30px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">상품명</th>
+                            <th scope="col">상품수</th>
+                            <th scope="col">가격</th>
+                        </tr>
+                    </thead>
+                    <tbody class="{$quantity_display|display}">
+                        <tr>
+                            <td>
+                                {$name}
+                                <p>
+                                    {$quantity}
+                                    <a href="#none"><img width="30" height="27" src="//img.echosting.cafe24.com/mobileWeb/common/btn_quantity_up.png" id="option_box1_up" class="{$quantity_up_class} up" alt="수량증가"></a> &nbsp;
+                                    <a href="#none"><img width="30" height="27" src="//img.echosting.cafe24.com/mobileWeb/common/btn_quantity_down.png" id="option_box1_down" class="{$quantity_down_class} down" alt="수량감소"></a>
+                                </p>
+                            </td>
+                            <td class="right">
+                                <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}"> &nbsp;<span class="{$total.mileage_price}">{$mileage_value}</span>)</span>
+                            </td>
+                            <td class="center"></td>
+                        </tr>
+                    </tbody>
+                    <!-- 참고 : 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다.-->
+                    <tbody>
+                        <!-- tr>
+                            <td>
+                                <p class="product">
+                                    <strong>$상품명</strong><br>
+                                    - <span>$옵션</span>
+                                </p>
+                                <p>
+                                    <input type="number" class="quantity_opt">
+                                    <a href="#none"><img width="30" height="27" src="//img.echosting.cafe24.com/mobileWeb/common/btn_quantity_up.png" class="up option_box_up" alt="수량증가"></a> &nbsp;
+                                    <a href="#none"><img width="30" height="27" src="//img.echosting.cafe24.com/mobileWeb/common/btn_quantity_down.png" class="down option_box_down" alt="수량감소"></a>
+                                </p>
+                            </td>
+                            <td class="right">
+                                <strong class="price"><span>$가격</span></strong>
+                                <span class="mileage">(<img src="//img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_product_point.gif"> <span>$적립금</span>)</span>
+                            </td>
+                            <td class="center"><a href="#none" class="delete"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_price_delete.gif" alt="삭제" class="option_box_del"></a></td>
+                        </tr -->
+                    </tbody>
+                    <!-- //참고 -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <strong>총 상품금액</strong>(수량) : <span class="{$total.total_cnt}"><strong class="price">0</strong> (0개)</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div><!-- //참고 -->
+        </div>
+    </div>
+    <div module="product_action" class="btnArea type2">
+        <a href="#none" class="btnSubmit {$basket_display|display}" onclick="{$action_basket}">장바구니 담기</a>
+        <a href="#none" class="btnEm close">닫기</a>
+    </div>
+</div><!-- //참고 -->

@@ -1,0 +1,14 @@
+.xans-member-findidresult { margin:14px 7px 0; padding:0 0 29px; color:#333; font-size:13px; }
+.xans-member-findidresult .info { padding:25px 21px 20px; border:1px solid #d5d5d5; text-align:center; background:#fff; }
+.xans-member-findidresult .info p:last-child { margin:10px 0 0; }
+.xans-member-findidresult .info span { color:#508bed; font-size:15px; font-weight:bold; }
+.xans-member-findidresult .info strong { color:#508bed; font-weight:bold; }
+
+.xans-member-findidresult table { margin:7px auto 0; border:1px solid #d5d5d5; color:#353535; background:#fff; }
+.xans-member-findidresult th { width:80px; padding:0px 5px 14px 14px; text-align:left; color:#757575; font-weight:normal; vertical-align:middle; }
+.xans-member-findidresult td { padding:0px 14px 14px 14px; vertical-align:middle; }
+.xans-member-findidresult tr:first-child th,
+.xans-member-findidresult tr:first-child td { padding-top:14px; }
+.xans-member-findidresult .list { padding:14px; border:1px solid #d5d5d5; border-top:none; background:#fff; }
+
+.xans-member-findidresult .btnArea.type2 { margin:14px auto 0; }

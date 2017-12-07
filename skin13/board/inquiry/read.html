@@ -1,0 +1,146 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>대량구매문의 관리</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">대량구매문의 관리</h2>
+    <p>고객님이 요청하신 상품 대량구매문의 내역 입니다.</p>
+</div>
+
+
+<div module="board_InquiryHead" class="boxTheme mid-0">
+    <div class="division">
+        <div class="heading"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" alt="" style="max-width:90px; max-height:130px;" /></a></div>
+        <div class="info">
+            {$user_icon} {$new_icon} {$recommend_icon} {$soldout_icon} {$mileage_icon}
+            <strong class="gSingle"><a href="/product/detail.html{$param_product}">{$product_name}</a></strong>
+            <strong class="gSingle">{$product_price}</strong>
+            <p class="line gDouble"><a href="/product/detail.html{$param_product}" class="btnEm" title="새창으로 이동">상품상세보기</a></p>
+        </div>
+    </div>
+</div>
+
+
+<div module="board_InquiryView" class="tableTheme mid-0">
+    <!--@css(/css/module/board/inquiryView.css)-->
+    <!--
+        $login_page = /member/login.html
+    -->
+    <table border="1" summary="">
+        <caption>대량구매문의 상세</caption>
+        <colgroup>
+            <col style="width:130px;" />
+            <col style="width:auto;" />
+            <col style="width:130px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody class="middle">
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">{$title}</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자</th>
+                <td>{$name}</td>
+                <th scope="row">수량</th>
+                <td>{$product_cnt} 개</td>
+            </tr>
+            <tr>
+                <th scope="row">회사명</th>
+                <td>{$company_name}</td>
+                <th scope="row">연락처</th>
+                <td>{$phone}</td>
+            </tr>
+            <tr>
+                <th scope="row">국가명</th>
+                <td>{$country_name}</td>
+                <th scope="row">이메일</th>
+                <td>{$email}</td>
+            </tr>
+            <tr>
+                <th scope="row">답변여부</th>
+                <td>{$is_answer}</td>
+                <th scope="row">문의일시</th>
+                <td>{$inquiry_date|date:Y-m-d H:i:s}</td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td colspan="3">
+                    [{$postcode}]
+                    <span class="gSingle">{$address1}</span>
+                    <span class="gSingle">{$address2}</span>
+                </td>
+            </tr>
+            <tr class="gMerge">
+                <td colspan="4"><div class="detail">{$inquiry_content}{$content_image}</div></td>
+            </tr>
+            <tr module="board_inquiryViewFile_1">
+                <th>첨부파일</th>
+                <td colspan="3">
+                    <div class="attach">
+                        <span class="gSingle"><a href="{$inquery_file_path}">{$inquiry_file}</a></span>
+                        <span class="gSingle"><a href="{$inquery_file_path}">{$inquiry_file}</a></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>카탈로그 신청</th>
+                <td colspan="3">{$is_catalog}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="{$display_answer|display}">
+        <table border="1" summary="" class="gTriple">
+            <caption>대량구매문의 답변</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody class="middle">
+                <tr>
+                    <th scope="row">답변자</th>
+                    <td>{$answer_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">답변일시</th>
+                    <td>{$answer_date|date:Y-m-d H:i:s}</td>
+                </tr>
+                <tr class="gMerge">
+                    <td colspan="2"><div class="detail">{$answer_content}</div></td>
+                </tr>
+                <tr module="myshop_inquiryViewFile">
+                    <th>첨부파일</th>
+                    <td>
+                        <div class="attach">
+                            <a href="{$inquery_file_path}">{$inquiry_file}</a>
+                            <span class="gSingle"><a href="{$inquery_file_path}">{$inquiry_file}</a></span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="{$display_answer_none|display}">
+        <div class="boardWait">
+            <p>빠른시간내에 답변드리겠습니다. 잠시만 기다려 주세요!</p>
+        </div>
+    </div>
+
+    <div module="myshop_inquiryButton" class="buttonArea">
+        <span class="gLeft">
+            <a href="/board/inquiry/list.html{$list_param}" class="btnNormalB">목록</a>
+        </span>
+        <span class="gRight">
+            <button type="button" class="btnNormalB" onclick="{$action_delete}">삭제</button>
+            <a href="/board/inquiry/modify.html{$modify_param}" class="btnEmB">수정</a>
+        </span>
+    </div>
+</div>

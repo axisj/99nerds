@@ -1,0 +1,17 @@
+/* Title */
+.xans-myshop-orderhistoryapplycancel > .title:first-child h3 { padding-top:0; }
+/* list */
+.xans-myshop-orderhistoryapplycancel table .chk { width:30px; }
+.xans-myshop-orderhistoryapplycancel table td .line { text-decoration:underline; }
+.xans-myshop-orderhistoryapplycancel table td.product { text-align:left; vertical-align:top; }
+.xans-myshop-orderhistoryapplycancel table td.product p { padding:0 0 0 90px; }
+.xans-myshop-orderhistoryapplycancel table td.product .thumbnail { float:left; }
+.xans-myshop-orderhistoryapplycancel table td.product .thumbnail img { width:80px; }
+.xans-myshop-orderhistoryapplycancel table td.product div.option,
+.xans-myshop-orderhistoryapplycancel table td.product ul.option > li { margin:9px 0 0 90px; color:#707070; line-height:16px; }
+.xans-myshop-orderhistoryapplycancel table td.product ul.option > li > strong { display:block; color:#505050; }
+.xans-myshop-orderhistoryapplycancel table td.product .free { margin:5px 0 0; }
+.xans-myshop-orderhistoryapplycancel .infoWarn { margin:10px 0 0; padding:0 0 0 23px; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/order/ico_info.gif") no-repeat 0 1px; }
+
+/* Write */
+.xans-myshop-orderhistoryapplycancel #reason_detail { width:540px; }

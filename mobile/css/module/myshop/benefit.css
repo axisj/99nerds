@@ -1,0 +1,21 @@
+.xans-myshop-asyncbenefit .info { margin:0 0 7px; border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-asyncbenefit .info .memberInfo { position:relative; padding:14px 14px 10px 60px; min-height:35px; }
+.xans-myshop-asyncbenefit .info .memberInfo > span { position:absolute; left:14px; top:14px; }
+.xans-myshop-asyncbenefit .info .memberInfo .name { color:#508bed; font-weight:bold; line-height:18px; }
+.xans-myshop-asyncbenefit .info .memberInfo a.modify { position:absolute; top:14px; right:14px; width:59px; height:25px; text-align:center; font-size:11px; line-height:24px; border:1px solid #d5d5d5; border-radius:3px; background:#f1f1f1; }
+.xans-myshop-asyncbenefit .info .memberInfo ul li { margin:0; font-size:12px; line-height:1.5em; }
+.xans-myshop-asyncbenefit .info .help { margin:4px 14px 14px; font-size:11px; background-position:0 1px; }
+.xans-myshop-asyncbenefit .info .help p { margin:0; }
+.xans-myshop-asyncbenefit .info .help.tdisplaynonedisplaynone { display:none; }
+
+.xans-myshop-asyncbenefit .invite { margin:7px 0; padding:14px; border:1px solid #d5d5d5; }
+.xans-myshop-asyncbenefit .invite h3 { margin:0 0 14px; }
+.xans-myshop-asyncbenefit .invite .inputBox { position:relative; box-sizing:content-box; padding:0 77px 0 0; margin:0 0 14px; }
+.xans-myshop-asyncbenefit .invite #reco_url { width:100%; padding:3px 3px 3px 6px; border:1px solid #ccc; }
+.xans-myshop-asyncbenefit .invite a { position:absolute; top:0; right:0; display:block; float:right; }
+.xans-myshop-asyncbenefit .invite .help { font-size:11px; }
+
+.xans-myshop-asyncbankbook { padding:10px 14px; border-top:1px solid #d5d5d5; }
+.displaynone + .xans-myshop-asyncbankbook { border-top:0; }
+.xans-myshop-asyncbankbook li { display:inline-block; font-size:11px; line-height:14px; }
+.xans-myshop-asyncbankbook li a { color:#508bed; }

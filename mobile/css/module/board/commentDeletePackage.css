@@ -1,0 +1,6 @@
+.xans-board-commentdel { background:#f1f1f1; margin:14px 7px 0; padding:0 0 29px; line-height:1.5; }
+.xans-board-commentdel h3 { color:#2e2e2e; background:#f0f0f0; border:1px solid #d5d5d5; text-align:center; line-height:43px; }
+.xans-board-commentdel .comment { margin:-1px 0 0; border:1px solid #d5d5d5; background:#fff; }
+.xans-board-commentdel .comment fieldset { margin:0 auto; padding:14px 28px; width:250px; }
+.xans-board-commentdel .info { padding:0 0 14px 30px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_comment_del.png") no-repeat 0 4px; background-size:20px 19px; }
+.xans-board-commentdel .password label { display:none; }

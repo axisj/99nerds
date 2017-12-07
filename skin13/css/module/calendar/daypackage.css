@@ -1,0 +1,13 @@
+.mid-0 .xans-calendar-headday { position:relative; margin:30px 0 32px; text-align:center; }
+.mid-0 .xans-calendar-headday .date { color:#d9bca0; font-size:30px; letter-spacing:-1px; font-family:Lucida Sans, sans-serif; }
+.mid-0 .xans-calendar-headday .date img { vertical-align:middle; }
+.mid-0 .xans-calendar-headday .right { position:absolute; right:0; top:0px; }
+
+.mid-0 .xans-calendar-listdayhead th { border-top:1px solid #d9bca0; font-size:11px; color:#d9bca0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") right 0 no-repeat; }
+.mid-0 .xans-calendar-listdayhead th span { display:block; padding:8px 0; }
+.mid-0 .xans-calendar-listdayhead th.time span { background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") 0 0 no-repeat; }
+.mid-0 .xans-calendar-listday th,
+.mid-0 .xans-calendar-listday td { padding:8px 15px; border:1px solid #fff; font-size:11px; background:#f1f4e6; }
+.mid-0 .xans-calendar-listday th { color:#8f8f8f; font-weight:normal; text-align:center; }
+.mid-0 .xans-calendar-listday td li a,
+.mid-0 .xans-calendar-listday td li a:hover { font-size:11px; line-height:18px; color:#96aa4b; }

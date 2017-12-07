@@ -1,0 +1,25 @@
+/* 상품 리스트 장바구니 담기 레이어 */
+/* LAYER POP */
+.xans-product-basketoption {
+	background:#b4bdc5; overflow:hidden;
+	position:fixed; _position:absolute; top:50%; left:50%; width:500px; margin:-157px 0 0 -250px; z-index:100; border:1px solid #d3d3d3;
+}
+.xans-product-basketoption .close { text-align:right; }
+.xans-product-basketoption .close img { cursor:pointer; }
+
+.xans-product-basketoption h1 { padding:0 25px 25px; }
+.xans-product-basketoption .btnArea { overflow:hidden; zoom:1; background:#fff; padding:30px 30px 30px 27px; margin:0; position:relative; left:0; text-align:right; }
+.xans-product-basketoption .btnArea img { margin:0 0 0 -3px; }
+
+.xans-product-basketoption .layInner { position:relative; padding:20px 25px 0; border-top:1px solid #99a2aa; overflow:auto; overflow-x:hidden; max-height:210px; .height:210px; background:#fff; border-bottom:1px solid #dedcdc; }
+.xans-product-basketoption .layInner p { padding:0 0 10px; }
+.xans-product-basketoption .layInner p span { padding:0 0 0 15px; text-decoration:underline; }
+.xans-product-basketoption table { margin:0 0 20px; }
+.xans-product-basketoption th { background:#fff; padding:5px 0; }
+.xans-product-basketoption td { padding:7px 0; text-align:center; vertical-align:middle; }
+.xans-product-basketoption .chk { width:30px; }
+.xans-product-basketoption td.option { text-align:left; }
+.xans-product-basketoption td.quantity { width:70px; text-align:center; }
+.xans-product-basketoption .quantity input { width:50px; padding:1px 2px; border:1px solid #c3cad1; background:none; text-align:center; }
+
+.xans-product-optionlist td { border-bottom:1px solid #c3cad1; }

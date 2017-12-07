@@ -1,0 +1,96 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ReplyPackage_8">
+    <!--@css(/css/module/board/replyPackage.css)-->
+    <!--@js(/js/module/board/uccurl.js)-->
+    <div id="titleArea" module="board_title_8">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_reply_8">
+        <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <div class="boardReply">
+            <table border="1" summary="">
+                <caption>답변 글 쓰기 폼</caption>
+                <colgroup>
+                    <col style="width:100px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">제목</th>
+                        <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+                    </tr>
+                    <tr class="{$config.is_login|display}">
+                        <th scope="row">작성자</th>
+                        <td>{$form.writer}</td>
+                    </tr>
+                    <tr class="{$config.use_write_email|display}">
+                        <th scope="row">이메일</th>
+                        <td>{$form.email}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="write">{$form.content}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">UCC URL</th>
+                        <td class="uccUrlSize">{$form.ucc}</td>
+                    </tr>
+                </tbody>
+                <tbody class="{$config.use_attach|display}">
+                    <tr>
+                        <th scope="row">첨부파일1</th>
+                        <td>{$form.attach_file}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">첨부파일2</th>
+                        <td>{$form.attach_file}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">첨부파일3</th>
+                        <td>{$form.attach_file}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">첨부파일4</th>
+                        <td>{$form.attach_file}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">첨부파일5</th>
+                        <td>{$form.attach_file}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th scope="row">비밀번호</th>
+                        <td>{$form.password}</td>
+                    </tr>
+                    <tr class="{$config.use_secret|display}">
+                        <th scope="row">비밀글설정</th>
+                        <td>{$form.secure}</td>
+                    </tr>
+                    <tr class="{$config.use_captcha_write|display}">
+                        <th scope="row">자동등록방지<br />보안문자</th>
+                        <td>
+                            {$captcha_image} {$captcha_refresh}
+                            <span>{$form.captcha}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="{$config.is_login|display} privacy">
+            <p>{$form.privacy_agreement_radio}</p>
+            <span><a href="/board/agreement.html" target="_blank">내용보기</a></span>
+        </div>
+
+        <div class="btnArea type2">
+            <button type="button" class="btnSubmit" onclick="{$action_reply}">등록</button>
+            <a href="{$link_board_list}" class="btnEm">취소</a>
+        </div>
+    </div>
+</div>

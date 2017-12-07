@@ -1,0 +1,192 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_MemoPackage_1001">
+    <!--@css(/css/module/board/memoPackage_1001.css)-->
+    <div id="titleArea" module="board_title_1001">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_memowrite_1001">
+        <fieldset>
+            <legend>메모 입력</legend>
+            <p class="info">
+                <span class="name {$config.is_login|display}">이름 {$form.writer}</span>
+                <span id="{$memo_password_id}" class="password {$config.is_login|display}">비밀번호 {$form.secure_password}</span>
+            </p>
+            <div class="form">{$form.content}</div>
+            <div class="captcha {$config.use_captcha_write|display}">
+                <span class="img">{$captcha_image} {$captcha_refresh}</span>
+                <span class="form">{$form.captcha}</span>
+                <p>영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+            </div>
+            <div class="btnArea type1">
+                <p class="gLeft secret"><label class="{$config.use_secret|display}">{$form.secure} 비밀글</label></p>
+                <div class="gRight"><button type="button" class="btnStrong" onclick="{$action_memo_insert}">등록</button></div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div module="board_memolist_1001">
+        <div class="info">
+            <p class="writer" title="작성자">
+                {$member_icon} {$writer} <span class="{$display_ip|display}">({$client_ip})</span>
+            </p>
+            <p class="regdate {$display_use_date|display}" title="작성일">{$write_date}</p>
+        </div>
+        <div class="memoContent">
+            {$icon_lock} {$content|nl2br} {$icon_new}
+        </div>
+
+        <div class="btnArea">
+            <div class="gLeft">
+                <a class="btnNormal mini {$display_mod_button}">댓글 {$comment_count}</a>
+                <button type="button" class="reply btnNormal mini" onclick="{$action_comment_write}" class="{$display_use_comment|display} button">쓰기</button>
+            </div>
+            <div class="gRight">
+                <button type="button" class="btnNormal mini" onclick="{$action_memo_modify}">수정</button>
+                <button type="button" class="btnNormal mini" onclick="{$action_memo_delete}">삭제</button>
+            </div>
+        </div>
+
+        {$view_form_div}
+        <div id="{$comment_form_id}" style="display:none;">
+            <div module="board_memocmt_1001">
+                <div class="memoArea reply">
+                    <p class="name">{$comment_member_icon} {$comment_name}<span class="{$display_ip|display}">({$comment_client_ip})</span></p>
+                    <p class="regdate {$display_use_date|display}">{$comment_date}</p>
+                    <p class="memo">{$comment_icon_lock} {$comment_content}</p>
+                    <p class="button {$comment_display_button|display}">
+                        <a href="#none" class="btnNormal mini" onclick="{$action_comment_modify}" class="first">수정</a>
+                        <a href="#none" class="btnNormal mini" onclick="{$action_comment_delete}">삭제</a>
+                    </p>
+                </div>
+                {$view_form_div}
+            </div>
+        </div>
+    </div>
+
+    <p module="board_empty_1001" class="empty {$empty_display|display}">{$empty_message}</p>
+
+    <div module="board_memoformcmtsecret_1001">
+        <p>
+            비밀번호 {$form.comment_password}
+            <a href="#none" class="btnStrong mini" onclick="{$action_secret_submit}">확인</a>
+            <a href="#none" class="btnNormal mini" onclick="{$action_secret_cancel}">취소</a>
+        </p>
+    </div>
+
+    <div module="board_memoformsecret_1001">
+        <p>비밀번호 {$form.secure_password}
+            <a href="#none" class="btnStrong mini" onclick="{$action_secret_submit}">확인</a>
+            <a href="#none" class="btnNormal mini" onclick="{$action_secret_cancel}">취소</a>
+        </p>
+    </div>
+
+    <div module="board_memoformmodify_1001">
+        <fieldset>
+            <legend>메모 수정</legend>
+            <div class="info">
+                <span id="{$memo_name_id}" class="name {$config.is_login|display}">이름 {$form.writer} </span>
+                <span id="{$memo_password_id}" class="password {$config.is_login|display}">비밀번호 {$form.secure_password} </span>
+            </div>
+            <p>
+                {$form.content}
+            </p>
+            <div class="btnArea type1">
+                <p class="gLeft secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></p>
+                <div class="gRight">
+                    <a href="#none" class="btnStrong mini" onclick="{$action_modify_submit}">수정</a>
+                    <a href="#none" class="btnNormal mini" onclick="{$action_modify_cancel}">취소</a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div module="board_memoformdelete_1001">
+        <fieldset>
+            <legend>메모 삭제</legend>
+            <p>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 {$form.secure_password} </span>
+            </p>
+            <p>
+                {$form.content}
+            </p>
+            <p class="gRight">
+                <a href="#none" class="btnStrong mini" onclick="{$action_delete_submit}">삭제</a>
+                <a href="#none" class="btnNormal mini" onclick="{$action_delete_cancel}">취소</a>
+            </p>
+        </fieldset>
+    </div>
+
+    <div module="board_memoformcmtwrite_1001">
+        <fieldset>
+            <legend>댓글 쓰기</legend>
+            <div class="info">
+                <span class="name {$config.is_login|display}">이름 {$form.comment_name} </span>
+                <span id="{$memo_password_id}" class="password {$config.is_login|display}">비밀번호 {$form.comment_password} </span>
+            </div>
+            <p>
+                {$form.comment}
+            </p>
+            <div class="captcha {$config.use_captcha_comment|display}">
+                <span class="img">{$captcha_image} {$captcha_refresh}</span>
+                <span class="form">{$form.captcha}</span>
+                <p>영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+            </div>
+            <div class="btnArea type1">
+                <p class="gLeft secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></p>
+                <div class="gRight">
+                    <a href="#none" class="btnStrong mini" onclick="{$action_comment_submit}">등록</a>
+                    <a href="#none" class="btnNormal mini" onclick="{$action_comment_cancel}">취소</a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div module="board_memoformcmtmodify_1001">
+        <fieldset>
+            <legend>댓글 수정</legend>
+            <div class="info">
+                <span id="{$memo_name_id}" class="name {$config.is_login|display}">이름 {$form.comment_name} </span>
+                <span id="{$memo_password_id}" class="password {$config.is_login|display}">비밀번호 {$form.comment_password} </span>
+            </div>
+            <p>
+                {$form.comment_modify}
+            </p>
+            <div class="btnArea type1">
+                <p class="gLeft secret {$config.use_secret|display}"><label>{$form.secure} 비밀글</label></p>
+                <div class="gRight">
+                    <a href="#none" class="btnStrong mini" onclick="{$action_comment_update}">수정</a>
+                    <a href="#none" class="btnNormal mini" onclick="{$action_comment_cancel}">취소</a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div module="board_memoformcmtdelete_1001">
+        <fieldset>
+            <legend>댓글 삭제</legend>
+            <p>
+                <span id="{$memo_password_id}" class="{$config.is_login|display}">비밀번호 {$form.comment_password} </span>
+            </p>
+            <p>
+                {$form.comment_modify}
+            </p>
+            <p class="gRight">
+                <a href="#none" class="btnStrong mini" onclick="{$action_comment_delete}">삭제</a>
+                <a href="#none" class="btnNormal mini" onclick="{$action_comment_cancel}">취소</a>
+            </p>
+        </fieldset>
+    </div>
+</div>
+
+<div module="board_paging_1001" class="paginate typeList">
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>

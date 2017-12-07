@@ -1,0 +1,63 @@
+<!-- 참고: 비회원인 경우 -->
+<div module="Mall_UrgencycallOrdLogout" class="{$displayLogout|display}">
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>주문번호 검색</caption>
+            <colgroup>
+                <col style="width:85px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">주문번호</th>
+                    <td>
+                        <input type="text" id="{$order_id1}" class="inputOrdNum"> - <input type="text" id="{$order_id2}" class="inputOrdNum"> <a href="#none" class="btnStrong" onclick="{$insertfn}">등록</a>
+                        <p class="txtInfo">예) 00000000 - 0000000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!-- //참고 -->
+
+<div module="Mall_UrgencycallOrdResult" class="{$displayLogin|display}">
+    <div class="content">
+        <p class="ordPagenum">{$form.ordPagenum}</p>
+        <div class="boardList">
+            <ul class="{$displayPrdlist|display}">
+                <li>
+                    <div class="thumb"><img src="{$image_tiny}" alt="" /></div>
+                    <div class="info">
+                        <p class="name">{$product_name}</p>
+                    </div>
+                    <p>주문번호 : {$order_id}</p>
+                    <div class="btnArea">
+                        <a href="#none" class="btnStrong" onClick="{$selectfn}">선택</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><img src="{$image_tiny}" alt="" /></div>
+                    <div class="info">
+                        <p class="name">{$product_name}</p>
+                    </div>
+                    <p>주문번호 : {$order_id}</p>
+                    <div class="btnArea">
+                        <a href="#none" class="btnStrong" onClick="{$selectfn}">선택</a>
+                    </div>
+                </li>
+            </ul>
+
+            <p class="empty {$displayEmpty|display}">검색 결과가 없습니다.</p>
+        </div>
+        <div module="Mall_UrgencycallOrdPage" class="paginate typeList {$displayLogin|display}">
+            <p class="prev"><a href="#none" onClick="{$prev}">이전 페이지</a></p>
+            <ol>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+            </ol>
+            <p class="next"><a href="#none" onClick="{$next}">다음 페이지</a></p>
+        </div>
+    </div>
+</div>

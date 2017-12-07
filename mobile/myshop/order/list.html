@@ -1,0 +1,141 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>주문조회</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="Myshop_OrderHistoryTab">
+    <!--@css(/css/module/myshop/orderHistoryTab.css)-->
+    <ul>
+        <li class="{$tab_class}"><a href="/myshop/order/list.html">주문내역조회({$total_orders}건)</a></li>
+        <li class="{$tab_class_cs}"><a href="/myshop/order/list.html?mode=cs">취소/교환/반품내역({$total_orders_cs}건)</a></li>
+    </ul>
+</div>
+
+<div module="Myshop_OrderHistoryHead">
+    <!--@css(/css/module/myshop/orderHistoryHead.css)-->
+    <!--@js(/js/module/myshop/orderHistoryHead.js)-->
+    <fieldset>
+        <legend>검색기간설정</legend>
+        <div class="stateSelect {$status_bar_display|display}">
+            <span class="state">상태</span>
+            {$form.order_status}
+        </div>
+        <span class="term">기간</span>
+        <span>
+            <a href="#none" class="btnNormal{$now_style}" days="00">오늘</a>
+            <a href="#none" class="btnNormal{$month_style}" days="30">1개월</a>
+            <a href="#none" class="btnNormal{$three_style}" days="90">3개월</a>
+            <a href="#none" class="btnNormal{$six_style}" days="180">6개월</a>
+            <a href="#none" class="btnBasic eDataSet{$search_style}">기간설정</a>
+        </span>
+        <div id="dataSearch">
+            {$form.start_date} ~ {$form.end_date} {$form.submit_date}
+        </div>
+    </fieldset>
+</div>
+
+<div module="Myshop_OrderHistoryListitem">
+    <!--@css(/css/module/myshop/orderHistoryListitem.css)-->
+    <!--
+        $login_url = /member/login.html
+    -->
+    <div class="orderList {$list_display|display}">
+        <!-- 주문 반복 -->
+        <div class="order">
+            <h3 class="{$display_column|display}">
+                <span class="date" title="주문일자">{$order_date}</span>
+                <span class="number" title="주문번호"><a href="detail.html{$param_detail}">({$order_id})</a></span>
+            </h3>
+            <div class="description">
+                <p class="prdImg"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" width="73" height="73" alt="" /></a></p>
+                <strong class="prdName" title="상품명"><a href="/product/detail.html{$param}">{$product_name}</a></strong>
+                <ul class="info">
+                    <li>
+                        <span class="price" title="판매가">{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span class="{$product_price_ref_display|display}"> {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span></span>
+                        <span class="quantity" title="수량"><strong>{$quantity}</strong>개</span>
+                    </li>
+                    <li class="{$card_installment_display|display}">무이자할부 상품</li>
+                </ul>
+            </div>
+            <p class="option {$option_str_display|display}">{$option_str}</p>
+            <ul class="option" module="Myshop_optionSet">
+                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+            </ul>
+            <p class="status" title="주문처리상태">
+                {$status}
+                <span class="store">{$mobile_store_info}</span>
+                <span class="addition {$detail_info_display|display}"><strong class="cancel"><a href="order_detail_cs.html{$params}" target="_blank">[상세정보]</a></strong></span>
+                <span class="button">
+                    <span class="{$invoice_no_display|display}"><a href="#none" class="line btnBasic" onclick="{$shipping_trace_popup}">배송조회</a></span>
+                    <a href="/board/product/write.html{$param_postscript}" class="btnBasic {$postscript_display|display}">구매후기</a>
+                    <a href="#none" class="btnBasic {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                    <a href="#none" class="btnBasic {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                    <a href="#none" class="btnBasic {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                </span>
+            </p>
+            <div class="button request {$cs_button_display_column|display}">
+                <a href="#none" class="{$direct_cancel_display|display} btnBasic" onclick="{$action_direct_cancel}">주문취소</a>
+                <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display} btnBasic">취소신청</a>
+                <a href="exchange.html{$param_apply}"  class="{$apply_exchange_display|display} btnBasic">교환신청</a>
+                <a href="return.html{$param_apply}" class="{$apply_return_display|display} btnBasic">반품신청</a>
+            </div>
+            <a href="detail.html{$param_detail}" class="btnDetail {$display_column|display}">상세보기</a>
+        </div><!-- //주문 반복 -->
+        <!-- 주문 반복 -->
+        <div class="order">
+            <h3 class="{$display_column|display}">
+                <span class="date" title="주문일자">{$order_date}</span>
+                <span class="number" title="주문번호"><a href="detail.html{$param_detail}">({$order_id})</a></span>
+            </h3>
+            <div class="description">
+                <p class="prdImg"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" width="73" height="73" alt="" /></a></p>
+                <strong class="prdName" title="상품명"><a href="/product/detail.html{$param}">{$product_name}</a></strong>
+                <ul class="info">
+                    <li>
+                        <span class="price" title="판매가">{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span class="{$product_price_ref_display|display}"> {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span></span>
+                        <span class="quantity" title="수량"><strong>{$quantity}</strong>개</span>
+                    </li>
+                    <li class="{$card_installment_display|display}">무이자할부 상품</li>
+                </ul>
+            </div>
+            <p class="option {$option_str_display|display}">{$option_str}</p>
+            <ul class="option" module="Myshop_optionSet">
+                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+            </ul>
+            <p class="status" title="주문처리상태">
+                {$status}
+                <span class="store">{$mobile_store_info}</span>
+                <span class="addition {$detail_info_display|display}"><strong class="cancel"><a href="order_detail_cs.html{$params}" target="_blank">[상세정보]</a></strong></span>
+                <span class="button">
+                    <span class="{$invoice_no_display|display}"><a href="#none" class="line btnBasic" onclick="{$shipping_trace_popup}">배송조회</a></span>
+                    <a href="/board/product/write.html{$param_postscript}" class="btnBasic {$postscript_display|display}">구매후기</a>
+                    <a href="#none" class="btnBasic {$withdraw_cancel_display|display}" onclick="{$action_withdraw_cancel}">취소철회</a>
+                    <a href="#none" class="btnBasic {$withdraw_exchange_display|display}" onclick="{$action_withdraw_exchange}">교환철회</a>
+                    <a href="#none" class="btnBasic {$withdraw_return_display|display}" onclick="{$action_withdraw_return}">반품철회</a>
+                </span>
+            </p>
+            <div class="button request {$cs_button_display_column|display}">
+                <a href="#none" class="{$direct_cancel_display|display} btnBasic" onclick="{$action_direct_cancel}">주문취소</a>
+                <a href="cancel.html{$param_apply}" class="{$apply_cancel_display|display} btnBasic">취소신청</a>
+                <a href="exchange.html{$param_apply}"  class="{$apply_exchange_display|display} btnBasic">교환신청</a>
+                <a href="return.html{$param_apply}" class="{$apply_return_display|display} btnBasic">반품신청</a>
+            </div>
+            <a href="detail.html{$param_detail}" class="btnDetail {$display_column|display}">상세보기</a>
+        </div><!-- //주문 반복 -->
+    </div>
+    <p class="empty {$empty_display|display}">주문 내역이 없습니다.</p>
+</div>
+
+<div class="{$empty_display|display} paginate typeList" module="Myshop_OrderHistoryPaging">
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>

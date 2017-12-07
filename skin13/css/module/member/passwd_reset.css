@@ -1,0 +1,9 @@
+.mid-0.xans-member-passwordreset { border:1px solid #d7d5d5; padding:30px 0; text-align:center; }
+.mid-0.xans-member-passwordreset .memberArea { width:500px; margin:30px auto; text-align:left; }
+.mid-0.xans-member-passwordreset .memberArea > ul > li { overflow:hidden; }
+.mid-0.xans-member-passwordreset .memberArea .term,
+.mid-0.xans-member-passwordreset .memberArea .desc { float:left; margin:0 0 5px; }
+.mid-0.xans-member-passwordreset .memberArea .term { width:25%; }
+.mid-0.xans-member-passwordreset .memberArea .desc { width:75%; }
+.mid-0.xans-member-passwordreset .memberArea .term .icoDot { display:inline-block; width:5px; height:11px; background:url('http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_tip_title.gif') no-repeat 0 center; }
+.mid-0.xans-member-passwordreset .memberArea input[type=text] { width:172px; }

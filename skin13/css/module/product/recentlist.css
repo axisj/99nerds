@@ -1,0 +1,4 @@
+.xans-product-recentlist table td select { width:90%; margin:2px 0; white-space:nowrap; }
+.xans-product-recentlist table td input[class*="ProductAddOption"] { width:95%; }
+.xans-product-recentlist table td .strike { display:block; font-weight:normal; text-decoration:line-through; }
+.xans-product-recentlist table td .gSingle img {content:url("/_inno/img/btn_sch.png");}

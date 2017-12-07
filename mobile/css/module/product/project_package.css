@@ -1,0 +1,9 @@
+.xans-project-package .menuCategory { margin:-1px 0 0; padding:0 14px; border-bottom:1px solid #d5d5d5; background:#fff; }
+.xans-project-package .menuCategory .icoOpen { width:13px; cursor:pointer; vertical-align:top; }
+.xans-project-package .menuCategory > li { padding:11px 0 10px; border-top:1px solid #ececec; }
+.xans-project-package .menuCategory > li:first-child { border-top:0; }
+.xans-project-package .menuCategory > li > a { display:inline-block; margin:0 14px 0 0; color:#2e2e2e; font-weight:bold; font-size:13px; vertical-align:top; }
+.xans-project-package .menuCategory li.selected > a { color:#508bed; }
+.xans-project-package .menuCategory li.xans-product-projectcategory { display:inline-block; border:0; }
+.xans-project-package .banner { padding:10px 14px; }
+.xans-project-list h3 { margin:0; padding:14px 14px 0; font-size:14px; line-height:15px; color:#4a5164; }

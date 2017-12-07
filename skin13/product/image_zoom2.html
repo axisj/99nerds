@@ -1,0 +1,41 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div class="mid-0" module="Product_ZoomPackage">
+    <!--@css(/css/module/product/zoomPackage2.css)-->
+    <div class="header">
+        <h1>확대보기</h1>
+    </div>
+    <div class="content">
+        <div module="product_zoom">
+            <!--@js(/js/module/product/product_image.js)-->
+            <!--
+                $popup_flag = T
+             -->
+            <!-- 이미지 영역 -->
+            <div class="imgArea">
+                <div class="keyImg">
+                    <!-- 공급사 바로가기버튼 영역 -->
+                    <div class="topLogo {$supply_link_display|display}">
+                        {$supply_top_logo} <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기" /></a>
+                    </div>
+                    <!-- //공급사 바로가기버튼 영역 -->
+                    <div class="prdImg">
+                        <img src="{$big_img}" class="{$big_img_class}" alt="" onclick="self.close();" style="max-width:344px; " /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                    </div>
+                    <span class="prev"><a href="#none" onclick="{$action_prev_product}" style="display:{$btn_prev_display};"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_prev.png" alt="이전 제품 보기" style="border:0;" /></a></span>
+                    <span class="next"><a href="#none" onclick="{$action_next_product}" style="display:{$btn_next_display};"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/product/btn_next.png" alt="다음 제품 보기" style="border:0;" /></a></span>
+                </div>
+                <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+                <div class="listImg" module="product_addimage">
+                    <ul>
+                        <li>{$add_img}</li>
+                        <li>{$add_img}</li>
+                    </ul>
+                </div><!-- //참고 -->
+            </div><!-- //이미지 영역 -->
+        </div>
+    </div>
+    <div class="buttonArea">
+        <a href="#none" class="btnNormalB" onclick="self.close();">닫기</a>
+    </div>
+</div>

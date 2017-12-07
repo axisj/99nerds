@@ -1,0 +1,17 @@
+.xans-myshop-main { border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-main li { border-top:1px solid #e1e1e1; background-size:20px; background-repeat:no-repeat; background-position:12px; }
+.xans-myshop-main li:first-child { border-top:0; }
+.xans-myshop-main li a { display:block; position:relative; padding:14px 14px 14px 48px; }
+.xans-myshop-main li a:after { display:block; position:absolute; top:12px; right:12px; content:""; width:20px; height:20px; background:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_arrow_right.png") no-repeat; background-size:20px 20px; }
+.xans-myshop-main li .count { color:#508bed; }
+
+.xans-myshop-main li.order { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_order.png"); }
+.xans-myshop-main li.modify { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_modify.png"); }
+.xans-myshop-main li.wishlist { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_wishlist.png"); }
+.xans-myshop-main li.mileage { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_mileage.png"); }
+.xans-myshop-main li.deposits { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_deposits.png"); }
+.xans-myshop-main li.consult { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_consult.png"); }
+.xans-myshop-main li.coupon { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_coupon.png"); }
+.xans-myshop-main li.board { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_board.png"); }
+.xans-myshop-main li.address { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_address.png"); }
+.xans-myshop-main li.likeit { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_likeit.png"); }

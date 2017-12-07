@@ -1,0 +1,59 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>사은품</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>사은품</h2>
+</div>
+
+
+<div module="gift_list" class="">
+    <!--@css(/css/module/order/gift_list.css)-->
+    <div module="gift_second">
+        <div class="title">
+            <h3>{$category_name}</h3>
+        </div>
+        <div class="boxTheme">
+            <strong>
+                [{$period_start} ~ {$period_end}]
+                <!--
+                (날짜만 : {$period_start_date} ~ {$period_end_date})
+                (시간만 : {$period_start_time} ~ {$period_end_time})
+                -->
+                {$benefit_name}
+            </strong>
+            ( {$benefit_member}
+            {$benefit_product_type}
+            <a href="{$benefit_search_key}" class="btnNormal {$product_type_display|display}">보기</a>
+            {$order_price_range_min} 이상<span class="{$order_price_range_max_display|display}"> ~ {$order_price_range_max} 미만</span> 구매시 증정 )
+        </div>
+        <div module="gift_Third">
+            <ul class="prdList column6 wyImgSizeFlex">
+                <li class="item">
+                    <div class="box">
+                        <img src="{$gift_image}" alt="" class="thumb" />
+                        <span>{$product_name}</span>
+                        <strong>포인트: {$product_price}</strong>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <img src="{$gift_image}" alt="" class="thumb" />
+                        <span>{$product_name}</span>
+                        <strong>포인트: {$product_price}</strong>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div module="gift_listempty" class="">
+    <p class="empty"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/txt_gift.gif" alt="현재 진행중인 사은품 내용이 없습니다." /></p>
+</div>

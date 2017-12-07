@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>아이디 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_findidresult">
+    <!--@css(/css/module/member/findidresult.css)-->
+    <div class="info">
+        <p><span>아이디 찾기가 완료되었습니다.</span></p>
+        <p>가입된 아이디가 총 <strong>{$idCnt}개</strong> 있습니다.</p>
+    </div>
+    <table border="1" summary="">
+        <caption>아이디 찾기 결과</caption>
+        <tr>
+            <th scope="row">이 &nbsp; 름</th>
+            <td>{$name}</td>
+        </tr>
+        <tr>
+            <th scope="row">{$searchType}</th>
+            <td>{$searchInfo}</td>
+        </tr>
+    </table>
+    <p class="list">{$searchIds}</p>
+    <div class="btnArea type2">
+        <a href="javascript:go_findlogin('{$id}');" class="btnSubmit">로그인</a>
+        <a href="javascript:go_findpwd('{$id}','{$mtype}');" class="btnEm">비밀번호 찾기</a>
+    </div>
+</div>

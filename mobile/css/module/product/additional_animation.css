@@ -1,0 +1,49 @@
+.animate {
+    -webkit-animation-duration: 4s;
+       -moz-animation-duration: 4s;
+         -o-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+ }
+
+@-webkit-keyframes pop {
+    10% { -webkit-transform-origin:50% 50%; -webkit-transform: rotate(5deg); }
+    25% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(50px); }
+    90% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(-30px); }
+    100% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1,1); }
+ }
+
+@-moz-keyframes pop {
+    10% { -webkit-transform-origin:50% 50%; -webkit-transform: rotate(5deg); }
+    25% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(50px); }
+    90% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(-30px); }
+    100% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1,1); }
+ }
+
+@-o-keyframes pop {
+    10% { -webkit-transform-origin:50% 50%; -webkit-transform: rotate(5deg); }
+    25% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(50px); }
+    90% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(-30px); }
+    100% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1,1); }
+ }
+
+@keyframes pop {
+    10% { -webkit-transform-origin:50% 50%; -webkit-transform: rotate(5deg); }
+    25% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(50px); }
+    90% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1.87,1.87) translateY(-30px); }
+    100% { -webkit-transform-origin:50% 50%; -webkit-transform: scale(1,1); }
+ }
+
+.pop {
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: pop;
+    -moz-animation-name: pop;
+    -o-animation-name: pop;
+    animation-name: pop;
+ }

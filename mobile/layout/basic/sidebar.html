@@ -1,0 +1,68 @@
+<!--@css(/layout/basic/css/common.css)-->
+<!--@css(/layout/basic/css/slideMenu.css)-->
+<!--@js(/layout/basic/js/slide_menu.js)-->
+<aside id="aside" module="layout_slidePackage">
+    <p module="Layout_stateLogon" class="member">안녕하세요, <a href="/myshop/index.html"><strong>{$name}</strong></a>님</p>
+    <p module="Layout_stateLogoff" class="member"><a href="/member/agreement.html" class="btnJoin">회원가입</a><a href="/member/login.html" class="btnLogin">로그인</a></p>
+    <ul module="Layout_shoppingInfo" class="membership">
+        <li class="{$use_deposit|display}">{$deposit_name} : <a href="/myshop/deposits/historyList.html">{$deposit}</a></li>
+        <li class="{$use_mileage|display}">{$mileage_name} : <a href="/myshop/mileage/historyList.html">{$mileage}</a></li>
+        <li class="{$use_coupon_cnt|display}">쿠폰 : <a href="/myshop/coupon/coupon.html">{$coupon_cnt}</a></li>
+        <li class="like {$use_like_product_cnt|display}">{$like_prd_tag}</li>
+    </ul>
+    <div module="myshop_main" style="background: #1E1E1E;">
+        <a href="/myshop/wish_list.html" class="wishList">관심상품({$wish_count})</a>
+        <a href="/myshop/recent_list.html" class="recentList">최근본상품({$recent_count})</a>
+        <a href="/myshop/order/list.html" class="orderList">주문조회</a>
+    </div>
+
+    <div id="slideCateList" class="categoryCont">
+        <h2 class="selected">Product<button type="button" class="icoCategory">펼침</button></h2>
+        <ul module="layout_category" class="categoryList">
+            <li id="cate{$cate_no}">
+                <a href="#none" class="cate" cate="{$param}">{$name|cut 25}</a>
+                <a href="/product/list_thumb.html{$param}" class="view">상품보기</a>
+                <button type="button" class="icoBookmark" id="icoBookmark">즐겨찾기 추가</button>
+            </li>
+            <li id="cate{$cate_no}">
+                <a href="#none" class="cate" cate="{$param}">{$name|cut 25}</a>
+                <a href="/product/list_thumb.html{$param}" class="view">상품보기</a>
+                <button type="button" class="icoBookmark" id="icoBookmark">즐겨찾기 추가</button>
+            </li>
+        </ul>
+
+        <div class="multishop" module="Layout_multishopList" id="slideMultishopList">
+            <h2 class="selected countryTitle">SHIP TO<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionCountry" class="xans-element- xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="countryLink"></a>
+                </li>
+            </ul>
+            <h2 class="selected languageTitle">LANGUAGE<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="Layout_multishopListmultioptionLanguage" class="xans-multishop xans-multishop-listitem">
+                <li>
+                    <a href="#none" class="languageLink">
+                        <img src="//img.cafe24.com/img/common/global/{$language_code}_53x36.png" width="27" height="18" alt=""><span class="name"> {$language_name}</span>
+                    </a>
+                </li>
+            </ul>
+            <h2 class="selected">{$translate_language}<button type="button" class="icoCategory">펼침</button></h2>
+            <ul module="multishop_listitem">
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+                    </a>
+                </li>
+                <li class="{$selected_class}">
+                    <a href="//{$shop_domain}/">
+                        <img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="loginState">
+        <p module="Layout_statelogon"><a href="{$action_logout}">로그아웃</a></p>
+    </div>
+    <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_close.png" width="13" alt="닫기"></a>
+</aside>

@@ -1,0 +1,4 @@
+.info {padding:20px; border:2px solid #eee; margin:40px auto 20px;}
+.info .mileage { *zoom:1; margin-top:15px;}
+.info .mileage:after { content:""; display:block; clear:both; }
+.info .mileage li { float:left; margin:0 40px 0 0; }

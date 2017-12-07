@@ -1,0 +1,12 @@
+<!--@layout(/layout/basic/layer.html)-->
+<div module="Order_Customshiparea">
+    <!--@css(/css/module/order/customshiparea.css)-->
+    <h2>수령지 안내</h2>
+    <div class="wrap">
+        <ul>
+            <li>{$area_name}<p>(우편번호 : {$begin_zipcode}~{$end_zipcode})</p></li>
+            <li>{$area_name}<p>(우편번호 : {$begin_zipcode}~{$end_zipcode})</p></li>
+        </ul>
+    </div>
+    <button type="button" class="btnClose" onclick="OrderCustomshiparea.CloseLayer('dAreaLayer');">닫기</button>
+</div>

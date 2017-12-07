@@ -1,0 +1,19 @@
+<!--@layout(/layout/basic/zoom.html)-->
+<div module="Product_ZoomPackage">
+    <!--@css(/css/module/product/zoomPackage.css)-->
+    <!--@js(/js/module/product/zoomPackage.js)-->
+    <div module="product_zoom">
+        <div class="header">
+            <h2 class="prdName">{$name}</h2>
+            <button type="button" class="btnClose" onclick="self.close();">닫기</button>
+        </div>
+        <ul>
+            <li style="display:block">
+                <div class="thumbnail">
+                    <img src="{$big_img}" alt="" class="thumbImage" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                </div>
+            </li>
+            {$aAddImage}
+        </ul>
+    </div>
+</div>

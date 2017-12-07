@@ -1,0 +1,92 @@
+@charset "euc-kr";
+
+/* ë²??? */
+
+/* ????&ê³µí?? */
+.btnArea {
+    max-width:320px; margin:10px auto; text-align:center; font-size:0; line-height:0; letter-spacing:-4px;
+    -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; vertical-align:top;
+}
+.btnArea:after { content:""; display:block; clear:both; }
+.btnArea > a:first-child,
+.btnArea > button:first-child { margin-left:0; }
+.btnArea > a,
+.btnArea > span,
+.btnArea > button {
+    position:relative; display:inline-block; letter-spacing:0; text-align:center; cursor:pointer; font-family:Verdana,'Iropke Batang',"¸¼Àº °íµñ",Malgun Gothic,"µ¸¿ò",Dotum; font-weight:bold;
+    border-radius:2px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.btnIcon { max-width:12px; max-height:12px; background-size:100% 100%; }
+
+    /* ì£¼ì?? ë²??? ?????? */
+    .btnArea .btnSubmit { height:36px; line-height:36px; color:#fff; border:1px solid #4a5164; background:#4a5164; }
+    .btnArea .btnEm { height:36px; line-height:32px; border:1px solid #d5d5d5; background:#fff; }
+    .btnArea .soldout { cursor:default; }
+
+    /* ê¸°ë³¸ ë²??? ?????? */
+    .btnNormal, .btnStrong, .btnBasic {
+            display:inline-block; height:28px; line-height:26px; margin:0; padding:0 10px;
+            cursor:pointer; vertical-align:middle; font-family:Verdana,'Iropke Batang',"¸¼Àº °íµñ",Malgun Gothic,"µ¸¿ò",Dotum; font-size:13px; font-weight:400; border:0;
+            border-radius:2px;
+            -moz-box-sizing:border-box; box-sizing:border-box;
+    }
+    .btnNormal { color:#1b1b1b; border:1px solid #bcbcbc; background:#fff; }
+    .btnStrong { color:#fff; border:1px solid #4a5164; background:#4a5164; }
+    .btnBasic { color:#1b1b1b; border:1px solid #bcbcbc; background:#f0f0f0; }
+    a.mini, button.mini { height:26px; line-height:24px; font-size:11px; }
+
+    /* type1 */
+    .btnArea.type1 > a,
+    .btnArea.type1 > button { width:100%; margin:0; height:38px; margin:0; font-size:15px; line-height:38px; }
+
+    /* type2 */
+    .btnArea.type2 { padding:0 3px; }
+    .btnArea.type2 > a,
+    .btnArea.type2 > button { width:50%; height:34px; margin:0; font-size:13px; line-height:34px; }
+    .btnArea.type2 > a:nth-child(1),
+    .btnArea.type2 > button:nth-child(1) { left:-3px; }
+    .btnArea.type2 > a:nth-child(2),
+    .btnArea.type2 > button:nth-child(2) { right:-3px; }
+
+    /* type3 */
+    .btnArea.type3 { padding:0 6px; }
+    .btnArea.type3 > a,
+    .btnArea.type3 > button { width:33.333%; margin:0; height:32px; margin:0; font-size:12px; line-height:32px;}
+    .btnArea.type3 > a:nth-child(1),
+    .btnArea.type3 > button:nth-child(1) { left:-6px; }
+    .btnArea.type3 > a:nth-child(3),
+    .btnArea.type3 > button:nth-child(3) { right:-6px; }
+
+    /* type4 */
+    .btnArea.type4 { padding:0 6px; }
+    .btnArea.type4 > a,
+    .btnArea.type4 > button { width:25%; height:28px; margin:0; font-size:11px; line-height:25px; font-weight:normal; }
+    .btnArea.type4 > a:nth-child(1),
+    .btnArea.type4 > button:nth-child(1) { left:-5px; }
+    .btnArea.type4 > a:nth-child(2),
+    .btnArea.type4 > button:nth-child(2) { left:5px; }
+    .btnArea.type4 > a:nth-child(3),
+    .btnArea.type4 > button:nth-child(3) { right:-15px; }
+    .btnArea.type4 > a:nth-child(4),
+    .btnArea.type4 > button:nth-child(4) { right:-25px; }
+
+    /* typeFull */
+    .btnArea.typeFull { max-width:100%; padding:0 6px; }
+
+    /* ì¢??? ?????¼ë? ????ì§??? ?????? */
+    .btnArea .gLeft { float:left; }
+    .btnArea .gLeft a, .btnArea .gLeft button { margin:0 0 0 5px; }
+    .btnArea .gLeft a:first-child, .btnArea .gLeft button:first-child { margin-left:0; }
+    .btnArea .gRight { float:right; }
+    .btnArea .gRight a, .btnArea .gRight button { margin:0 5px 0 0; }
+    .btnArea .gRight a:last-child, .btnArea .gRight button:last-child { margin-right:0; }
+
+/* ê°??´ë?? ???? */
+.gCenter { text-align:center; }
+.gCenter a, .gCenter button { margin:0 0 0 2px; }
+.gCenter a:first-child { margin-left:0; }
+
+/* ???????? gridë¥? ?¬ì?©í??ì§? ???? ê²½ì?? */
+#popup .btnArea > a:nth-child(2),
+#popup .btnArea > button:nth-child(2) { margin-left:3px; }

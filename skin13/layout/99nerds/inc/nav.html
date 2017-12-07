@@ -1,0 +1,104 @@
+
+<div class="header-gnb">
+    <div class="container">
+
+        <ul class="left">
+            <li>
+                <a href="/index.html" class="brand-logo">
+                    <img src="/assets/images/landing_page/main_visual/99Nerds_logo.svg"
+                         alt="99nerds_logo"/><span> 99NERDS</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <div module="Layout_stateLogon">
+            <ul class="right">
+                <li>
+                    <a href="/order/basket.html" class="clickdown-button">
+                        <span class="ci ci-keep"></span>
+                        Shopping bag <span class="count {$basket_count_display|display}">(<span>{$basket_count}</span>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshop/order/list.html" class="clickdown-button">
+                        <span class="ci ci-pay"></span>
+                        Order
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshop/index.html" class="clickdown-button quick-account log-in">
+                        <img src="/assets/images/side-nav/yellowgreen.png" alt="oval"/>
+                        <span class="myinfo"><strong>{$name}</strong>님 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$action_logout}" class="clickdown-button">
+                        <img src="/assets/images/side-nav/yellow.png" alt="oval"/>
+                        Log out
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div module="Layout_statelogoff">
+            <ul class="right">
+                <li>
+                    <a href="/order/basket.html" class="clickdown-button">
+                        <span class="ci ci-keep"></span>
+                        Shopping bag <span class="count {$basket_count_display|display}">(<span>{$basket_count}</span>)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/member/login.html" class="clickdown-button quick-account log-in">
+                        <img src="/assets/images/side-nav/yellow.png" alt="oval"/> Log in
+                    </a>
+                </li>
+                <li>
+                    <a href="/member/join.html" class="clickdown-button quick-account sign-up">
+                        <img src="/assets/images/side-nav/yellowgreen.png" alt="oval"/> Sign up
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+<nav data-tag-nav class="header-nav">
+
+    <div class="container nav-wrapper">
+
+        <ul class="left" data-nav-account="">
+            <li><a href="#" data-activates="slide-out" class="stack-icon waves-light"><span class="ci ci-stack"></span></a>
+            </li>
+        </ul>
+
+        <ul class="main-nav left">
+            <li><a href="/product/list.html?cate_no=68">Product</a></li>
+            <li><a href="/sub-about.html">About</a></li>
+            <li><a href="/board/sub-notice_default/list.html?board_no=1">Notice</a></li>
+            <li><a href="/board/sub-customer/sub-customer-main.html">Customer</a></li>
+            <li><a href="/board/sub-report/list.html?board_no=7">Report</a></li>
+        </ul>
+
+        <a href="/index.html" class="brand-logo tablet-brand-logo">
+            <img src="/assets/images/landing_page/main_visual/99Nerds_logo.svg"
+                 alt="99nerds_logo"/><span> 99NERDS</span>
+        </a>
+
+        <ul class="right">
+            <li>
+                <div class="search-box">
+                    <form id="searchBarForm" name="" action="/product/search.html" method="get">
+                        <input name="banner_action" value="" type="hidden"><input type="text" name="keyword"/><a
+                            href="/product/search.html?banner_action=&keyword=" class="search-icon"><span class="ci ci-search2"></span></a>
+                    </form>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>

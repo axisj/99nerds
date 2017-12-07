@@ -1,0 +1,15 @@
+<nav module="Layout_MobileNavigation">
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/css/module/layout/mobileNavigation.css)-->
+    <!--
+        $eventmenu = yes
+    -->
+    <ul class="{$navigation_grid}" style="background: #1E1E1E">
+        <li module="Layout_statelogoff"><a href="/member/login.html">로그인</a></li>
+        <li module="Layout_statelogon"><a href="{$action_logout}">로그아웃</a></li>
+        <li><a href="/myshop/order/list.html">주문조회</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li><a href="/board/index.html">게시판</a></li>
+        <li class="{$event_menu_display|display}"><a href="/board/free/list.html?board_no=2">이벤트</a></li>
+    </ul>
+</nav>

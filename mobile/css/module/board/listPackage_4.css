@@ -1,0 +1,66 @@
+.xans-board-listpackage { background:#fff; }
+
+/* 글쓰기 버튼 */
+.xans-board-listpackage .xans-board-buttonlist { margin:7px 0; padding:0 14px; overflow:hidden; background:#fff; text-align:right; }
+
+/* 정렬 */
+.xans-board-listpackage .boardSort { padding:0 14px; }
+.xans-board-listpackage .boardSort:after { content:""; display:block; clear:both; }
+.xans-board-listpackage .boardSort span { float:left; width:49%; font-size:13px; }
+.xans-board-listpackage .boardSort span:first-of-type { padding:0 2% 0 0; }
+.xans-board-listpackage .boardSort span select { margin:7px 0; width:100%; }
+
+/* 공지사항 */
+.xans-board-notice { margin:-1px 0 0; font-size:11px; border-top:1px solid #ececec; background:#fff; }
+.xans-board-notice li { overflow:hidden; position:relative; padding:14px 0 14px 7px; min-height:50px; color:#757575; border-bottom:1px solid #ececec; background:#f9f9f9; }
+.xans-board-notice .thumb { float:left; }
+.xans-board-notice .thumb img { width:50px; max-height:50px; padding:0 7px; }
+.xans-board-notice .summary { position:relative; padding:0 7px; }
+.xans-board-notice .summary a { display:block; color:#757575; }
+.xans-board-notice .summary > a > span { position:relative; padding:0 6px 0 0; }
+.xans-board-notice .subject { display:block; padding:0 0 7px; font-size:15px; line-height:1.3em; color:#1b1b1b; }
+.xans-board-notice .comment { color:#508bed; }
+.xans-board-notice .subject img,
+.xans-board-notice .point img { width:auto; height:11px; vertical-align:-1px; }
+.xans-board-notice .view { position:absolute; right:14px; top:21px; width:30px; height:25px; margin:-7px 0 0; }
+.xans-board-notice .view .btnToggle { display:inline-block; width:30px; height:30px; padding:0; margin:0; border:1px solid #d5d5d5; border-radius:3px; background:#fff; }
+.xans-board-notice .view .btnToggle img { width:13px; height:8px; padding:11px 8px 11px 8px; }
+
+/* 고정글 */
+.xans-board-fixed { margin:-1px 0 0; font-size:11px; border-top:1px solid #ececec; background:#fff; }
+.xans-board-fixed li { overflow:hidden; position:relative; padding:14px 0 14px 7px; min-height:50px; color:#757575; border-bottom:1px solid #ececec; }
+.xans-board-fixed .thumb { float:left; }
+.xans-board-fixed .thumb img { width:50px; max-height:50px; padding:0 7px; }
+.xans-board-fixed .summary { position:relative; padding:0 7px; }
+.xans-board-fixed .summary a { display:block; color:#757575; }
+.xans-board-fixed .summary > a > span { position:relative; padding:0 6px 0 0; }
+.xans-board-fixed .subject { display:block; padding:0 0 7px; font-size:15px; line-height:1.3em; color:#1b1b1b; font-weight:normal; }
+.xans-board-fixed .comment { color:#508bed; }
+.xans-board-fixed .subject img,
+.xans-board-fixed .point img { width:auto; height:11px; vertical-align:-1px; }
+.xans-board-fixed .view { position:absolute; right:14px; top:21px; width:30px; height:25px; margin:-7px 0 0; }
+.xans-board-fixed .view .btnToggle { display:inline-block; width:30px; height:30px; padding:0; margin:0; border:1px solid #d5d5d5; border-radius:3px; background:#fff; }
+.xans-board-fixed .view .btnToggle img { width:13px; height:8px; padding:11px 8px 11px 8px; }
+
+/* 게시글 */
+.xans-board-list { margin:-1px 0 0; font-size:11px; border-top:1px solid #ececec; background:#fff; }
+.xans-board-list li { overflow:hidden; position:relative; padding:14px 0 14px 7px; min-height:50px; color:#757575; border-bottom:1px solid #ececec; }
+.xans-board-list .thumb { float:left; }
+.xans-board-list .thumb img { width:50px; max-height:50px; padding:0 7px; }
+.xans-board-list .summary { position:relative; padding:0 7px; }
+.xans-board-list .summary a { display:block; color:#757575; }
+.xans-board-list .summary > a > span { position:relative; padding:0 6px 0 0; }
+.xans-board-list .subject { display:block; padding:0 0 7px; font-size:15px; line-height:1.3em; color:#1b1b1b; font-weight:normal; }
+.xans-board-list .comment { color:#508bed; }
+.xans-board-list .subject img,
+.xans-board-list .point img { width:auto; height:11px; vertical-align:-1px; }
+.xans-board-list .view { position:absolute; right:14px; top:21px; width:30px; height:25px; margin:-7px 0 0; }
+.xans-board-list .view .btnToggle { display:inline-block; width:30px; height:30px; padding:0; margin:0; border:1px solid #d5d5d5; border-radius:3px; background:#fff; }
+.xans-board-list .view .btnToggle img { width:13px; height:8px; padding:11px 8px 11px 8px; }
+
+/* 상품후기 아코디언형 */
+.xans-board-listpackage .contentView { margin:0; padding:14px; min-height:0; background:#f1f1f1; color:#757575; font-size:15px; word-wrap:break-word; }
+.xans-board-listpackage .contentView img { margin:0 0 14px; max-width:100%; }
+
+/* 게시글 없음 */
+.xans-board-empty { padding:28px 0; text-align:center; font-size:12px; border-bottom:1px solid #d5d5d5; background:#fff; }

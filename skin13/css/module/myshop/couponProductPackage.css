@@ -1,0 +1,9 @@
+.popup { min-width:600px; height:500px; }
+.popup .layerTheme.gFixed { position:fixed; }
+.popup .layerTheme.gFixed .buttonArea { position:relative; }
+
+ .xans-myshop-couponproductlist table td .price strong { display:block; }
+
+.xans-myshop-couponproductlist .title { overflow:hidden; margin:18px 0 8px; }
+.xans-myshop-couponproductlist .title .result { float:left; padding:2px 0 0 16px; background:url("http://img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 9px 50%; }
+.xans-myshop-couponproductlist .title select { float:right; }

@@ -1,0 +1,14 @@
+.xans-layout-conversionpc a {
+    display:block; padding:21px 0 22px; border-radius:4px; text-align:center;
+    border:2px solid #9d9db0;
+    font-weight:bold; font-size:38px; color:#63666e;
+}
+.xans-layout-conversionpc a {
+    background:#fff -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2));
+    background:#fff -moz-linear-gradient(top, #fff, #f2f2f2);
+}
+.xans-layout-conversionpc a:hover {
+    font-weight:bold; font-size:38px; color:#63666e;
+	text-decoration:none;
+}
+.xans-layout-conversionpc a span { padding:0 0 0 42px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/layout/ico_mobile.png") no-repeat 0 50%; background-size:27px 35px; }

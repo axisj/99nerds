@@ -1,0 +1,5 @@
+.xans-product-mobileimage { margin:0; }
+.xans-product-mobileimage li { vertical-align:middle; }
+.xans-product-mobileimage .thumbnail { display:inline-block; position:relative; }
+.xans-product-mobileimage img { max-width:100%; max-height:100%; }
+.xans-product-mobileimage .paginate { margin:15px 0 0; }

@@ -1,0 +1,11 @@
+.xans-layout-category.mainCategory ul { width:100%; font-size:0; line-height:0; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+.xans-layout-category.mainCategory ul:after { content:""; display:block; clear:both; }
+.xans-layout-category.mainCategory li { float:left; width:25%; }
+.xans-layout-category.mainCategory li a { display:block; overflow:hidden; height:36px; line-height:36px; padding:0 7px; font-size:13px; color:#000; font-weight:bold;
+     border-bottom:1px solid #ececec; border-right:1px solid #ececec; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+.xans-layout-category.mainCategory li:nth-child(4) a,
+.xans-layout-category.mainCategory li:nth-child(8) a { border-right:0; }
+.xans-layout-category.mainCategory li:nth-child(5) a,
+.xans-layout-category.mainCategory li:nth-child(6) a,
+.xans-layout-category.mainCategory li:nth-child(7) a,
+.xans-layout-category.mainCategory li:nth-child(8) a { border-bottom:0; }

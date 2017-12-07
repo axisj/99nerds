@@ -1,0 +1,28 @@
+.popup { min-width:0; max-width:450px; height:211px; }
+
+.mid-0.xans-coupon-productpopup .couponSkinArea { *zoom:1; }
+.mid-0.xans-coupon-productpopup .couponSkinArea:after { content:""; display:block; clear:both; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon { width:216px; height:105px; margin:0 auto 20px; line-height:1.5; text-align:center; background-repeat:no-repeat; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon img { border:0; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon p { margin:0; padding:0; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon .title { display:block; padding:8px 0 0; line-height:15px; text-align:center; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon .discount { line-height:28px; text-align:center; letter-spacing:-1px; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon .period { line-height:13px; text-align:center; letter-spacing:-1px; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon .button { margin:5px 0 0; text-align:center; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon.imgCoupon .title,
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon.imgCoupon .discount,
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon.imgCoupon .period,
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon.imgCoupon .button { display:none; }
+.mid-0.xans-coupon-productpopup .couponSkinArea .coupon.imgCoupon .detail { height:100%; }
+
+/* 쿠폰 상품선택(팝업) */
+.popup .mid-0.xans-coupon-productpopup .typeSearch.typeProduct .gProduct.typeBody { height:316px; }
+.mid-0.xans-coupon-productpopup .gProduct table th.price { width:70px; }
+.mid-0.xans-coupon-productpopup .gProduct table td.price { width:53px; text-align:right; }
+
+#dCouponDetail { overflow:hidden; position:relative; width:398px; padding:0; box-shadow:5px 5px 5px #d3d3d3; }
+#dCouponDetail h3 + a { position:absolute; right:20px; top:10px; }
+#dCouponDetail ul { clear:both; padding:16px 10px 17px 20px; margin:0 0 30px 0; background:#f5f5f5; }
+#dCouponDetail ul li { margin:7px 0 0; line-height:18px; }
+#dCouponDetail ul li:first-child { margin-top:0; }
+#dCouponDetail ul + a { position:absolute; left:50%; bottom:15px; margin:0 0 0 -31px; }

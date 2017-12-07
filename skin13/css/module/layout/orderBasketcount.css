@@ -1,0 +1,25 @@
+.xans-layout-orderbasketcount {
+    overflow:hidden; padding:8px 0 7px 0; text-align:center; *zoom:1;
+    border-width:0;
+    border-style:solid;
+    border-color:#fff;
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+}
+.xans-layout-orderbasketcount a {
+    font-family:Verdana,Dotum,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    font-style:normal;
+}
+.xans-layout-orderbasketcount span.basket {
+    text-decoration:none;
+}
+.xans-layout-orderbasketcount span.count {
+    text-decoration:none;
+}
+.xans-layout-orderbasketcount a:hover,
+.xans-layout-orderbasketcount a:active,
+.xans-layout-orderbasketcount a:focus { color:inherit; }

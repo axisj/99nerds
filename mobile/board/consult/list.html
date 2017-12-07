@@ -1,0 +1,66 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_9">
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div id="titleArea" module="board_title_9">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div class="writeNotiArea">
+        <div class="gRight {$write_display|display}" module="board_ButtonList"><a href="/board/consult/write.html{$param_write}" class="btnStrong">글쓰기</a></div>
+    </div>
+
+    <div class="boardSort">
+        <span module="board_category_9">{$form.board_category}</span>
+        <span module="board_ReplySort_9">{$reply_sort}</span>
+    </div>
+
+    <ul module="board_list_9" class="boardList">
+        <!--
+            $login_page_url = /member/login.html
+            $subject_cut = 22
+         -->
+        <li>
+            <p class="summary">
+                <a href="{$link_board_detail}">
+                    <strong class="subject">{$icon_re} {$icon_mobile} {$subject} {$icon_new} {$icon_hit} {$icon_file}</strong>
+                    <span class="name" title="작성자"> {$writer}</span>
+                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                    <span class="answer">답변여부 <strong>{$consult}</strong></span>
+                </a>
+            </p>
+        </li>
+        <li>
+            <p class="summary">
+                <a href="{$link_board_detail}">
+                    <strong class="subject">{$icon_re} {$icon_mobile} {$subject} {$icon_new} {$icon_hit} {$icon_file}</strong>
+                    <span class="name" title="작성자"> {$writer}</span>
+                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                    <span class="answer">답변여부 <strong>{$consult}</strong></span>
+                </a>
+            </p>
+        </li>
+    </ul>
+
+    <p module="board_empty_9" class="empty {$empty_display|display}">{$empty_message}</p>
+</div>
+
+<div module="board_paging_9" class="paginate typeList">
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>
+
+<div module="board_search_9" class="boardSearch9">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <div class="category">{$form.search_date} {$form.search_key}</div>
+        <div class="keyword">{$form.search} <button class="btnStrong" onclick="{$action_search}">검색</button></div>
+    </fieldset>
+</div>

@@ -1,0 +1,123 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ModifyPackage_9">
+    <!--@css(/css/module/board/modifyPackage.css)-->
+    <div id="titleArea" module="board_title_9">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_modify_9">
+        <!--
+            $modify_success_url = /board/consult/read.html
+        -->
+        <div class="boardModifyArea">
+            <div class="boardModify {$display_parent_form|display}">
+                <table border="1" summary="">
+                    <caption>1:1 맞춤상담 상세</caption>
+                    <colgroup>
+                        <col style="width:75px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">질문 제목</th>
+                            <td>{$parent_subject}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">작성자</th>
+                            <td>{$parent_writer}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <ul>
+                                    <li class="comment">
+                                        <strong>답변여부</strong> <span>{$parent_consult}</span>
+                                    </li>
+                                    <li class="date {$config.use_date|display}">
+                                        <strong>문의일시</strong> <span>{$parent_write_date}</span>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{$parent_content}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boardModify">
+                <table border="1" summary="">
+                    <caption>1:1 맞춤상담 답변쓰기 폼</caption>
+                    <colgroup>
+                        <col style="width:75px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td>{$form.subject}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일</th>
+                            <td>
+                                {$form.email}
+                                <p>답변여부를 메일로 받으시겠습니까?</p>
+                                <p>{$form.cons_re}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                {$form.content}
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="{$config.use_attach|display}">
+                        <tr>
+                            <th scope="row">첨부파일1</th>
+                            <td>
+                                {$form.attach_file}
+                                <p class="line">{$attached_file1}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일2</th>
+                            <td>
+                                {$form.attach_file}
+                                <p class="line">{$attached_file2}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일3</th>
+                            <td>
+                                {$form.attach_file}
+                                <p class="line">{$attached_file3}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일4</th>
+                            <td>
+                                {$form.attach_file}
+                                <p class="line">{$attached_file4}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일5</th>
+                            <td>
+                                {$form.attach_file}
+                                <p class="line">{$attached_file5}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btnArea type2">
+                <button type="button" class="btnSubmit" onclick="{$action_modify}">수정</button>
+                <a href="{$link_board_list}"  class="btnEm">취소</a>
+            </div>
+        </div>
+    </div>
+</div>

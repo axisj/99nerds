@@ -1,0 +1,28 @@
+.xans-product-listnew { margin:0; background:#f5f5f5; border-bottom:1px solid #d5d5d5; padding:0; }
+.xans-product-listnew:first-child h2 { border-top:0; }
+.xans-product-listnew h2 { margin:0; padding:14px 14px 0; font-size:14px; line-height:15px; color:#4a5164; }
+.xans-product-listnew img { max-width:100%; }
+.xans-product-listnew li { vertical-align:top; margin:0 0 14px; }
+
+.xans-product-listnew > ul > li > ul { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:14px 7px 0; font-size:0; line-height:0; }
+.xans-product-listnew > ul > li > ul > li { position:relative; display:inline-block; padding:0; vertical-align:top; font-size:12px; line-height:1.4; }
+
+/* swipe 기능을 사용하지않는경우 */
+.xans-product-listnew > ul[class*="grid"] { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:14px 7px 0; font-size:0; line-height:0; }
+.xans-product-listnew > ul[class*="grid"] > li { position:relative; display:inline-block; padding:0; vertical-align:top; font-size:12px; line-height:1.4; }
+
+.xans-product-listnew .thumbnail { padding:0 7px; margin:0 0 10px; }
+.xans-product-listnew .thumbnail img { width:100%; border:1px solid #ececec; }
+.xans-product-listnew .information { position:relative; min-height:10px; padding:0 7px; }
+.xans-product-listnew .name { margin:0 0 10px; line-height:1.5em; word-wrap:break-word; }
+.xans-product-listnew .name a { font-size:13px; color:#757575; }
+.xans-product-listnew .icon { margin:0 0 10px; }
+.xans-product-listnew .price { margin:0 0 10px; color:#494949; font-family:Tahoma; font-size:13px; line-height:1.25em; }
+.xans-product-listnew .price.sale { color:#000; font-size:15px; }
+.xans-product-listnew .strike { text-decoration:line-through; }
+.xans-product-listnew .grid2 li { width:50%; }
+.xans-product-listnew .grid2 li .name a { font-size:13px; }
+.xans-product-listnew .grid3 li { width:33.333%; }
+.xans-product-listnew .grid3 li .name a { font-size:13px; }
+.xans-product-listnew .grid4 li { width:25%; }
+.xans-product-listnew .grid4 li .name a { font-size:11px; }

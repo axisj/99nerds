@@ -1,0 +1,142 @@
+/* 장바구니 토글 */
+.xans-order-basketpackage .toggleArea { position:relative; margin:14px 0 0; }
+.xans-order-basketpackage .toggleArea > .title,
+.xans-order-basketpackage .toggleArea .toggleArea > .title { position:relative; padding:14px 43px 14px 14px; cursor:pointer; line-height:1.3em; font-size:13px; font-weight:bold; background-color:#737782; color:#fff; -webkit-tap-highlight-color: rgba(255,255,255,0); }
+.xans-order-basketpackage .toggleArea > .title:after,
+.xans-order-basketpackage .toggleArea .toggleArea > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_white.png"); }
+.xans-order-basketpackage .toggleArea.selected > .title:after,
+.xans-order-basketpackage .toggleArea .toggleArea.selected > .title:after { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg); }
+.xans-order-basketpackage .toggleArea.disable > .title:after,
+.xans-order-basketpackage .toggleArea .toggleArea.disable > .title:after { background-image:none !important; }
+.xans-order-basketpackage .toggleArea > .title h2,
+.xans-order-basketpackage .toggleArea .toggleArea > .title h2 { display:inline-block; font-size:13px; }
+.xans-order-basketpackage .toggleArea > .contents,
+.xans-order-basketpackage .toggleArea .toggleArea > .contents { display:none; box-sizing:border-box; border:1px solid #d5d5d5; border-top:0; }
+.xans-order-basketpackage .toggleArea.selected > .contents,
+.xans-order-basketpackage .toggleArea .toggleArea.selected > .contents,
+.xans-order-basketpackage .toggleArea .toggleArea.disable > .contents { display:block; }
+.xans-order-basketpackage .toggleArea .toggleArea .title,
+.xans-order-basketpackage .toggleArea .toggleArea .contents { border:0; }
+.xans-order-basketpackage .toggleArea.type1 > .title { position:relative; margin:0; padding:0 34px 0 14px; line-height:43px; cursor:pointer; font-weight:bold; background-color:#f1f1f1; color:#1b1b1b; -webkit-tap-highlight-color: rgba(255,255,255,0); }
+.xans-order-basketpackage .toggleArea.type1 > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:34px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }
+.xans-order-basketpackage .xans-order-totalsummary .toggleArea.type1,
+.xans-order-basketpackage .xans-order-totaloversea .toggleArea.type1 { margin-top:-1px; }
+.xans-order-basketpackage .toggleArea.type2 > .title { position:relative; margin:0; padding:0; cursor:pointer; font-weight:bold; background-color:#f9f9f9; color:#1b1b1b; -webkit-tap-highlight-color: rgba(255,255,255,0); }
+.xans-order-basketpackage .toggleArea.type2 > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }
+.xans-order-basketpackage .toggleArea.type2 .contents { margin:14px 0 0; }
+
+/* 국내배송/해외배송 탭 */
+.xans-order-tabinfo.tab.typeStrong.gFlex { margin:0 -7px; font-size:13px; background:#f1f1f1; }
+.xans-order-tabinfo.tab.typeStrong.gFlex ul { border-bottom:1px solid #4a5164; }
+.xans-order-tabinfo.tab.typeStrong.gFlex ul:after { content:""; display:block; clear:both; }
+.xans-order-tabinfo.tab.typeStrong.gFlex li { float:left; width:50%; height:36px; font-size:0; text-align:center; vertical-align:middle; background:#fff; }
+.xans-order-tabinfo.tab.typeStrong.gFlex li.selected { background:#4a5164; }
+.xans-order-tabinfo.tab.typeStrong.gFlex li a { display:inline-block; width:100%; color:#000; font-size:13px; line-height:35px; }
+.xans-order-tabinfo.tab.typeStrong.gFlex li.selected a { color:#fff; font-weight:bold; }
+
+/* 상품정보 */
+.xans-order-basketpackage { margin:7px 7px 0; padding:0 0 29px; }
+.xans-order-basketpackage .xans-order-empty { padding:30px 0; color:#212530; font-size:12px; text-align:center; }
+.xans-order-basketpackage .title h2 { padding:0 0 0 14px; line-height:43px; font-size:13px; border-bottom:1px solid #d5d5d5; color:#508bed; background-color:#f0f0f0; }
+.xans-order-basketpackage .prdInfo { padding:7px 14px 0; border-bottom:1px solid #d5d5d5; background-color:#fff; }
+.xans-order-basketpackage .description { position:relative; min-height:90px; padding:7px 0 0 90px; }
+.xans-order-basketpackage .description .prdImg { position:absolute; left:0; top:7px; z-index:10; width:73px; border:1px solid #d5d5d5; }
+.xans-order-basketpackage .description .prdImg img { width:100%; }
+.xans-order-basketpackage .description .prdName { display:block; margin:0 0 14px; font-size:13px; }
+.xans-order-basketpackage .description .info { margin:0 0 14px; }
+.xans-order-basketpackage .description .info li { margin:0 0 7px; font-size:11px; color:#757575; }
+.xans-order-basketpackage .description .info li.mileage img { margin:0 0 2px; vertical-align:top; }
+.xans-order-basketpackage .description .info li.price { padding:7px 0; font-size:13px; color:#000; }
+.xans-order-basketpackage .description .info li.price span > span { font-size:11px; }
+.xans-order-basketpackage .description .discount { margin:0; display:block; text-decoration:line-through; }
+.xans-order-basketpackage .description .quantity input[type="tel"] { width:51px; text-align:right; }
+.xans-order-basketpackage .prdTotal { padding:14px 0 7px; border-top:1px solid #ececec; font-size:13px; text-align:right; }
+.xans-order-basketpackage .prdTotal span { font-size:11px; }
+.xans-order-basketpackage .xans-order-list .btnArea { margin:0 auto; line-height:43px; }
+
+/* 옵션변경 레이어 */
+.xans-order-basketpackage .optionList > li { border-top:1px solid #ececec; }
+.xans-order-basketpackage .optionList .name { position:relative; padding:14px 100px 28px 0; font-size:13px; }
+.xans-order-basketpackage .optionList .name .btnBasic { position:absolute; right:0; top:14px; }
+.xans-order-basketpackage .optionList .name .file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#80aeef; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_attach.png") no-repeat 0 0; background-size:8px 13px; }
+.xans-order-basketpackage .layerOptionModify { display:none; margin:0 auto 14px; padding:14px; border:1px solid #d5d5d5; background-color:#f1f1f1; }
+.xans-order-basketpackage .layerOptionModify li span { display:inline-block; width:74px; line-height:27px; font-size:13px; color:#757575; }
+.xans-order-basketpackage .layerOptionModify li strong { font-weight:normal; float:right; display:inline-block; width:auto; }
+.xans-order-basketpackage .layerOptionModify li { margin:0 0 7px; }
+.xans-order-basketpackage .layerOptionModify li:after { content:""; display:block; clear:both; }
+.xans-order-basketpackage .layerOptionModify .button { text-align:center; }
+.xans-order-basketpackage .layerOptionModify select,
+.xans-order-basketpackage .layerOptionModify input[type="text"] { width:70%; float:right; }
+.xans-order-basketpackage .layerOptionModify .button a.btnBasic { color:#fff; border:1px solid #8c8c8c; background-color:#8c8c8c; }
+
+/* 배송비/합계 금액 */
+.xans-order-basketpackage .totalPrice { padding:14px 0 14px 14px; border-bottom:1px solid #d5d5d5; background-color:#f9f9f9; line-height:18px; }
+.xans-order-basketpackage .totalPrice .txtTitle { display:block; font-size:13px; font-weight:normal; color:#1b1b1b; }
+.xans-order-basketpackage .totalPrice span.sale { font-size:13px; }
+.xans-order-basketpackage .totalPrice span { font-size:11px; }
+
+/* 선택상품 제어버튼 */
+.xans-order-selectorder { max-width:100%; margin:0 auto; padding:7px 14px; overflow:hidden; font-size:11px; text-align:right; }
+.xans-order-selectorder .gLeft { float:left; }
+.xans-order-selectorder a { font-size:11px; }
+.xans-order-selectorder .btnArea { clear:both; border-top:1px solid #d5d5d5; max-width:100%; margin:7px 0 0; padding:7px 0 0; }
+
+/* 결제금액 관련 */
+.totalSummary { margin:7px 0 0; }
+.totalSummary .total { position:relative; overflow:hidden; margin:-1px 0 0; padding:14px 32px 14px 14px; font-size:15px; border:1px solid #ccc; color:#424242; background-color:#f1f1f1; }
+.totalSummary .total.shipping { overflow:visible; }
+.totalSummary .total h3 { float:left; font-size:13px; font-weight:normal; color:#508bed; }
+.totalSummary .total.order { color:#fff; border:0; background-color:#4a5164; }
+.totalSummary .total.order h3 { color:#fff; font-weight:bold; }
+.totalSummary .total p, .totalSummary .total > div { float:right; text-align:right; font-size:15px; font-weight:normal; }
+.totalSummary .total p strong, .totalSummary .total div strong {display:inline-block; word-break:break-all; }
+.totalSummary .total p .refer, .totalSummary .total div .refer { display:inline-block; font-size:12px; word-break:break-all; }
+.totalSummary .total .shippingArea { margin:7px 0 0; font-size:12px; }
+.totalSummary .total:after { content:""; display:block; clear:both; }
+.totalSummary .more { display:none; overflow:hidden; background:#fff; margin:-1px 0 0; border:1px solid #ccc; }
+.totalSummary .more li { overflow:hidden; padding:10px 32px 10px 14px; text-align:right; border-top:1px solid #f1f1f1; }
+.totalSummary .more li:first-child { border:0; }
+.totalSummary .more li strong { float:left; font-size:13px; font-weight:normal; color:#757575; padding:0 0 0 7px; }
+.totalSummary .more li strong:before { overflow:hidden; content:""; position:relative; left:-7px; display:inline-block; width:7px; height:7px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_bullet.png") no-repeat 0 0; background-size:100%; }
+.totalSummary .more li span { float:right; word-break:break-all; }
+.xans-order-totalorder { margin:14px 0 0; }
+
+.xans-order-basketpackage .message { margin:20px 0 0; font-size:12px; }
+#NaverChk_Button { margin:14px 0 0; }
+
+/* 하단고정 주문 버튼 */
+.xans-order-totalorder.fixed .state { overflow:hidden; margin:0 auto; font-size:11px; }
+.xans-order-totalorder.fixed .state .count { float:left; padding:7px 0 0; }
+.xans-order-totalorder.fixed .state .price { float:right; padding:7px 0 0; }
+.xans-order-totalorder.fixed { position:fixed; z-index:120; left:0; bottom:0; width:100%; margin:0; padding:0 7px 0; box-sizing:border-box; background-color:#dbdbdb;
+    -webkit-box-shadow: 0px -4px 4px 0px rgba(120, 120, 120, 0.5);
+    -moz-box-shadow: 0px -4px 4px 0px rgba(120, 120, 120, 0.5);
+    box-shadow: 0px -4px 4px 0px rgba(120, 120, 120, 0.5);
+ }
+.xans-order-totalorder.fixed .btnArea { margin:0 auto 7px; }
+.xans-order-totalorder #checked_order_price strong { font-weight:normal; }
+.xans-order-totalorder #checked_order_count strong,
+.xans-order-totalorder #checked_order_price em { color:#508bed; font-weight:bold; }
+/* 배송비 레이어 */
+.xans-order-basketpackage .shippingFee { display:inline-block; position:static; vertical-align:middle; }
+.xans-order-basketpackage .shippingFee > a.btnNormal { margin:-3px 0 0 5px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip { display:none; z-index:999; position:absolute; left:2%; width:96%; top:70px; margin:0; font-size:13px; text-align:left; border:1px solid #d5d5d5; background:#fff; border-radius:5px; box-sizing:border-box;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+.xans-order-basketpackage .shippingFee .ec-base-tooltip h3 { float:none; padding:0 14px; font-size:13px; line-height:36px; text-align:left; font-weight:bold; background-color:#f0f0f0; border-bottom:1px solid #d5d5d5; border-radius:5px 5px 0 0; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip .content { padding:14px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip h4 { position:relative; margin:0 7px 7px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip table + h4 { margin-top:14px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip p strong { font-weight:normal; font-size:13px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip table { background:#fff; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip th,
+.xans-order-basketpackage .shippingFee .ec-base-tooltip td { padding:7px; border:1px solid #d5d5d5; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip th { width:80px; border-right-width:0; color:#353535; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip td { border-left-width:0; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip .txtEm { color:#008bcc; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip p { float:none; font-size:12px; text-align:left; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip .info { color:#757575; font-size:11px; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip .btnClose { overflow:hidden; position:absolute; right:0; top:0; width:36px; height:36px; font-size:0; border:none; background:transparent url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") center center no-repeat; background-size:14px 14px; }

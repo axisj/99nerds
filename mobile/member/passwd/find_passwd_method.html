@@ -1,0 +1,36 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>비밀번호 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_findpasswdmethod">
+    <!--@css(/css/module/member/find_passwd_method.css)-->
+     <!--
+        $nextURL = /member/passwd/find_passwd_result.html
+     -->
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>본인확인 인증</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">임시 비밀번호</th>
+                    <td>{$form.passwd_method_type}</td>
+                </tr>
+                <tr class="email" id="{$passwd_method_email_info}">
+                    <th scope="row">이메일</th>
+                    <td><strong class="txtEm gSingleBreak">{$passwd_method_email}</strong></td>
+                </tr>
+                <tr class="mobile" id="{$passwd_method_mobile_info}">
+                    <th scope="row">휴대폰 번호</th>
+                    <td><strong class="txtEm gSingleBreak">{$passwd_method_mobile}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type1">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_find_passwd_send}">임시 비밀번호 전송</a>
+    </div>
+</div>

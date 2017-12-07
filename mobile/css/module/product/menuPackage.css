@@ -1,0 +1,31 @@
+.xans-product-menupackage .titleArea { margin:0; }
+.xans-product-menupackage > ul { margin:-1px 0 0; padding:0 14px; border-bottom:1px solid #d5d5d5; background:#fff; }
+.xans-product-menupackage > ul .icoOpen { width:13px; cursor:pointer; vertical-align:top; }
+.xans-product-menupackage > ul > li { padding:11px 0 10px; border-top:1px solid #ececec; }
+.xans-product-menupackage > ul > li:first-child { border-top:0; }
+.xans-product-menupackage > ul > li > a { display:inline-block; margin:0 14px 0 0; color:#2e2e2e; font-weight:bold; font-size:13px; vertical-align:top; }
+.xans-product-menupackage > ul > li > ul { display:inline; }
+.xans-product-menupackage > ul > li > ul > li { position:relative; display:inline-block; padding:0 7px 0 8px; }
+.xans-product-menupackage > ul > li > ul > li:before { display:block; content:""; position:absolute; top:0; left:0; width:1px; height:13px; background:#d6d6d6; }
+.xans-product-menupackage > ul > li > ul > li:first-child:before { display:none; }
+.xans-product-menupackage > ul li.selected > a { color:#508bed; }
+.xans-product-menupackage > ul > li > ul > li > .button { display:inline-block; position:relative; width:13px; height:12px; }
+.xans-product-menupackage .subCategory { display:none; position:absolute; right:0; top:13px; z-index:11; min-width:120px; padding:12px 12px 0; border:1px solid #9b9b9b; background:#fff; border-radius:4px; box-shadow: 3px 3px 15px #a8a8a8;}
+.xans-product-menupackage .subCategory li { padding:7px 0 0; }
+.xans-product-menupackage .subCategory li:first-child { padding:0 13px 0 0; }
+.xans-product-menupackage .subCategory li a { color:#575a63; }
+.xans-product-menupackage .subCategory li a:hover,
+.xans-product-menupackage .subCategory li.selected a { color:#008bcc; }
+.xans-product-menupackage .subCategory .icoClose { position:absolute; right:12px; top:12px; width:13px; cursor:pointer; }
+.xans-product-menupackage .menuCategory .button.selected { z-index:11; }
+.xans-product-menupackage .menuCategory .button.selected .subCategory { display:block; }
+.xans-product-menupackage .menuCategory li.xans-product-displaysubcategory { display:inline-block; border:0; }
+.xans-product-menupackage .banner { padding:10px 14px; }
+
+/* 기능버튼 */
+.xans-product-menupackage #titleArea .funcArea { position:absolute; top:6px; right:14px; }
+.xans-product-menupackage #titleArea .likeButton { position:static; top:auto; left:auto; display:inline-block; margin:4px 0 0; vertical-align:middle; }
+.xans-product-menupackage .likeButton button { border:0; background:none; }
+.xans-product-menupackage .likeButton button strong { margin:0 0 0 3px; font-size:11px; line-height:20px; color:#757575; }
+.xans-product-menupackage .likeButton.selected button strong { line-height:20px; color:#2e2e2e; vertical-align:middle; }
+.xans-product-menupackage #titleArea .likeButton span { position:static; }

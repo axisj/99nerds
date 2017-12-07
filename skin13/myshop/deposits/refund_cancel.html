@@ -1,0 +1,109 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div class="tableTheme mid-0" module="Myshop_depositRefundPackage">
+    <!--@css(/css/module/myshop/depositRefundPackage.css)-->
+    <div module="Myshop_DepositRefundList">
+        <!--
+            $only_html = no
+            $count = 10
+            $login_page = /member/login.html
+        -->
+        <div class="header">
+            <h1>{$deposit_name} 현금 환불 요청</h1>
+        </div>
+
+        <div class="content">
+            <div class="boxTheme">
+                <ul>
+                    <li>- 고객님의 {$deposit_name}을 현금으로 환불 받으실 경우 이용해 주세요.</li>
+                    <li>- 환불 요청을 하시면 {$deposit_name} 내역 확인 절차 후 해당 계좌로 입금됩니다. (확인 절차에 따라 다소 시간이 지체될 수 있습니다.)</li>
+                    <li>- 개인정보보호 및 거래의 안전을 위해 반드시 고객(회원)님의 실명인증 된 예금주 명의 계좌를 입력해 주세요.</li>
+                    <li>- 기타 환불관련 사항은 고객센터로 문의하시기 바랍니다.</li>
+                </ul>
+            </div>
+
+            <div class="tabTheme">
+                <ul class="menu">
+                    <li><a href="refund_call.html">현금환불 요청</a></li>
+                    <li class="selected"><a href="refund_cancel.html">현금환불 취소</a></li>
+                </ul>
+            </div>
+
+            <table border="1" summary="">
+                <caption>환불취소 목록</caption>
+                <colgroup>
+                    <col style="width:20px;" />
+                    <col style="width:100px;" />
+                    <col style="width:100px;" />
+                    <col style="width:100px;" />
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">요청일자</th>
+                        <th scope="col">요청금액</th>
+                        <th scope="col">예금주</th>
+                        <th scope="col">계좌정보</th>
+                        <th scope="col">처리상태</th>
+                    </tr>
+                </thead>
+                <tbody class="{$display_refund|display} center">
+                    <tr>
+                        <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" /></td>
+                        <td>{$refund_date}</td>
+                        <td class="right"><strong>{$refund_money}</strong></td>
+                        <td>{$depositor}</td>
+                        <td>{$bank}</td>
+                        <td>{$status}</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" /></td>
+                        <td>{$refund_date}</td>
+                        <td class="right"><strong>{$refund_money}</strong></td>
+                        <td>{$depositor}</td>
+                        <td>{$bank}</td>
+                        <td>{$status}</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="{$chk_id}" name="{$chk_id}" value="{$chk_val}" /></td>
+                        <td>{$refund_date}</td>
+                        <td class="right"><strong>{$refund_money}</strong></td>
+                        <td>{$depositor}</td>
+                        <td>{$bank}</td>
+                        <td>{$status}</td>
+                    </tr>
+                </tbody>
+                <tbody class="{$display_refund_none|display}">
+                    <tr>
+                        <td colspan="6"><p class="empty">환불 요청 내역이 없습니다.</p></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div module="myshop_DepositRefundPaging" class="paginate">
+                <p class="first"><a href="{$first_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+                <p><a href="{$prev_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+                <ol>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                    <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                </ol>
+                <p><a href="{$next_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+                <p class="last"><a href="{$last_url}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+            </div>
+        </div>
+
+        <div class="buttonArea">
+            <a href="#none" id="{$btn_refund_cancel_id}" class="btnSubmitB">현금환불취소</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+#categoryList { border-bottom:1px solid #ccc; }
+#categoryList h2 { max-height:43px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:15px; line-height:43px; padding:0 42px 0 14px; border-top:1px solid #d9d9d9; background:#fff url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_open.gif") no-repeat right 14px top 50%; background-size:13px 8px; cursor:pointer; }
+#categoryList h2.selected { background-image: url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_title_close.gif"); }
+
+#categoryList .xans-layout-category { font-size:13px; font-weight:bold; }
+#categoryList .xans-layout-category ul { display:none; }
+#categoryList .xans-layout-category li.noChild a.cate { display:none; }
+#categoryList .xans-layout-category li > a.view {  display:inline-block; padding:14px 0 15px; *zoom:1; }
+#categoryList .xans-layout-category li a.cate { display:inline-block; margin:0 7px 0 0; padding:14px 0 15px 14px; width:13px; height:13px; background-image:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_cate_1depth.gif"); background-repeat:no-repeat; background-position:14px 50%; background-size:13px 13px; }
+#categoryList .xans-layout-category li a.cate span { overflow:hidden; position:relative; left:0; top:0; font-size:0; text-indent:150%; color:transparent; white-space: nowrap; }
+#categoryList .xans-layout-category li.selected > ul { display:block; }
+#categoryList .xans-layout-category li.selected > a.view { color:#508bed; }
+#categoryList .xans-layout-category li.selected > a.cate { background-image:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_cate_1depth_on.gif"); }
+#categoryList .xans-layout-category li li.selected > a.cate { background-image:url("http://img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_cate_2depth_on.gif"); background-size:13px 2px; }
+#categoryList .xans-layout-category > li > ul { margin-top:-1px; border-top:1px solid #ccc; }
+#categoryList .xans-layout-category > li > ul > li ul,
+#categoryList .xans-layout-category > li > ul > li ul li { margin-top:-1px; border-top:1px solid #ebebeb; }
+#categoryList .xans-layout-category > li { border-top:1px solid #cccccc; background-color:#f1f1f1; }
+#categoryList .xans-layout-category > li > ul > li { background-color:#fff; border-top:1px solid #ebebeb; }
+#categoryList .xans-layout-category > li > ul > li > a.cate { padding-left:21px; background-position:21px 50%; }
+#categoryList .xans-layout-category > li > ul > li > ul > li > a.cate { padding-left:28px; background-position:28px 50%; }
+#categoryList .xans-layout-category > li.noChild { padding-left:34px; }
+#categoryList .xans-layout-category > li > ul > li.noChild { padding-left:41px; }
+#categoryList .xans-layout-category > li > ul > li > ul > li.noChild { padding-left:48px; }
+#categoryList .xans-layout-category > li > ul > li > ul> li > ul > li.noChild { padding-left:56px; } 

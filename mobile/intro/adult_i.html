@@ -1,0 +1,21 @@
+<!--@layout(/layout/basic/intro.html)-->
+<div module="Member_AdultHead">
+    <!--@css(/css/module/intro/adultHead.css)-->
+    <fieldset>
+        <p class="under19"><span>19</span><strong>이 정보 내용은 청소년유해매체물</strong>로서 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」및「청소년 보호법」에 따라 19세 미만의 청소년이 이용할 수 없습니다.</p>
+
+        <div class="btnArea type1"><a href="{$outlink}" class="btnEm">19세 미만 나가기</a></div>
+
+        <div class="formBox" {$display_auth}>
+            <h3>성인인증</h3>
+            <p class="ipin">
+                {$radioAuthIpin} <label for='{$idAuthIpin}' {$ipinAuthRadioView} >아이핀 인증</label>
+                <span id="ipin" {$ipinAuthRadioView}><a href="#none" onclick="{$ipinpopup}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_Ipin.gif" alt="아이핀 인증" /></a></span>
+            </p>
+            <p class="mobile">
+                {$radioAuthMobile} <label for="{$idAuthMobile}" {$mobileauthAuthRadioView}>휴대폰 인증</label>
+                <span id="mobileauth" {$mobileauthAuthRadioView} {$mobileauthAuthRadioViewDevault}><a href="#none" onclick="{$mobileauthpopup}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_mobile_check.gif" alt="휴대폰 인증" /></a></span>
+            </p>
+        </div>
+    </fieldset>
+</div>

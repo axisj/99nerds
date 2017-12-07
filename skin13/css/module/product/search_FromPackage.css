@@ -1,0 +1,5 @@
+.popup { min-width:600px; height:400px; }
+.xans-search-frompackage #keyword { width:240px; }
+.xans-search-frompackage .resultArea { overflow:hidden; text-align:right; line-height:24px; *zoom:1; }
+.xans-search-frompackage .total { float:left; }
+.xans-search-frompackage img { border:0; padding:0; margin:0; }

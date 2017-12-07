@@ -1,0 +1,8 @@
+@charset "euc-kr";
+
+/* 팝업 레이아웃 */
+#popup { background:#f1f1f1; padding:0 0 10px; }
+#popup > div { position:relative; }
+#popup h2 { height:36px; padding:0 38px 0 7px; font-size:15px; line-height:36px; color:#fff; background:#4a5164; }
+#popup .btnClose { position:absolute; right:0; top:0; z-index:110; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") center center no-repeat; background-size:14px 14px; }
+#popup .wrap { padding:14px 7px 7px; padding:7px; font-size:12px; background:#fff; }

@@ -1,0 +1,5 @@
+.xans-layout-mobilenavigation ul { overflow:hidden; background:#4a5164; }
+.xans-layout-mobilenavigation ul li { float:left; }
+.xans-layout-mobilenavigation ul li a { display:block; height:43px; font-size:12px; line-height:43px; color:#fff; text-align:center; font-weight: bold; }
+.xans-layout-mobilenavigation ul.grid4 li { width:25%; }
+.xans-layout-mobilenavigation ul.grid5 li { width:20%; }

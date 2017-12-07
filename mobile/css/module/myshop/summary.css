@@ -1,0 +1,24 @@
+.xans-myshop-summary h3 { padding:14px; font-size:13px; line-height:1.2em; color:#fff; background:#737781; }
+.xans-myshop-summary .boardView { margin:14px 7px; }
+.xans-myshop-summary .boardView table { font-size:12px; word-wrap:break-word; }
+.xans-myshop-summary .boardView table th { color:#111; }
+.xans-myshop-summary .boardView table tbody { border:1px solid #d5d5d5; border-top:0; }
+.xans-myshop-summary .boardView table thead th { padding:8px 0; }
+.xans-myshop-summary .boardView table tbody th,
+.xans-myshop-summary .boardView table tbody td { font-size:13px; background:#fff; border-top:1px solid #ececec; }
+.xans-myshop-summary .boardView table tbody th { padding:14px 0 14px 14px; font-weight:normal; color:#757575; text-align:left; }
+.xans-myshop-summary .boardView table tbody td { padding:14px 14px 14px 0; text-align:right; }
+.xans-myshop-summary .boardView table tbody tr:first-child > th,
+.xans-myshop-summary .boardView table tbody tr:first-child > td  { border-top:0; }
+.xans-myshop-summary .boardView table .txtEm { font-weight:normal; color:#508bed; }
+
+/* 관련 링크 */
+.xans-myshop-mileagepackage .navigation { padding:0 7px 14px; border-bottom:1px solid #ccc; }
+.xans-myshop-mileagepackage .navigation ul { border:1px solid #d5d5d5; }
+.xans-myshop-mileagepackage .navigation li { background:#f9f9f9; border-top:1px solid #ddd; }
+.xans-myshop-mileagepackage .navigation li:first-child { border-top:0; }
+.xans-myshop-mileagepackage .navigation li a { display:block; position:relative; padding:14px; font-weight:bold; font-size:13px; line-height:1.2em; color:#4a5164; }
+.xans-myshop-mileagepackage .navigation li a:after { display:block; content:""; width:20px; height:20px; position:absolute; top:12px; right:12px;
+    background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") right 50% no-repeat; background-size:20px 20px;
+    transform:rotate(-90deg); -ms-transform:rotate(-90deg); -webkit-transform:rotate(-90deg);
+ }

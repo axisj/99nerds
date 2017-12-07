@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>비밀번호 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="member_passwordreset">
+    <!--@css(/css/module/member/passwd_reset.css)-->
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>비밀번호 재설정</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">아이디</th>
+                    <td><strong class="txtEm">{$member_id}</strong></td>
+                </tr>
+                <tr>
+                    <th scope="row">새 비밀번호</th>
+                    <td>{$form.new_passwd}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="help">
+                            {$passwd_type_desc}
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">새 비밀번호 확인</th>
+                    <td>{$form.new_passwd_confirm}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type1">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_password_reset_submit}">확인</a>
+    </div>
+</div>

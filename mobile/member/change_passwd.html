@@ -1,0 +1,44 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>비밀번호 변경</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="member_changepasswd">
+    <!--@css(/css/module/member/change_passwd.css)-->
+    {$form.enc_password}
+    {$form.returnUrl}
+    <div class="info">
+        <p>회원님의 개인정보를 안전하게 보호하고, 개인정보 도용으로 인한 피해를 예방하기 위해 {$check_period}일 이상 비밀번호를 변경하지 않은 경우 비밀번호 변경을 권장 하고 있습니다.</p>
+        <p class="{$display_update_event|display}">이벤트 안내<br> - 비밀번호 변경 시 {$update_event_reward} 지급됩니다.</p>
+    </div>
+
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>회원 기본정보</caption>
+            <tbody>
+                <tr class="idCheck">
+                    <th scope="row">아이디</th>
+                    <td>{$member_id}</td>
+                </tr>
+                <tr>
+                    <th scope="row">현재 비밀번호</th>
+                    <td>{$form.passwd}</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="pwConfirm">새 비밀번호</th>
+                    <td>{$form.new_passwd} <span class="infotext">{$passwd_type_desc}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">새 비밀번호 확인</th>
+                    <td>{$form.new_passwd_confirm}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type2">
+        <a href="#none" onclick="{$change_password_action}" class="btnSubmit">비밀번호 변경하기</a>
+        <a href="#none" onclick="{$after_action}" class="btnEm">다음에 변경하기</a>
+    </div>
+</div>

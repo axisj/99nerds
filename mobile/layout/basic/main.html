@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title></title>
+    <!--@css(/layout/basic/css/nnn.css)--><!-- 구구너드 CSS -->
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/module/layout/1/mobilenavigation.css)-->
+    <!--@css(/layout/basic/css/button.css)-->
+    <!--@css(/layout/basic/css/paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/common.js)-->
+</head>
+<body id="main">
+<div module="Popup_MultiPopup">
+    <!--
+        $banner_popup_no =
+        ※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+    -->
+    {$popup}
+</div>
+<div module="Popup_MultiBanner">
+    <!--
+        $banner_popup_no =
+        ※ 노출시킬 배너의 ID를 숫자로 넣어주세요.
+    -->
+    {$banner}
+</div>
+<div id="wrap">
+    <!--@import(/layout/basic/sidebar.html)-->
+    <hr class="layout">
+    <div id="container">
+        <header id="header">
+            <div class="header">
+                <h1 module="Layout_LogoTop" style="background: #1E1E1E; padding:0px;"><a
+                        href="/"><img src="../../image/landing_page/main_visual/99Nerds_logo.svg" alt="99nerds-logo"/></a></h1>
+                <section id="topArea">
+                    <div class="searchWrap">
+                        <p class="category"><a href="#none" class="fold">카테고리</a></p>
+                        <div module="Layout_SearchHeader">
+                            <div class="searchForm">
+                                {$form.keyword}
+                                <button type="button" class="btnDelete">삭제</button>
+                            </div>
+                        </div>
+                        <p module="Layout_orderBasketcount">
+                            <a href="/order/basket.html" class="btnBasket">장바구니<span
+                                    class="count {$basket_count_display|display}">{$basket_count}</span></a>
+                        </p>
+                    </div>
+                    <!--@import(/layout/basic/navigation.html)-->
+
+
+                </section>
+            </div>
+        </header>
+        <hr class="layout">
+        <div id="contents">
+            <!--@contents-->
+        </div>
+        <hr class="layout">
+        <!--@import(/layout/basic/footer.html)-->
+    </div>
+</div>
+
+<script src="/layout/basic/js/jquery-3.1.1.min.js"></script>
+<script src="/layout/basic/js/jquery.flexisel.js"></script>
+<script type="text/javascript">
+    window.jQuery3_1_1 = jQuery.noConflict(true);
+    // s.Opensource Best....
+    var os_stickers_best_count = 1;
+    var os_stickers_arr = [
+        {image:'/web/upload/nnn/os_logo_01@2x.png', name:'AXISJ', desc:'Full-stack Opensource Javascript UI Framework', url:'http://99nerds.io/product/detail.html?product_no=59&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_02@2x.png', name:'HTML5', desc:'Hyper-Text Markup Language', url:'http://99nerds.io/product/detail.html?product_no=25&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_03@2x.png', name:'Spring', desc:'Lets build a better Enterprise', url:'http://99nerds.io/product/detail.html?product_no=35&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_04@2x.png', name:'CSS3', desc:'Cascading Style Sheet', url:'http://99nerds.io/product/detail.html?product_no=26&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_05@2x.png', name:'AX5', desc:'Bootstrap jQuery Plugins', url:'http://99nerds.io/product/detail.html?product_no=60&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_06@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'http://99nerds.io/product/detail.html?product_no=27&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_07@2x.png', name:'AXBoot', desc:'Full Stack Web Application Development Framework', url:'http://99nerds.io/product/detail.html?product_no=61&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_08@2x.png', name:'AngularJS', desc:'One framework. Mobile and desktop', url:'http://99nerds.io/product/detail.html?product_no=32&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_09@2x.png', name:'Bower', desc:'A package manager for the web', url:'http://99nerds.io/product/detail.html?product_no=42&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_10@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'http://99nerds.io/product/detail.html?product_no=28&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_11@2x.png', name:'C#', desc:'Simple, modern, object-oriented, and type-safe programming language', url:'http://99nerds.io/product/detail.html?product_no=37&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_12@2x.png', name:'Javascript', desc:'A package manager for the web', url:'http://99nerds.io/product/detail.html?product_no=29&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_13@2x.png', name:'99Nerds', desc:'Opensource stickers', url:'http://99nerds.io/product/detail.html?product_no=62&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_14@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'http://99nerds.io/product/detail.html?product_no=58&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_15@2x.png', name:'Flask MVC', desc:'Small, lightweight, and powerful', url:'http://99nerds.io/product/detail.html?product_no=55&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_16@2x.png', name:'Fedora', desc:'Choose Freedom. Choose Fedora.', url:'http://99nerds.io/product/detail.html?product_no=34&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_17@2x.png', name:'Ubuntu', desc:'Managed live kernel patching without reboots', url:'http://99nerds.io/product/detail.html?product_no=33&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_18@2x.png', name:'Eclipse', desc:'An amazing open source community of Tools, Projects and Collaborative Working Groups.', url:'http://99nerds.io/product/detail.html?product_no=31&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_19@2x.png', name:'Swift', desc:'Safety, performance, and software design patterns', url:'http://99nerds.io/product/detail.html?product_no=56&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_20@2x.png', name:'GO', desc:'Easy to build simple, reliable, and efficient software', url:'http://99nerds.io/product/detail.html?product_no=30&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_21@2x.png', name:'Docker', desc:'Build, Ship, and Run any app, Anywhere', url:'http://99nerds.io/product/detail.html?product_no=57&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_22@2x.png', name:'jQuery', desc:'Fast, small, and feature-rich JavaScript library', url:'http://99nerds.io/product/detail.html?product_no=53&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_23@2x.png', name:'Bash', desc:'Unix Shell', url:'http://99nerds.io/product/detail.html?product_no=52&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_24@2x.png', name:'rm -rf', desc:'Destroy universe', url:'http://99nerds.io/product/detail.html?product_no=24&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_25@2x.png', name:'Linux', desc:'Opensource Operating systems', url:'http://99nerds.io/product/detail.html?product_no=40&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_26@2x.png', name:'Yeoman Generator', desc:'The Webs Scaffolding tool for modern FOR webapps', url:'http://99nerds.io/product/detail.html?product_no=39&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_27@2x.png', name:'ReactJS', desc:'A Javascript library for building user interfaces', url:'http://99nerds.io/product/detail.html?product_no=38&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_28@2x.png', name:'Android', desc:'The world’s most popular mobile OS', url:'http://99nerds.io/product/detail.html?product_no=41&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_29@2x.png', name:'Flaskr', desc:'Small, lightweight, and powerful', url:'http://99nerds.io/product/detail.html?product_no=50&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_30@2x.png', name:'Gulp', desc:'Automate and enhance your workflow', url:'http://99nerds.io/product/detail.html?product_no=49&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_31@2x.png', name:'MongoDB', desc:'MongoDB Atlas: Hosted MongoDB-as-a-Service', url:'http://99nerds.io/product/detail.html?product_no=48&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_32@2x.png', name:'Scala', desc:'Object-Oriented Meets Functional', url:'http://99nerds.io/product/detail.html?product_no=47&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_33@2x.png', name:'Jenkins', desc:'Build great things at any scale', url:'http://99nerds.io/product/detail.html?product_no=46&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_34@2x.png', name:'Django', desc:'Django makes it easier to build better Web apps more quickly and with less code.', url:'http://99nerds.io/product/detail.html?product_no=51&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_35@2x.png', name:'Git', desc:'Distributed-is-the-new-centralized', url:'http://99nerds.io/product/detail.html?product_no=45&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_36@2x.png', name:'Redis', desc:'In-memory data structure store, used as a database, cache and message broke', url:'http://99nerds.io/product/detail.html?product_no=44&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_37@2x.png', name:'CodeIgniter', desc:'CodeIgniter is a powerful PHP framework', url:'http://99nerds.io/product/detail.html?product_no=43&cate_no=1&display_group=3'},
+        {image:'/web/upload/nnn/os_logo_38@2x.png', name:'Python', desc:'Python is a that lets you work more quickly and integrate your systems more effectively', url:'http://99nerds.io/product/detail.html?product_no=36&cate_no=1&display_group=3'}
+
+    ];
+
+    function getRandomIndex(o) {
+        return Math.floor(Math.random() * o.length);
+    }
+
+    function getBestOSStickers() {
+        var count = 1;
+        for (var i = 1; i <= os_stickers_best_count; i++) {
+            var randomIndex = getRandomIndex(os_stickers_arr);
+            jQuery3_1_1("#LoveOSBest" + count + " a").css("background", "url('" + os_stickers_arr[randomIndex].image + "') no-repeat right");
+            jQuery3_1_1("#LoveOSBest" + count + " a").css("background-size", "40%");
+            jQuery3_1_1("#LoveOSBest" + count + " a").attr("href", os_stickers_arr[randomIndex].url);
+            /*jQuery3_1_1("#LoveOSBest" + count + " a .label .slo").text(os_stickers_arr[randomIndex].desc);
+            jQuery3_1_1("#LoveOSBest" + count + " a .label .name").text(os_stickers_arr[randomIndex].name);*/
+            jQuery3_1_1("#LoveOSBest" + count + " a").css("display");
+            os_stickers_arr.splice(randomIndex, 1);
+            count++;
+        }
+    }
+    // e.Opensource Best....
+    jQuery3_1_1(document).ready(function () {
+        //getBestOSStickers();
+    });
+</script>
+</body>
+</html>

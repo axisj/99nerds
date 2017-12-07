@@ -1,0 +1,1 @@
+$('#searchSupply').attr('placeholder', '샵 상품 검색');

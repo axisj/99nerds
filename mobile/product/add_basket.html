@@ -1,0 +1,20 @@
+<style type="text/css">
+    .xans-product-basketadd { z-index:100; position:fixed; top:50px; left:50%; width:306px; margin:0 0 0 -153px; border-radius:5px; background:#fff;
+        -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+        box-shadow:         0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    }
+    .xans-product-basketadd h2 { padding:0 14px; font-size:13px; line-height:36px; border-bottom:1px solid #ccc; background:#f1f1f1; border-radius:5px 5px 0 0; }
+    .xans-product-basketadd .content { padding:79px 14px 14px; text-align:center; line-height:1.5em; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/bg_addcart.png") center 28px no-repeat; background-size:37px 37px; }
+    .xans-product-basketadd .btnArea { margin:0; padding:6px 14px 7px; border-top:1px solid #ccc; border-radius:0 0 5px 5px; background:#f1f1f1; }
+</style>
+<div module="Product_BasketAdd">
+    <h2>장바구니 담기</h2>
+    <div class="content">
+        <p>장바구니에 상품이<br>정상적으로 담겼습니다.</p>
+    </div>
+    <div class="btnArea type2">
+        <a href="#none" class="btnSubmit" onclick="{$move_basket_page}">장바구니 이동</a>
+        <a href="#none" class="btnEm" onclick="$('#confirmLayer').hide();">쇼핑 계속하기</a>
+    </div>
+</div>

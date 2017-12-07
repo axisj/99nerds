@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/button.css)-->
+    <!--@css(/layout/basic/css/popup.css)-->
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/common.js)-->
+</head>
+<body id="popup">
+    <div module="member_checkunderfourteen">
+        <!--@css(/css/module/member/checkunderfourteen.css)-->
+        <button type="button" class="btnClose" onclick="history.back(-1)">닫기</button>
+        <h2>14세미만 구매 제한 확인 절차</h2>
+        <div class="wrap">
+            <p class="under14">14세 미만 사용자는 구매가 제한되어<br><strong>본인인증을 통한 구매자 확인</strong>이 필요합니다.</p>
+            <div class="select" id="auth_type_layer">
+                <ul>
+                    <li>
+                        <input type="radio" value="m" name="AuthType" checked /><label for="{$idAuthMobile}" {$typeMobileAuthUse}>휴대폰인증</label>
+                        <span id='mobileauth' {$typeMobileAuthUse} {$typeMobileAuthUseDefault}>
+                            <a href="#none" onclick="{$mobileauthpopup}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_mobile_check.gif" alt="휴대폰 인증" width="106" /></a>
+                        </span>
+                    </li>
+                    <li>
+                        <input type="radio" name="AuthType" value='i' ><label for="{$idAuthIpin}" {$typeIpinUse}>아이핀(i-Pin) 인증</label>
+                        <span id='ipin' {$typeIpinUse}>
+                            <a href="#none" onclick="{$ipinpopup}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_Ipin.gif" alt="아이핀 인증" width="106" /></a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btnArea">
+            <button type="button" class="btnNormal" onclick="history.back(-1);">닫기</button>
+        </div>
+    </div>
+</body>
+</html>

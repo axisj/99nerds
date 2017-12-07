@@ -1,0 +1,28 @@
+.xans-search-result { margin:0; padding:14px 0 0; background:#fff; }
+.xans-search-result ul { padding:0 0 14px; }
+.xans-search-result li { padding:14px; border-top:1px solid #ececec; }
+.xans-search-result li:first-child { padding:0 14px 14px; border-top:0; }
+.xans-search-result li:after { display:block; content:""; clear:both; }
+.xans-search-result .thumbnail { position:relative; display:inline-block; float:left; width:87px; }
+.xans-search-result .thumbnail .thumb { width:100%; border:1px solid #ededed; }
+.xans-search-result .thumbnail .wishIcon { position:absolute; right:7px; bottom:3px; z-index:10; }
+.xans-search-result .information { padding:0 0 0 103px; }
+.xans-search-result .name { font-size:13px; line-height:1.5em; word-wrap:break-word; margin:0 0 10px; }
+.xans-search-result .icon { margin:0 0 10px; }
+/* .xans-search-result .custom { font-size:11px; margin:0 0 7px; text-decoration:line-through; } */
+.xans-search-result .price { color:#494949; font-size:13px; margin:0 0 10px; }
+.xans-search-result .price.sale { color:#000; font-size:15px; }
+.xans-search-result .mPriceStrike { text-decoration:line-through !important; }
+.xans-search-result .mPriceHide { display:none !important; }
+.xans-search-result .strike { text-decoration:line-through; }
+.xans-search-result .summary { margin:0 0 10px; color:#757575; font-size:11px; }
+
+.xans-search-result .layerDiscountPeriod { display:none; position:absolute; z-index:100; left:0; width:100%; padding:11px 7px; box-sizing:border-box; }
+.xans-search-result .layerDiscountPeriod .inner { border:1px solid #353535; background:#f1f1f1; border-radius:4px; }
+.xans-search-result .layerDiscountPeriod .inner h3 { padding:10px 14px; font-size:14px; background-color:#353535; color:#fff; }
+.xans-search-result .layerDiscountPeriod .inner .timeleft { padding:14px; color:#508bed; font-size:13px; font-weight:bold; text-align:center; }
+.xans-search-result .layerDiscountPeriod ul { margin:0 7px 14px; padding:0; border:1px solid #d5d5d5; background:#fff; }
+.xans-search-result .layerDiscountPeriod ul li { position:relative; display:block; width:100%; margin:0; padding:14px 13px 14px 100px; color:#353535; border-top:1px solid #ececec; box-sizing:border-box; }
+.xans-search-result .layerDiscountPeriod ul li:first-child { border-top:0; }
+.xans-search-result .layerDiscountPeriod ul li span { position:absolute; top:14px; left:13px; color:#757575; }
+.xans-search-result .layerDiscountPeriod .btnClose { position:absolute; top:11px; right:7px; display:block; width:35px; height:35px; text-indent:-9999px; font-size:0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") center center no-repeat; background-size:50% 50%; }

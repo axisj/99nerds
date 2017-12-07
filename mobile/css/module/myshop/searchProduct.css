@@ -1,0 +1,24 @@
+#popup .xans-myshop-ordersearchproductform .wrap { background:#f1f1f1; }
+.xans-myshop-ordersearchproductform { position:relative; margin:0 0 7px; padding:0; }
+.xans-myshop-ordersearchproductform .search { border:1px solid #ccc; }
+.xans-myshop-ordersearchproductform .search tbody th,
+.xans-myshop-ordersearchproductform .search tbody td { margin:15px 0 7px; padding:7px; height:29px; background:#fff; }
+.xans-myshop-ordersearchproductform .search tbody td input[type="text"] { width:100%; }
+.xans-myshop-ordersearchproductform .search tbody th { padding:7px 0 7px 13px; }
+.xans-myshop-ordersearchproductform .search select { margin:0; width:100%; }
+.xans-myshop-ordersearchproductform .search .prdSearch { padding:7px 13px 7px 0; text-align:center; }
+.xans-myshop-ordersearchproductform .result { margin:7px 0; padding:7px 0; font-size:11px; }
+.xans-myshop-ordersearchproductform .result strong { color:#508bed; }
+.xans-myshop-ordersearchproductform .result { position:relative; }
+.xans-myshop-ordersearchproductform .result select { position:absolute; top:0; right:0; }
+.xans-myshop-ordersearchproductform .resultList > ul { border:1px solid #ccc; background:#fff; }
+.xans-myshop-ordersearchproductform .resultList > ul > li { position:relative; padding:12px 13px; border-top:1px solid #f1f1f1; }
+.xans-myshop-ordersearchproductform .resultList > ul > li:first-child { border-top:0; }
+.xans-myshop-ordersearchproductform .resultList > ul > li .thumbnail { display:inline-block; width:71px; margin:0 14px 0 0; border:1px solid #d5d5d5; }
+.xans-myshop-ordersearchproductform .resultList > ul > li .thumbnail img { width:71px; }
+.xans-myshop-ordersearchproductform .resultList > ul > li .info { position:absolute; top:12px; padding:0 61px 0 86px; }
+.xans-myshop-ordersearchproductform .resultList > ul > li .info .name { margin:0 0 6px; font-size:13px; color:#4a5164; }
+.xans-myshop-ordersearchproductform .resultList > ul > li .btnArea { position:absolute; bottom:13px; right:13px; margin:0; padding:0; }
+.xans-myshop-ordersearchproductform .empty { padding:20px 0; text-align:center; font-size:12px; border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-ordersearchproductform .paginate { background:none; }
+.xans-myshop-ordersearchproductform .paginate p a { overflow:hidden; text-indent:120%; }

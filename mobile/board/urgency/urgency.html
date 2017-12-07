@@ -1,0 +1,106 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Mall_Urgencycall">
+    <!--@css(/css/module/board/urgencycall.css)-->
+    <!--
+        $login_page = /member/login.html
+    -->
+    <div id="titleArea">
+        <h2>{$ucc_title}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+        </span>
+    </div>
+    <p class="required"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"> 필수입력사항</p>
+    <div class="boardWrite">
+        <table border="1" summary="긴급문의입니다.">
+        <caption>긴급문의</caption>
+        <tbody>
+            <tr>
+                <th scope="row">질문유형</th>
+                <td>{$form.question}</td>
+            </tr>
+            <tr>
+                <th scope="row">문의제목</th>
+                <td>{$form.title}</td>
+            </tr>
+            <tr>
+                <th class="searchTxt" scope="row">{$sPrdOrdText}</th>
+                <td class="prdOrder"><span>{$form.prd_ord}</span>
+                     <a href="#none" id="opensearch" class="btnBasic" name="opensearch" onClick="{$Open_SearchLayer}">검색</a>
+                     {$form.hiddenPrdOrd}
+                </td>
+            </tr>
+            <tr class="reply">
+                <th scope="row">답변수신방식</th>
+                <td>{$form.chk_reply_type}</td>
+            </tr>
+            <tr>
+                <th scope="row">이메일</th>
+                <td>
+                    {$form.email}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">휴대폰</th>
+                <td>
+                    {$form.mobile}
+                </td>
+            </tr>
+            <tr class="info {$info_change_display|display}">
+                <th scope="row">정보수정동의</th>
+                <td>{$form.chk_info_change}</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.writer}</td>
+            </tr>
+            <tr>
+                <th scope="row">내용 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_required.png" width="5" height="5" alt="필수"></th>
+                <td>{$form.content}</td>
+            </tr>
+        </tbody>
+        <tbody class="{$file_attatch_display|display}">
+            <tr>
+                <th scope="row">첨부파일1</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일2</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일3</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일4</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+            <tr>
+                <th scope="row">첨부파일5</th>
+                <td>{$form.attach_file}</td>
+            </tr>
+        </tbody>
+        <tbody class="captcha {$config.use_captcha_write|display}">
+            <tr>
+                <th scope="row">자동등록금지<br />보안문자</th>
+                <td>
+                    {$captcha_image} {$captcha_refresh}
+                    <span>{$form.captcha}</span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="{$privacy_agreement_display|display}">
+            <tr>
+                <th scope="row">개인정보 수집 및 <br />이용 동의</th>
+                <td>{$form.privacy_agreement}<br />{$form.privacy_agreement_radio}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div><!-- //boardWrite -->
+
+    <div class="btnArea type2">
+        <a href="#none" onclick="{$action_send}" class="btnSubmit">등록</a>
+        <a href="/board/index.html" class="btnNormal">취소</a>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>마이쇼핑</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="layout_logincheck">
+<!--
+    $url = /member/login.html
+-->
+</div>
+
+<div class="myshopMain">
+    <div module="myshop_asyncbenefit">
+        <!--@css(/css/module/myshop/benefit.css)-->
+        <div class="info">
+            <div class="{$display_benefit|display}">
+                <div class="memberInfo">
+                    <span><img src="{$group_image}" alt="" onerror="this.src='//img.echosting.cafe24.com/skin/base_ko_KR/member/img_member_default.gif';" width="35" class="{$group_image_tag_class}"></span>
+                    <ul>
+                        <li><strong class="name">{$member_name}님</strong>의 구매등급은 <br><strong class="group">[{$group_name}]</strong>입니다.</li>
+                    </ul>
+                </div>
+                <div class="help {$display_no_benefit|display}">
+                    <p class="{$display_no_benefit|display} {$display_no_benefit_class}">{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type}을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+                    <p class="{$display_mobile_use_dc|display} {$display_mobile_use_dc_class}">({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})</p>
+                    <p class="{$display_with_all|display} {$display_with_all_class}">{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage}을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
+                    <p class="{$display_mobile_use_mileage|display} {$display_mobile_use_mileage_class}">({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})</p>
+                </div>
+           </div>
+            <div module="myshop_asyncbankbook">
+                <ul>
+                    <li>{$mileage_name} : <a href="/myshop/mileage/historyList.html">{$avail_mileage}</a></li>
+                    <li class="{$display_deposit|display}">{$deposit_name} : <a href="/myshop/deposits/historyList.html">{$total_deposit}</a></li>
+                    <li class="{$display_coupon|display}">쿠폰 : <a href="/myshop/coupon/coupon.html">{$coupon_cnt}개</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="invite {$display_reco|display}">
+            <h3>쇼핑몰 주소 복사하기</h3>
+            <div class="inputBox">
+                <input type="text" id="{$reco_url}" value="//{$shop_domain}/?reco_id={$member_id}" readonly="readonly" /><a href="#none" class="btnStrong" onclick="{$copy_func}">주소복사</a>
+            </div>
+            <div class="help">
+                <p>
+                    쇼핑몰 주소를 친구에게 보내 쇼핑몰에 초대해보세요.<br>
+                    가입즉시 친구에게는 {$reco_mileage2}의 적립금이 지급되고,<br>
+                    {$reco_mileage}
+                </p>
+            </div>
+       </div>
+    </div>
+
+    <div module="myshop_orderstate">
+        <!--@css(/css/module/myshop/orderState.css)-->
+        <div class="title">
+            <h3>나의 주문처리 현황 <span class="desc">(최근 <em>3개월</em> 기준)</span></h3>
+        </div>
+        <div class="state">
+            <ul class="order">
+                <li>
+                    <a href="{$shppiedBeforeUrl}">
+                        <strong>입금전</strong>
+                        <span class="count">{$shppiedBeforeCount}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedStandbyUrl}">
+                        <strong>배송준비중</strong>
+                        <span class="count">{$shppiedStandbyCount}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedBeginUrl}">
+                        <strong>배송중</strong>
+                        <span class="count">{$shppiedBeginCount}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedComplateUrl}">
+                        <strong>배송완료</strong>
+                        <span class="count">{$shppiedComplateCount}</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="cs">
+                <li>
+                    <a href="{$orderCancelUrl}">
+                        <span class="icoDot"></span>
+                        <strong>취소 : </strong>
+                        <span class="count">{$orderCancelCount}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$orderExchangeUrl}">
+                        <span class="icoDot"></span>
+                        <strong>교환 : </strong>
+                        <span class="count">{$orderExchangeCount}</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$orderReturnUrl}">
+                        <span class="icoDot"></span>
+                        <strong>반품 : </strong>
+                        <span class="count">{$orderReturnCount}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div module="myshop_main">
+        <!--@css(/css/module/myshop/main.css)-->
+        <ul>
+            <li class="order"><a href="/myshop/order/list.html">주문조회</a></li>
+            <li class="modify"><a href="/member/modify.html">회원정보</a></li>
+            <li class="wishlist"><a href="/myshop/wish_list.html">관심상품 <span class="count {$wish_count_display|display}">({$wish_count})</span></a></li>
+            <li class="likeit {$myLike_display|display}"><a href="{$myLike_href}">좋아요</a></li>
+            <li class="mileage"><a href="/myshop/mileage/historyList.html">{$mileage_name}</a></li>
+            <li class="deposits {$deposit_display|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name}</a></li>
+            <li class="consult {$consult_display|display}"><a href="/board/consult/list.html">1:1 맞춤상담</a></li>
+            <li class="coupon {$coupon_display|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <span class="count {$coupon_count_display|display}">({$coupon_count})</span></a></li>
+            <li class="board"><a href="/myshop/board_list.html">게시물관리</a></li>
+            <li class="address"><a href="/myshop/addr/list.html">배송 주소록 관리</a></li>
+        </ul>
+    </div>
+</div>

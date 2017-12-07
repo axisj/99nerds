@@ -1,0 +1,254 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>반품 신청</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="Myshop_OrderHistoryApplyReturn">
+    <!--@css(/css/module/myshop/orderHistoryApplyReturn.css)-->
+    <div>
+        <div class="toggleArea eToggle selected">
+            <div class="title">
+                <h3>
+                    {$order_date_ymd}({$order_id})
+                </h3>
+            </div>
+            <div class="contents" module="Myshop_products">
+                <div class="orderList">
+                    <div class="product">
+                        <span class="chk">{$form.checkbox}</span>
+                        <div class="description">
+                            <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                            <strong class="name"><a href="/product/detail.html{$param_product}">{$product_name}</a></strong>
+                            <ul class="info">
+                                <li>
+                                    <span class="price" title="판매가">{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span class="{$item_price_ref_display|display}"> {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span></span>
+                                    <span class="quantity" title="수량"><strong>{$quantity}</strong>개</span>
+                                </li>
+                                <li class="free {$card_installment_display|display}">무이자할부 상품</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                    </div>
+                    <div class="quantity">
+                        <span class="gLeft">신청수량</span>
+                        <span class="gRight">
+                            <img class="QuantityDown" alt="down" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29" onclick="{$out_shortcut}">
+                            {$form.quantity}
+                            <img class="QuantityUp" alt="up" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" onclick="{$add_shortcut}">
+                            <a class="btnBasic" href="javascript:;" onclick="{$action_modify}">변경</a>
+                        </span>
+                    </div>
+                    <div class="status">{$cur_state}</div>
+                </div>
+                <div class="orderList">
+                    <div class="product">
+                        <span class="chk">{$form.checkbox}</span>
+                        <div class="description">
+                            <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                            <strong class="name"><a href="/product/detail.html{$param_product}">{$product_name}</a></strong>
+                            <ul class="info">
+                                <li>
+                                    <span class="price" title="판매가">{$item_price_raw_front_head}<strong>{$item_price_raw_front}</strong>{$item_price_raw_front_tail}<span class="{$item_price_ref_display|display}"> {$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</span></span>
+                                    <span class="quantity" title="수량"><strong>{$quantity}</strong>개</span>
+                                </li>
+                                <li class="free {$card_installment_display|display}">무이자할부 상품</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                    </div>
+                    <div class="quantity">
+                        <span class="gLeft">신청수량</span>
+                        <span class="gRight">
+                            <img class="QuantityDown" alt="down" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29" onclick="{$out_shortcut}">
+                            {$form.quantity}
+                            <img class="QuantityUp" alt="up" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" onclick="{$add_shortcut}">
+                            <a class="btnBasic" href="javascript:;" onclick="{$action_modify}">변경</a>
+                        </span>
+                    </div>
+                    <div class="status">{$cur_state}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boardViewCS">
+        <div class="title">
+            <h3>반품 사유</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>반품 사유</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:auto" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">사유선택</th>
+                    <td>
+                        {$form.reason_select}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상세사유</th>
+                    <td>{$form.reason_detail}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="boardViewCS  {$pickuplist_display|display}">
+        <div class="title">
+            <h3>수거신청</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>수거신청</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:auto" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">수거신청 여부</th>
+                    <td>
+                        {$form.ispickup}
+                        <div id="{$pickup_direct_id}" class="{$display_direct_pickup|display}">
+                            {$form.pickup_csname}
+                            {$form.pickup_invoiceno}
+                            {$form.pickup_check}
+                        </div>
+                        <p class="help">교환할 상품에 대해 "수거 신청"하시면 택배사에 직접 연락하지 않아도 되며, 수거 전 택배기사님이 연락 후 방문합니다.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="{$pickup_detail_id}" class="boardViewCS {$pickup_detail_display|display}">
+        <div class="title">
+            <h3>수거지 정보</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>수거지 정보</caption>
+            <colgroup>
+                <col style="width:100px" />
+                <col style="width:auto" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">수거지 선택</th>
+                    <td>
+                        {$form.sameaddr}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="addressForm">
+            <table border="1" summary="">
+                <caption>수거지 주소 입력</caption>
+                <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tbody>
+                    <tr id="{$pickup_sameaddr_id}" class="{$pickup_order_address_display|display}">
+                        <th scope="row">수거지 주소</th>
+                        <td>
+                        {$r_name}<br>
+                        ({$r_zipcode}) {$r_addr1} {$r_addr2}<br>
+                        {$r_phone1}   |   {$r_phone2}<br>
+                        </td>
+                    </tr>
+
+                    <tr id="{$pickup_name_id}" class="{$pickup_name_display|display}">
+                        <th scope="row">이름 <img width="5" height="5" alt="필수" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_required.png"></th>
+                        <td>{$form.pickup_name}</td>
+                    </tr>
+                    <tr id="{$pickup_address_id}" class="{$pickup_address_display|display}">
+                        <th scope="row">주소 <img width="5" height="5" alt="필수" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_required.png"></th>
+                        <td>
+                            {$form.pickup_zipcode1}
+                            <button type="button" id="{$btn_search_rzipcode_id}" class="btnNormal">주소검색</button><br>
+                            {$form.pickup_addr1}<br>
+                            {$form.pickup_addr2}
+                            <span id="{$addr2_word_id}" class="{$addr2_word_display|display}">- 나머지 주소는 선택입력이 가능합니다.</span>
+                        </td>
+                    </tr>
+                    <tr id="{$pickup_phone1_id}" class="{$pickup_phone1_display|display}">
+                        <th scope="row">일반전화 <span class="{$is_pickup_phone1_required_display|display}"><img width="5" height="5" alt="필수" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_required.png"></span></th>
+                        <td>
+                            {$form.pickup_phone1_}
+                        </td>
+                    </tr>
+                    <tr id="{$pickup_phone2_id}" class="{$pickup_phone2_display|display}">
+                        <th scope="row">휴대전화 <span class="{$is_pickup_phone2_required_display|display}"><img width="5" height="5" alt="필수" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_required.png"></span></th>
+                        <td>
+                            {$form.pickup_phone2_}
+                        </td>
+                    </tr>
+                    <tr id="{$pickup_delivery_info_id}" class="{$delivery_info_offer_display|display}">
+                        <td colspan="2">
+                            <label for="delivery_info_offer_check_box0">{$form.delivery_info_offer_check_box}배송정보제공방침 동의</label>
+                            <a href="#none" class="more" onclick="viewDelivery();">내용보기</a>
+                            <span id="{$delivery_info_offer_content_id}" class="{$delivery_info_offer_content_mobile_display|display}">
+                                {$form.delivery_info_offer_content}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="boardViewCS {$refund_info_display|display}">
+            <div class="title">
+                <h3>환불정보</h3>
+            </div>
+            <table border="1" summary="">
+                <caption>환불정보</caption>
+                <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tbody class="{$refund_notice_display|display}">
+                    <tr>
+                        <th scope="row">환불예정금액</th>
+                        <td>환불예정금액은 판매자가 접수처리 완료 후 '주문상세조회'에서 확인할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">배송비 안내</th>
+                        <td>
+                            {$cs_info_desc}
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody class="{$refund_account_display|display}">
+                    <tr>
+                        <th scope="row">환불계좌</th>
+                        <td>
+                            <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display}">{$acc_full_str}</span>
+                            <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"><a href="#none" class="btnBasic" onclick="OrderApply.popupAccount('./account.html');">환불계좌등록</a></span>
+                            <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"><a href="#none" class="btnBasic" onclick="OrderApply.popupAccount('./account.html');">환불계좌변경</a></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="help">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p>
+        </div>
+    {$form.is_new_cs_form}
+    <div class="btnArea type2">
+        <a href="#none" onclick="OrderApply.apply(); return false;" class="btnSubmit">반품신청</a>
+        <a href="/myshop/order/list.html" class="btnEm">이전페이지</a>
+    </div>
+</div>

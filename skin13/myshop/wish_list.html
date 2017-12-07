@@ -1,0 +1,313 @@
+<!--@layout(/layout/99nerds/layout-default.html)-->
+
+<!--@import(/layout/99nerds/inc/account-visual.html)-->
+
+<section class="section-contents-wrap">
+    <div class="container">
+
+        <div class="basket-wrap">
+
+            <div class="titleArea">
+                <h2 class="txtTitle16B">Wish list</h2>
+                <div class="block-line"></div>
+            </div>
+
+            <div class="tableTheme_order ">
+                <div module="myshop_wishlist" class="orderListArea tableTheme mid-0">
+                    <!--@css(/css/module/myshop/wishlist.css)-->
+                    <!--
+                        $login_page = /member/login.html
+                        $count = 10
+                    -->
+                    <table border="1" summary="" class="xans-order-normnormal {$list_display|display}">
+                        <caption>관심상품 목록</caption>
+                        <colgroup>
+                            <col style="width:27px;"/>
+                            <col style="width:92px;"/>
+                            <col style="width:auto;"/>
+                            <col style="width:105px;"/>
+                            <col style="width:85px;"/>
+                            <col style="width:98px;"/>
+                            <col style="width:70px;"/>
+                            <col style="width:104px;"/>
+                            <col style="width:106px;"/>
+                        </colgroup>
+
+                        <thead>
+                        <tr>
+                            <th class="list-title" scope="col"><input type="checkbox" onclick="{$chk_wishlist}"/></th>
+                            <th class="list-title" scope="col">product</th>
+                            <th class="list-title" scope="col">name</th>
+                            <th class="list-title" scope="col">price</th>
+                            <th class="list-title" scope="col">후원금</th>
+                            <th class="list-title" scope="col">배송구분</th>
+                            <th class="list-title" scope="col">배송비</th>
+                            <th class="list-title" scope="col">total</th>
+                            <th class="list-title" scope="col">선택</th>
+                        </tr>
+                        </thead>
+
+                        <tbody module="myshop_wishlistitem" class="center middle">
+                        <tr>
+                            <td class="{$individual_set_product_child}">{$checkbox}</td>
+                            <td><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" style="width:80px;"/></a>
+                            </td>
+                            <td>
+                                <div class="product">
+                                    <a href="{$link_product_detail}"><strong>{$product_name}</strong></a>
+                                    <ul class="option" module="Myshop_optionAll">
+                                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}
+                                            <span class="{$qty_display|display}">({$qty}개)</span><span class="gSingle"><button
+                                                    type="button" class="btnNormal {$option_change_display|display}"
+                                                    onclick="{$action_option_change}">옵션변경</button></span>
+                                            <!-- 참고 : 옵션변경 레이어 -->
+                                            <div class="optionModify layerTheme" id="{$option_modify_layer_id}">
+                                                <h3>옵션변경</h3>
+                                                <div class="content">
+                                                    <ul class="prdInfo">
+                                                        <li>{$product_name}</li>
+                                                        <li class="option">{$option_str}</li>
+                                                    </ul>
+                                                    <div class="prdModify">
+                                                        <h4>상품옵션</h4>
+                                                        <ul module="Myshop_optionList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                        <ul module="Myshop_optionAddList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="buttonArea">
+                                                    <button type="button"
+                                                            class="btnSubmitB {$option_add_display|display}"
+                                                            onclick="{$action_option_add}">추가
+                                                    </button>
+                                                    <button type="button" class="btnNormalB"
+                                                            onclick="{$action_option_modify}">변경
+                                                    </button>
+                                                </div>
+                                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img
+                                                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png"
+                                                        alt="닫기"/></a></div>
+                                            </div><!-- //참고 -->
+                                        </li>
+                                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}
+                                            <span class="{$qty_display|display}">({$qty}개)</span><span class="gSingle"><button
+                                                    type="button" class="btnNormal {$option_change_display|display}"
+                                                    onclick="{$action_option_change}">옵션변경</button></span>
+                                            <!-- 참고 : 옵션변경 레이어 -->
+                                            <div class="optionModify layerTheme" id="{$option_modify_layer_id}">
+                                                <h3>옵션변경</h3>
+                                                <div class="content">
+                                                    <ul class="prdInfo">
+                                                        <li>{$product_name}</li>
+                                                        <li class="option">{$option_str}</li>
+                                                    </ul>
+                                                    <div class="prdModify">
+                                                        <h4>상품옵션</h4>
+                                                        <ul module="Myshop_optionList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                        <ul module="Myshop_optionAddList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="buttonArea">
+                                                    <button type="button"
+                                                            class="btnSubmitB {$option_add_display|display}"
+                                                            onclick="{$action_option_add}">추가
+                                                    </button>
+                                                    <button type="button" class="btnNormalB"
+                                                            onclick="{$action_option_modify}">변경
+                                                    </button>
+                                                </div>
+                                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img
+                                                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png"
+                                                        alt="닫기"/></a></div>
+                                            </div><!-- //참고 -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="price">
+                                <p class="{$discount}"><strong>{$product_price}</strong></p>
+                                <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+                                <p>{$product_tax_type_text}</p>
+                            </td>
+                            <td>{$mileage}</td>
+                            <td>{$ship_type}<span class="gSingle {$oversea_able_display|display}">(해외배송가능)</span></td>
+                            <td><span class="{$delv_price_display|display}">{$delv_price}</span><span class="gSingle">{$delv_type}</span>
+                            </td>
+                            <td>{$sum_price}</td>
+                            <td class="{$individual_set_product_child}">
+                                <div class="button">
+                                    <a style="width: 100%;" href="javascript:;" class="btnSubmit" onclick="{$action_buy_item}">주문하기</a>
+                                    <a style="width: 100%;" href="javascript:;" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</a>
+                                    <a style="width: 100%;" href="javascript:;" class="btnNormal {$class_del} {$delete_button_display|display}"  rel="{$rel_del}"">삭제</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="{$individual_set_product_child}">{$checkbox}</td>
+                            <td><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" style="width:80px;"/></a>
+                            </td>
+                            <td>
+                                <div class="product">
+                                    <a href="{$link_product_detail}"><strong>{$product_name}</strong></a>
+                                    <ul class="option" module="Myshop_optionAll">
+                                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}
+                                            <span class="{$qty_display|display}">({$qty}개)</span><span class="gSingle"><button
+                                                    type="button" class="btnNormal {$option_change_display|display}"
+                                                    onclick="{$action_option_change}">옵션변경</button></span>
+                                            <!-- 참고 : 옵션변경 레이어 -->
+                                            <div class="optionModify layerTheme" id="{$option_modify_layer_id}">
+                                                <h3>옵션변경</h3>
+                                                <div class="content">
+                                                    <ul class="prdInfo">
+                                                        <li>{$product_name}</li>
+                                                        <li class="option">{$option_str}</li>
+                                                    </ul>
+                                                    <div class="prdModify">
+                                                        <h4>상품옵션</h4>
+                                                        <ul module="Myshop_optionList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                        <ul module="Myshop_optionAddList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="buttonArea">
+                                                    <button type="button"
+                                                            class="btnSubmitB {$option_add_display|display}"
+                                                            onclick="{$action_option_add}">추가
+                                                    </button>
+                                                    <button type="button" class="btnNormalB"
+                                                            onclick="{$action_option_modify}">변경
+                                                    </button>
+                                                </div>
+                                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img
+                                                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png"
+                                                        alt="닫기"/></a></div>
+                                            </div><!-- //참고 -->
+                                        </li>
+                                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}
+                                            <span class="{$qty_display|display}">({$qty}개)</span><span class="gSingle"><button
+                                                    type="button" class="btnNormal {$option_change_display|display}"
+                                                    onclick="{$action_option_change}">옵션변경</button></span>
+                                            <!-- 참고 : 옵션변경 레이어 -->
+                                            <div class="optionModify layerTheme" id="{$option_modify_layer_id}">
+                                                <h3>옵션변경</h3>
+                                                <div class="content">
+                                                    <ul class="prdInfo">
+                                                        <li>{$product_name}</li>
+                                                        <li class="option">{$option_str}</li>
+                                                    </ul>
+                                                    <div class="prdModify">
+                                                        <h4>상품옵션</h4>
+                                                        <ul module="Myshop_optionList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                        <ul module="Myshop_optionAddList">
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="buttonArea">
+                                                    <button type="button"
+                                                            class="btnSubmitB {$option_add_display|display}"
+                                                            onclick="{$action_option_add}">추가
+                                                    </button>
+                                                    <button type="button" class="btnNormalB"
+                                                            onclick="{$action_option_modify}">변경
+                                                    </button>
+                                                </div>
+                                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img
+                                                        src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png"
+                                                        alt="닫기"/></a></div>
+                                            </div><!-- //참고 -->
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="price">
+                                <p class="{$discount}"><strong>{$product_price}</strong></p>
+                                <p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+                                <p>{$product_tax_type_text}</p>
+                            </td>
+                            <td>{$mileage}</td>
+                            <td>{$ship_type}<span class="gSingle {$oversea_able_display|display}">(해외배송가능)</span></td>
+                            <td><span class="{$delv_price_display|display}">{$delv_price}</span><span class="gSingle">{$delv_type}</span>
+                            </td>
+                            <td>{$sum_price}</td>
+                            <td class="{$individual_set_product_child}">
+                                <div class="button">
+                                    <a style="width: 100%;" href="javascript:;" class="btnSubmit" onclick="{$action_buy_item}">주문하기</a>
+                                    <a style="width: 100%;" href="javascript:;" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</a>
+                                    <a style="width: 100%;" href="javascript:;" class="btnNormal {$class_del} {$delete_button_display|display}"  rel="{$rel_del}"">삭제</a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <p class="empty {$empty_display|display}">관심상품 내역이 없습니다.</p>
+                </div>
+            </div>
+
+            <!-- 선택상품 제어 버튼 -->
+            <div module="Myshop_WishlistButton" class="mid-0">
+                <!--@css(/css/module/myshop/wishlistbutton.css)-->
+                <div class="buttonArea xans-order-selectorder">
+    <span class="gLeft le">
+        <span class="txtBase"><strong>선택상품을</strong></span>
+        <button type="button" class="btnEm btnNormal" onclick="{$action_delete}">삭제하기</button>
+        <button type="button" class="btnNormal" onclick="{$action_basket}">장바구니 담기</button>
+    </span>
+                    <span class="gRight">
+        <button type="button" class="btnSubmitM btnNormal" onclick="{$action_order_all}">전체상품주문</button>
+        <button type="button" class="btnEmM btnNormal" onclick="{$action_delete_all}">관심상품 비우기</button>
+    </span>
+                </div>
+            </div>
+
+            <!-- 페이지 버튼 -->
+            <div module="myshop_wishlistpaging" class="paginate mid-0">
+
+                <p class="first"><a href="{$param_first}"><img
+                        src="/assets/images/sub-product/prev-firstpng.png"
+                        alt="첫 페이지"/></a></p>
+                <p><a href="{$param_before}"><img
+                        src="/assets/images/sub-product/prev.png"
+                        alt="이전 페이지"/></a></p>
+                <ol>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                </ol>
+                <p><a href="{$param_next}"><img
+                        src="/assets/images/sub-product/next.png"
+                        alt="다음 페이지"/></a></p>
+                <p class="last"><a href="{$param_last}"><img
+                        src="/assets/images/sub-product/next-last.png"
+                        alt="마지막 페이지"/></a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

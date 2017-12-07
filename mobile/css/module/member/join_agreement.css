@@ -1,0 +1,9 @@
+.xans-member-join { margin:14px 7px 0px; padding:0 0 29px; color:#63666e; font-size: 11px; }
+.xans-member-join .agreeArea { margin:0 0 7px; border:1px solid #ccc; background:#fff; }
+.xans-member-join .title { position:relative; line-height:36px; color:#333; border-bottom:1px solid #ccc; }
+.xans-member-join .title h3 { padding:0 0 0 14px; font-size:13px; font-weight:normal; }
+.xans-member-join .title h3 label { display:none; }
+.xans-member-join .title h3 label.check { display:inline; }
+.xans-member-join .title a.btnMore { position:absolute; top:0px; right:14px; font-size:11px; text-decoration:underline; }
+.xans-member-join .contents { overflow:hidden; height:90px; margin:14px; color:#757575; font-size:11px; }
+.xans-member-join .btnArea.type2 { margin:14px auto 0; }

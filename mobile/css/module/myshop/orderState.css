@@ -1,0 +1,18 @@
+.xans-myshop-orderstate { margin:14px 0; border:1px solid #4a5164; }
+.xans-myshop-orderstate .title { padding:12px 12px 13px; margin:0; border-bottom:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-orderstate .title h3 { padding:0; font-size:13px; color:#1b1b1b; }
+.xans-myshop-orderstate .desc { padding:0 0 0 4px; font-weight:normal; font-size:11px; color:#757575; }
+.xans-myshop-orderstate .desc em { color:#508bed; font-style:normal; }
+.xans-myshop-orderstate .state { overflow:hidden; }
+.xans-myshop-orderstate .order { overflow:hidden; padding:18px 0 20px; background:#fff; }
+.xans-myshop-orderstate .order li { float:left; width:25%; padding:0 0 2px; margin:0 0 0 -1px; border-left:1px dotted #c9c7ca; text-align:center; }
+.xans-myshop-orderstate .order li a { display:block; }
+.xans-myshop-orderstate .order li:first-child { border-left:0; }
+.xans-myshop-orderstate .order li strong { display:block; margin:1px 0 13px; font-weight:normal; font-size:13px; color:#353535; }
+.xans-myshop-orderstate .order .count { font-weight:bold; font-size:18px; color:#508bed; }
+.xans-myshop-orderstate .cs { overflow:hidden; border-top:1px solid #d5d5d5; background:#f7f7f7; }
+.xans-myshop-orderstate .cs li { overflow:hidden; float:left; width:33.3%; margin:0 0 0 -1px; border-left:1px solid #d5d5d5; font-size:13px; background:#f7f7f7; }
+.xans-myshop-orderstate .cs li a { display:block; padding:14px 0; }
+.xans-myshop-orderstate .cs strong { font-weight:normal; color:#1b1b1b; }
+.xans-myshop-orderstate .cs .count { float:right; margin:0 15px 0 0; font-weight:bold; color:#508bed; }
+.xans-myshop-orderstate .cs .icoDot { display:inline-block; width:2px; height:2px; margin:6px 0 0 12px; background:#52596b; vertical-align:top; }

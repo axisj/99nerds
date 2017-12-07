@@ -1,0 +1,299 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ReadPackage_8">
+    <!--@css(/css/module/board/readPackage.css)-->
+    <!--@js(/js/module/board/readPackage.js)-->
+    <div id="titleArea" module="board_title_8">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_read_8">
+        <!--
+            $delete_success_url = /board/gallery/list.html
+            $login_page_url = /member/login.html
+            $deny_access_url = /board/gallery/list.html
+        -->
+        <div class="boardView">
+            <div class="title">
+                <strong class="label hide">제목</strong>
+                <h3>{$subject}</h3>
+            </div>
+            <div class="info">
+                <p class="writer">
+                    <strong class="label hide">작성자</strong>
+                    {$member_icon}
+                    {$writer}<span class="{$config.display_ip|display}">(ip:{$ip})</span>
+                </p>
+                <p class="regdate {$config.use_date|display}">
+                    <strong class="label hide">작성일</strong>
+                    {$write_date}
+                </p>
+                <p class="hit {$config.use_cnt|display}">
+                    <strong class="label">조회</strong>
+                    {$hit_count}
+                </p>
+                <p class="rating {$config.is_use_point|display}">
+                    <strong class="label">평점</strong>
+                    <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_star{$point_count}.png" alt="{$point_count}점" />
+                </p>
+                <p class="vote {$config.is_use_recom|display}">
+                    <strong class="label">추천</strong>
+                    {$vote_count}
+                    <a href="#none" class="btnNormal" onclick="{$action_vote}"><span class="btnIcon"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_recommend.png" alt="" /></span> 추천하기</a>
+                </p>
+            </div>
+            <div class="content">
+                <strong class="label hide">내용</strong>
+                {$content_image}
+                <p>{$content}</p>
+            </div>
+            <p class="attach {$config.use_attach|display}">
+                 <strong class="label">첨부파일</strong>
+                 <span>{$attach_file}</span>
+            </p>
+            <div class="password {$delete_button_auth|display}">
+                <strong class="label {$delete_button_auth|display} {$config.use_password|display}">비밀번호</strong>
+                <div class="form {$board_password_type}">
+                    <span class="passwordForm {$config.use_password|display}">{$form.password}</span>
+                    <span class="gRight">
+                        <a href="/board/gallery/modify.html{$param_modify}" class="btnBasic {$modify_button_auth|display}">수정</a>
+                        <button class="btnBasic {$delete_button_auth|display}" onclick="{$action_delete}">삭제</button>
+                    </span>
+                    <p class="{$config.use_password|display}">비밀번호 입력후 수정 혹은 삭제해주세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btnArea">
+            <span class="gLeft"><a href="{$link_board_list}" class="btnStrong">목록</a></span>
+            <span class="gRight"><a href="/board/gallery/reply.html{$param_reply}" class="btnStrong {$reply_button_auth|display}">답변쓰기</a></span>
+        </div>
+    </div>
+</div>
+
+<div module="board_CommentPackage_8">
+    <!--@css(/css/module/board/commentPackage.css)-->
+
+    <div module="board_commentempty_8">
+         <div class="commentTitle">
+            <h3>댓글목록</h3>
+        </div>
+        <p>등록된 댓글이 없습니다.</p>
+    </div>
+
+    <div module="board_commentlist_8">
+        <!--
+            $delete_page_url = /board/gallery/comment_del.html
+            $delete_success_url = /board/gallery/read.html
+        -->
+        <div class="commentTitle">
+            <h3>댓글목록</h3>
+        </div>
+        <ul class="boardComment">
+            <li class="{$comment_reply_css}" id="{$comment_reply_id}">
+                <div class="info">
+                    <p class="writer">
+                        <strong class="label hide">작성자</strong>
+                         {$comment_name}
+                    </p>
+                    <p class="regdate">
+                        <strong class="label hide">작성일</strong>
+                        {$comment_write_date}
+                    </p>
+                    <p class="rating {$config.is_use_point|display}">
+                        <strong class="label hide">평점</strong>
+                        <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_star{$comment_point_count}.png" alt="{$comment_point_count}점">
+                    </p>
+                </div>
+                <div class="content">
+                    <span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_spam.png" alt="스팸글" /></span>
+                    {$icon_mobile} {$comment_icon_lock} {$comment_content}
+                </div>
+                <div class="btnArea">
+                    <div class="gLeft">
+                        <button type="button" class="btnNormal mini replyList {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글의 댓글<span>({$comment_reply_count})</span></button>
+                        <button type="button" class="btnNormal mini reply {$comment_reply_display|display}" onclick="{$action_comment_reply_new}">쓰기</button>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="btnNormal mini" onclick="{$action_comment_update_new}">수정</button>
+                        <button type="button" class="btnNormal mini" onclick="{$action_comment_delete}">삭제</button>
+                    </div>
+                </div>
+            </li>
+            <li class="{$comment_reply_css}" id="{$comment_reply_id}">
+                <div class="info">
+                    <p class="writer">
+                        <strong class="label hide">작성자</strong>
+                         {$comment_name}
+                    </p>
+                    <p class="regdate">
+                        <strong class="label hide">작성일</strong>
+                        {$comment_write_date}
+                    </p>
+                    <p class="rating {$config.is_use_point|display}">
+                        <strong class="label hide">평점</strong>
+                        <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_star{$comment_point_count}.png" alt="{$comment_point_count}점">
+                    </p>
+                </div>
+                <div class="content">
+                    <span class="{$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_spam.png" alt="스팸글" /></span>
+                    {$icon_mobile} {$comment_icon_lock} {$comment_content}
+                </div>
+                <div class="btnArea">
+                    <div class="gLeft">
+                        <button type="button" class="btnNormal mini replyList {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글의 댓글<span>({$comment_reply_count})</span></button>
+                        <button type="button" class="btnNormal mini reply {$comment_reply_display|display}" onclick="{$action_comment_reply_new}">쓰기</button>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="btnNormal mini" onclick="{$action_comment_update_new}">수정</button>
+                        <button type="button" class="btnNormal mini" onclick="{$action_comment_delete}">삭제</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div module="board_commentpaging_8" class="paginate typeList">
+        <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+        <ol>
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        </ol>
+        <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+    </div>
+
+    <div module="board_commentform_8">
+        <div class="boardCommentModify">
+            <fieldset>
+                <legend>댓글 수정</legend>
+                <div class="info">
+                    <p class="name">
+                        <strong class="label">이름 </strong>
+                        {$form.comment_name}
+                    </p>
+                    <p class="modifyPassword">
+                        <strong class="label">비밀번호</strong>
+                        {$form.comment_password}
+                    </p>
+                </div>
+                <p class="modifyComment">
+                    <strong class="label hide">내용</strong>
+                    {$form.comment_modify}
+                </p>
+                <div class="btnArea typeModify">
+                    <p class="modifyByte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+                    <p class="secret gLeft {$comment_secret_display|display}">
+                        <label>{$form.secure} 비밀댓글</label>
+                    </p>
+                    <p class="modifyCtrl gRight">
+                        <a href="#none" class="btnStrong mini" onclick="{$action_comment_update}">수정</a>
+                        <a href="#none" class="btnNormal mini" onclick="{$action_comment_cancel_new}">취소</a>
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- 비밀댓글 확인 -->
+    <div module="board_commentformsecret_8">
+        <p class="gLeft">비밀번호 {$form.secure_password}</p>
+        <p class="gRight">
+            <a href="#none" class="btnStrong mini" onclick="{$action_secret_submit}">확인</a>
+            <a href="#none" class="btnNormal mini" onclick="{$action_secret_cancel}">취소</a>
+        </p>
+    </div>
+
+    <div module="board_commentwrite_8">
+        <div class="boardCommentWrite {$comment_write_display|display}">
+            <fieldset>
+                <legend>댓글 입력</legend>
+                <div class="info">
+                    <p class="name {$comment_input_name|display}">
+                        <strong class="label">이름</strong>
+                        {$form.comment_name}
+                    </p>
+                    <p class="password">
+                        <strong class="label">비밀번호</strong>
+                        {$form.comment_password}
+                    </p>
+                </div>
+                <div class="comment">
+                    <strong class="label hide">내용</strong>
+                    {$form.comment}
+                </div>
+                <div class="byteRating">
+                    <p class="byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+                    <p class="rating {$config.is_use_point|display}">
+                        <strong class="label">평점</strong>
+                        {$form.comment_point}
+                    </p>
+                </div>
+                <div class="captcha {$config.use_captcha_comment|display}">
+                    <span class="img">{$captcha_image}</span>
+                    <div class="form">
+                        {$form.captcha} {$captcha_refresh}
+                        <p>왼쪽의 문자를 공백없이 입력하세요.</p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="btnArea type1">
+            <p class="secret gLeft {$comment_secret_display|display}">
+                <label>{$form.secure} 비밀댓글</label>
+            </p>
+            <div class="gRight"><button type="button" onclick="{$action_comment_insert}" class="btnStrong mini {$comment_button|display}">댓글등록</button></div>
+        </div>
+        <div class="boardCommentAuthority {$comment_write_display_none|display}">
+            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+        </div>
+    </div>
+
+    <div module="board_commentreply_8">
+        <div class="boardCommentWrite {$comment_write_display|display}">
+            <fieldset>
+                <legend>댓글 입력</legend>
+                <div class="info">
+                    <p class="name {$comment_input_name|display}">
+                        <strong class="label">이름</strong>
+                        {$form.comment_name}
+                    </p>
+                    <p class="password">
+                        <strong class="label">비밀번호</strong>
+                        {$form.comment_password}
+                    </p>
+                </div>
+                <div class="comment">
+                    <strong class="label hide">내용</strong>
+                    {$form.comment}
+                </div>
+                <div class="byteRating">
+                    <p class="byte {$config.comment_size|display}">{$comment_byte} / {$comment_size} byte</p>
+                </div>
+                <div class="btnArea type1">
+                    <p class="secret gLeft {$comment_secret_display|display}">
+                        <label>{$form.secure} 비밀댓글</label>
+                    </p>
+                    <div class="gRight"><button type="button" class="btnStrong mini {$comment_button|display}" onclick="{$action_comment_insert}">등록</button></div>
+                </div>
+                <div class="captcha {$config.use_captcha_comment|display}">
+                    <span class="img">{$captcha_image} {$captcha_refresh}</span>
+                    <div class="form">
+                        {$form.captcha}
+                        <p>왼쪽의 문자를 공백없이 입력하세요.</p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="boardCommentAuthority {$comment_write_display_none|display}">
+            <p>{$comment_auth_name}에게만 댓글 작성 권한이 있습니다.</p>
+        </div>
+    </div>
+</div>
+<div module="board_movement_8">
+    <!--@css(/css/module/board/movement.css)-->
+    <ul class="boardMovement">
+        <li class="prev {$prev_display|display}"><strong>이전글</strong><a href="{$link_board_detail_prev}">{$prev_subject}</a></li>
+        <li class="next {$next_display|display}"><strong>다음글</strong><a href="{$link_board_detail_next}">{$next_subject}</a></li>
+    </ul>
+</div>

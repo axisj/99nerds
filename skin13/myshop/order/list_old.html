@@ -1,0 +1,88 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>주문조회</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2 class="txtTitle16B">주문조회</h2>
+</div>
+
+
+<div module="Myshop_OrderHistoryTab" class="tabTheme mid-0">
+    <ul class="menu">
+        <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}">주문내역조회 ({$total_orders})</a></li>
+        <li class="{$tab_class_cs}"><a href="/myshop/order/list.html{$param_cs}">취소/반품/교환 내역 ({$total_orders_cs})</a></li>
+        <li class="{$tab_class_old} {$old_list_display|display}"><a href="/myshop/order/list_old.html{$param_old}">이전 주문내역 ({$total_orders_old})</a></li>
+    </ul>
+</div>
+
+
+<div module="Myshop_OrderOldHistoryList" class="tableTheme mid-0">
+    <!--@css(/css/module/myshop/orderOldHistoryList.css)-->
+    <!--
+        $login_url = /member/login.html
+    -->
+
+    <div class="title">
+        <h3 class="txtTitle12B">주문 상품 정보</h3>
+    </div>
+    <table border="1" summary="">
+        <caption>주문 상품 정보</caption>
+        <colgroup>
+            <col style="width:125px;" />
+            <col style="width:auto;" />
+            <col style="width:110px;" />
+            <col style="width:110px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">주문일자<br />[주문번호]</th>
+                <th scope="col">상품정보</th>
+                <th scope="col">상품구매금액</th>
+                <th scope="col">주문처리상태</th>
+            </tr>
+        </thead>
+        <tbody class="center middle {$list_display|display}">
+            <tr>
+                <td>
+                    {$order_date}
+                    <p><a href="detail_old.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                </td>
+                <td class="left"><strong>{$product_name}</strong> <span>(총 {$product_count}개 품목)</span></td>
+                <td><strong>{$product_price}</strong></td>
+                <td>{$cur_state}</td>
+            </tr>
+            <tr>
+                <td>
+                    {$order_date}
+                    <p><a href="detail_old.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                </td>
+                <td class="left"><strong>{$product_name}</strong> <span>(총 {$product_count}개 품목)</span></td>
+                <td><strong>{$product_price}</strong></td>
+                <td>{$cur_state}</td>
+            </tr>
+        </tbody>
+        <tbody class="{$empty_display|display}">
+            <tr>
+                <td colspan="4"><p class="empty">주문 내역이 없습니다.</p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div module="Myshop_OrderHistoryPaging" class="paginate mid-0">
+    <p class="first"><a href="{$param_first}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_first.gif" alt="첫 페이지" /></a></p>
+    <p><a href="{$param_prev}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_prev.gif" alt="이전 페이지" /></a></p>
+    <ol>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+    </ol>
+    <p><a href="{$param_next}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_next.gif" alt="다음 페이지" /></a></p>
+    <p class="last"><a href="{$param_last}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_page_last.gif" alt="마지막 페이지" /></a></p>
+</div>

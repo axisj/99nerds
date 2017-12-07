@@ -1,0 +1,145 @@
+<div module="Board_ListPackage_[seq]">
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_[seq]">
+        <div class="path">
+            <h2>현재 위치</h2>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+        <div class="title">
+            <h2>{$board_title} {$board_adult_icon}</h2>
+            <p>{$board_info}</p>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+    <div class="boardSort">
+        <span module="board_category_[seq]">{$form.board_category}</span>
+        <span module="board_ReplySort_[seq]">{$reply_sort}</span>
+    </div>
+    <div class="boardList">
+        <table border="1" summary="">
+            <caption>게시판 목록</caption>
+            <colgroup module="board_listheader_[seq]">
+                <col style="width:70px;" />
+                <col style="width:135px;" class="{$config.is_category|display}" />
+                <col style="width:auto;" />
+                <col style="width:84px;" />
+                <col style="width:80px;" class="{$config.use_date|display}" />
+                <col style="width:55px;" class="{$config.use_cnt|display}" />
+                <col style="width:55px;" class="{$config.is_use_recom|display}" />
+                <col style="width:80px;" class="{$config.is_use_point|display}" />
+            </colgroup>
+            <thead module="board_listheader_[seq]">
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <th scope="col">{$checkbox} 번호</th>
+                <th scope="col" class="{$config.is_category|display}">카테고리</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col" class="{$config.use_date|display}">작성일</th>
+                <th scope="col" class="{$config.use_cnt|display}">조회</th>
+                <th scope="col" class="{$config.is_use_recom|display}">추천</th>
+                <th scope="col" class="{$config.is_use_point|display}">평점</th>
+            </tr>
+            </thead>
+            <tbody module="board_notice_[seq]" class="notice">
+            <!--
+                $count = 2
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td>{$checkbox}{$notice_icon}</td>
+                <td class="{$category_display|display}">{$category_name}</td>
+                <td class="subject">
+                    {$icon_re} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+                </td>
+                <td>{$member_icon}{$writer}</td>
+                <td class="txtLess {$date_display|display}">{$write_date}</td>
+                <td class="txtLess {$hit_display|display}">{$hit_count}</td>
+                <td class="txtLess {$vote_display|display}">{$vote}</td>
+                <td class="{$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td>{$checkbox}{$notice_icon}</td>
+                <td class="{$category_display|display}">{$category_name}</td>
+                <td class="subject">
+                    {$icon_re} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+                </td>
+                <td>{$member_icon}{$writer}</td>
+                <td class="txtLess {$date_display|display}">{$write_date}</td>
+                <td class="txtLess {$hit_display|display}">{$hit_count}</td>
+                <td class="txtLess {$vote_display|display}">{$vote}</td>
+                <td class="{$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            </tbody>
+            <tbody module="board_fixed_[seq]" class="notice">
+            <!--
+                $count = 2
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td class="number">{$checkbox} {$fixed_icon}</td>
+                <td class="category {$category_display|display}">{$category_name}</td>
+                <td class="subject">{$icon_re}{$icon_lock} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                <td class="writer">{$member_icon}{$writer}</td>
+                <td class="date {$date_display|display}">{$write_date}</td>
+                <td class="hit {$hit_display|display}">{$hit_count}</td>
+                <td class="recom {$vote_display|display}">{$vote}</td>
+                <td class="grade {$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td class="number">{$checkbox} {$fixed_icon}</td>
+                <td class="category {$category_display|display}">{$category_name}</td>
+                <td class="subject">{$icon_re}{$icon_lock} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                <td class="writer">{$member_icon}{$writer}</td>
+                <td class="date {$date_display|display}">{$write_date}</td>
+                <td class="hit {$hit_display|display}">{$hit_count}</td>
+                <td class="recom {$vote_display|display}">{$vote}</td>
+                <td class="grade {$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            </tbody>
+            <tbody module="board_list_[seq]">
+            <!--
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td>{$checkbox}{$no}</td>
+                <td class="{$category_display|display}">{$category_name}</td>
+                <td class="subject">
+                    {$icon_re} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+                </td>
+                <td>{$member_icon}{$writer}</td>
+                <td class="txtLess {$date_display|display}">{$write_date}</td>
+                <td class="txtLess {$hit_display|display}">{$hit_count}</td>
+                <td class="txtLess {$vote_display|display}">{$vote}</td>
+                <td class="{$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            <tr style="{$list_bg_color} {$list_char_color}">
+                <td>{$checkbox}{$no}</td>
+                <td class="{$category_display|display}">{$category_name}</td>
+                <td class="subject">
+                    {$icon_re} <a href="/board/sub-notice_default/read.html{$param_read}" style="{$link_color}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="comment">{$comment_count}</span>
+                </td>
+                <td>{$member_icon}{$writer}</td>
+                <td class="txtLess {$date_display|display}">{$write_date}</td>
+                <td class="txtLess {$hit_display|display}">{$hit_count}</td>
+                <td class="txtLess {$vote_display|display}">{$vote}</td>
+                <td class="{$point_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="boardListEmpty {$empty_display|display}" module="board_empty_[seq]">
+        <p>
+            {$empty_message}
+        </p>
+    </div>
+    <div module="board_ButtonList_[seq]" class="{$write_display|display}">
+        <a href="/board/sub-notice_default/write.html{$param_write}" class="{$write_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_write.gif" alt="글쓰기" /></a>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.xans-board-reply { padding:14px 0; }
+
+/* 테이블 */
+.xans-board-replypackage .boardReply { margin:-1px 14px 7px; border:1px solid #cccccc; background:#fff; }
+.xans-board-replypackage .boardReply a { color:#333; }
+.xans-board-replypackage .boardReply table th { color:#333; }
+.xans-board-replypackage .boardReply table thead th { padding:8px 0; text-align:center; border-bottom:1px solid #cacaca; border-left:1px solid #cacaca; }
+.xans-board-replypackage .boardReply table thead tr > th:first-child { border-left:0; }
+.xans-board-replypackage .boardReply table tbody th,
+.xans-board-replypackage .boardReply table tbody td { border-bottom:1px solid #f1f1f1; word-wrap:break-word; }
+.xans-board-replypackage .boardReply table tbody th { padding:14px 0 7px 14px; vertical-align:top; text-align:left; }
+.xans-board-replypackage .boardReply table tbody td { padding:7px 14px 7px 14px; }
+.xans-board-replypackage .boardReply table tbody tr > td:first-child { border-left:0; }
+.xans-board-replypackage .boardReply table tbody td.write { padding:14px; }
+.xans-board-replypackage .boardReply table #content { width:100%; height:100px; }
+.xans-board-replypackage .boardReply table #email1,
+.xans-board-replypackage .boardReply table #email2 { float:left; margin:0 1% 4px 0; width:45.5%; }
+.xans-board-replypackage .boardReply table #email2 { float:right; margin:0 0 4px 0; }
+.xans-board-replypackage .boardReply table #email3 { width:100%; }
+.xans-board-replypackage .boardReply table .uccUrlSize { line-height:0; font-size:0; }
+.xans-board-replypackage .boardReply table #ucc { margin:0 0 5px 0; width:100%; }
+.xans-board-replypackage .boardReply table #ucc_width { display:inline-block; width:48%; }
+.xans-board-replypackage .boardReply table #ucc_height { display:inline-block; margin:0 0 0 4%; width:48%; }
+.xans-board-replypackage .boardReply table .captcha { position:relative; }
+.xans-board-replypackage .boardReply table .captcha span { display:block; padding:0 0 0 94px; }
+.xans-board-replypackage .boardReply table .captcha img { position:absolute; left:14px; top:14px; }
+.xans-board-replypackage .boardReply table #captcha { width:100%; }
+.xans-board-replypackage .boardReply .grid { margin:3px 0 0; }
+.xans-board-replypackage .boardReply table #board_category { margin:0 0 7px; }
+.xans-board-replypackage .boardReply table select, .xans-board-replypackage .boardReply table input[type="text"], .xans-board-replypackage .boardReply table input[type="password"] { width:100%; }
+.xans-board-replypackage .boardReply table .size { overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; }
+.xans-board-replypackage .btnArea.type2 { padding:0 14px; }
+
+.xans-board-replypackage .privacy { margin:0 14px 14px; padding:5px 15px; border:1px solid #ccc; background:#fff; }
+.xans-board-replypackage .privacy:after { content:""; display:block; clear:both; }
+.xans-board-replypackage .privacy p { float:left; width:82%; }
+.xans-board-replypackage .privacy p input { margin:0 5px 0 0; vertical-align:middle; }
+.xans-board-replypackage .privacy span { float:right; width:18%; font-size:11px; text-align:right; text-decoration:underline; }
+
+/* 답글작성 */
+.xans-board-replypackage .xans-board-reply-9 { margin:14px 0 0; }

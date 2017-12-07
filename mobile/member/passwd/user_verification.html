@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>비밀번호 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="member_passwordverification">
+    <!--@css(/css/module/member/user_verification.css)-->
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>본인확인 인증</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">본인확인 인증</th>
+                    <td>{$form.user_verification_method_type}</td>
+                </tr>
+                <tr id="{$user_verification_email_info}" class="email">
+                    <th scope="row">이메일</th>
+                    <td>
+                        <strong class="txtEm gSingleBreak">{$user_verification_email}</strong>
+                        <a href="#none" class="btnNormal" onclick="{$action_func_user_verification}">인증번호 받기</a>
+                    </td>
+                </tr>
+                <tr id="{$user_verification_mobile_info}" class="mobile">
+                    <th scope="row">휴대폰 번호</th>
+                    <td>
+                        <strong class="txtEm gSingleBreak">{$user_verification_mobile}</strong>
+                        <a href="#none" class="btnNormal" onclick="{$action_func_user_verification}">인증번호 받기</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">인증번호</th>
+                    <td>{$form.verification_code}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p class="help {$display_user_verification_email_desc|display}" id="{$user_verification_email_desc}">1회 발송된 인증번호의 유효 시간은 60분이며, 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+                        <p class="help {$display_user_verification_mobile_desc|display}" id="{$user_verification_mobile_desc}">1회 발송된 인증번호의 유효 시간은 3분이며, 1회 인증번호 발송 후 30초 이후에 재전송이 가능합니다.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type1">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_user_verification_submit}">확인</a>
+    </div>
+</div>

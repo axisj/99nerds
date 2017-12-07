@@ -1,0 +1,16 @@
+.xans-member-updateeventpopup { z-index:100; position:fixed; top:70px; left:50%; width:292px; margin:0 0 0 -146px; border-radius:5px; letter-spacing:-1px; background:#5a7ec0;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    0 0 10px 2px rgba(0, 0, 0, 0.75);
+    box-shadow:         0 0 10px 2px rgba(0, 0, 0, 0.75);
+}
+.xans-member-updateeventpopup h2 { overflow:hidden; text-indent:150%; white-space:nowrap; font-size:0; line-height:0; }
+.xans-member-updateeventpopup .content { padding:29px 13px; line-height:1.5em; color:#fff; }
+.xans-member-updateeventpopup .content > h3 { margin:0; font-size:20px; }
+.xans-member-updateeventpopup .content > p { margin:0 0 10px; padding:10px 0 0 0; font-size:13px; }
+.xans-member-updateeventpopup .content .txtEm { color:#ffe746; }
+.xans-member-updateeventpopup.modifyEvent .content .btnStrong { display:block;color:#fff; border:1px solid #4a5164; border-bottom-color:#3b4150; background:#4a5164; margin:14px 0 0; width:100%; text-align:center; font-weight:normal;
+        display:inline-block; height:28px; line-height:26px; margin:0; padding:0 10px;
+        cursor:pointer; vertical-align:middle; font-family:Verdana,'Iropke Batang',"맑은 고딕",Malgun Gothic,"돋움",Dotum; font-size:13px; font-weight:400;
+        border-radius:2px; -moz-box-sizing:border-box; box-sizing:border-box; text-decoration:none; }
+.xans-member-updateeventpopup .footer { position:relative; padding:0 7px; border-radius:0 0 5px 5px; background:#f9f9f9; }
+.xans-member-updateeventpopup .footer .btnClose { position:absolute; top:7px; right:7px; padding:0 19px 0 0; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") no-repeat 100% 2px; background-size:13px 13px; }

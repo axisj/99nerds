@@ -1,0 +1,43 @@
+<div module="Layout_SearchHeader" class="searchBox" id="{$search_box_id}">
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/css/module/layout/searchHeader.css)-->
+    <!--
+        $category_page=/product/list.html
+    -->
+    <fieldset>
+        <legend>검색</legend>
+        <div class="searchForm">
+            {$form.keyword}
+            <button type="button" class="btnDelete">삭제</button>
+        </div>
+    </fieldset>
+    <div class="tab">
+        <ul class="searchTab {$hot_use_display|display}">
+            <li class="selected"><a href="#none">인기 검색어</a></li>
+            <li><a href="#none">최근 검색어</a></li>
+        </ul>
+    </div>
+    <div module="search_hotkeyword">
+        <ul>
+            <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+            <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+        </ul>
+    </div>
+    <div module="search_recentkeyword">
+        <p class="{$recent_none_display|display}">최근 검색어가 없습니다.</p>
+        <ul class="{$recent_list_display|display}">
+            <li data-index="{$recent_keyword_index}">
+                <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+            </li>
+            <li data-index="{$recent_keyword_index}">
+                <a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+                <button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+            </li>
+        </ul>
+        <div class="button">
+            <button type="button" class="btnDeleteAll" onclick="{$recent_keyword_remove_all}">검색기록 전체삭제</button>
+        </div>
+    </div>
+    <button type="button" class="btnClose" id="{$search_cancel_id}">닫기</button>
+</div>

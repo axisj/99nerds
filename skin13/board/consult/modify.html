@@ -1,0 +1,117 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div module="board_ModifyPackage_9" class="tableTheme mid-0">
+    <!--@css(/css/module/board/modifyPackage_9.css)-->
+    <div module="board_title_9">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/myshop/index.html">마이쇼핑</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2 class="txtTitle16B">{$board_title}</h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+    <div module="board_modify_9">
+        <!--
+            $modify_success_url = /board/consult/read.html
+        -->
+        <div class="{$display_parent_form|display}">
+            <table border="1" summary="">
+                <caption>1:1 맞춤상담 상세</caption>
+                <colgroup>
+                    <col style="width:130px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody class="middle">
+                    <tr>
+                        <th scope="row">제목</th>
+                        <td>{$parent_subject}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">작성자</th>
+                        <td>{$parent_writer}</td>
+                    </tr>
+                    <tr>
+                        <th>답변여부</th>
+                        <td>{$parent_consult}</td>
+                    </tr>
+                    <tr class="{$config.use_date|display}">
+                        <th>문의일시</th>
+                        <td>{$parent_write_date}</td>
+                    </tr>
+                    <tr class="gMerge">
+                        <td colspan="2">
+                            <div class="detail">{$parent_content}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table border="1" summary="" class="gTriple">
+            <caption>1:1 맞춤상담 쓰기 폼</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody class="middle">
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$form.subject}</td>
+                </tr>
+                <tr>
+                    <th scope="row">이메일</th>
+                    <td>{$form.email}<span class="gSingle">답변여부를 메일로 받으시겠습니까? {$form.cons_re}</span></td>
+                </tr>
+            </tbody>
+
+            <tbody class="middle">
+                <tr class="gMerge">
+                    <td colspan="2">
+                        {$form.content}
+                    </td>
+                </tr>
+            </tbody>
+
+            <tbody class="middle {$config.use_attach|display}">
+                <tr>
+                    <th scope="row">첨부파일1</th>
+                    <td>{$form.attach_file} {$attached_file1}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일2</th>
+                    <td>{$form.attach_file} {$attached_file2}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일3</th>
+                    <td>{$form.attach_file} {$attached_file3}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일4</th>
+                    <td>{$form.attach_file} {$attached_file4}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일5</th>
+                    <td>{$form.attach_file} {$attached_file5}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonArea">
+            <span class="gLeft">
+                <a href="{$link_board_list}" class="btnNormalB">목록</a>
+            </span>
+            <span class="gRight">
+                <button type="button" class="btnEmB" onclick="{$action_modify}">수정</button>
+                <a href="{$link_board_list}" class="btnStrongB">취소</a>
+            </span>
+        </div>
+    </div>
+</div>

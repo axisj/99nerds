@@ -1,0 +1,27 @@
+html, body, .xans-product-zoom, .xans-product-zoompackage { height:100%; }
+.xans-product-sizeguide { position:relative; padding:36px 0 28px; }
+.xans-product-sizeguide .contents { padding:14px; height:100%; overflow-x:auto; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+
+.xans-product-sizeguide .header { position:fixed; top:0; width:100%; height:35px; border-bottom:1px solid #cecece; background:#e3e3e3; opacity:0.8; -moz-opacity:0.8; -webkit-opacity:0.8; z-index:10; }
+.xans-product-sizeguide .header h2 { padding:0 36px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:14px; text-align:center; line-height:36px; }
+.xans-product-sizeguide .header .btnClose { position:absolute; top:0; right:0; display:block; width:13px; height:13px; margin:0; padding:18px; border:none; font-size:0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_black.png") center no-repeat; background-size:13px 13px; }
+
+.xans-product-sizeguide h3 { margin:0 0 10px; color:#2e2e2e; }
+.xans-product-sizeguide .sizeWrap { overflow-x:auto; margin:0 0 20px; }
+.xans-product-sizeguide .guideBoard table { table-layout:fixed;  border-spacing:0; border-collapse:collapse; line-height:1.5; background-color:#fff; }
+.xans-product-sizeguide .guideBoard th,
+.xans-product-sizeguide .guideBoard td { padding:5px 5px 3px; text-align:center; vertical-align:middle; word-break:break-all; }
+.xans-product-sizeguide .guideBoard th { font-weight:normal; background-color:#f0f2f2; }
+.xans-product-sizeguide .guideBoard tbody th { border:1px solid #cbcdce; }
+.xans-product-sizeguide .guideBoard thead th { border:1px solid #cbcdce; color:#757575; }
+.xans-product-sizeguide .guideBoard thead th .nation { color:#1b1b1b; }
+.xans-product-sizeguide .guideBoard tbody td { border:1px solid #d7d5d5; }
+.xans-product-sizeguide .guideBoard.pants { margin-top:10px; }
+.xans-product-sizeguide .guideBoard.pants thead { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:150%; font-size:0; line-height:0; border:0; }
+.xans-product-sizeguide .guideBoard.pants tbody td { border-top-width:1px; }
+
+.xans-product-sizeguide .userGuide img { margin:0; max-width:100%; height:auto !important; }
+.xans-product-sizeguide .userGuide table th,
+.xans-product-sizeguide .userGuide table td { word-break:break-all; }
+
+.xans-product-sizeguide .info { margin:14px 0 0; padding:0 0 0 20px; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_important.png") no-repeat 0 3px; background-size:13px 13px; }

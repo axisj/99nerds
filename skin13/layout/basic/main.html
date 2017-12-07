@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--PG크로스브라우징필수내용 시작-->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!--PG크로스브라우징필수내용 끝-->
+
+    <title>기본 레이아웃</title>
+    <!--@css(/layout/basic/css/common.css)--><!--해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요.-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-tab.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-desc.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/basic.js)-->
+    <!--@js(/js/common.js)-->
+    <!--@js(/js/module/layout/quick_view.js)-->
+    <script type="text/javascript" src="/ec-js/common.js"></script><!-- 해당 JS는 플래시를 사용하기 위한 스크립트입니다. -->
+</head>
+<body id="main">
+<div id="skipNavigation">
+    <p><a href="#category">전체상품목록 바로가기</a></p>
+    <p><a href="#contents">본문 바로가기</a></p>
+</div>
+
+<div id="header">
+<div class="inner">
+    <div class="topArea">
+        <h1 module="Layout_LogoTop">
+            <!--@css(/css/module/layout/logotop.css)-->
+            <a href="/index.html">{$mall_name}</a>
+        </h1>
+        <div module="Layout_SearchHeader">
+            <!--@css(/css/module/layout/searchHeader.css)-->
+            <!--
+                $product_page=/product/detail.html
+                $category_page=/product/list.html
+            -->
+            <fieldset>
+                <legend>검색</legend>
+                {$form.keyword}<input type="image" src="//img.echosting.cafe24.com/skin/base/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+        </div>
+    </div>
+
+    <div module="Layout_multishopList" class="list">
+        <!--@css(/css/module/layout/multishopList.css)-->
+        <button type="button" class="toggle"><span><img src="//img.cafe24.com/img/common/global/{$current_language_code}_18x12.png" alt="" /> {$current_language}</span></button>
+        <ul module="Layout_multishopListitem">
+            <li class="{$selected_class}">
+                <a href="//{$shop_domain}/">
+                    <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" />
+                    <span class="name">{$locale_language}</span>
+                    <span class="unit">{$currency_code}</span>
+                </a>
+            </li>
+            <li class="{$selected_class}">
+                <a href="//{$shop_domain}/">
+                    <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" />
+                    <span class="name">{$locale_language}</span>
+                    <span class="unit">{$currency_code}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div module="Layout_multishopList" class="thumb">
+        <!--@css(/css/module/layout/multishopList.css)-->
+        <ul module="Layout_multishopListitem">
+            <li>
+                <a href="//{$shop_domain}/">
+                    <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="//{$shop_domain}/">
+                    <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" />
+                </a>
+            </li>
+        </ul>
+        <div module="Layout_multishopListmultioption" class="multiOption">
+            <a href="#none">
+                <span module="Layout_multishopListmultioptionCountry" class="ship">
+                    <strong>Ship to</strong><span> : </span>
+                </span>
+                <span module="Layout_multishopListmultioptionLanguage" class="language">
+                    <strong>Language</strong><span> : <img src="//img.cafe24.com/img/common/global/{$language_code}_32x24.png" alt="" />{$language_name}</span>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <div module="Layout_statelogoff">
+        <!--@css(/css/module/layout/statelogoff.css)-->
+        <a href="/member/login.html" class="log">로그인</a>
+        <a href="/member/join.html">회원가입</a>
+        <a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+        <a href="/myshop/order/list.html">주문조회</a>
+        <a href="/myshop/index.html">마이쇼핑</a>
+        <a href="/board/index.html">게시판</a>
+    </div>
+
+    <div module="Layout_stateLogon">
+        <!--@css(/css/module/layout/statelogon.css)-->
+        <span class="myinfo"><strong>{$name}</strong>님 환영합니다. <a href="/member/modify.html">회원정보수정</a></span>
+        <a href="{$action_logout}" class="log">로그아웃</a>
+        <a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+        <a href="/myshop/order/list.html">주문조회</a>
+        <a href="/myshop/index.html">마이쇼핑</a>
+        <a href="/board/index.html">게시판</a>
+    </div>
+
+    <ul class="special">
+        <li><a href="/product/list.html?cate_no=24">신상품</a></li>
+        <li><a href="/product/list.html?cate_no=25">프리미엄</a></li>
+        <li><a href="/product/list.html?cate_no=26">스페셜상품</a></li>
+    </ul>
+
+    <ul module="Layout_shoppingInfo">
+        <!--@css(/css/module/layout/shoppingInfo.css)-->
+        <li class="{$use_mileage|display}"><a href="/myshop/mileage/historyList.html">{$mileage_name} <strong>{$mileage}</strong></a></li>
+        <li class="{$use_basket_cnt|display}"><a href="/order/basket.html">장바구니 <strong>{$basket_cnt}<span class="{$use_basket_price|display}">({$basket_price})</span></strong></a></li>
+        <li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품 <strong>{$interest_prd_cnt}</strong></a></li>
+        <li class="{$use_like_product_cnt|display}">{$like_prd_tag}</li>
+        <li class="{$use_coupon_cnt|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <strong>{$coupon_cnt}</strong></a></li>
+        <li class="{$use_deposit|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name} <strong>{$deposit}</strong></a></li>
+    </ul>
+
+    <div class="link">
+        <a module="Layout_bookmark" href="/link/bookmark.html" target="_blank" onclick="winPop(this.href); return false;"><span>즐겨찾기</span></a>
+        <a module="Layout_shortcut" href="/link/shortcut.html" target="_blank" onclick="winPop(this.href); return false;">바로가기</a>
+    </div>
+</div>
+</div><hr class="layout" />
+
+<div id="wrap">
+    <div id="container">
+        <div id="contents">
+            <!--@contents-->
+        </div><hr class="layout" />
+
+        <div id="sidebar">
+            <div id="category" module="Layout_category">
+                <!--@css(/css/module/layout/category.css)-->
+                <!--@js(/js/module/layout/category.js)-->
+                <div class="position">
+                    <ul>
+                        <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                        <li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div module="Layout_BoardInfo">
+                <!--@css(/css/module/layout/boardInfo.css)-->
+                <h2>전체게시판</h2>
+                <ul>
+                    <li><a href="{$link_board_list}">{$board_img_name}</a> {$board_adult_icon}</li>
+                    <li><a href="{$link_board_list}">{$board_img_name}</a> {$board_adult_icon}</li>
+                </ul>
+                <!-- 참고: 텍스트메뉴를 사용하고 싶은 경우
+                <ul>
+                    <li><a href="{$link_board_list}">{$board_name}</a></li>
+                    <li><a href="{$link_board_list}">{$board_name}</a></li>
+                </ul>
+                // 참고 -->
+            </div>
+
+            <div module="Layout_SearchSide">
+                <!--@css(/css/module/layout/searchSide.css)-->
+                <!--
+                    $search_page = /product/search.html
+                    $product_page = /product/detail.html
+                -->
+                <h2>상품검색</h2>
+                <fieldset>
+                    <legend>검색</legend>
+                    {$form.keyword}<input type="image" src="//img.echosting.cafe24.com/skin/base/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+                <div class="bestKeyword {$hot_keyword_display|display}">
+                    <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                    <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                </div>
+                <p class="button"><a href="/product/search.html">상품상세검색</a></p>
+            </div>
+
+            <div module="Layout_project">
+                <!--@css(/css/module/layout/project.css)-->
+                <!--@js(/js/rotate.js)-->
+                <!--@js(/js/module/layout/project.js)-->
+                <h2>쇼핑기획전</h2>
+                <ul>
+                    <li><a href="{$link_product_project}"><img src="{$category_image}" alt="" /></a></li>
+                    <li><a href="{$link_product_project}"><img src="{$category_image}" alt="" /></a></li>
+                </ul>
+                <div class="control">
+                    <button type="button" class="prev" id="prevButton-project"><span>이전</span></button>
+                    <button type="button" class="stop" id="stopButton-project"><span>멈춤</span></button>
+                    <button type="button" class="play" id="playButton-project"><span>재생</span></button>
+                    <button type="button" class="next" id="nextButton-project"><span>다음</span></button>
+                </div>
+            </div>
+
+            <div module="Layout_login">
+                <!--@css(/css/module/layout/login.css)-->
+                <h2>회원로그인</h2>
+                <fieldset>
+                    <legend>회원로그인</legend>
+                    <p class="check">
+                        <span><label for="member_id" class="ePlaceholder" title="아이디">{$form.member_id}</label></span>
+                        <span><label for="member_passwd" class="ePlaceholder" title="비밀번호">{$form.member_passwd}</label></span>
+                    </p>
+                    <p class="security">
+                        {$form.check_save_id}
+                        {$form.check_secret_connect}
+                    </p>
+                    <p class="button">
+                        <input type="image" src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_login.gif" alt="로그인" onclick="{$action_func_login}" />
+                    </p>
+                </fieldset>
+                <ul>
+                    <li><a href="/member/id/find_id.html">아이디찾기</a></li>
+                    <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
+                    <li><a href="/member/join.html">회원가입</a></li>
+                </ul>
+            </div>
+
+            <div module="Layout_Info">
+                <!--@css(/css/module/layout/info.css)-->
+                <h2>고객센터</h2>
+                <ul>
+                    <li class="tel"><strong>Telephone</strong><span>{$phone}</span></li>
+                    <li><strong>Fax</strong><span>{$fax}</span></li>
+                    <li><strong>Time</strong><span>{$runtime}</span></li>
+                </ul>
+            </div>
+
+            <div module="Layout_Myshop">
+                <!--@css(/css/module/layout/myshop.css)-->
+                <h2>마이쇼핑</h2>
+                <ul>
+                    <li class="order"><a href="/myshop/order/list.html"><strong>주문내역조회</strong></a></li>
+                    <li class="mileage"><a href="/myshop/mileage/historyList.html">적립금</a></li>
+                    <li class="member"><a href="/member/modify.html">회원정보</a></li>
+                    <li class="consult {$consult_display|display}"><a href="/board/consult/list.html">1:1 맞춤상담</a></li>
+                    <li class="wish"><a href="/myshop/wish_list.html">관심상품</a></li>
+                </ul>
+            </div>
+
+            <div module="Layout_Poll">
+                <!--@css(/css/module/layout/poll.css)-->
+                <h2>온라인 설문조사</h2>
+                <h3 title="질문">{$poll_title}</h3>
+                <fieldset>
+                    <legend>설문조사 항목</legend>
+                    <ul>
+                        <li>{$poll} {$poll_name}</li>
+                        <li>{$poll} {$poll_name}</li>
+                        <li>{$poll} {$poll_name}</li>
+                        <li>{$poll} {$poll_name}</li>
+                    </ul>
+                    <p class="button">
+                        <a href="#none" onclick="{$action_poll_result}">결과보기</a>
+                        <a href="#none" onclick="{$action_poll_submit}">투표하기</a>
+                    </p>
+                </fieldset>
+            </div>
+
+            <div class="banner">
+                <p module="Layout_giftBanner"><a href="/order/gift_list.html"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_gift.gif" alt="고객사은품 안내" /></a></p>
+                <p module="Layout_opdiaryBanner"><a href="/board/opdiary/list.html"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_diary.gif" alt="운영일지" /></a></p>
+                <p module="Layout_sosBanner"><a href="/board/urgency/urgency.html" ><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_sos.gif" alt="긴급 문의" /></a></p>
+                <p module="Layout_attendBanner">
+                    <!--
+                        $stamp_type_url = /attend/stamp.html
+                        $comment_type_url = /attend/comment.html
+                    -->
+                    <a href="{$attend_url}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_attend.gif" alt="출석체크" /></a>
+                </p>
+                <p module="Layout_couponzoneBanner"><a href="/coupon/coupon_zone.html"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_coupon.gif" alt="알뜰살뜰 쿠폰존" /></a></p>
+                <p module="Layout_calendarBanner"><a href="{$calendar_view_page}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/bn_calendar.gif" alt="캘린더 게시판" /></a></p>
+            </div>
+        </div>
+    </div><hr class="layout" />
+
+    <div id="banner">
+        <p><a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/img_banner1.jpg" alt="" /></a></p>
+    </div>
+
+    <div id="quick">
+        <div module="Layout_orderBasketcount">
+            <!--@css(/css/module/layout/orderBasketcount.css)-->
+            <strong>장바구니</strong> <span><a href="/order/basket.html">{$basket_count}</a>개</span>
+        </div>
+
+        <div module="Layout_productRecent">
+            <!--@css(/css/module/layout/productRecent.css)-->
+            <h2><a href="/product/recent_view_product.html">최근 본 상품</a></h2>
+            <ul>
+                <li class="{$disp_recent|display}">
+                    <a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><span>{$name}</span></a>
+                </li>
+                <li class="{$disp_recent|display}">
+                    <a href="/product/detail.html{$param}"><img src="{$recent_img}" alt="" /><span>{$name}</span></a>
+                </li>
+            </ul>
+            <p class="player"><img src="//img.echosting.cafe24.com/skin/base/layout/btn_recent_prev.gif" alt="이전 제품" class="prev" /><img src="//img.echosting.cafe24.com/skin/base/layout/btn_recent_next.gif" alt="다음 제품" class="next" /></p>
+        </div>
+
+        <p class="pageTop"><a href="#header" title="화면 최상단으로 이동하기"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_top1.gif" alt="맨위로" /></a></p>
+
+        <p class="banner"><a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/img_banner2.jpg" alt="" /></a></p>
+    </div>
+</div><hr class="layout" />
+
+<div id="footer">
+    <div class="inner">
+        <span module="Layout_LogoBottom">
+            <!--@css(/css/module/layout/logobottom.css)-->
+            <a href="/index.html">{$mall_name}</a>
+        </span>
+
+        <div module="Layout_footer">
+            <!--@css(/css/module/layout/footer.css)-->
+            <ul class="utilMenu">
+                <li class="home"><a href="/index.html">홈</a></li>
+                <li><a href="/shopinfo/company.html">회사소개</a></li>
+                <li><a href="/member/agreement.html">이용약관</a></li>
+                <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="/shopinfo/guide.html">이용안내</a></li>
+            </ul>
+            <p class="address">
+                <span>법인명(상호) : {$company_name} </span> <span>대표자(성명) : {$president_name}</span> <span>사업자 등록번호 안내 : [{$company_regno}]</span> <span>통신판매업 신고 {$network_regno}</span> <span>{$biz_no_link}</span> <br />
+                <span>전화 : {$phone}</span> <span>팩스 : {$fax}</span> <span>주소 : {$mall_zipcode} {$mall_addr1} {$mall_addr2}</span><br />
+                <span>개인정보보호책임자 : <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></span><br />
+                <span>Contact <strong><a href="mailto:{$email}">{$email}</a></strong> for more information.</span>
+            </p>
+            <p class="copyright">Copyright &copy; 2011 <strong>{$mall_name}</strong>. All rights reserved.</p>
+            <p class="pageTop"><a href="#header" title="화면 최상단으로 이동하기"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_top2.gif" alt="맨위로" /></a></p>
+            <p class="hosting"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/logo_cafe24.png" alt="hosting by cafe24 카페24(주)" /></p>
+        </div>
+    </div>
+</div>
+
+<!-- 참고: 결제를 위한 필수 영역 -->
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+                <span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt="" /></span>
+            </p>
+            <p class="txt">
+                본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br />
+                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- //참고 -->
+
+<div module="Layout_multishopShipping">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <div class="dimmed"></div>
+    <div class="worldshipLayer ec-base-layer">
+        <div class="header">
+            <h3>WORLD SHIPPING</h3>
+        </div>
+        <div class="content">
+            <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+            <div class="select">
+                <select module="Layout_multishopShippingCountrylist">
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                </select>
+            </div>
+            <div class="select">
+                <select module="Layout_multishopShippingLanguagelist">
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                </select>
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/link/btn_go.gif" alt="GO" /></a>
+        </div>
+        <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" width="13" height="13" alt="close" /></a>
+    </div>
+</div>
+
+<div module="Layout_conversionPc">
+    <!--@css(/css/module/layout/conversionpc.css)-->
+    <a href="{$mobile_url}">모바일 화면보기</a>
+</div>
+</body>
+</html>

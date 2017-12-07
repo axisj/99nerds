@@ -1,0 +1,28 @@
+.xans-product-listrecommend { margin:0; background:#f5f5f5; border-bottom:1px solid #d5d5d5; padding:0; }
+.xans-product-listrecommend:first-child h2 { border-top:0; }
+.xans-product-listrecommend h2 { margin:0; padding:14px 14px 0; font-size:14px; line-height:15px; color:#4a5164; }
+.xans-product-listrecommend img { max-width:100%; }
+.xans-product-listrecommend li { vertical-align:top; margin:0 0 14px; }
+
+.xans-product-listrecommend > ul > li > ul { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:14px 7px 0; font-size:0; line-height:0; }
+.xans-product-listrecommend > ul > li > ul > li { position:relative; display:inline-block; padding:0; vertical-align:top; font-size:12px; line-height:1.4; }
+
+/* swipe 기능을 사용하지않는경우 */
+.xans-product-listrecommend > ul[class*="grid"] { display:table; table-layout:fixed; width:100%; box-sizing:border-box; padding:14px 7px 0; font-size:0; line-height:0; }
+.xans-product-listrecommend > ul[class*="grid"] > li { position:relative; display:inline-block; padding:0; vertical-align:top; font-size:12px; line-height:1.4; }
+
+.xans-product-listrecommend .thumbnail { padding:0 7px; margin:0 0 7px; }
+.xans-product-listrecommend .thumbnail img { width:100%; border:1px solid #ececec; }
+.xans-product-listrecommend .information { position:relative; min-height:10px; padding:0 7px; }
+.xans-product-listrecommend .name { margin:0 0 10px; line-height:1.5em; word-wrap:break-word; }
+.xans-product-listrecommend .name a { font-size:13px; color:#757575; }
+.xans-product-listrecommend .icon { margin:0 0 10px; }
+.xans-product-listrecommend .price { margin:0 0 10px; color:#494949; font-family:Tahoma; font-size:13px; line-height:1.25em; }
+.xans-product-listrecommend .price.sale { color:#000; font-size:15px; }
+.xans-product-listrecommend .strike { text-decoration:line-through; }
+.xans-product-listrecommend .grid2 li { width:50%; }
+.xans-product-listrecommend .grid2 li .name a { font-size:13px; }
+.xans-product-listrecommend .grid3 li { width:33.333%; }
+.xans-product-listrecommend .grid3 li .name a { font-size:13px; }
+.xans-product-listrecommend .grid4 li { width:25%; }
+.xans-product-listrecommend .grid4 li .name a { font-size:11px; }

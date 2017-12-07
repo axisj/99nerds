@@ -1,0 +1,55 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>주소록 관리</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="myshop_AddrRegister">
+    <!--@css(/css/module/myshop/addrRegister.css)-->
+    <!--
+        $return_url = /myshop/addr/list.html
+    -->
+    <h3>배송지 등록</h3>
+
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>배송 주소록 등록</caption>
+            <tr>
+                <th scope="row">배송지명 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/myshop/ico_required.png" alt="필수" width="5" height="5"></th>
+                <td>{$form.ma_rcv_title}</td>
+            </tr>
+            <tr>
+                <th scope="row">성명 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/myshop/ico_required.png" alt="필수" width="5" height="5"></th>
+                <td>{$form.ma_rcv_name}</td>
+            </tr>
+            <tr>
+                <th scope="row">주소 <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/myshop/ico_required.png" alt="필수" width="5" height="5"></th>
+                <td>
+                    {$form.address_zip1}
+                    <a href="#none" onclick="{$action_find_address}" id="{$btn_find_post}" class="btnBasic">우편번호</a><br />
+                    {$form.address_addr1}<br />
+                    {$form.address_addr2}<br />
+                    <span class="{$addr2_word_display|display}">- 나머지주소는 선택입력이 가능합니다.</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일반전화 <span class="{$phone1_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/myshop/ico_required.png" alt="필수" width="5" height="5"></span></th>
+                <td>{$form.ma_rcv_phone}</td>
+            </tr>
+            <tr>
+                <th scope="row">휴대전화 <span class="{$phone2_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/myshop/ico_required.png" alt="필수" width="5" height="5"></span></th>
+                <td>{$form.ma_rcv_mobile_no}</td>
+            </tr>
+            <tr class="shipping">
+                <td colspan="2">{$form.ma_main_flag}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="btnArea type2">
+        <a href="#none" onclick="{$action_check}" class="btnSubmit">등록</a>
+        <a href="list.html" class="btnEm">취소</a>
+    </div>
+</div>

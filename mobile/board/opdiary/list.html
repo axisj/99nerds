@@ -1,0 +1,23 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_11">
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div id="titleArea" module="board_title_11">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_list_11">
+        <iframe name="blog_{$idx}" id="blog_{$idx}" src="/board/opdiary/read_blog.html{$param_read}" frameBorder="0" scrolling="auto" style="width:100%;"></iframe>
+    </div>
+</div>
+
+<div module="board_paging_11" class="paginate typeList">
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title></title>
+    <!--@css(/layout/basic/css/nnn.css)--><!-- 구구너드 CSS -->
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/button.css)-->
+    <!--@css(/layout/basic/css/paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/common.js)-->
+</head>
+<body id="layout">
+     <div id="wrap">
+        <!--@import(/layout/basic/sidebar.html)-->
+        <hr class="layout">
+        <div id="container">
+            <header id="header">
+                <div class="header">
+                    <section id="topArea">
+                        <div class="searchWrap">
+                            <p class="category"><a href="#none" class="fold">카테고리</a></p>
+                            <h1 module="Layout_LogoTop" style="background: #1E1E1E;"><a
+                                    href="/"><img src="../../image/landing_page/main_visual/99Nerds_logo.svg" alt="99nerds-logo"/></a></h1>
+                            <p class="search"><button type="button">검색</button></p>
+                            <p module="Layout_orderBasketcount">
+                                <a href="/order/basket.html" class="btnBasket">장바구니<span class="count {$basket_count_display|display}">{$basket_count}</span></a>
+                            </p>
+                        </div>
+                        <!--@import(/layout/basic/navigation.html)-->
+                    </section>
+                    <!--@import(/layout/basic/search.html)-->
+                </div>
+            </header>
+            <hr class="layout">
+            <div id="contents">
+                <!--@contents-->
+            </div>
+            <hr class="layout">
+            <!--@import(/layout/basic/footer.html)-->
+        </div>
+    </div>
+     <script src="/layout/basic/js/jquery-3.1.1.min.js"></script>
+     <script src="/layout/basic/js/jquery.flexisel.js"></script>
+     <script type="text/javascript">
+         window.jQuery3_1_1 = jQuery.noConflict(true);
+         // s.Opensource Best....
+         var os_stickers_best_count = 3;
+         var os_stickers_arr = [
+             {image:'/web/upload/nnn/os_logo_01@2x.png', name:'AXISJ', desc:'Full-stack Opensource Javascript UI Framework', url:'/'},
+             {image:'/web/upload/nnn/os_logo_02@2x.png', name:'HTML5', desc:'Hyper-Text Markup Language', url:'/'},
+             {image:'/web/upload/nnn/os_logo_03@2x.png', name:'Spring', desc:'Lets build a better Enterprise', url:'/'},
+             {image:'/web/upload/nnn/os_logo_04@2x.png', name:'CSS3', desc:'Cascading Style Sheet', url:'/'},
+             {image:'/web/upload/nnn/os_logo_05@2x.png', name:'AX5', desc:'Bootstrap jQuery Plugins', url:'/'},
+             {image:'/web/upload/nnn/os_logo_06@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'/'},
+             {image:'/web/upload/nnn/os_logo_07@2x.png', name:'AXBoot', desc:'Full Stack Web Application Development Framework', url:'/'},
+             {image:'/web/upload/nnn/os_logo_08@2x.png', name:'AngularJS', desc:'One framework. Mobile and desktop', url:'/'},
+             {image:'/web/upload/nnn/os_logo_09@2x.png', name:'Bower', desc:'A package manager for the web', url:'/'},
+             {image:'/web/upload/nnn/os_logo_10@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'/'},
+             {image:'/web/upload/nnn/os_logo_11@2x.png', name:'C#', desc:'Simple, modern, object-oriented, and type-safe programming language', url:'/'},
+             {image:'/web/upload/nnn/os_logo_12@2x.png', name:'Javascript', desc:'A package manager for the web', url:'/'},
+             {image:'/web/upload/nnn/os_logo_13@2x.png', name:'99Nerds', desc:'Opensource stickers', url:'/'},
+             {image:'/web/upload/nnn/os_logo_14@2x.png', name:'Javascript', desc:'Cross-platform, object-oriented scripting language', url:'/'},
+             {image:'/web/upload/nnn/os_logo_15@2x.png', name:'Flask MVC', desc:'Small, lightweight, and powerful', url:'/'},
+             {image:'/web/upload/nnn/os_logo_16@2x.png', name:'Fedora', desc:'Choose Freedom. Choose Fedora.', url:'/'},
+             {image:'/web/upload/nnn/os_logo_17@2x.png', name:'Ubuntu', desc:'Managed live kernel patching without reboots', url:'/'},
+             {image:'/web/upload/nnn/os_logo_18@2x.png', name:'Eclipse', desc:'An amazing open source community of Tools, Projects and Collaborative Working Groups.', url:'/'},
+             {image:'/web/upload/nnn/os_logo_19@2x.png', name:'Swift', desc:'Safety, performance, and software design patterns', url:'/'},
+             {image:'/web/upload/nnn/os_logo_20@2x.png', name:'GO', desc:'Easy to build simple, reliable, and efficient software', url:'/'},
+             {image:'/web/upload/nnn/os_logo_21@2x.png', name:'Docker', desc:'Build, Ship, and Run any app, Anywhere', url:'/'},
+             {image:'/web/upload/nnn/os_logo_22@2x.png', name:'jQuery', desc:'Fast, small, and feature-rich JavaScript library', url:'/'},
+             {image:'/web/upload/nnn/os_logo_23@2x.png', name:'Bash', desc:'Unix Shell', url:'/'},
+             {image:'/web/upload/nnn/os_logo_24@2x.png', name:'rm -rf', desc:'Destroy universe', url:'/'},
+             {image:'/web/upload/nnn/os_logo_25@2x.png', name:'Linux', desc:'Opensource Operating systems', url:'/'},
+             {image:'/web/upload/nnn/os_logo_26@2x.png', name:'Yeoman Generator', desc:'The Webs Scaffolding tool for modern FOR webapps', url:'/'},
+             {image:'/web/upload/nnn/os_logo_27@2x.png', name:'ReactJS', desc:'A Javascript library for building user interfaces', url:'/'},
+             {image:'/web/upload/nnn/os_logo_28@2x.png', name:'Android', desc:'The world’s most popular mobile OS', url:'/'},
+             {image:'/web/upload/nnn/os_logo_29@2x.png', name:'Flaskr', desc:'Small, lightweight, and powerful', url:'/'},
+             {image:'/web/upload/nnn/os_logo_30@2x.png', name:'Gulp', desc:'Automate and enhance your workflow', url:'/'},
+             {image:'/web/upload/nnn/os_logo_31@2x.png', name:'MongoDB', desc:'MongoDB Atlas: Hosted MongoDB-as-a-Service', url:'/'},
+             {image:'/web/upload/nnn/os_logo_32@2x.png', name:'Scala', desc:'Object-Oriented Meets Functional', url:'/'},
+             {image:'/web/upload/nnn/os_logo_33@2x.png', name:'Jenkins', desc:'Build great things at any scale', url:'/'},
+             {image:'/web/upload/nnn/os_logo_34@2x.png', name:'Django', desc:'Django makes it easier to build better Web apps more quickly and with less code.', url:'/'},
+             {image:'/web/upload/nnn/os_logo_35@2x.png', name:'Git', desc:'Distributed-is-the-new-centralized', url:'/'},
+             {image:'/web/upload/nnn/os_logo_36@2x.png', name:'Redis', desc:'In-memory data structure store, used as a database, cache and message broke', url:'/'},
+             {image:'/web/upload/nnn/os_logo_37@2x.png', name:'CodeIgniter', desc:'CodeIgniter is a powerful PHP framework', url:'/'}
+         ];
+
+         function getRandomIndex(o) {
+             return Math.floor(Math.random() * o.length);
+         }
+
+         function getBestOSStickers(){
+             var count = 1;
+             for (var i=1; i <= os_stickers_best_count; i++) {
+                 var randomIndex = getRandomIndex(os_stickers_arr);
+                 jQuery3_1_1("#LoveOSBest"+count+" a").css("background","url('"+os_stickers_arr[randomIndex].image+"') no-repeat center 40px");
+                 jQuery3_1_1("#LoveOSBest"+count+" a").css("background-size","50%");
+                 jQuery3_1_1("#LoveOSBest"+count+" a").attr("href", os_stickers_arr[randomIndex].url);
+                 jQuery3_1_1("#LoveOSBest"+count+" a .label .slo").text(os_stickers_arr[randomIndex].desc);
+                 jQuery3_1_1("#LoveOSBest"+count+" a .label .name").text(os_stickers_arr[randomIndex].name);
+                 jQuery3_1_1("#LoveOSBest"+count+" a").css("display");
+                 os_stickers_arr.splice(randomIndex, 1);
+                 count++;
+             }
+         }
+         // e.Opensource Best....
+         jQuery3_1_1( document ).ready(function() {
+             getBestOSStickers();
+         });
+     </script>
+</body>
+</html>

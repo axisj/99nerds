@@ -1,0 +1,57 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div id="myAddress" class="tableTheme mid-0" module="myshop_AddrModify">
+    <!--@css(/css/module/myshop/addrModify_pop.css)-->
+    <!--
+        $return_url = /myshop/addr_popup/list.html
+    -->
+    <div class="header">
+        <h1>배송 주소록 관리</h1>
+    </div>
+
+    <div class="content">
+        <table border="1" summary="">
+            <caption>배송 주소록 수정</caption>
+            <colgroup>
+                <col style="width:140px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">배송지명</th>
+                    <td>{$form.ma_rcv_title}</td>
+                </tr>
+                <tr>
+                    <th scope="row">성명</th>
+                    <td>{$form.ma_rcv_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">주소 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /></th>
+                    <td>
+                        {$form.address_zip1} - {$form.address_zip2}
+                        <a href="#none" onclick="{$action_find_address}" id="{$btn_find_post}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_zipcode.gif" alt="우편번호" /></a><br />
+                        {$form.address_addr1} 기본주소
+                        {$form.address_addr2} 나머지주소 <span class="{$addr2_word_display|display}">(선택입력가능)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">일반전화<span class="{$phone1_display|display}"> <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /></span></th>
+                    <td>{$form.ma_rcv_phone}</td>
+                </tr>
+                    <tr>
+                        <th scope="row">휴대전화<span class="{$phone2_display|display}"> <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /></span></th>
+                    <td>{$form.ma_rcv_mobile_no}</td>
+                </tr>
+                <tr class="shipping">
+                    <td colspan="2">{$form.ma_main_flag}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="buttonArea">
+        <button type="button" class="btnEmB" onclick="{$action_check}">수정</button>
+        <a href="list.html" class="btnNormalB">취소</a>
+    </div>
+</div>

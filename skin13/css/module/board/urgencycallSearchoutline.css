@@ -1,0 +1,16 @@
+.mid-0.xans-mall-urgencycallsearchoutline.layerTheme { position:fixed; top:50%; left:50%; width:600px; margin:-300px 0 0 -300px; }
+.mid-0.xans-mall-urgencycallsearchoutline.layerTheme .content { min-height:470px; }
+
+.mid-0.xans-mall-urgencycallsearchoutline div[class*="tabTheme"] { margin-top:0; }
+
+.mid-0.xans-mall-urgencycallsearchoutline .typeBody { overflow-x:hidden; overflow-y:scroll; max-height:285px; min-height:35px; }
+.mid-0.xans-mall-urgencycallsearchoutline .typeBody.mid-0.xans-mall-urgencycallordresult { max-height:365px; }
+.mid-0.xans-mall-urgencycallsearchoutline table td .product { overflow:hidden; }
+.mid-0.xans-mall-urgencycallsearchoutline table td .product .thumb { float:left; }
+.mid-0.xans-mall-urgencycallsearchoutline table td .product p { padding:0 0 0 55px; }
+.mid-0.xans-mall-urgencycallsearchoutline table #txtProductInfo { width:340px; }
+
+.mid-0.xans-mall-urgencycallsearchoutline .result { margin:18px 0 8px; padding:0 0 0 16px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/bul_urgency.gif") no-repeat 9px 43%; }
+.mid-0.xans-mall-urgencycallsearchoutline .urgencyOrder .inputOrdNum { width:145px; }
+
+.xans-mall-urgencycallsearchoutline .urgencyOrder .inputOrdNum { width:145px; }

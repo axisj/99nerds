@@ -1,0 +1,53 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>회사소개</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="mall_company">
+    <!--@css(/css/module/mall/company.css)-->
+    <div class="info" module="Layout_footer">
+        <dl>
+            <dt>상점명</dt>
+            <dd>{$mall_name}</dd>
+        </dl>
+        <dl>
+            <dt>대표이사</dt>
+            <dd><a href="mailto:{$email}">{$president_name}</a></dd>
+        </dl>
+        <dl>
+            <dt>대표전화</dt>
+            <dd>{$phone}</dd>
+        </dl>
+        <dl>
+            <dt>주소</dt>
+            <dd>{$mall_addr1}<br />{$mall_addr2}</dd>
+        </dl>
+        <dl>
+            <dt>사업자등록번호</dt>
+            <dd>{$company_regno}</dd>
+        </dl>
+        <dl>
+            <dt>통신판매업신고</dt>
+            <dd>{$network_regno}</dd>
+        </dl>
+        <dl>
+            <dt>개인정보<br />관리책임</dt>
+            <dd><a href="mailto:{$cpo_email}">{$cpo_name}</a></dd>
+        </dl>
+        <dl>
+            <dt>호스팅제공</dt>
+            <dd>심플렉스인터넷(주)</dd>
+        </dl>
+    </div>
+
+    <div class="info">
+        <h3>회사소개 정보</h3>
+        <div class="desc">{$info}</div>
+    </div>
+    <div class="info {$map_display|display}">
+        <h3>회사위치 정보</h3>
+        <span>{$map_image}</span>
+    </div>
+</div>

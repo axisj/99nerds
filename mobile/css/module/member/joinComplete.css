@@ -1,0 +1,15 @@
+.xans-member-joincomplete { margin:14px 7px 0; padding:0 0 29px; font-size:13px; }
+.xans-member-joincomplete > p { margin:10px 12px 0; }
+.xans-member-joincomplete .welcome { padding:14px 14px 14px; border:1px solid #d5d5d5; font-size:13px; text-align:center; background:#fff; }
+.xans-member-joincomplete .welcome p:last-child { margin:10px 0 0; }
+.xans-member-joincomplete .welcome .complete { color:#508bed; font-size:15px; font-weight:bold; }
+.xans-member-joincomplete .welcome .xans-member-benefitjoin { margin:15px 0 0; text-align:left; }
+.xans-member-joincomplete .welcome .xans-member-benefitjoin p { margin:0; font-size:11px; }
+.xans-member-joincomplete ul { margin:7px 0px 0; padding:14px 14px 14px 14px; border:1px solid #d5d5d5; background:#fff; }
+.xans-member-joincomplete li { margin:0 0 14px 0; }
+.xans-member-joincomplete li:last-child { margin-bottom:0; }
+.xans-member-joincomplete li span { display:inline-block; min-width:45px; color:#757575; }
+.xans-member-joincomplete li strong { display:inline-block; margin:0 0 0 20px; color:#353535; font-weight:400; }
+.xans-member-joincomplete li:before { overflow:hidden; content:""; position:relative; left:-10px; display:inline-block; width:3px; height:7px; margin-right:-3px; }
+.xans-member-joincomplete .btnArea.type2 { margin:14px auto 0; }
+.xans-member-joincomplete .memberEmail { color:#333; font-weight:bold; }

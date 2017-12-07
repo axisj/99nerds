@@ -1,0 +1,17 @@
+#contents { padding:0 0 8px; }
+.xans-mall-company { margin:14px 7px 0; font-size:13px; }
+.xans-mall-company .info { margin:7px 0 0; border:1px solid #ccc; background:#fff; }
+.xans-mall-company .info:first-child { margin-top:0; }
+.xans-mall-company .info > h3 { padding:10px 14px 9px; border-bottom:1px solid #f1f1f1; font-weight:normal; font-size:13px; }
+.xans-mall-company .info.xans-layout-footer { display:table; width:100%; }
+.xans-mall-company .info.xans-layout-footer dl { display:table-row; }
+.xans-mall-company .info.xans-layout-footer dl dt,
+.xans-mall-company .info.xans-layout-footer dl dd { display:table-cell; border-top:1px solid #f1f1f1; line-height:1.4em; }
+.xans-mall-company .info.xans-layout-footer dl:first-child dt,
+.xans-mall-company .info.xans-layout-footer dl:first-child dd { border-top:0; }
+.xans-mall-company .info.xans-layout-footer dl dt { padding:12px 14px; width:92px; color:#757575; vertical-align:top; }
+.xans-mall-company .info.xans-layout-footer dl dd { padding:12px 14px 12px 0; width:auto; word-break:break-all; }
+.xans-mall-company .info.xans-layout-footer a { color:#1b1b1b; }
+.xans-mall-company .info .desc { padding:14px; color:#757575; font-size:11px; }
+.xans-mall-company .info > span { display:block; padding:7px 14px; text-align:center; }
+.xans-mall-company .info > span img { max-width:100%; }

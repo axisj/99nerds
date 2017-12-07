@@ -1,0 +1,118 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>마이쿠폰</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div class="mCouponCert" module="myshop_CouponSerial">
+    <!--@css(/css/module/myshop/couponSerial.css)-->
+    <div class="formBox">
+        <h3>쿠폰인증번호 등록하기</h3>
+        <!--
+            $login_page_url = /member/login.html
+        -->
+        <p class="form">
+            {$form.coupon_code}
+            <button type="button" class="btnStrong" onclick="{$action_coupon_submit}">쿠폰번호인증</button>
+        </p>
+        <div class="help">
+            <p>10~35자 일련번호 "-" 제외<br>쇼핑몰에서 발행한 쿠폰번호만 입력해주세요.</p>
+        </div>
+    </div>
+</div>
+
+<div module="myshop_CouponList">
+    <!--@css(/css/module/myshop/couponList.css)-->
+    <!--@js(/js/module/myshop/couponList.js)-->
+    <!--
+        $product_list_url = coupon_product_list.html
+    -->
+    <h3>마이쿠폰 목록(총 {$coupon_count}장)</h3>
+
+    <div class="couponList">
+        <table border="1" summary="" class="{$display_coupon_list|display}">
+            <caption>마이 쿠폰 목록</caption>
+            <colgroup>
+                <col style="width:45%;" />
+                <col style="width:20%" />
+                <col style="width:20%;" />
+                <col style="width:15%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" class="coupon">쿠폰명</th>
+                    <th scope="col" class="discount">할인</th>
+                    <th scope="col" class="mileage">적립</th>
+                    <th scope="col">상세</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="coupon">{$coupon_name}</td>
+                    <td class="discount">{$coupon_discount}</td>
+                    <td class="mileage">{$coupon_mileage}</td>
+                    <td class="layer">
+                        <a href="#none">상세</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="contents" title="쿠폰정보">
+                        <ul>
+                            <li>쿠폰번호 : {$coupon_no}</li>
+                            <li>구매금액 : {$coupon_use_price}</li>
+                            <li><span>결제수단 : </span><span class="payment"> {$coupon_paymethod}</span></li>
+                            <li>할인액(률) : {$coupon_discount}</li>
+                            <li>적립액(률) : {$coupon_mileage}</li>
+                            <li>예치금 : {$coupon_deposit}</li>
+                            <li><span>사용가능 기간 : </span><span class="data"> {$coupon_use_date}</span></li>
+                            <li>쿠폰적용상품 : {$coupon_use_product_icon}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="coupon">{$coupon_name}</td>
+                    <td class="discount">{$coupon_discount}</td>
+                    <td class="mileage">{$coupon_mileage}</td>
+                    <td class="layer">
+                        <a href="#none">상세</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="contents" title="쿠폰정보">
+                        <ul>
+                            <li>쿠폰번호 : {$coupon_no}</li>
+                            <li>구매금액 : {$coupon_use_price}</li>
+                            <li><span>결제수단 : </span><span class="payment"> {$coupon_paymethod}</span></li>
+                            <li>할인액(률) : {$coupon_discount}</li>
+                            <li>적립액(률) : {$coupon_mileage}</li>
+                            <li>예치금 : {$coupon_deposit}</li>
+                            <li><span>사용가능 기간 : </span><span class="data"> {$coupon_use_date}</span></li>
+                            <li>쿠폰적용상품 : {$coupon_use_product_icon}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="empty {$display_no_coupon_list|display}">
+            보유하고 계신 쿠폰 내역이 없습니다.
+        </p>
+
+        <p class="btnArea {$coupon_mileage_display|display}">
+            <button type="button" class="btnStrong" onclick="COUPON.useCoupon()">사용하기</button>
+        </p>
+    </div>
+</div>
+
+<div module="myshop_CouponListPaging" class="paginate typeList">
+    <p class="prev"><a href="{$prev_url}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+    </ol>
+    <p class="next"><a href="{$next_url}"><span>다음 페이지</span></a></p>
+</div>

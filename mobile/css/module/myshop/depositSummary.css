@@ -1,0 +1,17 @@
+.xans-myshop-depositsummary { margin:14px 7px; }
+.xans-myshop-depositsummary h3 { padding:14px; font-size:13px; line-height:1.2em; color:#fff; background:#737781; }
+.xans-myshop-depositsummary ul { background:#fff; border:1px solid #d5d5d5; border-top:0; }
+.xans-myshop-depositsummary li { padding:14px; border-top:1px solid #ececec; font-size:13px; }
+.xans-myshop-depositsummary li:first-child { border-top:0; }
+.xans-myshop-depositsummary li:after { display:block; content:""; clear:both; }
+.xans-myshop-depositsummary li .title { display:inline-block; float:left; width:86px; color:#757575; }
+.xans-myshop-depositsummary li .data { float:right; }
+.xans-myshop-depositsummary li .txtEm { color:#508bed; }
+
+/* 관련 링크 */
+.xans-myshop-deposithistorypackage .navigation { padding:0 7px 14px; border-bottom:1px solid #ccc; }
+.xans-myshop-deposithistorypackage .navigation ul { border:1px solid #d5d5d5; }
+.xans-myshop-deposithistorypackage .navigation li { background:#f9f9f9; border-top:1px solid #ddd; }
+.xans-myshop-deposithistorypackage .navigation li:first-child { border-top:0; }
+.xans-myshop-deposithistorypackage .navigation li a { display:block; position:relative; padding:14px; font-weight:bold; font-size:13px; line-height:1.2em; color:#4a5164; }
+.xans-myshop-deposithistorypackage .navigation li a:after { display:block; content:""; width:20px; height:20px; position:absolute; top:12px; right:12px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") right 50% no-repeat; background-size:20px 20px; transform:rotate(-90deg); -ms-transform:rotate(-90deg); -webkit-transform:rotate(-90deg); }

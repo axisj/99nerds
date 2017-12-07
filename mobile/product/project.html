@@ -1,0 +1,115 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Project_Package">
+    <!--@css(/css/module/product/project_package.css)-->
+    <div id="titleArea" module="product_headcategory">
+        <h2>{$title_text_or_image}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+        </span>
+    </div>
+
+    <!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
+    <ul class="menuCategory">
+        <li module="product_projectcategory" style="display:{$display};">
+            <a href="#{$cate_id}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+        </li>
+    </ul><!-- //참고 -->
+
+    <p class="banner" module="product_headcategory">{$top_image_tag_mobile}</p>
+
+    <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
+    <div module="project_list" class="ec-base-product typeThumb">
+    <!--@js(/js/module/product/listnormal.js)-->
+        <!--
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <h3><span id="{$cate_id}">{$category_name}</span></h3>
+        <div module="project_productlist">
+            <ul class="prdList grid2">
+                <li>
+                    <div class="thumbnail">
+                        <a href="{$link_product_detail}">
+                            <img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                        </a>
+                        <span class="wish">{$list_wish_icon}</span>
+                    </div>
+                    <div class="description">
+                        <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul class="spec">
+                            <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</li>
+                            <li class="price {$product_sale_strike}">{$disp_product_price}<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+                            <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+                            <li class="cart">{$basket_icon}</li>
+                            <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                            <li class="color {$colorchip_display|display}">
+                                <div module="project_Colorchip">
+                                    <span class="chips" style="background-color:{$color};"></span>
+                                    <span class="chips" style="background-color:{$color};"></span>
+                                </div>
+                            </li>
+                            <li class="price {$product_promotion_display|display}">
+                                <div class="discountPeriod {$product_promotion_display|display}">
+                                    <a href="#none" class="btnNormal">할인기간</a>
+                                    <div class="layerDiscountPeriod">
+                                        <div class="inner">
+                                            <strong class="title">할인기간</strong>
+                                            <p class="timeleft">{$product_promotion_date}</p>
+                                            <ul>
+                                                <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                                <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                            </ul>
+                                            <a href="#none" class="btnClose">닫기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail">
+                        <a href="{$link_product_detail}">
+                            <img src="{$image_medium}" alt="{$seo_alt_tag}"><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                        </a>
+                        <span class="wish">{$list_wish_icon}</span>
+                    </div>
+                    <div class="description">
+                        <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul class="spec">
+                            <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</li>
+                            <li class="price {$product_sale_strike}">{$disp_product_price}<span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+                            <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+                            <li class="cart">{$basket_icon}</li>
+                            <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                            <li class="color {$colorchip_display|display}">
+                                <div module="project_Colorchip">
+                                    <span class="chips" style="background-color:{$color};"></span>
+                                    <span class="chips" style="background-color:{$color};"></span>
+                                </div>
+                            </li>
+                            <li class="price {$product_promotion_display|display}">
+                                <div class="discountPeriod {$product_promotion_display|display}">
+                                    <a href="#none" class="btnNormal">할인기간</a>
+                                    <div class="layerDiscountPeriod">
+                                        <div class="inner">
+                                            <strong class="title">할인기간</strong>
+                                            <p class="timeleft">{$product_promotion_date}</p>
+                                            <ul>
+                                                <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                                <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                            </ul>
+                                            <a href="#none" class="btnClose">닫기</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!-- //참고 -->
+</div>

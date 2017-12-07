@@ -1,0 +1,133 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_8">
+    <!--@css(/css/module/board/listPackage_8.css)-->
+    <div id="titleArea" module="board_title_8">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_listheader_8" class="{$list_type_display|display}">
+        <ul>
+            <li class="selected"><a href="/board/gallery/list.html{$param_list}">이미지형 목록</a></li>
+            <li><a href="/board/gallery/list2.html{$param_list}">리스트형 목록</a></li>
+        </ul>
+    </div>
+
+    <div class="{$write_display|display}" module="board_ButtonList_8"><a href="/board/gallery/write.html{$param_write}" class="btnStrong">글쓰기</a></div>
+
+    <div class="boardSort">
+        <span module="board_category_8">{$form.board_category}</span>
+    </div>
+
+    <ul module="board_notice_8">
+        <!--
+            $count = 2
+            $subject_cut = 22
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <li>
+            <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" width="86" /></a></div>
+            <p class="summary">
+                <a href="{$link_board_detail}"><strong class="subject">{$notice_icon} {$subject} <span class="comment">{$comment_count}</span> {$icon_hit} {$icon_new}</strong></a>
+                <span class="{$category_display|display}" title="카테고리">{$category_name}</span>
+                <span class="name" title="작성자">{$writer}</span>
+                <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+            </p>
+        </li>
+        <li>
+            <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" width="86" /></a></div>
+            <p class="summary">
+                <a href="{$link_board_detail}"><strong class="subject">{$notice_icon} {$subject} <span class="comment">{$comment_count}</span> {$icon_hit} {$icon_new}</strong></a>
+                <span class="{$category_display|display}" title="카테고리">{$category_name}</span>
+                <span class="name" title="작성자">{$writer}</span>
+                <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+            </p>
+        </li>
+    </ul>
+
+    <ul module="board_fixed_8">
+        <!--
+            $count = 2
+            $subject_cut = 22
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <li>
+            <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" width="86"  /></a></div>
+            <p class="summary">
+                <a href="{$link_board_detail}"><strong class="subject">{$fixed_icon} {$subject} <span class="comment">{$comment_count}</span> {$icon_hit} {$icon_new}</strong></a>
+                <span class="{$category_display|display}" title="카테고리">{$category_name}</span>
+                <span class="name" title="작성자">{$writer}</span>
+                <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+            </p>
+        </li>
+        <li>
+            <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" width="86" /></a></div>
+            <p class="summary">
+                <a href="{$link_board_detail}"><strong class="subject">{$fixed_icon} {$subject} <span class="comment">{$comment_count}</span> {$icon_hit} {$icon_new}</strong></a>
+                <span class="{$category_display|display}" title="카테고리">{$category_name}</span>
+                <span class="name" title="작성자">{$writer}</span>
+                <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+            </p>
+        </li>
+    </ul>
+
+    <div module="board_list_8">
+        <!--
+            $count = 12
+            $subject_cut = 22
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <ul class="thumbType grid3">
+            <li>
+                <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" /></a></div>
+                <div class="summary">
+                    <a href="{$link_board_detail}" class="subject">
+                        {$icon_mobile} {$subject}
+                        <span class="comment">{$comment_count}</span>
+                    </a>
+                    <p class="name" title="작성자">{$writer}</p>
+                    <p class="date" title="작성일">{$write_date}</p>
+                </div>
+            </li>
+            <li>
+                <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/board/img_no.png'" alt="" /></a></div>
+                <div class="summary">
+                    <a href="{$link_board_detail}" class="subject">
+                        {$icon_mobile} {$subject}
+                        <span class="comment">{$comment_count}</span>
+                    </a>
+                    <p class="name" title="작성자">{$writer}</p>
+                    <p class="date" title="작성일">{$write_date}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p module="board_empty_8" class="empty {$empty_display|display}">{$empty_message}</p>
+</div>
+
+<div module="board_paging_8" class="paginate typeList">
+    <!--
+        $count = 5
+    -->
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>
+
+<div module="board_search_8">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <div class="category">{$form.search_date} {$form.search_key}</div>
+        <div class="keyword">{$form.search} <button class="btnStrong" onclick="{$action_search}">검색</button></div>
+    </fieldset>
+</div>

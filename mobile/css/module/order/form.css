@@ -1,0 +1,245 @@
+/* 주문서 토글 */
+.xans-order-form .toggleArea { position:relative; margin:7px 0 0; font-size:12px; }
+.xans-order-form .toggleArea > .title,
+.xans-order-form .toggleArea .toggleArea > .title { position:relative; padding:14px 34px 14px 14px; cursor:pointer; line-height:1.3em; -webkit-tap-highlight-color: rgba(255,255,255,0); }
+.xans-order-form .toggleArea > .title { background-color:#737782; color:#fff; }
+.xans-order-form .toggleArea > .title:after,
+.xans-order-form .toggleArea .toggleArea > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_white.png"); }
+.xans-order-form .toggleArea.selected > .title:after,
+.xans-order-form .toggleArea .toggleArea.selected > .title:after { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg); }
+.xans-order-form .toggleArea.disable > .title:after,
+.xans-order-form .toggleArea .toggleArea.disable > .title:after { background-image:none !important; }
+.xans-order-form .toggleArea > .title h2,
+.xans-order-form .toggleArea .toggleArea > .title h2 { display:inline-block; font-size:13px; }
+.xans-order-form .toggleArea > .contents,
+.xans-order-form .toggleArea .toggleArea > .contents { display:none; box-sizing:border-box; border:1px solid #d5d5d5; border-top:0; border-bottom:0; }
+.xans-order-form .toggleArea.selected > .contents, .xans-order-form .toggleArea.disable > .contents,
+.xans-order-form .toggleArea .toggleArea.selected > .contents,
+.xans-order-form .toggleArea .toggleArea.disable > .contents { display:block; }
+.xans-order-form .toggleArea .orderSheet .contents { border:0; }
+.xans-order-form .priceArea .toggleArea > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }
+.xans-order-form .toggleArea.type2 { margin:0; }
+.xans-order-form .toggleArea.type2 > .title { position:relative; margin:0; padding:0; cursor:pointer; font-weight:normal; background-color:#f9f9f9; color:#1b1b1b; -webkit-tap-highlight-color: rgba(255,255,255,0); }
+.xans-order-form .toggleArea.type2 > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:20px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }
+.xans-order-form .toggleArea.type2 .contents { margin:14px 0 0; }
+.xans-order-form .toggleArea.type2.selected > .contents,
+.xans-order-form .toggleArea.type2.disable > .contents { display:block; border-bottom:0; }
+
+/* 타이틀 */
+.xans-order-form .title { padding:21px 34px 14px 14px; background-color:#737782; color:#fff; }
+.xans-order-form .title h3,
+.xans-order-form .title p { display:inline; font-size:13px; }
+.xans-order-form .orderArea h3 { padding:0 0 0 14px; line-height:43px; font-size:13px; color:#508bed; border-bottom:1px solid #d5d5d5; background-color:#f0f0f0; }
+.xans-order-form .recipient h4,
+.xans-order-form .receipt h4 { padding:0 0 0 14px; line-height:43px; border-bottom:1px solid #d5d5d5; font-size:13px; color:#508bed; background-color:#f0f0f0; }
+
+/* 상품정보 */
+.xans-order-form { margin:14px 7px 0; }
+.xans-order-form .toggleArea .contents.prdArea { border-bottom:1px solid #d5d5d5; }
+.xans-order-form .orderArea .prdInfo { padding:7px 14px 0; border-bottom:1px solid #d5d5d5; background-color:#fff; }
+.xans-order-form .orderArea .description { position:relative; min-height:90px; padding:7px 0 0 90px; }
+.xans-order-form .orderArea .description .prdImg { position:absolute; left:0; top:7px; z-index:10; width:73px; border:1px solid #d5d5d5; }
+.xans-order-form .orderArea .description .prdImg img { width:100%; }
+.xans-order-form .orderArea .description .prdName { display:block; margin:0 0 14px; font-size:13px; }
+.xans-order-form .orderArea .description .info li { margin:0 0 7px; font-size:11px; color:#757575; }
+.xans-order-form .orderArea .description .info li.mileage img { margin:0 0 2px; vertical-align:top; }
+.xans-order-form .orderArea .description .info li.price { padding:7px 0 7px; font-size:13px; color:#000; }
+.xans-order-form .orderArea .description .info li.price span > span { font-size:11px; }
+.xans-order-form .orderArea .description .quantity { position:relative; display:inline-block; margin:0 0 0 10px; padding:0 0 0 14px; font-size:13px; }
+.xans-order-form .orderArea .description .quantity:before { display:block; content:""; position:absolute; top:1px; left:0; width:1px; height:13px; background:#989899; }
+
+.xans-order-form .orderArea .description .price span.discount { display:block; text-decoration:line-through; }
+.xans-order-form .orderArea .description .price span.discount strong { font-size:13px; }
+.xans-order-form .orderArea .description .price span.discount span { font-weight:normal; font-size:11px; }
+
+.xans-order-form .orderArea .option { padding:14px 0; border-top:1px solid #ececec; }
+.xans-order-form .orderArea .option .file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#80aeef; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_attach.png") no-repeat 0 0; background-size:8px 13px; }
+.xans-order-form .orderArea .prdTotal { margin:0 -14px; padding:14px 14px; font-size:13px; text-align:right; background-color:#f1f1f1; }
+.xans-order-form .orderArea .prdTotal span { font-size:11px; }
+.xans-order-form .orderArea .totalPrice { padding:14px 0px 14px 14px; border-bottom:1px solid #d5d5d5; font-size:13px; line-height:18px; background-color:#f9f9f9; }
+.xans-order-form .orderArea .totalPrice .txtTitle { display:block; font-size:13px; font-weight:bold; color:#1b1b1b; border:0; }
+.xans-order-form .orderArea .totalPrice span { font-weight:normal; font-size:11px; }
+.xans-order-form .orderArea .totalPrice span.sale { font-size:13px; }
+.xans-order-form .button { padding:7px 14px; margin:0; }
+.xans-order-form .button a { font-size:11px; }
+
+/* 리스트 */
+.xans-order-form .boardWrite { background-color:#fff; }
+.xans-order-form .boardWrite th { width:86px; padding:7px 0 7px 14px; border-bottom:1px solid #d5d5d5; font-size:13px; font-weight:normal; text-align:left; color:#757575; }
+.xans-order-form .boardWrite td { padding:7px 14px 7px 0; border-bottom:1px solid #d5d5d5; font-size:13px; word-break:break-all; }
+.xans-order-form .boardWrite td.name {  font-size:11px; color:#757575; padding:7px 14px 3px 0; }
+.xans-order-form .boardWrite td.zipcode { font-size:11px; color:#757575; padding:7px 14px 2px 0; }
+.xans-order-form .boardWrite td.zipcode span.zipcodeLabel label { line-height:16px; }
+.xans-order-form .boardWrite .recent { overflow:hidden; margin:5px 0 0 14px; }
+.xans-order-form .boardWrite .recent .name { font-size:14px; }
+.xans-order-form .boardWrite .recent .contact { margin:0 0 0 -10px; font-size:0; line-height:0; }
+.xans-order-form .boardWrite .recent .contact dt { display:inline; overflow:hidden; white-space:nowrap; text-indent:120%; left:-120%; }
+.xans-order-form .boardWrite .recent .contact dd { display:inline-block; vertical-align:middle; font-size:13px; line-height:18px; }
+.xans-order-form .boardWrite .recent .contact dd:before { display:inline-block; content:"|"; margin:-3px 4px 0; }
+.xans-order-form .boardWrite .recent .btnArea { margin-bottom:5px; }
+.xans-order-form .boardWrite .list { margin:7px 0 0; }
+.xans-order-form .boardWrite .list li > button { margin:7px 0 0; }
+.xans-order-form .boardWrite .payment span { display:inline-block; margin:0 14px 5px 0; }
+.xans-order-form .boardWrite .payment label img { margin:0 1px 0 0; }
+.xans-order-form .boardWrite .payment img[alt="help"] { width:13px; margin:0; }
+.xans-order-form .boardWrite .payment li { margin:3px 0 0; }
+.xans-order-form .boardWrite .payment li strong { color:#757575; font-weight:normal; font-size:13px; }
+.xans-order-form .boardWrite ul li.startDay { font-size:11px; color:#757575; }
+.xans-order-form .boardWrite .help { margin:0; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") 14px 15px no-repeat; background-size:14px; }
+.xans-order-form .boardWrite .help p { margin:0; padding:7px 0 7px 34px; font-size:11px; }
+.xans-order-form .boardWrite .cashReceipt strong { display:block; margin:4px 0; font-weight:normal; color:#757575; }
+.xans-order-form .boardWrite .cashReceipt .grid { margin:2px 0 0; font-size:11px; color:#757575; }
+.xans-order-form .boardWrite.discount th { padding:14px 0 14px 14px; width:68px; vertical-align:top; }
+.xans-order-form .boardWrite.discount td { padding:14px 10px 14px 0; }
+.xans-order-form .boardWrite.discount p { padding:14px 0 0; }
+.xans-order-form .boardWrite.discount strong { color:#508bed; font-weight:normal; }
+.xans-order-form .boardWrite.discount button,
+.xans-order-form .boardWrite.discount a { margin:0 7px 0 0; }
+.xans-order-form .boardWrite.discount #input_mile,
+.xans-order-form .boardWrite.discount #input_deposit { width:90px; }
+.xans-order-form .boardWrite.discount .eTip { background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") right center no-repeat; background-size:14px 15px; letter-spacing:normal; padding:0 0 0 5px; margin:0; border:0; letter-spacing:normal; word-spacing:normal; text-transform:none; white-space:nowrap; overflow:hidden; width:14px; height:15px; text-indent:150%; cursor:pointer; }
+
+.xans-order-form .boardList { background-color:#fff; word-break:break-all; }
+.xans-order-form .boardList th { width:86px; padding:9px 0 9px 28px; border-bottom:1px solid #d5d5d5; text-align:left; font-size:13px; font-weight:normal; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_bullet.png") 14px center no-repeat; background-size:7px 7px; }
+.xans-order-form .boardList td { padding:9px 34px 9px 0; border-bottom:1px solid #d5d5d5; font-size:13px; text-align:right; }
+
+.xans-order-form .priceArea { margin:7px 0 0; }
+.xans-order-form .priceArea .total { overflow:hidden; padding:14px 0 14px 14px; font-size:13px; font-weight:bold; color:#fff; background-color:#4a5164; }
+.xans-order-form .priceArea .title { overflow:hidden; margin:-7px 0 0; border:1px solid #d5d5d5; border-top:0; color:#508bed; background-color:#f0f0f0; }
+.xans-order-form .priceArea .title h3 { float:left; font-size:13px; font-weight:normal; }
+.xans-order-form .priceArea .title strong,
+.xans-order-form .priceArea .title span { word-break:break-all; }
+.xans-order-form .priceArea .title p { float:right; color:#000; text-align:right; }
+.xans-order-form .priceArea .title:after { content:""; display:block; clear:both; }
+.xans-order-form .priceArea .price { float:right; color:#000; }
+.xans-order-form .priceArea .paymentPrice { float:right; padding:0 36px 0 0; text-align:right; }
+.xans-order-form .priceArea .paymentPrice strong,
+.xans-order-form .priceArea .paymentPrice span { display:inline-block; word-break:break-all; }
+
+.xans-order-form .receipt .methods label { padding:0 15px 0 0; }
+.xans-order-form .receipt .cash td > div strong,
+.xans-order-form .receipt .grid { display:block; margin:7px 0 7px; color:#757575; font-weight:normal; }
+.xans-order-form .receipt .grid { font-size:11px; }
+.xans-order-form .receipt ul.info { padding:7px 0 0; border-bottom:1px solid #d5d5d5; }
+.xans-order-form .receipt ul.info li { margin:0; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") 14px 3px no-repeat; background-size:14px; }
+.xans-order-form .receipt ul.info li { padding:0 0 7px 34px; font-size:11px; }
+
+/* joinArea */
+.xans-order-form .joinArea label { min-height:0; line-height:18px; }
+.xans-order-form .joinArea .agreeJoin { display:table; width:100%; height:32px; box-sizing:border-box; padding:14px 14px 11px; border-bottom:1px solid #d5d5d5; }
+.xans-order-form .joinArea .agreeJoin .fChk { display:table-cell; position:relative; width:32px; height:32px; cursor:pointer; vertical-align:top; }
+.xans-order-form .joinArea .agreeJoin label { display:table-cell; padding:0 0 0 14px; font-size:13px; color:#508aeb; vertical-align:middle; }
+.xans-order-form .joinArea .agreeJoin input { position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; opacity:0; cursor:pointer; }
+.xans-order-form .joinArea .agreeJoin .checkbox { position:absolute; top:0; left:0; width:100%; height:100%; background-image:url("//img.echosting.cafe24.com/skin/mobile/order/bg_join_check.png"); background-repeat:no-repeat; background-size:65px auto; }
+.xans-order-form .joinArea .agreeJoin input:checked + .checkbox { background-position:-34px 0; }
+.xans-order-form .joinArea .guide { padding:15px 15px 7px; border-bottom:1px solid #d5d5d5; background:#fff; }
+.xans-order-form .joinArea .guide .list li { padding:0 0 10px 20px; font-size:11px; line-height:16px; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") no-repeat; background-size:14px auto; }
+.xans-order-form .joinArea input[title="id"],
+.xans-order-form .joinArea input[title="email"] { width:105px; margin:0 5px 0 0; }
+.xans-order-form .joinArea .grid { display:block; margin:10px 0 7px; font-size:11px; line-height:16px; color:#757575; }
+.xans-order-form .joinArea .grid.txtWarn { color:#f45b55; }
+.xans-order-form .joinArea .agreeRequired { position:relative; padding:2px 0 0 33px; }
+.xans-order-form .joinArea .agreeRequired input[type="checkbox"] { position:absolute; top:5px; left:13px; }
+.xans-order-form .joinArea .agreeMarketing { padding:10px 0 10px 13px; }
+.xans-order-form .joinArea .agreeMarketing .gLabel { display:inline-block; }
+.xans-order-form .joinArea .agreeMarketing .gLabel input[type="checkbox"] { margin:0 7px 0 10px; }
+
+/* 이용약관 */
+.xans-order-form .agreement { margin:7px 0 0; border:1px solid #d5d5d5; border-top:0; background-color:#fff; }
+.xans-order-form .agreement p label { display:inline; line-height:1.6; }
+.xans-order-form .agreement li { position:relative; padding:9px 80px 9px 9px; border-top:1px solid #d5d5d5; line-height:18px; font-size:11px; }
+.xans-order-form .agreement button.btnAgree { padding:0; margin:0; position:absolute; top:13px; right:14px; text-decoration:underline; color:#757575; background:transparent; border:0; font-size:11px; cursor:pointer; }
+.xans-order-form .sign { padding:5px 0 5px 14px; border:1px solid #d5d5d5; font-size:11px; font-weight:bold; color:#508bed; background-color:#fff; }
+.xans-order-form .payInfo { font-size:11px; margin:0 0 7px; }
+.xans-order-form .payInfo li { margin:0; padding:7px 14px 7px 34px; color:#757575; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") 14px 7px no-repeat; background-size:14px; }
+
+/* 하단고정 주문 버튼 */
+.xans-order-form .fixed .state { overflow:hidden; margin:0 auto; font-size:11px; }
+.xans-order-form .fixed .state .count { float:left; }
+.xans-order-form .fixed .state .price { float:right; }
+.xans-order-form .fixed { position:fixed; z-index:120; left:0; bottom:0; width:100%; margin:0; padding:7px; box-sizing:border-box; background-color:#dbdbdb;
+    -webkit-box-shadow: 0px -4px 4px 0px rgba(143, 143, 143, 0.5);
+    -moz-box-shadow: 0px -4px 4px 0px rgba(143, 143, 143, 0.5);
+    box-shadow: 0px -4px 4px 0px rgba(143, 143, 143, 0.5);
+ }
+.xans-order-form .fixed .state #checked_order_price strong { font-weight:normal; }
+.xans-order-form .fixed .state #checked_order_count strong,
+.xans-order-form .fixed .state #checked_order_price em { color:#508bed; font-weight:bold; }
+.xans-order-form .fixed .btnArea { margin:0 auto; }
+
+/* 도움말 툴팁 */
+.xans-order-form .boardWrite .mTooltip { position:relative; display:inline-block; width:13px; height:11px; vertical-align:top; }
+.xans-order-form .boardWrite .mTooltip h3 { font-size:15px; color:#000; font-weight:bold; line-height:43px; }
+.xans-order-form .boardWrite .mTooltip ul li { font-size:13px; }
+.xans-order-form .boardWrite .tooltip { width:260px; display:none; position:absolute; left:-40px; top:20px; padding:0 14px 14px 14px; text-align:left; letter-spacing:normal; border:1px solid #ccc; background-color:#fff; border-radius:2px; }
+.xans-order-form .boardWrite .close { position:absolute; right:7px; top:14px; overflow:hidden; width:14px; height:14px; margin:0; text-indent:150%; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_gray.png") no-repeat; background-size:14px 14px; border:0; letter-spacing:normal; word-spacing:normal; text-transform:none; white-space:nowrap; }
+.xans-order-form .boardWrite .mTooltip.show { z-index:80; }
+
+/* 결제수단 */
+.xans-order-form .boardWrite .nextpay { padding:7px 14px; border-bottom:1px solid #d5d5d5; font-size:12px; color:#008bcc; }
+
+/* INPUT SIZE */
+.xans-order-form #ozipcode1,
+.xans-order-form #rzipcode1 { width:55px; text-align:center; }
+.xans-order-form #oaddr1,
+.xans-order-form #oaddr2,
+.xans-order-form #raddr1,
+.xans-order-form #raddr2,
+.xans-order-form #faddress,
+.xans-order-form #faddress2,
+.xans-order-form #si_gun_dosi,
+.xans-order-form #ju_do { width:95%; margin:3px 0 0; }
+
+.xans-order-form #oemail1 { max-width:40%; margin:0 4px 3px 0; }
+.xans-order-form #oemail2 { max-width:45%; margin:0 4px 3px 4px; }
+.xans-order-form #oemail3 { width:100%; height:29px; margin:0 4px 3px 0; }
+
+.xans-order-form #ophone1_1,
+.xans-order-form #ophone2_1,
+.xans-order-form #rphone1_1,
+.xans-order-form #rphone2_1,
+.xans-order-form #cashreceipt_user_mobile1 { width:33%; }
+.xans-order-form #ophone1_2,
+.xans-order-form #ophone1_3,
+.xans-order-form #ophone2_2,
+.xans-order-form #ophone2_3,
+.xans-order-form #rphone1_2,
+.xans-order-form #rphone1_3,
+.xans-order-form #rphone2_2,
+.xans-order-form #rphone2_3,
+.xans-order-form #cashreceipt_user_mobile2,
+.xans-order-form #cashreceipt_user_mobile3 { width:25%; margin:0 4px; }
+
+.xans-order-form #fphone1_ex1,
+.xans-order-form #fphone2_ex1 { width:50%; }
+.xans-order-form #fphone1_ex2,
+.xans-order-form #fphone2_ex2 { width:43%; }
+
+.xans-order-form #hdateY,
+.xans-order-form #fhdateY { width:76px; margin:7px 7px 7px 0; }
+.xans-order-form #hdateM,
+.xans-order-form #fhdateM { width:65px; margin:7px 7px 7px 4px; }
+.xans-order-form #hdateD,
+.xans-order-form #fhdateD { width:65px; margin:7px 7px 7px 0; }
+.xans-order-form #hdateW,
+.xans-order-form #fhdateW { width:65px; margin:0 7px 0 4px; }
+
+.xans-order-form #omessage,
+.xans-order-form #fmessage,
+.xans-order-form #delivery_info_offer_content,
+.xans-order-form #fdelivery_info_offer_content,
+.xans-order-form #question { width:95%; height:50px; }
+.xans-order-form #order_password,
+.xans-order-form #order_password_confirm,
+.xans-order-form #question_passwd { width:120px; }
+
+.xans-order-form #bankaccount { width:66%; }
+.xans-order-form #total_price { width:90px; padding-top:4px; }
+.xans-order-form #pname,
+.xans-order-form #allat_account_nm { width:110px; }
+.xans-order-form .xans-order-ordadd input.inputTypeText { width:100%; }
+
+.xans-order-form #tax_request_email1 { margin:0 4px 3px 0; max-width:40%; }
+.xans-order-form #tax_request_email2 { margin:0 4px 3px 4px; max-width:45%; }
+.xans-order-form #tax_request_email3 { margin:0 4px 3px 0; width:100%; height:29px; }
+.xans-order-form #tax_request_address1, .xans-order-form #tax_request_address2 { margin:4px 0 0; }

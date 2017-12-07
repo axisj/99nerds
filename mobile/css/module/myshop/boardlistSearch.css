@@ -1,0 +1,5 @@
+.xans-myshop-boardlistsearch { margin:0 0 29px; padding:14px; border-top:1px solid #ececec; border-bottom:1px solid #ececec; text-align:left; }
+.xans-myshop-boardlistsearch .keyword { position:relative; margin:7px 0 0; padding:0 58px 0 0 }
+.xans-myshop-boardlistsearch input[type="text"] { width:100%; }
+.xans-myshop-boardlistsearch select { width:100%; }
+.xans-myshop-boardlistsearch .btnStrong { position:absolute; right:7px; top:0; }

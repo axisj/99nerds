@@ -1,0 +1,18 @@
+.xans-board-listsgroup-4 h3 { padding:14px; border-top:1px solid #d5d5d5; background:#f1f1f1; }
+
+/* 게시글 */
+.xans-board-listsgroup-4 { margin:0 0 29px; font-size:12px; background:#fff; }
+.xans-board-listsgroup-4 li { position:relative; overflow:hidden; padding:10px 10px; color:#a1a1a1; border-bottom:1px solid #d5d5d5; }
+.xans-board-listsgroup-4 .descriptions { position:relative; padding:0 7px; }
+.xans-board-listsgroup-4 .descriptions a { display:block; color:#757575; }
+
+.xans-board-listsgroup-4 .descriptions > strong { position:relative; padding:0 3px 0 6px; font-weight:normal; }
+.xans-board-listsgroup-4 .descriptions > a + strong { padding-left:0; }
+.xans-board-listsgroup-4 .descriptions > strong:before { display:block; content:""; position:absolute; top:1px; left:0; width:1px; height:11px; background:#d6d6d6; }
+.xans-board-listsgroup-4 .descriptions > a + strong:before { display:none; padding-left:0; }
+
+.xans-board-listsgroup-4 .descriptions .name { display:block; margin:5px 0 0; color:#1b1b1b; }
+.xans-board-listsgroup-4 .descriptions .point img { width:auto; height:11px; }
+.xans-board-listsgroup-4 a .summary { display:block; margin:0 0 10px; color:#1b1b1b; font-size:14px; }
+.xans-board-listsgroup-4 a .summary span { color:#508bed; }
+.xans-board-listsgroup-4 a .summary img { margin:0 4px 0 0; }

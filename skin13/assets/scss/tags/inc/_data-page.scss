@@ -1,0 +1,12 @@
+[data-page] {
+  min-height: 100px;
+
+  @media #{$medium-and-up} { // 992
+
+  }
+
+  @media #{$large-and-up} { // 1200
+
+  }
+
+}

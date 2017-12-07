@@ -1,0 +1,18 @@
+.displaynone {
+    display: none !important;
+}
+
+.xans-bannermanage2-mobile {
+    width: 100%;
+    padding: 0;
+    background: #fff;
+}
+
+.xans-bannermanage2-mobile li {
+    margin: 0 0 5px;
+}
+
+.xans-bannermanage2-mobile li img {
+    width: 100%;
+    border: 1px solid #ddd;
+}

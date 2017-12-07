@@ -1,0 +1,78 @@
+<div module="MyShop_OrderHistoryExchangeproduct">
+   <div class="title">
+       <h3>교환 상품</h3>
+   </div>
+   <div id="{$selected_product_div_id}" class="{$display_selected_product|display}">
+       <div  module="Myshop_selectedProduct" class="orderList">
+           <div class="product">
+               <div class="description">
+                   <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                   <strong class="name"><a href="/product/detail.html{$param_product}">{$name}</a></strong>
+                   <ul class="info">
+                       <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="ref {$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div>
+                   </ul>
+                   <div class="quantity">
+                       <img class="QuantityDown" alt="down" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29"onclick="{$out_shortcut}">
+                       {$form.quantity}
+                       <img class="QuantityUp" alt="up" src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" onclick="{$add_shortcut}">
+                   </div>
+               </div>
+           </div>
+           <ul class="optionList" module="Myshop_optionAll">
+               <li class="{$option_list_display|display}">
+                   <p class="name">
+                       <span class="{$product_name_display|display}">{$product_name} : </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+                       <span class="txtEm {$popup_option_change_display|display}">옵션을 선택하세요</span>
+                       <span class="gRight">
+                           <a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                           <a href="#none" onclick="{$action_option_change}" class="btnBasic {$popup_option_change_display|display}">옵션선택</a>
+                       </span>
+                   </p>
+                   <!-- 참고 : 옵션변경 레이어 -->
+                   <div class="layerOptionModify" id="{$option_modify_layer_id}" style="display:none;">
+                       <ul module="Myshop_optionList">
+                           <li><span>{$option_name}</span>{$form.option_value}</li>
+                           <li><span>{$option_name}</span>{$form.option_value}</li>
+                       </ul>
+                       <ul module="Myshop_optionAddList">
+                           <li><span>{$option_name}</span> {$form.option_value}</li>
+                           <li><span>{$option_name}</span> {$form.option_value}</li>
+                       </ul>
+                       <div class="button">
+                           <a href="#none" class="btnBasic" onclick="{$action_option_modify}">변경</a>
+                           <a href="#none" class="btnNormal" onclick="$('.layerOptionModify').hide();">취소</a>
+                       </div>
+                   </div><!-- //참고 -->
+               </li>
+               <li class="{$option_list_display|display}">
+                   <p class="name">
+                       <span class="{$product_name_display|display}">{$product_name} : </span>{$option_str} <span class="{$qty_display|display}">({$qty}개)</span>
+                       <span class="txtEm {$popup_option_change_display|display}">옵션을 선택하세요</span>
+                       <span class="gRight">
+                           <a href="#none" class="btnBasic {$option_change_display|display}" onclick="{$action_option_change}">옵션변경</a>
+                           <a href="#none" onclick="{$action_option_change}" class="btnBasic {$popup_option_change_display|display}">옵션선택</a>
+                       </span>
+                   </p>
+                   <!-- 참고 : 옵션변경 레이어 -->
+                   <div class="layerOptionModify" id="{$option_modify_layer_id}" style="display:none;">
+                       <ul module="Myshop_optionList">
+                           <li><span>{$option_name}</span>{$form.option_value}</li>
+                           <li><span>{$option_name}</span>{$form.option_value}</li>
+                       </ul>
+                       <ul module="Myshop_optionAddList">
+                           <li><span>{$option_name}</span> {$form.option_value}</li>
+                           <li><span>{$option_name}</span> {$form.option_value}</li>
+                       </ul>
+                       <div class="button">
+                           <a href="#none" class="btnBasic" onclick="{$action_option_modify}">변경</a>
+                           <a href="#none" class="btnNormal" onclick="$('.layerOptionModify').hide();">취소</a>
+                       </div>
+                   </div><!-- //참고 -->
+               </li>
+           </ul>
+           <div class="total">합계 : <strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong><span  class="{$sum_price_display|display}">{$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</span></div>
+           <div class="button"><a href="#none"  onclick="{$action_move_item}" class="btnNormal">삭제</a></div>
+       </div>
+   </div>
+   <p class="message" id="{$empty_message}">선택된 교환상품이 없습니다.<br> 교환상품 선택없이 교환신청은 가능합니다.</p>
+</div>

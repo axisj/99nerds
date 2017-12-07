@@ -1,0 +1,8 @@
+.adminFail { margin:43px 14px 0; padding:0 0 29px; text-align:center; }
+.adminFail .fail { margin:0 auto 0; padding:0px 0px 10px; color:#333; font-size:13px; text-align:center; }
+.adminFail .fail .failCheck img { width:37px; }
+.adminFail .fail p:last-child { margin:14px 0 0; }
+.adminFail .fail span { display:inline-block; margin:28px 0 0; color:#508bed; font-size:17px; font-weight:700; }
+.adminFail .fail strong { font-weight:700; }
+.adminFail .help { margin:14px 0 14px; padding:0 0 0 22px; color:#757575; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_help.png") 0 0 no-repeat; background-size:14px; }
+.adminFail .help p { margin:0 0 8px; }

@@ -1,0 +1,31 @@
+<style type="text/css">
+    .xans-member-certification { z-index:100; position:fixed; top:50px; left:50%; width:306px; margin:0 0 0 -153px; border-radius:5px; letter-spacing:-1px; background:#5a7ec0;
+        -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    0 0 10px 2px rgba(0, 0, 0, 0.75);
+        box-shadow:         0 0 10px 2px rgba(0, 0, 0, 0.75);
+    }
+    .xans-member-certification h2 { overflow:hidden; text-indent:150%; white-space:nowrap; font-size:0; line-height:0; }
+    .xans-member-certification .content { padding:29px 13px; line-height:1.5em; color:#fff; }
+    .xans-member-certification .content > h3 { font-size:20px; }
+    .xans-member-certification .content > h4 { padding:14px 0 4px; font-size:14px; }
+    .xans-member-certification .content > p { padding:10px 0 0 0; }
+    .xans-member-certification .content .txtEm { color:#ffe746; }
+    .xans-member-certification .content .btnStrong { display:inline-block; border-bottom-color:#3b4150; margin:14px 0 0; width:100%; text-align:center; font-weight:normal; }
+    .xans-member-certification .footer { position:relative; padding:0 7px; border-radius:0 0 5px 5px; background:#f9f9f9; }
+    .xans-member-certification .footer .btnClose { position:absolute; top:7px; right:7px; padding:0 19px 0 0; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_close.png") no-repeat 100% 2px; background-size:13px 13px; }
+</style>
+
+<div module="member_certification">
+    <h2>본인인증 알림</h2>
+    <div class="content">
+        <h3><span class="txtEm">회원 본인인증</span>을 해주세요!</h3>
+        <h4><span class="txtEm">{$member_name}</span> 회원님, 알고 계셨나요?</h4>
+        <p>2013년 정보통신망법 개정에 따라 주민등록번호를 이용한 실명인증 대신 다른 본인인증 수단을 제공하고 있습니다.</p>
+        <p>원활한 이벤트 참여 및 아이디/비밀번호 찾기를 위하여 본인인증을 완료하여 주시기 바랍니다.</p>
+        <a href="/member/modify.html" class="btnStrong">본인인증 하러가기</a>
+    </div>
+    <div class="footer">
+        <input type="checkbox" id="{$checkbox_today_open}"><label for="{$checkbox_today_open}">오늘 하루 열지 않음</label>
+        <a href="#none" onclick="$('.xans-member-certification').hide();" class="btnClose">닫기</a>
+    </div>
+</div>

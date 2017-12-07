@@ -1,0 +1,20 @@
+#prdInfo { display:none; }
+.xans-product-detaildesign { padding:14px 7px 7px; background:#f1f1f1; }
+.xans-product-detaildesign > table { font-size:11px; word-wrap:break-word; border:1px solid #d5d5d5; }
+.xans-product-detaildesign > table th { color:#111; background-color:#f5f5f6; }
+.xans-product-detaildesign > table thead th { padding:8px 0; text-align:center; }
+.xans-product-detaildesign > table thead tr > th:first-child { border-left:0; }
+.xans-product-detaildesign > table tbody tr:first-child th,
+.xans-product-detaildesign > table tbody tr:first-child td { border-top:0; }
+.xans-product-detaildesign > table tbody th,
+.xans-product-detaildesign > table tbody td { padding:7px 3px 7px 7px; background:#fff; border-top:1px solid #ececec; }
+.xans-product-detaildesign > table tbody th { color:#757575; text-align:left; }
+.xans-product-detaildesign > table tbody td { padding-left:0; }
+.xans-product-detaildesign > table input#quantity,
+.xans-product-detaildesign > table img.QuantityUp,
+.xans-product-detaildesign > table img.QuantityDown { display:none; }
+.xans-product-detaildesign > table img#qrcode { width:70px; margin-right:-20px; margin-top:15px; }
+.xans-product-detaildesign > table .discount { display:block; font-size:11px; color:#1c1c1c; }
+.xans-product-detaildesign > table .period { display:block; }
+.xans-product-detaildesign > table #delivery_cost_prepaid { display:block; }
+.xans-product-detaildesign > table #btn_email_restock img { width:auto; height:26px; }

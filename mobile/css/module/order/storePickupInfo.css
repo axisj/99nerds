@@ -1,0 +1,14 @@
+#popup { min-width:320px; }
+#popup div.wrap { background:#f1f1f1; }
+
+.eToggle dt { position:relative; margin-top:-1px; padding:14px 0 14px 14px; line-height:1.4em; font-size:13px; cursor:pointer; border:1px solid #d5d5d5; background-color:#fff; }
+.eToggle dt:after { content:""; position:absolute; right:10px; top:0; width:20px; height:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") no-repeat 0 center; background-size:20px 20px; }
+.eToggle dt.selected:after { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform:rotate(180deg); background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png"); }
+.eToggle dd { display:none; padding:0; font-size:12px; line-height:1.5; border:1px solid #d5d5d5; border-top:0; background-color:#f5f5f6; }
+.eToggle dd.selected { display:block; }
+    .eToggle dd li { overflow:hidden; padding:12px 14px 12px 109px; border-top:1px solid #ececec; line-height:1.4em; background:#fff; }
+    .eToggle dd li:first-child { border-top:0; }
+    .eToggle dd li .btnTel { margin:-6px 0 0 20px; padding:7px 10px 7px 28px; border:1px solid #d5d5d5; border-radius:2px; background:#f1f1f1 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_tel.png") no-repeat 10px center; background-size:8px 13px; }
+    .eToggle dd li strong { float:left; margin-left:-95px; color:#757575; font-weight:normal; }
+    .eToggle dd li.map { overflow:hidden; padding:0; border-top:1px solid #ececec; line-height:1.4em; background:#fff; }
+    .eToggle dd li.map img { max-width:100%; }

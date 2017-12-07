@@ -1,0 +1,88 @@
+
+/* 타이틀 */
+#titleArea { position:relative; border-bottom:1px solid #c2c2c2; background-color:#fff; }
+#titleArea h2 { padding:0 61px; line-height:43px; font-size:15px; color:#2e2e2e; text-align:center; }
+#titleArea span { position:absolute; top:6px; left:14px; }
+
+/* 공통 */
+body { height:100%; background:#f1f1f1 !important; }
+.xans-member-adulthead { padding:29px 14px 0; font-size:11px; }
+.xans-member-adulthead h3 { height:43px; padding:0 0 0 7px; border-bottom:1px solid #d5d5d5; font-size:13px; font-weight:bold; line-height:43px; }
+.xans-member-adulthead .noMember h3 { margin:0 14px; }
+.xans-member-adulthead .loginHeader { margin:0 14px; ine-height:43px; }
+.xans-member-adulthead .loginHeader h3 { margin:23px 0 0; }
+.xans-member-adulthead .loginHeader:after { content:""; display:block; clear:both; }
+.xans-member-adulthead .under19 { position:relative; min-height:70px; margin:0 14px; padding:10px 0 0 94px; font-size:11px; line-height:1.5em; color:#1b1b1b; font-weight:400; text-align:justify; }
+.xans-member-adulthead .under19 h2 { font-size:13px; }
+.xans-member-adulthead .under19 .info { display:block; margin:0 0 7px; color:#e1566e; font-weight:normal; }
+.xans-member-adulthead .under19 span { position:absolute; top:0; left:0; width:83px; height:83px; overflow:hidden; text-indent:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/intro/bg_adult.png") 0 0 no-repeat; background-size:80px 80px; }
+.xans-member-adulthead .under19 strong { font-weight:bold; }
+.xans-member-adulthead .under19 .adultInfo { display:inline-block; margin:0 0 20px; font-size:13px; }
+.xans-member-adulthead .under19 + .formBox { margin-top:0; }
+
+.xans-member-adulthead .keyboard { line-height:43px; text-align:right; }
+.xans-member-adulthead .keyboard .btnKey { position:relative; padding:0 20px 0 0; color:#757575; font-size:11px; cursor:pointer; border:0; background:none; }
+.xans-member-adulthead .keyboard .btnKey.korean { display:inline-block; margin:0px 14px 0px 0; }
+.xans-member-adulthead .keyboard .btnKey.special { display:inline-block; margin:0px 0 0px; }
+.xans-member-adulthead .keyboard .btnKey:focus { outline:none; }
+.xans-member-adulthead .keyboard .btnKey:before { content:""; position:absolute; right:0; top:50%; width:13px; height:8px; margin:-3px 0 0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_down.png") no-repeat 0 50%; background-size:100% 100%; }
+.xans-member-adulthead .keyboard .btnKey.selected { color:#508bed; border:none; }
+.xans-member-adulthead .keyboard .btnKey.selected:before { background-image: url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_up.png"); }
+
+.xans-member-adulthead .view { text-align:center; }
+.xans-member-adulthead .view > div { display:none; padding:0 0 14px; }
+.xans-member-adulthead .formBox { position:relative; margin:0 14px 0; font-size:13px; }
+.xans-member-adulthead .formBox:after { content:""; display:block; clear:both; }
+.xans-member-adulthead .formBox h3 { margin:23px 0 0; }
+.xans-member-adulthead .formBox label { margin:0 20px 0 0; }
+.xans-member-adulthead .formBox .form input[type="text"],
+.xans-member-adulthead .formBox .form input[type="password"] { width:100%; height:43px; }
+.xans-member-adulthead .formBox .form input[type="text"] { margin:0 0 7px; }
+.xans-member-adulthead .formBox .option { overflow:hidden; height:43px; line-height:43px; margin:0; }
+.xans-member-adulthead .formBox .option > span { float:left; margin:0 5px 0 0; }
+.xans-member-adulthead .formBox .option > span label { line-height:44px; }
+.xans-member-adulthead .formBox .option > span:last-child { margin-right:0; }
+.xans-member-adulthead .formBox .option input[type="checkbox"],
+.xans-member-adulthead .formBox .option img { margin:0 3px 0 0; }
+.xans-member-adulthead .formBox p.mobile,
+.xans-member-adulthead .formBox p.ipin { line-height:43px; padding:0 0 0 7px; }
+.xans-member-adulthead .formBox p.mobile span,
+.xans-member-adulthead .formBox p.ipin span { display:inlin-block; height:43px; line-height:43px; }
+.xans-member-adulthead .formBox p.mobile img,
+.xans-member-adulthead .formBox p.ipin img { width:106px; }
+.xans-member-adulthead .formBox .btnArea.type1 { width:100%; margin:7px auto 0; padding:0 0 7px; }
+.xans-member-adulthead .formBox .option .ssl img { width:14px; margin:0 3px 0 0; vertical-align:middle; }
+.xans-member-adulthead .formBox .option .ssl em { color:#757575; vertical-align:middle; }
+
+/* 인트로 본인인증 ( 법적권고 ) */
+.xans-member-adulthead.recommend { padding:29px 14px 0; font-family:Verdana,Dotum; }
+.xans-member-adulthead.recommend h3 { height:43px; padding:0 0 0 7px; border-bottom:1px solid #d5d5d5; font-size:13px; font-weight:bold; line-height:43px; }
+.xans-member-adulthead.recommend .under19 { position:relative; min-height:70px; margin:0 14px; padding:10px 0 0 94px; font-size:11px; line-height:1.5em; color:#1b1b1b; font-weight:400; text-align:justify; }
+.xans-member-adulthead.recommend .under19 span { position:absolute; top:0; left:0; width:83px; height:83px; overflow:hidden; text-indent:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/intro/bg_adult.png") 0 0 no-repeat; background-size:80px 80px; }
+.xans-member-adulthead.recommend .under19 strong { font-weight:bold; }
+.xans-member-adulthead.recommend .formBox { position:relative; margin:0 14px 0; font-size:13px; }
+
+/* 하단 버튼 */
+.xans-member-adulthead .btnArea.typeLogin { max-width:100%; height:43px; margin:0 auto 39px; padding:0 14px; font-size:13px; text-align:center; line-height:43px; }
+.xans-member-adulthead .btnArea.typeLogin .btnLogin { position:relative; display:inline-block; padding:0 14px 0 15px; color:#858585; font-weight:normal; }
+.xans-member-adulthead .btnArea.typeLogin .btnLogin:before { display:block; content:""; position:absolute; top:16px; left:0; width:1px; height:13px; background:#848484; }
+.xans-member-adulthead .btnArea.typeLogin .btnLogin:first-child:before { display:none; }
+.xans-member-adulthead .btnArea.typeLogin .btnLogin .icon { display:inline-block; width:5px; padding:0 7px 0 6px; }
+.xans-member-adulthead .btnArea .btnNaver {
+    display:block; margin:10px 0 0; border:0; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#26c826 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_btn_naver.png") no-repeat 13px 0; background-size:33px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-member-adulthead .btnArea .btnFacebook {
+    display:block; margin:10px 0 0; border:0; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#3b5998 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_btn_facebook.png") no-repeat 13px 0; background-size:32px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-member-adulthead .btnArea .btnGoogle {
+    display:block; margin:10px 0 0; border:0; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#df4a32 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_btn_google.png") no-repeat 12px 1px; background-size:33px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+/*input*/
+#member_id,
+#member_passwd { font-size:15px; }

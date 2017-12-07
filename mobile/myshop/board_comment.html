@@ -1,0 +1,56 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div  id="titleArea" module="myshop_boardTitle">
+    <h2>게시물관리</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="myshop_BoardPackage">
+    <!--@css(/css/module/myshop/boardPackage.css)-->
+    <div module="myshop_boardTitle" class="tab">
+        <ul>
+            <li><a href="/myshop/board_list.html">게시글 ({$my_board_count})</a></li>
+            <li class="selected"><a href="/myshop/board_comment.html">댓글 ({$my_comment_count})</a></li>
+        </ul>
+    </div>
+
+    <div module="myshop_Commentlist">
+        <ul class="list">
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_mobile} <strong>[{$board_category}]</strong> {$comment_content}</span>
+                        <span class="id" title="작성자">{$comment_name}</span><span class="date" title="작성일">{$comment_write_date}</span>
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p class="summary">
+                    <a href="{$board_read_url}">
+                        <span class="subject">{$icon_mobile} <strong>[{$board_category}]</strong> {$comment_content}</span>
+                        <span class="id" title="작성자">{$comment_name}</span><span class="date" title="작성일">{$comment_write_date}</span>
+                    </a>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div module="myshop_boardlistPaging" class="paginate typeList">
+    <p class="prev"><a href="{$param_prev}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>
+
+<div module="myshop_boardlistSearch">
+    <!--@css(/css/module/myshop/boardlistSearch.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <div class="category">{$form.search_key}</div>
+        <div class="keyword">{$form.search} <button class="btnStrong" onclick="{$action_search}">검색</button></div>
+    </fieldset>
+</div>

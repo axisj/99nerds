@@ -1,0 +1,42 @@
+<!-- 재고수량 레이어 -->
+<div module="product_stocklayer">
+    <!--@css(/css/module/product/stocklayer.css)-->
+    <div id="{$stockLayerID}" class="layer {$stockLayerClass}">
+        <h2>재고수량</h2>
+        <div class="content">
+            <p class="desc">
+                현재 상품의 재고수량 현황입니다.<br />
+                (현재 판매 진행 중이므로 재고 현황에 다소 차이가 날 수 있습니다.)
+            </p>
+            <div class="table">
+                <table summary="" border="1">
+                    <caption>재고수량</caption>
+                    <colgroup>
+                    <col style="width:60%" />
+                    <col style="width:40%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">옵션</th>
+                            <th scope="col">재고수량</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{$option_value}</td>
+                            <td class="center">{$stock_value}</td>
+                        </tr>
+                        <tr>
+                            <td>{$option_value}</td>
+                            <td class="center">{$stock_value}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btnArea type2">
+            <a href="#none" class="btnEm" onClick="{$stockLayerCloseAction}">닫기</a>
+        </div>
+    </div>
+<div>
+<!-- //재고수량 레이어 -->

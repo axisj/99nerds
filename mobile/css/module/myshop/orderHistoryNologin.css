@@ -1,0 +1,44 @@
+.xans-myshop-orderhistorynologin { display:none; margin:14px auto 29px; background:#fff; }
+
+.xans-myshop-orderhistorynologin .tab { width:100%; font-size:13px; background:#f1f1f1; }
+.xans-myshop-orderhistorynologin .tab ul { height:36px; border:1px solid #c8cdd2; border-bottom:none; font-size:0; }
+.xans-myshop-orderhistorynologin .tab ul:after { content:""; display:block; clear:both; }
+.xans-myshop-orderhistorynologin .tab li { float:left; width:50%; height:36px; text-align:center; vertical-align:middle; background:#f1f1f1; }
+.xans-myshop-orderhistorynologin .tab li.selected { background:#fff; }
+.xans-myshop-orderhistorynologin .tab li a { display:inline-block; width:100%; border-left:1px solid #c8cdd2; border-bottom:1px solid #c8cdd2; color:#333; font-size:14px; line-height:35px; }
+.xans-myshop-orderhistorynologin .tab li:first-child a { border-left:none; }
+.xans-myshop-orderhistorynologin .tab li.selected a { border-bottom:none; color:#333; font-weight:bold; }
+
+.xans-myshop-orderhistorynologin .loginHeader { padding-right:14px; }
+.xans-myshop-orderhistorynologin .loginHeader:after { content:""; display:block; clear:both; }
+.xans-myshop-orderhistorynologin .keyboard { line-height:43px; text-align:right; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey { position:relative; padding:0 20px 0 0; color:#757575; font-size:11px; cursor:pointer; border:0; background:none; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey.korean { display:inline-block; margin:0px 14px 0px 0; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey.special { display:inline-block; margin:0px 0 0px; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey:focus { outline:none; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey:before { content:""; position:absolute; right:0; top:50%; width:13px; height:8px; margin:-3px 0 0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_down.png") no-repeat 0 50%; background-size:100% 100%; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey.selected { color:#508bed; border:none; }
+.xans-myshop-orderhistorynologin .keyboard .btnKey.selected:before { background-image: url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_up.png"); }
+
+.xans-myshop-orderhistorynologin .view { text-align:center; }
+.xans-myshop-orderhistorynologin .view > div { display:none; padding:0 0 14px; }
+
+.xans-myshop-orderhistorynologin .formBox { position:relative; margin:0px 14px 0; font-size:11px; }
+.xans-myshop-orderhistorynologin .formBox:after { content:""; display:block; clear:both; }
+.xans-myshop-orderhistorynologin .formBox .form { margin:0 0px 14px 0; }
+.xans-myshop-orderhistorynologin .formBox .form #order_name,
+.xans-myshop-orderhistorynologin .formBox .form #order_password { width:100%; height:43px; font-size:15px; }
+.xans-myshop-orderhistorynologin .formBox .form #order_name { margin:0 0 7px; }
+.xans-myshop-orderhistorynologin .formBox .form #order_password { margin:7px 0 0; }
+.xans-myshop-orderhistorynologin .formBox .form #order_id1,
+.xans-myshop-orderhistorynologin .formBox .form #order_id2 { width:48%; height:42px; font-size:15px; }
+.xans-myshop-orderhistorynologin .formBox .form #order_id1 { margin:0 0.7% 0 0; }
+.xans-myshop-orderhistorynologin .formBox .form #order_id2 { margin:0 0 0 0.7%; }
+.xans-myshop-orderhistorynologin .formBox .btnArea.type1 { margin:7px auto 0; }
+.xans-myshop-orderhistorynologin .formBox .btnJoin.btnArea.type1 { margin:14px auto 0; }
+.xans-myshop-orderhistorynologin .formBox .btnArea .btnBasic2 { background:#e8e8e8; border:1px solid #bcbcbc; }
+.xans-myshop-orderhistorynologin .formBox .help { margin:14px 0 14px; padding:0 0 0 22px; color:#757575; font-size:11px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_help.png") 0 50% no-repeat; background-size:14px; }
+.xans-myshop-orderhistorynologin .formBox .help p { margin:0 0 8px; }
+
+.xans-myshop-orderhistorynologin #member_id,
+.xans-myshop-orderhistorynologin #member_passwd { font-size:15px; }

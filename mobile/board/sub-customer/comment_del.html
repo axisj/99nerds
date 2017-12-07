@@ -1,0 +1,24 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_CommentDeletePackage_4">
+    <!--@css(/css/module/board/commentDeletePackage.css)-->
+    <div id="titleArea" module="board_title_4">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="Board_CommentDel_4">
+        <h3>댓글삭제</h3>
+        <div class="comment">
+            <fieldset>
+                <legend>댓글삭제</legend>
+                <p class="info">댓글 등록 시 입력한 비밀번호를<br />입력하여 주십시요.</p>
+                <p class="password">
+                    <label for="comment_password">비밀번호</label> {$form.comment_password}
+                    <button type="submit" class="btnStrong">확인</button>
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>

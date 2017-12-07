@@ -1,0 +1,43 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>회원가입</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_join">
+    <!--@css(/css/module/member/join_agreement.css)-->
+    <div class="agreeArea">
+        <div class="title">
+            <h3>{$form.agree_service_check}<label for="agree_service_check0" class="check">이용약관 동의 (필수)</label></h3>
+            <a href="/member/agreement/agreement1.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$service_desc}</div>
+    </div>
+    <div class="agreeArea">
+        <div class="title">
+            <h3>{$form.agree_privacy_check}<label for="agree_privacy_check0" class="check">개인정보처리방침 동의 (필수)</label></h3>
+            <a href="/member/agreement/agreement2.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$privacy_desc}</div>
+    </div>
+    <div class="{$display_information|display} agreeArea">
+        <div class="title">
+            <h3>{$form.agree_information_check}<label for="agree_information_check0" class="check">개인정보 제3자 제공 동의(선택)</label></h3>
+            <a href="/member/agreement/agreement3.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$information_desc}</div>
+    </div>
+    <div class="{$display_consignment|display} agreeArea">
+        <div class="title">
+            <h3>{$form.agree_consignment_check}<label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의(선택)</label></h3>
+            <a href="/member/agreement/agreement4.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$consignment_desc}</div>
+    </div>
+    <div class="btnArea type2">
+        <button type="button" class="btnSubmit" onclick="checkAgreement('/member/join.html');">다음</button>
+        <a href="#none" class="btnEm" onclick="history.go(-1); return false;">취소</a>
+    </div>
+</div>

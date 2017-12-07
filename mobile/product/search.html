@@ -1,0 +1,103 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea" module="search_form">
+    <!--@css(/css/module/search/form.css)-->
+    <!--@js(/js/module/search/form.js)-->
+    <h2>검색결과(<span class="count">{$total_count}</span>)건</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+
+    <div class="searchbox">
+        {$form.keyword}
+        <p class="button"><button type="submit" class="btnStrong">검색</button></p>
+        <button type="button" class="btnDelete">삭제</button>
+    </div>
+
+    <div class="inner">
+        {$form.order_by}
+    </div>
+
+    <p class="empty {$search_fail_display|display}">검색 결과가 없습니다.</p>
+</div>
+
+<div module="Search_Result" class="ec-base-product typeDesc">
+    <!--@js(/js/module/search/result.js)-->
+    <!--
+        $count = 10
+    -->
+    <ul class="prdList">
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$seo_alt_tag}" width="86" height="86"><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price}</li>
+                    <li class="price sale {$product_sale_visible}">{$product_sale_price}</li>
+                    <li class="cart">{$basket_icon}</li>
+                    <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                    <li class="price {$product_promotion_display|display}">
+                        <div class="discountPeriod {$product_promotion_display|display}">
+                            <a href="#none" class="btnNormal">할인기간</a>
+                            <div class="layerDiscountPeriod">
+                                <div class="inner">
+                                    <strong class="title">할인기간</strong>
+                                    <p class="timeleft">{$product_promotion_date}</p>
+                                    <ul>
+                                        <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                        <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                    </ul>
+                                    <a href="#none" class="btnClose">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$seo_alt_tag}" width="86" height="86"><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price}</li>
+                    <li class="price sale {$product_sale_visible}">{$product_sale_price}</li>
+                    <li class="cart">{$basket_icon}</li>
+                    <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                    <li class="price {$product_promotion_display|display}">
+                        <div class="discountPeriod {$product_promotion_display|display}">
+                            <a href="#none" class="btnNormal">할인기간</a>
+                            <div class="layerDiscountPeriod">
+                                <div class="inner">
+                                    <strong class="title">할인기간</strong>
+                                    <p class="timeleft">{$product_promotion_date}</p>
+                                    <ul>
+                                        <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                        <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                    </ul>
+                                    <a href="#none" class="btnClose">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div module="search_paging" class="paginate typeList">
+    <p class="prev"><a href="{$param_before}"><span>이전 페이지</span></a></p>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a></p>
+</div>

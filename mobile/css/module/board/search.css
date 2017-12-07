@@ -1,0 +1,15 @@
+/* 공통 */
+.xans-board-search { margin:0 0 29px; padding:14px; border-top:1px solid #ececec; border-bottom:1px solid #ececec; text-align:left; }
+.xans-board-search .keyword { position:relative; padding:0 51px 0 0; }
+.xans-board-search input#search { width:100%; }
+.xans-board-search .category { overflow:hidden; }
+.xans-board-search .category select { margin:0 0 7px; }
+.xans-board-search .category select#product_category_depth1, .xans-board-search .category select#product_category_depth3,
+.xans-board-search .category select#search_date { float:left; width:49%; }
+.xans-board-search .category select#product_category_depth2, .xans-board-search .category select#product_category_depth4,
+.xans-board-search .category select#search_key { float:right; width:49%; }
+.xans-board-search .btnStrong { position:absolute; right:0; top:0; }
+
+/* 1:1맞춤상담 */
+.xans-board-search.xans-board-search-9 { margin:0; padding:0; }
+.xans-board-search.xans-board-search-9.boardSearch9 { margin:0 0 29px; padding:14px; }

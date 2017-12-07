@@ -1,0 +1,42 @@
+/* 팝업 공통 */
+.popup { background:#f1f1f1; padding:0 0 10px; }
+.popup > div { position:relative; }
+.popup h2 { height:36px; padding:0 38px 0 7px; font-size:15px; line-height:36px; color:#fff; background:#4a5164; }
+.popup .btnClose { position:absolute; right:0; top:0; z-index:110; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:100%; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_white.png") center center no-repeat; background-size:14px 14px; }
+.popup .wrap { padding:14px 7px 7px; padding:7px; font-size:12px; background:#fff; }
+/* 세금계산서 신청양식 */
+.popup { min-width:320px; }
+.popup div.wrap { background:#f1f1f1; }
+.xans-myshop-orderissuetax .info { overflow:hidden; margin-bottom:10px; padding:20px 10px; border:1px solid #ccc; color:#353535; background:#fff; }
+.xans-myshop-orderissuetax h3 { margin:14px 0 7px; }
+.xans-myshop-orderissuetax table { border:1px solid #ccc; color:#1b1b1b; line-height:1.5; background:#fff; }
+.xans-myshop-orderissuetax table { border:1px solid #ccc; color:#1b1b1b; line-height:1.5; background:#fff; }
+.xans-myshop-orderissuetax table th { width:90px; padding:0 0 0 10px; border-top:1px solid #ececec; color:#757575; font-weight:normal; text-align:left; }
+.xans-myshop-orderissuetax table td { width:auto; padding:7px 10px; border-top:1px solid #ececec; vertical-align:middle; }
+.xans-myshop-orderissuetax table .first th,
+.xans-myshop-orderissuetax table .first td { border-top:0; }
+.xans-myshop-orderissuetax table img { vertical-align:middle; }
+.xans-myshop-orderissuetax table a { text-decoration:none; }
+.xans-myshop-orderissuetax table td label { padding:0 30px 0 0; }
+.xans-myshop-orderissuetax input[type=radio] { width:13px; height:13px; margin:0 4px 0 0; padding:0; border:0; }
+.xans-myshop-orderissuetax #regno { width:100%; }
+.xans-myshop-orderissuetax .btnArea { width:100%; text-align:center; font-size:0; line-height:0; }
+.xans-myshop-orderissuetax .btnArea > button { font-weight:normal; }
+.xans-myshop-orderissuetax #mall_addr_btn { display:inline-block; height:28px; line-height:26px; margin:0; padding:0 10px;
+    cursor:pointer; vertical-align:middle; font-family:Verdana,'Iropke Batang',"맑은 고딕",Malgun Gothic,"돋움",Dotum; font-size:13px; font-weight:400; border:0;
+    border-radius:2px; -moz-box-sizing:border-box; box-sizing:border-box; color:#1b1b1b; border:1px solid #bcbcbc; background:#fff;}
+/* INPUT SIZE */
+.xans-myshop-orderissuetax input[type=text],
+.xans-myshop-orderissuetax input[type=password],
+.xans-myshop-orderissuetax input[type=number],
+.xans-myshop-orderissuetax input[type=tel],
+.xans-myshop-orderissuetax select { width:100%; }
+.xans-myshop-orderissuetax #phone1 { margin:0 3px 0 0; width:30%; }
+.xans-myshop-orderissuetax #phone2,
+.xans-myshop-orderissuetax #phone3 { margin:0 3px; width:28%; }
+.xans-myshop-orderissuetax #email1 { margin:0 4px 4px 0; width:40%; }
+.xans-myshop-orderissuetax #email2 { margin:0 4px 4px 4px; width:45%; }
+.xans-myshop-orderissuetax #email3 { width:100%; }
+#mall_addr_addr1,
+#mall_addr_addr2 { margin:3px 0 0;  }
+#mall_addr_zip1 { width:60px; }

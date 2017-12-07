@@ -1,0 +1,37 @@
+.xans-layout-searchheader { display:none; position:absolute; top:0; left:0; right:0; z-index:200; background-color:#fff; border:1px solid #cccccc; border-radius:1px; }
+.xans-layout-searchheader .searchForm { border-radius: 5px; position:relative; margin:7px 61px 7px 14px; padding:0 34px 0 33px; border:1px solid #ccc; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_search.png") no-repeat 7px 5px; background-size:20px 20px; }
+.xans-layout-searchheader .btnDelete { position:absolute; right:7px; top:5px; width:20px; height:20px; border:0; cursor:pointer; overflow:hidden; text-indent:100%; font-size:0; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_delete.png") no-repeat 0 0; background-size:20px 20px; }
+.xans-layout-searchheader #keyword { width:100%; height:29px; padding:0; border:0; }
+.xans-layout-searchheader .btnClose {
+    position:absolute; right:14px; top:7px; width:40px; height:31px; margin:0; padding:0;
+    border:1px solid #d5d5d5; border-radius:4px; outline-style:none; cursor:pointer;
+    background:#f0f0f0; font-size:13px; text-align:center;
+ }
+.xans-layout-searchheader .tab { font-size: 13px; }
+.xans-layout-searchheader .tab ul { height: 36px; border-top:1px solid #ececec; border-bottom: 1px solid #4a5164; font-size: 0; }
+.xans-layout-searchheader .tab ul:after { content: ""; display: block; clear: both; }
+.xans-layout-searchheader .tab li.selected { background: #4a5164; }
+.xans-layout-searchheader .tab li { float: left; width: 50%; height: 36px; text-align: center; vertical-align: middle; background: #1e1e1e; }
+.xans-layout-searchheader .tab li.selected a { border-top:1px solid #4a5164; margin:-1px 0 0 0; color: #1e1e1e; font-weight: bold; }
+.xans-layout-searchheader .tab li a { display: inline-block; width: 100%; color: #1b1b1b; font-size: 13px; line-height: 35px; }
+
+.xans-layout-searchheader .xans-search-hotkeyword { background:#f8f8f8; }
+.xans-layout-searchheader .xans-search-hotkeyword ul { overflow-y:auto; max-height:278px; padding:7px 14px 7px 0; border-bottom:1px solid #d5d5d5; text-align:left; font-size:0; }
+.xans-layout-searchheader .xans-search-hotkeyword li { position:relative; display:inline-block; vertical-align:top; }
+.xans-layout-searchheader .xans-search-hotkeyword li a { display:inline-block; padding:7px 15px 7px 14px; color:#1b1b1b; font-size:13px; }
+.xans-layout-searchheader .xans-search-hotkeyword li a:before { display:block; content:""; position:absolute; top:7px; right:0; width:1px; height:13px; background:#757575; }
+.xans-layout-searchheader .xans-search-hotkeyword li:last-child a:before { display:none; }
+
+.xans-layout-searchheader .xans-search-recentkeyword { background:#f8f8f8; }
+.xans-layout-searchheader .xans-search-recentkeyword p { padding:12px 14px 11px; border-bottom:1px solid #d5d5d5; color:#787878; font-size:13px; text-align:left; }
+.xans-layout-searchheader .xans-search-recentkeyword ul { overflow-y:auto; max-height:252px; text-align:left; }
+.xans-layout-searchheader .xans-search-recentkeyword li { position:relative; padding:0 39px 0 0; border-bottom:1px solid #d5d5d5; }
+.xans-layout-searchheader .xans-search-recentkeyword li a { display:block; padding:12px 0 11px 14px; color:#1b1b1b; font-size:13px; min-height:13px; }
+.xans-layout-searchheader .xans-search-recentkeyword li .btnDelete { position:absolute; right:14px; top:10px; overflow:hidden; width:20px; height:20px; padding:0; border:0; text-indent:100%; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_delete.png") no-repeat 0 0; background-size:20px 20px; }
+.xans-layout-searchheader .xans-search-recentkeyword .button { padding:8px 0; text-align:center; border-bottom:1px solid #d5d5d5; background:#f1f1f1; }
+.xans-layout-searchheader .xans-search-recentkeyword .button .btnDeleteAll {
+    display:inline-block; height:29px; line-height:29px; margin:0; padding:0 18px; border:1px solid #d5d5d5;
+    font-size:13px; cursor:pointer; vertical-align:middle; color:#000;
+    background-color:#fff;
+    border-radius:3px; -moz-box-sizing:border-box; box-sizing:border-box;
+ }

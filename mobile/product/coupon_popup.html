@@ -1,0 +1,19 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="coupon_productpopup">
+    <!--@css(/css/module/coupon/productpopup.css)-->
+    <h2>최대 할인쿠폰 다운받기</h2>
+    <div class="wrap">
+        <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+            <div class="detail" {$call_coupon_detail}>
+                <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name|cut:13,...}</strong>
+                <p class="discount" style="color:#d07b01; font-family:Dotum;"><span style="font-family:Verdana;">{$coupon_content}</span></p>
+                <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+            </div>
+            <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기"></a></div>
+        </div>
+    </div>
+
+    <div class="btnArea">
+        <button type="button" class="btnNormal" onclick="self.close();">닫기</button>
+    </div>
+</div>

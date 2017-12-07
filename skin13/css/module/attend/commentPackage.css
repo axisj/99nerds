@@ -1,0 +1,16 @@
+/* 댓글형 > 댓글 작성 */
+.mid-0 .xans-attend-commentwrite { margin:0 0 20px; padding:11px 20px 5px; border:5px solid #e8e8e8; background-color:#fbfafa; }
+.mid-0 .xans-attend-commentwrite .text { overflow:hidden; padding:0 81px 0 0; *zoom:1; }
+.mid-0 .xans-attend-commentwrite .text textarea { float:left; height:44px; padding:2px 2px 2px 4px; }
+.mid-0 .xans-attend-commentwrite .submit { float:right; margin:0 -81px 0 0; }
+.mid-0 .xans-attend-commentwrite .captcha img { vertical-align:middle; }
+.mid-0 .xans-attend-commentwrite .captcha #secure_text { width:130px; }
+
+/* 댓글형 > 댓글리스트 */
+.mid-0 .xans-attend-commentlist { border-top:1px solid #d7d5d5; margin:20px 0 0 0; }
+.mid-0 .xans-attend-commentlist .memoArea { border:1px solid #d7d5d5; border-top:0; }
+.mid-0 .xans-attend-commentlist .memoArea .writer { padding:12px 20px 7px; }
+.mid-0 .xans-attend-commentlist .memoArea .comment { border-top:1px solid #e9e9e9; padding:15px 0 10px 30px; }
+
+/* 댓글형 > 이벤트 제목 */
+.mid-0 .xans-attend-commenttitle select { width:100%; }

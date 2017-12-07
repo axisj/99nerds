@@ -1,0 +1,20 @@
+.xans-product-normalmenu { overflow:hidden; padding:14px; background:#fff; }
+.xans-product-normalmenu .sort { float:left; }
+.xans-product-normalmenu .sort select { max-width:150px; }
+
+.xans-product-normalmenu .viewType { width:129px; float:right; font-size:0; }
+.xans-product-normalmenu .viewType { border-radius:4px; -webkit-border-radius:4px; }
+.xans-product-normalmenu .viewType li { display:inline-block; width:31px; height:27px; border:1px solid #d5d5d5; border-right:0; background-size:50%; background-repeat:no-repeat; background-position:center; }
+.xans-product-normalmenu .viewType li:first-child { border-radius:4px 0 0 4px; -webkit-border-radius:4px 0 0 4px; }
+.xans-product-normalmenu .viewType li:last-child { border-radius:0 4px 4px 0; -webkit-border-radius:0 4px 4px 0; border-right:1px solid #d5d5d5; }
+.xans-product-normalmenu .viewType li.selected { background-color:#4a5164; border-color:#404757; }
+.xans-product-normalmenu .viewType li a { display:block; height:100%; }
+
+.xans-product-normalmenu .viewType li.list { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_list.png"); }
+.xans-product-normalmenu .viewType li.thumb { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_thumb.png"); }
+.xans-product-normalmenu .viewType li.gallery { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_gallery.png"); }
+.xans-product-normalmenu .viewType li.slide { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_slide.png"); }
+.xans-product-normalmenu .viewType li.selected.list { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_list_on.png"); }
+.xans-product-normalmenu .viewType li.selected.thumb { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_thumb_on.png"); }
+.xans-product-normalmenu .viewType li.selected.gallery { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_gallery_on.png"); }
+.xans-product-normalmenu .viewType li.selected.slide { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_slide_on.png"); }

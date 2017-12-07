@@ -1,0 +1,60 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>아이디 찾기</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="member_findid">
+    <!--@css(/css/module/member/findid.css)-->
+    <!--
+        $returnURL = /member/id/find_id_result.html
+     -->
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>아이디 찾기</caption>
+            <tbody>
+                <tr>
+                    <th scope="row">회원구분</th>
+                    <td>{$form.searchType}</td>
+                </tr>
+                <tr>
+                    <th scope="row">인증방법</th>
+                    <td>{$form.check_method}</td>
+                </tr>
+                <tr id="name_view" class="name">
+                    <th scope="row" id="name_lable">이름</th>
+                    <td>{$form.name}</td>
+                </tr>
+                <tr id="ssn_view" class="ssn_no">
+                    <th scope="row" id="ssn_name">법인번호</th>
+                    <td>{$form.ssn1} - {$form.ssn2}</td>
+                </tr>
+                <tr id="email_view" class="email" style="display:none;">
+                    <th scope="row">이메일</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr id="mobile_view" class="mobile" style="display:none;">
+                    <th scope="row">휴대폰 번호</th>
+                    <td>{$form.mobile1} - {$form.mobile2} - {$form.mobile3}</td>
+                </tr>
+                <tr id="ipin_view" class="ipin" style="display:none;">
+                    <th scope="row">아이핀인증</th>
+                    <td>
+                        <a href="#none" onclick="{$action_func_find_id}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_Ipin.gif" alt="아이핀 인증" /></a>
+                    </td>
+                </tr>
+                <tr id="mobile_auth_view" class="mobileauth" style="display:none;">
+                    <th scope="row">휴대폰인증</th>
+                    <td>
+                        <a href="#none" onclick="{$action_func_find_id}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_mobile_check.gif" alt="휴대폰 인증" /></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btnArea type1">
+        <a href="#none" class="btnSubmit" onclick="{$action_func_find_id}">확인</a>
+    </div>
+</div>

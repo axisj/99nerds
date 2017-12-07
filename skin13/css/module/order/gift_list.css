@@ -1,0 +1,50 @@
+/* 사은품 리스트 */
+.xans-gift-list .xans-gift-second { margin-top:40px; border-top:1px solid #868686; }
+.xans-gift-list .xans-gift-second:first-child { border-top:0; margin:0; }
+.xans-gift-list .xans-gift-third ul.prdList { display:table; width:100%; margin:0; font-size:0; line-height:0; }
+.xans-gift-list .xans-gift-third ul.prdList li.item { display:inline-block; margin:20px 0; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-gift-list .xans-gift-third ul.prdList li.item .box { margin:0 auto; line-height:18px; text-align:left; }
+.xans-gift-list .xans-gift-third ul.prdList .thumb { margin:0 0 10px; border:1px solid #ececec; }
+.xans-gift-list .xans-gift-third span,
+.xans-gift-list .xans-gift-third strong { display:block; }
+
+/* 진열방식 */
+.xans-gift-list .xans-gift-third ul.prdList.column2 li.item { width:50%; }
+.xans-gift-list .xans-gift-third ul.prdList.column3 li.item { width:33.33%; }
+.xans-gift-list .xans-gift-third ul.prdList.column4 li.item { width:25%; }
+.xans-gift-list .xans-gift-third ul.prdList.column5 li.item { width:20%; }
+.xans-gift-list .xans-gift-third ul.prdList.column6 li.item { width:16.66%; }
+.xans-gift-list .xans-gift-third ul.prdList.column7 li.item { width:14.28%; }
+.xans-gift-list .xans-gift-third ul.prdList li.item .box { margin:0 7px; }
+.xans-gift-list .xans-gift-third ul.prdList.column2.wyImgSizeFixed li.item .box { min-width:354px; }
+.xans-gift-list .xans-gift-third ul.prdList.column3.wyImgSizeFixed li.item .box { min-width:232px; }
+.xans-gift-list .xans-gift-third ul.prdList.column4.wyImgSizeFixed li.item .box { min-width:170px; }
+.xans-gift-list .xans-gift-third ul.prdList.column5.wyImgSizeFixed li.item .box { min-width:134px; }
+.xans-gift-list .xans-gift-third ul.prdList.column6.wyImgSizeFixed li.item .box { min-width:108px; }
+.xans-gift-list .xans-gift-third ul.prdList.column7.wyImgSizeFixed li.item .box { min-width:92px; }
+.xans-gift-list .xans-gift-third ul.prdList.wyImgSizeFixed li.item .thumb { width:240px; height:240px; }
+.xans-gift-list .xans-gift-third ul.prdList.wyImgSizeFlex li.item .thumb { width:100%; }
+.xans-gift-listempty .empty { border:1px solid #eee; background:#f5f5f5; }
+
+/* 사은품 제공 상품 레이어 */
+.xans-gift-layeroffergift { position:fixed; z-index:100; left:50%; top:35%; width:600px; margin-left:-300px; border-bottom:1px solid #757575; background-color:#fff; }
+.xans-gift-layeroffergift h1 { height:35px; padding:0 35px 0 19px; line-height:35px; font-size:14px; color:#fff; background:#495164; }
+.xans-gift-layeroffergift .content { padding:20px; border:1px solid #757575; border-top:0; border-bottom:0; background:#fff; }
+.xans-gift-layeroffergift .list { position:relative; overflow-y:auto; max-height:300px; *zoom:1; }
+.xans-gift-layeroffergift .list table { table-layout:fixed; }
+.xans-gift-layeroffergift .list th,
+.xans-gift-layeroffergift .list td { padding:8px 10px 7px; line-height:1.4; border:1px solid #d7d5d5; word-wrap:break-word; }
+.xans-gift-layeroffergift .list th { text-align:center; background-color:#fafafa; }
+.xans-gift-layeroffergift .list .product { position:relative; min-height:50px; padding:5px 0 0 64px; }
+.xans-gift-layeroffergift .list .img { position:absolute; left:0px; top:0px; width:54px; height:54px; }
+.xans-gift-layeroffergift .list .img a,
+.xans-gift-layeroffergift .list .img img { display:block; width:100%; height:100%; }
+.xans-gift-layeroffergift .list .name,
+.xans-gift-layeroffergift .list .icon { vertical-align:middle; }
+.xans-gift-layeroffergift .list .icon { font-size:0; line-height:0; }
+.xans-gift-layeroffergift .list .icon img { margin:0 3px 0 0; vertical-align:middle; }
+.xans-gift-layeroffergift .list .left { text-align:left; }
+.xans-gift-layeroffergift .list .center { text-align:center; }
+.xans-gift-layeroffergift .list .right { text-align:right; }
+.xans-gift-layeroffergift .close { position:absolute; right:20px; top:10px; }
+.xans-gift-layeroffergift .close img { cursor:pointer; }

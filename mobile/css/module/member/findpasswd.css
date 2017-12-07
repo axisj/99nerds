@@ -1,0 +1,23 @@
+.xans-member-findpasswd { margin:14px 7px 0; padding:0 0 29px; color:#1b1b1b; font-size:13px; }
+.xans-member-findpasswd .boardWrite table { font-size:13px; word-wrap:break-word; background:#fff; border:1px solid #d5d5d5; }
+.xans-member-findpasswd .boardWrite table th { width:110px; line-height:43px; padding:0 0 0 10px; border-top:1px solid #ececec; color:#757575; font-weight:normal; text-align:left; vertical-align:middle; }
+.xans-member-findpasswd .boardWrite table tr:first-child th { border-top:1px solid #d5d5d5; }
+.xans-member-findpasswd .boardWrite table .displaynone + tr th { border-top:1px solid #d5d5d5; }
+.xans-member-findpasswd .boardWrite table .displaynone + tr td { border-top:1px solid #d5d5d5; }
+.xans-member-findpasswd .boardWrite table td { padding:7px 10px 7px 0; border-top:1px solid #ececec; vertical-align:middle; }
+.xans-member-findpasswd .boardWrite table #mobile_auth_view img,
+.xans-member-findpasswd .boardWrite table #ipin_view img { max-width:106px; }
+.xans-member-findpasswd .boardWrite table tr:first-child td { border-top:1px solid #d5d5d5; }
+.xans-member-findpasswd .boardWrite label { margin:0 14px 0 0; }
+.xans-member-findpasswd .btnArea.type1 { margin:14px auto 0; }
+
+/* INPUT SIZE */
+.xans-member-findpasswd #searchType,
+.xans-member-findpasswd #name,
+.xans-member-findpasswd #email,
+.xans-member-findpasswd #ssn { width:100%; }
+.xans-member-findpasswd #mobile1 { max-width:35px; }
+.xans-member-findpasswd #mobile2,
+.xans-member-findpasswd #mobile3 { max-width:55px; }
+.xans-member-findpasswd #ssn1,
+.xans-member-findpasswd #ssn2 { width:40%; }

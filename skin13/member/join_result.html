@@ -1,0 +1,76 @@
+<!--@layout(/layout/99nerds/layout-default.html)-->
+
+<!--@import(/layout/99nerds/inc/join-visual.html)-->
+
+<section class="section-contents-wrap">
+    <div class="container">
+
+        <div class="sign-up-result">
+            <div class="titleArea">
+                <h2 class="txtTitle16B">Welcome!</h2>
+            </div>
+
+
+            <div module="member_joinComplete" class="mid-0">
+                <!--@css(/css/module/member/joincomplete.css)-->
+                <p class="message gTriple">회원가입이 완료 되었습니다.</p>
+                <div class="memberArea">
+                    <div class="memberInfo">
+                        <dl class="desc">
+                            <dt>ID</dt>
+                            <dd>{$member_id}</dd>
+                            <dt>Name</dt>
+                            <dd>{$member_name}</dd>
+                            <dt>E-mail</dt>
+                            <dd>{$member_email}</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div module="member_BenefitJoin">
+                    <p><strong>{$member_name} 님</strong>은 [{$group_name}] 회원이십니다.</p>
+                    <p class="gSingle {$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시
+                        <strong>{$dc_price}{$dc_type}</strong>을
+                        {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+                    <p class="gSingle {$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong>
+                        구매시
+                        <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다.
+                        {$dc_max_mileage_percent}</p>
+                </div>
+                <p class="gDouble {$display_email_auth|display}">이메일 주소로 발송된 인증 메일을 통해 인증하신 후에 로그인이 가능합니다.</p>
+                <p class="gDouble {$under_fourteen_display|display}">
+                    <strong>{$member_name} 님</strong>은 14세 미만 회원이므로<br/>관리자 인증 후 아이디 사용이 가능합니다.
+                </p>
+                <p class="buttonArea">
+                    <a href="/member/login.html" class="btnSubmitM">Log in</a>
+                    <a href="/index.html" class="btnEmM">Home</a>
+                </p>
+            </div>
+
+
+            <div module="coupon_join" class="mid-0">
+                <!--@css(/css/module/coupon/join.css)-->
+                <div class="couponSkinArea">
+                    <ul class="grid3">
+                        <li>
+                            <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                                <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name}</strong>
+                                <p class="discount" style="color:#d07b01; font-family:Dotum;"><span
+                                        style="font-family:Verdana;">{$coupon_content}</span></p>
+                                <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                                <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name}</strong>
+                                <p class="discount" style="color:#d07b01; font-family:Dotum;"><span
+                                        style="font-family:Verdana;">{$coupon_content}</span></p>
+                                <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

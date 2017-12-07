@@ -1,0 +1,90 @@
+<!--@layout(/layout/basic/layer.html)-->
+<div module="Coupon_SelectNew">
+    <!--@css(/css/module/coupon/selectNew.css)-->
+    <!--
+        $prd_non_coupon_display = F
+    -->
+    <h2>쿠폰 조회/적용</h2>
+
+    <div class="wrap">
+        <div class="selectList typeProduct {$bPrdCoupon|display}">
+            <h3>상품별 쿠폰 적용</h3>
+            <table border="1" summary="">
+                <caption>상품별 쿠폰 적용</caption>
+                <colgroup>
+                    <col style="width:90px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody module="Coupon_aPrd">
+                    <tr>
+                        <td colspan="2" class="product">
+                            {$product_name}<span>[{$sOptStr}]</span><span>{$sHidden}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">판매가</th>
+                        <td>{$sOrdPrice}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">할인혜택</th>
+                        <td>{$sTotalMemberSalePrice}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">쿠폰선택</th>
+                        <td>{$sCoupon}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">쿠폰할인액</th>
+                        <td class="salePrice">{$sCouponSaleSpan}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="selectList typeOrder {$bOrdCoupon|display}">
+            <h3>주문별 쿠폰 적용</h3>
+            <ul id="{$selected_order_coupon_id}">
+                <li>{$sOrdCoupon}</li>
+            </ul>
+        </div>
+
+        <div class="selectList typeFee">
+            <h3>배송비 쿠폰 적용</h3>
+            <ul id="{$selected_ship_coupon_id}">
+            </ul>
+        </div>
+
+        <div class="boardTotal eToggle selected">
+            <div class="title">
+                <h3>총 쿠폰 할인금액 ({$mileage_name})<span class="price">{$price_unit_head}<span id="{$total_coupon_discount_id}">0</span>{$price_unit_tail}(<span id="{$total_coupon_mileage_id}">0</span>)</span></h3>
+            </div>
+
+            <div class="contents">
+                <ul>
+                    <li>
+                        <span class="icon">상품별 쿠폰 적용</span>
+                        <strong>{$price_unit_head}<span id="{$product_coupon_discount_id}">0</span>{$price_unit_tail}(<span id="{$product_coupon_mileage_id}">0</span>)</strong>
+                    </li>
+                    <li>
+                        <span class="icon">주문별 쿠폰 적용</span>
+                        <strong>{$price_unit_head}<span id="{$order_coupon_discount_id}">0</span>{$price_unit_tail}(<span id="{$order_coupon_mileage_id}">0</span>)</strong>
+                    </li>
+                    <li>
+                        <span class="icon">배송비 쿠폰 적용</span><strong>{$price_unit_head}<span id="{$ship_coupon_discount_id}">0</span>{$price_unit_tail}</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="help">
+            <p>쿠폰은 회원등급 할인 이후에 적용되므로, 현재 페이지에서 보여지는 판매가와 실제 적용되는 금액과 다를 수 있습니다.</p>
+        </div>
+    </div>
+
+    <div class="btnArea">
+        <button type="button" class="btnStrong" onclick="{$action_result}">쿠폰 적용</button>
+        <button type="button" class="btnNormal" onclick="{$action_init}">적용 취소</button>
+    </div>
+
+    <button type="button" class="btnClose" onclick="javascript:self.close();">닫기</button>
+</div>

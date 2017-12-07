@@ -1,0 +1,65 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderIssueTax">
+    <!--@css(/css/module/myshop/orderIssueTax.css)-->
+    <div class="header">
+        <h2>세금계산서 신청양식 작성</h2>
+    </div>
+    <div class="wrap">
+        {$form.order_id}
+        <ul class="info">
+            <li>세금 계산서 발행 신청을 위해 아래 모든 입력사항을 빠짐없이 입력하십시오.</li>
+            <li>신청양식 작성 후 사업자 등록증 사본을 팩스({$fax_number})로 보내주십시오.</li>
+        </ul>
+        <h3>신청자 정보</h3>
+        <table border="1" summary="">
+            <caption>신청자 정보</caption>
+            <tr class="first">
+                <th scope="row">{$form_label.name}</th>
+                <td>{$form.name}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.phone}</th>
+                <td>{$form.phone}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.email}</th>
+                <td>{$form.email}</td>
+            </tr>
+        </table>
+        <h3>사업자 정보</h3>
+        <table border="1" summary="">
+            <caption>사업자 정보</caption>
+            <tr class="first">
+                <th scope="row">{$form_label.company_type}</th>
+                <td>{$form.company_type}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.company_regno}</th>
+                <td>{$form.company_regno}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.company_name}</th>
+                <td>{$form.company_name}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.president_name}</th>
+                <td>{$form.president_name}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.mall_addr}</th>
+                <td>{$form.mall_addr}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.company_condition}</th>
+                <td>{$form.company_condition}</td>
+            </tr>
+            <tr>
+                <th scope="row">{$form_label.company_line}</th>
+                <td>{$form.company_line}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="btnArea">
+        <button type="submit" class="btnStrong">확인하기</button>
+    </div>
+</div>

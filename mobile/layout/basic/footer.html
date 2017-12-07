@@ -1,0 +1,109 @@
+<footer module="layout_footerPackage">
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/css/module/layout/footerPackage.css)-->
+    <div class="footerMenu">
+        <p module="layout_info">
+            <span class="left">
+                <a href="tel:{$phone}" class="btnUtil typeTel">고객센터 <strong>{$phone}</strong></a>
+            </span>
+            <a href="#wrap" class="btnUtil typeTop">맨위로</a>
+        </p>
+        <p class="util">
+            <span class="left">
+                <a href="/shopinfo/guide.html" class="btnUtil">이용안내</a>
+                <a href="/shopinfo/customer.html" class="btnUtil">고객센터</a>
+                <a href="/board/consult/list.html" class="btnUtil">1:1문의</a>
+            </span>
+            <a href="#none" onclick="javascript:isPCver();" class="btnUtil">PC버전</a>
+        </p>
+        <ul class="policy" style="color:#fff">
+            <li><a href="/shopinfo/company.html">회사소개</a></li>
+            <li><a href="/member/mall_agreement.html">이용약관</a></li>
+            <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+        </ul>
+    </div>
+    <address module="Layout_footer">
+        <div class="footerInfo">
+            <dl>
+                <dt>상점명</dt>
+                <dd>{$mall_name}</dd>
+            </dl>
+            <dl>
+                <dt>대표이사</dt>
+                <dd><a href="mailto:{$email}">{$president_name}</a></dd>
+            </dl>
+            <dl>
+                <dt>대표전화</dt>
+                <dd>{$phone}</dd>
+            </dl>
+            <dl>
+                <dt>주소</dt>
+                <dd>{$mall_addr1}<br>{$mall_addr2}</dd>
+            </dl>
+            <dl>
+                <dt>사업자등록번호</dt>
+                <dd>{$company_regno}</dd>
+            </dl>
+            <dl>
+                <dt>통신판매업신고</dt>
+                <dd>{$network_regno}</dd>
+            </dl>
+            <dl>
+                <dt>개인정보관리책임</dt>
+                <dd><a href="mailto:{$cpo_email}">{$cpo_name}</a></dd>
+            </dl>
+            <dl>
+                <dt>호스팅제공</dt>
+                <dd>심플렉스인터넷(주)</dd>
+            </dl>
+        </div>
+    </address>
+    <p class="copyright">Copyright&copy; 2014 CoverStory. All Rights Reserved.</p>
+</footer>
+<div id="progressPaybar" style="display:none;">
+    <!-- 배경 -->
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <!-- 진행바 -->
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+<div module="Layout_multishopShipping">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <div class="worldshipLayer">
+        <h2>WORLD SHIPPING</h2>
+        <div class="content">
+            <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+            <div class="select">
+                <select module="Layout_multishopShippingCountrylist">
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                </select>
+            </div>
+            <div class="select">
+                <select module="Layout_multishopShippingLanguagelist">
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                </select>
+            </div>
+        </div>
+        <div class="btnArea type2">
+            <a href="#none" class="btnSubmit">GO</a>
+        </div>
+        <a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_close_gray.png" width="15" height="15" alt="close"></a>
+    </div>
+</div>
+<div class="btnTop" id="btnTop">
+    <a href="#">맨위로</a>
+</div>
+<div module="mobilequick_display">
+    {$quick_link}
+    {$quick_button}
+</div>

@@ -1,0 +1,284 @@
+.section-log-in {
+
+    .log-in-wrap {
+      width: 90%;
+
+      .xans-member-login {
+        border-radius: 10px;
+        width: 100%;
+        background: #fafafa;
+        padding: 30px 15px;
+        margin: 100px auto;
+
+        .memberArea {
+          border: none;
+          width: 100%;
+          text-align: center;
+
+          legend {
+            padding: 20px;
+            @extend .font-ubuntu;
+            font-size: 2em;
+            font-weight: 600;
+          }
+
+          label.input-area {
+            margin: 0 auto 10px;
+            padding: 0 10px;
+            width: 100%;
+            background: #fff;
+            border-radius: 5px;
+            line-height: 54px;
+
+            span {
+              font-size: 1.1em;
+              font-weight: 600;
+              color: #757575;
+              padding-top: 15px;
+              margin-left: 10px;
+            }
+
+            #member_id {
+              font-weight: 400;
+            }
+
+          }
+
+          p.security {
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            color: #333333;
+            @extend .font-nanum-square;
+
+            label {
+              margin-right: 20px;
+              background-color: transparent;
+              line-height: 25px;
+              font-size: 1em;
+              font-weight: 600;
+              color: #333333;
+              @extend .font-nanum-square;
+
+            }
+          }
+
+          button.btnLogin {
+            position: static;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fafafa;
+            padding: 10px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 1.1em;
+
+          }
+
+          ul.find-account {
+            padding: 20px 0;
+            width: 100%;
+            margin: 0 auto;
+
+            li {
+              padding: 0 0 0 13px;
+            }
+
+            li:last-child {
+              float: right;
+            }
+          }
+
+          ul.snsArea {
+            width: 100%;
+            padding: 20px 0;
+
+            li {
+              width: 100%;
+              margin: 0 auto;
+              a {
+                @extend .font-nanum-square;
+                display: block;
+                margin: 5px 0;
+                border-radius: 5px;
+                width: 100%;
+                color: #fafafa;
+                padding: 10px;
+                font-weight: 400;
+
+              }
+            }
+          }
+
+          .link {
+            padding: 25px 10px 0;
+            background: none;
+          }
+
+          a.btnEm {
+            position: static;
+            background: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fafafa;
+            padding: 10px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 1.1em;
+            display: block;
+            margin: 20px 0;
+
+          }
+
+        }
+
+      }
+
+      .xans-myshop-orderhistorynologin {
+
+        dl {
+          margin: 0 auto 10px;
+          background: #fff;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          height: 95px;
+          line-height: 54px;
+
+          &.order-no {
+            height: 150px;
+          }
+
+
+          dt {
+            width: 100%;
+            font-weight: 600;
+            color: #757575;
+            padding-top: 18px;
+            text-align: left;
+            margin-left: 30px;
+
+          }
+          dd {
+            width: 100%;
+            margin-left: 0;
+
+            input {
+              border: none;
+              padding: 0;
+              height: 1rem;
+            }
+
+            #order_name {
+              width: 100%;
+            }
+
+            #order_password {
+              width: 100%;
+            }
+
+            #order_id1 {
+              width: 50%;
+            }
+
+            #order_id2 {
+              width: 40%;
+            }
+
+          }
+        }
+      }
+
+  }
+
+
+
+  @media #{$medium-and-up} { // 640
+
+      .log-in-wrap {
+
+        .xans-member-login {
+          border-radius: 10px;
+          width: 450px;
+        }
+
+        .xans-myshop-orderhistorynologin {
+
+          dl {
+
+            dt {
+              width: 45%;
+            }
+            dd {
+              padding: 0 20px;
+
+            }
+          }
+        }
+
+      }
+
+
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+    .log-in-wrap {
+
+      .xans-myshop-orderhistorynologin {
+
+        dl {
+          height: 62px;
+
+          dt {
+            width: 30%;
+            margin-left: 15px;
+          }
+          dd {
+            width: 60%;
+            margin-left: 15px;
+
+            input {
+
+            }
+
+            #order_name {
+              width: 100%;
+            }
+
+            #order_password {
+              width: 100%;
+            }
+
+            #order_id1 {
+              width: 50%;
+            }
+
+            #order_id2 {
+              width: 40%;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+
+  }
+
+
+}
+
+
+
+

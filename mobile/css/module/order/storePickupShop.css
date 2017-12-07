@@ -1,0 +1,11 @@
+#popup { min-width:320px; }
+#popup div.wrap { background:#f1f1f1; }
+
+.wrap .shopInfo { padding:14px; border:1px solid #d5d5d5; border-bottom:0; font-size:13px; line-height:1.4em; background:#f1f1f1; }
+.wrap ul { margin:0 0 14px; border:1px solid #d5d5d5; font-size:13px; }
+.wrap ul li { overflow:hidden; padding:12px 14px 12px 109px; border-top:1px solid #ececec; line-height:1.4em; background:#fff; }
+.wrap ul li:first-child { border:0; }
+.wrap ul li .btnTel { margin:-6px 0 0 20px; padding:7px 10px 7px 28px; border:1px solid #d5d5d5; border-radius:2px; background:#f1f1f1 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_tel.png") no-repeat 10px center; background-size:8px 13px; }
+.wrap ul li strong { float:left; margin-left:-95px; color:#757575; font-weight:normal; }
+.wrap ul li.map { overflow:hidden; padding:0; border-top:1px solid #ececec; line-height:1.4em; background:#fff; }
+.wrap ul li.map img { max-width:100%; }

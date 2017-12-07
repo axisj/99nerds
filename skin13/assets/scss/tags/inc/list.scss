@@ -1,0 +1,285 @@
+.container-board{
+  padding: 50px;
+}
+
+.notice-board {
+  font-size: 1em;
+
+  $list-header-background: #eeeeee;
+  $list-body-background: #fff;
+  $list-important-background: rgba(238, 238, 238, 0.7);
+
+  $list-header-font-color: #717171;
+  $list-body-font-color: #9B9B9B;
+  $list-button-color: #333333;
+  $list-white-font-color: #fafafa;
+
+  .xans-board-title-1002 {
+    .titleArea {
+      h2 {
+        font {
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  .list-wrap {
+    .boardSort {
+      padding-bottom: 30px;
+      width: 130px;
+    }
+
+    table {
+
+      thead.list-header {
+
+        @extend .font-ubuntu;
+        border-bottom: 0;
+
+        .xans-board-listheader {
+          border-top: 0;
+          border-bottom: 0;
+          border-radius: 10px 10px 0 0;
+        }
+
+        tr {
+          background-color: $list-header-background;
+
+          .list-header-no {
+            border-radius: 5px 0 0 0;
+
+          }
+
+          .list-header-hit {
+            border-radius: 0 5px 0 0;
+
+          }
+
+
+          th {
+            border-radius: 0;
+            text-align: center;
+            color: $list-header-font-color;
+            width: 10%;
+
+          }
+
+
+          .list-header-no {
+
+          }
+
+          .list-header-title {
+            width: 50%;
+          }
+
+          .list-header-name {
+            width: 20%;
+          }
+
+          .list-header-date {
+            width: 20%;
+          }
+
+          .list-header-hit {
+
+          }
+
+        }
+      }
+
+      tbody.list-body {
+        background-color: $list-body-background;
+
+        tr {
+          td {
+            text-align: center;
+          }
+
+        }
+
+        .list-important-body {
+
+          tr.list-important {
+            background-color: $list-important-background;
+
+            td {
+              border-radius: 0;
+              text-align: center;
+            }
+
+          }
+
+        }
+
+        .list-body {
+          background-color: $list-body-background;
+
+          tr {
+            td {
+              border-top-right-radius: 0;
+              border-top-left-radius: 0;
+              text-align: center;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    .buttonArea {
+      margin: 0 20px;
+
+      span.gRight {
+        //background-color: $list-button-color;
+        @extend .font-ubuntu;
+        padding: 10px;
+       //border-radius: 5px;
+
+        a.btnSubmitB {
+          color: $list-white-font-color;
+
+        }
+      }
+    }
+
+    #boardSearchForm {
+      display: block;
+
+      .mid-0 {
+
+        fieldset.list-search {
+          border: none;
+          margin: 0;
+          padding: 0;
+          p {
+            text-align: center;
+            select {
+              width: auto;
+              height: 30px;
+              margin-right: 10px;
+              background-color: $list-body-background;
+            }
+
+            a.btnEm {
+              @extend .font-ubuntu;
+              height: 30px;
+              padding: 10px;
+              background-color: $list-button-color;
+              color: $list-white-font-color;
+              border-radius: 5px;
+              margin-right: 10px;
+            }
+
+            input {
+              width: 150px;
+              height: 30px;
+              box-shadow: none;
+              border: 1px solid #eeeeee;
+              border-radius: 5px;
+              margin-right: 10px;
+              background-color: $list-body-background;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .paginate {
+    margin: 0 auto;
+    display: table;
+    padding: 30px;
+
+    p {
+      display: table;
+      float: left;
+      margin: 0;
+
+      img {
+        width: 25px;
+
+      }
+    }
+
+    ol {
+      display: table;
+      float: left;
+      -webkit-margin-after: 0;
+      -webkit-margin-before: 0;
+      padding: 0;
+      height: 25px;
+      line-height: 25px;
+
+      li {
+        float: left;
+        list-style-type: none;
+        padding: 0 10px;
+        background: #fff;
+
+        a {
+          @extend .font-ubuntu;
+          color: #717171;
+          font-size: 0.8em;
+        }
+      }
+
+    }
+  }
+
+  //mobile
+  @media #{$medium-and-up} { // 640
+
+
+
+  }
+
+  // table
+  @media #{$large-and-up} { // 993
+
+    .list-wrap {
+
+      .buttonArea {
+        display: inline-block;
+        margin: 0 20px;
+      }
+
+      #boardSearchForm {
+        float: right;
+        margin: 0;
+
+        .mid-0 {
+
+          fieldset.list-search {
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+
+  }
+
+  // desktop
+  @media #{$extra-large-and-up} { // 1200
+
+  }
+
+}
+
+

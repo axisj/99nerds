@@ -1,0 +1,64 @@
+<!--@layout(/layout/basic/layer.html)-->
+<div module="gift_select">
+    <!--@css(/css/module/order/gift_select.css)-->
+    <h2>사은품 선택</h2>
+
+    <div class="warp">
+        <ul module="gift_point">
+            <li>사은품 선택 가능 포인트 : <strong>{$able_point} 점</strong></li>
+            <li>사용 포인트 : <strong>{$use_point} 점</strong></li>
+            <li>총 합계 사은품 포인트 : <strong>{$total_point} 점</strong></li>
+        </ul>
+        <div class="giftList">
+            <!-- 참고: 상품 반복 -->
+            <div class="prdInfo">
+                {$product_choice}
+                <div class="description">
+                    <p class="prdImg"><img src="{$gift_image}" alt="" /></p>
+                    <strong class="prdName" title="상품명">{$product_name}</strong>
+                    <ul class="info">
+                        <li class="point">포인트 <strong>{$gift_price} 점</strong></li>
+                        <li>{$option1}</li>
+                        <li>{$option2}</li>
+                        <li>
+                            <span class="amount {$display_amount|display}">
+                                <button type="button" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29" alt="감소"></button>
+                                {$product_amount}
+                                <button type="button" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" alt="증가"></button>
+                            </span>
+                            <span class="{$display_choice_single_btn|display}"><button type="button" onclick="{$action_choice_single}" class="btnStrong">선택</button></span>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- //참고 -->
+            <!-- 참고: 상품 반복 -->
+            <div class="prdInfo">
+                {$product_choice}
+                <div class="description">
+                    <p class="prdImg"><img src="{$gift_image}" alt="" /></p>
+                    <strong class="prdName" title="상품명">{$product_name}</strong>
+                    <ul class="info">
+                        <li class="point">포인트 <strong>{$gift_price} 점</strong></li>
+                        <li>{$option1}</li>
+                        <li>{$option2}</li>
+                        <li>
+                            <span class="amount {$display_amount|display}">
+                                <button type="button" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_down.jpg" width="33" height="29" alt="감소"></button>
+                                {$product_amount}
+                                <button type="button" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_quantity_up.jpg" width="33" height="29" alt="증가"></button>
+                            </span>
+                            <span class="{$display_choice_single_btn|display}"><button type="button" onclick="{$action_choice_single}" class="btnStrong">선택</button></span>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- //참고 -->
+        </div>
+    </div>
+
+    <div class="btnArea">
+        <button type="button" class="btnStrong {$display_choice_multi_btn|display}" onclick="{$action_gift_select}">선택</button>
+        <button type="button" class="btnNormal" onclick="{$action_gift_cancel}">취소</button>
+    </div>
+
+    <a href="#none" class="btnClose" onclick="{$action_gift_close}">닫기</a>
+</div>

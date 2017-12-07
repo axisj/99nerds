@@ -1,0 +1,17 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>고객센터</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="Layout_Info">
+    <!--@css(/css/module/layout/info.css)-->
+    <ul>
+        <li><strong>전화 문의</strong><a href="tel:{$phone}" class="btnTel">{$phone}</a></li>
+        <li><strong>이메일문의</strong>{$email}</li>
+        <li><strong>팩스 문의</strong>{$fax}</li>
+        <li><strong>고객센터<br>운영시간</strong>{$runtime}</li>
+    </ul>
+</div>

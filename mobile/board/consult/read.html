@@ -1,0 +1,67 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ReadPackage_9">
+    <!--@css(/css/module/board/readPackage_9.css)-->
+    <div id="titleArea" module="board_title_9">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_read_9">
+        <!--
+            $delete_success_url = /board/consult/list.html
+        -->
+        <div class="boardRead">
+            <p class="title">
+                <strong class="label hide">제목</strong>
+                <h3>{$subject}</h3>
+            </p>
+            <div class="info">
+                <p class="writer">
+                    <strong class="label hide">작성자</strong>
+                    {$writer}
+                    <span class="{$config.display_ip|display}">(ip:{$ip})</span>
+                </p>
+                <p class="regdate {$config.use_date|display}">
+                    <strong class="label hide">문의일시</strong>
+                    {$write_date}
+                </p>
+                <p class="comment">
+                    <strong class="label">답변여부</strong>
+                    {$consult}
+                </p>
+            </div>
+            <div class="btnArea">
+                <span class="gRight">
+                    <a href="/board/consult/modify.html{$param_modify}" class="btnNormal {$modify_button_auth|display}">수정</a>
+                    <button type="button" class="btnNormal {$delete_button_auth|display}" onclick="{$action_delete}">삭제</button>
+                </span>
+            </div>
+            <div class="content">
+                <strong class="label hide">문의내용</strong>
+                {$content_image}<p>{$content}</p>
+            </div>
+        </div>
+        <div class="boardRead typeReply {$display_consult_reply}">
+            <h3>답변내용</h3>
+            <div class="info">
+                <p class="writer">
+                    <strong class="label hide">답변자</strong>
+                    {$reply_name}
+                </p>
+                <p class="regdate {$config.use_date|display}">
+                    <strong class="label hide">답변일시</strong>
+                    {$reply_date}
+                </p>
+            </div>
+            <div class="content">
+                <p>{$reply_content}</p>
+            </div>
+        </div>
+        <p class="waitMessage {$display_consult_noreply}">빠른시간내에 답변드리겠습니다.<br /> 잠시만 기다려 주세요!</p>
+        <div class="gRight">
+            <a href="/board/consult/reply.html{$param_reply}" class="btnStrong {$config.is_admin|display} {$reply_button_auth|display}">답변쓰기</a>
+        </div>
+    </div>
+</div>

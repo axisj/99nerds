@@ -1,0 +1,19 @@
+/* 게시판 전체 공통 */
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* read */
+.xans-board-read table {border:0; border-top:1px solid #444;}
+.xans-board-read table th, 
+.xans-board-read table td {padding:10px; font-size:13px; font-weight:400; border:0; border-bottom:1px solid #ddd;}
+.xans-board-read table td .info { position:relative; }
+.xans-board-read table td .hit { position:absolute; top:0; right:15px; text-align:right; }
+.xans-board-read table td .gMin60 { display:inline-block; min-width:60px; }
+.xans-board-read table td .detail { padding:17px 17px 15px; }
+.xans-board-read table td .detail ol,
+.xans-board-read table td .detail ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-read table td .detail ol li { list-style:decimal; }
+.xans-board-read table td .detail ul li { list-style:disc; }
+.xans-board-read table td .attach a { padding:0 0 0 12px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/ico_attach1.gif") no-repeat 0 0; }
+
+/* 상품게시판 - 선택상품 */
+.xans-board-product .prdThumb { float:left; margin:0 15px 0 0; }

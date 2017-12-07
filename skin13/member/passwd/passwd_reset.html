@@ -1,0 +1,36 @@
+<!--@layout(/layout/99nerds/layout-default.html)-->
+<!--@import(/layout/99nerds/inc/head.html)-->
+<!--@import(/layout/99nerds/inc/account-visual.html)-->
+
+<section class="section-log-in">
+    <div class="container">
+
+        <div module="member_passwordreset" class="mid-0">
+            <!--@css(/css/module/member/passwd_reset.css)-->
+
+            <fieldset class="memberArea">
+                <legend>비밀번호 재설정</legend>
+                <ul>
+                    <li><strong class="term"><span class="icoDot"></span> 아이디</strong><span class="desc"><strong
+                            class="txtStrong12B">{$member_id}</strong></span></li>
+                    <li>
+                        <strong class="term"><span class="icoDot"></span> 새 비밀번호</strong>
+                        <div class="desc">
+                            {$form.new_passwd}
+                            <div class="txtSub11 gSingle">
+                                {$passwd_type_desc}
+                            </div>
+                        </div>
+                    </li>
+                    <li><strong class="term"><span class="icoDot"></span> 새 비밀번호 확인</strong><span class="desc">{$form.new_passwd_confirm}</span>
+                    </li>
+                </ul>
+            </fieldset>
+            <p class="buttonArea">
+                <a href="#none" class="btnEmM" onclick="{$action_func_password_reset_cancel}">취소</a>
+                <a href="#none" class="btnSubmitM" onclick="{$action_func_password_reset_submit}">비밀번호 변경</a>
+            </p>
+        </div>
+
+    </div>
+</section>

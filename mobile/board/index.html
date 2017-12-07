@@ -1,0 +1,32 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div id="titleArea">
+    <h2>게시판</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+    </span>
+</div>
+
+<div module="board_mainPackage">
+    <!--@css(/css/module/layout/boardInfo.css)-->
+    <div module="Layout_BoardInfo">
+        <ul>
+            <li><a href="{$link_board_list}">{$board_name}</a></li>
+            <li><a href="{$link_board_list}">{$board_name}</a></li>
+            <li><a href="{$link_board_list}">{$board_name}</a></li>
+            <li><a href="{$link_board_list}">{$board_name}</a></li>
+        </ul>
+    </div>
+
+    <div module="Layout_opdiaryBanner">
+        <ul>
+            <li><a href="/board/opdiary/list.html?board_no=11">운영일지</a></li>
+        </ul>
+    </div>
+
+    <div module="Layout_sosBanner">
+        <ul>
+            <li><a href="/board/urgency/urgency.html">긴급문의</a></li>
+        </ul>
+    </div>
+</div>

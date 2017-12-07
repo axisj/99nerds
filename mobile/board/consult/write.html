@@ -1,0 +1,81 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_writePackage_9">
+    <!--@css(/css/module/board/writePackage.css)-->
+    <div id="titleArea" module="board_title_9">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_write_9">
+        <!--
+            $write_success_url = /board/consult/list.html
+        -->
+        <div class="boardWriteArea">
+            <div class="boardWrite">
+                <table border="1" summary="">
+                    <caption>글쓰기 폼</caption>
+                    <colgroup>
+                        <col style="width:100px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이메일</th>
+                            <td>
+                                {$form.email}
+                                <p class="grid">답변여부를 메일로 받으시겠습니까?</p>
+                                <p class="grid">{$form.cons_re}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="write">
+                                {$form.content}
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="{$config.use_attach|display}">
+                        <tr>
+                            <th scope="row">첨부파일1</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일2</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일3</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일4</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일5</th>
+                            <td>{$form.attach_file}</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="{$config.use_captcha_write|display}">
+                            <th scope="row">자동등록방지<br>보안문자</th>
+                            <td>
+                                {$captcha_image} {$captcha_refresh}
+                                <p><span>{$form.captcha}</span> 영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btnArea type2">
+                <button type="button" class="btnSubmit" onclick="{$action_write}">등록</button>
+                <a href="{$link_board_list}" class="btnEm">취소</a>
+            </div>
+        </div>
+    </div>
+</div>

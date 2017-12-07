@@ -1,0 +1,15 @@
+<!--@layout(/layout/basic/popup.html)-->
+
+<div module="link_shortcut" class="mid-0">
+    <!--@css(/css/module/link/shortcut.css)-->
+    <div class="header">
+        <h1>{$shortcut_name}</h1>
+    </div>
+    <div class="content">
+        <p class="info">바탕화면에 <strong>바로가기 아이콘</strong>이 설치됩니다. <br />설치하시겠습니까?</p>
+        <div class="buttonArea">
+            <button type="button" class="btnSubmitB" onclick="{$action_create_shortcut}">설치하기</button>
+            <button type="button" class="btnNormalB" onclick="{$action_close}">취소하기</button>
+        </div>
+    </div>
+</div>

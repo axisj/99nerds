@@ -1,0 +1,45 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Order_BoardListPackage">
+    <!--@css(/css/module/order/boardListPackage.css)-->
+    <h2>주문정보선택</h2>
+    <div class="content">
+        <div class="boardList">
+            <ul module="Order_BoardList">
+                <li>
+                    <p>
+                        <span class="thumb"><img src="{$image_tiny}" alt=""></span>
+                        <span class="prdInfo"><strong class="name">{$product_name}</strong><strong>{$product_price}</strong></span>
+                    </p>
+                    <ul>
+                        <li>주문번호 : {$order_id}</li>
+                        <li>주문일시 : {$order_date}</li>
+                    </ul>
+                    <button type="button" onclick="{$action_product_select}" class="btnStrong">선택</button>
+                </li>
+                <li>
+                    <p>
+                        <span class="thumb"><img src="{$image_tiny}" alt=""></span>
+                        <span class="prdInfo"><strong class="name">{$product_name}</strong><strong>{$product_price}</strong></span>
+                    </p>
+                    <ul>
+                        <li>주문번호 : {$order_id}</li>
+                        <li>주문일시 : {$order_date}</li>
+                    </ul>
+                    <button type="button" onclick="{$action_product_select}" class="btnStrong">선택</button>
+                </li>
+            </ul>
+        </div>
+
+        <div module="Order_BoardPaging" class="paginate typeList">
+            <p class="prev"><a href="{$param_before}"><span>이전 페이지</span></a></p>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <p class="next"><a href="{$param_next}"><span>다음 페이지</span></a> </p>
+        </div>
+    </div>
+</div>

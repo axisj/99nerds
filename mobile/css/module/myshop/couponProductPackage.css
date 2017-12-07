@@ -1,0 +1,33 @@
+body#popup { padding-bottom:7px; background:#f1f1f1; }
+body#popup .wrap { background:#f1f1f1; padding:7px 7px 0; }
+
+/* 상품 검색 */
+.xans-myshop-couponproductsearch { position:relative; display:block; min-width:130px; padding:0 14px 7px 14px; border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-couponproductsearch p { margin:7px 0 0; }
+.xans-myshop-couponproductsearch #search { width:50%; margin:0 0 0 4px; }
+
+/* 리스트 */
+.xans-myshop-couponproductlist { margin:7px 0 0; border:1px solid #d5d5d5; border-bottom:none; }
+.xans-myshop-couponproductlist .prdInfo .descriptions .name a { font-size:13px; color:#4a5164; }
+.xans-myshop-couponproductlist .prdInfo ul.info { padding:0; font-size:11px; line-height:11px; }
+.xans-myshop-couponproductlist .prdInfo ul.info li { margin:7px 0 0; }
+.xans-myshop-couponproductlist .prdInfo ul.info .manu { font-size:11px; color:#757575; }
+.xans-myshop-couponproductlist .empty { padding:30px; color:#757575; font-size:12px; text-align:center; }
+
+.xans-myshop-couponproductlist { margin:7px 0 0; border:1px solid #d5d5d5; border-bottom:none; }
+.xans-myshop-couponproductlist .prdInfo { padding:7px 14px 14px; border-bottom:1px solid #d5d5d5; background-color:#fff; }
+.xans-myshop-couponproductlist .description { position:relative; min-height:90px; padding:7px 0 0 84px; }
+.xans-myshop-couponproductlist .description .prdImg { position:absolute; left:0; top:7px; z-index:10; width:73px; }
+.xans-myshop-couponproductlist .description .prdImg img { width:100%; border:1px solid #ececec; }
+.xans-myshop-couponproductlist .description .prdName { display:block; }
+.xans-myshop-couponproductlist .description .prdName a { font-size:13px; color:#4a5164; }
+.xans-myshop-couponproductlist .description ul.info { padding:0; font-size:11px; line-height:11px; }
+.xans-myshop-couponproductlist .description ul.info li { margin:7px 0 0; }
+.xans-myshop-couponproductlist .description ul.info .manu { font-size:11px; color:#757575; }
+.xans-myshop-couponproductlist .empty { padding:30px; color:#757575; font-size:12px; text-align:center; }
+
+.xans-myshop-couponproductpaging.paginate.typeList { margin:14px 0 0; background:none; }
+
+.xans-myshop-couponproductpackage .title { overflow:hidden; margin:5px 0; }
+.xans-myshop-couponproductpackage .title .result { float:left; padding:5px 0 0 6px; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_dot.png") no-repeat 1px 12px; background-size:2px auto; }
+.xans-myshop-couponproductpackage .title select { float:right; }
