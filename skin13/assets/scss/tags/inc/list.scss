@@ -25,6 +25,7 @@
   }
 
   .list-wrap {
+
     .boardSort {
       padding-bottom: 30px;
       width: 130px;
@@ -131,13 +132,9 @@
     }
 
     .buttonArea {
-      margin: 0 20px;
 
       span.gRight {
-        //background-color: $list-button-color;
         @extend .font-ubuntu;
-        padding: 10px;
-       //border-radius: 5px;
 
         a.btnSubmitB {
           color: $list-white-font-color;
@@ -249,7 +246,7 @@
 
       .buttonArea {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 3px;
       }
 
       #boardSearchForm {

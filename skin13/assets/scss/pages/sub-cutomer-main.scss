@@ -7,7 +7,7 @@
   .divider-stroke {
     width: 1px;
     height: 100px;
-    background-color: #7ED321;
+    background-color: #d0d0d0;
     margin: 170px auto 0;
     display: none;
 
@@ -51,12 +51,10 @@
 
         .sns-link {
           font-size: 2em;
-
-          &:hover {
-            color: #4A90E2;
-          }
-
+          display: inline-block;
+          margin-top: 8px;
         }
+
         .mail_link {
           font-size: 0.9em;
 
@@ -71,15 +69,17 @@
 
 
   .section-consult {
-    background-color: #252934;
+    background-color: #ececec;
     width: 100%;
     height: auto;
-    color: #fafafa;
+    color: #333333;
     font-weight: 600;
 
     .consult-wrap {
       text-align: center;
       padding: 50px 0;
+      width: 50%;
+      margin: 0 auto;
 
       .icon-wrap {
         width: auto;
@@ -95,22 +95,28 @@
       a {
         @extend .font-ubuntu;
         display: block;
-        color: #fafafa;
+        color: #333333;
         font-size: 1.5em;
         font-weight: 500;
         padding: 15px 0;
 
-        span.ci {
-          color: #7ED321;
-        }
       }
 
       p {
         width: 90%;
-        margin: 0 auto;
-        font-size: 1.2em;
+        margin: 0 auto 20px;
         padding: 0 15px;
-        font-weight: 300;
+        font-size: 1.2em;
+        font-weight: 400;
+        color: #757575;
+
+        span.go-button {
+          color: #fafafa;
+          background: #55607f;
+          border-radius: 50px;
+          font-weight: 400;
+          padding: 5px 10px;
+        }
       }
     }
   }
@@ -118,8 +124,6 @@
   @media #{$medium-and-up} { // 640
 
     .divider-stroke {
-      width: 1px;
-      height: 100px;
       display: block;
     }
 
@@ -163,8 +167,7 @@
       .contents-wrap {
 
         .consult-wrap {
-          text-align: center;
-          padding: 50px 0;
+          width: 100%;
 
           .icon-wrap {
             width: auto;

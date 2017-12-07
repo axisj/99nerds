@@ -63,10 +63,13 @@
             margin: auto;
 
             .xans-product-image {
+
               h1 {
-                @extend .font-ubuntu; !important;
+
+                @extend .font-ubuntu;
                 font-size: 3em !important;
               }
+
             }
 
             #totalProducts {
@@ -165,6 +168,7 @@
               }
 
             }
+
             table.basicTable1 {
               td, th {
                 span {
@@ -224,15 +228,13 @@
 
       .xans-product-additional {
         padding: 10px;
-        border: 1px solid #D5D5D5;
-        border-radius: 10px;
         margin: 50px 5px;
 
         ul.menu {
           text-align: center;
           font-size: 1em;
           padding-bottom: 10px;
-          border-bottom: 1px solid #D5D5D5;
+          border-bottom: 1px solid #E7E7E7;
           background-color: #fafafa;
 
           li {
@@ -410,6 +412,32 @@
 
         }
 
+        #prdQnA {
+          .board {
+            .xans-product-qna {
+              .tableTheme {
+                table {
+                  tbody {
+                    .view {
+                      .buttonArea {
+                        span {
+                          a {
+                            float: right;
+                            margin-bottom: 10px;
+                            padding: 5px 10px;
+                            background: #757575;
+
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
       }
 
     }
@@ -566,16 +594,11 @@
 
         .xans-product-additional {
           padding: 20px;
-          border: 1px solid #D5D5D5;
-          border-radius: 10px;
-          margin: 50px 5px;
 
           ul.menu {
             text-align: center;
             font-size: 1em;
             padding-bottom: 10px;
-            border-bottom: 1px solid #D5D5D5;
-            background-color: #fafafa;
 
             li {
               border-radius: 5px;
