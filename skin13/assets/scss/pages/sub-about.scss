@@ -374,7 +374,8 @@
   }
 
   .section-axisj-services {
-    background-color: #000000;
+    background: #000000 url("/assets/images/sub-about/history-space-bg.png") no-repeat center center;
+    background-size: 90%;
     width: 100%;
     height: auto;
     color: #fff;
@@ -412,12 +413,12 @@
         width: 100%;
         height: 220px;
         margin-bottom: 30px;
-        background: #1e1e1e;
+        background: #333;
         border-radius: 5px;
         text-align: center;
         font-weight: 500;
         position: relative;
-        border: 1.5px solid #f8e71c;
+        border: 1.5px solid #1e1e1e;
 
         .service-logo-image-wrap {
           width: 60px;
@@ -429,7 +430,6 @@
           .service-logo-image {
             max-width: 100%;
             vertical-align: middle;
-
           }
         }
 
@@ -446,12 +446,11 @@
             color: #9B9B9B;
             font-size: 0.8em;
           }
-
         }
 
         .service-link-button {
           display: block;
-          background: #F8E71C;
+          background: #1e1e1e;
           width: 100%;
           height: 40px;
           position: absolute;
@@ -459,15 +458,11 @@
           line-height: 40px;
 
           span {
-            color: #333333;
+            color: #fafafa;
             font-size: 0.9em;
             font-weight: 600;
-
           }
 
-          span.ci {
-
-          }
         }
 
       }
