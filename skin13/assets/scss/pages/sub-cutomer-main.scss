@@ -7,7 +7,7 @@
   .divider-stroke {
     width: 1px;
     height: 100px;
-    background-color: #d0d0d0;
+    background-color: #bac5e4;
     margin: 170px auto 0;
     display: none;
 
@@ -43,24 +43,27 @@
         font-size: 1.8em;
         padding: 15px 0;
         font-weight: 900;
-
       }
 
       p {
         font-size: 1.2em;
+        color: #757575;
 
         .sns-link {
           font-size: 2em;
           display: inline-block;
           margin-top: 8px;
+
         }
 
         .mail_link {
           font-size: 0.9em;
+          color: #757575;
 
           &:hover {
             color: #4A90E2;
           }
+
         }
 
       }
@@ -92,7 +95,7 @@
         }
       }
 
-      a {
+      .consult-title {
         @extend .font-ubuntu;
         display: block;
         color: #333333;
@@ -110,12 +113,13 @@
         font-weight: 400;
         color: #757575;
 
-        span.go-button {
+        .go-button {
+          display: inline-block;
           color: #fafafa;
           background: #55607f;
           border-radius: 50px;
           font-weight: 400;
-          padding: 5px 10px;
+          padding: 2px 10px;
         }
       }
     }
@@ -181,12 +185,7 @@
           }
 
           a {
-            display: block;
 
-            padding: 15px 0;
-
-            span.ci {
-            }
 
           }
 
