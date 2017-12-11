@@ -93,7 +93,7 @@
 .xans-product-detail .image_zoom_large .image_zoom_large_relative { position:relative; }
 .xans-product-detail .image_zoom_large .image_zoom_large_relative #zoom_image { position:absolute; z-index:99; }
 
-.xans-product-detail #NaverChk_Button { clear:both; margin:10px 0 0; float:right; }
+.xans-product-detail #NaverChk_Button { clear:both; margin:10px auto; }
 
 .xans-product-detail #divNvPointInfo { display:none; position:absolute; z-index:99; width:245px; padding:10px; background:#fff; border:1px solid #5B9761; }
 .xans-product-detail #divNvPointInfo a { display:block; padding:5px 0 0; }
