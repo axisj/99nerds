@@ -207,7 +207,12 @@
 
             }
 
+            .btnNormalL {
+              float: right;
+            }
+
             a {
+              float: right;
               display: block;
               text-align: center;
               width: 100%;
@@ -217,7 +222,6 @@
               border-radius: 50px;
               color: #fafafa;
               letter-spacing: 0.1em;
-
             }
 
           }
@@ -591,10 +595,6 @@
           }
 
 
-          #NaverChk_Button {
-            float: right;
-          }
-
         }
 
         .xans-product-additional {
@@ -689,83 +689,18 @@
             .infoArea {
               float: right;
 
-              #totalProducts {
-
-                table {
-
-                  thead {
-
-                  }
-
-                  tbody {
-
-                    tr {
-                      td {
-
-                        a {
-
-                          img {
-
-                          }
-                        }
-
-                        span.quantity {
-
-                          input#quantity {
-
-                          }
-                        }
-                      }
-
-                      td.txtStrong12B {
-
-                        span {
-
-                        }
-
-                      }
-                    }
-
-                    tr.quantity-title {
-
-                      td:first-child {
-
-                      }
-
-                      td:last-child {
-
-                      }
-
-                    }
-                  }
-
-                }
-
-              }
-
             }
 
             .buttonArea {
               float: right;
               margin: 20px auto;
 
-              button {
-
-              }
-              a {
-
-              }
-
-              .btnNormalL {
-
-              }
-
-              .btnEmL {
-
-              }
-
             }
 
+          }
+
+          #NaverChk_Button {
+            float: right;
           }
 
         }
