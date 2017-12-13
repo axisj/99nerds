@@ -6,12 +6,27 @@
 
     .subPrdList {
       width: 100%;
+
+      .title {
+
+        h3 {
+          @extend .font-ubuntu;
+          font-size: 1.5em;
+          font-weight: 600;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+
+      }
+
       ul.prdList {
+
         li.item {
           width: 100%;
           padding: 5px;
           margin: 0;
           overflow: hidden;
+
           .product-list {
             width: 100%;
             background-color: #fff;
@@ -82,7 +97,9 @@
                 span {
                   line-height: 1em;
                   margin: 5px 0;
+                  color: #9B9B9B !important;
                 }
+
                 &.product-price {
                   span {
                     font-size: 19px !important;
@@ -123,7 +140,9 @@
 
           }
         }
+
       }
+
       .function {
         @extend .font-ubuntu;
         width: 100%;
@@ -147,6 +166,7 @@
           }
         }
       }
+
     }
 
     .paginate {
