@@ -10,6 +10,7 @@
   $list-button-color: #333333;
   $list-white-font-color: #fafafa;
 
+  //old-request-page
   .mid-0 {
 
     .notice {
@@ -109,7 +110,6 @@
 
     }
   }
-
   .paginate {
     margin: 0 auto;
     display: table;
@@ -151,6 +151,89 @@
     }
   }
 
+  //renewal-request-page
+  .request-wrap {
+    display: table;
+    width: 100%;
+
+    .request-image-wrap {
+      display: none;
+      width: 50%;
+      height: auto;
+      float: left;
+
+      .request-image {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .request-contents-wrap {
+      width: 100%;
+      height: auto;
+
+      .request-contents {
+        max-width: 100%;
+
+        h3 {
+          @extend .font-ubuntu;
+          font-weight: 600;
+          font-size: 1.9em;
+        }
+
+        p {
+          font-size: 1.1em;
+          padding-top: 15px;
+
+          &:first-child {
+            margin-bottom: 0;
+          }
+
+          &:nth-child(n+1) {
+            margin-top: 0;
+            padding-top: 5px;
+
+          }
+        }
+      }
+    }
+
+    .email-box {
+      padding: 10px;
+      border: 1px solid #7ED321;
+      text-align: center;
+      border-radius: 5px;
+
+      a:hover, active {
+        color: #4A90E2;
+
+        &:visited {
+          color: #8b1014;
+        }
+
+      }
+    }
+
+    .btn-area {
+      margin: 30px auto;
+
+      .request-btn {
+        display: block;
+        color: #fafafa;
+        font-size: 1.1em;
+        @extend .font-mono;
+        text-align: center;
+        background-color: #1E1E1E;
+        padding: 10px 30px;
+        border-radius: 50px;
+
+      }
+    }
+
+  }
+
   //mobile
   @media #{$medium-and-up} { // 640
 
@@ -185,8 +268,29 @@
       }
     }
 
-  }
+    .request-wrap {
 
+      .request-image-wrap {
+        display: block;
+      }
+
+      .request-contents-wrap {
+        float: right;
+        width: 50%;
+
+        .request-contents {
+          max-width: 330px;
+
+          .btn-area {
+            .request-btn {
+              display: inline;
+            }
+          }
+        }
+
+      }
+    }
+  }
   // table
   @media #{$large-and-up} { // 993
 
@@ -217,5 +321,4 @@
   @media #{$extra-large-and-up} { // 1200
 
   }
-
 }

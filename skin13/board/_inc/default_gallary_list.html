@@ -1,173 +1,120 @@
 <div class="gallary-list-wrap">
+    <div class="container">
+
+        <div module="Board_ListPackage_8" class="mid-0">
+            <!--@css(/css/module/board/listPackage_gallary.css)-->
+            <div module="board_title_8">
+
+                <div class="titleArea">
+                    <h2>{$board_title}</h2>
+                    <div class="block-line"></div>
+                </div>
+
+            </div>
+
+            <div class="boardSort">
+                <span module="board_category_8">{$form.board_category}</span>
+            </div>
 
 
-    <div module="Board_ListPackage_8" class="mid-0">
-        <!--@css(/css/module/board/listPackage_gallary.css)-->
-        <div module="board_title_8">
+            <div class="notice">
+                <div module="board_notice_8">
+                    <!--
+                        $login_page_url = /member/login.html
+                        $deny_access_url = /index.html
+                    -->
+                    <ul>
+                        <li>
+                            <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
+                                                                                onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
+                                                                                alt="" style="width:187px;"/></a>
+                            <div class="description">
+                                <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a
+                                        href="{$link_board_detail}">
+                                    <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                                <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br/>
+                                작성일 : {$write_date}
+                            </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
+                                                                                onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
+                                                                                alt="" style="width:187px;"/></a>
+                            <div class="description">
+                                <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a
+                                        href="{$link_board_detail}">
+                                    <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                                <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br/>
+                                작성일 : {$write_date}
+                            </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div module="board_fixed_8">
+                    <!--
+                        $login_page_url = /member/login.html
+                        $deny_access_url = /index.html
+                    -->
+                    <ul>
+                        <li>
+                            <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
+                                                                                onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
+                                                                                alt="" style="width:187px;"/></a>
+                            <div class="description">
+                                <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a
+                                        href="{$link_board_detail}">
+                                    <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                                <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br/>
+                                작성일 : {$write_date}
+                            </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
+                                                                                onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
+                                                                                alt="" style="width:187px;"/></a>
+                            <div class="description">
+                                <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a
+                                        href="{$link_board_detail}">
+                                    <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
+                                <span class="txtSub11 gTriple">
+                                작성자 : {$member_icon}{$writer}<br/>
+                                작성일 : {$write_date}
+                            </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <div class="titleArea">
-                <h2>{$board_title}</h2>
-                <div class="block-line"></div>
+            <div class="request-wrap">
+                <div class="request-image-wrap"><img class="request-image"
+                                                     src="/assets/images/sub-customer/bill_request.png"
+                                                     alt="bill-request"/>
+                </div>
+                <div class="request-contents-wrap">
+                    <div class="request-contents">
+                        <h3>Request to 99nerds</h3>
+                        <p>원하는 스티커를 제작 요청 하시면</p>
+                        <p>적극 검토하여 상품으로 등록해드립니다.</p>
+                        <div class="email-box">
+                            <a href="mailto:99nerds@naver.com ?subject=스티커 제작 요청합니다.">99nerds@naver.com</a>
+                        </div>
+                        <div class="btn-area"><a href="mailto:99nerds@naver.com ?subject=스티커 제작 요청합니다."
+                                                 class="request-btn">Send e-mail <span
+                                style="color: #F39835;">&#62;</span></a></div>
+
+                    </div>
+                </div>
             </div>
 
         </div>
-
-        <div class="boardSort">
-            <span module="board_category_8">{$form.board_category}</span>
-        </div>
-
-
-        <div class="notice">
-            <div module="board_notice_8">
-                <!--
-                    $login_page_url = /member/login.html
-                    $deny_access_url = /index.html
-                -->
-                <ul>
-                    <li>
-                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
-                                                                            onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                                            alt="" style="width:187px;"/></a>
-                        <div class="description">
-                            <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a
-                                    href="{$link_board_detail}">
-                                <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
-                            <span class="txtSub11 gTriple">
-                                작성자 : {$member_icon}{$writer}<br/>
-                                작성일 : {$write_date}
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
-                                                                            onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                                            alt="" style="width:187px;"/></a>
-                        <div class="description">
-                            <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a
-                                    href="{$link_board_detail}">
-                                <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
-                            <span class="txtSub11 gTriple">
-                                작성자 : {$member_icon}{$writer}<br/>
-                                작성일 : {$write_date}
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div module="board_fixed_8">
-                <!--
-                    $login_page_url = /member/login.html
-                    $deny_access_url = /index.html
-                -->
-                <ul>
-                    <li>
-                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
-                                                                            onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                                            alt="" style="width:187px;"/></a>
-                        <div class="description">
-                            <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a
-                                    href="{$link_board_detail}">
-                                <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
-                            <span class="txtSub11 gTriple">
-                                작성자 : {$member_icon}{$writer}<br/>
-                                작성일 : {$write_date}
-                            </span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}"
-                                                                            onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                                            alt="" style="width:187px;"/></a>
-                        <div class="description">
-                            <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a
-                                    href="{$link_board_detail}">
-                                <strong>{$subject} {$icon_new} {$comment_count}</strong></a></p>
-                            <span class="txtSub11 gTriple">
-                                작성자 : {$member_icon}{$writer}<br/>
-                                작성일 : {$write_date}
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div module="board_list_8" class="gTriple">
-            <!--
-                $count = 12
-                $login_page_url = /member/login.html
-                $deny_access_url = /index.html
-           -->
-            <ul class="prdList column5 wyImgSizeFlex">
-                <li class="item">
-
-                    <a href="read.html{$param_read}"><div class="request-image-wrap"><img src="{$img_src}"
-                                                        onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                        alt="" class="thumb"/></div></a>
-                    {$checkbox}
-                    <a href="read.html{$param_read}">[{$no}] {$subject} {$comment_count}</a>
-                    <span class="txtSub11 gTriple">
-                            작성자 : {$member_icon}{$writer}<br/>
-                            작성일 : {$write_date}
-                        </span>
-
-                </li>
-                <li class="item">
-
-                    <a href="read.html{$param_read}"><div class="request-image-wrap"><img src="{$img_src}"
-                                                        onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'"
-                                                                                        alt="" class="thumb"/></div></a>
-                    {$checkbox}
-                    <a href="read.html{$param_read}">[{$no}] {$subject} {$comment_count}</a>
-                    <span class="txtSub11 gTriple">
-                            작성자 : {$member_icon}{$writer}<br/>
-                            작성일 : {$write_date}
-                        </span>
-
-                </li>
-            </ul>
-        </div>
-        <div class="{$empty_display|display}" module="board_empty_8">
-            <p class="empty">
-                {$empty_message}
-            </p>
-        </div>
-
-
-        <div module="board_ButtonList_8" class="buttonArea {$write_display|display}">
-            <span class="gRight">
-                <a href="/board/gallary/write.html{$param_write}" class="btnSubmitB {$write_display|display}">Write</a>
-            </span>
-        </div>
-
-
-        <div module="board_search_8" class="mid-0">
-
-            <fieldset class="list-search">
-                <p>{$form.search_date} {$form.search_key} {$form.search}
-                    <a href="{$action_search}" class="btnEm">Search</a>
-                </p>
-            </fieldset>
-
-        </div>
-
-
     </div>
-
-    <div module="board_paging_8" class="paginate mid-0">
-        <p><a href="{$param_prev}"><img src="/assets/images/sub-notice/prev.png"
-                                        alt="이전 페이지"/></a>
-        </p>
-        <ol>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
-        </ol>
-        <p><a href="{$param_next}"><img src="/assets/images/sub-notice/next.png"
-                                        alt="다음 페이지"/></a></p>
-
-
-    </div>
-
 
     <!-- 관리자 전용 메뉴 -->
     <div module="board_catemove_8" class="mid-0">

@@ -288,7 +288,7 @@ Contents **************************************
     z-index: 1;
 }
 
-#NNNContents .ctn-button {
+#NNNContents .cta-button {
     vertical-align: middle;
     text-align: center;
     width: auto;
@@ -296,7 +296,7 @@ Contents **************************************
     padding: 10px 0;
     display: table;
 }
-#NNNContents .ctn-button a {
+#NNNContents .cta-button a {
     border: 1px solid #F8E71C;
     color: #fafafa;
     font-size: 1.2rem;
