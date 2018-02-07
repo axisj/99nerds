@@ -161,6 +161,7 @@
       width: 50%;
       height: auto;
       float: left;
+      margin-top: 20px;
 
       .request-image {
         width: 150px;
@@ -178,29 +179,38 @@
         max-width: 100%;
 
         h3 {
-          @extend .font-ubuntu;
+          color: #333;
           font-weight: 600;
-          font-size: 1.9em;
-        }
+          font-size: 1.5em;
 
-        p {
-          font-size: 1.1em;
-          padding-top: 15px;
-
-          &:first-child {
-            margin-bottom: 0;
-          }
-
-          &:nth-child(n+1) {
-            margin-top: 0;
-            padding-top: 5px;
-
+          img {
+            width: 20px;
+            height: auto;
+            margin-right: 15px;
           }
         }
+
+        .request-main-text {
+          margin-top: 30px;
+
+          p {
+            color: #9e9e9e;
+            font-size: 1.1em;
+
+            &:first-child {
+              margin-bottom: 0;
+            }
+            &:nth-child(n+1) {
+
+            }
+          }
+        }
+
       }
     }
 
     .email-box {
+      display: none;
       padding: 10px;
       border: 1px solid #7ED321;
       text-align: center;
@@ -217,7 +227,7 @@
     }
 
     .btn-area {
-      margin: 30px auto;
+      margin: 40px auto;
 
       .request-btn {
         display: block;
